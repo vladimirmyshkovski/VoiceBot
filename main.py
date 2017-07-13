@@ -27,19 +27,21 @@ async def feed(request, ws):
     while True:
         #input_statement = bot.input.process_input_statement(data)
         #statement, response = bot.generate_response(input_statement, DEFAULT_SESSION_ID)
-        bot.train()
         data = await ws.recv()
-        #bot_input = bot.get_response(data)
+        bot_input = bot.get_response(data)
         #z = Response(data)
         #print('RESPONSE: ' + str(z))
         #print('STATEMENT: ' + str(Statement(data)))
         #print(bot_input.serialize()['text'])
         #filename = generator()
         #text_to_speach(bot_input.serialize()['text'], 'text')
-        #await ws.send(bot_input.serialize()['text'])
-        await ws.send('Trained database generated successfully!')
+        await ws.send(bot_input.serialize()['text'])
         #await file(join(dirname(__file__),'resources/text.wav'.format(filename)))
     	
+@app.route("/train")
+async def train(request):
+    bot.train()
+    return text('Trained database generated successfully!')
 
 if __name__ == "__main__":
     app.run(
