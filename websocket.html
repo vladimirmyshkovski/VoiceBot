@@ -68,6 +68,7 @@
                 </div>
                 <a class="waves-effect waves-light btn deep-purple accent-1" @click="send"><i class="material-icons left">send</i>send</a>
               </form>
+            <audio id="player" src="./resources/text.wav" type="audio/wav" autoplay></audio>
             </div>
           </div>
         </section>
@@ -93,7 +94,7 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/0.3.0/speechkitt.min.js"></script>
         <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
-        <script type="text/javascript">
+        <!--script type="text/javascript">
         if (annyang) {
 
         // Start listening.
@@ -119,7 +120,7 @@
       //    createjs.Sound.play("x");
       //  }, 500)
       //}
-        </script>
+        </script-->
         <script type="text/javascript">
         var ws_scheme = window.location.protocol == "https:" ? "wss" : "ws";
 
@@ -167,7 +168,7 @@
                       "avatar": "http://blog.iconfinder.com/wp-content/uploads/2016/04/13-robots-icons.jpg",
                       "user": "SmartBot"
                     })
-                    createjs.Sound.registerSound("../resources/text.wav", "x");
+                    createjs.Sound.registerSound("/resources/text.wav", "x");
                     console.log(this.message)
                 },
                 speachToText: function(userSaid) {

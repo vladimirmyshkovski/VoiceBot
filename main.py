@@ -34,7 +34,7 @@ async def feed(request, ws):
         #print('STATEMENT: ' + str(Statement(data)))
         #print(bot_input.serialize()['text'])
         filename = generator()
-        text_to_speach(bot_input.serialize()['text'], 'text')
+        #text_to_speach(bot_input.serialize()['text'], 'text')
         await ws.send(bot_input.serialize()['text'])
         #await file(join(dirname(__file__),'resources/text.wav'.format(filename)))
     	

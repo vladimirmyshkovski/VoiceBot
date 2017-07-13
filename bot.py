@@ -13,9 +13,13 @@ bot = ChatBot(
 		'chatterbot.logic.TimeLogicAdapter',
 		'chatterbot.logic.BestMatch'
 	],
-	database='localhost:27017'
+	database='localhost:27017',
+	trainer="chatterbot.trainers.UbuntuCorpusTrainer"
 )
 
+bot.train()
+
+bot.logger.info('Trained database generated successfully!')
 
 
 def get_feedback():
