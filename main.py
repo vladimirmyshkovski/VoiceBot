@@ -4,6 +4,7 @@ from sanic.response import file
 from bot import bot, DEFAULT_SESSION_ID
 from chatterbot.conversation import Statement
 from chatterbot.conversation import Response
+from os.path import join, dirname, realpath
 
 
 app = Sanic()
@@ -11,7 +12,7 @@ app = Sanic()
 
 @app.route("/")
 async def test(request):
-    return await file('websocket.html')
+    return await file(join(dirname(__file__),'websocket.html'))
 
 
 @app.websocket('/feed')
