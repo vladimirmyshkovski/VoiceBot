@@ -92,6 +92,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/0.3.0/speechkitt.min.js"></script>
+        <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
         <script type="text/javascript">
         if (annyang) {
 
@@ -112,12 +113,12 @@
         SpeechKITT.vroom();
       }
 
-      window.onload = function () {
-        createjs.Sound.registerSound("", "x");
-        setTimeout(function () {
-          createjs.Sound.play("x");
-        }, 500)
-      }
+      //window.onload = function () {
+      //  createjs.Sound.registerSound("resources/text.wav", "x");
+      //  setTimeout(function () {
+      //    createjs.Sound.play("x");
+      //  }, 500)
+      //}
         </script>
         <script type="text/javascript">
         var ws_scheme = window.location.protocol == "https:" ? "wss" : "ws";
@@ -157,8 +158,8 @@
                       "avatar": "https://t4.ftcdn.net/jpg/01/05/72/55/240_F_105725565_vVl8Hc6kIRQsgquqdQYrz7fWFrfQAGCw.jpg",
                       "user": "I'm"
                     })
+                    console.log(this.message)
                     this.message = ''
-                    console.log(this.messages)
                 },
                 newMessage: function(message) {
                     this.messages.push({
@@ -166,7 +167,8 @@
                       "avatar": "http://blog.iconfinder.com/wp-content/uploads/2016/04/13-robots-icons.jpg",
                       "user": "SmartBot"
                     })
-                    console.log(this.messages)
+                    createjs.Sound.registerSound("../resources/text.wav", "x");
+                    console.log(this.message)
                 },
                 speachToText: function(userSaid) {
                   socket.send(userSaid)
