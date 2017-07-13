@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chatterbot Sanic WebSocket demo</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">  
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <style>
+            
+          body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+          }
+          section {
+            flex: 1 0 auto;
+          }
+          main {
+            flex: 1 0 auto;
+          }
+        /* icon focus color  */
+        .input-field .prefix.active {
+            color: #b388ff !important;
+          }
+        /* label focus color */
+        .input-field textarea:focus + label {
+           color: #b388ff !important;
+         }
+         /* label underline focus color */
+        .row .input-field textarea:focus {
+           border-bottom: 1px solid #b388ff !important;
+           box-shadow: 0 1px 0 0 #b388ff !important
+         }
+
+        </style>
+    </head>
+    <body>
+        <header>
+          <nav class="purple darken-4">
+            <div class="container">
+             <div class="nav-wrapper">
+              <a href="#" class="brand-logo">Demo</a>
+             </div>
+            </div>
+          </nav>
+        </header>
+        <section id="app">
+          <div class="container">
+            <div class="row">
+              <ul class="collection">
+                <msg 
+                v-for="item in messages"
+                :item="item"
+                >
+                </msg>
+              </ul>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <form class="col s12">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <i class="material-icons prefix">mode_edit</i>
+                    <textarea id="icon_prefix2" class="materialize-textarea" v-model="message" v-on:keyup.enter="send"></textarea>
+                    <label for="icon_prefix2">Message</label>
+                  </div>
+                </div>
+                <a class="waves-effect waves-light btn deep-purple accent-1" @click="send"><i class="material-icons left">send</i>send</a>
+              </form>
+            </div>
+          </div>
+        </section>
+        <footer class="page-footer purple darken-4">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Demo</h5>
+                <p class="grey-text text-lighten-4">There must be text, but I have not thought of it yet.</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2017 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">Magic Link</a>
+            </div>
+          </div>
+        </footer>
+        <script src="https://unpkg.com/vue"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/0.3.0/speechkitt.min.js"></script>
+        <script type="text/javascript">
+        if (annyang) {
+
+        // Start listening.
+        // annyang.start();
+
+        annyang.addCallback('result', function(userSaid) {
+          app.speachToText(userSaid);
+        });
+
+        // Tell KITT to use annyang
+        SpeechKITT.annyang();
+
+        // Define a stylesheet for KITT to use
+        SpeechKITT.setStylesheet('//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/0.3.0/themes/flat.css');
+
+        // Render KITT's interface
+        SpeechKITT.vroom();
+      }
+
+      window.onload = function () {
+        createjs.Sound.registerSound("", "x");
+        setTimeout(function () {
+          createjs.Sound.play("x");
+        }, 500)
+      }
+        </script>
+        <script type="text/javascript">
+        var ws_scheme = window.location.protocol == "https:" ? "wss" : "ws";
+
+        socket = new WebSocket(ws_scheme + "://" + window.location.host + "/feed/");
+
+        socket.onmessage = function(e) {
+            app.newMessage(e.data);
+        }
+        socket.onopen = function() {
+        }
+        socket.onclose = function() {
+            socket.send("disconnect");   
+        }
+
+        if (socket.readyState == WebSocket.OPEN) socket.onopen();
+
+
+        Vue.component('msg', {
+            props: ['item'],
+            delimiters: ["#{", "}"],
+            template: '#msg',
+        })
+
+        var app = new Vue({
+            el: '#app',
+            delimiters: ["#{", "}"],
+            data: {
+                message: '',
+                messages: []
+            },
+            methods: {
+                send: function() {
+                    socket.send(this.message)
+                    this.messages.push({
+                      "text": this.message,
+                      "avatar": "https://t4.ftcdn.net/jpg/01/05/72/55/240_F_105725565_vVl8Hc6kIRQsgquqdQYrz7fWFrfQAGCw.jpg",
+                      "user": "I'm"
+                    })
+                    this.message = ''
+                    console.log(this.messages)
+                },
+                newMessage: function(message) {
+                    this.messages.push({
+                      "text": message,
+                      "avatar": "http://blog.iconfinder.com/wp-content/uploads/2016/04/13-robots-icons.jpg",
+                      "user": "SmartBot"
+                    })
+                    console.log(this.messages)
+                },
+                speachToText: function(userSaid) {
+                  socket.send(userSaid)
+                  console.log(userSaid)
+                },
+            },
+        })
+
+
+        </script>
+        <script type="text/x-template" id="msg">
+            <li class="collection-item avatar">
+                <img :src="item.avatar" alt="" class="circle">
+                    <span class="title">#{ item.user }</span>
+                    <p>#{ item.text }</p>
+                    <a href="#!" class="secondary-content"><i class="material-icons"></i></a>
+            </li>
+        </script>
+    </body>
+</html>
