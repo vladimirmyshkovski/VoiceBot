@@ -1,0 +1,92 @@
+2011-05-01T06:23:00.000Z	ny51bern		Ubuntu 11 freezes at login screen any ideas?
+2011-05-01T06:25:00.000Z	ny51bern		Ubuntu 11 freezing at login screen. any suggestions?
+2011-05-01T06:25:00.000Z	Datz	ny51bern	try safe mode
+2011-05-01T06:25:00.000Z	ny51bern	Datz	how do i boot in safe mode?
+2011-05-01T06:25:00.000Z	Datz	ny51bern	do you see a grub boot menu?
+2011-05-01T06:26:00.000Z	ny51bern	Datz	yeah i get beyond there. I should press power button and go back to there?
+2011-05-01T06:26:00.000Z	Datz	ny51bern	yes
+2011-05-01T06:27:00.000Z	ny51bern	Datz	okay doing that now. anything to look for/do ?
+2011-05-01T06:27:00.000Z	ny51bern	Datz	gave me a recovery menu
+2011-05-01T06:27:00.000Z	Datz	ny51bern	nope, just boot to safe-mode
+2011-05-01T06:27:00.000Z	ny51bern	Datz	lots of options in this menu.
+2011-05-01T06:28:00.000Z	Datz	ny51bern	try the latest kernels ssafe mode
+2011-05-01T06:28:00.000Z	Datz	ny51bern	that won't solve your problem, but hopefully you'll be able to log in
+2011-05-01T06:28:00.000Z	Datz	ny51bern	I had a freeze before the login, and I was able to boot to safe mode. Now I just want ot remove unity
+2011-05-01T06:29:00.000Z	ny51bern	Datz	don't see that option. i got: resume normal, try to make free space, repair broken packages, run in fail safe graphics mode, reboot into file system check...
+2011-05-01T06:29:00.000Z	Datz	ny51bern	ah, ok you have another menu, not grub
+2011-05-01T06:30:00.000Z	ny51bern	Datz	 its called the recovery menu. any ideas?
+2011-05-01T06:30:00.000Z	Datz	ny51bern	was just there myself repairing grub. but I don't know what your problem is/
+2011-05-01T06:31:00.000Z	Datz	ny51bern	might have to sit tight, I can't really can't help you with that.
+2011-05-01T06:31:00.000Z	ny51bern	Datz	 thanks, maybe book in 'repair broken packages' ?
+2011-05-01T07:12:00.000Z	ny51bern	Datz	k now i got bunch of options
+2011-05-01T06:57:00.000Z	Datz	ny51bern	were you having the freezing problem earlier?
+2011-05-01T06:57:00.000Z	ny51bern	Datz	still am
+2011-05-01T06:58:00.000Z	Datz	ny51bern	did you try the failsafe graphics mode on the recovery menu?
+2011-05-01T06:58:00.000Z	ny51bern	Datz	no, im not even really sure what that means. but i just booted and it worked.
+2011-05-01T06:58:00.000Z	ny51bern	Datz	not sure i didn anything differently..
+2011-05-01T06:59:00.000Z	Datz	ny51bern	strange. well at least it's workin now. Let's hope it stays that way
+2011-05-01T06:59:00.000Z	ny51bern	Datz	yeah u had the same issue? what did u do?
+2011-05-01T06:59:00.000Z	ny51bern	Datz	turn on and off to make sure its good.
+2011-05-01T06:59:00.000Z	ny51bern	Datz	im going to *
+2011-05-01T07:00:00.000Z	Datz	ny51bern	ok.
+2011-05-01T07:05:00.000Z	Datz	ny51bern	yep all working here now
+2011-05-01T07:00:00.000Z	Datz	ny51bern	right now I'm where you were before.
+2011-05-01T07:00:00.000Z	ny51bern	Datz	 just hangs on the login page?
+2011-05-01T07:01:00.000Z	Datz	ny51bern	I'm contemplating debian :p
+2011-05-01T07:01:00.000Z	Datz	ny51bern	before then for me
+2011-05-01T07:01:00.000Z	ny51bern	Datz	ahhaa. rebooting, lets hope this actually works
+2011-05-01T07:02:00.000Z	ny51bern	Datz	 ugh its stuck again =.=
+2011-05-01T07:03:00.000Z	Datz	ny51bern	safe mode, recovery, failsafe x, reconfigure graphics restart
+2011-05-01T07:03:00.000Z	ny51bern	Datz	idk how to do that stuff :/
+2011-05-01T07:03:00.000Z	Datz	ny51bern	if that recovery menu comes up agian, i'll be in the options
+2011-05-01T07:04:00.000Z	Datz	ny51bern	just select safe mode when you get to the grub menu
+2011-05-01T07:05:00.000Z	ny51bern	Datz	no safe mode option... "recovery mode" ?
+2011-05-01T07:05:00.000Z	Datz	ny51bern	are you saying there is a recovery mode?
+2011-05-01T07:05:00.000Z	ny51bern	Datz	yes, not safe mode.
+2011-05-01T07:06:00.000Z	Datz	ny51bern	ok, then there is a failsafe x option or somethiong like that?
+2011-05-01T07:06:00.000Z	ny51bern	Datz	there is 'recovery mode' there isnt a safe mode
+2011-05-01T07:06:00.000Z	ny51bern	Datz	idk..
+2011-05-01T07:06:00.000Z	Datz	ny51bern	what is third option down?
+2011-05-01T07:06:00.000Z	ny51bern	Datz	 i got 6 options on boot list..
+2011-05-01T07:07:00.000Z	Datz	ny51bern	does it say recovery menu at the top, or grub?
+2011-05-01T07:07:00.000Z	Datz	ny51bern	ah ok, try recovery mode. my fault
+2011-05-01T07:08:00.000Z	ny51bern	Datz	top top of screen says " gnu grub version 1.99~rc1-13ubuntu3
+2011-05-01T07:08:00.000Z	Datz	ny51bern	ok, try the recovery mode
+2011-05-01T07:08:00.000Z	ny51bern	Datz	k, going into recovery mode
+2011-05-01T07:09:00.000Z	ny51bern	Datz	bunch of options like before.. which was the one to choose?
+2011-05-01T07:10:00.000Z	Datz	ny51bern	failsafeX
+2011-05-01T07:11:00.000Z	ny51bern	Datz	okay, doing that now
+2011-05-01T07:11:00.000Z	ny51bern	Datz	"ubuntu is running in low-graphic mode"
+2011-05-01T07:11:00.000Z	Datz	ny51bern	ok
+2011-05-01T07:11:00.000Z	ny51bern	Datz	normal ?
+2011-05-01T07:11:00.000Z	Datz	ny51bern	not yet, but getting somewhere
+2011-05-01T07:11:00.000Z	ny51bern	Datz	press "okay"?
+2011-05-01T07:12:00.000Z	Datz	ny51bern	something like default config
+2011-05-01T07:12:00.000Z	ny51bern	Datz	dont have that..
+2011-05-01T07:12:00.000Z	ny51bern	Datz	heres what i got
+2011-05-01T07:13:00.000Z	ny51bern	Datz	"run ubuntu in low graphics mode for just one session" "reconfig graphics" "troubleshoot the error" "exit to console login" "restart x"
+2011-05-01T07:13:00.000Z	Datz	ny51bern	reconfigure
+2011-05-01T07:13:00.000Z	ny51bern	Datz	ok
+2011-05-01T07:13:00.000Z	Datz	ny51bern	then default
+2011-05-01T07:14:00.000Z	ny51bern	Datz	okay, tried doing defualt but everytime i click 'ok' takes me back to that option
+2011-05-01T07:14:00.000Z	Datz	ny51bern	ok click cancel, what are the options?
+2011-05-01T07:14:00.000Z	ny51bern	Datz	 back to this: "run ubuntu in low graphics mode for just one session" "reconfig graphics" "troubleshoot the error" "exit to console login" "restart x"
+2011-05-01T07:15:00.000Z	ny51bern	Datz	click ok?
+2011-05-01T07:15:00.000Z	Datz	ny51bern	I think it should work now.yes
+2011-05-01T07:15:00.000Z	ny51bern	Datz	login screen.. trying now
+2011-05-01T07:15:00.000Z	ny51bern	Datz	rozen :(
+2011-05-01T07:15:00.000Z	ny51bern	Datz	frozen
+2011-05-01T07:16:00.000Z	Datz	ny51bern	strange. well try and restart. if that doesn't work. try low graphics mode for one session
+2011-05-01T07:16:00.000Z	ny51bern	Datz	okay. restarting now
+2011-05-01T07:16:00.000Z	Datz	ny51bern	for me reconfiguring to default x config worked
+2011-05-01T07:17:00.000Z	ny51bern	Datz	it worked but you know what i noticed?.. on the bottom toolbar of login screen it looks crappy. like black splotches
+2011-05-01T07:17:00.000Z	ny51bern	Datz	like it isnt loading correctly
+2011-05-01T07:18:00.000Z	Datz	ny51bern	strange
+2011-05-01T07:19:00.000Z	Datz	ny51bern	did you upgrade, or do a fresh install?
+2011-05-01T07:19:00.000Z	ny51bern	Datz	upgrade
+2011-05-01T07:19:00.000Z	Datz	ny51bern	did you have any graphics drivers loaded before?
+2011-05-01T07:20:00.000Z	ny51bern	Datz	how would i know?
+2011-05-01T07:20:00.000Z	Datz	ny51bern	well, you would have loaded them before.
+2011-05-01T07:20:00.000Z	ny51bern	Datz	i didnt do anything manually..
+2011-05-01T07:21:00.000Z	Datz	ny51bern	humm, well I'm not sure what I can help you with anymore. I'd personally try looking through the recovery options for something
+2011-05-01T07:22:00.000Z	ny51bern	Datz	okay, well i posted on forum so maybe i'll get something ther. thanks tho!

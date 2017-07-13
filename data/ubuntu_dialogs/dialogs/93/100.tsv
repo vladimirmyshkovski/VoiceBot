@@ -1,0 +1,93 @@
+2006-02-20T17:48:00.000Z	christopher		anyone use Enlightenment Desktop?
+2006-02-20T17:49:00.000Z	christopher		excuse
+2006-02-20T17:49:00.000Z	christopher		do any of you ppl talking use Enlightenment?
+2006-02-20T17:50:00.000Z	christopher		hmm thats probably my problem then
+2006-02-20T17:50:00.000Z	christopher		im using it on a laptop and i get get the Applications menu to stop from scrolling off the screen
+2006-02-20T17:51:00.000Z	christopher		cant*
+2006-02-20T17:51:00.000Z	christopher		so i take it i should stick with GNOME?
+2006-02-20T17:51:00.000Z	christopher		I tried installing fluxbox of its site
+2006-02-20T17:51:00.000Z	christopher		and i couldnt get it to install but then again im a newbie
+2006-02-20T17:51:00.000Z	christopher		i use Ubuntu 5.10
+2006-02-20T17:52:00.000Z	amphi	christopher	fluxbox should be packaged
+2006-02-20T17:54:00.000Z	amphi	christopher	you have the universe and multiverse repos in your sources.list ?
+2006-02-20T17:54:00.000Z	amphi	christopher	well, fluxbox is easy enough to build from source ASIR
+2006-02-20T17:55:00.000Z	amphi	christopher	what gave you a problem?
+2006-02-20T17:55:00.000Z	amphi	christopher	usually not
+2006-02-20T17:55:00.000Z	amphi	christopher	it's rarely you have to mess with the code to get stuff to build on linux
+2006-02-20T17:56:00.000Z	amphi	christopher	old things written on solaris or something can need a bit of tweaking here and there sometimes
+2006-02-20T17:56:00.000Z	christopher	amphi	thanks for helping me.. you have no idea how long i been trying to find someone who knows about this stuff
+2006-02-20T17:56:00.000Z	amphi	christopher	how far did you get?
+2006-02-20T17:57:00.000Z	amphi	christopher	some bewilderment is to be expected ;)
+2006-02-20T17:57:00.000Z	amphi	christopher	you downloaded a fluxbox source tarball?
+2006-02-20T17:58:00.000Z	amphi	christopher	heh, 'measure twice, cut once'
+2006-02-20T17:58:00.000Z	amphi	christopher	anyway, do you have the source tarball for fluxbox?
+2006-02-20T17:59:00.000Z	amphi	christopher	did you untar it?
+2006-02-20T17:59:00.000Z	amphi	christopher	oh, you have a deb? for what?
+2006-02-20T17:59:00.000Z	amphi	christopher	no, no, that way madness lies ;)
+2006-02-20T06:00:00.000Z	amphi	christopher	hang on
+2006-02-20T06:00:00.000Z	amphi	christopher	ok, you got the 'debian package'?
+2006-02-20T06:01:00.000Z	christopher	amphi	 quick question
+2006-02-20T06:01:00.000Z	amphi	christopher	ok, there is a breezy package
+2006-02-20T06:01:00.000Z	christopher	amphi	is xchat avail on GNOME ?
+2006-02-20T06:01:00.000Z	amphi	christopher	do this is a terminal: wget http://people.debian.org/~dopey/fluxbox/ubuntu-breezy/fluxbox_0.9.14-1_i386.deb
+2006-02-20T06:01:00.000Z	amphi	christopher	yes
+2006-02-20T06:02:00.000Z	amphi	christopher	that was, "yes, xchat is available in gnome"
+2006-02-20T06:02:00.000Z	amphi	christopher	can you not copy and paste that whole command into a terminal?
+2006-02-20T06:03:00.000Z	amphi	christopher	doesn't matter
+2006-02-20T06:03:00.000Z	amphi	christopher	don't switch now
+2006-02-20T06:04:00.000Z	amphi	christopher	you have a terminal yet?
+2006-02-20T06:05:00.000Z	amphi	christopher	do this is a terminal: wget http://people.debian.org/~dopey/fluxbox/ubuntu-breezy/fluxbox_0.9.14-1_i386.deb
+2006-02-20T06:06:00.000Z	amphi	christopher	*in a terminal
+2006-02-20T06:07:00.000Z	amphi	christopher	ok; now do sudo dpkg -i fluxbox_0.9.14-1_i386.deb
+2006-02-20T06:08:00.000Z	amphi	christopher	you should be able to select the text and then focus the terminal and do shift-insert
+2006-02-20T06:09:00.000Z	amphi	christopher	highlight should be enough IMHO
+2006-02-20T06:10:00.000Z	amphi	christopher	"O Liability! I do disclaim thee!" ;)
+2006-02-20T06:11:00.000Z	amphi	christopher	what was the error? please only paste the relevant line
+2006-02-20T06:11:00.000Z	amphi	christopher	ok, no worries; try sudo apt-get install menu
+2006-02-20T06:12:00.000Z	amphi	christopher	apt-get deals with dependencies, but dpkg doesn't
+2006-02-20T06:12:00.000Z	amphi	christopher	in this case, super user do
+2006-02-20T06:14:00.000Z	amphi	christopher	ok, up arrow until you get the sudo dpkg command back, and hit enter
+2006-02-20T06:15:00.000Z	amphi	christopher	yeah
+2006-02-20T06:16:00.000Z	amphi	christopher	yup
+2006-02-20T06:16:00.000Z	amphi	christopher	up arrow back throuh the command history to it, and hit enter
+2006-02-20T06:16:00.000Z	amphi	christopher	the shell is a garden of delights ;)
+2006-02-20T06:17:00.000Z	christopher	amphi	so i take its installed now
+2006-02-20T06:18:00.000Z	amphi	christopher	if dpkg completed without error, yeah
+2006-02-20T06:18:00.000Z	amphi	christopher	I find it better to put off the procrastination until nearer the time
+2006-02-20T06:20:00.000Z	amphi	christopher	fluxbox is quite minimalist
+2006-02-20T06:20:00.000Z	amphi	christopher	I use openbox
+2006-02-20T06:20:00.000Z	amphi	christopher	which is similar
+2006-02-20T06:20:00.000Z	amphi	christopher	'better' is in the eye of the beholder
+2006-02-20T06:24:00.000Z	amphi	christopher	you might find the 'intro to linux' book at tldp.org useful
+2006-02-20T06:24:00.000Z	amphi	christopher	/usr/bin
+2006-02-20T06:25:00.000Z	amphi	christopher	you're using stuff in them all the time, unbeknownst to yourself
+2006-02-20T06:27:00.000Z	amphi	christopher	apt-get should have pretty much everything you need
+2006-02-20T06:27:00.000Z	amphi	christopher	yes, synaptic is a later incarnation
+2006-02-20T06:28:00.000Z	amphi	christopher	time will tell, but you should rarely need anything else
+2006-02-20T06:29:00.000Z	amphi	christopher	apt-cache search gdesklets
+2006-02-20T06:29:00.000Z	amphi	christopher	that should give you the package name; apt-cache show <package_name> will give more info about the package, and apt-get install <package_name> will do what you expect
+2006-02-20T06:30:00.000Z	amphi	christopher	s/chat\ room/channel ;)
+2006-02-20T06:31:00.000Z	amphi	christopher	means the term is 'channel' not 'chat room', which is some aol abomination
+2006-02-20T06:32:00.000Z	amphi	christopher	zip files are archives compress with zip ;)
+2006-02-20T06:34:00.000Z	amphi	christopher	linux doesn't like framebuffer console, which shows how much he knows ;)
+2006-02-20T06:35:00.000Z	amphi	christopher	hi res text console by putting the video card into a graphics mode
+2006-02-20T06:35:00.000Z	amphi	christopher	*shrug*
+2006-02-20T06:35:00.000Z	amphi	christopher	the response to such is "bsd is dying" ;)
+2006-02-20T06:36:00.000Z	amphi	christopher	the learning curve can be steep at first; there are a lot of useful docs at tldp.org amongst many places
+2006-02-20T06:38:00.000Z	amphi	christopher	there is also the debian reference at debian.org, much of which applies to ubuntu
+2006-02-20T06:39:00.000Z	amphi	christopher	should be able; right click on the root window for applications menu
+2006-02-20T06:40:00.000Z	amphi	christopher	if you can't find xchat, try typing xchat in a terminal window
+2006-02-20T06:41:00.000Z	amphi	christopher	what are you using for irc right now?
+2006-02-20T06:41:00.000Z	amphi	christopher	it is
+2006-02-20T06:47:00.000Z	amphi	christopher	no, you're not here
+2006-02-20T06:47:00.000Z	amphi	christopher	where?
+2006-02-20T06:47:00.000Z	amphi	christopher	it is
+2006-02-20T07:11:00.000Z	amphi	christopher	tldp.org
+2006-02-20T08:02:00.000Z	amphi	christopher	I use the venerable gkrellm or the 'moaning goat meter'
+2006-02-20T08:04:00.000Z	amphi	christopher	you can find mgm here: http://linuxmafia.com/mgm/index.html
+2006-02-20T08:04:00.000Z	christopher	amphi	thanks
+2006-02-20T08:07:00.000Z	christopher	amphi	 mgm is just like the desklets software right?
+2006-02-20T08:07:00.000Z	christopher	amphi	 or does it come installed with the features that go on the desktop
+2006-02-20T08:08:00.000Z	amphi	christopher	mgm is a perl script
+2006-02-20T08:08:00.000Z	amphi	christopher	you don't have to run it
+2006-02-20T08:09:00.000Z	amphi	christopher	but it needs various packages installed to run, you might be better off with a packaged system monitor like gkrellm

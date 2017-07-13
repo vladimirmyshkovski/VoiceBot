@@ -1,0 +1,94 @@
+2007-09-29T12:51:00.000Z	MoNsTeR		im on Xchat now
+2007-09-29T12:52:00.000Z	MrPrimate	MoNsTeR	= tehchoosenone?
+2007-09-29T12:53:00.000Z	MrPrimate	MoNsTeR	, if you think its apache broken, and your port forward IS working, run netcat -l -p [port]  to open netcat to listen on a port, if that port is forwarded, you can try to contact it from the outside
+2007-09-29T12:54:00.000Z	MoNsTeR	MrPrimate	i get bash command fails
+2007-09-29T12:58:00.000Z	MoNsTeR	MrPrimate	theres a fix for his problem on google i had to do the same fix
+2007-09-29T13:10:00.000Z	MoNsTeR	MrPrimate	sata should always show up
+2007-09-29T13:13:00.000Z	MoNsTeR	MrPrimate	can you help me now
+2007-09-29T13:14:00.000Z	MrPrimate	MoNsTeR	kill apache and run    sudo netcat -l -p 80
+2007-09-29T13:14:00.000Z	MrPrimate	MoNsTeR	/etc/init.d/apache2 stop   OR   apachectl stop
+2007-09-29T13:15:00.000Z	MrPrimate	MoNsTeR	that netcat will listen on port 80 and you can see if problem is apache or your router/portforwarding/firewall/etc
+2007-09-29T13:16:00.000Z	MoNsTeR	MrPrimate	the close command didnt work heres the response i got
+2007-09-29T13:16:00.000Z	MrPrimate	MoNsTeR	sudo me boy
+2007-09-29T13:19:00.000Z	MrPrimate	MoNsTeR	nothing should pop up, its just listening,
+2007-09-29T13:19:00.000Z	MrPrimate	MoNsTeR	is it sitting there waiting for connection ?
+2007-09-29T13:20:00.000Z	MrPrimate	MoNsTeR	you can tell its working if you telnet localhost 80  and it connects (nothing will appear, but it will stay connected)
+2007-09-29T13:20:00.000Z	MrPrimate	MoNsTeR	nothing will appear, if you type from telnet it should appear in the netcat console though
+2007-09-29T13:21:00.000Z	MrPrimate	MoNsTeR	type   telnet localhost 80     from another console
+2007-09-29T13:21:00.000Z	MrPrimate	MoNsTeR	i'm not able to connect to that port from over here on your IP
+2007-09-29T13:21:00.000Z	MrPrimate	MoNsTeR	did you see a firewall when you ran      sudo iptables --list        ?
+2007-09-29T13:22:00.000Z	MoNsTeR	MrPrimate	it connected to it
+2007-09-29T13:22:00.000Z	MrPrimate	MoNsTeR	ok its most likely your router's firewall or port forwarding,
+2007-09-29T13:22:00.000Z	MrPrimate	MoNsTeR	because you can connect locally, so netcat is up and runningon port 80, but we cant connect from outside and you have no soft firewall
+2007-09-29T13:22:00.000Z	MrPrimate	MoNsTeR	router isnt routing the packets back to your box
+2007-09-29T13:22:00.000Z	MrPrimate	MoNsTeR	you could prove this to yourself if you want, do this:
+2007-09-29T13:25:00.000Z	MrPrimate	MoNsTeR	sudo tcpdump -i eth0 src port 80
+2007-09-29T13:26:00.000Z	MrPrimate	MoNsTeR	this will have tcpdump show you packets coming to port 80,  maybe you want dst port 80 actually,
+2007-09-29T13:26:00.000Z	MrPrimate	MoNsTeR	then you can see if anything from the outside gets in
+2007-09-29T13:26:00.000Z	MrPrimate	MoNsTeR	i'm 99% sure that you have a problem with packets getting from internet -> through your router -> to your box  on port 80
+2007-09-29T13:27:00.000Z	MrPrimate	MoNsTeR	your router probably allows you to establish outgoing connections, and establishes sessions so packets can get back in, but it doesnt forward packets hitting your outside IP address to port 80 back to your internal computer's ip
+2007-09-29T13:27:00.000Z	MoNsTeR	MrPrimate	so what ommand do i use
+2007-09-29T13:28:00.000Z	MoNsTeR	MrPrimate	so i run sudo tcpdump -i eth0 src port 80
+2007-09-29T13:29:00.000Z	MoNsTeR	MrPrimate	how do i show you what it showed
+2007-09-29T13:29:00.000Z	MrPrimate	MoNsTeR	thats going to show all the packets going to port 80, you might want to skip the 'src' part or use dst instead
+2007-09-29T13:29:00.000Z	MrPrimate	MoNsTeR	it shows them right on the terminal whenever packets try to hit port 80,
+2007-09-29T13:30:00.000Z	MoNsTeR	MrPrimate	how do i know that they are hitting it
+2007-09-29T13:30:00.000Z	MoNsTeR	MrPrimate	nothing is happening
+2007-09-29T13:30:00.000Z	MrPrimate	MoNsTeR	i'm tryting to hit port 80 at your outside IP right now
+2007-09-29T13:30:00.000Z	MoNsTeR	MrPrimate	A BUNCH OF THINGS POPPED UP
+2007-09-29T13:30:00.000Z	MrPrimate	MoNsTeR	oh,.. is it coming from my IP or is it just you using websites ?
+2007-09-29T13:31:00.000Z	MrPrimate	MoNsTeR	i'm awfully tired i dunno if i can help you anymore, i really keep telling you i think its your router and you need to get the port forwarded properly
+2007-09-29T13:31:00.000Z	MrPrimate	MoNsTeR	we're on a wild goose hunt at this point
+2007-09-29T13:31:00.000Z	MoNsTeR	MrPrimate	it came from your ip
+2007-09-29T13:31:00.000Z	MrPrimate	MoNsTeR	really ?
+2007-09-29T13:31:00.000Z	MoNsTeR	MrPrimate	yeah
+2007-09-29T13:32:00.000Z	MrPrimate	MoNsTeR	in that case, .. interesting...
+2007-09-29T13:32:00.000Z	MrPrimate	MoNsTeR	type /dns MrPrimate
+2007-09-29T13:33:00.000Z	MoNsTeR	MrPrimate	it was a stupid website
+2007-09-29T13:34:00.000Z	MoNsTeR	MrPrimate	are you using KDE ,Xfce or Gnome
+2007-09-29T13:34:00.000Z	MrPrimate	MoNsTeR	i'm using gnome
+2007-09-29T13:35:00.000Z	MoNsTeR	MrPrimate	kool me too i wanna use KDE with XGL but idk how too
+2007-09-29T13:35:00.000Z	MoNsTeR	MrPrimate	sincei cant make a webserver why not make a ftp server
+2007-09-29T13:35:00.000Z	MrPrimate	MoNsTeR	i havent tried kde in years, i'll have to check it out and see how they're doing
+2007-09-29T13:36:00.000Z	MoNsTeR	MrPrimate	its really nice
+2007-09-29T13:36:00.000Z	MrPrimate	MoNsTeR	if you're sure that you saw my packets coming in , then i cant understand why i cant connect to your netcat listening on port 80
+2007-09-29T13:37:00.000Z	MoNsTeR	MrPrimate	it was a website :(
+2007-09-29T13:39:00.000Z	MoNsTeR	MrPrimate	so how do i make a ftp server
+2007-09-29T13:39:00.000Z	MrPrimate	MoNsTeR	 search apt-cache for ftpd, there are a lot to choose from
+2007-09-29T13:39:00.000Z	MrPrimate	MoNsTeR	but if we can't get packets in to port 80,
+2007-09-29T13:40:00.000Z	MrPrimate	MoNsTeR	hey, wait a minute, maybe your ISP blocks running servers on port 80 ?
+2007-09-29T13:40:00.000Z	MrPrimate	MoNsTeR	do you think we should try to run your web server on a diff. port, ?
+2007-09-29T13:40:00.000Z	MrPrimate	MoNsTeR	oh well how the f did you expect me to touch your 80 if you're on 88 forwarded ?
+2007-09-29T13:42:00.000Z	MoNsTeR	MrPrimate	i have both 80 and 88 open what port should i run my server on besides 80
+2007-09-29T13:44:00.000Z	MoNsTeR	MrPrimate	what port should i run my server on
+2007-09-29T13:46:00.000Z	MoNsTeR	MrPrimate	what port should i run my server on
+2007-09-29T13:47:00.000Z	MrPrimate	MoNsTeR	i cant keep up with your issue tonight, i'll help you tomorrow if you want to email me
+2007-09-29T13:48:00.000Z	MoNsTeR	MrPrimate	tell me the port
+2007-09-29T13:48:00.000Z	MrPrimate	MoNsTeR	default ftp port is 21
+2007-09-29T13:48:00.000Z	MrPrimate	MoNsTeR	but if you think thats blocked by your isp for some reason use whatever port that you want that's not being used, often high ports above 1024 are available
+2007-09-29T13:52:00.000Z	MoNsTeR	MrPrimate	how do i setup a ftp server?
+2007-09-29T13:53:00.000Z	MrPrimate	MoNsTeR	find a tutorial on google
+2007-09-29T13:53:00.000Z	MoNsTeR	MrPrimate	dude i look on google all day for this stuff
+2007-09-29T13:53:00.000Z	MoNsTeR	MrPrimate	thats why i come here for answer
+2007-09-29T13:54:00.000Z	MrPrimate	MoNsTeR	install an ftpd program like pure-ftpd or wu-ftpd
+2007-09-29T13:55:00.000Z	MrPrimate	MoNsTeR	then you need to make sure you forward port 21 back to your machine like you did for 88
+2007-09-29T13:55:00.000Z	MrPrimate	MoNsTeR	21 is default ftp port
+2007-09-29T13:55:00.000Z	MoNsTeR	MrPrimate	would sudo apt-get pure-ftpd
+2007-09-29T13:57:00.000Z	MoNsTeR	MrPrimate	please :)
+2007-09-29T13:57:00.000Z	MrPrimate	MoNsTeR	youve asked me 1,000 questions and i've answered 900 of them :]    theres a lot of people asking a lot
+2007-09-29T13:58:00.000Z	MrPrimate	MoNsTeR	and yes  sudo apt-get install pure-ftpd   should install an ftp daemon
+2007-09-29T13:58:00.000Z	MrPrimate	MoNsTeR	whether or not it will work for you is beyond me,
+2007-09-29T13:58:00.000Z	MoNsTeR	MrPrimate	E: Invalid operation pure-ftpd
+2007-09-29T13:59:00.000Z	MrPrimate	MoNsTeR	you forgot the 'install' part
+2007-09-29T14:01:00.000Z	MoNsTeR	MrPrimate	now how do i run the program i installed and for a server cant i use the app "terminal server client"
+2007-09-29T14:04:00.000Z	MoNsTeR	MrPrimate	how do i run the ftp program
+2007-09-29T14:05:00.000Z	MoNsTeR	MrPrimate	can i use the terminal server client that comes with uubuntu
+2007-09-29T14:05:00.000Z	MrPrimate	MoNsTeR	it should be already running and listed in ps,  its an ftp daemon, runs in the background
+2007-09-29T14:05:00.000Z	MrPrimate	MoNsTeR	try    ftp localhost       to connect to your local ftp server
+2007-09-29T14:07:00.000Z	MoNsTeR	MrPrimate	it didnt work
+2007-09-29T14:07:00.000Z	MrPrimate	MoNsTeR	rtfm.
+2007-09-29T14:09:00.000Z	MoNsTeR	MrPrimate	what rtfm stand for
+2007-09-29T14:09:00.000Z	MrPrimate	MoNsTeR	figure it out ;)
+2007-09-29T14:11:00.000Z	MoNsTeR	MrPrimate	your a D*** WTF did you say that SH** to me!!!
+2007-09-29T14:11:00.000Z	MrPrimate	MoNsTeR	hehe,  chill out, i've been trying to help you,  but really to help you at this point is to rtfm you,  you must learn on your own at some point
+2007-09-29T14:12:00.000Z	MrPrimate	MoNsTeR	you earned an 'rtfm' when you demanded that i answer your 99th question

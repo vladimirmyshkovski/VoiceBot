@@ -1,0 +1,93 @@
+2008-08-13T13:44:00.000Z	unop		!it | [A][L][I][E][N]
+2008-08-13T13:45:00.000Z	unop		!startup | xintron
+2008-08-13T13:47:00.000Z	xintron	unop	I want this command to be run when booting "mount --bind /var/.... /home/...." where should I add that?
+2008-08-13T13:47:00.000Z	unop	xintron	rather than use a mount command, just put an entry in /etc/fstab
+2008-08-13T13:50:00.000Z	unop	xintron	 http://gentoo-wiki.com/TIP_Bind_A_Directory_In_FSTAB
+2008-08-13T13:57:00.000Z	xintron	unop	thanks for the link :)
+2008-08-16T18:12:00.000Z	unop	xintron	place  */1 * * * * your_command  in your crontab
+2008-08-16T18:41:00.000Z	unop	xintron	( echo "uptime" && echo $(uptime) ) > file
+2008-08-16T18:41:00.000Z	unop	xintron	or  echo -e "uptime\n" `uptime` > file
+2008-08-27T20:00:00.000Z	unop	xintron	textdraw ?
+2008-08-27T20:00:00.000Z	xintron	unop	nah, don't think that was the app :/
+2008-08-27T20:01:00.000Z	unop	xintron	 apt-cache search ascii | grep -i art
+2008-08-27T20:23:00.000Z	unop	xintron	 update-rc.d -f gdm remove
+2008-08-27T20:23:00.000Z	unop	xintron	using sudo
+2008-08-27T20:23:00.000Z	xintron	unop	and if I want to restore gdm later on then?
+2008-08-27T20:24:00.000Z	unop	xintron	sudo update-rc.d gdm defaults  # perhaps
+2008-08-27T20:24:00.000Z	xintron	unop	ok
+2008-08-27T20:24:00.000Z	unop	xintron	sudo update-rc.d gdm start 20 2 .
+2008-08-27T20:25:00.000Z	xintron	unop	why 20 2?
+2008-08-27T20:25:00.000Z	unop	xintron	priority and runlevel
+2008-08-27T20:25:00.000Z	xintron	unop	so, can I use update-rc.d to add apps to run at boot (for example unrealircd)?
+2008-08-27T20:25:00.000Z	xintron	unop	ok :)
+2008-08-27T20:29:00.000Z	xintron	unop	so, adding "/etc/init.d/apache start" to /etc/rc.local would start apache when booting?
+2008-08-27T20:30:00.000Z	unop	xintron	the better way would be to use update-rc.d there .. as apache is already installed as a service
+2008-08-27T20:31:00.000Z	unop	xintron	the problem with the /etc/rc.local is that it is not aware of runlevels
+2008-08-27T20:45:00.000Z	xintron	unop	ok, what runlevels would you recommend me setting on unrealircd and anope?
+2008-08-27T20:46:00.000Z	unop	xintron	2 - 5 .. thought you would probably need to create initscripts for both those.
+2008-08-27T20:46:00.000Z	xintron	unop	yeah, I know. Got a good site on how to create initscripts?
+2008-08-27T20:48:00.000Z	unop	xintron	not really though you can have a read in these two files /etc/init.d/{README,skeleton}
+2008-08-27T20:49:00.000Z	xintron	unop	so, I can basically copy /etc/init.d/skeleton and make my own (with the corresponding functions for unrealircd {start|stop|etc...} and then use the "update-rc.d unreal start 20 3"?
+2008-08-27T20:50:00.000Z	unop	xintron	right, exactly
+2008-08-27T20:50:00.000Z	xintron	unop	oh, good. So, if I set unreal to 20 3, should anope have like 21 3 (starting just afterwards?
+2008-08-27T20:50:00.000Z	unop	xintron	though you might want to start these much later in the boot process .. so update-rc.d unreal start 70 2 3 4 5 .
+2008-08-27T20:51:00.000Z	xintron	unop	ah, could you write what you would use for unreal and anope then (anope should start later than unreal)
+2008-08-27T20:51:00.000Z	unop	xintron	 update-rc.d anope start 75 2 3 4 5 .
+2008-08-27T20:52:00.000Z	xintron	unop	ok, thanks :)
+2008-08-27T20:53:00.000Z	unop	xintron	actually .. there is more to this update-rc.d command .. it does not stop the services when rebooting .. read the  update-rc.d manpage for some examples
+2008-08-27T20:54:00.000Z	xintron	unop	how is that possible?
+2008-08-27T20:55:00.000Z	unop	xintron	because when you issue a reboot .. init actually changes runlevel to 6 .. and there is no action for your service in runlevel 6
+2008-08-27T20:55:00.000Z	unop	xintron	update-rc.d anope start 75 2 3 4 5 . stop 25 0 1 6 .
+2008-08-27T22:31:00.000Z	xintron	unop	after removing the gdm my iPod won't mount anymore and I can't seem to mount it manually either :/
+2008-08-27T22:32:00.000Z	unop	xintron	don't think the gdm has any part to play here .. it's just a login manager
+2008-08-27T22:32:00.000Z	unop	xintron	does  sudo fdisk -l   pick up the ipod?
+2008-08-27T22:32:00.000Z	xintron	unop	yes
+2008-08-27T22:33:00.000Z	unop	xintron	sudo mount /dev/sdXX /media/ipod
+2008-08-27T22:34:00.000Z	xintron	unop	hrmm... weird, it works but didn't work before. Oh well, thanks again. Or, can I get it automounted?
+2008-08-27T22:34:00.000Z	unop	xintron	are you using the gnome desktop still?
+2008-08-27T22:34:00.000Z	xintron	unop	nope
+2008-08-27T22:34:00.000Z	unop	xintron	what are you using then?
+2008-08-27T22:34:00.000Z	xintron	unop	fluxbox
+2008-08-27T22:35:00.000Z	unop	xintron	you could start the gnome-volume-manager or ivman with fluxbox
+2008-08-27T22:36:00.000Z	xintron	unop	gnome-volume-manager-gthumb?
+2008-08-27T22:36:00.000Z	unop	xintron	no
+2008-08-27T22:37:00.000Z	xintron	unop	That's the only one I got installed and apt-get install gnome-volume-manager tells me that I got the latest versiobn installed
+2008-08-27T22:40:00.000Z	unop	xintron	not sure then ... you probably would like ivman then
+2008-08-27T22:41:00.000Z	xintron	unop	I added an alias in my .bashrc so it's not that hard to get it mounted fast
+2008-08-28T03:01:00.000Z	unop	xintron	 sudo mount -t vfat -o uid=$UID,gid=${GID:-$UID} /dev/sda1 /media/ipod
+2008-08-28T03:02:00.000Z	xintron	unop	oh, ok
+2008-08-28T03:02:00.000Z	xintron	unop	i'll try that
+2008-08-28T03:03:00.000Z	xintron	unop	worked like a charm! Many thanks!!!
+2008-09-03T01:33:00.000Z	unop	xintron	find /some/path -name '*keyword*'
+2008-09-11T00:06:00.000Z	unop	xintron	depends .. to start services on boot .. it's better to create a init script  .. use /etc/rc.local just to run commands
+2008-09-11T00:07:00.000Z	xintron	unop	ok, but how do I create an init script to controll it, to start/stop/rehash?
+2008-09-11T00:08:00.000Z	unop	xintron	there's a sample init script (in /etc/init.d i think) - can't remember what it was
+2008-09-11T00:09:00.000Z	xintron	unop	/etc/init.d/skelleton?
+2008-09-11T00:09:00.000Z	unop	xintron	but the idea is the script has to respond to start/stop/restart like you said
+2008-09-11T00:09:00.000Z	unop	xintron	that's probably it
+2008-09-11T00:09:00.000Z	xintron	unop	I tried to use that one, but couldn't get the rehas function to work :/
+2008-09-11T00:10:00.000Z	unop	xintron	rehash isn't really important - implementing start and stop should be enough,  though restart is easy, just call stop and start
+2008-09-11T00:10:00.000Z	xintron	unop	I can still use rehash on the file itself right?
+2008-09-11T00:11:00.000Z	unop	xintron	depends, what do you expect rehash to do?
+2008-09-11T00:11:00.000Z	xintron	unop	nvm.
+2008-09-11T00:20:00.000Z	unop	xintron	the start function calls this command.
+2008-09-11T00:20:00.000Z	unop	xintron	something like.   function start () { ./unreal start }
+2008-09-11T00:20:00.000Z	xintron	unop	so I only change the NAME, DEAMON  file?
+2008-09-11T00:20:00.000Z	xintron	unop	ah, ok
+2008-09-11T00:20:00.000Z	unop	xintron	well, my example is very basic -- though you should use the daemon call like other scripts do
+2008-09-11T00:21:00.000Z	unop	xintron	and another thing. you have to change directory for  ./unreal start  to work, as you might know
+2008-09-11T00:21:00.000Z	xintron	unop	yeah, know that. I'll play around a bit then :)
+2008-09-11T00:31:00.000Z	xintron	unop	I've got the init.d script to start without problems now. Stopping can I do manually. So, how do I add it to start at bootup?
+2008-09-22T22:28:00.000Z	unop	xintron	:syntax on
+2008-09-22T22:28:00.000Z	xintron	unop	ofc :)
+2008-09-22T22:28:00.000Z	xintron	unop	it's not that easy cuz it won't work with my .bashrc file either (with some colors to it)
+2008-09-22T22:29:00.000Z	unop	xintron	i fail to see how vim commands are somehow tied with .bashrc ?
+2008-09-22T22:29:00.000Z	unop	xintron	or maybe you want to turn syntax highlighting for when you edit a .bashrc? is what what you mean?
+2008-09-22T22:29:00.000Z	xintron	unop	I meant to get the "what it's called, where the username@host: is"
+2008-09-22T22:30:00.000Z	unop	xintron	that's the bash prompt
+2008-09-22T22:30:00.000Z	xintron	unop	that line colored (copied from my own machine to the server but it still doesn't get that color)
+2008-09-22T22:30:00.000Z	xintron	unop	yeah
+2008-09-22T22:31:00.000Z	unop	xintron	well, there are a couple of things that could stop colours from being displayed in a terminal .. one, the terminal itself does not support colours, two, the PS1 variable isn't using colours, three, the TERM evironmental variable is setup wrong for your terminal.
+2008-09-22T22:32:00.000Z	xintron	unop	probably the TERM enviromental thing. "tput colors" returns: "tput: unknown terminal "rxvt-unicode"". How do I solve this then?
+2008-09-22T22:33:00.000Z	unop	xintron	try setting TERM to rxvt
+2008-09-22T22:34:00.000Z	xintron	unop	thanks, that did it :D

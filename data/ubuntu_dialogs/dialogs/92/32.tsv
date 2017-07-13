@@ -1,0 +1,92 @@
+2011-10-06T12:07:00.000Z	ojii	fritsch	ah
+2011-10-06T11:56:00.000Z	fritsch	ojii	what notebook do you have? is it expected, that two digital outputs work at the same time?
+2011-10-06T11:57:00.000Z	ojii	fritsch	I have a system76 serval professional with a GeForce GTX 485M, no clue if it's supposed to work
+2011-10-06T11:57:00.000Z	ojii	fritsch	turning off my laptop screen and only using the two external monitors works
+2011-10-06T12:02:00.000Z	fritsch	ojii	jep, i think you only have dual head
+2011-10-06T12:02:00.000Z	ojii	fritsch	meaning?
+2011-10-06T12:02:00.000Z	fritsch	ojii	no 3 displays at a time
+2011-10-06T12:02:00.000Z	ojii	fritsch	no way around that?
+2011-10-06T12:02:00.000Z	fritsch	ojii	its a hardware limit, i tink
+2011-10-06T12:02:00.000Z	ojii	fritsch	would an extra gfx card fix this?
+2011-10-06T12:03:00.000Z	fritsch	ojii	mmh, this is a laptop?
+2011-10-06T12:03:00.000Z	ojii	fritsch	yes
+2011-10-06T12:03:00.000Z	fritsch	ojii	where to put the extra card?
+2011-10-06T12:03:00.000Z	ojii	fritsch	but a crazy one
+2011-10-06T12:03:00.000Z	ojii	fritsch	usb
+2011-10-06T12:03:00.000Z	fritsch	ojii	as a separate screen i think it might work
+2011-10-06T12:04:00.000Z	fritsch	ojii	but last time i looked usb grahics supoort was not so good in linux
+2011-10-06T12:04:00.000Z	ojii	fritsch	"separate screen"?
+2011-10-06T12:04:00.000Z	ojii	fritsch	it's not, the one i have here doesn't work (there's drivers for it but way too complicated for me to get to run)
+2011-10-06T12:04:00.000Z	fritsch	ojii	to merge screens with multiple devices is still a huge mess with config files
+2011-10-06T12:04:00.000Z	fritsch	ojii	ati has the possiblity to drive 3 screens
+2011-10-06T12:05:00.000Z	ojii	fritsch	but don't their drivers suck?
+2011-10-06T12:05:00.000Z	fritsch	ojii	but thats the only good propriary amd does on linux
+2011-10-06T12:05:00.000Z	fritsch	ojii	like hell, yes
+2011-10-06T12:05:00.000Z	fritsch	ojii	normal work can be done, but gpu offloading and stuff is a nightmare
+2011-10-06T12:06:00.000Z	ojii	fritsch	so to recap, my 3rd screen is basically useless on ubuntu?
+2011-10-06T12:06:00.000Z	fritsch	ojii	no it is useless in every os
+2011-10-06T12:06:00.000Z	fritsch	ojii	it is a hardware limit
+2011-10-06T12:06:00.000Z	ojii	fritsch	i know for a fact that this works on OSX
+2011-10-06T12:07:00.000Z	fritsch	ojii	oha!
+2011-10-06T12:07:00.000Z	fritsch	ojii	you are sure?
+2011-10-06T12:07:00.000Z	ojii	fritsch	some of the mac guys here have 3 external monitors + their laptop
+2011-10-06T12:07:00.000Z	ojii	fritsch	using 2 usb gfx cards
+2011-10-06T12:07:00.000Z	fritsch	ojii	we talk about your nvidia
+2011-10-06T12:07:00.000Z	fritsch	ojii	if they get 3 screens with only this device
+2011-10-06T12:07:00.000Z	fritsch	ojii	then it should be further investigated
+2011-10-06T12:08:00.000Z	ojii	fritsch	well their main gfx card only handles 2 screens (laptop + 1 external)
+2011-10-06T12:08:00.000Z	ojii	fritsch	they handle the rest over USB
+2011-10-06T12:08:00.000Z	fritsch	ojii	just curious question, what do the display on 4 screens?
+2011-10-06T12:08:00.000Z	fritsch	ojii	two screens ist fine, yes - but cannot imagine what to do on 4
+2011-10-06T12:09:00.000Z	ojii	fritsch	i had 4 before (using 2 laptops + synergy), I'm a webdev. so screen 1: shells, screen 2: browser, screen 3: IDE, screen 4: rest (IRC, mail, ....)
+2011-10-06T12:10:00.000Z	fritsch	ojii	hehe, okay - what usb devices do you have?
+2011-10-06T12:10:00.000Z	fritsch	ojii	see if there is a chance to get them going
+2011-10-06T12:10:00.000Z	ojii	fritsch	not working at that company anymore. i know that the one i have here doesn't work
+2011-10-06T12:10:00.000Z	ojii	fritsch	the one i have here is a club3d
+2011-10-06T12:11:00.000Z	fritsch	ojii	exact model?
+2011-10-06T12:11:00.000Z	fritsch	ojii	http://www.club-3d.com/index.php/produkte/leser.de/product/usb-to-dvi-i-graphic-adapter.html <- this one?
+2011-10-06T12:12:00.000Z	ojii	fritsch	yes
+2011-10-06T12:12:00.000Z	ojii	fritsch	the site we bought it from claimed 'linux support'
+2011-10-06T12:13:00.000Z	fritsch	ojii	what happens if you plug it in?
+2011-10-06T12:13:00.000Z	ojii	fritsch	nothing
+2011-10-06T12:13:00.000Z	fritsch	ojii	hehe, what does the kernel say?
+2011-10-06T12:13:00.000Z	fritsch	ojii	dmesg as Ben64 says
+2011-10-06T12:14:00.000Z	ojii	fritsch	Ben64 http://paste.pocoo.org/show/488132/
+2011-10-06T12:15:00.000Z	fritsch	ojii	looks good
+2011-10-06T12:15:00.000Z	fritsch	ojii	attach a display
+2011-10-06T12:15:00.000Z	ojii	fritsch	1sec
+2011-10-06T12:17:00.000Z	ojii	fritsch	the monitor now lights up bright green
+2011-10-06T12:17:00.000Z	fritsch	ojii	do: xrandr -o 0
+2011-10-06T12:17:00.000Z	fritsch	ojii	and pastebin xrandr -q
+2011-10-06T12:18:00.000Z	ojii	fritsch	http://paste.pocoo.org/show/488134/
+2011-10-06T12:18:00.000Z	fritsch	ojii	could you logout and login again?
+2011-10-06T12:18:00.000Z	fritsch	ojii	gdm gets restarted
+2011-10-06T12:18:00.000Z	ojii	fritsch	is ctrl backspace enough?
+2011-10-06T12:18:00.000Z	fritsch	ojii	yes
+2011-10-06T12:19:00.000Z	fritsch	ojii	did the xrandr output change?
+2011-10-06T12:19:00.000Z	ojii	fritsch	and i'm back and the screen is still green
+2011-10-06T12:21:00.000Z	ojii	fritsch	yes it did
+2011-10-06T12:21:00.000Z	fritsch	ojii	please pastebin again
+2011-10-06T12:21:00.000Z	ojii	fritsch	old output: https://gist.github.com/1266828/d6e675cc429a039b1566cb85ddc8c776c453281b, new output: https://gist.github.com/1266828/58ea542c82f6bdebc8f8e1f2dce2e9f505bb7245
+2011-10-06T12:23:00.000Z	fritsch	ojii	i think there is a chance with edition xorg.conf and placing the correct PCI ID
+2011-10-06T12:23:00.000Z	ojii	fritsch	how do i get the PCI ID? and what would I change xorg.conf to?
+2011-10-06T12:23:00.000Z	fritsch	ojii	dmesg told you the device
+2011-10-06T12:23:00.000Z	ojii	fritsch	ah
+2011-10-06T12:24:00.000Z	fritsch	ojii	http://libdlo.freedesktop.org/wiki/
+2011-10-06T12:25:00.000Z	ojii	fritsch	is it normal that my xorg.conf is nearly empty? http://paste.pocoo.org/show/488137/
+2011-10-06T12:25:00.000Z	fritsch	ojii	jep
+2011-10-06T12:25:00.000Z	fritsch	ojii	http://mulchman.org/blog/?tag=displaylink
+2011-10-06T12:25:00.000Z	fritsch	ojii	here is a lengthy howto
+2011-10-06T12:25:00.000Z	fritsch	ojii	not very easy though
+2011-10-06T12:26:00.000Z	ojii	fritsch	o.O
+2011-10-06T12:26:00.000Z	fritsch	ojii	it still needs some time :-)
+2011-10-06T12:26:00.000Z	ojii	fritsch	looks like it might be cheaper to just buy a new laptop
+2011-10-06T12:26:00.000Z	fritsch	ojii	nope
+2011-10-06T12:26:00.000Z	fritsch	ojii	:-)
+2011-10-06T12:27:00.000Z	fritsch	ojii	but, if you calc with 10hours to get it working in comparison to 10hours work :-)
+2011-10-06T12:27:00.000Z	fritsch	ojii	you could be right
+2011-10-06T12:27:00.000Z	ojii	fritsch	that's what I do
+2011-10-06T12:28:00.000Z	ojii	fritsch	really looking forward to explain this to my boss (a mac fanboy) :(
+2011-10-06T12:29:00.000Z	fritsch	ojii	there is a solution, but not an easy one :-)
+2011-10-06T12:29:00.000Z	ojii	fritsch	yea thanks for that, might try it over the weekend or so
+2011-10-06T12:30:00.000Z	ojii	fritsch	thanks for trying to help

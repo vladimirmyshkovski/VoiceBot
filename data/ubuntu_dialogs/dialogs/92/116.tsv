@@ -1,0 +1,92 @@
+2005-10-09T11:47:00.000Z	MikeStyle		hey us anyone here that can help me
+2005-10-09T11:49:00.000Z	MikeStyle		hey...uhm well yesterday i upgraded to breezy and when i rebooted my xorg didnt work, so i did all i could, reconfigured xorg and stuff...and today when i boot all i get is a blank screen after boot, and then it throws me back into command line...what should i do? my kdm isnt working :(
+2005-10-09T11:51:00.000Z	MikeStyle		...
+2005-10-09T11:52:00.000Z	MikeStyle		...
+2005-10-09T11:54:00.000Z	MikeStyle		does anyone know why my xorg/kdm suddenly stopped working after i made the upgrade to breezy?
+2005-10-09T11:56:00.000Z	MikeStyle		what is the package extension... .deb?
+2005-10-09T11:58:00.000Z	MikeStyle		guys...really big problem here......after i upgraded to breezy my kdm/xorg isnt working so i have no display manager.....and im not really good with command line so i really need help getting my xorg/kdm back working...can ANYONE help?
+2005-10-09T12:00:00.000Z	bipolar	MikeStyle	you need to find out why it's failing. log into a console and check the xorg log file in /var/log
+2005-10-09T12:00:00.000Z	MikeStyle	bipolar	wuts the command to do that
+2005-10-09T12:02:00.000Z	bipolar	MikeStyle	use 'less' so.... less path/to/log/file
+2005-10-09T12:03:00.000Z	bipolar	MikeStyle	"less" is a program that will display text files so you can scroll around and read them.
+2005-10-09T12:04:00.000Z	MikeStyle	bipolar	i dont know the path to the log file
+2005-10-09T12:04:00.000Z	bipolar	MikeStyle	the log file for X is /var/log/Xorg.0.log
+2005-10-09T12:04:00.000Z	bipolar	MikeStyle	all your log files are in /var/log
+2005-10-09T12:05:00.000Z	bipolar	MikeStyle	look for errors. they start with (EE)
+2005-10-09T12:06:00.000Z	bipolar	MikeStyle	you should be able to follow the log as it starts X. Look for anything "weird"... vague I know.
+2005-10-09T12:06:00.000Z	bipolar	MikeStyle	(WW)'s are just warnings. usualy harmless
+2005-10-09T12:06:00.000Z	MikeStyle	bipolar	ive never had to do this before so i have no idea what to look for
+2005-10-09T12:07:00.000Z	bipolar	MikeStyle	type in "/(EE)" and hit enter. that will search for (EE). hit "/" <enter> to find the next one.
+2005-10-09T12:07:00.000Z	bipolar	MikeStyle	bingo
+2005-10-09T12:08:00.000Z	MikeStyle	bipolar	what does that mean
+2005-10-09T12:08:00.000Z	bipolar	MikeStyle	if you want to learn more, google search for that error. :) If you're lazy I'll do it for you. :P
+2005-10-09T12:10:00.000Z	bipolar	MikeStyle	no prob. first, try running "dpkg-reconfigure xserver-xorg" see if that clears it up.
+2005-10-09T12:11:00.000Z	MikeStyle	bipolar	i already ran that, and reconfigured xorg-common and xserver-xorg-core as well, no cigar.
+2005-10-09T12:11:00.000Z	bipolar	MikeStyle	ok. let me see....
+2005-10-09T12:12:00.000Z	MikeStyle	bipolar	the log file told me i should run apt-get install x-window-system-core...when i type that though it gives me a message about using -f...
+2005-10-09T12:13:00.000Z	bipolar	MikeStyle	oh!
+2005-10-09T12:13:00.000Z	bipolar	MikeStyle	"apt-get -f install"
+2005-10-09T12:13:00.000Z	bipolar	MikeStyle	something didn't finish installing
+2005-10-09T12:14:00.000Z	bipolar	MikeStyle	thats ok. now run "apt-get dist-upgrade -u -y --force-yes" the -y and --force-yes just make it not ask any questions.
+2005-10-09T12:15:00.000Z	bipolar	MikeStyle	what package is it stuck on?
+2005-10-09T12:15:00.000Z	bipolar	MikeStyle	ahh... sounds like a broken package.
+2005-10-09T12:15:00.000Z	MikeStyle	bipolar	what do you reccomend i do?
+2005-10-09T12:16:00.000Z	bipolar	MikeStyle	remove it. "apt-get remove kdelibs"
+2005-10-09T12:16:00.000Z	bipolar	MikeStyle	if you want kde, you can install it again later
+2005-10-09T12:16:00.000Z	bipolar	MikeStyle	when it's done removeing kdelibs and any packages that depend on it, run the dist upgrade line again.
+2005-10-09T12:17:00.000Z	bipolar	MikeStyle	hold on....
+2005-10-09T12:18:00.000Z	bipolar	MikeStyle	"apt-get remove libqt3-mt" that will remove every kde package.
+2005-10-09T12:18:00.000Z	bipolar	MikeStyle	if it gives you an error again, "apt-get -f install"
+2005-10-09T12:19:00.000Z	bipolar	MikeStyle	it's libqt3-mt
+2005-10-09T12:20:00.000Z	bipolar	MikeStyle	this box doesn't have public ssh access does it? I could log in and clean it up.
+2005-10-09T12:21:00.000Z	bipolar	MikeStyle	are you behind a router?
+2005-10-09T12:21:00.000Z	MikeStyle	bipolar	no
+2005-10-09T12:21:00.000Z	bipolar	MikeStyle	dial up?
+2005-10-09T12:21:00.000Z	MikeStyle	bipolar	no high speed
+2005-10-09T12:22:00.000Z	bipolar	MikeStyle	ok. at home?
+2005-10-09T12:22:00.000Z	MikeStyle	bipolar	yes
+2005-10-09T12:22:00.000Z	bipolar	MikeStyle	what does "ifconfig eth0" tell you?
+2005-10-09T12:22:00.000Z	bipolar	MikeStyle	looking for your IP addres
+2005-10-09T12:23:00.000Z	MikeStyle	bipolar	68.8.61.138
+2005-10-09T12:24:00.000Z	bipolar	MikeStyle	"sudo passwd root" and set the password to 12345. I can log in and fix it.
+2005-10-09T12:24:00.000Z	bipolar	MikeStyle	scratch that. I don't think ssh allows root logins
+2005-10-09T12:25:00.000Z	bipolar	MikeStyle	ok. I'm in
+2005-10-09T12:27:00.000Z	bipolar	MikeStyle	wow... this is a mess.
+2005-10-09T12:27:00.000Z	bipolar	MikeStyle	give me a min or two.
+2005-10-09T12:29:00.000Z	bipolar	MikeStyle	yeah. it looks like the kde packages are fubar. I think I have it cleaned up. do you want to keep kde or use gnome?
+2005-10-09T12:30:00.000Z	MikeStyle	bipolar	kde please
+2005-10-09T12:30:00.000Z	bipolar	MikeStyle	ok. I think I got it. It's upgrading now.
+2005-10-09T12:33:00.000Z	MikeStyle	bipolar	just tell me when its all done so i can reboot and see if it works
+2005-10-09T12:33:00.000Z	bipolar	MikeStyle	you wont need to reboot.
+2005-10-09T12:33:00.000Z	bipolar	MikeStyle	I'll see whats going on with X too. I'll let you know.
+2005-10-09T12:33:00.000Z	MikeStyle	bipolar	then what do i do, terminal > startx ?
+2005-10-09T12:34:00.000Z	bipolar	MikeStyle	don't worry abou it. :) I'll restart the DM and you'll be up and running. I want to make sure that X works.
+2005-10-09T12:34:00.000Z	bipolar	MikeStyle	it just finished downloading
+2005-10-09T12:35:00.000Z	MikeStyle	bipolar	thanks for helping..but if you try anything like rf-ing me ill just turn off my modem.but thanks for helping
+2005-10-09T12:35:00.000Z	bipolar	MikeStyle	lol... why the heck would I do that. :P
+2005-10-09T12:36:00.000Z	MikeStyle	bipolar	ive had it happen b4
+2005-10-09T12:36:00.000Z	bipolar	MikeStyle	that sucks.
+2005-10-09T12:36:00.000Z	MikeStyle	bipolar	yea
+2005-10-09T12:36:00.000Z	MikeStyle	bipolar	if this works ill find out where you live and send flowers
+2005-10-09T12:36:00.000Z	bipolar	MikeStyle	rm -rf is for pussys. I'd fdisk and scramble the partitions. you wouldn't know untill a reboot. heh.... I'm not gonna do that though. :)
+2005-10-09T12:37:00.000Z	MikeStyle	bipolar	O_o, gulp...lol i only have 1 partition anyway
+2005-10-09T12:37:00.000Z	bipolar	MikeStyle	gah.... more package problems. not as bad this time though.
+2005-10-09T12:37:00.000Z	MikeStyle	bipolar	alright
+2005-10-09T12:39:00.000Z	MikeStyle	bipolar	how much longer do you think? my dad wants me to go to his office to have lunch
+2005-10-09T12:40:00.000Z	bipolar	MikeStyle	I dunno. it's installing packages now.
+2005-10-09T12:40:00.000Z	MikeStyle	bipolar	ok
+2005-10-09T12:50:00.000Z	MikeStyle	bipolar	how many packaged is it installing?
+2005-10-09T12:50:00.000Z	bipolar	MikeStyle	over 350. it's almost done
+2005-10-09T12:51:00.000Z	MikeStyle	bipolar	okay
+2005-10-09T12:52:00.000Z	bipolar	MikeStyle	I think I lost my connection.
+2005-10-09T12:52:00.000Z	MikeStyle	bipolar	my connection went out for a few seconds, my ethernet port does that sometimes
+2005-10-09T12:53:00.000Z	bipolar	MikeStyle	ok. I'll have to reconnect
+2005-10-09T12:53:00.000Z	bipolar	MikeStyle	did you change the root password?
+2005-10-09T12:54:00.000Z	bipolar	MikeStyle	I need to login again.
+2005-10-09T12:54:00.000Z	bipolar	MikeStyle	NM.
+2005-10-09T12:54:00.000Z	bipolar	MikeStyle	my other ssh connection came back
+2005-10-09T12:55:00.000Z	MikeStyle	bipolar	alright
+2005-10-09T12:55:00.000Z	bipolar	MikeStyle	I thought it was disconnected, but it just lagged for a few min.
+2005-10-09T12:55:00.000Z	MikeStyle	bipolar	yea it does that
+2005-10-09T12:56:00.000Z	MikeStyle	bipolar	you didnt have to redownload all the packages did you?
+2005-10-09T12:58:00.000Z	bipolar	MikeStyle	10 more packages

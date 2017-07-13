@@ -1,0 +1,94 @@
+2007-01-20T16:48:00.000Z	Cyrus25801		could someone pleeeeezzzz help me with setting me up my svideo on my geforce 6600
+2007-01-20T16:50:00.000Z	jrib	Cyrus25801	I think there is a guide on the wiki, have you seen it?
+2007-01-20T16:51:00.000Z	Cyrus25801	jrib	no i havn't. what is the www?
+2007-01-20T16:51:00.000Z	jrib	Cyrus25801	I don't know, do a search at help.ubuntu.com
+2007-01-20T16:52:00.000Z	jrib	Cyrus25801	https://help.ubuntu.com/community/NvidiaTVOut?highlight=%28nvidia%29%7C%28s-video%29
+2007-01-20T16:53:00.000Z	jrib	Cyrus25801	also https://help.ubuntu.com/community/NvidiaTVOutNewbieEdition?highlight=%28nvidia%29%7C%28out%29%7C%28tv%29
+2007-01-20T16:53:00.000Z	Cyrus25801	jrib	thnx
+2007-01-21T17:56:00.000Z	Cyrus25801	jrib	i tried both the wiki's (for tv out nvidia) you sent me to both didn't work. any advise
+2007-01-21T17:57:00.000Z	jrib	Cyrus25801	no sorry, I've never set that up.  Maybe you can search the forums too
+2007-03-25T07:02:00.000Z	jrib	Cyrus25801	gksudo gedit /etc/X11/xorg.conf
+2007-04-29T11:19:00.000Z	jrib	Cyrus25801	the plugin or content?
+2007-04-29T11:19:00.000Z	Cyrus25801	jrib	the content
+2007-04-29T11:19:00.000Z	jrib	Cyrus25801	use wget
+2007-04-29T11:20:00.000Z	Cyrus25801	jrib	How do I do that
+2007-04-29T11:20:00.000Z	jrib	Cyrus25801	wget http://www.somewhere.com/path/to/flash.swf
+2007-04-29T11:21:00.000Z	jrib	Cyrus25801	tools > page info   might work too
+2007-04-29T11:21:00.000Z	jrib	Cyrus25801	the media tab should list flash stuff and the you can "save as"
+2007-04-29T11:26:00.000Z	Cyrus25801	jrib	is there another way because my wget doesn't want to start. it just says starting the quits
+2007-04-29T11:26:00.000Z	jrib	Cyrus25801	did you see the second thing I said about  Tools > Page Info  in firefox?
+2007-04-29T11:27:00.000Z	Cyrus25801	jrib	yes I did.but wget is giving me errors when I try to start it.it doesn't even open
+2007-04-29T11:27:00.000Z	jrib	Cyrus25801	but the second way doesn't require wget
+2007-04-29T11:30:00.000Z	Cyrus25801	jrib	sorry I ditn't read. thanx
+2007-04-29T11:33:00.000Z	Cyrus25801	jrib	it doesn't save. any other ideas
+2007-04-29T11:33:00.000Z	jrib	Cyrus25801	what page?
+2007-04-29T11:34:00.000Z	Cyrus25801	jrib	http://www.ilogic.co.za/taxi-wars.html, thanx man
+2007-04-29T11:36:00.000Z	jrib	Cyrus25801	wget http://www.ilogic.co.za/taxiwars.swf    is working fine
+2007-04-29T11:37:00.000Z	Cyrus25801	jrib	MY wget itn't working. it starts opening and then it just dies.
+2007-04-29T11:38:00.000Z	jrib	Cyrus25801	try curl
+2007-04-29T11:38:00.000Z	jrib	Cyrus25801	do you use a proxy or something?
+2007-04-29T11:39:00.000Z	Cyrus25801	jrib	I don't use a proxy. I can't find curl
+2007-04-29T11:40:00.000Z	jrib	Cyrus25801	sudo apt-get install curl
+2007-04-29T11:40:00.000Z	jrib	Cyrus25801	and can you pastebin the output from wget?
+2007-04-29T11:41:00.000Z	Cyrus25801	jrib	I found curl. wget doesn't give me any output
+2007-04-29T11:41:00.000Z	jrib	Cyrus25801	how are you running it?
+2007-04-29T11:43:00.000Z	Cyrus25801	jrib	I click on the gwet icon it says "starting" and then dies
+2007-04-29T11:43:00.000Z	jrib	Cyrus25801	no, wget is a command you put in the terminal: wget http://www.ilogic.co.za/taxiwars.swf
+2007-04-29T11:45:00.000Z	Cyrus25801	jrib	I was running Gwget. thanx
+2007-04-29T11:45:00.000Z	Cyrus25801	jrib	where does it save to
+2007-04-29T11:45:00.000Z	jrib	Cyrus25801	current directory
+2007-04-29T11:47:00.000Z	Cyrus25801	jrib	Thanx a stack man
+2007-05-08T15:33:00.000Z	jrib	Cyrus25801	do you receive any errors?
+2007-05-08T15:33:00.000Z	Cyrus25801	jrib	no nothing
+2007-05-08T15:33:00.000Z	jrib	Cyrus25801	how are you trying to copy?
+2007-05-08T15:33:00.000Z	Cyrus25801	jrib	right click copy, then right click past
+2007-05-08T15:34:00.000Z	jrib	Cyrus25801	try in a terminal
+2007-05-08T15:36:00.000Z	Cyrus25801	jrib	how do I copy from the drive to a windows network drive
+2007-05-08T15:37:00.000Z	jrib	Cyrus25801	is the windows network drive mounted somewhere?  you can just do 'cp from_location to_location'
+2007-05-08T15:38:00.000Z	Cyrus25801	jrib	well I just clicked on places and network servers and took it from there. how do I do that in terminal
+2007-05-08T15:39:00.000Z	jrib	Cyrus25801	I don't think those get mounted anywhere (or I don't know where).  This is using samba right?
+2007-05-08T15:39:00.000Z	Cyrus25801	jrib	yes
+2007-05-08T15:44:00.000Z	Cyrus25801	jrib	yes it is using smb
+2007-05-08T15:45:00.000Z	jrib	Cyrus25801	instead of mounting it with the gui, use the mount command to mount in a directory somewhere and then try copying in a terminal
+2007-05-08T15:45:00.000Z	Cyrus25801	jrib	thanx a stack
+2007-05-08T15:46:00.000Z	Cyrus25801	jrib	1 last question. what command do I use to copy multiple directories
+2007-05-08T15:47:00.000Z	jrib	Cyrus25801	cp -a dir1 dir2 ... dir_to_copy_to
+2007-05-08T15:47:00.000Z	Cyrus25801	jrib	thanx
+2007-05-08T15:55:00.000Z	Cyrus25801	jrib	I tried to mount the windows drive but it keeps telling me that there is no such file or directory, even though I can open it with the GUI
+2007-05-08T15:55:00.000Z	jrib	Cyrus25801	did you create the mount point first?
+2007-05-08T15:56:00.000Z	Cyrus25801	jrib	do you mean: mkdir /usbwindows ?
+2007-05-08T15:56:00.000Z	jrib	Cyrus25801	yeah
+2007-05-08T15:56:00.000Z	Cyrus25801	jrib	yes
+2007-05-08T15:57:00.000Z	Cyrus25801	jrib	it cant find the windows mount point. but i see it in the gui
+2007-05-08T15:57:00.000Z	jrib	Cyrus25801	hmm, maybe unmount it from the gui first (I don't use samba but I assume that is possible somehow)
+2007-05-08T15:58:00.000Z	Cyrus25801	jrib	thanx
+2007-05-09T16:05:00.000Z	Cyrus25801	jrib	sorry how do i copy multiple directries again
+2007-05-09T16:06:00.000Z	jrib	Cyrus25801	cp -a dir1 dir2 ... dir_to_copy_to
+2007-05-09T16:06:00.000Z	Cyrus25801	jrib	thanx
+2007-05-09T16:06:00.000Z	Cyrus25801	jrib	what is the -a for
+2007-05-09T16:06:00.000Z	jrib	Cyrus25801	cp won't copy directories by default
+2007-05-09T16:07:00.000Z	Cyrus25801	jrib	i c
+2007-05-09T16:14:00.000Z	Cyrus25801	jrib	how do I type into the terminal of the directory name is: J Download - Other (with the spaces) I want to copy from it
+2007-05-09T16:14:00.000Z	jrib	Cyrus25801	well you can either let the shell worry about it and use tab completion, or escape the spaces yourself like this:  directory\ with\ spaces   or you can just surround it in quotation marks:  'directory with spaces'
+2007-05-09T16:40:00.000Z	Cyrus25801	jrib	is there a way that I can temp. disable the auto mount for usb devices
+2007-05-09T16:42:00.000Z	jrib	Cyrus25801	system > preferences > removable drives and media
+2007-05-09T16:42:00.000Z	Cyrus25801	jrib	thanx
+2007-05-09T16:57:00.000Z	Cyrus25801	jrib	Sorry to bother again. copying over the network is just taking too long. I have put the drive in my machine. it is a IDE drive (the 3rd) how do I know what to mount it as (hda, hdc etc)
+2007-05-09T16:58:00.000Z	jrib	Cyrus25801	sudo fdisk -l     should list them all, and 'mount' should tell you which ones are already mounted so you can narrow it down that way
+2007-05-09T05:01:00.000Z	Cyrus25801	jrib	when I run this command I get this output (i already have a ntfs drive mounted this way) sudo ntfs-3g /dev/hdc1 /media/Jacques
+2007-05-09T05:01:00.000Z	Cyrus25801	jrib	sorry
+2007-05-09T05:02:00.000Z	Cyrus25801	jrib	do you want me to past it into pastbin for you
+2007-05-09T05:02:00.000Z	jrib	Cyrus25801	I haven't seen that before, but just read over the options and choose the one that is easiest for you
+2007-05-09T05:03:00.000Z	Cyrus25801	jrib	it gives me this on the linux machine. this is what is weire
+2007-05-09T05:04:00.000Z	Cyrus25801	jrib	how do I unmount
+2007-05-09T05:04:00.000Z	jrib	Cyrus25801	umount /dev/foobar
+2007-05-09T05:04:00.000Z	Cyrus25801	jrib	 thanx
+2007-05-09T05:28:00.000Z	Cyrus25801	jrib	sorry, how do i check if hda, hdb etc. my window closed and i lost the command
+2007-05-09T05:29:00.000Z	jrib	Cyrus25801	sudo fdisk -l     should list them all, and 'mount' should tell you which ones are already mounted so you can narrow it down that way
+2007-05-09T05:29:00.000Z	Cyrus25801	jrib	thanx
+2007-05-18T11:48:00.000Z	Cyrus25801	jrib	hey, hope you doing well
+2007-05-18T11:50:00.000Z	Cyrus25801	jrib	I need your help. I can't get any .mkv file to play.can you help
+2007-11-03T22:59:00.000Z	Cyrus25801	jrib	the reason i was asking is because i want to play it on ubuntu and i wanted someone to help me with it.
+2007-11-03T23:03:00.000Z	jrib	Cyrus25801	then please ask that question directly instead
+2007-11-03T23:05:00.000Z	Cyrus25801	jrib	ok sorry about that
+2007-11-06T00:21:00.000Z	Cyrus25801	jrib	hi i am having trouble editing my grub could you help me

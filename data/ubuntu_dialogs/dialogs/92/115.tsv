@@ -1,0 +1,92 @@
+2005-08-25T15:12:00.000Z	bz0b	bob2	can you hep me?
+2005-08-25T15:12:00.000Z	bz0b	bob2	im trying to make my wireless drivers and i get an error root@bz0b:/usr/src/madwifi-cvs-20050814# make && make install
+2005-08-29T08:20:00.000Z	bob2	bz0b	you need to ask a question...
+2005-08-29T08:21:00.000Z	bz0b	bob2	well I just bought an dwl-g650 rev b5 wifi card, and I just installed kubuntu, and like after all the apt-get upgrading, and after upating the cvs, I see my wireless card on the lspci, but when I type in modprobe ath_pci nothing happens
+2005-08-29T08:23:00.000Z	bz0b	bob2	I think I am getting a HAL 13 error, for unsupported hardware
+2005-08-29T08:24:00.000Z	bz0b	bob2	but so many people seem to have success with the g650
+2005-08-29T08:24:00.000Z	bob2	bz0b	if you installed crap from cvs, you've broken things already
+2005-08-29T08:25:00.000Z	bz0b	bob2	oh well it didnt pick it up before
+2005-08-29T08:25:00.000Z	bz0b	bob2	and that is what it said to do on the madwifi site
+2005-08-29T08:25:00.000Z	bob2	bz0b	"pick it up"?  installing drivers from cvs will not change lspci output, if that's what you mean.
+2005-08-29T08:25:00.000Z	bz0b	bob2	ok
+2005-08-29T08:25:00.000Z	bz0b	bob2	what can I do?
+2005-08-29T08:26:00.000Z	bob2	bz0b	undo whatever you did
+2005-08-29T08:28:00.000Z	bz0b	bob2	would you mind telling me how to uninstall something that I installed with cvs?
+2005-08-29T08:33:00.000Z	bob2	bz0b	there is no general way
+2005-08-29T08:33:00.000Z	bz0b	bob2	well then what do you want me to do? reformatt?
+2005-08-29T08:34:00.000Z	bz0b	bob2	sorry if i am not as guru as you
+2005-08-29T08:34:00.000Z	bob2	bz0b	that's not at all what I'm talking about
+2005-08-29T08:35:00.000Z	bz0b	bob2	I know, but I wish I knew about this stuff as much as you, what would you recommend me doing to be as knowledgeable as you?
+2005-08-29T08:49:00.000Z	bz0b	bob2	you said my issue was easily fixable?
+2005-08-29T08:50:00.000Z	bob2	bz0b	yes, by not running off and doing random things
+2005-08-29T08:50:00.000Z	bz0b	bob2	sorry
+2005-08-29T08:51:00.000Z	bz0b	bob2	ok, anyways, in #flood you said it was easly fixable, could you maybe help me please?
+2005-08-29T08:51:00.000Z	bob2	bz0b	if you'd googled to begin with, you'd be done by now.  what model is it?
+2005-08-29T08:51:00.000Z	bob2	bz0b	just be quiet for ten seconds
+2005-08-29T08:51:00.000Z	bz0b	bob2	ok
+2005-08-29T08:57:00.000Z	bz0b	bob2	have a second for me?
+2005-08-29T08:57:00.000Z	bob2	bz0b	just be quiet
+2005-08-29T08:57:00.000Z	bz0b	bob2	ok
+2005-08-29T08:57:00.000Z	bz0b	bob2	:-)
+2005-08-29T09:00:00.000Z	bob2	bz0b	http://ubuntuforums.org/showthread.php?t=38972&page=1
+2005-08-29T09:01:00.000Z	bz0b	bob2	thanks
+2005-08-31T13:12:00.000Z	bz0b	bob2	hey man, i hate to bug you again, but I just got this new wifi card, and actually its a usb one, and I tried installing it according to the aircrack document, because it is the Railink or something chipset, but it still doesnt work, by the way, its a dlink dwl g122
+2005-08-31T13:13:00.000Z	bob2	bz0b	unlikely to work
+2005-08-31T13:16:00.000Z	bz0b	bob2	do you think it might be a battery problem?
+2005-09-15T12:57:00.000Z	bob2	bz0b	napster has been dead for about 3 years now
+2005-09-15T12:57:00.000Z	bz0b	bob2	where have you been?
+2005-09-15T12:57:00.000Z	bob2	bz0b	?
+2005-09-15T12:58:00.000Z	bob2	bz0b	this sounds a) like a violation of copyright laws, and b) unrelated to ubuntu
+2005-09-15T13:00:00.000Z	bz0b	bob2	do you recommend using ubuntuguide.org
+2005-09-15T13:00:00.000Z	bob2	bz0b	not unless you know which bits to ignore
+2005-09-15T13:01:00.000Z	bz0b	bob2	like the limewire crap and stuff?
+2005-09-15T13:01:00.000Z	bz0b	bob2	i am mainly using it for the codecs, repos, and some little things
+2005-09-15T13:06:00.000Z	bz0b	bob2	true that, if i use CLI, i would use irssi!
+2005-09-16T06:15:00.000Z	bz0b	bob2	if i upgrade to breezy, when they make the new updates since itws still not the final release, will it be updated without me having to reformatt again?
+2005-09-16T06:16:00.000Z	bob2	bz0b	you never need to reformat or reinstall for updates
+2005-09-16T06:16:00.000Z	bz0b	bob2	you are god!
+2005-09-16T06:19:00.000Z	bz0b	bob2	well what if he wants gui
+2005-09-16T06:21:00.000Z	bob2	bz0b	this is not a wzrez channel
+2005-09-16T06:23:00.000Z	bob2	bz0b	no more warnings
+2005-09-16T06:23:00.000Z	bz0b	bob2	sorry, ok done
+2005-09-16T06:27:00.000Z	bob2	bz0b	for instance, you don't have any permission at all to distribute the binary .deb, and it includes various bug fixes and support for copy protected cds that the source on SF does not
+2005-09-16T06:30:00.000Z	bob2	bz0b	sudo cdrecord dev=/dev/cdrom blah.iso
+2005-09-16T06:30:00.000Z	bz0b	bob2	thanks, gotta remember that
+2005-09-18T09:00:00.000Z	bz0b	bob2	you here?
+2005-09-18T09:02:00.000Z	bob2	bz0b	ubuntu ships with madwifi
+2005-09-18T10:52:00.000Z	bob2	bz0b	they're pretty good linux machines, aside from having non-working wireless
+2005-09-18T10:53:00.000Z	bob2	bz0b	not soon
+2005-09-18T10:53:00.000Z	bob2	bz0b	not really
+2005-09-18T10:54:00.000Z	bob2	bz0b	they both have something unix-like underneath, so somethings are similar
+2005-09-18T10:54:00.000Z	bob2	bz0b	it has bsd tar
+2005-09-18T10:55:00.000Z	bob2	bz0b	the same
+2005-09-18T10:55:00.000Z	bob2	bz0b	mac os X really does need 512mb, tho
+2005-09-18T10:55:00.000Z	bob2	bz0b	that person would be confused
+2005-09-18T10:55:00.000Z	bob2	bz0b	students get nice discounts from apple, if you know one or are one
+2005-09-18T10:56:00.000Z	bz0b	bob2	i am a high school student :-)
+2005-09-18T10:58:00.000Z	bob2	bz0b	system -> preferences -> session
+2005-09-18T10:59:00.000Z	bz0b	bob2	why did you tell me that?
+2005-09-18T10:59:00.000Z	bob2	bz0b	because I suck
+2005-09-18T10:59:00.000Z	bz0b	bob2	haha
+2005-09-18T10:59:00.000Z	bz0b	bob2	no, you are the most helpful in here
+2005-09-18T11:02:00.000Z	bob2	bz0b	no apple laptop will give you six hours
+2005-09-18T11:02:00.000Z	bob2	bz0b	not without extra batteries
+2005-09-18T11:03:00.000Z	bz0b	bob2	yeah, but still better then my 1 hour 30 min max compaq presario 2100
+2005-09-19T06:58:00.000Z	bz0b	bob2	when the release of 5.10 comes out, will all the updates that are made for it be there so I can just update my version of development to like the final release version, without having to redownload the new version?
+2005-09-19T06:58:00.000Z	bz0b	bob2	and how do i install the drivers for my integrated ati gfx card for my notebook
+2005-09-19T06:58:00.000Z	bob2	bz0b	of course!
+2005-09-19T06:59:00.000Z	bz0b	bob2	yay!
+2005-09-19T06:59:00.000Z	bob2	bz0b	wiki.ubuntu.com/BinaryDriverHowto
+2005-09-19T06:59:00.000Z	bz0b	bob2	thanks
+2005-09-19T08:44:00.000Z	bz0b	bob2	hehe, yup!
+2005-09-20T09:32:00.000Z	bob2	bz0b	yeah
+2005-09-20T11:50:00.000Z	bob2	bz0b	you'd need to give gcc the correct arguments, and that would need to be source suitable for unix
+2005-09-23T09:28:00.000Z	bz0b	bob2	i know
+2005-09-23T09:28:00.000Z	bz0b	bob2	but i want to update to the newest screenshot
+2005-09-23T09:30:00.000Z	bob2	bz0b	screenshot?
+2005-09-25T08:38:00.000Z	bz0b	bob2	if i messd up my sudoers file to were i cant even use the command sudo, what do I do? failsafe?
+2005-09-25T08:38:00.000Z	bob2	bz0b	yes
+2005-10-09T11:01:00.000Z	bz0b	bob2	do you know what this means? $ fixme:vxd:VXD_Open Unknown/unsupported VxD L"scsi0:.vxd". Try setting Windows version to 'nt40' or 'win31'.
+2005-10-09T11:03:00.000Z	bob2	bz0b	sounds like you're doing something odd in wine
+2005-10-09T11:03:00.000Z	bz0b	bob2	 i am trying to run online poker, i even tried cedega
+2005-10-09T11:04:00.000Z	bob2	bz0b	well, try #winehq or something

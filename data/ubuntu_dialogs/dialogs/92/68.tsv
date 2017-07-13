@@ -1,0 +1,92 @@
+2007-05-06T12:40:00.000Z	Fezzler		Can Ubuntu Fiesty handle a 200 gig HD?
+2007-05-06T12:40:00.000Z	Flannel	Fezzler	of course it can
+2007-05-17T10:38:00.000Z	Flannel	Fezzler	#ubuntu-server isn't for support.  This room is.
+2007-05-17T10:38:00.000Z	Fezzler	Flannel	Thanks.  I was directed to ubuntu-server for samba setup qs
+2007-05-23T10:17:00.000Z	Flannel	Fezzler	Or go to the "recovery console" at your grub menu.  It's single user mode
+2007-05-23T10:17:00.000Z	Flannel	Fezzler	no.  It's `sudo -i` by itself.
+2007-05-23T10:18:00.000Z	Flannel	Fezzler	with `sudo -i` you just "exit"  With single user mode (recovery console), just reboot
+2007-05-23T10:23:00.000Z	Flannel	Fezzler	you probably want -R
+2007-05-24T10:59:00.000Z	Flannel	Fezzler	what?  Map a windows user to a linux...what?
+2007-05-24T11:11:00.000Z	Fezzler	Flannel	yes, map Windows users to Ubuntu via samba and smb
+2007-07-08T12:37:00.000Z	Flannel	Fezzler	yes
+2007-07-08T13:43:00.000Z	Flannel	Fezzler	the permissions for users?  What do you mean?
+2007-10-07T10:46:00.000Z	Flannel	Fezzler	Only if you enjoy reinstalling
+2007-12-23T13:55:00.000Z	Flannel	Fezzler	Are you in the admin group?
+2007-12-23T13:55:00.000Z	Fezzler	Flannel	 Thank goodness.  Yes!
+2007-12-23T13:55:00.000Z	Flannel	Fezzler	type 'groups' in ther terminal, see if you're in admin
+2007-12-23T13:56:00.000Z	Fezzler	Flannel	Yes
+2007-12-23T13:56:00.000Z	Fezzler	Flannel	And I'm in /etc/sudoers and /etc/group
+2007-12-23T13:56:00.000Z	Flannel	Fezzler	and sudo works?  for regular stuff?
+2007-12-23T13:57:00.000Z	Fezzler	Flannel	yes, I'm confused
+2007-12-23T13:57:00.000Z	Flannel	Fezzler	Try opening a terminal, typing "gksu nautilus" and see what happens
+2007-12-23T14:00:00.000Z	Flannel	Fezzler	Uh, thats an odd so to be looking for, but, try installing libgtop2-dev
+2007-12-23T14:00:00.000Z	Fezzler	Flannel	Any ideas?  For example, I can run synaptic from Terminal, but not GNOME
+2007-12-23T14:01:00.000Z	Fezzler	Flannel	what's the command line to install libgtop2-dev
+2007-12-23T14:01:00.000Z	Flannel	Fezzler	sudo apt-get install libgtop2-dev
+2007-12-23T14:02:00.000Z	Fezzler	Flannel	Done
+2007-12-23T14:03:00.000Z	Flannel	Fezzler	And then does gksu work now?
+2007-12-23T14:03:00.000Z	Fezzler	Flannel	we'll see
+2007-12-23T14:04:00.000Z	Fezzler	Flannel	>>gksu: error while loading shared libraries: libgtop-2.0.so.7: cannot open shared object file: No such file or directory
+2007-12-23T14:04:00.000Z	Fezzler	Flannel	Reboot required?
+2007-12-23T14:05:00.000Z	Flannel	Fezzler	shouldnt be, no.
+2007-12-23T14:05:00.000Z	Fezzler	Flannel	I'm confused
+2007-12-23T14:06:00.000Z	Flannel	Fezzler	What version of ubuntu are you running?
+2007-12-23T14:06:00.000Z	Fezzler	Flannel	7.10
+2007-12-23T14:07:00.000Z	Flannel	Fezzler	Oh, sorry.  Try installing libgtop2-7
+2007-12-23T14:08:00.000Z	Fezzler	Flannel	>>libgtop2-7 is already the newest version.
+2007-12-23T14:08:00.000Z	Fezzler	Flannel	Isn't this something?
+2007-12-23T14:09:00.000Z	Flannel	Fezzler	try reinstalling it, sudo apt-get install --reinstall libgtop2-7
+2007-12-23T14:11:00.000Z	Fezzler	Flannel	You da man!  That did it.  What is libgtop?  What does it do?  How did I screw it up?
+2007-12-23T14:11:00.000Z	Flannel	Fezzler	no idea, and I dont know.
+2007-12-23T14:12:00.000Z	Fezzler	Flannel	:)
+2008-07-14T00:16:00.000Z	Flannel	Fezzler	uname -a
+2008-07-14T00:23:00.000Z	Fezzler	Flannel	Any ideas?
+2008-07-14T00:25:00.000Z	Flannel	Fezzler	If it keeps asking you to restart, something's not right.  (I have no idea whats not right, but something.) This may help the screenres: https://help.ubuntu.com/community/BinaryDriverHowto/Nvidia#Low%20Screen%20Resolutions
+2008-10-27T04:27:00.000Z	Flannel	Fezzler	df -h
+2008-10-27T04:28:00.000Z	Fezzler	Flannel	Cool.  df -h did it.  Why is my 200gig only showing as 93gig?
+2008-10-27T04:30:00.000Z	Flannel	Fezzler	nope, but you'll need to sudo it.
+2008-10-27T04:32:00.000Z	Fezzler	Flannel	http://paste.ubuntu.com/63072/
+2008-10-27T04:34:00.000Z	Fezzler	Flannel	I have no idea what I have going on.  I thought I had a 6gig that was my boot HD, and a 200gig that was mounted as /home
+2008-10-27T04:35:00.000Z	Flannel	Fezzler	what does df -h show?
+2008-10-27T04:35:00.000Z	Fezzler	Flannel	My idea was the data on the 200gig would always be safe from a problem with the HD1
+2008-10-27T04:35:00.000Z	Flannel	Fezzler	right, thats the benefit of a separate home.
+2008-10-27T04:36:00.000Z	Fezzler	Flannel	http://paste.ubuntu.com/63070/
+2008-10-27T04:38:00.000Z	Fezzler	Flannel	Did df -h tell you anything?
+2008-10-27T04:42:00.000Z	Flannel	Fezzler	Why are you only using a small portion of both of your harddrives?
+2008-10-27T04:43:00.000Z	Fezzler	Flannel	I have no idea - someone here help me set it up
+2008-10-27T04:44:00.000Z	Flannel	Fezzler	Alright, is this a fresh install? or what?  You're not trying to do anything else with these harddrives are you?  You just want your home on a separate drive?
+2008-10-27T04:45:00.000Z	Fezzler	Flannel	I had lots of trouble upgrading Gutsy to Hardy so I did a clean install of Hardy and remounted the old 200gig as /home again
+2008-10-27T04:45:00.000Z	Flannel	Fezzler	so this is more or less fresh?  Do you have a liveCD you can use?
+2008-10-27T04:45:00.000Z	Fezzler	Flannel	Yes and yes
+2008-10-27T04:45:00.000Z	Flannel	Fezzler	Freshness doesn't actually matter, we should be able to fix this without any dataloss, etc.
+2008-10-27T04:46:00.000Z	Flannel	Fezzler	Alright, boot the liveCD, run gparted, and expand the first partitions on each drive (sda1 and sdb1) to be the entire drives, right now you've got more partitions on there, that are taking up space.
+2008-10-27T04:46:00.000Z	Fezzler	Flannel	"should"  :)  how about losing all my mapping
+2008-10-27T04:46:00.000Z	Fezzler	Flannel	So I need to drop off this to do that, right?
+2008-10-27T04:47:00.000Z	Fezzler	Flannel	Is gparted easy to use?  A menu selection off Live CD or command line?
+2008-10-27T04:49:00.000Z	Fezzler	Flannel	Still here?
+2008-10-27T04:50:00.000Z	Flannel	Fezzler	Gparted is really easy to use, yes.  And menu should be there, under admin, "Gnome partition editor"
+2008-10-27T04:50:00.000Z	Flannel	Fezzler	and yes, you need to boot from the CD, since you can only modify unmounted partitions
+2008-10-27T04:51:00.000Z	Fezzler	Flannel	So boot with Live CD, gparted is a menu item, select used entire drive for partition, save/close, reboot?  No data loss, no paths loss?
+2008-10-27T04:52:00.000Z	Flannel	Fezzler	No data loss, no path loss (since they're still sda1 and sdb1).  You'll end up needing to first delete the rest of your partitions, and then expand the first partitions.  But more or less, those steps were correct, yes.
+2008-10-27T04:53:00.000Z	Fezzler	Flannel	Last question - The 6gig is getting loud.  Is it possible to move my Hardy install to the 200gig and not loose
+2008-10-27T04:54:00.000Z	Flannel	Fezzler	6Gig is rather small, yeah. 20G would be better.  However, yeah, there is. you'll use more or less the same instructions for moving to a separate home, except you'll be moving your /
+2008-10-27T04:55:00.000Z	Flannel	Fezzler	it's likely you'll have to update grub too, which is the first link here.
+2008-10-27T04:56:00.000Z	Flannel	Fezzler	Not terribly, but if you do have a relatively clean install, backing your personal settings up and then doing an install would be simpler/faster
+2008-10-27T04:56:00.000Z	Fezzler	Flannel	Maybe I'll have someone walk me through it.
+2008-10-27T04:56:00.000Z	Fezzler	Flannel	Someother night
+2008-10-30T06:42:00.000Z	Fezzler	Flannel	Q re gparted
+2008-10-30T06:44:00.000Z	Fezzler	Flannel	You said to use gparted I needed to boot from LiveCD.  You me a gparted LiveCD not Ubuntu right?
+2008-10-30T06:44:00.000Z	Flannel	Fezzler	Any CD that has gparted on it.  Whether its the Gparted one, or the Ubuntu one.
+2008-10-30T06:45:00.000Z	Fezzler	Flannel	But I can't do it from a running PC
+2008-10-30T06:46:00.000Z	Flannel	Fezzler	Well, the PC is running, just off of the CD not from the harddrive
+2008-12-01T04:38:00.000Z	Flannel	Fezzler	of course
+2010-01-03T13:40:00.000Z	Flannel	Fezzler	Do what it says to do at the end of the error, it'll give you a command (I can't recall the specifics at this point)
+2010-01-03T13:42:00.000Z	Flannel	Fezzler	Ah, can you pastebin the error then?
+2010-01-03T13:59:00.000Z	Flannel	Fezzler	Try cleaning your package cache (apt-get clean) then installing it again
+2010-01-03T14:00:00.000Z	Flannel	Fezzler	What?
+2010-01-03T14:01:00.000Z	Flannel	Fezzler	Oh, you're doing this in some sort of GUI?  Try doing it on the command line, you'll get a more informative error message
+2010-01-03T14:02:00.000Z	Flannel	Fezzler	sudo apt-get install [package]
+2010-01-03T14:06:00.000Z	Flannel	Fezzler	right
+2010-01-03T14:09:00.000Z	Flannel	Fezzler	hmm, I'm not sure if you'll need to in this case, since the metapackage was the broken one, but asking it to install the package again certainly won't do any harm (if it's already installed and updated, it'll do exactly nothing), and if it doesn't give you any errors, you'll know that you've fixed the problem as well.  So yeah
+2010-01-03T14:14:00.000Z	Flannel	Fezzler	Er, installing the package should do it (if it normally does).  and... looking at the package it looks like it ought to.
+2010-01-03T14:15:00.000Z	Flannel	Fezzler	I'm not sure what's up, but /usr/share/applicatins/ardour.desktop should exist (with content in it!)

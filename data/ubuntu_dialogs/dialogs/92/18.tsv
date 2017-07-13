@@ -1,0 +1,92 @@
+2010-06-17T15:44:00.000Z	Cavej03	indus	hi i made it into 8.04 and got internet access
+2010-06-17T15:47:00.000Z	Cavej03	indus	hi i made it into 8.04 and got internet access, however the commands you gave me didn't detect my harddrives
+2010-06-17T15:59:00.000Z	indus	Cavej03	Hello
+2010-06-17T15:59:00.000Z	indus	Cavej03	does fdisk -l show it
+2010-06-17T16:00:00.000Z	indus	Cavej03	hmm does live cd boot
+2010-06-17T16:00:00.000Z	Cavej03	indus	na it doesnt
+2010-06-17T16:00:00.000Z	indus	Cavej03	can i see output of sudo fdisk -l
+2010-06-17T16:01:00.000Z	Cavej03	indus	ok used pastebin
+2010-06-17T16:01:00.000Z	indus	Cavej03	so give me the link
+2010-06-17T16:03:00.000Z	indus	Cavej03	what is .dev.sda
+2010-06-17T16:03:00.000Z	indus	Cavej03	its a hdd
+2010-06-17T16:04:00.000Z	indus	Cavej03	ah ok
+2010-06-17T16:04:00.000Z	indus	Cavej03	hmm hmm
+2010-06-17T16:04:00.000Z	Cavej03	indus	its a toughy
+2010-06-17T16:04:00.000Z	indus	Cavej03	does it work in windows
+2010-06-17T16:04:00.000Z	Cavej03	indus	the drives work fine everywhere
+2010-06-17T16:04:00.000Z	indus	Cavej03	good
+2010-06-17T16:04:00.000Z	Cavej03	indus	have done for years
+2010-06-17T16:05:00.000Z	Cavej03	indus	tbh i think the mobo is to new for ubuntu 8.04
+2010-06-17T16:05:00.000Z	indus	Cavej03	how are the jumpers set
+2010-06-17T16:05:00.000Z	Cavej03	indus	1 is master and 1 is nothing for slave
+2010-06-17T16:05:00.000Z	Cavej03	indus	try 1 drive at a time?
+2010-06-17T16:05:00.000Z	indus	Cavej03	me ?
+2010-06-17T16:06:00.000Z	Cavej03	indus	do u think it would help me>
+2010-06-17T16:06:00.000Z	indus	Cavej03	ah
+2010-06-17T16:06:00.000Z	indus	Cavej03	i want to see output of dmesg
+2010-06-17T16:06:00.000Z	indus	Cavej03	and make of hdd
+2010-06-17T16:06:00.000Z	indus	Cavej03	in terminal type dmesg
+2010-06-17T16:07:00.000Z	indus	Cavej03	is it a intel moterboad
+2010-06-17T16:07:00.000Z	Cavej03	indus	no its a asus p7p55lx
+2010-06-17T16:07:00.000Z	Cavej03	indus	quite new, so I reckon the ide controller is too new for 8.04
+2010-06-17T16:08:00.000Z	indus	Cavej03	possible but hardy should update
+2010-06-17T16:08:00.000Z	indus	Cavej03	its not rocket science
+2010-06-17T16:08:00.000Z	Cavej03	indus	sorry rocket science?
+2010-06-17T16:09:00.000Z	Cavej03	indus	so i should update hardy in live cd?
+2010-06-17T16:09:00.000Z	Cavej03	indus	so i should update hardy in live usb*
+2010-06-17T16:10:00.000Z	indus	Cavej03	ok do this , file a bug and watch if similar bugs pop up
+2010-06-17T16:10:00.000Z	indus	Cavej03	then go to #ubuntu-bugs and ask , then go to #ubuntu-kernel
+2010-06-17T16:10:00.000Z	Cavej03	indus	i have lost you?
+2010-06-17T16:10:00.000Z	indus	Cavej03	ubuntu bugs channel
+2010-06-17T16:11:00.000Z	indus	Cavej03	do you know how to file  a bug ?
+2010-06-17T16:11:00.000Z	Cavej03	indus	no idea sorry
+2010-06-17T16:11:00.000Z	indus	Cavej03	hmm
+2010-06-17T16:11:00.000Z	indus	Cavej03	ok 1 sec
+2010-06-17T16:11:00.000Z	Cavej03	indus	i knowledge in some things but not others lol
+2010-06-17T16:13:00.000Z	indus	Cavej03	dmesg output can i see
+2010-06-17T16:13:00.000Z	indus	Cavej03	try this , dmesg > dmesg.txt :)
+2010-06-17T16:14:00.000Z	indus	Cavej03	nah redirect to a txt file
+2010-06-17T16:14:00.000Z	indus	Cavej03	concatenate with cat
+2010-06-17T16:15:00.000Z	indus	Cavej03	actually without hardware info its difficult to trouble shooy
+2010-06-17T16:16:00.000Z	indus	Cavej03	also lspci
+2010-06-17T16:17:00.000Z	indus	Cavej03	give me lspci output please
+2010-06-17T16:18:00.000Z	indus	Cavej03	ide interface is via
+2010-06-17T16:18:00.000Z	indus	Cavej03	do you remember which mobo this is
+2010-06-17T16:19:00.000Z	indus	Cavej03	asus p7p55
+2010-06-17T16:21:00.000Z	indus	Cavej03	dont try all that,
+2010-06-17T16:22:00.000Z	indus	Cavej03	hmm cant find much on google
+2010-06-17T16:22:00.000Z	indus	Cavej03	new hardware is best with new ubuntu
+2010-06-17T16:22:00.000Z	indus	Cavej03	i found some ide threads but hmm
+2010-06-17T16:22:00.000Z	indus	Cavej03	my cd rom worked after switching form slave to master
+2010-06-17T16:23:00.000Z	indus	Cavej03	so maybe next experiment for you can be that
+2010-06-17T16:23:00.000Z	indus	Cavej03	yes check for master , i mean set it to master and set cd to slave maybe
+2010-06-17T16:26:00.000Z	indus	Cavej03	actually i prefer not troubleshooting too much in ubuntu , because it makes the ubuntu people lazy
+2010-06-17T16:27:00.000Z	Cavej03	indus	i dont like coming here for help unless im really stuck
+2010-06-17T16:27:00.000Z	indus	Cavej03	but is it important you use 8.04 ?
+2010-06-17T16:28:00.000Z	Cavej03	indus	i was considering trying 9.10 but this game is my game lol i play it regliously 1ce a night as a wind down
+2010-06-17T16:28:00.000Z	indus	Cavej03	ah ATI card ?
+2010-06-17T16:28:00.000Z	indus	Cavej03	the proprietary driver for x1200 chips i belive
+2010-06-17T16:29:00.000Z	indus	Cavej03	hmm then why use 8.04 ?
+2010-06-17T16:29:00.000Z	indus	Cavej03	what is the probllem with game
+2010-06-17T16:29:00.000Z	indus	Cavej03	i play games too
+2010-06-17T16:30:00.000Z	indus	Cavej03	ok hmm
+2010-06-17T16:31:00.000Z	indus	Cavej03	try a gparted live cd and see if there is some luck
+2010-06-17T16:32:00.000Z	Cavej03	indus	i used hirens and it found it ok
+2010-06-17T16:32:00.000Z	indus	Cavej03	ah that nice indian guy
+2010-06-17T16:32:00.000Z	indus	Cavej03	all windows sys admins swear by that software :D though i never found out where he is from , maybe usa
+2010-06-17T16:33:00.000Z	indus	Cavej03	easy, type fglrx -info in terminal
+2010-06-17T18:18:00.000Z	Cavej03	indus	how do i get the new xchat in ubuntu 9.04
+2010-06-17T18:23:00.000Z	indus	Cavej03	it did? cool i try it today then
+2010-06-17T18:23:00.000Z	Cavej03	indus	trying it now on 9.04
+2010-06-17T18:23:00.000Z	indus	Cavej03	no dont
+2010-06-17T18:23:00.000Z	Cavej03	indus	why?
+2010-06-17T18:23:00.000Z	indus	Cavej03	i suggest using it on 10.04 preferably
+2010-06-17T18:24:00.000Z	indus	Cavej03	bah they dont test enough with older ones i think ,\
+2010-06-17T18:24:00.000Z	indus	Cavej03	stick with defaults for 9.04
+2010-06-17T18:24:00.000Z	Cavej03	indus	10.04 has been causing me problems remember and I just wiped 10.4 from my system
+2010-06-17T18:24:00.000Z	indus	Cavej03	anyways you can try cos you have a specific issue
+2010-06-17T18:28:00.000Z	indus	Cavej03	ambient , light and dark,
+2010-06-17T18:28:00.000Z	indus	Cavej03	ah ambiance yes
+2010-06-17T18:33:00.000Z	Cavej03	indus	so just sh the ati drivers indus? and then what command after?
+2010-06-17T18:33:00.000Z	indus	Cavej03	sudo sh drivername
+2010-06-17T18:34:00.000Z	indus	Cavej03	yes thats all and finally yes aticonfig --initial , but thats because i find that i dont get a display on reboot without it

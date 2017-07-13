@@ -1,0 +1,94 @@
+2008-04-27T03:31:00.000Z	bagelong	matthias	 I saw you helping someone earlier with a wireless problem. Care to help me with my issue?
+2008-04-27T03:32:00.000Z	matthias	bagelong	 sure, shoot ...
+2008-04-27T03:32:00.000Z	bagelong	matthias	 I can't seem to get my broadcom minipc card and driver linked up
+2008-04-27T03:33:00.000Z	matthias	bagelong	 what version are you running _
+2008-04-27T03:33:00.000Z	bagelong	matthias	 Hardy
+2008-04-27T03:33:00.000Z	matthias	bagelong	 what wireless card are you using _
+2008-04-27T03:34:00.000Z	matthias	bagelong	integrat4ed, tells me that is is an USB correct ___
+2008-04-27T03:34:00.000Z	matthias	bagelong	 what computer do you have _
+2008-04-27T03:34:00.000Z	bagelong	matthias	 a brand new dell vostro 1700
+2008-04-27T03:36:00.000Z	matthias	bagelong	 see if it is visible there ...
+2008-04-27T03:37:00.000Z	bagelong	matthias	the driver is bcmwl5
+2008-04-27T03:37:00.000Z	matthias	bagelong	 that driver is for dell 1500 card for yours as well ?
+2008-04-27T03:38:00.000Z	bagelong	matthias	 the dell site suggests bcmwl6, but every time I have tried to load it, it says invalid driver
+2008-04-27T03:38:00.000Z	bagelong	matthias	 all ubuntu documents suggest the bcmwl5
+2008-04-27T03:39:00.000Z	matthias	bagelong	go dells support page and with your service tag look up and download the driver for your service tag and we go from there ...
+2008-04-27T03:45:00.000Z	matthias	bagelong	 in dells page downloading the windows xp driver for your wireless card ?
+2008-04-27T03:45:00.000Z	bagelong	matthias	 The .exe file with the recommended driver is now downloaded to the desktop.
+2008-04-27T03:46:00.000Z	bagelong	matthias	vista
+2008-04-27T03:46:00.000Z	matthias	bagelong	 okey create a directory and place it there and we will not extract it ...
+2008-04-27T03:47:00.000Z	matthias	bagelong	 get the windows xp driver for your wireless .....
+2008-04-27T03:47:00.000Z	bagelong	matthias	 I hate to be so pitiful, but can you help with that so I don't screw it up
+2008-04-27T03:47:00.000Z	matthias	bagelong	 mkdir wireless
+2008-04-27T03:48:00.000Z	bagelong	matthias	i made the directory, how do I move it in there?
+2008-04-27T03:48:00.000Z	matthias	bagelong	 please get windows xp version ...
+2008-04-27T03:49:00.000Z	matthias	bagelong	 go to the directory wireless with cd wireless
+2008-04-27T03:50:00.000Z	matthias	bagelong	 please can you wait for me thay are calling me, i will be back promise ...
+2008-04-27T03:51:00.000Z	matthias	bagelong	 the thing is that you are going to download the driver for windows xp into this directory and extract the exefile with unzip xxxx.exe and than use it to install the driver over the old one ...
+2008-04-27T03:52:00.000Z	matthias	bagelong	 i will be back in 10 minutes ...
+2008-04-27T03:54:00.000Z	bagelong	matthias	 It's downloading, but I am pretty certain it is the one I already have.
+2008-04-27T04:00:00.000Z	bagelong	matthias	I have the file downloaded for the drivers
+2008-04-27T04:06:00.000Z	matthias	bagelong	 back ...
+2008-04-27T04:06:00.000Z	bagelong	matthias	 thanks, I was getting desperate
+2008-04-27T04:07:00.000Z	matthias	bagelong	 you have downloaded the driver from dell that is for windows xp
+2008-04-27T04:07:00.000Z	matthias	bagelong	 just the Xp one interests me ...
+2008-04-27T04:08:00.000Z	matthias	bagelong	 where is the rxxx.exe file located .
+2008-04-27T04:08:00.000Z	bagelong	matthias	 I created the directory, but didn't put anything in it yet
+2008-04-27T04:08:00.000Z	bagelong	matthias	desktop
+2008-04-27T04:09:00.000Z	bagelong	matthias	in the terminal
+2008-04-27T04:09:00.000Z	matthias	bagelong	yes
+2008-04-27T04:09:00.000Z	bagelong	matthias	 the last thing I put was mkdir wireless
+2008-04-27T04:10:00.000Z	matthias	bagelong	 yes do cd wireless to jumpo in there ...
+2008-04-27T04:10:00.000Z	bagelong	matthias	It is a brand new system with vista.  I used it for a few minuted in vista before the instatll
+2008-04-27T04:11:00.000Z	bagelong	matthias	 I am not sure what you wanted me to do.
+2008-04-27T04:11:00.000Z	matthias	bagelong	 okey but still i am using only the windos xp but let us hope it contains the file i am looking for ...
+2008-04-27T04:12:00.000Z	matthias	bagelong	 you are in the directoy  wireless _
+2008-04-27T04:13:00.000Z	bagelong	matthias	 ok.  Now what?
+2008-04-27T04:14:00.000Z	matthias	bagelong	 what si the name of the driver you have on the desktop _
+2008-04-27T04:14:00.000Z	bagelong	matthias	 The file is Dell_multi-device_A17_R174291.exe
+2008-04-27T04:15:00.000Z	bagelong	matthias	in the desktop
+2008-04-27T04:15:00.000Z	matthias	bagelong	 that driver is from dell ___
+2008-04-27T04:15:00.000Z	bagelong	matthias	yes.
+2008-04-27T04:16:00.000Z	matthias	bagelong	 okey do in terminal window mv home/<your username>/Desktop/dell .....exe .
+2008-04-27T04:17:00.000Z	matthias	bagelong	 you will move the file from desktop to your directory where you are standing that is wireless
+2008-04-27T04:19:00.000Z	matthias	bagelong	 the brackets is not a directory it is here you need to put your directory name
+2008-04-27T04:20:00.000Z	bagelong	matthias	it says missing destination file operand after ......
+2008-04-27T04:20:00.000Z	matthias	bagelong	 no the ... is that you need ti fill in the while file name ..., one example ..
+2008-04-27T04:21:00.000Z	bagelong	matthias	 Here is what I put:  mv home/longfamily/Desktop/Dell_multi-device_A17_R174291.exe
+2008-04-27T04:21:00.000Z	matthias	bagelong	 yes and space followed by an dot
+2008-04-27T04:22:00.000Z	matthias	bagelong	 mv /home/longfamily/Desktop/Dell_multi-device_A17_R174291.exe .
+2008-04-27T04:22:00.000Z	matthias	bagelong	 i suppose you are in the directory wireless
+2008-04-27T04:23:00.000Z	bagelong	matthias	 done
+2008-04-27T04:23:00.000Z	bagelong	matthias	 I guess.  How would I know?
+2008-04-27T04:23:00.000Z	matthias	bagelong	 okey now need to extract the exe file ...
+2008-04-27T04:23:00.000Z	matthias	bagelong	can you see the file there and you are in wireless right ...
+2008-04-27T04:24:00.000Z	bagelong	matthias	  I thinks it worked.
+2008-04-27T04:24:00.000Z	bagelong	matthias	here is what my terminal has: longfamily@longfamily-dell:~$
+2008-04-27T04:25:00.000Z	matthias	bagelong	if you see the file than we are doing okey so far ...
+2008-04-27T04:25:00.000Z	bagelong	matthias	nothing about wireless as a file that I am in, but something did happen when i put ls
+2008-04-27T04:26:00.000Z	matthias	bagelong	 this is something basic with movement of files that faild ...
+2008-04-27T04:26:00.000Z	bagelong	matthias	 When I go to place -> homefolder, it is there
+2008-04-27T04:27:00.000Z	matthias	bagelong	 okey do unzip dell file ...
+2008-04-27T04:27:00.000Z	matthias	bagelong	 you do this in ubuntu right ?
+2008-04-27T04:27:00.000Z	bagelong	matthias	yes.  the terminal code is unzip dell file?
+2008-04-27T04:28:00.000Z	bagelong	matthias	 I am sorry,  I am really just ignorant of much of the terminal terminology.
+2008-04-27T04:29:00.000Z	matthias	bagelong	 unzip than follow the name of the windows drivers name ending with .exe
+2008-04-27T04:31:00.000Z	matthias	bagelong	 wit h the tab key you can do a lot ...
+2008-04-27T04:31:00.000Z	bagelong	matthias	 I know have this file extracted to the desktop: bcmwl5.inf
+2008-04-27T04:31:00.000Z	bagelong	matthias	 This is the driver file.  by the way, it is the same file I have already tried to use.
+2008-04-27T04:32:00.000Z	matthias	bagelong	 okey the extraction worked ?
+2008-04-27T04:32:00.000Z	bagelong	matthias	 I just used the archive manager
+2008-04-27T04:33:00.000Z	matthias	bagelong	 okey that is okey now hold on let me see where to enter it again , this is the windows version that worked for me as well, let me see, we are comming to and ned ...
+2008-04-27T04:34:00.000Z	matthias	bagelong	 go system->administration->windows wireless driver
+2008-04-27T04:35:00.000Z	bagelong	matthias	 I opened it, tried to add new driver and it says invalid driver.
+2008-04-27T04:36:00.000Z	matthias	bagelong	 you need to delete the old one and install the new one ...
+2008-04-27T04:37:00.000Z	bagelong	matthias	 I did, that's when it said invalid driver.  Before it just said no hardware present for the driver
+2008-04-27T04:37:00.000Z	matthias	bagelong	 that never happened to me, sorry i do not know whay it says so _, should have accepted it ...
+2008-04-27T04:38:00.000Z	bagelong	matthias	 If Josh04 is around, do you mind if I enlist his help?
+2008-04-27T04:39:00.000Z	bagelong	matthias	 Thanks so much for your help.
+2008-04-27T04:39:00.000Z	matthias	bagelong	 let me know how it goes ...
+2008-04-27T04:40:00.000Z	matthias	bagelong	 there is another thing but i am not sure what is it for ...
+2008-04-27T04:40:00.000Z	bagelong	matthias	 What's that
+2008-04-27T04:40:00.000Z	matthias	bagelong	 system->administration->hardware testing
+2008-04-27T04:41:00.000Z	bagelong	matthias	 Yeah.  I gave that a try, but it didn't give any options specific to wireless
+2008-04-27T04:41:00.000Z	matthias	bagelong	 i do not know but you can send some kind of report on hardware but why i do not know but in thzat test my wireless showed up ...

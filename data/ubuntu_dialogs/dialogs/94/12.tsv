@@ -1,0 +1,94 @@
+2011-03-05T15:05:00.000Z	Fwb2700		Ubuntu sux. I am having nothing but issues
+2011-03-05T15:05:00.000Z	rigved	Fwb2700	use Ubuntu 10.04, in case you are not already
+2011-03-05T15:06:00.000Z	rigved	Fwb2700	use 10.04.
+2011-03-05T15:07:00.000Z	Fwb2700	rigved	I cant get it as I now have no Internet access
+2011-03-05T15:10:00.000Z	rigved	Fwb2700	i think there are vendors that sell Ubuntu DVDs. these have all the packages, so you do not need to download anything
+2011-03-05T15:11:00.000Z	Fwb2700	rigved	Im in nZ not likely here
+2011-03-05T15:12:00.000Z	rigved	Fwb2700	might i ask how you got 10.10?
+2011-03-05T15:25:00.000Z	Fwb2700	rigved	No it has eth0 and l0 only
+2011-03-05T15:13:00.000Z	rigved	Fwb2700	how does the LiveCD hold? does that also give you problems?
+2011-03-05T15:14:00.000Z	Fwb2700	rigved	Yes I cant connect to my wireless at all. Says device not ready
+2011-03-05T15:15:00.000Z	rigved	Fwb2700	and your WiFi card is enabled using the switch on the keyboard? i think there's a command to enable the device...
+2011-03-05T15:16:00.000Z	rigved	Fwb2700	sudo ifdown --force wlan0
+2011-03-05T15:17:00.000Z	rigved	Fwb2700	then - sudo ifup --force wlan0
+2011-03-05T15:17:00.000Z	rigved	Fwb2700	assuming that the WiFi interface is called wlan0
+2011-03-05T15:19:00.000Z	rigved	Fwb2700	have you tried the commands that i gave you. in the terminal
+2011-03-05T15:22:00.000Z	Fwb2700	rigved	Says interface force not configured interface WLAN not configured
+2011-03-05T15:24:00.000Z	rigved	Fwb2700	first type - ifconfig
+2011-03-05T15:24:00.000Z	rigved	Fwb2700	do you see your WiFi card there?
+2011-03-05T15:26:00.000Z	rigved	Fwb2700	hmmm...so your WiFi is not being detected. is it possible for you to connect to your router via a wired connection, temporarily
+2011-03-05T15:27:00.000Z	Fwb2700	rigved	Yes if i must then what do i do
+2011-03-05T15:28:00.000Z	rigved	Fwb2700	update
+2011-03-05T15:28:00.000Z	Fwb2700	rigved	And if there is none or doesnt show any
+2011-03-05T15:29:00.000Z	rigved	Fwb2700	you should also run this command just in case - sudo dkpg --configure -a
+2011-03-05T15:29:00.000Z	Fwb2700	rigved	I am plugged in but not for long now what
+2011-03-05T15:30:00.000Z	rigved	Fwb2700	there will be. you have 10.10 which came in the .iso. There have been tons of updates after that. also, during the install, you were probably unable to install the non-free drivers for your WiFi card. that should also be done
+2011-03-05T15:30:00.000Z	rigved	Fwb2700	sudo dpkg --configure -a
+2011-03-05T15:31:00.000Z	Fwb2700	rigved	How i check for updates
+2011-03-05T15:31:00.000Z	rigved	Fwb2700	then - sudo apt-get update && sudo apt-get upgrade
+2011-03-05T15:33:00.000Z	rigved	Fwb2700	open up - System > Administration > Software Sources
+2011-03-05T15:33:00.000Z	rigved	Fwb2700	set the server to the Main Server
+2011-03-05T15:34:00.000Z	rigved	Fwb2700	ok
+2011-03-05T15:34:00.000Z	rigved	Fwb2700	now wait for it to finish
+2011-03-05T15:34:00.000Z	Fwb2700	rigved	There is no software sources
+2011-03-05T16:00:00.000Z	rigved	Fwb2700	make sure that it for 2.6.35-22 only
+2011-03-05T15:35:00.000Z	rigved	Fwb2700	hmmm...someone will have to pit in here...i'm using 10.04. don't know if the position of Software Sources has been changed in Maverick
+2011-03-05T15:36:00.000Z	rigved	Fwb2700	Applications > Ubuntu Software Center . there in the Edit Menu, there should be a Software Sources
+2011-03-05T15:37:00.000Z	rigved	Fwb2700	which WiFi card do you have? broadcom?
+2011-03-05T15:37:00.000Z	Fwb2700	rigved	In there now what
+2011-03-05T15:38:00.000Z	rigved	Fwb2700	Edit (Menu) > Software Sources
+2011-03-05T15:39:00.000Z	Fwb2700	rigved	I in software sources now what? And wifi card is whatever laptop came with
+2011-03-05T15:40:00.000Z	rigved	Fwb2700	what does the server say? server for NZ?
+2011-03-05T15:40:00.000Z	Fwb2700	rigved	Yes
+2011-03-05T15:41:00.000Z	rigved	Fwb2700	ok. now tick main, universe, restricted, multiverse
+2011-03-05T15:42:00.000Z	Fwb2700	rigved	Download from to main server not
+2011-03-05T15:42:00.000Z	rigved	Fwb2700	yes change that too
+2011-03-05T15:43:00.000Z	Fwb2700	rigved	Its all done now what
+2011-03-05T15:44:00.000Z	rigved	Fwb2700	there should be a tab that says Other Software. tick all in that too
+2011-03-05T15:45:00.000Z	rigved	Fwb2700	then close.
+2011-03-05T15:45:00.000Z	rigved	Fwb2700	then run - sudo apt-get update && sudo apt-get upgrade - in the terminal
+2011-03-05T15:45:00.000Z	Fwb2700	rigved	Done
+2011-03-05T15:46:00.000Z	rigved	Fwb2700	^^ run the command
+2011-03-05T15:46:00.000Z	Fwb2700	rigved	My wifi car is a ar5001 by atherosclerosis
+2011-03-05T15:47:00.000Z	Fwb2700	rigved	Its downloading stuff does upgrade install it all?
+2011-03-05T15:48:00.000Z	rigved	Fwb2700	yes
+2011-03-05T15:50:00.000Z	Fwb2700	rigved	2hours for the upgrade WTF
+2011-03-05T15:51:00.000Z	rigved	Fwb2700	please be patient.
+2011-03-05T15:53:00.000Z	Fwb2700	rigved	I have to unplug soon
+2011-03-05T15:53:00.000Z	rigved	Fwb2700	ok. then press Ctrl+C in the terminal on which you are running the update. then close the terminal
+2011-03-05T15:54:00.000Z	rigved	Fwb2700	Open Applications > Sowftware Center.
+2011-03-05T15:54:00.000Z	rigved	Fwb2700	search for - compat-wireless
+2011-03-05T15:55:00.000Z	Fwb2700	rigved	Now what
+2011-03-05T15:55:00.000Z	rigved	Fwb2700	have you got results for compat-wireless?
+2011-03-05T15:56:00.000Z	Fwb2700	rigved	Yes
+2011-03-05T15:57:00.000Z	rigved	Fwb2700	ok. so minimise this window. sorry you need to open the terminal again. we need to find the kernel which you have
+2011-03-05T15:57:00.000Z	rigved	Fwb2700	in the terminal, type - uname -r
+2011-03-05T15:57:00.000Z	rigved	Fwb2700	uname -r
+2011-03-05T15:58:00.000Z	Fwb2700	rigved	2.6.35-22-generic
+2011-03-05T15:58:00.000Z	rigved	Fwb2700	now in the compat-wireless results, search for the drivers for that exact kernel
+2011-03-05T15:59:00.000Z	rigved	Fwb2700	install that
+2011-03-05T16:01:00.000Z	Fwb2700	rigved	It failed to download says check internet connectionz its connected fine. There is one the says generic and on says generic-pae
+2011-03-05T16:01:00.000Z	rigved	Fwb2700	generic
+2011-03-05T16:01:00.000Z	rigved	Fwb2700	not generic-pae
+2011-03-05T16:01:00.000Z	Fwb2700	rigved	Faild to Download
+2011-03-05T16:02:00.000Z	rigved	Fwb2700	sudo apt-get install linux-backports-modules-wireless-2.6.35-22-generic
+2011-03-05T16:03:00.000Z	rigved	Fwb2700	assuming that's the name of the drivers that you were trying to install
+2011-03-05T16:04:00.000Z	Fwb2700	rigved	Failed to fetch. It cant find it on the server
+2011-03-05T16:05:00.000Z	rigved	Fwb2700	ping google.com
+2011-03-05T16:05:00.000Z	rigved	Fwb2700	does that work?
+2011-03-05T16:06:00.000Z	rigved	Fwb2700	in the terminal: ping google.com
+2011-03-05T16:06:00.000Z	Fwb2700	rigved	Ping is working fine
+2011-03-05T16:07:00.000Z	Fwb2700	rigved	Got it installed now what
+2011-03-05T16:08:00.000Z	rigved	Fwb2700	restart and check.
+2011-03-05T16:11:00.000Z	Fwb2700	rigved	It now says wireless is disabled and won't let me enable it. Doesn't say device not ready though as it was
+2011-03-05T16:11:00.000Z	rigved	Fwb2700	ifconfig
+2011-03-05T16:11:00.000Z	rigved	Fwb2700	does it list wlan0?
+2011-03-05T16:12:00.000Z	Fwb2700	rigved	Now its enabled and says device not ready again Grr
+2011-03-05T16:12:00.000Z	Fwb2700	rigved	Still no wlan0
+2011-03-05T16:14:00.000Z	Fwb2700	rigved	No wlan0
+2011-03-05T16:14:00.000Z	rigved	Fwb2700	ok. wait
+2011-03-05T16:19:00.000Z	Fwb2700	rigved	I have win 7 working on it now dual booting. Well in 5 I will
+2011-03-05T16:24:00.000Z	rigved	Fwb2700	if you have internet connected when you install Ubuntu, then almost everything is setup automatically (most of the times), including the WiFi cards
+2011-03-05T16:25:00.000Z	Fwb2700	rigved	I couldn't at time. I have win 7 installed just now. And it's working fine on wifi no updates
+2011-03-05T16:27:00.000Z	rigved	Fwb2700	it's using the generic wifi drivers that come with it. Ubuntu also has drivers for your latop - ath5k and ath9k, you just need to download and install them. this is done automatically during the install if you have the internet enabled
+2011-03-05T16:28:00.000Z	rigved	Fwb2700	charge your laptop fully and then connect it to the internet. then install Ubuntu.

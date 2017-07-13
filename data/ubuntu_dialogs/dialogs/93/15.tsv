@@ -1,0 +1,93 @@
+2010-04-09T22:43:00.000Z	schiz0id		I set all the volume (master and everything else) all the way up, and get white noise from my speakers, but it still won't output sound from videos or anything else online
+2010-04-09T22:43:00.000Z	schiz0id		help?
+2010-04-09T22:44:00.000Z	schiz0id		oh, it also won't play startup music
+2010-04-09T22:46:00.000Z	schiz0id		errago: bade signals....?
+2010-04-09T22:46:00.000Z	schiz0id		huh?
+2010-04-09T22:46:00.000Z	schiz0id		no
+2010-04-09T22:46:00.000Z	schiz0id		it's just the integrated audio from the motherboard
+2010-04-09T22:48:00.000Z	schiz0id		yes
+2010-04-09T22:49:00.000Z	schiz0id		well........I honestly don't know
+2010-04-09T22:49:00.000Z	schiz0id		I dual booted for a while and it worked then
+2010-04-09T22:49:00.000Z	crucialhoax	schiz0id	what is the problem?
+2010-04-09T22:49:00.000Z	schiz0id	crucialhoax	after having recently switched my family computer entirely to ubuntu I am having sound issues.......it won't play back anything from internet or startup music
+2010-04-09T22:51:00.000Z	crucialhoax	schiz0id	Ok, do a sudo lshw -C Sound
+2010-04-09T22:52:00.000Z	schiz0id	crucialhoax	ok trying
+2010-04-09T22:52:00.000Z	crucialhoax	schiz0id	this will give us what driver you are using and the hardware :)
+2010-04-09T22:52:00.000Z	schiz0id	crucialhoax	hold on have to switch users
+2010-04-09T22:54:00.000Z	crucialhoax	schiz0id	alright post the driver in use and the product line.
+2010-04-09T22:56:00.000Z	crucialhoax	schiz0id	what is the pc brand?
+2010-04-09T22:56:00.000Z	schiz0id	crucialhoax	Acer
+2010-04-09T22:56:00.000Z	crucialhoax	schiz0id	one sec :)
+2010-04-09T22:57:00.000Z	schiz0id	crucialhoax	desktop
+2010-04-09T23:01:00.000Z	schiz0id	crucialhoax	any ideas?
+2010-04-09T23:02:00.000Z	crucialhoax	schiz0id	It looks like the module that is loaded needs to be configured. there are bugs filed. one sec looking for solution. 9.10?
+2010-04-09T23:03:00.000Z	schiz0id	crucialhoax	9.04
+2010-04-09T23:05:00.000Z	schiz0id	crucialhoax	how do I check pm in irssi?
+2010-04-09T23:06:00.000Z	crucialhoax	schiz0id	We are going to need to edit the alsa-base.conf file
+2010-04-09T23:07:00.000Z	crucialhoax	schiz0id	open a terminal
+2010-04-09T23:07:00.000Z	crucialhoax	schiz0id	type gksudo gedit /etc/modprobe.d/alsa-base.conf
+2010-04-09T23:09:00.000Z	schiz0id	crucialhoax	sorry didn't mean to quit
+2010-04-09T23:10:00.000Z	schiz0id	crucialhoax	ok back
+2010-04-09T23:11:00.000Z	crucialhoax	schiz0id	type gksudo gedit /etc/modprobe.d/alsa-base.conf
+2010-04-09T23:11:00.000Z	crucialhoax	schiz0id	I will let you know what to edit inside that file.
+2010-04-09T23:12:00.000Z	crucialhoax	schiz0id	The easiest way is to CTRL + F to find this: power_save_
+2010-04-09T23:13:00.000Z	schiz0id	crucialhoax	"phrase not found"
+2010-04-09T23:13:00.000Z	crucialhoax	schiz0id	towards the bottom of the file
+2010-04-09T23:13:00.000Z	crucialhoax	schiz0id	add this line
+2010-04-09T23:14:00.000Z	crucialhoax	schiz0id	I am going to post 2 different lines. add it to the very bottom of that file. ok?
+2010-04-09T23:14:00.000Z	schiz0id	crucialhoax	I have edited files before. I do have *some* idea what I'm doing
+2010-04-09T23:15:00.000Z	crucialhoax	schiz0id	options snd-hda-intel power_save=0 power_save_controller=N
+2010-04-09T23:15:00.000Z	schiz0id	crucialhoax	is that one line?
+2010-04-09T23:16:00.000Z	crucialhoax	schiz0id	sorry let me re-do :)
+2010-04-09T23:16:00.000Z	crucialhoax	schiz0id	Line 1 : # Power down HDA controllers after 10 idle seconds
+2010-04-09T23:17:00.000Z	schiz0id	crucialhoax	next line?
+2010-04-09T23:17:00.000Z	crucialhoax	schiz0id	Line 2: options snd-hda-intel power_save=10 power_save_controller=N
+2010-04-09T23:17:00.000Z	crucialhoax	schiz0id	that should be 0 not 10 sorry
+2010-04-09T23:17:00.000Z	crucialhoax	schiz0id	options snd-hda-intel power_save=0 power_save_controller=N
+2010-04-09T23:23:00.000Z	schiz0id	crucialhoax	bad news
+2010-04-09T23:23:00.000Z	crucialhoax	schiz0id	it does not work
+2010-04-09T23:24:00.000Z	schiz0id	crucialhoax	the first one does, meaning the one before login, but not the one after login
+2010-04-09T23:24:00.000Z	crucialhoax	schiz0id	any music files?
+2010-04-09T23:26:00.000Z	schiz0id	crucialhoax	nope
+2010-04-09T23:27:00.000Z	crucialhoax	schiz0id	Ok...
+2010-04-09T23:27:00.000Z	schiz0id	crucialhoax	what else could the problem be?
+2010-04-09T23:29:00.000Z	schiz0id	crucialhoax	thanks. tell me when and if you do
+2010-04-09T23:32:00.000Z	crucialhoax	schiz0id	On your sound configuration choose analog stereo, not HDMI.
+2010-04-09T23:32:00.000Z	schiz0id	crucialhoax	where?
+2010-04-09T23:34:00.000Z	crucialhoax	schiz0id	gnome or kde?
+2010-04-09T23:34:00.000Z	schiz0id	crucialhoax	gnome
+2010-04-09T23:34:00.000Z	crucialhoax	schiz0id	there is a speaker in the upper right hand corner, right click and choose preferences
+2010-04-09T23:36:00.000Z	schiz0id	crucialhoax	now what?
+2010-04-09T23:37:00.000Z	crucialhoax	schiz0id	click on the hardware tab and towards the bottom by "profile" what set it to Analog
+2010-04-09T23:39:00.000Z	schiz0id	crucialhoax	no hardware tab
+2010-04-09T23:39:00.000Z	crucialhoax	schiz0id	Ok. What tabs are there?
+2010-04-09T23:40:00.000Z	schiz0id	crucialhoax	none. just a dropdown menu and a list of options like LFE and side
+2010-04-09T23:42:00.000Z	crucialhoax	schiz0id	So no tabs? hmmm...
+2010-04-09T23:46:00.000Z	crucialhoax	schiz0id	I found a few more. We can try them I suppose
+2010-04-09T23:47:00.000Z	crucialhoax	schiz0id	It states that the settings are for a laptop, hopefully it does not matter.
+2010-04-09T23:49:00.000Z	crucialhoax	schiz0id	More file editing lol
+2010-04-09T23:49:00.000Z	schiz0id	crucialhoax	what file and what to do to it?
+2010-04-09T23:50:00.000Z	crucialhoax	schiz0id	gksudo gedit /etc/modprobe.d/alsa-base.conf
+2010-04-09T23:51:00.000Z	schiz0id	crucialhoax	what to do to it?
+2010-04-09T23:51:00.000Z	crucialhoax	schiz0id	We are going to add 3 lines to the bottom of it
+2010-04-09T23:51:00.000Z	schiz0id	crucialhoax	what are those lines?
+2010-04-09T23:51:00.000Z	crucialhoax	schiz0id	alias snd-card-0 snd-hda-intel
+2010-04-09T23:52:00.000Z	crucialhoax	schiz0id	alias sound-slot-0 snd-hda-intel
+2010-04-09T23:53:00.000Z	schiz0id	crucialhoax	and the last line?
+2010-04-09T23:53:00.000Z	crucialhoax	schiz0id	options snd-hda-intel model=hp-hdx
+2010-04-09T23:54:00.000Z	crucialhoax	schiz0id	that is all
+2010-04-09T23:54:00.000Z	crucialhoax	schiz0id	I sent 3 lines..
+2010-04-09T23:55:00.000Z	crucialhoax	schiz0id	options snd-hda-intel model=hp-hdx
+2010-04-10T00:08:00.000Z	schiz0id	crucialhoax	http://imagebin.org/92393
+2010-04-10T00:03:00.000Z	schiz0id	crucialhoax	still the same issue
+2010-04-10T00:04:00.000Z	crucialhoax	schiz0id	It has got to be a sound prefernce somewhere.
+2010-04-10T00:04:00.000Z	schiz0id	crucialhoax	what should I check first?
+2010-04-10T00:05:00.000Z	crucialhoax	schiz0id	can you post a screenshot of your sound setting window into pastebin?
+2010-04-10T00:05:00.000Z	schiz0id	crucialhoax	yeah sure hold on
+2010-04-10T00:06:00.000Z	crucialhoax	schiz0id	thanks
+2010-04-10T00:10:00.000Z	schiz0id	crucialhoax	did you get the link?
+2010-04-10T00:11:00.000Z	crucialhoax	schiz0id	no
+2010-04-10T00:12:00.000Z	crucialhoax	schiz0id	what is under the devices tab?
+2010-04-10T00:13:00.000Z	crucialhoax	schiz0id	also, what shows up when you click the preferences button at the bottom?
+2010-04-10T00:14:00.000Z	schiz0id	crucialhoax	you see the small window open? that's it.
+2010-04-10T00:15:00.000Z	crucialhoax	schiz0id	under the devices drop down try to 3rd and 5th options...

@@ -1,0 +1,93 @@
+2011-10-31T14:32:00.000Z	SubNormal		I've just setup dhcp on my server I get connection on the win computer but no internet and only 10Mbs connection. any one know why I cant connect to the net, the net on the server works fine?
+2011-10-31T14:32:00.000Z	phlak_user	SubNormal	are you sharing the Internet connection via the Ubuntu Server?
+2011-10-31T14:34:00.000Z	SubNormal	phlak_user	could you clarify that more please?
+2011-10-31T14:39:00.000Z	SubNormal	phlak_user	yes i'm sharing the internet on the ubuntu to the local network, using the ubuntu as gateway
+2011-10-31T14:40:00.000Z	phlak_user	SubNormal	have you done everything in that factoid?
+2011-10-31T14:41:00.000Z	SubNormal	phlak_user	what do you mean by factoid?
+2011-10-31T14:42:00.000Z	phlak_user	SubNormal	did you see that last message from ubottu? thats a factoid. Just follow the instructions in there
+2011-10-31T14:43:00.000Z	SubNormal	phlak_user	ah ok sorry about that, just didint understand the word factoid :-/
+2011-10-31T14:53:00.000Z	SubNormal	phlak_user	I followed this guide http://www.basicconfig.com/linuxnetwork/configure_dhcp_server_ubuntu it's nothing like the one you showed me, do I have to setup a secondary program to share the internet?
+2011-10-31T14:53:00.000Z	phlak_user	SubNormal	i do not know what you followed; but to share an internet connection you need to do like that factoid says
+2011-10-31T14:54:00.000Z	SubNormal	phlak_user	so you are saying that dhcp server does not share internet connections?
+2011-10-31T14:56:00.000Z	phlak_user	SubNormal	a DHCP server *only* hands off IP addresses to pcs asking for them. Some (like dnsmasq) also act as DNS servers. You need to configure NAT, forwarding etc for Internet sharing to work. This is achieved by tweaking the firewall
+2011-10-31T15:04:00.000Z	SubNormal	phlak_user	allright thanks for that
+2011-11-04T18:14:00.000Z	phlak_user	SubNormal	why do you need to copy it? save the file as a shell script and execute it
+2011-11-04T18:20:00.000Z	SubNormal	phlak_user	how would I do that? so that shell script, I just execute it and it autmaticly "pastes" the ./configure for me into the terminal?
+2011-11-04T18:20:00.000Z	phlak_user	SubNormal	no it executes the configure command
+2011-11-04T18:21:00.000Z	SubNormal	phlak_user	it executes the configure command just as I would have pasted it or writen it right?
+2011-11-04T18:22:00.000Z	phlak_user	SubNormal	yes
+2011-11-04T18:22:00.000Z	SubNormal	phlak_user	allright thanks for that
+2011-11-11T15:30:00.000Z	phlak_user	SubNormal	can you paste the output of sudo lshw -C network
+2011-11-11T15:32:00.000Z	SubNormal	phlak_user	i'm sorry but I have no internet connection on it and I tried to setup samba but I cant get it to work, so I have no idea on how to make a paste :-/ any idea?
+2011-11-11T15:32:00.000Z	phlak_user	SubNormal	is it a server or a desktop installation?
+2011-11-11T15:33:00.000Z	SubNormal	phlak_user	it's server
+2011-11-11T15:33:00.000Z	SubNormal	phlak_user	I can access it's ebox from this computer though
+2011-11-11T15:34:00.000Z	phlak_user	SubNormal	ok, can you tell me how many interfaces show up in sudo ifconfig
+2011-11-11T15:35:00.000Z	SubNormal	phlak_user	I get eth1 eth2 and loopback
+2011-11-11T15:36:00.000Z	phlak_user	SubNormal	ok great so you have both interfaces recognized; now you need to edit /etc/network/interfaces and add the second card details
+2011-11-11T15:36:00.000Z	phlak_user	SubNormal	before that, what are the IPs of the two interfaces?
+2011-11-11T15:38:00.000Z	SubNormal	phlak_user	"eth1 192.168.111.199" and "eth2 should be 192.168.1.1 but shows no ip address"
+2011-11-11T15:39:00.000Z	phlak_user	SubNormal	ok which is the iface connected to the Internet?
+2011-11-11T15:39:00.000Z	SubNormal	phlak_user	eth1 should connect to the internet
+2011-11-11T15:40:00.000Z	phlak_user	SubNormal	was it eth0 and eth1 before you replaced the card?
+2011-11-11T15:41:00.000Z	phlak_user	SubNormal	i think thats why you've lost Internet cos the iface renumbering has broken your firewall rules etc
+2011-11-11T15:42:00.000Z	SubNormal	phlak_user	eth0 was for the localnet and eth1 was for the internet
+2011-11-11T15:44:00.000Z	phlak_user	SubNormal	you need to edit this file to get the interface numbering proper again -> /etc/udev/rules.d/70-persistent-net.rules
+2011-11-11T15:48:00.000Z	SubNormal	phlak_user	should I delete the file?
+2011-11-11T15:48:00.000Z	phlak_user	SubNormal	that would be the simplest thing to do :)
+2011-11-11T15:48:00.000Z	SubNormal	phlak_user	ofcurse :D
+2011-11-11T15:50:00.000Z	SubNormal	phlak_user	70-persistent-cd.rules should I leave that file alone?
+2011-11-11T15:50:00.000Z	phlak_user	SubNormal	yes only the -net rules
+2011-11-11T15:54:00.000Z	SubNormal	phlak_user	just restarted, tried ping google and it failed :-/
+2011-11-11T15:55:00.000Z	phlak_user	SubNormal	you need to check ifconfig to see if the ordering is correct
+2011-11-11T15:57:00.000Z	SubNormal	phlak_user	now I have eth0 and eth1
+2011-11-11T15:57:00.000Z	phlak_user	SubNormal	with the IP addresses correct?
+2011-11-11T16:00:00.000Z	SubNormal	phlak_user	eth0 192.168.1.1(wich is right for the local network) eth1 192.168.111.140 (I would have prefferd 192.168.111.199)
+2011-11-11T16:02:00.000Z	phlak_user	SubNormal	what is the IP of the gateway? or what is the output of route -n
+2011-11-11T16:05:00.000Z	SubNormal	phlak_user	I just wrote this up, http://pastebin.com/At0vL2EY this is the current interfaces I have
+2011-11-11T16:06:00.000Z	phlak_user	SubNormal	ok; are you able to ping 192.168.111.1
+2011-11-11T16:06:00.000Z	SubNormal	phlak_user	gate way is 192.168.111.1 but by doing route -n I get 0.0.0.0 as gateway
+2011-11-11T16:06:00.000Z	SubNormal	phlak_user	yes
+2011-11-11T16:07:00.000Z	phlak_user	SubNormal	whats the IP of the WAN interface of the gateway?
+2011-11-11T16:09:00.000Z	SubNormal	phlak_user	I belive 10.168.103.188
+2011-11-11T16:11:00.000Z	phlak_user	SubNormal	can you ping that?
+2011-11-11T16:12:00.000Z	SubNormal	phlak_user	nope
+2011-11-11T16:13:00.000Z	phlak_user	SubNormal	does the route command show default route 0.0.0.0 as 192.168.111.1 ?
+2011-11-11T16:14:00.000Z	phlak_user	SubNormal	it should look like this -> 0.0.0.0         192.168.111.1   0.0.0.0         UG    0      0        0  eth0
+2011-11-11T16:17:00.000Z	SubNormal	phlak_user	here http://pastebin.com/N4Cexnmx just wrote it up
+2011-11-11T16:18:00.000Z	phlak_user	SubNormal	ok that shows you dont have a default route setup;
+2011-11-11T16:18:00.000Z	SubNormal	phlak_user	hm ok, what should I do then?
+2011-11-11T16:19:00.000Z	phlak_user	SubNormal	for now you can use the route command to add the default route like so -> sudo route add -n 0.0.0.0 gw 192.168.111.1
+2011-11-11T16:21:00.000Z	phlak_user	SubNormal	you need to add the route command in the /etc/network/interfaces file like so -> up route add -net 0.0.0.0 gw 192.168.111.1 dev eth1
+2011-11-11T16:21:00.000Z	phlak_user	SubNormal	oops the route add command is -net not -n
+2011-11-11T16:22:00.000Z	phlak_user	SubNormal	 sudo route add -net 0.0.0.0 gw 192.168.111.1
+2011-11-11T16:38:00.000Z	SubNormal	phlak_user	allright I changed that, and I was able to ping google, but it felt alittle slow
+2011-11-11T16:38:00.000Z	phlak_user	SubNormal	felt?
+2011-11-11T16:39:00.000Z	phlak_user	SubNormal	you seem to have double -NATted your network
+2011-11-11T16:39:00.000Z	SubNormal	phlak_user	erm... soon as I hit enter on ping it took about 5 sec to ping
+2011-11-11T16:39:00.000Z	phlak_user	SubNormal	did the RTT show 5  secs or in ms?
+2011-11-11T16:40:00.000Z	SubNormal	phlak_user	no I mean, it took about 5 sec for the command to kick in, I had then about 70ms ping
+2011-11-11T16:40:00.000Z	phlak_user	SubNormal	ok
+2011-11-11T16:41:00.000Z	SubNormal	phlak_user	damn it, I just restarted and I cant ping now
+2011-11-11T16:41:00.000Z	phlak_user	SubNormal	did you add that route to the /etc/network/interfaces file? else it wont be persistent
+2011-11-11T16:42:00.000Z	SubNormal	phlak_user	route -n is exactly the same as before now
+2011-11-11T16:42:00.000Z	phlak_user	SubNormal	does it have the default route?
+2011-11-11T16:43:00.000Z	phlak_user	SubNormal	just add this line to the WAN interface in /etc/network/interfaces : gateway 192.168.111.1
+2011-11-11T16:46:00.000Z	SubNormal	phlak_user	wan interface? is that the eth1 wich connects to the internet? if so it allready has the 192.168.111.1 as gateway
+2011-11-11T16:47:00.000Z	phlak_user	SubNormal	do you have the default route in route -n ?
+2011-11-11T16:48:00.000Z	SubNormal	phlak_user	this is my current /etc/network/interfaces http://pastebin.com/At0vL2EY
+2011-11-11T16:48:00.000Z	phlak_user	SubNormal	and output of route -n
+2011-11-11T16:49:00.000Z	SubNormal	phlak_user	same as before http://pastebin.com/N4Cexnmx
+2011-11-11T16:49:00.000Z	phlak_user	SubNormal	somehow your default route isnt getting set
+2011-11-11T16:49:00.000Z	phlak_user	SubNormal	you can add a static route to the interfaces file too
+2011-11-11T16:50:00.000Z	phlak_user	SubNormal	like so , on  a line by itself -> up route add -net 0.0.0.0 gw 192.168.111.1 dev eth1
+2011-11-11T16:56:00.000Z	SubNormal	phlak_user	I could not write that command with up like you wrote but I could make it work with out up
+2011-11-11T16:56:00.000Z	phlak_user	SubNormal	ok
+2011-11-11T16:58:00.000Z	SubNormal	phlak_user	I checked route -n and there is a extra line at the bottom now this is my new route -n http://pastebin.com/jmaj8dkk
+2011-11-11T17:03:00.000Z	SubNormal	phlak_user	what am I doing wrong? :-( I restarted again and it's back to "normal" the routing erased
+2011-11-11T17:04:00.000Z	SubNormal	phlak_user	just wondering, is there any chance that ebox could be interfearing?
+2011-11-11T17:06:00.000Z	phlak_user	SubNormal	cant say; i would go to /var/log and start deleting all the rotated logs .1 .2 .3 etc
+2011-11-11T17:06:00.000Z	phlak_user	SubNormal	also what is the output of df -h
+2011-11-11T17:06:00.000Z	phlak_user	SubNormal	pastebin it please
+2011-11-11T17:12:00.000Z	SubNormal	phlak_user	df -h here you go http://pastebin.com/AMVS2csa
+2011-11-11T17:25:00.000Z	SubNormal	phlak_user	i've deleted all the files, did you find anything out of the paste?

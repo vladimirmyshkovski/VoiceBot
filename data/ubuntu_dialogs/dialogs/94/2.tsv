@@ -1,0 +1,94 @@
+2012-04-29T00:06:00.000Z	grnt	DelGs	what is your wireless card?
+2012-04-29T00:29:00.000Z	grnt	DelGs	what's your wireless card?
+2012-04-29T00:31:00.000Z	grnt	DelGs	you sure you need driver? Does you wireless (e.g. wlan0) shows up in iwconfig?
+2012-04-29T00:31:00.000Z	DelGs	grnt	when i hit the connection buttons it says that it's missing firmware
+2012-04-29T00:31:00.000Z	DelGs	grnt	plus that link for bcm43xx doesnt show 4331 wich is mine
+2012-04-29T00:32:00.000Z	grnt	DelGs	is iwconfig blank? Just to be sure.
+2012-04-29T00:32:00.000Z	DelGs	grnt	what is iwconfig
+2012-04-29T00:33:00.000Z	grnt	DelGs	your wireless seems to be recognised but not configured
+2012-04-29T00:34:00.000Z	DelGs	grnt	there is a guide on how to setup but i cant understand it , do you mind if i give it to you so you can explain me
+2012-04-29T01:05:00.000Z	DelGs	grnt	what 4 commands
+2012-04-29T00:34:00.000Z	grnt	DelGs	does your wifi network use WPA2?
+2012-04-29T00:35:00.000Z	DelGs	grnt	It's not about wifi network , i cant find any wifi because it says device is not ready
+2012-04-29T00:35:00.000Z	grnt	DelGs	i know
+2012-04-29T00:35:00.000Z	grnt	DelGs	I need to know your setup to help
+2012-04-29T00:36:00.000Z	DelGs	grnt	oh my wifi is wpa yeah
+2012-04-29T00:36:00.000Z	DelGs	grnt	http://homepage.uibk.ac.at/~c705283/archives/2011/09/04/linux_support_for_broadcom_4331_wireless_chip_macbook_pro_81/index.html   this link might help you understand ( i dont understand it )
+2012-04-29T00:37:00.000Z	grnt	DelGs	try ifconfig wlan0 up, and iwlist scan
+2012-04-29T00:37:00.000Z	grnt	DelGs	in terminal as super user.
+2012-04-29T00:37:00.000Z	DelGs	grnt	tried but it doesnt let me scan network is down
+2012-04-29T00:38:00.000Z	DelGs	grnt	that's what it returned
+2012-04-29T00:38:00.000Z	grnt	DelGs	this is what second command returned?
+2012-04-29T00:39:00.000Z	DelGs	grnt	yes , did you check the link i sent?
+2012-04-29T00:40:00.000Z	grnt	DelGs	i can't follow your link now because I'm not in any GUI at the moment, I'm sitting in plain console. Can you make a short link so that it would be possible for me to type it?
+2012-04-29T00:40:00.000Z	DelGs	grnt	give me a second
+2012-04-29T00:40:00.000Z	DelGs	grnt	http://bit.ly/rd94aA
+2012-04-29T00:41:00.000Z	grnt	DelGs	went there, reading
+2012-04-29T00:41:00.000Z	DelGs	grnt	thanks
+2012-04-29T00:43:00.000Z	grnt	DelGs	issue lsmod please
+2012-04-29T00:43:00.000Z	DelGs	grnt	you want me to send you what it returned?
+2012-04-29T00:44:00.000Z	grnt	DelGs	better, lsmod | grep b43
+2012-04-29T00:45:00.000Z	DelGs	grnt	http://pastebin.com/nTw6LMdx
+2012-04-29T00:46:00.000Z	DelGs	grnt	recievede it?
+2012-04-29T00:47:00.000Z	grnt	DelGs	yeah, you can see that the kernel module is actually loaded
+2012-04-29T00:47:00.000Z	DelGs	grnt	what should i do ? do you know anything could help?
+2012-04-29T00:47:00.000Z	grnt	DelGs	b43 365785 on the second line
+2012-04-29T00:48:00.000Z	grnt	DelGs	you got the module but it can happen you still need the firmware
+2012-04-29T00:48:00.000Z	grnt	DelGs	in case if it's not included (which is strange)
+2012-04-29T00:48:00.000Z	grnt	DelGs	give me a sec
+2012-04-29T00:48:00.000Z	DelGs	grnt	sure.
+2012-04-29T00:51:00.000Z	grnt	DelGs	see on that page, where it says "Extract the firmware". This is it. I'm trying to understand what it means. Ususally you just copy firmware to /lib/firmware. That guide however includes some cryptic bs
+2012-04-29T00:52:00.000Z	DelGs	grnt	i see so what exactly should i do , im really sorry i dont know much about linux
+2012-04-29T00:52:00.000Z	grnt	DelGs	ok, do you have the firmware file already? It's name is in the first line with tar command
+2012-04-29T00:54:00.000Z	grnt	DelGs	broadcom-wl-5.100.138.tar.bz2
+2012-04-29T00:54:00.000Z	DelGs	grnt	lemme get it
+2012-04-29T00:56:00.000Z	DelGs	grnt	ok i just downloaded what do i do now
+2012-04-29T00:57:00.000Z	grnt	DelGs	first, to make sure, issue find /lib/firmware | grep wl_apsta
+2012-04-29T00:59:00.000Z	DelGs	grnt	it returned nothing i pasted "find /lib/firmware | grep wl_apsta"
+2012-04-29T00:59:00.000Z	grnt	DelGs	ok, so the firmware really doesn't seem to be there
+2012-04-29T00:59:00.000Z	grnt	DelGs	now get the b43-fwcutter thingy. From what I understand it is used to install the firmware
+2012-04-29T01:00:00.000Z	grnt	DelGs	b43-fwcutter-015.tar.bz2
+2012-04-29T01:01:00.000Z	DelGs	grnt	i've downloaded both and extracted them what now
+2012-04-29T01:01:00.000Z	grnt	DelGs	cd b43-fwcutter-015, make
+2012-04-29T01:02:00.000Z	DelGs	grnt	kay done, what now
+2012-04-29T01:02:00.000Z	grnt	DelGs	now there should be executable made, issue ls to check it
+2012-04-29T01:03:00.000Z	DelGs	grnt	i suppose is a green named b43-fwcutter
+2012-04-29T01:03:00.000Z	grnt	DelGs	now proceed with next 4 commands, assuming you extracted firmware file near this "cutter" stuff.
+2012-04-29T01:03:00.000Z	grnt	DelGs	yes, it is
+2012-04-29T01:04:00.000Z	DelGs	grnt	umm well the cutter stuff is in one folder and the firmware is in another
+2012-04-29T01:05:00.000Z	grnt	DelGs	I just checked page again and it doesn't matter. Firmware archive however must be in one folder up
+2012-04-29T01:05:00.000Z	DelGs	grnt	what command i do then
+2012-04-29T01:06:00.000Z	grnt	DelGs	now, staying in current directory issue tar xf ../broadcom-wl-5.100.138.tar.bz2
+2012-04-29T01:07:00.000Z	DelGs	grnt	i already had it extracted what now
+2012-04-29T01:07:00.000Z	grnt	DelGs	you did extract it (probably) in wrong place
+2012-04-29T01:08:00.000Z	grnt	DelGs	just issue it again from your current dir, where you compiled cutter
+2012-04-29T01:09:00.000Z	DelGs	grnt	done i extracted
+2012-04-29T01:09:00.000Z	grnt	DelGs	then issue ls and check if broadcom-wl-... directory is here
+2012-04-29T01:09:00.000Z	DelGs	grnt	just to make sure the file i compiled(make) is in one folder and the extracted folder is one folder up ( ../)
+2012-04-29T01:10:00.000Z	DelGs	grnt	yes it is
+2012-04-29T01:10:00.000Z	grnt	DelGs	the extracted folder must be near cutter executable
+2012-04-29T01:10:00.000Z	DelGs	grnt	yeah just checked it is like that
+2012-04-29T01:11:00.000Z	DelGs	grnt	the executable file and the broadcom folder are in same directory
+2012-04-29T01:11:00.000Z	grnt	DelGs	ok, now just issue next 2 commands, copy paste them from page. See them?
+2012-04-29T01:11:00.000Z	grnt	DelGs	copy-paste and issue them one-by-one
+2012-04-29T01:11:00.000Z	DelGs	grnt	but wich 2 commands
+2012-04-29T01:11:00.000Z	grnt	DelGs	Where it says "Extract the firmware"
+2012-04-29T01:11:00.000Z	grnt	DelGs	see it?
+2012-04-29T01:11:00.000Z	DelGs	grnt	the last 2 commands?
+2012-04-29T01:12:00.000Z	grnt	DelGs	they aren't very last in that guide. First one starts with "export"
+2012-04-29T01:13:00.000Z	DelGs	grnt	sudo .. and cd ..?
+2012-04-29T01:13:00.000Z	grnt	DelGs	export FIRMWARE_INSTALL_DIR="/lib/firmware"
+2012-04-29T01:13:00.000Z	grnt	DelGs	and then sudo line
+2012-04-29T01:14:00.000Z	grnt	DelGs	got it?
+2012-04-29T01:15:00.000Z	DelGs	grnt	yes. it extracted lot of stuff now what
+2012-04-29T01:15:00.000Z	grnt	DelGs	now check again, find /lib/firmware | grep wl_aps
+2012-04-29T01:17:00.000Z	DelGs	grnt	it still returns nothing
+2012-04-29T01:18:00.000Z	grnt	DelGs	try find /lib/firmware | grep b43
+2012-04-29T01:18:00.000Z	DelGs	grnt	yes , it returned a lot of files
+2012-04-29T01:18:00.000Z	grnt	DelGs	gimme a sec
+2012-04-29T01:18:00.000Z	DelGs	grnt	I LOVE YOU
+2012-04-29T01:18:00.000Z	DelGs	grnt	IT WORKED
+2012-04-29T01:19:00.000Z	DelGs	grnt	:)
+2012-04-29T01:19:00.000Z	grnt	DelGs	lol
+2012-04-29T01:20:00.000Z	grnt	DelGs	It seems it picked up firmware on it's own. I thought we would need to reload kernel module
+2012-04-29T01:21:00.000Z	grnt	DelGs	btw, what is your dpkg --get-selections | grep linux-firmware-nonfree

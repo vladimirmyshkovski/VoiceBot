@@ -1,0 +1,93 @@
+2005-07-21T13:02:00.000Z	mjkelly93		guys i figured out my problem now,   i install the fglrx package via synaptic but the kernel doesnt load the module
+2005-07-21T13:02:00.000Z	mjkelly93		if the package installs correctly how can i instruct the kernel to load the module at bootup?
+2005-07-21T13:03:00.000Z	mjkelly93		i got a ATI 9250
+2005-07-21T13:04:00.000Z	mjkelly93		i think that the ATI driver dont support my 9250 otherwise id be done already
+2005-07-21T13:05:00.000Z	mjkelly93		anyone got experience with FGLRX out there?  specifically the ubuntu package?
+2005-07-21T13:05:00.000Z	mjkelly93		yeah me2     james im on day 7 now
+2005-07-21T13:05:00.000Z	HappyFool	mjkelly93	james: have you guys read this page? https://wiki.ubuntu.com/BinaryDriverHowto
+2005-07-21T13:08:00.000Z	mjkelly93	HappyFool	heres my response to that                          homeslice@ubuntu:~$ sudo depmod -a ; sudo modprobe fglrx
+2005-07-21T13:09:00.000Z	HappyFool	mjkelly93	rebooting won't help
+2005-07-21T13:13:00.000Z	mjkelly93	HappyFool	im getting the same fatal error after a reboot
+2005-07-21T13:13:00.000Z	HappyFool	mjkelly93	ok
+2005-07-21T13:13:00.000Z	HappyFool	mjkelly93	stand by...
+2005-07-21T13:14:00.000Z	mjkelly93	HappyFool	i had the fglrx drivers working when i installed them from the ATI site, but they dont support my 9250 card... *im pretty sure*,         the ubuntu package installed drivers in a couple completely different places than the ATI package did
+2005-07-21T13:14:00.000Z	HappyFool	mjkelly93	is the 9250 a very recent card?
+2005-07-21T13:15:00.000Z	HappyFool	mjkelly93	ah, ok
+2005-07-21T13:15:00.000Z	HappyFool	mjkelly93	standby again (sorry ;)
+2005-07-21T13:15:00.000Z	mjkelly93	HappyFool	thats why im just gonna focus on the ubuntu registered program and not mess around with the ati packages anymore,     sure take your time     ive been tryin this for about 4 days straight now i can wait a lil while
+2005-07-21T13:16:00.000Z	mjkelly93	HappyFool	the ubuntu package installed about 10 files in /usr/X11R6, the ati packages didnt install anything there?
+2005-07-21T13:16:00.000Z	HappyFool	mjkelly93	what's the output of 'dpkg -l xorg-driver-fglrx| tail -1'   ?
+2005-07-21T13:16:00.000Z	HappyFool	mjkelly93	hmm
+2005-07-21T13:18:00.000Z	HappyFool	mjkelly93	hmm
+2005-07-21T13:18:00.000Z	HappyFool	mjkelly93	ok, let me go find where that file is
+2005-07-21T13:18:00.000Z	mjkelly93	HappyFool	before i unloaded the ATI version fglrx, there would be a successful modprobe
+2005-07-21T13:19:00.000Z	HappyFool	mjkelly93	did you install the ubuntu version before or after uninstalling the ati version?
+2005-07-21T13:19:00.000Z	HappyFool	mjkelly93	ah
+2005-07-21T13:19:00.000Z	HappyFool	mjkelly93	i think i know what might have happened
+2005-07-21T13:20:00.000Z	HappyFool	mjkelly93	the fglrx.ko file is in the linux-restricted-modules package
+2005-07-21T13:20:00.000Z	HappyFool	mjkelly93	the ATI version overwrote that, and then erased it when uninstalled
+2005-07-21T13:20:00.000Z	HappyFool	mjkelly93	you just need to reinstall linux-restricted-moudles
+2005-07-21T13:20:00.000Z	mjkelly93	HappyFool	 didnt think of that,   ill use apt-get and specify my kernel version right?
+2005-07-21T13:21:00.000Z	HappyFool	mjkelly93	yeah
+2005-07-21T13:21:00.000Z	HappyFool	mjkelly93	you know how to do this?
+2005-07-21T13:22:00.000Z	HappyFool	mjkelly93	yip
+2005-07-21T13:22:00.000Z	HappyFool	mjkelly93	i think there's a --reinstall flag -- check the --help or 'man apt-get'
+2005-07-21T13:24:00.000Z	mjkelly93	HappyFool	ok that reinstalled correctly from the CD
+2005-07-21T13:24:00.000Z	HappyFool	mjkelly93	ok, try the 'depmod -a; modprobe fglrx' thing now
+2005-07-21T13:25:00.000Z	mjkelly93	HappyFool	 uh oh
+2005-07-21T13:25:00.000Z	mjkelly93	HappyFool	   homeslice@ubuntu:~$ depmod -a; modprobe fglrx
+2005-07-21T13:25:00.000Z	HappyFool	mjkelly93	remember not to paste too much here
+2005-07-21T13:25:00.000Z	mjkelly93	HappyFool	i know    if it would have been another line or 2 i woulda used pastebin
+2005-07-21T13:26:00.000Z	mjkelly93	HappyFool	whaddya think about that error?
+2005-07-21T13:26:00.000Z	HappyFool	mjkelly93	as OdiiN said, you need sudo for both of those
+2005-07-21T13:26:00.000Z	mjkelly93	HappyFool	ok didnt see that
+2005-07-21T13:27:00.000Z	mjkelly93	HappyFool	nothing
+2005-07-21T13:27:00.000Z	HappyFool	mjkelly93	um
+2005-07-21T13:27:00.000Z	mjkelly93	HappyFool	should i reboot then try those commands?
+2005-07-21T13:27:00.000Z	HappyFool	mjkelly93	this is new on me
+2005-07-21T13:28:00.000Z	mjkelly93	HappyFool	well then we're both learning hehe
+2005-07-21T13:28:00.000Z	HappyFool	mjkelly93	the depmod -a worked ?
+2005-07-21T13:28:00.000Z	mjkelly93	HappyFool	 yes
+2005-07-21T13:29:00.000Z	HappyFool	mjkelly93	i can't tell why that module does not load; rebooting is an option
+2005-07-21T13:29:00.000Z	mjkelly93	HappyFool	im gonna reboot then try those commands again as per described on the wiki                     ill brb
+2005-07-21T13:29:00.000Z	HappyFool	mjkelly93	if fglrx is still in /etc/modules, it *should* load on boot
+2005-07-21T13:29:00.000Z	mjkelly93	HappyFool	its there   ill brb
+2005-07-21T13:30:00.000Z	mjkelly93	HappyFool	its actually listed there 4 seperate times hehe    does that matter?
+2005-07-21T13:30:00.000Z	HappyFool	mjkelly93	only once is fine
+2005-07-21T13:36:00.000Z	mjkelly93	HappyFool	modprobe didnt load any errors
+2005-07-21T13:37:00.000Z	HappyFool	mjkelly93	cool
+2005-07-21T13:38:00.000Z	HappyFool	mjkelly93	now you just need to tweak /etc/X11/xorg.conf
+2005-07-21T13:38:00.000Z	HappyFool	mjkelly93	you need to change 'ati' to 'fglrx'
+2005-07-21T13:39:00.000Z	mjkelly93	HappyFool	im gonna do that right now,  modprobe and depmod both ran smoothly
+2005-07-21T13:39:00.000Z	HappyFool	mjkelly93	you should not need to run those again, especially if fglrx is listed in /etc/modules
+2005-07-21T13:40:00.000Z	mjkelly93	HappyFool	ok      well kern.log says it loaded, modprobe says its loaded, ubuntu says its the correct version and has been verified to work on my radeon 9250, all i gotta do is restart now, wish me luck ill be back in 2 minutes
+2005-07-21T13:40:00.000Z	HappyFool	mjkelly93	also, you don't need to reboot again. let me know when you've tweaked xorg
+2005-07-21T13:40:00.000Z	HappyFool	mjkelly93	woah ;)
+2005-07-21T13:40:00.000Z	mjkelly93	HappyFool	 :)
+2005-07-21T13:40:00.000Z	HappyFool	mjkelly93	have you tweaked xorg.conf ?
+2005-07-21T13:40:00.000Z	mjkelly93	HappyFool	yes    im gonna shut down gdm and restart it
+2005-07-21T13:40:00.000Z	HappyFool	mjkelly93	ok
+2005-07-21T13:40:00.000Z	mjkelly93	HappyFool	brb
+2005-07-21T13:47:00.000Z	mjkelly93	HappyFool	didnt work, it hung like usual
+2005-07-21T13:48:00.000Z	HappyFool	mjkelly93	hmm
+2005-07-21T13:48:00.000Z	mjkelly93	HappyFool	hmmm is right    wtf   =(   i had my hopes up there
+2005-07-21T13:48:00.000Z	HappyFool	mjkelly93	sorry. have you looked in /var/log/Xorg.0.log  ?
+2005-07-21T13:48:00.000Z	mjkelly93	HappyFool	it hangs before it gets to write to the log, ive tried like 5 different ways to get to read that but it doesnt get to write to it
+2005-07-21T13:50:00.000Z	mjkelly93	HappyFool	i think im just about out of ideas    i just cant see whats going wrong?
+2005-07-21T13:50:00.000Z	HappyFool	mjkelly93	i'm out of ideas too, sorry.
+2005-07-21T13:51:00.000Z	mjkelly93	HappyFool	can u think of anywhere else i can get advice?
+2005-07-21T13:51:00.000Z	HappyFool	mjkelly93	ubuntuforums, and the mailing lists
+2005-07-21T13:52:00.000Z	mjkelly93	HappyFool	i tried ubuntuforums like 3 times but noone there helped
+2005-07-21T13:52:00.000Z	HappyFool	mjkelly93	ok, the mailing list. standby
+2005-07-21T13:54:00.000Z	mjkelly93	HappyFool	ok   i dont know what that is so ill wait for ya here   just lemme know
+2005-07-21T13:54:00.000Z	HappyFool	mjkelly93	finding the mailing list address
+2005-07-21T13:55:00.000Z	mjkelly93	HappyFool	ok  im gonna register at linuxquestions.org and try there too
+2005-07-21T13:56:00.000Z	HappyFool	mjkelly93	look here: http://www.ubuntulinux.org/community/lists  or look at Seveas' URL
+2005-07-21T13:58:00.000Z	mjkelly93	HappyFool	 ok thanks again
+2005-07-21T15:29:00.000Z	mjkelly93	HappyFool	ya think i can get this fglrx nonsense working if i recompile a kernel following this: https://wiki.ubuntu.com/KernelHowto
+2005-07-21T15:31:00.000Z	HappyFool	mjkelly93	i don't know, sorry
+2005-07-21T15:31:00.000Z	mjkelly93	HappyFool	ok ill give it a shot i have nuttin to lose
+2005-07-21T15:31:00.000Z	HappyFool	mjkelly93	do you have a reason to think it will help?
+2005-07-21T15:32:00.000Z	mjkelly93	HappyFool	no   none at all
+2005-07-21T15:33:00.000Z	HappyFool	mjkelly93	you can try, but i wouldn't be too optimistic
+2005-07-21T15:34:00.000Z	mjkelly93	HappyFool	ok

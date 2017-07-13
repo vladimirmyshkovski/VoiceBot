@@ -1,0 +1,93 @@
+2011-11-08T06:55:00.000Z	bandit5432		how many people i have to help before some one helps me with kernel 3.1 ??
+2011-11-08T06:56:00.000Z	bandit5432		if you have a static ip why use dhcp?
+2011-11-08T06:57:00.000Z	bandit5432		gotcha now
+2011-11-08T06:57:00.000Z	bandit5432		i would think you would want the ip range to be 192.168.3.10 to  .255
+2011-11-08T06:58:00.000Z	Roasted	bandit5432	hang on a sec. I may have made a typo
+2011-11-08T06:58:00.000Z	Roasted	bandit5432	yeah, that was a typo. its 3.10, not 10.3
+2011-11-08T06:59:00.000Z	bandit5432	Roasted	in the dhcpd.conf do you have a INTERFACES= "eth0" line?
+2011-11-08T07:00:00.000Z	Roasted	bandit5432	no. I never heard of that being needed to dhcpd.conf?
+2011-11-08T07:00:00.000Z	bandit5432	Roasted	also look into /etc/default/isc-dhcp-server
+2011-11-08T07:00:00.000Z	bandit5432	Roasted	file
+2011-11-08T07:00:00.000Z	Roasted	bandit5432	yeah, I have INTERFACSE="eth0" there, but not in dhcpd.conf
+2011-11-08T07:01:00.000Z	bandit5432	Roasted	ok
+2011-11-08T07:01:00.000Z	bandit5432	Roasted	do you have multiple nics?
+2011-11-08T07:02:00.000Z	Roasted	bandit5432	just eth0 and wlan0. This is a laptop I'm using for a quick demo with dhcp, which is why Im using it as a dhcp server even though its a laptop
+2011-11-08T07:19:00.000Z	bandit5432	Roasted	i thought you got it working
+2011-11-08T07:20:00.000Z	Roasted	bandit5432	nope.
+2011-11-08T07:20:00.000Z	Roasted	bandit5432	about to commit homicide in a minute here if I don't get it working.
+2011-11-08T07:21:00.000Z	Roasted	bandit5432	doubt it. its disabled.
+2011-11-08T07:21:00.000Z	Roasted	bandit5432	eth0 and lo
+2011-11-08T07:25:00.000Z	bandit5432	Roasted	in /var/log/syslog are you getting No subnet declaration for eth0  ?
+2011-11-08T07:25:00.000Z	Roasted	bandit5432	actually yeah.
+2011-11-08T07:26:00.000Z	Roasted	bandit5432	what are they referring to with my subnet declaration?
+2011-11-08T07:26:00.000Z	bandit5432	Roasted	see http://www.basicconfig.com/linuxnetwork/configure_dhcp_server_ubuntu
+2011-11-08T07:27:00.000Z	Roasted	bandit5432	I'm not sure I fully understand.
+2011-11-08T07:28:00.000Z	bandit5432	Roasted	in /etc/default/dhcp3-server do you have an interface line?
+2011-11-08T07:29:00.000Z	Roasted	bandit5432	there is no dhcp3-server, but there is isc-dhcp-server, which is how newer versions of ubuntu work. but in that file I do have an interfaces line, and eth0 is listed there.;
+2011-11-08T07:31:00.000Z	bandit5432	Roasted	you also need to add the mac address of the interface to use in the dhcpd.conf file host fantasia {
+2011-11-08T07:32:00.000Z	bandit5432	Roasted	if that does not work post the dhcpd.conf on http://paste.ubuntu.com/
+2011-11-08T07:34:00.000Z	Roasted	bandit5432	didnt work.
+2011-11-08T07:34:00.000Z	bandit5432	Roasted	if that does not work post the dhcpd.conf on http://paste.ubuntu.com/
+2011-11-08T07:35:00.000Z	Roasted	bandit5432	http://pastebin.com/gXH6pBey
+2011-11-08T07:35:00.000Z	bandit5432	Roasted	host fantasia { should be the name of your computer form hostanem
+2011-11-08T07:37:00.000Z	Roasted	bandit5432	made no difference.
+2011-11-08T07:37:00.000Z	bandit5432	Roasted	 you also need another } at line 23 or
+2011-11-08T07:38:00.000Z	Roasted	bandit5432	even still, made no difference
+2011-11-08T07:39:00.000Z	Roasted	bandit5432	fresh install
+2011-11-08T07:40:00.000Z	bandit5432	Roasted	could you post the whole error you are getting?
+2011-11-08T07:41:00.000Z	bandit5432	Roasted	i think the problem is farther back from the interface error line
+2011-11-08T07:41:00.000Z	Roasted	bandit5432	http://pastebin.com/NhB85yT4
+2011-11-08T07:43:00.000Z	Roasted	bandit5432	in which file?
+2011-11-08T07:44:00.000Z	bandit5432	Roasted	thats in the dhcpd.conf you posted
+2011-11-08T07:44:00.000Z	Roasted	bandit5432	still failed
+2011-11-08T07:45:00.000Z	bandit5432	Roasted	how are you restarting it?
+2011-11-08T07:45:00.000Z	Roasted	bandit5432	sudo /etc/init.d/networking restart, then sudo service isc-dhcp-server restart
+2011-11-08T07:46:00.000Z	bandit5432	Roasted	dont need to restart the networking
+2011-11-08T07:46:00.000Z	bandit5432	Roasted	post the /etc/default/isc-dhcp-server please
+2011-11-08T07:49:00.000Z	bandit5432	Roasted	i take it you are setting up fog
+2011-11-08T07:49:00.000Z	Roasted	bandit5432	trying to
+2011-11-08T07:49:00.000Z	bandit5432	Roasted	oh the joys i have heard
+2011-11-08T07:49:00.000Z	Roasted	bandit5432	about what?
+2011-11-08T07:50:00.000Z	bandit5432	Roasted	setting up fog
+2011-11-08T07:50:00.000Z	Roasted	bandit5432	FOG is an outstanding product. I've imaged about 5,000 systems with it. Nothing beats it.
+2011-11-08T07:50:00.000Z	Roasted	bandit5432	the problem is Ubuntu continually changes up crap which causes FOG to have to continually re-vamp their setup scripts.
+2011-11-08T07:50:00.000Z	Roasted	bandit5432	it's actually quite brainless to set it up. As you can see, this is not a FOG problem. It's a DHCP problem.
+2011-11-08T07:50:00.000Z	bandit5432	Roasted	yes and things have to be in certain spots for fog to work correctly
+2011-11-08T07:51:00.000Z	Roasted	bandit5432	again, that's a problem with Ubuntu continually changing crap.
+2011-11-08T07:51:00.000Z	Roasted	bandit5432	I've used FOG for years. It's nothing short of beautiful. But each release of Ubuntu introduces new BS to overcome.
+2011-11-08T07:51:00.000Z	bandit5432	Roasted	then why not stick with a lts release?
+2011-11-08T07:51:00.000Z	Roasted	bandit5432	I could, but I had a 11.10 laptop handy and I wanted to demo it. Now I'm so ticked at this thing I'm determined to get it working.
+2011-11-08T07:52:00.000Z	bandit5432	Roasted	i understand that
+2011-11-08T07:52:00.000Z	Roasted	bandit5432	it'd be nice if FOG was a darn .deb...
+2011-11-08T07:52:00.000Z	Roasted	bandit5432	dozens
+2011-11-08T07:54:00.000Z	bandit5432	Roasted	have you tried renaming the fog dhcpd.conf and trying a defualt ubuntu one and editing it?
+2011-11-08T07:54:00.000Z	Roasted	bandit5432	at this point I don't even care about FOG. I just want o get DHCP working for my own sanity.
+2011-11-08T07:54:00.000Z	Roasted	bandit5432	the fog dhcpd.conf?????
+2011-11-08T07:55:00.000Z	bandit5432	Roasted	the one you posted says This file was created by FOG
+2011-11-08T07:57:00.000Z	Roasted	bandit5432	I just did a remove --purge of dhcp3-server. When I reinstalled, it didnt bring back a new dhcpd.conf.
+2011-11-08T07:57:00.000Z	bandit5432	Roasted	thats the /etc/dhcp3/dhcpd.conf  didnt come back?
+2011-11-08T07:58:00.000Z	Roasted	bandit5432	dhcp3 exists in /etc, but the only thing inside is dhclient-enter-hooks.d
+2011-11-08T07:58:00.000Z	bandit5432	Roasted	where you editing the /etc/dhcp/dhcpd.conf  not the /etc/dhcp3/dhcpd.conf  file?
+2011-11-08T07:59:00.000Z	Roasted	bandit5432	yes. one of the links I read said to do that (I think it was one you may have linked??)
+2011-11-08T07:59:00.000Z	Roasted	bandit5432	/etc/dhcp3/dhcpd.conf does not exist.
+2011-11-08T07:59:00.000Z	bandit5432	Roasted	that might be the problem
+2011-11-08T08:00:00.000Z	bandit5432	Roasted	or not let me install it real quick
+2011-11-08T08:04:00.000Z	bandit5432	Roasted	it would be in dhcp/dhcpd.conf
+2011-11-08T08:07:00.000Z	Roasted	bandit5432	so I was editing the right area?
+2011-11-08T08:08:00.000Z	bandit5432	Roasted	yes you dont have a /etc/ltsp/dhcpd.conf file do you i doubt it but check please
+2011-11-08T08:08:00.000Z	Roasted	bandit5432	oh crap... I totally forgot about LTSP....
+2011-11-08T08:08:00.000Z	Roasted	bandit5432	wowwwwwww thats gotta be it. huh?
+2011-11-08T08:09:00.000Z	bandit5432	Roasted	i think so # Attention: If /etc/ltsp/dhcpd.conf exists, that will be used as
+2011-11-08T08:10:00.000Z	Roasted	bandit5432	wow. that was it.
+2011-11-08T08:10:00.000Z	Roasted	bandit5432	oh my gosh I want to slap myself.
+2011-11-08T08:10:00.000Z	Roasted	bandit5432	you are AWESOME. what made you think of ltsp?
+2011-11-08T08:10:00.000Z	bandit5432	Roasted	its in the first line of the dhcpd.conf file # Attention: If /etc/ltsp/dhcpd.conf exists, that will be used as # configuration file instead of this file.
+2011-11-08T08:11:00.000Z	Roasted	bandit5432	:(
+2011-11-08T08:11:00.000Z	bandit5432	Roasted	you can brag about it tomorrow how it was hard and how you figured it out
+2011-11-08T08:12:00.000Z	bandit5432	Roasted	i have learned alot about dhcpd so i am happy
+2011-11-08T08:12:00.000Z	Roasted	bandit5432	I'd rather brag about how sick nasty amazing awesome the users in #ubuntu are in terms of helping people out.
+2011-11-08T08:12:00.000Z	bandit5432	Roasted	well some of them are
+2011-11-08T08:13:00.000Z	Roasted	bandit5432	the vast majority are, which warrants bragging of that nature. ;)
+2011-11-08T08:31:00.000Z	bandit5432	Roasted	did you get it working?
+2011-11-08T08:39:00.000Z	Roasted	bandit5432	yes, I'm good. THANK YOU
+2011-11-08T08:39:00.000Z	bandit5432	Roasted	woohoo

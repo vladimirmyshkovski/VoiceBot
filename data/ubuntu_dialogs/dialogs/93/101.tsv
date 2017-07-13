@@ -1,0 +1,93 @@
+2005-03-29T09:57:00.000Z	ells		anyone know the difference between hoary ubuntu and kubuntu hoary, just curious
+2005-03-29T09:57:00.000Z	ells		malte' thanks
+2005-03-29T09:58:00.000Z	ells		has anyone ever had to use the debian irc line
+2005-03-29T09:58:00.000Z	ells		those folks are like ultra rude
+2005-03-29T09:59:00.000Z	ells		I have debian on my desktop and ubuntu on my laptop
+2005-03-29T09:59:00.000Z	LinuxJones	ells	stay in #ubuntu a better class of people reside here :)
+2005-03-29T10:01:00.000Z	LinuxJones	ells	there are alot of good people there but a few elitist man-page-memorizing-zobies with big egos will let you know how great they are :)
+2005-03-29T10:01:00.000Z	ells	LinuxJones	I agree
+2005-03-29T10:01:00.000Z	ells	LinuxJones	One guy was rude and said he was trying to help
+2005-03-29T10:02:00.000Z	ells	LinuxJones	I told him, really, how so
+2005-03-29T10:02:00.000Z	LinuxJones	ells	I stopped going into that channel like 2 years ago because of that foolishness
+2005-03-29T10:03:00.000Z	LinuxJones	ells	what's wrong ?
+2005-03-29T10:03:00.000Z	ells	LinuxJones	locks up at begin install
+2005-03-29T10:03:00.000Z	ells	LinuxJones	Sis chipset
+2005-03-29T10:04:00.000Z	LinuxJones	ells	it just freezes ?
+2005-03-29T10:04:00.000Z	ells	LinuxJones	yeap
+2005-03-29T10:04:00.000Z	ells	LinuxJones	hopefully, hoary will take instead
+2005-03-29T10:04:00.000Z	ells	LinuxJones	 doesnt make sense
+2005-03-29T10:04:00.000Z	LinuxJones	ells	can you change to another virtual terminal or it's a hard freeze ?
+2005-03-29T10:05:00.000Z	ells	LinuxJones	not sure totally what ya mean, but it locks up tighter than a drum
+2005-03-29T10:05:00.000Z	ells	LinuxJones	no cursor nothing
+2005-03-29T10:05:00.000Z	LinuxJones	ells	so if you do ctrl+alt+F3 it won't change to a new terminal ?
+2005-03-29T10:05:00.000Z	ells	LinuxJones	honestly did not try that
+2005-03-29T10:06:00.000Z	ells	LinuxJones	I can see the screen that asks which language
+2005-03-29T10:06:00.000Z	ells	LinuxJones	bu that is it
+2005-03-29T10:06:00.000Z	ells	LinuxJones	maybe I will try it again today
+2005-03-29T10:06:00.000Z	ells	LinuxJones	is hoary good enough now to do a fresh install with it
+2005-03-29T10:07:00.000Z	LinuxJones	ells	sometimes a bad cd burn can do that can yo check the md5sum of your downloaded .iso file against the md5sum of the .iso on the ftp server ?
+2005-03-29T10:07:00.000Z	ells	LinuxJones	 this is a real ubuntu cd, from them
+2005-03-29T10:07:00.000Z	LinuxJones	ells	ahhh
+2005-03-29T10:07:00.000Z	ells	LinuxJones	sorry, do you think hoary is good enough to do a fresh install,ya think
+2005-03-29T10:08:00.000Z	LinuxJones	ells	you weren't messing about with your bios settings by any chance. I installed Ubuntu on my nephew's computer and after resetting the system bios it installed just fine
+2005-03-29T10:08:00.000Z	ells	LinuxJones	 not me personally, but it is freshly built
+2005-03-29T10:08:00.000Z	ells	LinuxJones	as a semi-file server
+2005-03-29T10:09:00.000Z	LinuxJones	ells	If it is a new mobo I would check for a bios update. Maybe there were some probles that needed addressing.
+2005-03-29T10:09:00.000Z	ells	LinuxJones	maybe I will try to install hoary directly instead of warty
+2005-03-29T10:10:00.000Z	LinuxJones	ells	new things are being fixed all the time :)
+2005-03-29T10:10:00.000Z	ells	LinuxJones	I agree
+2005-03-29T10:10:00.000Z	ells	LinuxJones	I really like ubuntu
+2005-03-29T10:10:00.000Z	LinuxJones	ells	is it a 64 bit system you built ?
+2005-03-29T10:10:00.000Z	ells	LinuxJones	unfortunately not, but it is amd
+2005-03-29T10:11:00.000Z	ells	LinuxJones	,the Cebron?
+2005-03-29T10:11:00.000Z	LinuxJones	ells	I wouldn't run anything but AMD on a pc :)
+2005-03-29T10:11:00.000Z	ells	LinuxJones	agree
+2005-03-29T10:12:00.000Z	ells	LinuxJones	my laptop though is a 17 in toshiba
+2005-03-29T10:12:00.000Z	ells	LinuxJones	Intel 3.0 gig
+2005-03-29T10:12:00.000Z	LinuxJones	ells	17" laptop *drools*
+2005-03-29T10:13:00.000Z	ells	LinuxJones	it was from the pops for college
+2005-03-29T10:13:00.000Z	ells	LinuxJones	I am an old student
+2005-03-29T10:13:00.000Z	LinuxJones	ells	I am old AND dim-whitted :)
+2005-03-29T10:13:00.000Z	ells	LinuxJones	I am in the army, bout to grad. on 28th
+2005-03-29T10:14:00.000Z	LinuxJones	ells	great
+2005-03-29T10:14:00.000Z	ells	LinuxJones	I am out in Colorado
+2005-03-29T10:14:00.000Z	ells	LinuxJones	thanks
+2005-03-29T10:14:00.000Z	ells	LinuxJones	I will have a BS in bs, naw, jk,  I will have BS in Project Man.
+2005-03-29T10:15:00.000Z	LinuxJones	ells	the only place in the state I want to visit is Colorado Too much John Denver on the radio as a kid I guess :D
+2005-03-29T10:15:00.000Z	ells	LinuxJones	nice place
+2005-03-29T10:16:00.000Z	ells	LinuxJones	did you say you are from Australia
+2005-03-29T10:16:00.000Z	LinuxJones	ells	Eastern Canada
+2005-03-29T10:16:00.000Z	ells	LinuxJones	,nice
+2005-03-29T10:16:00.000Z	ells	LinuxJones	cold, most of the year, right
+2005-03-29T10:17:00.000Z	LinuxJones	ells	Spring is just around the corner...thank god
+2005-03-29T10:17:00.000Z	ells	LinuxJones	yeap
+2005-03-29T10:17:00.000Z	ells	LinuxJones	kind of nice today here
+2005-03-29T10:17:00.000Z	LinuxJones	ells	actually we only got about 4 feet of snow all year and rather mild to boot :)
+2005-03-29T10:17:00.000Z	ells	LinuxJones	do you have the exact url do a fresh hoary download
+2005-03-29T10:17:00.000Z	LinuxJones	ells	www.archive.ubuntulinux.org
+2005-03-29T10:18:00.000Z	ells	LinuxJones	thanks
+2005-03-29T10:18:00.000Z	ells	LinuxJones	you sure, it didnt come up
+2005-03-29T10:20:00.000Z	ells	LinuxJones	 found it thanks
+2005-03-29T10:20:00.000Z	LinuxJones	ells	great
+2005-03-29T10:21:00.000Z	ells	LinuxJones	I am gonna try Hoary today
+2005-03-29T10:21:00.000Z	ells	LinuxJones	on the.........DESKTOP
+2005-03-29T10:22:00.000Z	LinuxJones	ells	I hope it works for you. If you have the same problem with Hoary I would first reset bios, check again then look for a bios update
+2005-03-29T10:22:00.000Z	ells	LinuxJones	cool
+2005-03-29T10:23:00.000Z	ells	LinuxJones	someone told me that Linux doesnt like Sis, not sure if true
+2005-03-29T10:23:00.000Z	LinuxJones	ells	mmm I don't know for sure
+2005-03-30T17:49:00.000Z	ells	LinuxJones	 agree, ATI good company bad drivers
+2005-03-30T17:49:00.000Z	LinuxJones	ells	yeah
+2005-03-30T17:50:00.000Z	LinuxJones	ells	I msut have applied for 25 jobs with them neve even got a phone call ;P
+2005-03-30T17:50:00.000Z	ells	LinuxJones	figures
+2005-03-30T06:03:00.000Z	ells	LinuxJones	I download the hoary preview and did a dry run with it. It is gonna work on my desktop that has debian on it. I guess for whatever reason, warty did not work with my desktop
+2005-03-30T06:03:00.000Z	ells	LinuxJones	I am gonna back my data up
+2005-03-30T06:04:00.000Z	LinuxJones	ells	great, I guess the devs are working their butts off :)
+2005-03-30T06:50:00.000Z	ells	LinuxJones	I am talking to you via my hoary desktop, it worked
+2005-03-30T06:51:00.000Z	LinuxJones	ells	sweet :)
+2005-03-30T06:51:00.000Z	ells	LinuxJones	just tweaking it now
+2005-03-30T06:51:00.000Z	LinuxJones	ells	good stuff
+2005-03-30T06:51:00.000Z	ells	LinuxJones	the hoary preview install seems very intuitive
+2005-03-30T06:52:00.000Z	ells	LinuxJones	as far as upgrades and such
+2005-03-30T06:52:00.000Z	LinuxJones	ells	it is very nice can't wait for the GUI installer mmmmm
+2005-03-30T06:52:00.000Z	ells	LinuxJones	so far....time will tell ya know
+2005-03-30T07:02:00.000Z	ells	LinuxJones	can you help rvalles

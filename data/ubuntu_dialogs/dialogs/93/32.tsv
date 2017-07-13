@@ -1,0 +1,93 @@
+2009-04-04T19:49:00.000Z	KenYoung		I have openssh-server and openssh-client installed on my machine, sshd is running, and I can ssh from my machine to others.   However other machines cannot ssh into my machine.   Do you know what might be blocking incoming ssh traffic?
+2009-04-04T19:50:00.000Z	usr13	KenYoung	WHat type of error are they getting?
+2009-04-04T19:51:00.000Z	KenYoung	usr13	No error.   Connect attemps just hang, with no message in /var/log/messages .
+2009-04-04T19:51:00.000Z	usr13	KenYoung	Wrong IP?
+2009-04-04T19:51:00.000Z	KenYoung	usr13	Nope.
+2009-04-04T19:52:00.000Z	usr13	KenYoung	Test to see if sshd is actually running.  Try to connect from your own box.
+2009-04-04T19:52:00.000Z	usr13	KenYoung	ssh user@192.168.x.x
+2009-04-04T19:52:00.000Z	usr13	KenYoung	Where 192.168.x.x is IP of your own box.
+2009-04-04T19:52:00.000Z	KenYoung	usr13	I can ssh from my box to itself, using the numeric IP (not the loopback IP).   sshd is definately running.
+2009-04-04T19:53:00.000Z	usr13	KenYoung	Do you have firestarter running?
+2009-04-04T19:53:00.000Z	KenYoung	usr13	I don't think so.   No such program shows up in the ps ax list.
+2009-04-04T19:55:00.000Z	usr13	KenYoung	Tell the client to check to see if your port 22 is open.  nmap -p 22
+2009-04-04T19:55:00.000Z	usr13	KenYoung	Tell the client to check to see if your port 22 is open.  nmap -p 22 192.168.x.x
+2009-04-04T19:56:00.000Z	KenYoung	usr13	I don't understand - there does not seem to be a nmap command on my machine.   Is that a standard utility shipped with ubuntu?
+2009-04-04T19:56:00.000Z	usr13	KenYoung	I thought so. but you can install it.  apt-get install nmap
+2009-04-04T19:58:00.000Z	KenYoung	usr13	Thanks.   I get "PORT STATE SERVICE" "22/tcp open ssh"
+2009-04-04T19:59:00.000Z	usr13	KenYoung	FYI you can also check on your own machine:  netstat -pantu
+2009-04-04T20:00:00.000Z	usr13	KenYoung	 Then it should work.  I do not know why not.  Did you run nmap from the client machine?
+2009-04-04T20:01:00.000Z	KenYoung	usr13	no I ran nmap on the server machine.   However I know outgoing ssh works on the client - I have numerous open sessions on it.
+2009-04-04T20:01:00.000Z	usr13	KenYoung	 Did you do: netstat -pantu
+2009-04-04T20:02:00.000Z	KenYoung	usr13	"sudo netstat -pantu | grep ssh" returns "tcp6 0 0 :::22 :::* LISTEN 7031/sshd"
+2009-04-04T20:04:00.000Z	usr13	KenYoung	Run nmap -p 22  from client.
+2009-04-04T20:04:00.000Z	usr13	KenYoung	Your firewall could be blocking incomming port 22
+2009-04-04T20:06:00.000Z	KenYoung	usr13	I think it probably is a firewall issue, but I don't know which of the 6000 different firewall Unix-familly firewall schemes Ubuntu uses be default.   What type of firewall does Ubuntu active with a plain-vanilla installation?
+2009-04-04T20:06:00.000Z	usr13	KenYoung	Do you have firestarter installed?
+2009-04-04T20:07:00.000Z	KenYoung	usr13	I have no idea.   I certainly didn't explicitly install it, or any other firewall, but if it comes with Ubuntu by default, I have it.   ps ax does not show any process named firestarter running.
+2009-04-04T20:08:00.000Z	usr13	KenYoung	Well, you could just flush all iptables rules: sudo  iptables -F
+2009-04-04T20:09:00.000Z	KenYoung	usr13	OK, I'll look into what iptables is doing.   Thanks very much for your help!
+2009-04-04T20:09:00.000Z	usr13	KenYoung	It would not show a firewall in running processes.
+2009-04-04T20:09:00.000Z	usr13	KenYoung	iptables -l
+2009-04-04T20:09:00.000Z	usr13	KenYoung	But if you type firestart<tab> you should find out if firestarter is installed.
+2009-04-04T20:10:00.000Z	KenYoung	usr13	firestart <tab> does nt complete to any executable code's name.   Nor is the a command firestart in my path.
+2009-04-04T20:12:00.000Z	usr13	KenYoung	You could intall firestarter then and use that to control what is allowed and not allowed.
+2009-04-04T20:13:00.000Z	usr13	KenYoung	 But you might also have a router on your network that is blocking prot 22
+2009-04-04T20:13:00.000Z	KenYoung	usr13	Would that disable iptables?   THe last thing I want to do is run two firewall systems, since I don't know how to configure one.
+2009-04-04T20:13:00.000Z	usr13	KenYoung	If so, you could have sshd listen on another port.  Maybe 222
+2009-04-04T20:14:00.000Z	usr13	KenYoung	YOu probably do not have even one.
+2009-04-04T20:15:00.000Z	KenYoung	usr13	Then why don't incoming ssh sessions work?   If there's no firewall, what is blocking ssh from a remote machine?
+2009-04-04T20:15:00.000Z	usr13	KenYoung	I do not think that the defalut install of Ubuntu includes a firewall package.
+2009-04-04T20:15:00.000Z	usr13	KenYoung	Search me...???  It should work.  Did you run nmap -p 222  from a client machine?
+2009-04-04T20:16:00.000Z	usr13	KenYoung	Sorry, I meant -p 22
+2009-04-04T20:17:00.000Z	KenYoung	usr13	Yes, on the client machine namps said "Host seems down, if it is really up, but blocking ping probes, try -P0"
+2009-04-04T20:17:00.000Z	usr13	KenYoung	Again, you can flush all iptables rules with command:  /sbin/iptables -F
+2009-04-04T20:17:00.000Z	usr13	KenYoung	Then port 22 is being blocked somwhere.
+2009-04-04T20:18:00.000Z	KenYoung	usr13	Yes, I tried iptables -F, but that didn't fix the problem.
+2009-04-04T20:18:00.000Z	usr13	KenYoung	And it could also be a router that is between you and the client machine.
+2009-04-04T20:18:00.000Z	usr13	KenYoung	 Is there a router involved?
+2009-04-04T20:19:00.000Z	usr13	KenYoung	If so, connect via crossover and try.  Or, try a switch or hub instead.
+2009-04-04T20:19:00.000Z	KenYoung	usr13	I doubt it's a router.   I have the client and server are on the same LAN, for testing.   It seems like the server machine is blocking the request.
+2009-04-04T20:20:00.000Z	usr13	KenYoung	Check sshd's config file to see what port sshd is listening on.
+2009-04-04T20:20:00.000Z	usr13	KenYoung	/etc/ssh/sshd_config
+2009-04-04T20:20:00.000Z	KenYoung	usr13	It's listening to port 22.
+2009-04-04T20:21:00.000Z	usr13	KenYoung	Switch to 222
+2009-04-04T20:22:00.000Z	KenYoung	usr13	OK, I'll try that.
+2009-04-04T20:22:00.000Z	usr13	KenYoung	Something somewhere must be blocking port 22  Switch to 222  But first test to see if 222 is open.  nmap -p 222  192.168.x.x  from client.
+2009-04-04T20:23:00.000Z	usr13	KenYoung	Edit /etc/ssh/sshd_config and change Port 22 to Port 222  and connect with:  ssh -p222 user@192.168.x.x
+2009-04-04T20:24:00.000Z	usr13	KenYoung	But remember to restart sshd
+2009-04-04T20:24:00.000Z	usr13	KenYoung	etc/init.d/ssh restart
+2009-04-04T20:25:00.000Z	KenYoung	usr13	Sadly, that doesn't work either. I changed the port to 222 in ssh_config, did "sudo /etc/init.d/ssh restart" and then tried ssh -p 222 xxx.xxx.xx.xxx on the client.   No joy.
+2009-04-04T20:25:00.000Z	usr13	KenYoung	Did you do nmap -p 222  from client?
+2009-04-04T20:25:00.000Z	KenYoung	usr13	The most frustrating part is that this used to work smoothly.   It just stopped working a few months ago.
+2009-04-04T20:26:00.000Z	KenYoung	usr13	Yes, nmap -p 222 xxx.xxx.xxx.xxx on the client times out, with the same message as before.
+2009-04-04T20:29:00.000Z	usr13	KenYoung	Try sudo /sbin/iptables --flush ; sudo /sbin/iptables --delete-chain
+2009-04-04T20:30:00.000Z	usr13	KenYoung	Are you sure  you are using the right IP address?
+2009-04-04T20:30:00.000Z	usr13	KenYoung	Can the client PC ping that IP?
+2009-04-04T20:31:00.000Z	KenYoung	usr13	ping works from the client machine, pinging the server.
+2009-04-04T20:34:00.000Z	usr13	KenYoung	And what about nmap -p 222 192.168.x.x  ?
+2009-04-04T20:34:00.000Z	usr13	KenYoung	from client?
+2009-04-04T20:34:00.000Z	KenYoung	usr13	That just times out.
+2009-04-04T20:34:00.000Z	usr13	KenYoung	Then you just need to open a port, or find one that is open and use it.
+2009-04-04T20:35:00.000Z	usr13	KenYoung	Did you flush iptables rules?
+2009-04-04T20:35:00.000Z	KenYoung	usr13	How do I open a port?
+2009-04-04T20:35:00.000Z	KenYoung	usr13	Yes, I issued both of the commands you suggested.   Still no joy.
+2009-04-04T20:36:00.000Z	KenYoung	usr13	Is it possible that the server machine has bad keys?
+2009-04-04T20:36:00.000Z	usr13	KenYoung	But what did nmap -p 222  say, from client?
+2009-04-04T20:37:00.000Z	usr13	KenYoung	 You first need to find out if something is blocking the port you are trying to use.
+2009-04-04T20:37:00.000Z	KenYoung	usr13	It sat for a while, and finally said "Note host seems down.  If it is really up, but blocking our ping probes, try -P0" .   But pings work.
+2009-04-04T20:38:00.000Z	usr13	KenYoung	Ok, then the keys are not an issue because you haven't gotten that far.
+2009-04-04T20:38:00.000Z	usr13	KenYoung	From client try:  nmap -p 113 192.168.x.x
+2009-04-04T20:38:00.000Z	usr13	KenYoung	Where 192.168.x.x is correct IP of server.
+2009-04-04T20:39:00.000Z	KenYoung	usr13	If I add -P0 to the nmap command, I get "PORT STATE SERVICE\n22/tcp filtered ssh" (I have changed the port back to 22).
+2009-04-04T20:39:00.000Z	usr13	KenYoung	Sounds like your firewall is blocking it.  Find out what firewall you are using and open.
+2009-04-04T20:40:00.000Z	KenYoung	usr13	I have not installed any firewall, and I guess by default Ubuntu uses iptables, right?
+2009-04-04T20:40:00.000Z	usr13	KenYoung	Did you try sudo /sbin/iptables --flush ; sudo /sbin/iptables --delete-chain   ?
+2009-04-04T20:40:00.000Z	KenYoung	usr13	Yes, I issued both of those commands.
+2009-04-04T20:41:00.000Z	usr13	KenYoung	All linux distos use iptables, (if it is isntalled), a firewall package is just a front end that writes iptables rules for you.
+2009-04-04T20:42:00.000Z	usr13	KenYoung	Check to see what has been installed on that system in the period of time in question.
+2009-04-04T20:42:00.000Z	KenYoung	usr13	So is all of that hosts.allow and hosts.deny stuff inactive by default?
+2009-04-04T20:43:00.000Z	KenYoung	usr13	I'll never figure that out.   I think I'd bebetter off doing a clean install of Ubuntu.
+2009-04-04T20:43:00.000Z	usr13	KenYoung	Install firestarter
+2009-04-04T20:43:00.000Z	usr13	KenYoung	No need for that, just fix what you have.
+2009-04-04T20:43:00.000Z	KenYoung	usr13	OK, I guess that couldn't make it any worse.
+2009-04-04T20:53:00.000Z	KenYoung	usr13	firestarter doesn't seem to do anything helpful.   I think I'll do a clean install of Ubuntu.   Then I'll at least be at a known starting point.   Re-installation will take less time than I've already spent on this problem.   Thanks again for your help!

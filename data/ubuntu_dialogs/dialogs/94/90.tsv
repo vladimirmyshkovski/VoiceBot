@@ -1,0 +1,94 @@
+2008-02-06T06:07:00.000Z	newbie		how can I reinstall ubuntu w/o loosing my files? Is it possible? It has been failing and I want to reinstall the OS, but I do not want to format
+2008-02-06T06:09:00.000Z	cosmodad	newbie	why do you want to reinstall?
+2008-02-06T06:10:00.000Z	cosmodad	newbie	unlike Windows, you don't need to reinstall every now and then to keep the OS runnable.
+2008-02-06T06:11:00.000Z	newbie	cosmodad	the problem is that sometimes when the computer is booting up, it takes up to 5 minutes, and sometimes it restarts w/o accessing ubuntu. Also when I try to play video/audio files, the movie player fails, and I have to restart one or two times
+2008-02-06T06:12:00.000Z	cosmodad	newbie	long boot times might be related to networking issues. What does the movie player say? What do you mean by "w/o accessing ubuntu"?
+2008-02-06T06:13:00.000Z	newbie	cosmodad	when I boot up, the screen goes black, and I can only see the cursor, but nothing else. then a few minutes later, the computer restarts
+2008-02-06T06:14:00.000Z	newbie	cosmodad	the movieplayer just freezes and goes b&w
+2008-02-06T06:14:00.000Z	cosmodad	newbie	hit F1 when you boot (or disable the quiet option the grub boot screen) to see what Linux repots.
+2008-02-06T06:14:00.000Z	cosmodad	newbie	*reports
+2008-02-06T06:14:00.000Z	cosmodad	newbie	what player did you use? have you tried an alternative (e.g., mplayer or totem)?
+2008-02-06T06:15:00.000Z	newbie	cosmodad	yes, I have Mplayer, totem, vlc, xine and all of them fail
+2008-02-06T06:16:00.000Z	cosmodad	newbie	pasting mplayer's output might pose to be helpful.
+2008-02-06T06:18:00.000Z	newbie	cosmodad	Error opening/initializing the selected video_out (-vo) device
+2008-02-06T06:18:00.000Z	cosmodad	newbie	can you pastebin all of it?
+2008-02-06T06:19:00.000Z	newbie	cosmodad	mmm I do not know how to do that, could you tell me?
+2008-02-06T06:20:00.000Z	cosmodad	newbie	copy mplayer's output and paste it using the pastebin service. Publish the URL afterwards.
+2008-02-06T06:23:00.000Z	newbie	cosmodad	done!
+2008-02-06T06:24:00.000Z	cosmodad	newbie	great. post the URL.
+2008-02-06T06:25:00.000Z	newbie	cosmodad	how can I do that? I click on paste and it says: Posted by newbie on February 6th 02:23
+2008-02-06T06:25:00.000Z	newbie	cosmodad	is it already done?
+2008-02-06T06:25:00.000Z	cosmodad	newbie	copy the URL and report it here.
+2008-02-06T06:25:00.000Z	cosmodad	newbie	yeah it is. But I need the URL.
+2008-02-06T06:25:00.000Z	cosmodad	newbie	copy it from your address line.
+2008-02-06T06:25:00.000Z	cosmodad	newbie	of your browser.
+2008-02-06T06:25:00.000Z	newbie	cosmodad	ohh all right, sorry. This is the first time I do this...    http://paste.ubuntu-nl.org/54948/
+2008-02-06T06:26:00.000Z	cosmodad	newbie	np mate.
+2008-02-06T06:28:00.000Z	newbie	cosmodad	but that is just to mention one problem. Also when ubuntu is loaded, I got this error:  The panel encountered a problem while loading "OAFIID:GNOME_CPUFreqApplet", and it asks me if I want to delete the applet from configuration
+2008-02-06T06:29:00.000Z	cosmodad	newbie	hmm did you change anything vital to the system?
+2008-02-06T06:29:00.000Z	newbie	cosmodad	not that I am aware. I just started installing apps
+2008-02-06T06:29:00.000Z	cosmodad	newbie	do you have enough free space?
+2008-02-06T06:29:00.000Z	newbie	cosmodad	sure I do
+2008-02-06T06:30:00.000Z	newbie	cosmodad	about 10 gigs, and I left 2 gigs for swap
+2008-02-06T06:30:00.000Z	cosmodad	newbie	hmm ok I do start to think that reinstalling might be wise due to the high number of issues.
+2008-02-06T06:30:00.000Z	cosmodad	newbie	how long have you been using this system?
+2008-02-06T06:31:00.000Z	newbie	cosmodad	since ubuntu 7.10 was released
+2008-02-06T06:31:00.000Z	cosmodad	newbie	uhm.
+2008-02-06T06:31:00.000Z	newbie	cosmodad	I think since October
+2008-02-06T06:31:00.000Z	cosmodad	newbie	you should check the logs in /var/log too.
+2008-02-06T06:38:00.000Z	cosmodad	newbie	just backup your personal data now, and reinstall Ubuntu. Afterwards, copy your data back into your $HOME...
+2008-02-06T06:32:00.000Z	newbie	cosmodad	Also, I will have to reinstall windows in my computer, but it will mess up the grub. Is there any tutorial that tells me how to recover it after reinstalling windows?
+2008-02-06T06:32:00.000Z	cosmodad	newbie	yeah, here:
+2008-02-06T06:33:00.000Z	cosmodad	newbie	as to the mplayer problem, you could try another -vo target (see -vo help).
+2008-02-06T06:34:00.000Z	cosmodad	newbie	as to the numerous other issues: I'd check /var/log/* and the boot messages (F1) before reconsidering re-install.
+2008-02-06T06:35:00.000Z	newbie	cosmodad	thank you very much for helping me, I really appreciate it, but I think there are tons of error accumulated out there, and I want my computer to be fresh again. I can backup all of my files, so I do not have much to loose but a few hours
+2008-02-06T06:36:00.000Z	newbie	cosmodad	but will look at the log file to check the errors, will save them in case I have those errors again
+2008-02-06T06:36:00.000Z	cosmodad	newbie	sure thing. Just save your /home stuff and possibly store the list of installed packages.
+2008-02-06T06:37:00.000Z	newbie	cosmodad	one last question, after reinstalling, how can I point the system to the new /home partition to save my files? If I do this, can I reinstall ubuntu later in case I have issues like I'm having now w/o loosing my data?
+2008-02-06T06:38:00.000Z	newbie	cosmodad	when I said loosing my data, I mean my personal files
+2008-02-06T06:39:00.000Z	cosmodad	newbie	for future re-installations, it will be easier if you keep /home on a separate partition.
+2008-02-06T06:39:00.000Z	newbie	cosmodad	ok, will have that in mind
+2008-02-06T06:40:00.000Z	cosmodad	newbie	you might also be interested in the following:
+2008-02-06T06:42:00.000Z	cosmodad	newbie	the thing about a separate partition is, however, that you'll have to make up your mind on how much space you like to dedicated to /home and /.
+2008-02-06T06:42:00.000Z	cosmodad	newbie	if you want to do it really right, set up an LVM partition during installation.
+2008-02-06T06:44:00.000Z	newbie	cosmodad	mmm, ok, I'm not familiar with it, but will look for info about doing it. For the moment, I need to reinstall windows, and recover the grub. I will reinstall ubuntu later in case I have problems with windows
+2008-02-06T06:44:00.000Z	newbie	cosmodad	how many gigs would you recommend me assign to / in order to have lets say about 50 programs installed
+2008-02-06T06:45:00.000Z	newbie	cosmodad	after installing ubuntu, of course
+2008-02-06T06:45:00.000Z	cosmodad	newbie	it highly depends on the programs. If, for example, you need to use a lot of databases, space can be quickyl consumed.
+2008-02-06T06:46:00.000Z	cosmodad	newbie	you want to have someone else in the channel confirm this, but I'd say 5-6 Gigs will be OK.
+2008-02-06T06:46:00.000Z	cosmodad	newbie	if you have the space, use 10 just to be sure.
+2008-02-06T06:47:00.000Z	newbie	cosmodad	all right. I was thinking about 10 gigs
+2008-02-06T06:47:00.000Z	cosmodad	newbie	that'll be totally sufficient.
+2008-02-06T06:47:00.000Z	cosmodad	newbie	if we are not talking about a big server installation or something.
+2008-02-06T06:47:00.000Z	newbie	cosmodad	all right! Thanks a lot dude
+2008-02-06T06:47:00.000Z	cosmodad	newbie	np mate.
+2008-02-06T06:47:00.000Z	newbie	cosmodad	don't worry, I consider myself an average computer user
+2008-02-06T06:48:00.000Z	newbie	cosmodad	I only need a stable system. I have external hdds where I save my information
+2008-02-06T06:48:00.000Z	cosmodad	newbie	you are all set then.
+2008-02-06T06:50:00.000Z	newbie	cosmodad	one last question. I have issues with windows viruses and I would like to be able to save my windows and linux information in my hdd. If I format the hdd using an ext3 partition is it possible for a windows virus to corrupt my data on that partition?
+2008-02-06T06:51:00.000Z	cosmodad	newbie	a virus capable of writing to such an filesystem will be . But 99.99% of those in the wild don't do that.
+2008-02-06T06:52:00.000Z	cosmodad	newbie	if you are affected by a virus, however, you should do an overall clean-up anyway.
+2008-02-06T06:53:00.000Z	newbie	cosmodad	I want to separate my linux information from the windows info. Is there any restriction in the files size like in fat (4gbs) under ext partition?
+2008-02-06T06:54:00.000Z	cosmodad	newbie	file size depends on the chosen blocksize, but the minimum is 16GB, most likely something like 2TB.
+2008-02-06T06:55:00.000Z	cosmodad	newbie	so don't worry.
+2008-02-06T06:55:00.000Z	newbie	cosmodad	so basically it means that if I want to save an image of a DVD I will have no problems storing it under the ext3 partition? like in fat, I have tried, but it does not allow files > 4gb
+2008-02-06T06:56:00.000Z	cosmodad	newbie	nope, you won't have such a problem under exte.
+2008-02-06T06:57:00.000Z	newbie	cosmodad	also, I know there is some sort of driver to read ext partitions under windows. If I convert my entire Hdd to ext partition, will I be able to read/write to the hdd from windows?
+2008-02-06T06:57:00.000Z	cosmodad	newbie	I know there is a windows tool that can read ext2/3.
+2008-02-06T06:57:00.000Z	cosmodad	newbie	not sure about its reliability, however.
+2008-02-06T06:57:00.000Z	newbie	cosmodad	all right
+2008-02-06T06:59:00.000Z	cosmodad	newbie	sharing files between Windows and Linux will therefore virtually require a shared FAT partition.
+2008-02-06T06:59:00.000Z	cosmodad	newbie	I know this makes virus attacks easier, but you should make sure you don't get any viruses at all anyway.
+2008-02-06T07:00:00.000Z	newbie	cosmodad	then you would recommend me to create 2 partitions then? a fat and an ext partition?
+2008-02-06T07:03:00.000Z	cosmodad	newbie	how do you want to share data: on the same machine (e.g., access Linux data while Windows is booted), or have something like a file-server?
+2008-02-06T07:04:00.000Z	newbie	cosmodad	I only want to store my info in an external hdd and be able to access it either win/linux and be able to carry it everywhere
+2008-02-06T07:05:00.000Z	cosmodad	newbie	ok let others correct me if I'm wrong but smb won't help you with that I believe.
+2008-02-06T07:05:00.000Z	newbie	cosmodad	that's correct
+2008-02-06T07:15:00.000Z	cosmodad	newbie	no prob, have fun.
+2008-02-06T07:27:00.000Z	cosmodad	newbie	I'd use something like this: rsync -avrPS /home/myhome/ <destination>
+2008-02-06T07:31:00.000Z	newbie	cosmodad	what advantage does the rsync option has against the cp option?
+2008-02-06T07:32:00.000Z	cosmodad	newbie	the major advantage is: you can resume the copy process if you have to cancel it for whatever reason.
+2008-02-06T07:32:00.000Z	newbie	cosmodad	then I think I will use such command. Thanks
+2008-02-06T07:33:00.000Z	cosmodad	newbie	also, it'll preserve file metadata, such as ownership. But if it's just your home, you can do cp as well.
+2008-02-06T07:33:00.000Z	cosmodad	newbie	rsync works for sure though.
+2008-02-06T07:34:00.000Z	newbie	cosmodad	all right, I have a better feeling for rsync rather than cp

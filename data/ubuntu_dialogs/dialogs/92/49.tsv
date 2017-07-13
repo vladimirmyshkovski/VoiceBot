@@ -1,0 +1,92 @@
+2008-04-02T14:31:00.000Z	noob-africa		so much for K3b!
+2008-04-02T14:31:00.000Z	noob-africa		now, where do i find  the correct serial number for Nero Linux 3? the download is only good for 15 days!
+2008-04-02T14:31:00.000Z	ActionParsnip	noob-africa	I'd imagine you send some cash to ahead
+2008-04-04T14:25:00.000Z	ActionParsnip	noob-africa	try sudo modprobe usb-storage
+2008-04-04T14:26:00.000Z	noob-africa	ActionParsnip	modprobe produces no results
+2008-04-04T14:27:00.000Z	ActionParsnip	noob-africa	good. then if you fdisk -l you should see the /dev that points to the stick
+2008-04-04T14:28:00.000Z	noob-africa	ActionParsnip	error produced > Disk /dev/sdc doesn't contain a valid partition table
+2008-04-04T14:29:00.000Z	noob-africa	ActionParsnip	the flash disk has some key data that someone wants to retrieve... <I> didnt remove it improperly from the Windows PC that was accessing it
+2008-04-04T14:30:00.000Z	ActionParsnip	noob-africa	if the data is there then its fine. you need to find the /dev that points to it so we can mount it
+2008-04-04T14:31:00.000Z	noob-africa	ActionParsnip	the fdisk command produced this report > Disk /dev/sdc doesn't contain a valid partition table
+2008-04-04T14:31:00.000Z	ActionParsnip	noob-africa	ahhhh. What if you put it in the first system?
+2008-04-04T14:31:00.000Z	noob-africa	ActionParsnip	how?
+2008-04-04T14:32:00.000Z	noob-africa	ActionParsnip	u mean the windows PC? it's a laptop, and not located within this building... it's somewhere several kilometres away
+2008-04-04T14:32:00.000Z	ActionParsnip	noob-africa	hmm, got a windows pc?
+2008-04-04T14:33:00.000Z	noob-africa	ActionParsnip	do u suggest we put it in a different PC?
+2008-04-04T14:33:00.000Z	ActionParsnip	noob-africa	yeah cos it might be able to chkdsk/f the disk and repair it
+2008-04-04T14:41:00.000Z	noob-africa	ActionParsnip	guess what... we put the flash on my neighbour's PC... it says the disk in drive F is not formatted!
+2008-04-04T14:41:00.000Z	noob-africa	ActionParsnip	i guess this is the reward one gets for using Windows! data loss!
+2008-04-04T14:49:00.000Z	ActionParsnip	noob-africa	run some data recoveryon it
+2008-04-04T14:49:00.000Z	ActionParsnip	noob-africa	what format was the drive?
+2008-04-04T14:50:00.000Z	noob-africa	ActionParsnip	NTFS
+2008-04-04T14:51:00.000Z	ActionParsnip	noob-africa	just googling a solution. you got a backup of the data?
+2008-04-04T14:52:00.000Z	noob-africa	ActionParsnip	on the flash? i doubt it...
+2008-04-04T14:52:00.000Z	noob-africa	ActionParsnip	how would i do a data recovery on it, other than with testdisk? testdisk cant do any data recovery on the flash
+2008-04-04T14:57:00.000Z	ActionParsnip	noob-africa	http://onlyubuntu.blogspot.com/2007/05/recover-data-from-damaged-hard-disk.html looks good :)
+2008-04-04T14:58:00.000Z	noob-africa	ActionParsnip	thanks, am on it
+2008-04-04T15:00:00.000Z	noob-africa	ActionParsnip	well, avant doesnt work on my system... i wonder why
+2008-04-04T15:01:00.000Z	noob-africa	ActionParsnip	i just installed it, it works... hehe
+2008-04-04T15:01:00.000Z	ActionParsnip	noob-africa	the tool to recover the data looks cool.give it a go
+2008-04-09T18:52:00.000Z	noob-africa	ActionParsnip	since you're a GURU here, maybe YOU can help out?
+2008-04-09T18:53:00.000Z	ActionParsnip	noob-africa	wassup?
+2008-04-09T18:54:00.000Z	noob-africa	ActionParsnip	i have a problem... serious one... i have lost ALL my Evolution Mail configurations... all the accounts are gone... i cant retrieve my mail
+2008-04-09T18:54:00.000Z	ActionParsnip	noob-africa	is there any data in the evolution config folder (probs ~/.evolution)?
+2008-04-09T18:54:00.000Z	noob-africa	ActionParsnip	i had a graphics card device driver problem, and edited the xorg.conf file... so when i rebooted, and started Evolution Mail, i got the welcome screen
+2008-04-09T18:56:00.000Z	noob-africa	ActionParsnip	i got an error message...
+2008-04-09T18:56:00.000Z	noob-africa	ActionParsnip	bash: probs: command not found
+2008-04-09T18:57:00.000Z	ActionParsnip	noob-africa	try konsole
+2008-04-09T18:57:00.000Z	noob-africa	ActionParsnip	what command should i type?
+2008-04-09T18:57:00.000Z	ActionParsnip	noob-africa	what for?
+2008-04-09T18:58:00.000Z	noob-africa	ActionParsnip	konsole.... how do i use it?
+2008-04-09T18:58:00.000Z	ActionParsnip	noob-africa	click the menu button -> run command and type konsole and hit enter
+2008-04-09T18:59:00.000Z	noob-africa	ActionParsnip	u totally lost me... WHAT menu button?
+2008-04-09T18:59:00.000Z	ActionParsnip	noob-africa	look at the bottom left, the thing that brings up the app menu
+2008-04-09T19:01:00.000Z	noob-africa	ActionParsnip	unfortunately i dont have the option > run command
+2008-04-09T19:02:00.000Z	noob-africa	ActionParsnip	if u mean terminal, well, i already HAVE terminal up and running
+2008-04-10T14:15:00.000Z	ActionParsnip	noob-africa	nb man, you ok?
+2008-04-10T14:17:00.000Z	ActionParsnip	noob-africa	did you have admin privs (sudo / gksudo)
+2008-04-10T14:17:00.000Z	noob-africa	ActionParsnip	i edited it with sudo nano /etc/X11/xorg.conf
+2008-04-10T14:17:00.000Z	ActionParsnip	noob-africa	if you dont have admin priveledges the settings wont stick to xorg.conf
+2008-04-10T14:17:00.000Z	noob-africa	ActionParsnip	i do have admin privileges
+2008-04-10T14:17:00.000Z	ActionParsnip	noob-africa	try sudo nano -w /etc/X11/xorg.conf
+2008-04-10T14:19:00.000Z	noob-africa	ActionParsnip	thanks... it worked
+2008-04-10T14:19:00.000Z	ActionParsnip	noob-africa	-w = writable
+2008-04-10T14:20:00.000Z	noob-africa	ActionParsnip	do u know why i am not getting the full range of audio reproduction from my sound card? i am using Creative Soundblaster Audigy 2ZS
+2008-04-10T14:20:00.000Z	noob-africa	ActionParsnip	the driver is downloaded, but i am not getting the full reproduction from my headset... it's a totally different situation with my laptop
+2008-04-10T14:20:00.000Z	ActionParsnip	noob-africa	let me google, you google too
+2008-04-10T14:21:00.000Z	noob-africa	ActionParsnip	keyword (s)?
+2008-04-10T14:21:00.000Z	ActionParsnip	noob-africa	http://ubuntuforums.org/showthread.php?t=621008
+2008-04-10T14:21:00.000Z	ActionParsnip	noob-africa	you choose
+2008-04-10T14:22:00.000Z	ActionParsnip	noob-africa	http://ubuntuforums.org/showthread.php?t=436522
+2008-04-10T14:22:00.000Z	ActionParsnip	noob-africa	this looks good http://www.linuxquestions.org/questions/ubuntu-63/sound-blaster-audigy-2-zs-337513/
+2008-04-10T14:23:00.000Z	noob-africa	ActionParsnip	ty
+2008-10-31T13:41:00.000Z	ActionParsnip	noob-africa	ask away
+2008-10-31T13:42:00.000Z	ActionParsnip	noob-africa	thats gyache and pidgin that do yahoo
+2008-10-31T13:42:00.000Z	ActionParsnip	noob-africa	you may have success with wine, i'd check the app db for wine
+2008-10-31T13:43:00.000Z	noob-africa	ActionParsnip	well, i already use Pidgin... but there is a slight feature... you cant add MSN Messenger users IN your Yahoo Messenger account, and you cant add your Yahoo Contacts on your MSN Account
+2008-10-31T13:44:00.000Z	noob-africa	ActionParsnip	I have a network problem here where I am, MSN Messenger account keeps going offline... Yahoo Messenger account is stable
+2008-10-31T13:44:00.000Z	ActionParsnip	noob-africa	thats because they use different protocol
+2008-10-31T13:44:00.000Z	ActionParsnip	noob-africa	you could create a group and drag all your buddies to one group
+2008-10-31T13:45:00.000Z	noob-africa	ActionParsnip	apparently there is a Yahoo Messenger 1.0.4 for Linux
+2008-10-31T13:45:00.000Z	ActionParsnip	noob-africa	try that then
+2008-10-31T13:45:00.000Z	noob-africa	ActionParsnip	Well, in Windows (which is an ugly word in here...) you can interchangeable add users with either IM client
+2008-10-31T13:46:00.000Z	ActionParsnip	noob-africa	thats windows, completely seperate system
+2008-10-31T13:46:00.000Z	noob-africa	ActionParsnip	I know
+2008-10-31T13:46:00.000Z	ActionParsnip	noob-africa	im sure theres a billion things yuo can do in linux you cant do in windows
+2008-10-31T13:46:00.000Z	noob-africa	ActionParsnip	LOL
+2008-10-31T13:47:00.000Z	ActionParsnip	noob-africa	just because something happens in windows doesnt automatically make it possible in linux
+2008-10-31T13:47:00.000Z	noob-africa	ActionParsnip	NOW you tell me.... LOL
+2008-10-31T13:48:00.000Z	ActionParsnip	noob-africa	thats why i hate peoplesaying.."my <blah hardware> works in windows but not uuntu, can anyone help
+2008-10-31T13:49:00.000Z	noob-africa	ActionParsnip	lol
+2008-10-31T13:51:00.000Z	noob-africa	ActionParsnip	I just downloaded Yahoo Messenger 1.0.4 (and tried installing it with the Debian installer)
+2008-10-31T13:51:00.000Z	noob-africa	ActionParsnip	this is the error I got
+2008-10-31T13:52:00.000Z	noob-africa	ActionParsnip	Package: ymessenger
+2008-10-31T13:52:00.000Z	noob-africa	ActionParsnip	Status: Error: Dependency is not satisfiable: libglib 1.2
+2008-10-31T13:53:00.000Z	ActionParsnip	noob-africa	install the dependancy
+2008-10-31T13:56:00.000Z	noob-africa	ActionParsnip	I am going to pastebin the results I got after running sudo apt-get install libglib1.2
+2008-10-31T13:58:00.000Z	noob-africa	ActionParsnip	http://pastebin.com/m798e0324
+2008-10-31T14:04:00.000Z	noob-africa	ActionParsnip	were you able to make sense of it?
+2008-11-17T18:21:00.000Z	ActionParsnip	noob-africa	yuo can test them with te manufacturers tools, most are on the ultimate boot cd
+2008-11-17T18:21:00.000Z	noob-africa	ActionParsnip	well, i dont have any of the manufacturer's cds... i have no idea where they are... lol
+2008-11-17T18:23:00.000Z	ActionParsnip	noob-africa	dont need em, just find out what make the HDD is and scan it with the tool on UBCD
+2008-11-17T18:26:00.000Z	noob-africa	ActionParsnip	i just found out the solution... go to http://www.daniweb.com/forums/thread3401.html and scroll all the way down... am definitely gonna try the solution

@@ -1,0 +1,92 @@
+2008-04-12T03:55:00.000Z	sveakex	Soleone	gnome
+2008-04-12T03:49:00.000Z	sveakex	Soleone	nautilus
+2008-04-12T03:52:00.000Z	sveakex	Soleone	midnightcommander, look it up :)
+2008-04-12T03:52:00.000Z	Soleone	sveakex	thx!
+2008-04-12T03:55:00.000Z	sveakex	Soleone	what wm are you using?
+2008-04-12T03:55:00.000Z	Soleone	sveakex	hm i don't know. the default that comes with ubuntu 7.10. what is it?
+2008-04-12T03:56:00.000Z	sveakex	Soleone	since if you were using kubuntu it would be kde, or if you installed kde on ubuntu it would also be kde
+2008-04-12T03:56:00.000Z	Soleone	sveakex	ah ok, i didnt know gnome was called the "window manager"
+2008-04-12T03:57:00.000Z	sveakex	Soleone	well i call it the window manager :P
+2008-04-12T03:58:00.000Z	sveakex	Soleone	*
+2008-04-12T03:58:00.000Z	Soleone	sveakex	Krusader looks interesting, but it will install a lot of kde libraries with it...
+2008-04-12T03:59:00.000Z	sveakex	Soleone	i haven't seen krusader, you can also take a look at thunar, the default for xfce
+2008-04-12T04:00:00.000Z	sveakex	Soleone	i grew tired of xfce really fast, especially when it destroyed how everything looked like when i installed some gnomelibs
+2008-04-12T04:01:00.000Z	Soleone	sveakex	i am really looking forward to KDE 4
+2008-04-12T04:02:00.000Z	sveakex	Soleone	download the kde4 live cd from their website to have a real look at it ;)
+2008-04-12T04:03:00.000Z	sveakex	Soleone	i haven't seen kde4 irl, it looks good, but i am probably going to stick with gnome
+2008-04-12T04:03:00.000Z	Soleone	sveakex	i have. but i did not install it, so i had to 3d effects, still very nice and shiny
+2008-04-12T04:03:00.000Z	sveakex	Soleone	since i like how it looks like and i use gtk programs mostly
+2008-04-12T04:03:00.000Z	sveakex	Soleone	hehe :)
+2008-04-12T04:04:00.000Z	sveakex	Soleone	so which file browser are you going to test now?
+2008-04-12T04:05:00.000Z	Soleone	sveakex	Krusader. just installed. looks promising
+2008-04-12T04:06:00.000Z	sveakex	Soleone	can you link me a screenshot? i am a bit lazy x)
+2008-04-12T04:06:00.000Z	Soleone	sveakex	yea, wait a minute. i will look at the features
+2008-04-12T04:07:00.000Z	sveakex	Soleone	thanks :)
+2008-04-12T04:13:00.000Z	Soleone	sveakex	screenshots coming up...
+2008-04-12T04:13:00.000Z	sveakex	Soleone	aye! :)
+2008-04-12T04:14:00.000Z	Soleone	sveakex	http://vs1814.vserver4free.de/pics/
+2008-04-12T04:14:00.000Z	Soleone	sveakex	exactly what i was looking for
+2008-04-12T04:15:00.000Z	sveakex	Soleone	let me see :)
+2008-04-12T04:16:00.000Z	sveakex	Soleone	looks good, midnightcommander is similar, just that is in the terminal instead :)
+2008-04-12T04:16:00.000Z	Soleone	sveakex	i somehow dislike console mode for editors and file managers
+2008-04-12T04:17:00.000Z	sveakex	Soleone	hehe :P
+2008-04-12T04:17:00.000Z	sveakex	Soleone	if you ever ssh into your computer then it might be useful ;)
+2008-04-12T04:19:00.000Z	Soleone	sveakex	that is actually true, haven't thought of that
+2008-04-12T04:20:00.000Z	Soleone	sveakex	i think i will install midnightcommander on my server
+2008-04-12T04:20:00.000Z	sveakex	Soleone	hehe :)
+2008-04-12T04:20:00.000Z	Soleone	sveakex	after i fix my apt-get problem :)
+2008-04-12T04:20:00.000Z	sveakex	Soleone	what's up with apt-get?
+2008-04-12T04:20:00.000Z	Soleone	sveakex	i accidently deleted everything under /etc/apt/cache
+2008-04-12T04:20:00.000Z	sveakex	Soleone	try "sudo apt-get update"
+2008-04-12T04:23:00.000Z	Soleone	sveakex	yea. i made a typo i deleted another directory: E: Archive directory /var/cache/apt/archives/partial is missing.
+2008-04-12T04:24:00.000Z	Soleone	sveakex	i accidently deleted everything in /var/cache/apt
+2008-04-12T04:24:00.000Z	sveakex	Soleone	what happened when you tried to update apt like i told you to?
+2008-04-12T04:25:00.000Z	Soleone	sveakex	 Archive directory /var/cache/apt/archives/partial is missing.
+2008-04-12T04:26:00.000Z	sveakex	Soleone	ok, let me have a good think
+2008-04-12T04:27:00.000Z	Soleone	sveakex	thanks
+2008-04-12T04:28:00.000Z	sveakex	Soleone	alright, i know what to do "sudo mkdir /var/cache/apt/archives/partial && sudo apt-get update"
+2008-04-12T04:28:00.000Z	sveakex	Soleone	obviously without the ""
+2008-04-12T04:28:00.000Z	Soleone	sveakex	thx, i'll try
+2008-04-12T04:30:00.000Z	Soleone	sveakex	woohoo, thanks a lot (though i could've just tried myself making the dir :)
+2008-04-12T04:30:00.000Z	sveakex	Soleone	you're welcome :)
+2008-04-12T04:30:00.000Z	Soleone	sveakex	looking deeper into Krusader, i must say, this is definitely the best file manager i could think of
+2008-04-12T04:31:00.000Z	sveakex	Soleone	hehe, i am satisfied with nautilus or just using a terminal :P
+2008-04-12T04:32:00.000Z	Soleone	sveakex	i already have midnight commander installed on my server, that's cool. thanks for the pointing to it
+2008-04-12T04:32:00.000Z	sveakex	Soleone	you're welcome, is it an ubuntu server?
+2008-04-12T04:33:00.000Z	Soleone	sveakex	no just debian 4 i think
+2008-04-12T04:33:00.000Z	Soleone	sveakex	how can i print the version of the OS?
+2008-04-12T04:34:00.000Z	sveakex	Soleone	uname -a might, otherwise i wouldn't know
+2008-04-12T04:34:00.000Z	Soleone	sveakex	Linux vs1814 2.6.22.9 #2 SMP Tue Oct 23 22:39:08 CEST 2007 x86_64 GNU/Linux
+2008-04-12T04:35:00.000Z	sveakex	Soleone	ubotu just said it!
+2008-04-12T04:36:00.000Z	Soleone	sveakex	i don't have Ubuntu on my server, just debian
+2008-04-12T04:36:00.000Z	sveakex	Soleone	aha, go to #debian , i actualled asked that once there, there is a specific command for that
+2008-04-12T04:39:00.000Z	sveakex	Soleone	#debian knows about debian things :P
+2008-04-12T04:40:00.000Z	Soleone	sveakex	thx, i'm asking
+2008-04-12T04:41:00.000Z	Soleone	sveakex	cat /etc/debian_version
+2008-04-12T04:42:00.000Z	sveakex	Soleone	yup, that's correct :)
+2008-04-12T04:42:00.000Z	sveakex	Soleone	however i don't use deabian, i use gentoo
+2008-04-12T04:43:00.000Z	Soleone	sveakex	is there a good reason for that?
+2008-04-12T04:44:00.000Z	sveakex	Soleone	why i use gentoo?
+2008-04-12T04:44:00.000Z	Soleone	sveakex	yea
+2008-04-12T04:46:00.000Z	sveakex	Soleone	up to date packages, all packages are optimized for your computer (source based optimization), pretty stable, fun (imo :P), and it is difficult (since i have recently migrated to gentoo from archlinux)
+2008-04-12T04:46:00.000Z	sveakex	Soleone	however on laptops i like ubuntu
+2008-04-12T04:47:00.000Z	sveakex	Soleone	and gentoo on server
+2008-04-12T04:47:00.000Z	sveakex	Soleone	and arch or gentoo on desktop
+2008-04-12T04:47:00.000Z	Soleone	sveakex	is gentoo similar to debian? i am kinda new to linux
+2008-04-12T04:47:00.000Z	sveakex	Soleone	nah, gentoo is not that similar to debian
+2008-04-12T04:48:00.000Z	sveakex	Soleone	if you are new then i reccomend ubuntu or maybe archlinux :)
+2008-04-12T04:49:00.000Z	sveakex	Soleone	gentoo also can takes a VERY long time to install, and installing packages takes long, since it has to compile everything
+2008-04-12T04:51:00.000Z	Soleone	sveakex	i see thanks. why would you recommened archlinux? how is it comparable to debian or ubuntu?
+2008-04-12T04:53:00.000Z	sveakex	Soleone	it is lightweight, simple (this doesn't mean easy), very update to date packages, which could make it a tad unstable sometimes, and it is optimized for x86 processors. it also doesn't install a lot of programs by default, so you will have to install gnome for instance by yourself. but it is only what i like :)
+2008-04-12T04:54:00.000Z	Soleone	sveakex	that sounds good. thanks!
+2008-04-12T04:55:00.000Z	Soleone	sveakex	will try that some time i guess. simple is always good
+2008-04-12T04:56:00.000Z	sveakex	Soleone	lol you exploded :P
+2008-04-12T05:00:00.000Z	sveakex	Soleone	is ruby for webbdevelopment?
+2008-04-12T05:00:00.000Z	Soleone	sveakex	not only for web dev, but very good for it yes
+2008-04-12T05:02:00.000Z	Soleone	sveakex	and timl: ICQ: 326-800-916
+2008-04-12T05:03:00.000Z	sveakex	Soleone	aiight, i need make an icq account first :P
+2008-04-12T05:03:00.000Z	Soleone	sveakex	msn and icq are compatible
+2008-04-12T05:03:00.000Z	sveakex	Soleone	they are?
+2008-04-12T05:04:00.000Z	sveakex	Soleone	apparently it isn't comptatible with emesene
+2008-04-12T05:05:00.000Z	Soleone	sveakex	& timl: join #ruby if  you want to talk without so much disctraction
+2008-04-12T05:10:00.000Z	sveakex	Soleone	btw i added you i think

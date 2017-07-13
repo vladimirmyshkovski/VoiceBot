@@ -1,0 +1,92 @@
+2010-11-01T07:09:00.000Z	rmozden		So I'm gonna be a bit of a compile noob here for a minute and ask what else do I need to do to make ipset 4.4 work as a kernel module under ubuntu 10.10 server now that I have done a make & make install using the KERNEL_SRC= directive ???
+2010-11-01T07:09:00.000Z	MetaPhaze	rmozden	gcc - o exploit your0wned.c
+2010-11-01T07:10:00.000Z	rmozden	MetaPhaze	Wow, arent you helpful
+2010-11-01T07:11:00.000Z	MetaPhaze	rmozden	are you being sarcastic?
+2010-11-01T07:12:00.000Z	rmozden	MetaPhaze	No worse thenyou with the "gcc -o exploit yourOwned.c"  bit
+2010-11-01T07:12:00.000Z	MetaPhaze	rmozden	I must have been mistaken I thought you wanted to hack the  Gibson?
+2010-11-01T07:12:00.000Z	rmozden	MetaPhaze	Nah, I just want ipset to work
+2010-11-01T07:13:00.000Z	MetaPhaze	rmozden	welcome to my world, looking for real support
+2010-11-01T07:13:00.000Z	MetaPhaze	rmozden	just venting on you, sorry
+2010-11-01T07:14:00.000Z	rmozden	MetaPhaze	My prob is that using mudule-assistant to make the 2.5 module version of ipset pukes.  I can and have compiled the 4.4 version from source but it installed it to my user dir
+2010-11-01T07:14:00.000Z	rmozden	MetaPhaze	No worries... I can take it as well as I can dish it too
+2010-11-01T07:19:00.000Z	MetaPhaze	rmozden	does make install not give you any options for ipset?
+2010-11-01T07:20:00.000Z	rmozden	MetaPhaze	It all ended up in my home folder
+2010-11-01T07:37:00.000Z	rmozden	MetaPhaze	New error message at least
+2010-11-01T07:39:00.000Z	rmozden	MetaPhaze	I suppose this is progress:  FATAL: Module ip_set not found.
+2010-11-01T07:39:00.000Z	MetaPhaze	rmozden	standbye I got like 50 PM's
+2010-11-01T07:40:00.000Z	rmozden	MetaPhaze	lucky you!  Hopefully to help fix your issue!
+2010-11-01T07:40:00.000Z	MetaPhaze	rmozden	they are everyones issues
+2010-11-01T07:50:00.000Z	rmozden	MetaPhaze	is there anyway I can just add what I've compiled since I see all the files in my home folder?
+2010-11-01T07:51:00.000Z	rmozden	MetaPhaze	or for that matter, use module-assistant to use the src I downloaded?
+2010-11-01T07:51:00.000Z	MetaPhaze	rmozden	you want to recompile kernel to include ... ?
+2010-11-01T07:52:00.000Z	rmozden	MetaPhaze	Should work as a module
+2010-11-01T07:52:00.000Z	rmozden	MetaPhaze	Did in 10.04 anyway
+2010-11-01T07:52:00.000Z	MetaPhaze	rmozden	im with you now
+2010-11-01T07:53:00.000Z	rmozden	MetaPhaze	Right ... all the files compiled and are sitting in a directory  ( for ipset 4.4) but I either need to recompile with module-assistant specifying the 4.4 source or manually install the compiled files
+2010-11-01T07:54:00.000Z	rmozden	MetaPhaze	Hopefully that made sense
+2010-11-01T07:54:00.000Z	MetaPhaze	rmozden	give me a moment, I know what you want. When you ran make it should have asked you about ipset
+2010-11-01T07:55:00.000Z	rmozden	MetaPhaze	the dist of ipset for ubuntu is broken and the src from ubuntu errors on compile hence why I went for 4.4 version instead of packaged 2.5
+2010-11-01T07:55:00.000Z	MetaPhaze	rmozden	did you do a...
+2010-11-01T07:57:00.000Z	rmozden	MetaPhaze	I followed the directions at http://ipset.netfilter.org/install.html
+2010-11-01T07:57:00.000Z	MetaPhaze	rmozden	standbye let me look
+2010-11-01T07:58:00.000Z	rmozden	MetaPhaze	and I did use the kernel_dir with the compile
+2010-11-01T07:58:00.000Z	rmozden	MetaPhaze	gonna re-do it right now
+2010-11-01T07:59:00.000Z	MetaPhaze	rmozden	good idea
+2010-11-01T08:00:00.000Z	rmozden	MetaPhaze	Problem is that instead of putting the mod files in the proper mod directory it installs them to my home directory
+2010-11-01T08:00:00.000Z	rmozden	MetaPhaze	I perfer old school
+2010-11-01T08:00:00.000Z	MetaPhaze	rmozden	i understand, but it shouldntt make a diff
+2010-11-01T08:02:00.000Z	MetaPhaze	rmozden	does ubuntu support 'make menuconfig' ?
+2010-11-01T08:03:00.000Z	rmozden	MetaPhaze	Not sure
+2010-11-01T08:03:00.000Z	MetaPhaze	rmozden	try it
+2010-11-01T08:03:00.000Z	rmozden	MetaPhaze	no rule for it
+2010-11-01T08:04:00.000Z	MetaPhaze	rmozden	can you do a 'make dep' + 'make clean' + 'make'?
+2010-11-01T08:05:00.000Z	rmozden	MetaPhaze	no rule for dep
+2010-11-01T08:08:00.000Z	MetaPhaze	rmozden	also try make with insmod
+2010-11-01T08:08:00.000Z	rmozden	MetaPhaze	negative
+2010-11-01T08:08:00.000Z	MetaPhaze	rmozden	also try make with insmod
+2010-11-01T08:09:00.000Z	rmozden	MetaPhaze	?
+2010-11-01T08:09:00.000Z	rmozden	MetaPhaze	lemme do a pastebin
+2010-11-01T08:11:00.000Z	rmozden	MetaPhaze	http://paste.ubuntu.com/523636/
+2010-11-01T08:16:00.000Z	rmozden	MetaPhaze	Did the pastebin explain it better?
+2010-11-01T08:16:00.000Z	MetaPhaze	rmozden	yeah hold on
+2010-11-01T08:17:00.000Z	rmozden	MetaPhaze	Gotta love it when documentation is vague or lacking
+2010-11-01T08:18:00.000Z	MetaPhaze	rmozden	from what I can see, and somewhat shot in the dark. Is your kernel does not support to the module your trying to add
+2010-11-01T08:18:00.000Z	rmozden	MetaPhaze	it shoudl as there was kernel support in the last version of ubuntu ( 10.04) where I used module-assistant to put in 2.5.0 of ipset
+2010-11-01T08:27:00.000Z	rmozden	MetaPhaze	unfortunately the make dep doesnt work as there is no target to make it
+2010-11-01T08:20:00.000Z	rmozden	MetaPhaze	I would have used 2.5 again had it not puked on compile
+2010-11-01T08:20:00.000Z	MetaPhaze	rmozden	bugtraq?
+2010-11-01T08:20:00.000Z	rmozden	MetaPhaze	nothing there... already checked
+2010-11-01T08:22:00.000Z	MetaPhaze	rmozden	I think your issues are above incl module IPV6
+2010-11-01T08:22:00.000Z	rmozden	MetaPhaze	not using ipv6 at all
+2010-11-01T08:23:00.000Z	rmozden	MetaPhaze	yep
+2010-11-01T08:23:00.000Z	rmozden	MetaPhaze	there is no rule to make dep
+2010-11-01T08:24:00.000Z	MetaPhaze	rmozden	every kernel, everr made
+2010-11-01T08:24:00.000Z	rmozden	MetaPhaze	here's the build log form module-assistant when I tried to use it to make the 2.5.0 module:  http://paste.ubuntu.com/523644/
+2010-11-01T08:26:00.000Z	MetaPhaze	rmozden	well looks good you did make clean
+2010-11-01T08:26:00.000Z	rmozden	MetaPhaze	no rule to make target .... remember, I'm not making the whole kernel, just a module
+2010-11-01T08:27:00.000Z	MetaPhaze	rmozden	your issue lies in make dep
+2010-11-01T08:28:00.000Z	rmozden	MetaPhaze	that last pastebin is the old way of getting ipset to work with the kernel, current version of ubuntu pukes and fails when it tries to work
+2010-11-01T08:29:00.000Z	MetaPhaze	rmozden	thats the best I can do.. is *GUESS* your missing dep
+2010-11-01T08:29:00.000Z	rmozden	MetaPhaze	appreciated but even when i run m-a a-i ipset , it fails
+2010-11-01T08:30:00.000Z	MetaPhaze	rmozden	still can be missing dependencies
+2010-11-01T08:31:00.000Z	rmozden	MetaPhaze	what a pain in the arse this has become.  I think I'm gonna go back to 10.04 and be done with it since it worked
+2010-11-01T08:31:00.000Z	MetaPhaze	rmozden	IMHO I would ditch Ubuntu all together
+2010-11-01T08:32:00.000Z	rmozden	MetaPhaze	which distro would you reccomend?
+2010-11-01T08:32:00.000Z	MetaPhaze	rmozden	I am sure your issue is somewhere with Kernel dependency
+2010-11-01T08:32:00.000Z	MetaPhaze	rmozden	I have been so far removed from Linux distros you wouldn' want to ask
+2010-11-01T08:32:00.000Z	rmozden	MetaPhaze	so go to slackware or similar?
+2010-11-01T08:33:00.000Z	rmozden	MetaPhaze	 this used to work btw:  http://www.jsimmons.co.uk/2010/06/08/using-ipset-with-iptables-in-ubuntu-lts-1004-to-block-large-ip-ranges/
+2010-11-01T08:33:00.000Z	MetaPhaze	rmozden	I would go debian or slackware...Ubuntu is a end all be all desktop solutuion that does none of the above good
+2010-11-01T08:34:00.000Z	rmozden	MetaPhaze	trying a last ditch effort atm
+2010-11-01T08:36:00.000Z	MetaPhaze	rmozden	I know make dep, make clean, make will work to put your module in to the kernel, on Debian...Ubuntu seems to be a Win7 distro of Debian. Easy to use on a 'default' sys
+2010-11-01T08:36:00.000Z	rmozden	MetaPhaze	this is their server version
+2010-11-01T08:38:00.000Z	MetaPhaze	rmozden	see if you can find a distro of SUSE
+2010-11-01T08:38:00.000Z	MetaPhaze	rmozden	non Novell molested
+2010-11-01T08:45:00.000Z	MetaPhaze	rmozden	try debian I think you will like it
+2010-11-01T08:47:00.000Z	MetaPhaze	rmozden	you made my day man, thanks for the chat
+2010-11-01T08:47:00.000Z	rmozden	MetaPhaze	you too.  Appreciate the help
+2010-11-01T08:47:00.000Z	MetaPhaze	rmozden	love to bullshit when you have time, look me up
+2010-11-01T08:48:00.000Z	MetaPhaze	rmozden	love to CHAT with YOU next TIME! no fould LANGUAGE I PROMISE!
+2010-11-01T08:49:00.000Z	rmozden	MetaPhaze	LOL screw em if they cant take a slang
+2010-11-01T08:49:00.000Z	MetaPhaze	rmozden	I guess it isn't their fault, default language scripts ... :D
+2010-11-01T08:50:00.000Z	rmozden	MetaPhaze	I'll show you why I need ipset... just a sec

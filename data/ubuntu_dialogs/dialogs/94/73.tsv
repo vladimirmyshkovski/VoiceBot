@@ -1,0 +1,94 @@
+2008-07-14T03:55:00.000Z	PhoenixUK		After installing ubuntu 7.10 i got "GRUB Loading stage 1.5 read error" when trying to boot, I found this solution http://ubuntuforums.org/archive/index.php/t-615668.html , following it when booted from live cd ,but when I try to execute this command "root (hdx,y) setup (hdx) quit" I get message "Error 11: Unrecognized device string", also after doing "gksudo gedit /boot/grub/menu.lst" the file opens but it's empty ? any ideas o
+2008-07-14T03:57:00.000Z	PhoenixUK		bump, anyone ?
+2008-07-14T03:58:00.000Z	nano_	PhoenixUK	the error you are getting is prolly cause your arguments to grub aren't correct ...i.e. (hdX, Y)
+2008-07-14T03:58:00.000Z	nano_	PhoenixUK	grub starts numbering drives and partitions from 0...not from 1 like linux does
+2008-07-14T03:58:00.000Z	nano_	PhoenixUK	so if you are trying to install grub on 1st partition of 1st harddisk...you would do setup(hd0,0)
+2008-07-14T04:01:00.000Z	PhoenixUK	nano_	oh it didnt give me any error this time writing setup(hd0,0) but nothing's happening, what should be my next step ? sorry to bother you mate : )
+2008-07-14T04:02:00.000Z	nano_	PhoenixUK	well just follow the same instructions to the post in that link you posted...except make sure that you have your numbering scheme correct.
+2008-07-14T04:07:00.000Z	PhoenixUK	nano_	Checking if "/boot/grub/stage1" exists... yes
+2008-07-14T04:09:00.000Z	PhoenixUK	nano_	http://paste.ubuntu.com/27158/ thats what i got
+2008-07-14T04:09:00.000Z	nano_	PhoenixUK	I don't know exactly what your setup is...but your earlier problem was due to incorrect number usage...i still think that you are not providing the proper argument
+2008-07-14T04:11:00.000Z	nano_	PhoenixUK	paste sudo fdisk -l
+2008-07-14T04:12:00.000Z	PhoenixUK	nano_	http://paste.ubuntu.com/27159/
+2008-07-14T04:14:00.000Z	nano_	PhoenixUK	what partition are you trying to install inux.
+2008-07-14T04:14:00.000Z	nano_	PhoenixUK	*linux
+2008-07-14T04:16:00.000Z	nano_	PhoenixUK	there are 2 ways you can install grub on  a driver...first one is to go into grubshell. and do setup..root and all that stuff..........another option, which i prefer to use is grub-install from linux command linux..."grub-install" does a lot of things for you automatically...the only thing you need to do is provide it with (hdX) of the harddisk you are trying to install it upon.
+2008-07-14T04:16:00.000Z	nano_	PhoenixUK	please post your /boot/grub/menu.lst file
+2008-07-14T04:21:00.000Z	PhoenixUK	nano_	 that doesnt tell me much, damn im so terrible heh...
+2008-07-14T04:21:00.000Z	nano_	PhoenixUK	xorg
+2008-07-14T04:22:00.000Z	nano_	PhoenixUK	sorry, that was not intended for you....i get a lil confused trying to help out 2 ppl at once..sorry
+2008-07-14T04:22:00.000Z	PhoenixUK	nano_	xorg ?
+2008-07-14T04:22:00.000Z	nano_	PhoenixUK	yes, and after do xserver-xorg
+2008-07-14T04:22:00.000Z	nano_	PhoenixUK	make sure you "sudo"
+2008-07-14T04:24:00.000Z	nano_	PhoenixUK	were you able to grub-install (hd0) with success?
+2008-07-14T04:28:00.000Z	nano_	PhoenixUK	did you issue the following "sudo grub-install hd0"
+2008-07-14T04:28:00.000Z	PhoenixUK	nano_	in which prompt, normal or grub ? got too many windows open
+2008-07-14T04:28:00.000Z	nano_	PhoenixUK	in normal
+2008-07-14T04:30:00.000Z	PhoenixUK	nano_	http://paste.ubuntu.com/27163/ like that ?
+2008-07-14T04:32:00.000Z	nano_	PhoenixUK	yeah like that...but something is funny with your grub
+2008-07-14T04:32:00.000Z	nano_	PhoenixUK	if i were you i would just do the following "sudo apt-get install --reinstall grub"
+2008-07-14T04:33:00.000Z	PhoenixUK	nano_	ok lemme try
+2008-07-14T04:34:00.000Z	nano_	PhoenixUK	i assume that the computer that you are trying to fix is not the computer that you are logged into irc chat with
+2008-07-14T04:35:00.000Z	PhoenixUK	nano_	its funny because usually im the teaching guy (hardware/networking/windows), aint got much linux experience tho, last time I was using one was mandrake like 6yrs ago, appreciate your help alot :)  PS. its downloading some stuff now, will keep you reported
+2008-07-14T04:35:00.000Z	nano_	PhoenixUK	np@all.
+2008-07-14T04:36:00.000Z	PhoenixUK	nano_	http://paste.ubuntu.com/27164/ thats what I got
+2008-07-14T04:37:00.000Z	nano_	PhoenixUK	good grub has been installed from scratch
+2008-07-14T04:37:00.000Z	nano_	PhoenixUK	do you have a file called /boot/grub/menu.lst
+2008-07-14T04:37:00.000Z	nano_	PhoenixUK	can you also post me the output of mount command
+2008-07-14T04:38:00.000Z	PhoenixUK	nano_	last time i checked it it was empty, gonna check again, just gonna find the command
+2008-07-14T04:38:00.000Z	nano_	PhoenixUK	what do you mean find the command....you should simply be able to enter mount and get the output?
+2008-07-14T04:39:00.000Z	PhoenixUK	nano_	command to open the file, or what do you want me to do ?
+2008-07-14T04:39:00.000Z	nano_	PhoenixUK	well send the output of the "mount" command
+2008-07-14T04:40:00.000Z	nano_	PhoenixUK	also send me the contents of menu.lst file...you can do that by " cat /boot/grub/menu.lst "
+2008-07-14T04:40:00.000Z	PhoenixUK	nano_	http://paste.ubuntu.com/27165/
+2008-07-14T04:41:00.000Z	PhoenixUK	nano_	and that other command doesnt work
+2008-07-14T04:41:00.000Z	nano_	PhoenixUK	what does it say?
+2008-07-14T04:41:00.000Z	nano_	PhoenixUK	file doesn't exist or soemthing?
+2008-07-14T04:42:00.000Z	PhoenixUK	nano_	nvm used other command, it opened the file but its empty :S
+2008-07-14T04:42:00.000Z	nano_	PhoenixUK	issue the following command, incase you don't have read permission somehow : "sudo cat /boot/grub/menu.lst"
+2008-07-14T04:43:00.000Z	PhoenixUK	nano_	no such file or directory
+2008-07-14T04:43:00.000Z	nano_	PhoenixUK	 is that the output of the sudo cat /boot/grub/menu.lst command?
+2008-07-14T04:44:00.000Z	nano_	PhoenixUK	also, can you send me the output of the following command "sudo mount -a & mount"
+2008-07-14T04:44:00.000Z	nano_	PhoenixUK	also send me the output of : "cat /etc/fstab"
+2008-07-14T04:45:00.000Z	PhoenixUK	nano_	http://paste.ubuntu.com/27167/
+2008-07-14T04:46:00.000Z	nano_	PhoenixUK	send me the output of /etc/fstab file.
+2008-07-14T04:46:00.000Z	nano_	PhoenixUK	please send the output of "mount" command once again please
+2008-07-14T04:47:00.000Z	PhoenixUK	nano_	http://paste.ubuntu.com/27168/ thats the mount, not sure how do i do the other one
+2008-07-14T04:48:00.000Z	nano_	PhoenixUK	"cat /etc/fstab"
+2008-07-14T04:48:00.000Z	nano_	PhoenixUK	when you mounted all your partitions, the most important of all partitions, /, wasn't mounted
+2008-07-14T04:49:00.000Z	PhoenixUK	nano_	http://paste.ubuntu.com/27169/ here u go
+2008-07-14T04:49:00.000Z	nano_	PhoenixUK	i think you have some serious issues with your /etc/fstab file
+2008-07-14T04:49:00.000Z	nano_	PhoenixUK	how can your fstab file be so dry?
+2008-07-14T04:49:00.000Z	nano_	PhoenixUK	did you install a new harddisk after installing ubuntu or something?
+2008-07-14T04:49:00.000Z	PhoenixUK	nano_	dont ask me, no idea if it helps but i couldnt get win xp to install on this earlier as well
+2008-07-14T04:50:00.000Z	PhoenixUK	nano_	well i tried to install it few times, maybe thats why
+2008-07-14T04:51:00.000Z	nano_	PhoenixUK	i don't think that you actually successfully installed ubuntu...or did you?
+2008-07-14T04:51:00.000Z	PhoenixUK	nano_	I did, then it asks you to restart after installation, after that reboot I  got that grub error i posted at the begini
+2008-07-14T04:51:00.000Z	PhoenixUK	nano_	grub stage 1.5 read error , to be exact
+2008-07-14T04:52:00.000Z	PhoenixUK	nano_	tried reinstalling 2 times, then i just started from live cd and came here
+2008-07-14T04:52:00.000Z	nano_	PhoenixUK	so right now you are running off livecd?
+2008-07-14T04:54:00.000Z	nano_	PhoenixUK	you need to mount your harddrive first, then you need to give me your /etc/fstab file
+2008-07-14T04:54:00.000Z	PhoenixUK	nano_	how do i do that ?
+2008-07-14T04:54:00.000Z	nano_	PhoenixUK	?
+2008-07-14T04:55:00.000Z	PhoenixUK	nano_	you said i have to mount hdd first and then check that whatever file
+2008-07-14T04:56:00.000Z	nano_	PhoenixUK	yes, right now you are running an OS based completely off the livecd,.... your harddrve doesn't enter the equation at all. the settings that i was asking you for pertain to your harddive - which isn't in the equation at all.
+2008-07-14T04:57:00.000Z	nano_	PhoenixUK	so we need to bring your harddisk into the equation first...you can do this by issuing the following : sudo mkdir /media/harddrive && mount /dev/hda3 /media/harddrive
+2008-07-14T04:57:00.000Z	nano_	PhoenixUK	for the second command you will need to insert a "sudo " immediately after the "&&" symbol.
+2008-07-14T04:59:00.000Z	PhoenixUK	nano_	mkdir: cannot create direectory '/media/harddrive' : File exists
+2008-07-14T05:10:00.000Z	nano_	PhoenixUK	so u are doing a brand new install?
+2008-07-14T05:11:00.000Z	nano_	PhoenixUK	you need at bare minimum 1 swap partition and one "/" parition
+2008-07-14T05:12:00.000Z	nano_	PhoenixUK	i would recommend 1 swap , 1 "/" partition, and one /home partition so that next time in case you have to reformat everything you won't lose your dloads and other precious stuff like that.
+2008-07-14T05:13:00.000Z	PhoenixUK	nano_	190gb, 1gb ram
+2008-07-14T05:14:00.000Z	nano_	PhoenixUK	set up 2gigs swap partition, and the remaining space (assuming you want to use entire hdisk) as "/" partition with ext3 format.
+2008-07-14T05:14:00.000Z	nano_	PhoenixUK	kyncani : and that should be the simplest install possible
+2008-07-14T05:15:00.000Z	PhoenixUK	nano_	i got this 2gb swap, lets say I want to have 2 partitions, which ones do I make ?
+2008-07-14T05:16:00.000Z	nano_	PhoenixUK	if you want 2 partitions i would recommend that you have 130 gigs devoted to /home partition and the remaining to / parition
+2008-07-14T05:17:00.000Z	nano_	PhoenixUK	so next time you hit a roadblock that kills your system you can reinstall OS without having to worry about losing your settings and dloads in /home dir
+2008-07-14T05:18:00.000Z	PhoenixUK	nano_	it doesnt say in this software anything like where its mounted
+2008-07-14T05:19:00.000Z	nano_	PhoenixUK	are you using gparted or the install process ?
+2008-07-14T05:19:00.000Z	nano_	PhoenixUK	it should refer to "mount point" or something
+2008-07-14T05:22:00.000Z	nano_	PhoenixUK	what are you options under filesystem setting
+2008-07-14T05:22:00.000Z	nano_	PhoenixUK	do you see /home
+2008-07-14T05:22:00.000Z	nano_	PhoenixUK	do you see /home, among other entries
+2008-07-14T05:23:00.000Z	nano_	PhoenixUK	in one of those settings under "NEW" you will see a  selection of /home /boot....and so on.
+2008-07-14T05:23:00.000Z	PhoenixUK	nano_	nothing like that

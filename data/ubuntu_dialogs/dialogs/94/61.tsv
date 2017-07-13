@@ -1,0 +1,94 @@
+2008-01-07T03:25:00.000Z	debatem1		hola all, quick question: I would like a mechanism to securely call a small handful of scripts contained in a chroot on my server, but do not want to allow any other actions to be performed and would really like to keep my chroot small and clean. any suggestions?
+2008-01-07T03:25:00.000Z	debatem1		jeah: yeah
+2008-01-07T03:25:00.000Z	debatem1		jeah: hold on, ive got a link around here somewhere
+2008-01-07T03:25:00.000Z	Jeah	debatem1	do you know how it "determines the codename for the release" when installing?
+2008-01-07T03:26:00.000Z	Jeah	debatem1	I'm getting an error while doing a semi-crazy install and I don't know how to begin to fix it
+2008-01-07T03:29:00.000Z	Jeah	debatem1	Error during an install from a Xubuntu Gutsy alt install disc image is "[!!] Install the base system - Debootstrap Error: Failed to determine the codename for the release."  It's kind of a long story, but I'm installing from a partion on the hard drive to which I dd'd the iso.  I think that's probably related to the error, but I don't know what to do about it.
+2008-01-07T03:33:00.000Z	Jeah	debatem1	one sec
+2008-01-07T03:35:00.000Z	Jeah	debatem1	gutsy is in there, but 1) how do I run it, and 2) (how) do I let the installer know I"ve already run it?
+2008-01-07T03:37:00.000Z	Jeah	debatem1	sorry, but what would the [stuff] be?  :)
+2008-01-07T03:39:00.000Z	Jeah	debatem1	Sorry if I accidentally sounded like I know what I'm talking about :).  You've lost me.  Is there a recommended/standard set of arguments?  And what's my chroot?
+2008-01-07T03:42:00.000Z	Jeah	debatem1	I found http://www.debianhelp.org/node/8799 ... should I do what that says but substitute gutsy for etch?  Then use /target like it suggests? (there seems to be a /target directory with some stuff in it)  And what would be my mirror, or do I not need one?
+2008-01-07T03:43:00.000Z	Jeah	debatem1	sorry, but I'm a bit out of my element and need a little hand holding
+2008-01-07T03:47:00.000Z	Jeah	debatem1	I certainly don't mind you asking, but I don't know the answer.  I'm just going through the Xubuntu alternate install CD.  It seems to be going along rather well, but spits out the "Debootstrap Error: Failed to determine the codename for the release." error during the "Install the base system" step and won't let me get around it easily.
+2008-01-07T03:48:00.000Z	Jeah	debatem1	I md5'd it before I dd'd it.  Can I md5 it again now that it's been dd'd?  Can one md5 a partition?
+2008-01-07T03:52:00.000Z	Jeah	debatem1	Yeah, sorry, but it's a long story.  I'm trying to install to a laptop without a working CD drive.  This is at least most of it (if you read the guide I link to at the beginning): http://ubuntuforums.org/showthread.php?p=4083047#post4083047
+2008-01-07T03:52:00.000Z	Jeah	debatem1	It might take a while to read, especially since I see you're helping others, but I'd definitely appreciate if you coudl stick with me even if I have to wait around a lot.
+2008-01-07T03:59:00.000Z	Jeah	debatem1	Yeah, but I'm pretty sure I can't boot from it.  Fairly old laptop.  I'm "checking CD-ROM integrity" from the installer menu now, by the way.
+2008-01-07T04:03:00.000Z	Jeah	debatem1	Neither is there.  Crappy laptop vendor BIOS, too.  I looked into a lot of different installation options, and that one (though very involved) seemed like the best one for this machine, unfortunately.  The CD-ROM integrity check just finished: valid.  And I did check the md5sum after downloading but before copying to USB then dd'ing.
+2008-01-07T04:06:00.000Z	Jeah	debatem1	Yeah, but I'm looking at the bright side that I'm learning a lot :)
+2008-01-07T04:06:00.000Z	Jeah	debatem1	Is it still looking like something you can help with?
+2008-01-07T04:09:00.000Z	Jeah	debatem1	hang on, i might be onto something
+2008-01-07T04:09:00.000Z	Jeah	debatem1	I think the partition might have gotten umounted from /cdrom at some point.  I'm gonna try to remount it and continue.
+2008-01-07T04:12:00.000Z	Jeah	debatem1	Damn, didn't help.
+2008-01-07T04:14:00.000Z	Jeah	debatem1	yeah
+2008-01-07T04:16:00.000Z	Jeah	debatem1	is it possible that at this point I have to mount the partition into /target/media/cdrom0?  Is it possible that that's where debootstrap is looking for information?
+2008-01-07T04:24:00.000Z	Jeah	debatem1	Ok, mounting the partition in /target/media/cdrom0 didn't help.  And I'm afraid you're going to need to be more specific about making myself a working directory (where and called what?) and specifying my cdrom as the source for debootstrap (I probably need to be told the exact command I'm supposed to be typing.).
+2008-01-07T04:29:00.000Z	Jeah	debatem1	Ok, that would be the partition I'm trying to install on, right?  If so, it's /dev/sda2, but I'm not sure if/where it's mounted yet.
+2008-01-07T04:33:00.000Z	Jeah	debatem1	ok, so far the contents are cdrom etc lost+found media var
+2008-01-07T04:35:00.000Z	Jeah	debatem1	Dunno.  Maybe the installer got that far before it screwed up?
+2008-01-07T04:35:00.000Z	Jeah	debatem1	Those are the same things that are in /target, by the way.
+2008-01-07T04:36:00.000Z	Jeah	debatem1	Though it let me mount it in /install, so I take it that means it's not already mounted in /target.
+2008-01-07T04:38:00.000Z	Jeah	debatem1	If you want me to format again, that's fine.  But it should have already been formatted during this process since I resized that partition and everything.
+2008-01-07T04:40:00.000Z	Jeah	debatem1	So if something is there, it's probably because the installer already put it there.  If we have any hope of getting me back to the automated installer, we should at least consider leaving it.  Otherwise (planning on completely manual install, whatever that implies) I can go ahead and format.
+2008-01-07T04:41:00.000Z	Jeah	debatem1	The only thing that should have been on that drive before I got to it was the files my guide said to put there for booting GRUB, I think.
+2008-01-07T04:42:00.000Z	Jeah	debatem1	Ok, so fdisk or what to clean it?
+2008-01-07T04:45:00.000Z	Jeah	debatem1	How do I format?  Delete and remake?
+2008-01-07T04:46:00.000Z	Jeah	debatem1	Or would that not be destructive enough?
+2008-01-07T04:49:00.000Z	Jeah	debatem1	Sorry, but not explicit enough, unfortunately.  It's already made, so do I hit make again in fdisk?  Or delete then make?  Or do I not need to do either and go straight to the "mk<fs>"?  And what's the exact command for that?
+2008-01-07T04:53:00.000Z	Jeah	debatem1	mkfs: not found.
+2008-01-07T04:54:00.000Z	Jeah	debatem1	Nope.
+2008-01-07T04:55:00.000Z	Jeah	debatem1	I believe it's an ash shell if that's possibly a correct answer.
+2008-01-07T04:56:00.000Z	Jeah	debatem1	built into the install program
+2008-01-07T04:57:00.000Z	Jeah	debatem1	BusyBox v1.1.3 (Debian 1:1.1.3-5ubuntu7) Built-in shell (ash)
+2008-01-07T04:59:00.000Z	Jeah	debatem1	I'm not using debian.  It's the installer for Xubuntu (just Debian based).  I'm still in the installer, just getting a shell from it.
+2008-01-07T04:59:00.000Z	Jeah	debatem1	and I'm still partially installed, I think.
+2008-01-07T05:00:00.000Z	Jeah	debatem1	I'm still partially installed and mid-installer.  Once it gave the error I got a screen that gave me an option for a shell.  That's where I have been the whole time.
+2008-01-07T05:01:00.000Z	Jeah	debatem1	but once I exit the shell it brings me back to the installer
+2008-01-07T05:01:00.000Z	Jeah	debatem1	Sorry if I wasn't clear, but I don't always know exactly what I"m supposed to be communicating.
+2008-01-07T05:02:00.000Z	Jeah	debatem1	At this point I'm semi-smart-sounding about what I've already done (at least I think I am) but I have no idea what I'm doing now.  If you want me to walk you through the process, I'd probably just point to that thread again.  That's basically the whole thing, minus a little bit of detail.
+2008-01-07T05:05:00.000Z	Jeah	debatem1	Though you'd really probably have to read it all, if you didn't read it all already.  And once in the installer, it tried to detect the CD-ROM to load modules or something.  It couldn't, so I mounted the partition with the iso dd'd onto it into the /cdrom folder.  That got past that part.  But then when the installer kept going it ran into this other error when it was trying to do debootstrap (presumably by itself without my inte
+2008-01-07T05:06:00.000Z	Jeah	debatem1	Did you read that whole thread (and the guide linked to in the first post)?  If not, it's http://ubuntuforums.org/showthread.php?p=4083047#post4083047   You're earning serious karma points, by the way!  :)
+2008-01-07T05:07:00.000Z	Jeah	debatem1	actuallly, i've really gotta go for now, too.  Will you be online in a couple hours?
+2008-01-07T05:08:00.000Z	Jeah	debatem1	Ok, if you can't I totally understand.  Either way you've earned the good karma.  I'll check for you when I'm back and ready again.
+2008-01-07T05:08:00.000Z	Jeah	debatem1	But if you get a chance, read over that thread.
+2008-01-07T05:08:00.000Z	Jeah	debatem1	And thanks a ton, whether you are able to help more later or not.
+2008-01-07T05:10:00.000Z	Jeah	debatem1	Ok, thanks again.  Signing off for now...
+2008-01-07T09:33:00.000Z	Jeah	debatem1	Hello again.  You there and semi-free?
+2008-01-07T10:00:00.000Z	Jeah	debatem1	Let me know if/when you get back.
+2008-01-07T11:23:00.000Z	Jeah	debatem1	let me know if/when you get back
+2008-01-07T14:22:00.000Z	Jeah	debatem1	Hey, I did some more research and came up with some information that will probably be helpful.  Are you caught up on what I did?
+2008-01-07T14:28:00.000Z	Jeah	debatem1	Ok, let me know when you're ready.  And hopefully we'll get this figured out quick before the drinking really kicks in :)
+2008-01-07T14:31:00.000Z	Jeah	debatem1	I don't know what that is.  However, I think the links might reveal a fairly quick and easy solution.  It just will require knowledge I don't have at all.
+2008-01-07T14:32:00.000Z	Jeah	debatem1	Nevermind, found the peak comic.
+2008-01-07T14:33:00.000Z	Jeah	debatem1	Ok, well the key thing to note (I THINK) is that I mounted the pretending-to-be-a-CD partition manually (http://ubuntuforums.org/showthread.php?p=4083047#post4083047 - last post).  Here are a couple links: https://bugs.launchpad.net/ubuntu/+bug/60771 (Just the bug description is probably enough - I can't actually go through without doing the partitioning step since it's linear, and I don't think this is really the problem) and ht
+2008-01-07T14:35:00.000Z	Jeah	debatem1	?
+2008-01-07T14:35:00.000Z	Jeah	debatem1	oh, that won't be clear until the last link.  The first is just to show what I have been doing.
+2008-01-07T14:35:00.000Z	Jeah	debatem1	sorry about that
+2008-01-07T14:38:00.000Z	Jeah	debatem1	Uh...
+2008-01-07T14:39:00.000Z	Jeah	debatem1	still here?
+2008-01-07T14:39:00.000Z	Jeah	debatem1	I mean I'm still here.  Did I not respond to something?
+2008-01-07T14:41:00.000Z	Jeah	debatem1	Anyway, I don't think the suggestion about the partitioner in the second link is actually the problem.  It seems like the debian folks closed out the bug report a long time ago.  So I'm thinking it has more to do with the third link.
+2008-01-07T14:41:00.000Z	Jeah	debatem1	I just figured I'd send that one in the interest of thoroughness.
+2008-01-07T14:44:00.000Z	Jeah	debatem1	So once you read that third link, it looks like I have to find a way to make the installer mount the partition as the CD itself (something like it says in the note at the bottom of the guide I was using: https://help.ubuntu.com/community/Installation/FromHardDriveWithFloppies , but that exact solution didn't work for me) or I need to configure the debconf database myself like in that third link ( http://ubuntuforums.org/showthrea
+2008-01-07T14:45:00.000Z	Jeah	debatem1	The problem being that I don't know how to do either one of those.  Got any ideas?
+2008-01-07T14:46:00.000Z	Jeah	debatem1	And man, how you can help so many people at once is beyond me.  You must be schizo and dedicate one personality to each person! :)
+2008-01-07T14:51:00.000Z	Jeah	debatem1	Ok, but hang on one sec.  I want to try something else really quick.  I'm gonna try the note at the bottom of that guide, but do it before it tries to auto-detect.  I've always tried to do it afterwards and auto-detect again.  Maybe it gets wise to me.  I'll let you know in a sec when I'm ready to do the other way.
+2008-01-07T14:53:00.000Z	Jeah	debatem1	Ok, my way didn't work.  I'm rebooting.  I'll let you know when I've got it mounted, etc.
+2008-01-07T14:56:00.000Z	Jeah	debatem1	What does mounting it as a loop mean, anyway?  I mean, I'm aware that I'm doing it with the "-o loop", but what is the actual difference?
+2008-01-07T14:59:00.000Z	Jeah	debatem1	Ok.  And I've now mounted the "CD".  Should I continue through the installation until the error or should we do everything now?
+2008-01-07T15:06:00.000Z	Jeah	debatem1	Ok.  The "CD" is mounted as a loop.  Should I continue through the installation until the error or should we do everything now?
+2008-01-07T15:07:00.000Z	Jeah	debatem1	That will be the error.  Is it desirable to get the error before fixing the problem?
+2008-01-07T15:09:00.000Z	Jeah	debatem1	Ok, so I'll get as close as I can without getting the error.  I think I"ll have to stop before the partitioning step because the error is right after that, if I'm remembering correctly.
+2008-01-07T15:16:00.000Z	Jeah	debatem1	Ok, I was able to go a little past partitioning.  All that should be left is user and password setup before the error.  I'm in a terminal.
+2008-01-07T15:24:00.000Z	Jeah	debatem1	http://pastebin.ubuntu.com/3338/  Sorry it took so long.  I had to transcribe it manually, of course.
+2008-01-07T15:28:00.000Z	Jeah	debatem1	Huh?  Anyway, here's what I just said, if that's what you mean: http://pastebin.ubuntu.com/3338/  Sorry it took so long.  I had to transcribe it manually, of course.
+2008-01-07T15:30:00.000Z	Jeah	debatem1	What does "I missed your tell" mean?  Anyway, the "CD" is on line 20 of the pastebin.
+2008-01-07T15:31:00.000Z	Jeah	debatem1	I mounted it with "mount -t iso9660 -o loop /dev/sda3 /cdrom"
+2008-01-07T15:35:00.000Z	Jeah	debatem1	Ah, ok.  I'm an IRC idiot.  Ok, how do I "execute iso-scan postinst" and/or "set cdrom/codename etc. in the debconf database" now?
+2008-01-07T15:39:00.000Z	Jeah	debatem1	Because of manuel.klimek's post in this thread: http://ubuntuforums.org/showthread.php?t=277137 .  Since I mounted the CD manually instead of letting the installer find it (which it couldn't), he's saying "that if you mount the cd without the installer, the installer will not execute iso-scan postinst and will not set cdrom/codename etc. in the debconf database"
+2008-01-07T15:40:00.000Z	Jeah	debatem1	Hence the "Debootstrap Error: Failed to determine the codename for the release." if I don't do anything.
+2008-01-07T15:44:00.000Z	Jeah	debatem1	I think you're describing things I already did.  I'm actually half way through the installation already.  I booted from a bootable floppy, copied the boot files over, made a GRUB boot disk to boot from them into the ISO.  But then later the installer tries to find the CD-ROM for copying modules or something, but can't.  So I have to manually mount it to cdrom and then it can find it.  But according to that post, by manually mount
+2008-01-07T15:45:00.000Z	Jeah	debatem1	The fstab and mtab are only from the temporary filesystem that the install "CD" has set up, I believe.
+2008-01-07T15:53:00.000Z	Jeah	debatem1	I don't even know what that means. :)  But do you see what that' guy is getting at about the manual mounting?  The installer tries to auto-detect the drive and mount it.  When it mounts it, it also configures this stuff that makes debootstrap work properly.  It can't find mine, so I manually mount it, and then it can find it.  But if it's not the one that mounts it, the debootstrap stuff never gets set up.  So I need to find a wa
+2008-01-10T02:34:00.000Z	Jeah	debatem1	Hey, I solved my problem.

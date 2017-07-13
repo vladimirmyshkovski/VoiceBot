@@ -1,0 +1,93 @@
+2010-12-18T23:15:00.000Z	bonjoyee		that right..seems its a bug or rather a misprint....nothing serious..
+2010-12-18T23:16:00.000Z	bonjoyee		what does "sudo lsb_release -a" say?
+2010-12-18T23:17:00.000Z	bonjoyee		!ask | bencahill_
+2010-12-18T23:18:00.000Z	bencahill_	bonjoyee	I'm trying to install so that boot is on the hdd, and / is on the usb, got any ideas?
+2010-12-18T23:19:00.000Z	bonjoyee	bencahill_	if the installer lists them in the partitioning menu should be straight enough..
+2010-12-18T23:19:00.000Z	bencahill_	bonjoyee	I chose "Manual" at the first screen, and it lists it after that
+2010-12-18T23:20:00.000Z	bencahill_	bonjoyee	sdb, 2.1GB USB Flash Memory :)
+2010-12-18T23:21:00.000Z	bonjoyee	bencahill_	 so /boot need to be on a hdd partition and / on usb (sdb1) right?
+2010-12-18T23:21:00.000Z	bencahill_	bonjoyee	correct, because computer cannot boot to usb
+2010-12-18T23:21:00.000Z	bencahill_	bonjoyee	i assume that would work?
+2010-12-18T23:22:00.000Z	bencahill_	bonjoyee	on the hdd, right?
+2010-12-18T23:24:00.000Z	bencahill_	bonjoyee	well, ubuntu (cli) is currently installed on hdd (regular), but I want to re-install on usb for quietness (this is for a digital picture frame out of an old laptop)
+2010-12-18T23:24:00.000Z	bencahill_	bonjoyee	...so grub is installed, but obviously would have to be changed :)
+2010-12-18T23:25:00.000Z	bonjoyee	bencahill_	grub should be able to detect the new os...as its already installed once..
+2010-12-18T23:26:00.000Z	bencahill_	bonjoyee	ok :) , so what should my partitions be?
+2010-12-18T23:26:00.000Z	bonjoyee	bencahill_	also why not have the entire / on usb?
+2010-12-18T23:26:00.000Z	bencahill_	bonjoyee	computer cannot boot to usb :)
+2010-12-18T23:26:00.000Z	bonjoyee	bencahill_	please explain..what do u mean...
+2010-12-18T23:27:00.000Z	bencahill_	bonjoyee	the computer's BIOS does not have the capability of booting to a USB device
+2010-12-18T23:28:00.000Z	bonjoyee	bencahill_	 grub should take care of that...if  your bios detects the usb device...grub can take control later..
+2010-12-18T23:28:00.000Z	bencahill_	bonjoyee	BIOS does not know anything about USB, computer was built in 00-02ish :s
+2010-12-18T23:29:00.000Z	bencahill_	bonjoyee	i guess grub on hdd would be able to boot to usb?
+2010-12-18T23:29:00.000Z	bencahill_	bonjoyee	what do you mean by bios "detecting" the usb device?
+2010-12-18T23:30:00.000Z	bonjoyee	bencahill_	but u say grub is installed to hdd  and the installer detects the usb ...so i dont see any advantage/reason to have ../boot on hdd
+2010-12-18T23:30:00.000Z	bencahill_	bonjoyee	I'm not familiar with how /boot works, so I suppose that would work fine :)
+2010-12-18T23:31:00.000Z	bonjoyee	bencahill_	ill tell how i expect it to work..
+2010-12-18T23:31:00.000Z	bencahill_	bonjoyee	yes I see what you mean now :)
+2010-12-18T23:31:00.000Z	bencahill_	bonjoyee	ok...
+2010-12-18T23:32:00.000Z	bencahill_	bonjoyee	talking to yourself? :)
+2010-12-18T23:32:00.000Z	bencahill_	bonjoyee	i understand, makes perfect sense :)
+2010-12-18T23:33:00.000Z	bencahill_	bonjoyee	now how should I partition the USB drive for ubuntu?
+2010-12-18T23:34:00.000Z	bencahill_	bonjoyee	it's got some files on it, the don't matter
+2010-12-18T23:34:00.000Z	bonjoyee	bencahill_	no more partitions..just format sdb1 to a filesystem of your choice ext3/4 and use entire as /
+2010-12-18T23:34:00.000Z	bencahill_	bonjoyee	I don't need swap?
+2010-12-18T23:35:00.000Z	bencahill_	bonjoyee	128mb :P
+2010-12-18T23:35:00.000Z	bencahill_	bonjoyee	but all I'm doing is fbi
+2010-12-18T23:36:00.000Z	bencahill_	bonjoyee	right, so a 1.5GB primary ext4, and a 512MB swap
+2010-12-18T23:36:00.000Z	bencahill_	bonjoyee	current os (which I'm basically cloning) is 1.1gb
+2010-12-18T23:36:00.000Z	bonjoyee	bencahill_	 do u have swap on the hdd?
+2010-12-18T23:37:00.000Z	bencahill_	bonjoyee	yes, but if I used that, the hdd would probably spin up once in a while, right?
+2010-12-18T23:38:00.000Z	bencahill_	bonjoyee	current swap (determined by installer) is 359.7MB
+2010-12-18T23:39:00.000Z	bonjoyee	bencahill_	if ur ok with it use it..else create new ..
+2010-12-18T23:39:00.000Z	bencahill_	bonjoyee	as I said before, wouldn't using the hdd swap make the hdd spin up once in a while?
+2010-12-18T23:40:00.000Z	bonjoyee	bencahill_	yes it would...
+2010-12-18T23:40:00.000Z	bencahill_	bonjoyee	then I'd rather use the usb for swap
+2010-12-18T23:41:00.000Z	bencahill_	bonjoyee	yes, I think I'll go with that, as I am only running one program (fbi)
+2010-12-18T23:41:00.000Z	bencahill_	bonjoyee	ok, I'm trying it now...
+2010-12-18T23:43:00.000Z	bencahill_	bonjoyee	ok
+2010-12-18T23:44:00.000Z	bencahill_	bonjoyee	I'm setting up the partitions...doing the ext3 1.8GB right now, do I want the bootable flag "on"?
+2010-12-18T23:44:00.000Z	bencahill_	bonjoyee	ok, got it
+2010-12-18T23:45:00.000Z	bencahill_	bonjoyee	will do, do you think removing and re-inserting the usb drive will mess up the install?
+2010-12-18T23:45:00.000Z	bonjoyee	bencahill_	 not after starting the installer...
+2010-12-18T23:45:00.000Z	bencahill_	bonjoyee	ok, off to check the usb contents :)
+2010-12-18T23:46:00.000Z	bencahill_	bonjoyee	yeah, there wasn't anything on there I needed, always good to check, though :)
+2010-12-18T23:47:00.000Z	bencahill_	bonjoyee	I don't need any special mount options?
+2010-12-18T23:48:00.000Z	bencahill_	bonjoyee	ok
+2010-12-18T23:48:00.000Z	bencahill_	bonjoyee	I can't set the bootable flag as on, I suppose I will leave it off :s
+2010-12-18T23:49:00.000Z	bencahill_	bonjoyee	I'm setting up partitions on the usb :s
+2010-12-18T23:52:00.000Z	bencahill_	bonjoyee	ok, so this is my partition table for sdb (usb)
+2010-12-18T23:52:00.000Z	bencahill_	bonjoyee	#1 primary 1.8GB f ext2 /
+2010-12-18T23:53:00.000Z	bencahill_	bonjoyee	#5 logical 260.0 MB f swap swap
+2010-12-18T23:53:00.000Z	bencahill_	bonjoyee	look good?
+2010-12-18T23:53:00.000Z	bonjoyee	bencahill_	why ext2?
+2010-12-18T23:53:00.000Z	bencahill_	bonjoyee	above someone said that it would prolong usb life, do you think I should use ext4?
+2010-12-18T23:54:00.000Z	bencahill_	bonjoyee	ok, one sec
+2010-12-18T23:55:00.000Z	bencahill_	bonjoyee	ok, so now it's the same, except #1 is ext4 (obviously) :)
+2010-12-18T23:55:00.000Z	bencahill_	bonjoyee	doesn't really matter, as it will be a digital picture frame, just showing pics :)
+2010-12-18T23:56:00.000Z	bencahill_	bonjoyee	it almost seems ext2 would be better, since it doesn't journal?
+2010-12-18T23:57:00.000Z	bencahill_	bonjoyee	ok, I'm going to go ahead and use ext2, here we go!
+2010-12-18T23:58:00.000Z	bencahill_	bonjoyee	it says "The following partitions are going to be formatted:", and one in the list is the sda swap, is that fine?
+2010-12-18T23:59:00.000Z	bencahill_	bonjoyee	yes :-/
+2010-12-18T23:59:00.000Z	bencahill_	bonjoyee	ok
+2010-12-19T00:00:00.000Z	bencahill_	bonjoyee	ok, it's doing its thing :)
+2010-12-19T00:03:00.000Z	bencahill_	bonjoyee	it never asked what to install on, but it's installing now, wtf?
+2010-12-19T00:03:00.000Z	bencahill_	bonjoyee	I suppose it would be installing on the newly created partition? the usb light is flashing...
+2010-12-19T00:05:00.000Z	bencahill_	bonjoyee	or do I need to create the partitions again?
+2010-12-19T00:07:00.000Z	bencahill_	bonjoyee	ok, let me find the right cd :)
+2010-12-19T00:17:00.000Z	bencahill_	bonjoyee	ok, I've found the good cd, it's loading :)
+2010-12-19T00:36:00.000Z	bencahill_	bonjoyee	ok it's formatting and installing now :)
+2010-12-19T00:37:00.000Z	bencahill_	bonjoyee	off to lunch, bbl
+2010-12-19T00:37:00.000Z	bonjoyee	bencahill_	what part of the world?
+2010-12-19T01:16:00.000Z	bencahill_	bonjoyee	Texas, USA
+2010-12-19T01:16:00.000Z	bencahill_	bonjoyee	that cd was bad also :( , so I have burned another and am trying it (crossing fingers)
+2010-12-19T01:19:00.000Z	bonjoyee	bencahill_	good luck..
+2010-12-19T01:19:00.000Z	bencahill_	bonjoyee	:)
+2010-12-19T01:26:00.000Z	bencahill_	bonjoyee	ok, here it goes :-/
+2010-12-19T01:28:00.000Z	bencahill_	bonjoyee	appears to be working, but hung on libexpat1 :-\
+2010-12-19T01:29:00.000Z	bencahill_	bonjoyee	dammit, it said libexpat1 was corrupt--could this be a problem with the usb drive, rather than the cd, or do i just need to get better cds?
+2010-12-19T01:30:00.000Z	bonjoyee	bencahill_	did u do update-grub?
+2010-12-19T01:30:00.000Z	bencahill_	bonjoyee	I haven't gotten the new install to work yet, all 3 cds were corrupt (I knew one of them was already)
+2010-12-19T01:32:00.000Z	bencahill_	bonjoyee	is there any chance it could be an issue w/ my usb drive?
+2010-12-19T01:34:00.000Z	bonjoyee	bencahill_	cant deny it..
+2010-12-19T01:39:00.000Z	bencahill_	bonjoyee	well, I don't have any more cds or flash drives, I'll have to go get some more quality cds at the store... :)

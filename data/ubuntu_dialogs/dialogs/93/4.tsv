@@ -1,0 +1,93 @@
+2012-04-04T13:53:00.000Z	myhero		i dont know
+2012-04-04T13:53:00.000Z	myhero		i left it for some time n it got locked automatically
+2012-04-04T13:53:00.000Z	myhero		i downloaded some files imp ones
+2012-04-04T13:53:00.000Z	myhero		my office files
+2012-04-04T13:54:00.000Z	myhero		i dont know
+2012-04-04T13:54:00.000Z	myhero		its showing Other... username with a box to enter p/w
+2012-04-04T13:56:00.000Z	myhero		tell plz
+2012-04-04T13:56:00.000Z	myhero		its very sad that there is no solution coming
+2012-04-04T13:57:00.000Z	myhero		m leaving
+2012-04-04T13:57:00.000Z	myhero		bye all
+2012-04-04T13:57:00.000Z	ActionParsnip	myhero	if nobody knows, nobody can reply. Can they?
+2012-04-04T13:58:00.000Z	ActionParsnip	myhero	use your backups for your files
+2012-04-04T13:59:00.000Z	ActionParsnip	myhero	if you use CTRL+ALT+F1 you can login there and may help
+2012-04-04T14:01:00.000Z	ActionParsnip	myhero	try restarting your window manager
+2012-04-04T14:02:00.000Z	ActionParsnip	myhero	use TAB and ENTER to press the buttons on the UI
+2012-04-04T14:02:00.000Z	ActionParsnip	myhero	do you use a mouse or is it a touchpad?
+2012-04-04T14:03:00.000Z	ActionParsnip	myhero	use ALT+TAB to make the window active
+2012-04-04T14:04:00.000Z	ActionParsnip	myhero	which release are you using?
+2012-04-04T14:04:00.000Z	ActionParsnip	myhero	got a usb mouse?
+2012-04-04T14:04:00.000Z	ActionParsnip	myhero	does that click?
+2012-04-04T14:06:00.000Z	ActionParsnip	myhero	i've heard the WM stops accepting clicks. Compiz does it more than the others
+2012-04-04T16:24:00.000Z	ActionParsnip	myhero	what is the file name and where is it stored?
+2012-04-04T16:26:00.000Z	ActionParsnip	myhero	http://www.unixmen.com/vlc-2-0-twoflower-has-been-released-ppa-ubuntu-and-linuxmint/
+2012-04-04T16:26:00.000Z	ActionParsnip	myhero	ALWAYS try and find a PPA rather than that sort of thing, in Ubuntu it is rare to need to manually download apps
+2012-04-04T16:52:00.000Z	ActionParsnip	myhero	search for them
+2012-04-18T16:59:00.000Z	ActionParsnip	myhero	which release?
+2012-04-18T16:59:00.000Z	ActionParsnip	myhero	should be saved in the user's home folder like it does in an installed OS
+2012-04-18T17:02:00.000Z	ActionParsnip	myhero	~/.mozilla/firefox   same as in an installed OS
+2012-04-25T09:56:00.000Z	ActionParsnip	myhero	k3b is the default cD burner in KDE.
+2012-05-02T22:14:00.000Z	ActionParsnip	myhero	check /var/log/cups
+2012-05-31T03:25:00.000Z	ActionParsnip	myhero	http://ubuntuforums.org/showthread.php?t=820455
+2012-05-31T03:29:00.000Z	ActionParsnip	myhero	you can install each desktop on the same ubuntu, you will just choose the desktop at login
+2012-05-31T03:30:00.000Z	myhero	ActionParsnip	so that will be full setup iso installed on top of same ubuntu or it will be just DE ?
+2012-05-31T03:30:00.000Z	ActionParsnip	myhero	just the DE and the apps for the DE
+2012-05-31T03:31:00.000Z	ActionParsnip	myhero	at log in you will use the cog menu next to your name in lightdm and select the desktop to use
+2012-05-31T03:31:00.000Z	ActionParsnip	myhero	you could download the live CD ISOs and have grub2 boot them if you want, bit more effort
+2012-05-31T03:31:00.000Z	myhero	ActionParsnip	how to do it ?
+2012-05-31T03:32:00.000Z	ActionParsnip	myhero	not something I've done but I know grub2 can boot stored ISO files.
+2012-06-20T17:48:00.000Z	ActionParsnip	myhero	mounty is pretty sweet
+2012-06-20T17:49:00.000Z	myhero	ActionParsnip	ok
+2012-06-20T17:49:00.000Z	ActionParsnip	myhero	the OS can do it already using the mount command
+2012-06-20T17:49:00.000Z	myhero	ActionParsnip	how ?
+2012-06-20T17:49:00.000Z	ActionParsnip	myhero	sudo mkdir /media/iso; sudo mount -o loop /path/to/file.iso /media/iso
+2012-06-20T17:49:00.000Z	myhero	ActionParsnip	ok
+2012-06-20T17:49:00.000Z	ActionParsnip	myhero	obviously you can mount where you wish, but you get the idea
+2012-06-20T17:50:00.000Z	myhero	ActionParsnip	yea
+2012-06-20T17:51:00.000Z	ActionParsnip	myhero	better than windows that needs 3rd party apps :)
+2012-06-20T17:51:00.000Z	myhero	ActionParsnip	my motive was to mount the iso so system sees it as a cd or dvd n not just mount and open the iso...
+2012-06-20T17:51:00.000Z	ActionParsnip	myhero	the 2 are the same in ubuntu, what is your aim?
+2012-06-20T18:00:00.000Z	myhero	ActionParsnip	so any 3rd party app for mounting iso as virtual cd dvd
+2012-06-20T17:53:00.000Z	myhero	ActionParsnip	i was using aptoncd....and it creates iso...but when mounting the same iso....system mounts it as a virtual iso n not cd/dvd and aptoncd does'nt recognizes it and keeps on asking to insert cd/dvd.....
+2012-06-20T17:53:00.000Z	ActionParsnip	myhero	hmm, is there a tweak in config to use a folder?
+2012-06-20T17:54:00.000Z	myhero	ActionParsnip	what tweak ?
+2012-06-20T17:54:00.000Z	ActionParsnip	myhero	in aptoncd
+2012-06-20T17:54:00.000Z	myhero	ActionParsnip	yea....
+2012-06-20T17:55:00.000Z	myhero	ActionParsnip	but i have saved aptoncd deb files from apt cache and install from there
+2012-06-20T17:57:00.000Z	ActionParsnip	myhero	if you go into the packages folder in the ISO there is all the deb files and you can install from there
+2012-06-20T17:59:00.000Z	myhero	ActionParsnip	yea that i can but the problem is that it contains all the debs of all apps installed on system which i dont want......in aptoncd i can which apps ddebs i wanna install n i can install that app only with its dependencies which also cannot be seen in iso folder
+2012-06-20T18:00:00.000Z	ActionParsnip	myhero	i guess, if there isn't an option to use the ISO file, or it can't be made to use a folder of the mounted ISo then I'm not sure
+2012-06-20T18:01:00.000Z	ActionParsnip	myhero	https://answers.launchpad.net/aptoncd/+question/97721
+2012-06-20T18:06:00.000Z	myhero	ActionParsnip	so i only need to add that iso source to the source list......????? n what do i give when i give that source....deb or iso file:///....../......iso
+2012-06-20T18:09:00.000Z	myhero	ActionParsnip	u there ??
+2012-06-20T18:09:00.000Z	ActionParsnip	myhero	not sure of the syntax, but i'm sure its possible
+2012-06-20T18:10:00.000Z	myhero	ActionParsnip	kk
+2012-06-20T18:10:00.000Z	ActionParsnip	myhero	http://linuxconfig.org/add-iso-image-to-apt-sourceslist
+2012-06-20T18:11:00.000Z	ActionParsnip	myhero	mount the ISO, then add the mount point in sources.list
+2012-06-20T18:18:00.000Z	myhero	ActionParsnip	ok..thnx
+2012-07-17T02:45:00.000Z	myhero	ActionParsnip	and whether my system is updated or not but why is it not being showed in software center
+2012-09-27T13:50:00.000Z	ActionParsnip	myhero	could install with minimal overnight then :)
+2012-09-27T13:51:00.000Z	myhero	ActionParsnip	yes
+2012-09-27T13:51:00.000Z	ActionParsnip	myhero	uses less data
+2012-09-27T13:52:00.000Z	ActionParsnip	myhero	there is a ppa for firefox versions
+2012-09-27T13:53:00.000Z	ActionParsnip	myhero	what is the output of: lsb_release -sc
+2012-09-27T13:53:00.000Z	myhero	ActionParsnip	ok....but currently i have source in my hand....sould u help with it ??
+2012-09-27T13:53:00.000Z	myhero	ActionParsnip	Ubuntu 12.04 LTS
+2012-09-27T13:54:00.000Z	ActionParsnip	myhero	you will need to download the compiler which is a tonne more data than the PPA method, the PPA is also easier to use
+2012-09-27T13:55:00.000Z	ActionParsnip	myhero	and the output of:  uname -a
+2012-09-27T13:56:00.000Z	ActionParsnip	myhero	firefox 15 is default in Precise. just run:  sudo apt-get update; sudo apt-get install firefox
+2012-09-27T13:56:00.000Z	myhero	ActionParsnip	Linux ubuntu 3.2.0-23-generic #36-Ubuntu SMP Tue Apr 10 20:39:51 UTC 2012 x86_64 x86_64 x86_64 GNU/Linux
+2012-09-27T13:56:00.000Z	ActionParsnip	myhero	can you give the output of: lsb_release -sc    please
+2012-09-27T13:57:00.000Z	ActionParsnip	myhero	I found a ppa for firefox 16 if you like....
+2012-09-27T13:57:00.000Z	myhero	ActionParsnip	ubuntu@ubuntu:~$ lsb_release -sd Ubuntu 12.04 LTS
+2012-09-27T13:57:00.000Z	ActionParsnip	myhero	is ver 16 ok?
+2012-09-27T13:57:00.000Z	myhero	ActionParsnip	is it final stable or beta ?? betas have lots of holes......
+2012-09-27T13:58:00.000Z	ActionParsnip	myhero	firefox 15 is in Precise by default
+2012-09-27T13:58:00.000Z	ActionParsnip	myhero	fidel hence the update/install command I gave ;)
+2012-09-27T13:59:00.000Z	ActionParsnip	myhero	run full updates and you wil get firefox 15
+2012-09-27T13:59:00.000Z	myhero	ActionParsnip	in ubuntu 12.04 it has firefox v11 and  have the ubuntu 12.04.1 image which i dd'ed to usb and ran it live but it showed firefox v14 and not v15
+2012-09-27T14:01:00.000Z	ActionParsnip	myhero	you don't need the ISO, you can upgrade using the web. If you edit /etc/apt/sources.list  you can add the CD as a repo, or use some other commands etc
+2012-09-27T14:01:00.000Z	myhero	ActionParsnip	that will be good.....how to do it ??
+2012-09-27T14:02:00.000Z	ActionParsnip	myhero	there are guides online galore
+2012-09-27T14:02:00.000Z	ActionParsnip	myhero	https://help.ubuntu.com/community/Repositories/Ubuntu
+2012-09-27T14:06:00.000Z	ActionParsnip	myhero	there is an option under 'options' in the top left

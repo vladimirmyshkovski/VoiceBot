@@ -1,0 +1,94 @@
+2007-11-29T13:52:00.000Z	neopsyche		*again
+2007-11-29T13:52:00.000Z	Varka	neopsyche	wait
+2007-11-29T12:38:00.000Z	Varka	neopsyche	look at /var/log/Xorg.0.log to figure out what xorg does
+2007-11-29T12:38:00.000Z	neopsyche	Varka	Even if i looked.. i dont know if i am savvy enough to be able to decipher the problem
+2007-11-29T12:40:00.000Z	Varka	neopsyche	just paste you xorg.log with a nopasteservice here and please stop repeating your question all the time
+2007-11-29T12:41:00.000Z	neopsyche	Varka	it says vsync / hsync out of range.
+2007-11-29T12:41:00.000Z	Varka	neopsyche	then your monitorsettings may be incorrect
+2007-11-29T12:42:00.000Z	Varka	neopsyche	put the right values vor horizsync and vertrefresh in you monitor section of xorg.conf
+2007-11-29T12:42:00.000Z	neopsyche	Varka	my monitor takes a max setting of 60hz v and 47.7hz H at 1280x1024 optimally
+2007-11-29T12:43:00.000Z	Varka	neopsyche	please tell me your monitors vendor and model
+2007-11-29T12:44:00.000Z	neopsyche	Varka	AVidAV - model 19 inch LCD
+2007-11-29T12:45:00.000Z	Varka	neopsyche	there are several 19 inch avidav models, please be more precise
+2007-11-29T12:46:00.000Z	Varka	neopsyche	look at the back of your monitor, there should be a modelnumber or something
+2007-11-29T12:46:00.000Z	neopsyche	Varka	I appreciate the help.. I need to find the manual.. also.. not to be rude.. but how does this help when i know the monitor can in fact use the resolution since it worked with nvidia?
+2007-11-29T12:46:00.000Z	Varka	neopsyche	just because you have to be sure to put in the correct ranges for your monitor
+2007-11-29T12:47:00.000Z	neopsyche	Varka	it says 19" TFT LCD monitor
+2007-11-29T12:48:00.000Z	Varka	neopsyche	no, there has to be a modelnumber on it, something like M1931DF
+2007-11-29T12:48:00.000Z	neopsyche	Varka	no.. i only see a serial number
+2007-11-29T12:49:00.000Z	neopsyche	Varka	I see a Serial Number, a P/N and a number in front of P/N
+2007-11-29T12:50:00.000Z	Varka	neopsyche	just paste what you see
+2007-11-29T12:50:00.000Z	neopsyche	Varka	none of which say Model number
+2007-11-29T12:51:00.000Z	Varka	neopsyche	nothing starting wi M19...?
+2007-11-29T12:51:00.000Z	neopsyche	Varka	no .. let my try find the manual
+2007-11-29T12:52:00.000Z	Varka	neopsyche	can you identify your model here? http://images.google.de/images?svnum=100&um=1&hl=de&safe=off&q=avidav+19&btnG=Bilder-Suche
+2007-11-29T12:53:00.000Z	neopsyche	Varka	http://images.google.de/imgres?imgurl=http://www.globtech.de/images/Monitor_tft/19AVIDAV1941DF.jpg&imgrefurl=http://www.globtech.de/index.php%3FcPath%3D54_2894%26osCsid%3D45ab491ee44563af78ace612514fcb05&h=200&w=200&sz=5&hl=de&start=2&um=1&tbnid=ponIM-I570NiwM:&tbnh=104&tbnw=104&prev=/images%3Fq%3Davidav%2B19%26svnum%3D100%26um%3D1%26hl%3Dde%26safe%3Doff%26sa%3DG Thats the one
+2007-11-29T12:54:00.000Z	Varka	neopsyche	you are sure?
+2007-11-29T12:55:00.000Z	neopsyche	Varka	no way to be sure.. unless I find the manual .. because it seems there are two versions that look the same as that.. whatever the differences may be im not sure.. however.. that is how my monitor looks ;-)
+2007-11-29T12:55:00.000Z	Varka	neopsyche	yeah saw that, well we have to be sure using the right model to find the right values
+2007-11-29T12:56:00.000Z	neopsyche	Varka	hangon!
+2007-11-29T12:56:00.000Z	neopsyche	Varka	I found the box.
+2007-11-29T12:56:00.000Z	neopsyche	Varka	it says M1941DF ;-)
+2007-11-29T12:56:00.000Z	Varka	neopsyche	aaaah :)
+2007-11-29T12:57:00.000Z	neopsyche	Varka	and another sticker that says.. Model Name: M1941DF and underneath COLOR: Black / Silver
+2007-11-29T12:58:00.000Z	neopsyche	Varka	where do you go to find out the model refresh rate etc?
+2007-11-29T12:58:00.000Z	Varka	neopsyche	vendorpage, but its quite hard to find, seems it is just a noname branding
+2007-11-29T12:59:00.000Z	neopsyche	Varka	it is made by company JETWAY
+2007-11-29T12:59:00.000Z	Varka	neopsyche	ah, k
+2007-11-29T12:59:00.000Z	neopsyche	Varka	http://www.jetway.com.tw/jetway/list.asp?cd=lcd&menuname=LCD%20Monitors
+2007-11-29T13:00:00.000Z	neopsyche	Varka	there seems to be a manual on there
+2007-11-29T13:01:00.000Z	neopsyche	Varka	LOL! after clicking the link I am greeted with... Sorry,Have no down for you now..
+2007-11-29T13:01:00.000Z	Varka	neopsyche	ok, the values are horizsync: 30-79 and vertrefresh: 56-75
+2007-11-29T13:01:00.000Z	neopsyche	Varka	Thanks! Just out of interest.. how di dyou find that?
+2007-11-29T13:02:00.000Z	Varka	neopsyche	just looked after the specifications clicking on your model on the page you gave me
+2007-11-29T13:02:00.000Z	neopsyche	Varka	link?
+2007-11-29T13:03:00.000Z	Varka	neopsyche	your link
+2007-11-29T13:03:00.000Z	neopsyche	Varka	but theres no manual?
+2007-11-29T13:03:00.000Z	Varka	neopsyche	http://www.jetway.com.tw/jetway/list.asp?cd=lcd&menuname=LCD%20Monitors#
+2007-11-29T13:03:00.000Z	Varka	neopsyche	no need for it, the values are shown there
+2007-11-29T13:03:00.000Z	neopsyche	Varka	but what did you click on after that?
+2007-11-29T13:03:00.000Z	Varka	neopsyche	just on your model
+2007-11-29T13:04:00.000Z	neopsyche	Varka	M1941D>
+2007-11-29T13:04:00.000Z	Varka	neopsyche	Frequency  FH: 30 ~ 79Hz / FV: 56 ~ 75KHz  <- thats what specifications page sais
+2007-11-29T13:04:00.000Z	Varka	neopsyche	yes
+2007-11-29T13:05:00.000Z	neopsyche	Varka	strange.. for me it says "have no down for you" lol!~
+2007-11-29T13:05:00.000Z	Varka	neopsyche	dont klick on the downloadbutton but on the modelname above
+2007-11-29T13:06:00.000Z	neopsyche	Varka	Aaaa... You are silled in the ways of the web Luke.. Obi-wan has taught you well ;-)
+2007-11-29T13:06:00.000Z	neopsyche	Varka	*Skilled
+2007-11-29T13:06:00.000Z	Varka	neopsyche	so, to be sure everything is in place please nopaste me your xorg.conf
+2007-11-29T13:06:00.000Z	neopsyche	Varka	thanks man.. thats great :-)
+2007-11-29T13:26:00.000Z	Varka	neopsyche	i offered you to inspect you xorg.conf before restarting ...
+2007-11-29T13:27:00.000Z	Varka	neopsyche	just paste you xorg.conf here http://paste.ubuntu-nl.org
+2007-11-29T13:33:00.000Z	neopsyche	Varka	ok.. sorry man.. where do I go to get the xorg output again?
+2007-11-29T13:33:00.000Z	Varka	neopsyche	http://paste.ubuntu-nl.org
+2007-11-29T13:33:00.000Z	neopsyche	Varka	yes but output in bin/?
+2007-11-29T13:34:00.000Z	Varka	neopsyche	what?
+2007-11-29T13:34:00.000Z	neopsyche	Varka	where is the file that has the output?
+2007-11-29T13:34:00.000Z	Varka	neopsyche	there is no file, you should give me the link the pasteservice produces after adding your stuff
+2007-11-29T13:34:00.000Z	neopsyche	Varka	where do i find the xorg.log
+2007-11-29T13:35:00.000Z	Varka	neopsyche	/var/log/Xorg.0.log
+2007-11-29T13:40:00.000Z	Varka	neopsyche	ok, but please nopaste me your /etc/X11/xorg.conf also
+2007-11-29T13:46:00.000Z	Varka	neopsyche	delete line 67 completely an put in the right values for horizsync and vertrefresh as we figured them out on the jetway page in lines 73 and 74. it should read: HorizSync 30-79 and VertRefresh: 56-75
+2007-11-29T13:47:00.000Z	neopsyche	Varka	I added those during the xorg setup a few times.. but it still gives me the out of range error on my monitor when i refresh xorg?!
+2007-11-29T13:50:00.000Z	neopsyche	Varka	any idea why?
+2007-11-29T13:52:00.000Z	neopsyche	Varka	should i just try it agian?
+2007-11-29T14:04:00.000Z	Varka	neopsyche	http://paste.ubuntu-nl.org/46207/ <- use this xorg.conf and if it fails again, nopaste the Xorg.0.log of the failed start.
+2007-11-29T14:05:00.000Z	Varka	neopsyche	if that all doesnt help, try to change the driver from "intel" to "i810"
+2007-11-29T14:07:00.000Z	Varka	neopsyche	just as a hint, to copy and paste without the linenumber use this link http://paste.ubuntu-nl.org/46207/plain/
+2007-11-29T14:07:00.000Z	neopsyche	Varka	got it .. thanks :-)
+2007-11-29T14:08:00.000Z	neopsyche	Varka	what did you change?
+2007-11-29T14:08:00.000Z	neopsyche	Varka	it says i dont have permissoin to change xorg.conf
+2007-11-29T14:09:00.000Z	Varka	neopsyche	remove the UseFBDev option, as it is unused by the driver, added noDCC option to tell the driver no to ask the monitor what refreshrates to use but to use the ones provided in the monitorsection in horizsync and vertrefresh
+2007-11-29T14:09:00.000Z	Varka	neopsyche	gksudo gedit /etc/X11/xorg.conf or on cli sudo nano /etc/X11/xorg.conf
+2007-11-29T14:11:00.000Z	neopsyche	Varka	why gksudo and not just sudo?
+2007-11-29T14:11:00.000Z	Varka	neopsyche	for graphical programs always use gksudo as it can come to problems with the environment using just sudo with them
+2007-11-29T14:13:00.000Z	neopsyche	Varka	ok, now control alt backspace?
+2007-11-29T14:13:00.000Z	Varka	neopsyche	yes
+2007-11-29T14:20:00.000Z	neopsyche	Varka	Thanks .. :-) It diddnt work at first.. but then I used nano on command to change Intel to i810 and now its in the top resolution !@ :-) Thanks man!
+2007-11-29T14:20:00.000Z	Varka	neopsyche	no problem
+2007-11-29T14:21:00.000Z	neopsyche	Varka	are you a sysadmin?
+2007-11-29T14:22:00.000Z	Varka	neopsyche	depends
+2007-11-29T14:22:00.000Z	neopsyche	Varka	just wondering.. because its really nice of you to just hangout here and help people
+2007-11-29T14:22:00.000Z	Varka	neopsyche	just like a whole bunch of other helpers around :)
+2007-11-29T14:23:00.000Z	neopsyche	Varka	yeah.. really cool
+2007-11-29T14:25:00.000Z	Varka	neopsyche	i dont use wammu sry

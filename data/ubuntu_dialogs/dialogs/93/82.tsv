@@ -1,0 +1,93 @@
+2005-10-12T12:33:00.000Z	tonyyarusso		Does anyone have a suggestion for a media player for linux that can handle aacPlus, mp3, mpg, and DVDs?
+2005-10-12T12:34:00.000Z	Seveas	tonyyarusso	totem-xine :)
+2005-10-12T12:35:00.000Z	tonyyarusso	Seveas	Would that be different from "Totem Movie Player", which shipped with Ubuntu, or is it an add-on?
+2005-10-12T12:38:00.000Z	tonyyarusso	Seveas	Do you know whether totem-xine will handle aacPlus, or just the others?
+2005-12-19T16:25:00.000Z	Seveas	tonyyarusso	sudo adduser $USER nvram
+2005-12-19T16:26:00.000Z	tonyyarusso	Seveas	That should do it; thanks.  For future reference though relating to my first thought, why would something revert like that?
+2005-12-19T16:26:00.000Z	Seveas	tonyyarusso	/dev/is dynamically created on boot by udev
+2005-12-19T16:26:00.000Z	tonyyarusso	Seveas	Ah, that would do it.
+2005-12-21T17:29:00.000Z	Seveas	tonyyarusso	tmpfs is a filesystem in memory, so it occupies a part of your memory
+2005-12-21T17:32:00.000Z	tonyyarusso	Seveas	Ah.
+2005-12-28T14:50:00.000Z	tonyyarusso	Seveas	Do you know how to make suggestions to the development team?  (Sorry for the personal ask.)
+2005-12-28T14:50:00.000Z	Seveas	tonyyarusso	that depends on the suggestion, feel free to PM me
+2006-01-07T15:43:00.000Z	tonyyarusso	Seveas	Do you have to manually remove those all the time, or are they set to time out eventually?
+2006-01-07T15:43:00.000Z	Seveas	tonyyarusso	manually
+2006-01-08T10:46:00.000Z	tonyyarusso	Seveas	do you know?
+2006-01-16T13:30:00.000Z	tonyyarusso	Seveas	I see your launchpad page says you wrote the FreeNX wiki page, do you know the answer to where in the menus nxclient would be?
+2006-01-16T13:31:00.000Z	Seveas	tonyyarusso	applications -> internet
+2006-01-16T13:31:00.000Z	tonyyarusso	Seveas	Hmm, not seeing it there.
+2006-01-16T13:31:00.000Z	Seveas	tonyyarusso	did you just install it?
+2006-01-16T13:31:00.000Z	tonyyarusso	Seveas	Yeah.
+2006-01-16T13:32:00.000Z	Seveas	tonyyarusso	pkill -HUP gnome-panel
+2006-01-16T13:32:00.000Z	tonyyarusso	Seveas	Beautiful.  (If a little disconcerting for a fraction of a second when things disappear.)
+2006-01-16T13:33:00.000Z	tonyyarusso	Seveas	Shouldn't that little trick be included on the wiki page?
+2006-01-16T13:36:00.000Z	Seveas	tonyyarusso	that you cryptographically signed the code of conduct
+2006-01-25T17:32:00.000Z	tonyyarusso	Seveas	Who decides when we should call it morning in here?
+2006-01-25T17:32:00.000Z	Seveas	tonyyarusso	no one, it's just that goodmorning sounds good ;)
+2006-01-25T17:33:00.000Z	tonyyarusso	Seveas	That's true.  I suppose I wouldn't mind being wished a good day at dinnertime either.
+2006-02-20T11:22:00.000Z	tonyyarusso	Seveas	ping
+2006-02-24T16:22:00.000Z	tonyyarusso	Seveas	How do you do that little arrow?
+2006-02-24T16:23:00.000Z	Seveas	tonyyarusso	Unicode 
+2006-02-24T16:23:00.000Z	tonyyarusso	Seveas	With what sort of input mechanism to accomplish that?  I'd like to do that sort of thing myself, and am curious what the steps are.
+2006-02-24T16:23:00.000Z	Seveas	tonyyarusso	x-chat autoreplace 
+2006-02-24T16:24:00.000Z	tonyyarusso	Seveas	Ah, okay.  Any additional things that need to be installed?
+2006-02-24T16:25:00.000Z	Seveas	tonyyarusso	gucharmap to pick characters 
+2006-02-24T16:26:00.000Z	tonyyarusso	Seveas	Okay, will look into that.
+2006-03-12T17:10:00.000Z	Seveas	tonyyarusso	root404 is the registered nickname of an abuser...
+2006-03-12T17:10:00.000Z	tonyyarusso	Seveas	Oh.
+2006-03-15T16:31:00.000Z	Seveas	tonyyarusso	don't be too certain about the date - sabdfl wants to postpone
+2006-03-15T16:31:00.000Z	tonyyarusso	Seveas	Oh yeah?  I hadn't heard anything about that.  What's up?
+2006-03-15T16:32:00.000Z	tonyyarusso	Seveas	If it's after the 29th I have to wait for ShipIt, b/c that's when I lose my school internet and go home to dialup.
+2006-03-15T16:39:00.000Z	tonyyarusso	Seveas	Do you have more info about what you said before?  I'm curious now.
+2006-03-15T16:40:00.000Z	Seveas	tonyyarusso	check the mailinglist archive for ubuntu-devel-announce
+2006-03-15T16:41:00.000Z	tonyyarusso	Seveas	Okay, where will I find that archive?
+2006-03-15T16:41:00.000Z	Seveas	tonyyarusso	https://lists.ubuntu.com/archives/ubuntu-art/2006-March/000734.html
+2006-03-15T16:41:00.000Z	tonyyarusso	Seveas	Thanks.
+2006-04-01T17:20:00.000Z	tonyyarusso	Seveas	Understood, but what is the appropriate procedure for that anyway?
+2006-04-01T17:20:00.000Z	Seveas	tonyyarusso	just ask around
+2006-04-01T17:20:00.000Z	Seveas	tonyyarusso	and point people to official mirrors
+2006-04-07T11:44:00.000Z	tonyyarusso	Seveas	I believe you were the one who informed me this was a known bug before; do you have a bug tracking URL for the problem with console switching with fglrx?
+2006-04-07T11:45:00.000Z	Seveas	tonyyarusso	sec
+2006-04-07T11:45:00.000Z	Seveas	tonyyarusso	bug 25701
+2006-04-07T11:45:00.000Z	tonyyarusso	Seveas	Thanks.
+2006-04-07T11:52:00.000Z	tonyyarusso	Seveas	Hmm, those have similarities to my issue, but aren't exactly the same.  I'm encouraged by "Fixed in Dapper" at the bottom of a linked bug though.
+2006-04-08T15:15:00.000Z	tonyyarusso	Seveas	Did you make the bot forget Norway in your cleaning the other day?
+2006-04-18T11:37:00.000Z	tonyyarusso	Seveas	'bout time there pal  ;)
+2006-04-19T11:30:00.000Z	Seveas	tonyyarusso	?
+2006-04-19T11:30:00.000Z	tonyyarusso	Seveas	Taken care of.
+2006-04-22T05:00:00.000Z	tonyyarusso	Seveas	In that export command, what's the significance of 'CC'?  Custom compiler perhaps?
+2006-04-24T08:54:00.000Z	Seveas	tonyyarusso	one sub version to be exact
+2006-04-24T08:58:00.000Z	tonyyarusso	Seveas	Ah, thanks for the correction.
+2006-04-25T10:30:00.000Z	tonyyarusso	Seveas	Ah, I'm lagged by 1.05 ;)
+2006-04-25T10:46:00.000Z	tonyyarusso	Seveas	Very nice.
+2006-04-25T10:46:00.000Z	tonyyarusso	Seveas	Did you just write that in the last few minutes?
+2006-04-25T10:47:00.000Z	Seveas	tonyyarusso	s/few minutes/minute/
+2006-04-25T10:47:00.000Z	tonyyarusso	Seveas	I'm impressed.
+2006-11-24T17:04:00.000Z	tonyyarusso	Seveas	Is it theoretically possible to make something that would distribute all of your processing?
+2006-11-24T17:04:00.000Z	Seveas	tonyyarusso	yes
+2006-11-24T17:05:00.000Z	tonyyarusso	Seveas	Cool.  /me hopes someone does, and packages it for us :)
+2006-11-26T07:00:00.000Z	Seveas	tonyyarusso	yes
+2006-11-26T07:01:00.000Z	Seveas	tonyyarusso	you can set something in the .htaccess file, read apache docs for details (read: I can't remember the details ;))
+2006-11-26T07:01:00.000Z	tonyyarusso	Seveas	As long as I know where to look.  Thanks.
+2006-11-26T07:02:00.000Z	Seveas	tonyyarusso	v
+2006-11-26T07:02:00.000Z	Seveas	tonyyarusso	http://httpd.apache.org/docs/2.2/mod/mod_autoindex.html
+2006-11-26T07:16:00.000Z	tonyyarusso	Seveas	Should this take more than just creating a .htaccess for the directory and putting the line IndexOptions NameWidth=* in it?
+2006-11-26T07:16:00.000Z	Seveas	tonyyarusso	.htaccess files should be enabled (iirc the default in Ubuntu)
+2006-11-26T07:17:00.000Z	tonyyarusso	Seveas	Hrm...Doesn't seem to be doing it.  I must be missing something else.
+2006-11-26T07:17:00.000Z	Seveas	tonyyarusso	hmm :/
+2006-11-26T07:19:00.000Z	Seveas	tonyyarusso	do you get a 500 server error?
+2006-11-26T07:20:00.000Z	tonyyarusso	Seveas	no, page shows up with the default width names still
+2006-11-26T07:20:00.000Z	Seveas	tonyyarusso	hmmmmmmm
+2006-11-26T07:22:00.000Z	Seveas	tonyyarusso	can the apache user read the .htaccess file?
+2006-11-26T07:23:00.000Z	tonyyarusso	Seveas	Aha!  I think you're onto something.
+2006-11-26T07:23:00.000Z	tonyyarusso	Seveas	www-data is the user, right?
+2006-11-26T07:24:00.000Z	Seveas	tonyyarusso	yes
+2006-11-26T07:25:00.000Z	tonyyarusso	Seveas	Still nothing.  Grr.
+2006-11-26T07:26:00.000Z	Seveas	tonyyarusso	check the AllowOverride setting for the dir (although that should trigger a 500 error)
+2006-11-26T07:28:00.000Z	tonyyarusso	Seveas	Okay, meanwhile, in /var/log/apache2/error.log, "[error]  [client 192.168.1.1]  client denied by server configuration: /var/www/.htaccess"  - the .htaccess I made is in a subdir.
+2006-11-26T07:28:00.000Z	tonyyarusso	Seveas	Where will that be?  Main apache config file?
+2006-11-26T07:35:00.000Z	tonyyarusso	Seveas	'grep -R AllowOverride /etc/apache2/*' - almost all results say AllowOverride None
+2006-11-26T07:48:00.000Z	tonyyarusso	Seveas	I'm going to grab a shower, but let me know if you have any brilliant ideas.
+2006-11-26T08:19:00.000Z	tonyyarusso	Seveas	Got it!  It was the AllowOverride - in the site-specific config.
+2006-11-26T08:19:00.000Z	Seveas	tonyyarusso	nice
+2008-04-24T02:53:00.000Z	Seveas	tonyyarusso	$HOME and $USER to be precise. And being a loginshell (so sourcing ~/.bash_login insteadof ~/.bashrc)

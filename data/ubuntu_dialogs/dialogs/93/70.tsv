@@ -1,0 +1,93 @@
+2008-11-05T19:21:00.000Z	zamba		i want to run both php4 and php5 on a server.. how can i do this in ubuntu? i see no packages for php4 in the repositories
+2008-11-05T19:21:00.000Z	ikonia	zamba	not really a good idea
+2008-11-05T19:21:00.000Z	ikonia	zamba	apache only really likes one version loaded, it's quite an admin to seperate
+2008-11-18T16:53:00.000Z	zamba	ikonia	there is? cool :)
+2008-11-18T16:53:00.000Z	ikonia	zamba	sorry, that wasn't for you
+2008-11-18T16:53:00.000Z	zamba	ikonia	i know :)
+2009-01-05T18:29:00.000Z	ikonia	zamba	per system
+2009-01-05T18:29:00.000Z	zamba	ikonia	who can install them?
+2009-01-05T18:30:00.000Z	ikonia	zamba	administrator users
+2009-01-05T18:41:00.000Z	zamba	ikonia	hm.. non-administrator users were able to add/remove printers here
+2009-01-05T18:41:00.000Z	ikonia	zamba	how
+2009-01-05T18:41:00.000Z	zamba	ikonia	have no idea
+2009-01-05T18:42:00.000Z	ikonia	zamba	they will be able to connect to existing printers, but they won't be able to add a new printer to the system
+2009-01-05T18:42:00.000Z	zamba	ikonia	through system - administration - printers
+2009-01-05T18:42:00.000Z	ikonia	zamba	ahhh, thats fine, don't worry about that
+2009-01-05T18:42:00.000Z	zamba	ikonia	well.. they were able to remove the printers used by all the other users of the system as well
+2009-01-05T18:43:00.000Z	ikonia	zamba	sorry, thats probably a bad "definition" on my part, that is a user configuring a printer for their use, not adding it to the system
+2009-01-05T18:43:00.000Z	ikonia	zamba	look if the user doing it is in the "admin" group
+2009-01-05T18:43:00.000Z	zamba	ikonia	i think i found the error
+2009-01-05T18:43:00.000Z	zamba	ikonia	the user was in the lpadmin group
+2009-01-05T18:43:00.000Z	ikonia	zamba	perfect
+2009-01-05T18:43:00.000Z	zamba	ikonia	going to retry now
+2009-10-18T22:23:00.000Z	zamba	ikonia	and what i can do about it
+2009-10-18T22:20:00.000Z	ikonia	zamba	best to just ask the question
+2009-10-18T22:20:00.000Z	zamba	ikonia	well.. that's just the question.. because it looks like it's the most evil motherboard out there..
+2009-10-18T22:20:00.000Z	ikonia	zamba	do you have a question about it relevant to ubuntu
+2009-10-18T22:21:00.000Z	zamba	ikonia	yeah.. why it all of a sudden causes segmentation faults all over the place
+2009-10-18T22:21:00.000Z	ikonia	zamba	why do you think that's the motherboard ?
+2009-10-18T22:22:00.000Z	zamba	ikonia	because a google search for A7N8X reveals some previous issues about it
+2009-10-18T22:22:00.000Z	ikonia	zamba	so what's your actual support question
+2009-10-18T22:23:00.000Z	zamba	ikonia	why i'm getting seg faults?
+2009-10-18T22:23:00.000Z	ikonia	zamba	what applications are seg faulting ?
+2009-10-18T22:23:00.000Z	zamba	ikonia	dbus
+2009-10-18T22:23:00.000Z	ikonia	zamba	really, anything else or pretty much dbus
+2009-10-18T22:23:00.000Z	zamba	ikonia	Oct 18 17:30:01 tahiti kernel: [265706.499928] dbus-daemon[2106]: segfault at 1 ip b8e39cd8 sp bf8e90b4 error 6
+2009-10-18T22:24:00.000Z	zamba	ikonia	then after that everything seg faults
+2009-10-18T22:24:00.000Z	zamba	ikonia	can't even do 'ls' or 'dmesg'
+2009-10-18T22:25:00.000Z	ikonia	zamba	ok, two things you need to check, would be 1.) a memory check using the memcheck tool 2.) unplug all external devices (usb disks, bluetooth dongles etc etc) and run it for a while without them, that's my first set of debugging tips
+2009-10-18T22:25:00.000Z	zamba	ikonia	well.. it has to be the memory, then, because i have no external stuff connected to it
+2009-10-18T22:25:00.000Z	ikonia	zamba	may not be memory, but it's just a core thing thats very worth checking
+2009-10-18T22:26:00.000Z	zamba	ikonia	yeah, true that
+2009-10-18T22:26:00.000Z	ikonia	zamba	lets remove the main stuff first
+2009-10-18T22:26:00.000Z	zamba	ikonia	will check it out
+2009-10-18T22:27:00.000Z	zamba	ikonia	every ubuntu installation comes with memtest, right?
+2009-10-18T22:28:00.000Z	zamba	ikonia	during boot-up, i mean?
+2010-02-07T23:32:00.000Z	ikonia	zamba	use visudo to edit the sudoers file and create a ALL= group for just that one command
+2010-02-07T23:33:00.000Z	zamba	ikonia	you told me about as much as i already know :)
+2010-02-07T23:33:00.000Z	ikonia	zamba	so what's the problem then ?
+2010-02-07T23:33:00.000Z	zamba	ikonia	i know the basics, but not how to separate on different commands
+2010-02-07T23:34:00.000Z	ikonia	zamba	so ALL=/etc/init.d/network
+2010-02-07T23:37:00.000Z	ikonia	zamba	hosts and commands
+2010-02-07T23:38:00.000Z	ikonia	zamba	hosts and commands
+2010-02-07T23:38:00.000Z	zamba	ikonia	still makes no sense.. there's three "ALL" in ALL=(ALL) ALL
+2010-02-07T23:38:00.000Z	zamba	ikonia	how can that then mean just hosts and commands?
+2010-02-07T23:40:00.000Z	ikonia	zamba	first all is what hosts you're authorized on, second all is what commands you're allowed on the authorized hosts
+2010-02-07T23:40:00.000Z	zamba	ikonia	and third "ALL"?
+2010-02-07T23:41:00.000Z	ikonia	zamba	there should only be two
+2010-02-07T23:41:00.000Z	ikonia	zamba	that's two
+2010-02-07T23:41:00.000Z	ikonia	zamba	no, the second is a response to ALL =
+2010-02-07T23:42:00.000Z	ikonia	zamba	the second means all commands
+2010-02-07T23:42:00.000Z	zamba	ikonia	well, now i understand even less
+2010-02-07T23:42:00.000Z	ikonia	zamba	all=ls all=((all) - as in the first is ls only, the second is all commands
+2010-02-07T23:43:00.000Z	ikonia	zamba	that means all commands
+2010-02-07T23:44:00.000Z	zamba	ikonia	and ALL doesn't?
+2010-02-07T23:44:00.000Z	ikonia	zamba	the first ALL is "define all" the (ALL) is "all commands
+2010-02-07T23:44:00.000Z	zamba	ikonia	gah :D
+2010-02-07T23:44:00.000Z	zamba	ikonia	totally not getting it
+2010-02-07T23:44:00.000Z	ikonia	zamba	ok, here we go
+2010-02-07T23:45:00.000Z	ikonia	zamba	ok, so the ALL= means "what is the list of all commands the users can run"
+2010-02-07T23:45:00.000Z	ikonia	zamba	follow that ?
+2010-02-07T23:45:00.000Z	zamba	ikonia	so it's like a variable?
+2010-02-07T23:45:00.000Z	zamba	ikonia	or.. rather.. a key..?
+2010-02-07T23:45:00.000Z	ikonia	zamba	yes, so ALL=ls would mean, all the commands you can run is "ls" only
+2010-02-07T23:45:00.000Z	zamba	ikonia	why not just call it COMMANDS=?
+2010-02-07T23:46:00.000Z	ikonia	zamba	I didn't write sudo
+2010-02-07T23:46:00.000Z	ikonia	zamba	(and you can actually do it like that)
+2010-02-07T23:46:00.000Z	zamba	ikonia	but you agree it makes more sense?
+2010-02-07T23:46:00.000Z	ikonia	zamba	not really,
+2010-02-07T23:46:00.000Z	ikonia	zamba	so ALL=(ALL) means you can run all commands
+2010-02-07T23:47:00.000Z	ikonia	zamba	you can make sudo MUCH more complicated with veriables like COMMANDS so ALL=(GROUP@ COMMANDS) etc, that's why "ALL" is used,
+2010-02-07T23:47:00.000Z	ikonia	zamba	pretty much yes
+2010-02-07T23:49:00.000Z	zamba	ikonia	ok, so to summarize.. if i want a specific user to be able to bring down and up the network interfaces, then i need him to have access to ifup and ifdown?
+2010-02-07T23:50:00.000Z	zamba	ikonia	so like: user ALL=/sbin/ifup, /sbin/ifdown ALL?
+2010-02-07T23:50:00.000Z	ikonia	zamba	just ifconfig should do it
+2010-02-07T23:50:00.000Z	zamba	ikonia	and that means he can run /etc/init.d/networking script as well?
+2010-02-07T23:50:00.000Z	ikonia	zamba	no, that's a seperate command
+2011-08-17T11:16:00.000Z	ikonia	zamba	yes, but if you are using 64bit it's a very VERY dirty hack, 32bit is less
+2011-08-17T11:17:00.000Z	zamba	ikonia	tell me about it :)
+2011-08-17T11:17:00.000Z	zamba	ikonia	and i'm of course running 64-bit :)
+2011-08-17T11:18:00.000Z	ikonia	zamba	the honest answer is, even symatic don't support it (I know their website says they do) but they don't support anything beyond 8.04 due to the dirty hacks,
+2011-08-17T11:18:00.000Z	zamba	ikonia	well, give me the dishonest answer then :)
+2011-08-17T11:19:00.000Z	ikonia	zamba	"yes, it's fully supported by symantec and works out of the box"
+2011-08-17T11:19:00.000Z	zamba	ikonia	hehe

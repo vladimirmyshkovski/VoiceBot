@@ -1,0 +1,93 @@
+2009-12-25T19:21:00.000Z	Daughain		Night, Psinetic
+2009-12-25T19:21:00.000Z	Daughain		Think we have a shortage of people who can help this morning. =)
+2009-12-25T19:22:00.000Z	Dr_Willis	Daughain	 yep. That can be expected...
+2009-12-25T19:22:00.000Z	Daughain	Dr_Willis	Yup, tis the season.
+2009-12-25T19:31:00.000Z	Dr_Willis	Daughain	 installs of what?
+2009-12-27T18:29:00.000Z	Daughain	Dr_Willis	Can you point me in the right direction to see about mounting my windows shares on boot?
+2009-12-27T18:29:00.000Z	Dr_Willis	Daughain	 also see !ntfs-3g and !fstab
+2009-12-27T18:45:00.000Z	Daughain	Dr_Willis	I'm looking to mount shares via LAN.
+2010-01-17T11:49:00.000Z	Dr_Willis	Daughain	 You are using the full gnome desktop? or somt other window manager?
+2010-01-17T11:49:00.000Z	Daughain	Dr_Willis	I removed kde already.
+2010-01-17T11:49:00.000Z	Dr_Willis	Daughain	 try making a new user - see if they have the same issue. Its possible removeing kde goofed up something.
+2010-01-17T11:50:00.000Z	Dr_Willis	Daughain	 ive seen where having kde and gnome both can confuse some 'special' locations/assoications
+2010-01-17T11:50:00.000Z	Daughain	Dr_Willis	I removed kde when I removed samba for a reinstall. =)
+2010-01-17T11:50:00.000Z	Daughain	Dr_Willis	It was all kinda a package deal for some reason.
+2010-01-17T11:51:00.000Z	Daughain	Dr_Willis	This is a fresh install of samba, just reset locations, and cannot load netowkr in nautilus at all.
+2010-01-17T11:52:00.000Z	Dr_Willis	Daughain	 havintg samba installed or not - i think has very little to do with gnome/nautilus
+2010-01-17T11:52:00.000Z	Dr_Willis	Daughain	 perhaps try 'sudo apt-get install ubuntu-desktop' and try a new user.
+2010-01-17T11:53:00.000Z	Dr_Willis	Daughain	 no.. not for kde stuff.. :) if you had kde installed  and removed it.. IF kde took over some assoication.. its possible removing kde did NOT restore the gnome assoication
+2010-01-17T11:54:00.000Z	Daughain	Dr_Willis	Would it be better to reinstall kde, then?
+2010-01-17T11:55:00.000Z	Dr_Willis	Daughain	 perhaps try 'sudo apt-get install ubuntu-desktop' and try a new user.
+2010-01-17T11:58:00.000Z	Dr_Willis	Daughain	 did you try reinstalling ubuntu-desktop yet?  then make and try a new user. see if they have the same issue
+2010-01-17T11:59:00.000Z	Daughain	Dr_Willis	No....Why am I reinstalling ubuntu desktop to create a new user?
+2010-01-17T12:01:00.000Z	Dr_Willis	Daughain	 because when you removed KDE it also removed some setting that gnome was using..   and its possible its just a user setting (thus the new user test)
+2010-01-17T12:01:00.000Z	Dr_Willis	Daughain	 so reinstalling Ubuntu-desktpp SHOULD get the desktpp back to a normal state. and the new user should have new proper default settings
+2010-01-17T12:02:00.000Z	Dr_Willis	Daughain	 you could try just a new user first
+2010-01-17T12:27:00.000Z	Daughain	Dr_Willis	Reinstalled ubuntu-desktop, new user, no love.
+2010-01-17T12:28:00.000Z	Daughain	Dr_Willis	Half tempted to wipe this sys and rebuild from scratch, yet again...
+2010-01-17T12:40:00.000Z	Daughain	Dr_Willis	ANy more ideaS?
+2010-01-17T12:41:00.000Z	Dr_Willis	Daughain	 so installung ubuntu-desktpp and a new user dident fix things?
+2010-01-17T12:41:00.000Z	Daughain	Dr_Willis	Nope.
+2010-01-17T12:41:00.000Z	Daughain	Dr_Willis	Did lose my wd passport, though, which is not a happy thing.
+2010-01-17T13:18:00.000Z	Dr_Willis	Daughain	 if a new user has the same issue. then that points to it not being a user config file issue
+2010-01-17T13:20:00.000Z	Daughain	Dr_Willis	The full error message says;Could not display"network:///" Nautilus cannot handle "network" locations
+2010-01-17T13:21:00.000Z	Daughain	Dr_Willis	The extra '/' in there took me a while to notice...
+2010-01-17T13:21:00.000Z	Daughain	Dr_Willis	SO, can I remove that extra '/'??=)
+2010-01-17T13:22:00.000Z	Daughain	Dr_Willis	Damn, every time I thni I found something that will help.. =)
+2010-01-17T13:22:00.000Z	Dr_Willis	Daughain	 thers some gnome service/gvfs thing that handles that stuff. some hiow you managed to remove/stop it im guessing
+2010-01-17T13:23:00.000Z	Daughain	Dr_Willis	OK, where is it?
+2010-01-17T13:23:00.000Z	Dr_Willis	Daughain	 you could just move all the users .* setting type dirs to some other directory if you want to test the users settings
+2010-01-17T13:23:00.000Z	Dr_Willis	Daughain	 but i dont think its a user setting issue
+2010-01-17T13:24:00.000Z	Daughain	Dr_Willis	In other words, I may as well as reinstall ubuntu from scratch.
+2010-01-17T13:24:00.000Z	Dr_Willis	Daughain	 you did check the forums and bug reports?
+2010-01-17T13:24:00.000Z	Dr_Willis	Daughain	 try smb:///    see if that work
+2010-01-17T13:25:00.000Z	Daughain	Dr_Willis	No, because I dont expect this is a bug, and, next week is too long for me to try and mess around in forums to find my answer.
+2010-01-17T13:26:00.000Z	Dr_Willis	Daughain	 it appears to be related to 'gvfs' some how. from what i just googled.
+2010-01-17T13:26:00.000Z	Dr_Willis	Daughain	 its a 'bug' because removing kubuntu or kde or whatever dident properly set it back. would be my logic
+2010-01-17T13:27:00.000Z	Daughain	Dr_Willis	Where is gfvs?
+2010-01-17T13:27:00.000Z	Dr_Willis	Daughain	 its a special feature of gnome to allow remote filesystem/virtual filesystem features like network:/// and smb:/// and ftp:///
+2010-01-17T13:27:00.000Z	Dr_Willis	Daughain	 theres a .gvfs directroy in the users home.
+2010-01-17T13:28:00.000Z	Daughain	Dr_Willis	ok, time to take a look at that.
+2010-01-17T13:28:00.000Z	Dr_Willis	Daughain	 does 'smb:///' show the samba/wiondiows shares?
+2010-01-17T13:29:00.000Z	Daughain	Dr_Willis	 No such file/dir
+2010-01-17T13:30:00.000Z	Dr_Willis	Daughain	 how about file:///home  or file:////home
+2010-01-17T13:31:00.000Z	Daughain	Dr_Willis	Nope.
+2010-01-17T13:32:00.000Z	Dr_Willis	Daughain	 sudo apt-get install gvfs-backends
+2010-01-17T13:32:00.000Z	Dr_Willis	Daughain	 then log out/back in and try it
+2010-01-17T13:32:00.000Z	Daughain	Dr_Willis	Whats a backend anyway?
+2010-01-17T13:33:00.000Z	Dr_Willis	Daughain	 sudo apt-get install gvfs-backends libgnomevfs2-extra       perhaps...
+2010-01-17T13:34:00.000Z	Daughain	Dr_Willis	gimme a min to logout.
+2010-01-17T13:35:00.000Z	Daughain	Dr_Willis	Thats what I needed. =)
+2010-01-17T13:37:00.000Z	Dr_Willis	Daughain	 :P
+2010-01-17T13:37:00.000Z	Dr_Willis	Daughain	 now its ODD that ubuntu-desktop metapaciage dident pull that in.
+2010-01-17T13:37:00.000Z	Dr_Willis	Daughain	 and i cant imagine why removeing kde would remove it.. what else did you do to it? :)
+2010-01-17T13:38:00.000Z	Daughain	Dr_Willis	Lets say I have not had good results trying google.
+2010-01-17T13:38:00.000Z	Daughain	Dr_Willis	Lemme grab some coffee while I try to remember what I difd and in what order.
+2010-01-17T13:38:00.000Z	Dr_Willis	Daughain	 Time to increase your google fu skills then young padawan....
+2010-01-17T13:40:00.000Z	Daughain	Dr_Willis	fu google is right. =)
+2010-01-17T13:41:00.000Z	Daughain	Dr_Willis	OK, I uninstalled samba while in kde, then did a reinstall. That didnt do what I wanted, so I used autoremove ... --purge to remove samba....
+2010-01-17T13:41:00.000Z	Dr_Willis	Daughain	 whats scary is i juist googled for the exact error message with '9.10' at the end. :)
+2010-01-17T13:41:00.000Z	Dr_Willis	Daughain	 i still dont see how that would of affected gvfs at all.  but autoremove MIGHT of done somtjhing if you had removed ubuntu-desktop also
+2010-01-17T13:42:00.000Z	Daughain	Dr_Willis	Tried a reinstall, and that popped an error for installing samba...
+2010-01-17T13:43:00.000Z	Daughain	Dr_Willis	AT tat point I decided to switch to gnome to deal with samba, switched, and did a full package uninstall via synaptics. At that point it removed a large portion of kde apps.
+2010-01-17T13:44:00.000Z	Daughain	Dr_Willis	In the middle of that uninstall, I oopsed and shtu off kdm, which kicked me to xtrerm, and I had to rbeoot to get back to gnome. Ran dpkg -a, and then ran the uninstall again...
+2010-01-17T13:44:00.000Z	Daughain	Dr_Willis	Once that was al done, I installed samba with no issues, buyt then ra across the error you helped me with.
+2010-01-17T14:01:00.000Z	Dr_Willis	Daughain	 yes.
+2010-01-17T14:01:00.000Z	Dr_Willis	Daughain	 samba can be set up to doo alll sprts of thiongs. :)
+2010-01-17T14:04:00.000Z	Daughain	Dr_Willis	OK, now how do I read the doc?
+2010-01-17T14:05:00.000Z	Dr_Willis	Daughain	 it isntalls to /usr/share/docs I recall. :)
+2010-01-17T14:06:00.000Z	Daughain	Dr_Willis	As in read <path> samba??
+2010-01-17T14:07:00.000Z	Dr_Willis	Daughain	 as in go to the directory and look at the files. :P
+2010-01-17T14:07:00.000Z	Dr_Willis	Daughain	 its proberly overkill.. but its worth a read.
+2010-01-17T14:08:00.000Z	Daughain	Dr_Willis	going to the dir is a great idea, if you have a clue wat you are looking for. ;P
+2010-01-17T14:12:00.000Z	Dr_Willis	Daughain	 i think theres some doc/help icon in ubuntu that heads to that location.. but i always remove that icon
+2010-01-17T14:13:00.000Z	Daughain	Dr_Willis	Definitely overkill......I dont even have a clue what doc to look at. :P
+2010-01-17T14:13:00.000Z	Dr_Willis	Daughain	 start with 'using samba' :) chapter 1
+2010-01-17T14:13:00.000Z	Daughain	Dr_Willis	 I found it. =) Just lost now. =)
+2010-01-17T14:16:00.000Z	Dr_Willis	Daughain	 you would rather have it in ascii text?
+2010-01-17T14:16:00.000Z	Daughain	Dr_Willis	Sure.
+2010-01-17T14:24:00.000Z	Daughain	Dr_Willis	Neat doc...I coudnt find a mention of the gui I am using though..
+2010-01-17T14:27:00.000Z	Dr_Willis	Daughain	 what gui?
+2010-01-17T14:28:00.000Z	Dr_Willis	Daughain	 never heard of it, or never used it.. :) i just edit the smb.conf file
+2010-01-17T14:28:00.000Z	Daughain	Dr_Willis	Some of us are newbies. =)
+2010-01-17T14:29:00.000Z	Dr_Willis	Daughain	 thats why you ar reading the books...

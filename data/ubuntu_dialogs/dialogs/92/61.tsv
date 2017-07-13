@@ -1,0 +1,92 @@
+2009-02-22T03:36:00.000Z	yowshi		anyone else have any ideas how to make this usb mouse work?
+2009-02-22T03:36:00.000Z	imachine	yowshi	sup with taht mouse of yours?
+2009-02-22T03:46:00.000Z	imachine	yowshi	pretty much :)
+2009-02-22T03:46:00.000Z	imachine	yowshi	unless you provide some debug info for us ;)
+2009-02-22T03:47:00.000Z	yowshi	imachine	no that isnt what i need. the google solutions all require editing xorg.conf and the LAST time i tried that i broke my frigging system. obviously i need more on hands guidance or help for this
+2009-02-22T03:47:00.000Z	imachine	yowshi	you need to backup your xorg conf for starters :-)
+2009-02-22T03:47:00.000Z	imachine	yowshi	at least before you edited it. it's good practice ;)
+2009-02-22T03:47:00.000Z	yowshi	imachine	yea did that but using the ackup doesnt fix my problem. i tried that method twice. and twice i had to reload the backup
+2009-02-22T03:48:00.000Z	imachine	yowshi	dunno, what's wrong with that mouse anyway? I've asked you once already, didn't get a response...
+2009-02-22T03:48:00.000Z	yowshi	imachine	i thought i told everyone who asked. ok when i restart my system it works for a bit then suddenly stops working
+2009-02-22T03:49:00.000Z	imachine	yowshi	what mouse model, what does dmesg say after it stops working?
+2009-02-22T03:49:00.000Z	imachine	yowshi	what version of ubuntu are you running?
+2009-02-22T03:49:00.000Z	yowshi	imachine	i have no idea what dmesg says because i have no idea how to read whats in the dmesg file. i know how to load it but not understand what it says. it's a standard basic 2 button scrollwheel logitech usb mouse
+2009-02-22T03:50:00.000Z	yowshi	imachine	ubuntu 8.10 64bit
+2009-02-22T03:50:00.000Z	imachine	yowshi	it's not about "reading" it (tho it is pretty much simple english, but that's beside the point) by asking "what dmesg says" I meant, show me ;]
+2009-02-22T03:50:00.000Z	yowshi	imachine	it's a basic mose just usb instead of ps2
+2009-02-22T03:50:00.000Z	imachine	yowshi	pastebin.com helps paste.
+2009-02-22T03:51:00.000Z	imachine	yowshi	paste the dmesg messages after the mouse stops working. also, you didn't answer my question, that is, does it work if you replug it?
+2009-02-22T03:51:00.000Z	yowshi	imachine	PASTEBINIT DONT WORK WITH DMESG AND IT IS KIND OF HARD TO COPY AND PASTE WITH JUST MOUSE BUTTONS
+2009-02-22T03:52:00.000Z	yowshi	imachine	sorry about the caps
+2009-02-22T03:53:00.000Z	yowshi	imachine	how do i get the dmesg into pastebin if i cant highlight the text spit ot?
+2009-02-22T03:53:00.000Z	imachine	yowshi	did you try what I told you?
+2009-02-22T03:55:00.000Z	imachine	yowshi	could you try another usb port then.
+2009-02-22T03:55:00.000Z	yowshi	imachine	i have tried 3 different ports they all do the same time
+2009-02-22T03:56:00.000Z	imachine	yowshi	I really don't know why it shouldn't work. you'd have to be more specific about your mouse.
+2009-02-22T03:56:00.000Z	yowshi	imachine	pastebin.com/f764734b6
+2009-02-22T03:56:00.000Z	yowshi	imachine	i really dont know how to be more specific about my mouse
+2009-02-22T04:11:00.000Z	yowshi	imachine	whats lkms?
+2009-02-22T03:57:00.000Z	imachine	yowshi	I don't see nothing about your mouse there.
+2009-02-22T03:57:00.000Z	imachine	yowshi	/var/log/Xorg.0.log < paste bin that
+2009-02-22T04:00:00.000Z	imachine	yowshi	that's more like it. /etc/X11/xorg.conf I will too need to see.
+2009-02-22T04:01:00.000Z	imachine	yowshi	sudo mv /etc/X11/xorg.conf /etc/X11/xorg.conf.old && sudo reboot ;)
+2009-02-22T04:01:00.000Z	imachine	yowshi	it should get automatically created upon next boot.
+2009-02-22T04:01:00.000Z	yowshi	imachine	what??
+2009-02-22T04:02:00.000Z	imachine	yowshi	i.e. move you xorg.conf file somewhere else, then reboot.
+2009-02-22T04:02:00.000Z	yowshi	imachine	wont that break my system?
+2009-02-22T04:03:00.000Z	imachine	yowshi	like I said, your x.org config file should be autocreated on next boot.
+2009-02-22T04:03:00.000Z	yowshi	imachine	also you want me to move my backup as well?
+2009-02-22T04:03:00.000Z	imachine	yowshi	man mv ;]
+2009-02-22T04:03:00.000Z	yowshi	imachine	mv'd rebooting now
+2009-02-22T04:07:00.000Z	yowshi	imachine	now what
+2009-02-22T04:07:00.000Z	imachine	yowshi	normal graphics?
+2009-02-22T04:07:00.000Z	yowshi	imachine	yes
+2009-02-22T04:08:00.000Z	imachine	yowshi	mouse works?
+2009-02-22T04:08:00.000Z	yowshi	imachine	for now
+2009-02-22T04:08:00.000Z	imachine	yowshi	let me know when it stops. (if it stops).
+2009-02-22T04:08:00.000Z	yowshi	imachine	my nvidia drivers arent loaded any more though
+2009-02-22T04:08:00.000Z	imachine	yowshi	system->administration->proprietary drivers (or smth)
+2009-02-22T04:10:00.000Z	yowshi	imachine	that says they are active but temulous wont load and it requires them
+2009-02-22T04:10:00.000Z	imachine	yowshi	disable/enable them then.
+2009-02-22T04:10:00.000Z	imachine	yowshi	tho it's hmmm.. sometimes causing troubles.
+2009-02-22T04:10:00.000Z	yowshi	imachine	what my drivers are soemtimes causing troubles?
+2009-02-22T04:11:00.000Z	imachine	yowshi	no, lkms is.
+2009-02-22T04:11:00.000Z	imachine	yowshi	dkms, it's tha magic autobuilding thingie for propriertary drivers in ubuntu.
+2009-02-22T04:12:00.000Z	yowshi	imachine	i'd have to reboot after reactivating the drivers to make em work right? or at least estart X?
+2009-02-22T04:12:00.000Z	imachine	yowshi	something like that.
+2009-02-22T04:13:00.000Z	yowshi	imachine	brb
+2009-02-22T04:14:00.000Z	yowshi	imachine	and it's down
+2009-02-22T04:15:00.000Z	yowshi	imachine	mouse has stopped working
+2009-02-22T04:15:00.000Z	imachine	yowshi	what is?
+2009-02-22T04:15:00.000Z	imachine	yowshi	lsusb -> pastebin
+2009-02-22T04:15:00.000Z	imachine	yowshi	/var/log/Xorg.0.log >- pastebin
+2009-02-22T04:16:00.000Z	imachine	yowshi	your drivers are back tho correct?
+2009-02-22T04:16:00.000Z	yowshi	imachine	yes they are
+2009-02-22T04:17:00.000Z	imachine	yowshi	can you pastebin the /etc/X11/xorg.conf file too
+2009-02-22T04:17:00.000Z	yowshi	imachine	pastebin.com/ff17c94d <-- thats the xorg.0.log
+2009-02-22T04:18:00.000Z	yowshi	imachine	pastebinit will not read from /etc/X11/xorg/conf
+2009-02-22T04:18:00.000Z	imachine	yowshi	.conf
+2009-02-22T04:18:00.000Z	imachine	yowshi	also, I see nothing about your mouse there. lsusb -> pastebin
+2009-02-22T04:19:00.000Z	yowshi	imachine	yeah i didnt make that typo in the screen. it would seem that /etc/X11/xorg.conf is blank according to my gedit
+2009-02-22T04:20:00.000Z	imachine	yowshi	okay
+2009-02-22T04:20:00.000Z	imachine	yowshi	so your drivers don't seem to be working like you said they are.
+2009-02-22T04:20:00.000Z	imachine	yowshi	we'll fix that later; now give me lsusb output
+2009-02-22T04:20:00.000Z	yowshi	imachine	ummm tremulous loads so they must be working
+2009-02-22T04:20:00.000Z	imachine	yowshi	compiz?
+2009-02-22T04:21:00.000Z	yowshi	imachine	pastebininit doesnt work with lsusb or lsusb |pastebininit so i will have to type it out somewhere. it is only 2 lines anyway
+2009-02-22T04:21:00.000Z	yowshi	imachine	i have compix but it isnt running
+2009-02-22T04:23:00.000Z	yowshi	imachine	http://pastebin.com/d39e9643a
+2009-02-22T04:26:00.000Z	yowshi	imachine	i paste biinned the log right?
+2009-02-22T04:26:00.000Z	imachine	yowshi	right
+2009-02-22T04:27:00.000Z	imachine	yowshi	I don't know what else could be wrong man.
+2009-02-22T04:27:00.000Z	yowshi	imachine	well other the i have no xorg.conf file now
+2009-02-22T04:27:00.000Z	imachine	yowshi	yeah, paste that one.
+2009-02-22T04:28:00.000Z	yowshi	imachine	http://pastebin.com/f16ae34d6
+2009-02-22T04:29:00.000Z	imachine	yowshi	that's log. you said conf
+2009-02-22T04:30:00.000Z	yowshi	imachine	i have no /etc/X11/xorg.conf file it doesnt exit
+2009-02-22T04:31:00.000Z	yowshi	imachine	andf this is the third time i have said that i dont have it
+2009-02-22T04:35:00.000Z	yowshi	imachine	if your stumped i am just going to cp that xorg.conf.old file to xorg.conf reboot and start all over i guess
+2009-02-22T05:26:00.000Z	yowshi	imachine	you still around?
+2009-02-22T20:28:00.000Z	yowshi	imachine	you around?
+2009-02-22T21:16:00.000Z	imachine	yowshi	more mouse isues?
+2009-02-22T21:17:00.000Z	yowshi	imachine	the same one as yesterday. :( tommorow i will get a ps/2 mouse

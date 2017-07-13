@@ -1,0 +1,94 @@
+2010-11-21T08:08:00.000Z	yxz97		Is there any way to install ubuntu without burning the image ISO?
+2010-11-21T08:08:00.000Z	yxz97		I have downloaded ubuntu-10.10-desktop-i386
+2010-11-21T08:08:00.000Z	yxz97		ubuntu-10.10-desktop-i386.iso
+2010-11-21T08:09:00.000Z	SpaceGhostC2C	yxz97	There are a number of ways. Using a USB stick works.
+2010-11-21T08:09:00.000Z	yxz97	SpaceGhostC2C	how I do that
+2010-11-21T08:10:00.000Z	SpaceGhostC2C	yxz97	What OS do you have on your machine now.
+2010-11-21T08:10:00.000Z	yxz97	SpaceGhostC2C	ubuntu
+2010-11-21T08:10:00.000Z	SpaceGhostC2C	yxz97	You can do it a few different ways.
+2010-11-21T08:11:00.000Z	yxz97	SpaceGhostC2C	ok, but be more specific
+2010-11-21T08:11:00.000Z	SpaceGhostC2C	yxz97	So, you don't want any of the data on the drive now?
+2010-11-21T08:12:00.000Z	SpaceGhostC2C	yxz97	yxz97 unetbootin works
+2010-11-21T08:14:00.000Z	SpaceGhostC2C	yxz97	You can use unetbootin, or boot from the iso using grub2 as two options.
+2010-11-21T08:16:00.000Z	SpaceGhostC2C	yxz97	unetbootin, or grub2. Two options.
+2010-11-21T08:16:00.000Z	yxz97	SpaceGhostC2C	please be more specific
+2010-11-21T08:19:00.000Z	SpaceGhostC2C	yxz97	No, you'll need >= 700Mb
+2010-11-21T08:22:00.000Z	SpaceGhostC2C	yxz97	Language.
+2010-11-21T08:24:00.000Z	SpaceGhostC2C	yxz97	You're going to need one of two things. A USB key with >=700Mb, or you can try booting the ISO from grub2 and then reinstalling Ubuntu from that.
+2010-11-21T08:24:00.000Z	SpaceGhostC2C	yxz97	Those are the easiest ways I know of to reinstall Ubuntu without a cd and without using other computers in the process.
+2010-11-21T08:25:00.000Z	yxz97	SpaceGhostC2C	I have a USB and I already told you the partitions in this USB Drive
+2010-11-21T08:25:00.000Z	SpaceGhostC2C	yxz97	I'm just saying you have some choices. :)
+2010-11-21T08:25:00.000Z	yxz97	SpaceGhostC2C	yeah yeah I understand
+2010-11-21T08:27:00.000Z	SpaceGhostC2C	yxz97	Calm down.
+2010-11-21T08:28:00.000Z	SpaceGhostC2C	yxz97	You can boot into windows and use wubi if you wanted.
+2010-11-21T08:29:00.000Z	SpaceGhostC2C	yxz97	You have those options. Take them or leave them, it's all I can give you.
+2010-11-21T08:29:00.000Z	yxz97	SpaceGhostC2C	hey, ....
+2010-11-21T08:37:00.000Z	SpaceGhostC2C	yxz97	Probably reformats it in the process.
+2010-11-21T08:37:00.000Z	yxz97	SpaceGhostC2C	format, scare me
+2010-11-21T08:38:00.000Z	SpaceGhostC2C	yxz97	It's possible, that if you just ran unetbootin, you just reformatted your usb drive. If you didn't run it, then you didn't lose your data.
+2010-11-21T08:39:00.000Z	yxz97	SpaceGhostC2C	you are the guys more consufin in the worls
+2010-11-21T08:39:00.000Z	SpaceGhostC2C	yxz97	I'm sorry.
+2010-11-21T08:40:00.000Z	yxz97	SpaceGhostC2C	no problem, is just confusing for me, understand..
+2010-11-21T08:45:00.000Z	SpaceGhostC2C	yxz97	Which was?
+2010-11-21T08:46:00.000Z	SpaceGhostC2C	yxz97	You've been told, your TLA's aren't family friendly.
+2010-11-21T08:46:00.000Z	SpaceGhostC2C	yxz97	Three letter acronyms.
+2010-11-21T08:47:00.000Z	SpaceGhostC2C	yxz97	Keep your language g-rated
+2010-11-21T08:57:00.000Z	yxz97	SpaceGhostC2C	st__ IdleOne look this http://imagebin.org/124164
+2010-11-21T08:57:00.000Z	SpaceGhostC2C	yxz97	Okay. So, what happens after you run it? Any errors?
+2010-11-21T08:57:00.000Z	SpaceGhostC2C	yxz97	Try it again.
+2010-11-21T08:57:00.000Z	yxz97	SpaceGhostC2C	be more specific, run what?
+2010-11-21T08:58:00.000Z	SpaceGhostC2C	yxz97	unetbootin.
+2010-11-21T08:58:00.000Z	SpaceGhostC2C	yxz97	Did you match the md5 signature of the iso?
+2010-11-21T08:58:00.000Z	yxz97	SpaceGhostC2C	no... help me with that first, your right
+2010-11-21T08:58:00.000Z	yxz97	SpaceGhostC2C	the ISO could be damage!
+2010-11-21T08:59:00.000Z	SpaceGhostC2C	yxz97	https://help.ubuntu.com/community/UbuntuHashes
+2010-11-21T08:59:00.000Z	SpaceGhostC2C	yxz97	Good idea!
+2010-11-21T09:02:00.000Z	yxz97	SpaceGhostC2C	hey
+2010-11-21T09:02:00.000Z	SpaceGhostC2C	yxz97	Any changes?
+2010-11-21T09:03:00.000Z	SpaceGhostC2C	yxz97	Okay. so, try unetbootin with that iso again, hopefully it will work.
+2010-11-21T09:03:00.000Z	yxz97	SpaceGhostC2C	did you see the image I paste?
+2010-11-21T09:03:00.000Z	SpaceGhostC2C	yxz97	The original, yes.
+2010-11-21T09:04:00.000Z	SpaceGhostC2C	yxz97	Try running the install again. Are you sure that /dev/sdb1 is the usb drive?
+2010-11-21T09:04:00.000Z	SpaceGhostC2C	yxz97	You do realize IdleOne is an op and you're not helping the situation by not dropping it right?
+2010-11-21T09:04:00.000Z	SpaceGhostC2C	yxz97	Disregard that last message.
+2010-11-21T09:05:00.000Z	SpaceGhostC2C	yxz97	Did you run unetbootin?
+2010-11-21T09:05:00.000Z	yxz97	SpaceGhostC2C	did you confuse me with another mate?
+2010-11-21T09:05:00.000Z	SpaceGhostC2C	yxz97	Yes, sorry about that.
+2010-11-21T09:05:00.000Z	yxz97	SpaceGhostC2C	I notice
+2010-11-21T09:05:00.000Z	yxz97	SpaceGhostC2C	no problem
+2010-11-21T09:05:00.000Z	SpaceGhostC2C	yxz97	Did you run the unetbootin installer again?
+2010-11-21T09:06:00.000Z	yxz97	SpaceGhostC2C	hey
+2010-11-21T09:07:00.000Z	yxz97	SpaceGhostC2C	what0s this alternate, ISO image about?
+2010-11-21T09:07:00.000Z	yxz97	SpaceGhostC2C	servet, netbook, desktop, sound common, but alternate, is not specific at all!
+2010-11-21T09:11:00.000Z	yxz97	SpaceGhostC2C	extracting files and copying Files
+2010-11-21T09:11:00.000Z	yxz97	SpaceGhostC2C	..
+2010-11-21T09:11:00.000Z	SpaceGhostC2C	yxz97	:)
+2010-11-21T09:12:00.000Z	yxz97	SpaceGhostC2C	brb
+2010-11-21T09:12:00.000Z	SpaceGhostC2C	yxz97	Okay. See you in a bit.
+2010-11-21T09:15:00.000Z	yxz97	SpaceGhostC2C	could not find image kernel: linux
+2010-11-21T09:15:00.000Z	yxz97	SpaceGhostC2C	I'm in troublessss!!!
+2010-11-21T09:15:00.000Z	SpaceGhostC2C	yxz97	How rather odd.
+2010-11-21T09:15:00.000Z	SpaceGhostC2C	yxz97	Don't abuse the bot please.
+2010-11-21T09:16:00.000Z	SpaceGhostC2C	yxz97	If you boot into your ubuntu install, what error do you get? The sameone?
+2010-11-21T09:17:00.000Z	yxz97	SpaceGhostC2C	could not find image kernel: linux
+2010-11-21T09:17:00.000Z	SpaceGhostC2C	yxz97	So, if you boot from the ubuntu on the hard drive, then you get a "could not find image kernel: linux" ?
+2010-11-21T09:18:00.000Z	yxz97	SpaceGhostC2C	exactly I mean that is what is being reading from the USB drive
+2010-11-21T09:18:00.000Z	SpaceGhostC2C	yxz97	It's possible that it is.
+2010-11-21T09:20:00.000Z	SpaceGhostC2C	yxz97	fdisk or my favorite cfdisk
+2010-11-21T09:21:00.000Z	SpaceGhostC2C	yxz97	It's just sort of an odd problem.
+2010-11-21T09:21:00.000Z	yxz97	SpaceGhostC2C	I bet you man...
+2010-11-21T09:21:00.000Z	SpaceGhostC2C	yxz97	And you set your bios to boot from the USB first, right?
+2010-11-21T09:22:00.000Z	yxz97	SpaceGhostC2C	yeah is booting from USB
+2010-11-21T09:22:00.000Z	SpaceGhostC2C	yxz97	That's a very good idea.
+2010-11-21T09:22:00.000Z	SpaceGhostC2C	yxz97	Okay. :)
+2010-11-21T09:24:00.000Z	yxz97	SpaceGhostC2C	how I format with fdisk /dev/sdb1 ?
+2010-11-21T09:25:00.000Z	SpaceGhostC2C	yxz97	http://manpages.ubuntu.com/manpages/lucid/man8/fdisk.8.html
+2010-11-21T09:48:00.000Z	SpaceGhostC2C	yxz97	The forums are good too.
+2010-11-21T09:54:00.000Z	SpaceGhostC2C	yxz97	Maybe you're just not that relative. :)
+2010-11-21T09:54:00.000Z	yxz97	SpaceGhostC2C	I'm a programmer!
+2010-11-21T09:54:00.000Z	SpaceGhostC2C	yxz97	So am I!
+2010-11-21T09:56:00.000Z	SpaceGhostC2C	yxz97	Have you tried just upgrading?
+2010-11-21T09:57:00.000Z	SpaceGhostC2C	yxz97	Have you tried upgrading the system yet?
+2010-11-21T09:58:00.000Z	yxz97	SpaceGhostC2C	I prefer a clean install ..
+2010-11-21T10:45:00.000Z	SpaceGhostC2C	yxz97	You're booted into your Ubuntu, right?
+2010-11-21T10:45:00.000Z	yxz97	SpaceGhostC2C	I boot in the Flash Drive as Jordan_U said

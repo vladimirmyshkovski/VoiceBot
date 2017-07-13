@@ -1,0 +1,94 @@
+2006-06-01T16:56:00.000Z	SurfnKid		how can i change the WM?
+2006-06-01T16:56:00.000Z	SurfnKid		Ive got sawfish installed
+2006-06-01T16:56:00.000Z	SurfnKid		where's the xsession file at
+2006-06-01T16:56:00.000Z	Flannel	SurfnKid	at the login thing (GDM) change your session.
+2006-06-01T05:05:00.000Z	Flannel	SurfnKid	this help? : https://wiki.ubuntu.com/MultimediaKeys
+2006-06-12T11:49:00.000Z	Flannel	SurfnKid	no needto remove gnome, but you can
+2006-06-12T11:49:00.000Z	SurfnKid	Flannel	ah
+2006-06-12T11:49:00.000Z	Flannel	SurfnKid	apt-get install xubuntu-desktop
+2006-06-12T11:50:00.000Z	SurfnKid	Flannel	so itll be left as option
+2006-06-12T11:50:00.000Z	Flannel	SurfnKid	right, you can convert between all three at will, or have them all installed and switch each session, or whatever
+2006-06-12T11:50:00.000Z	SurfnKid	Flannel	is it lighter, im dragging a bit
+2006-06-12T11:50:00.000Z	Flannel	SurfnKid	very much so
+2006-06-12T11:55:00.000Z	Flannel	SurfnKid	of course, youre installing an entirely different WM.
+2006-06-12T11:55:00.000Z	SurfnKid	Flannel	made sense of course, but i guess 195 is still nothing compared to other packages
+2006-06-23T09:07:00.000Z	SurfnKid	Flannel	sorry
+2006-08-25T06:40:00.000Z	Flannel	SurfnKid	&
+2006-08-25T06:41:00.000Z	Flannel	SurfnKid	that is, [command]  &
+2006-08-25T06:41:00.000Z	SurfnKid	Flannel	you rock, thanks
+2006-09-15T11:14:00.000Z	Flannel	SurfnKid	sure, download caca-utils, then you can use cacaview to view them in ascii
+2006-09-15T11:14:00.000Z	SurfnKid	Flannel	you rock
+2006-09-15T11:21:00.000Z	SurfnKid	Flannel	is it on the ubuntu distro?
+2006-09-15T11:22:00.000Z	Flannel	SurfnKid	it's in universe
+2006-09-15T11:22:00.000Z	Flannel	SurfnKid	no, caca-utils
+2006-09-15T11:22:00.000Z	Flannel	SurfnKid	it installs a bunch of stuff, lib-caca, and then some PoC programs
+2006-09-15T11:25:00.000Z	SurfnKid	Flannel	awesome I got it running thanks
+2006-09-20T11:54:00.000Z	Flannel	SurfnKid	https://wiki.ubuntu.com/HardwareSupportMachinesLaptopsDell  might be of some help... You'd have to crossreference card numbers
+2006-09-20T11:55:00.000Z	SurfnKid	Flannel	hey man, yeah im looking at a list of compatible Bluetooth manufacturers. I just happened to run into mine. :)
+2006-09-25T11:13:00.000Z	Flannel	SurfnKid	what?  edgy is coming out late october.  releases are every 6 months
+2006-09-25T11:14:00.000Z	SurfnKid	Flannel	oh right, would you recommend Edgy over Dapper or would it depend on the type of HW used
+2006-09-25T11:14:00.000Z	Flannel	SurfnKid	well, it'll be newer.
+2006-09-25T11:16:00.000Z	SurfnKid	Flannel	so if i m on dapper, would it be feasible to go edgy, doing a dist upgr?
+2006-09-25T11:16:00.000Z	Flannel	SurfnKid	correct
+2007-02-10T09:36:00.000Z	Flannel	SurfnKid	... right.  You'd be unable to do it through logging in at the machine as well, through nautilus
+2007-02-10T09:37:00.000Z	Flannel	SurfnKid	gksudo nautilus, although really, you're probbly better off adding yourself the www-data group, if you plan on doing this often.
+2007-02-10T09:37:00.000Z	SurfnKid	Flannel	ok good point, but what if the user is from another machine? do i create that user?
+2007-02-10T09:37:00.000Z	Flannel	SurfnKid	what?  You're logging in as a user...
+2007-02-10T09:39:00.000Z	SurfnKid	Flannel	let me give you an ex.  i have 3 users on the remote box, a,b,c  and user f on the client only, will i have to create user f on the remote box with users a,b,c ?
+2007-02-10T09:39:00.000Z	Flannel	SurfnKid	what?  No.  you log in to the remote box with users a/b/c anyway.  You can't login remotely with a user that doesn't exist on that box.
+2007-02-10T09:40:00.000Z	Flannel	SurfnKid	"remote" login means nothing.  All it does is redirect where input/output come from.  As far as the machine is concerned, you're logged in locally
+2007-02-10T09:41:00.000Z	SurfnKid	Flannel	ahh, right so that brings me to my point then that whatever perm i set locally, I can view them remotely, and also view them thru nautilus?
+2007-02-10T09:41:00.000Z	SurfnKid	Flannel	i think ive got what ya mean
+2007-02-10T09:41:00.000Z	Flannel	SurfnKid	No.  Locally stuff affects local stuff, remote stuff affects remote stuff.
+2007-02-10T09:42:00.000Z	SurfnKid	Flannel	i probably need to be clear on the terminology
+2007-02-10T09:43:00.000Z	Flannel	SurfnKid	When you log in to a machine, whether through a thinclient (or via remote X or whatever), or sitting at a machine somewhere, you log in as a particular user on that machine.  user A, B, or C, in that example.  User F doesn't exist on any box except the one you're sitting at now, itdoesn't exist at the remote box.
+2007-02-10T09:45:00.000Z	SurfnKid	Flannel	unop I got it, this was easy, its the folder permissions that I just needed to fiddle with
+2007-02-10T09:46:00.000Z	Flannel	SurfnKid	Add users A B and C to www-data group.  That's probably what you want to do.  chmod is almost never the answer.
+2007-02-10T09:46:00.000Z	SurfnKid	Flannel	unop I just enabled write on the /var/www folder and on another child folder
+2007-02-10T09:47:00.000Z	SurfnKid	Flannel	i didnt use chmod
+2007-02-10T09:47:00.000Z	Flannel	SurfnKid	yes youdid.  Just the graphical equivalent.
+2007-02-10T09:47:00.000Z	SurfnKid	Flannel	ok right :P
+2007-02-10T09:47:00.000Z	Flannel	SurfnKid	and, it'd be "gksudo nautilus" not sudo nautilus, nautilus IS a graphical program
+2007-02-10T09:48:00.000Z	SurfnKid	Flannel	argh.. true, so ok ill put it back
+2007-02-10T09:49:00.000Z	SurfnKid	Flannel	i reversed it, its back the way it was
+2007-02-10T09:49:00.000Z	Flannel	SurfnKid	add A B and C to www-data group, then enable group writing.
+2007-02-10T09:50:00.000Z	SurfnKid	Flannel	wait.. i dont want A B C writing. I just want A  cuz thats the login i use when I log in from my laptop, should i just add A ?
+2007-02-10T09:50:00.000Z	Flannel	SurfnKid	yes.
+2007-02-10T09:51:00.000Z	SurfnKid	Flannel	hmmm its already there... ! how weird
+2007-02-10T09:51:00.000Z	SurfnKid	Flannel	i went to the group section of the user config of www-data and the username I log in with is already there
+2007-02-10T09:52:00.000Z	Flannel	SurfnKid	then all you need to do is enable writing for the group
+2007-02-10T09:52:00.000Z	SurfnKid	Flannel	and how do i do that, from the perm folders?
+2007-02-10T09:56:00.000Z	SurfnKid	Flannel	ok ok ok ok wait wait.. its fixed
+2007-02-10T09:58:00.000Z	SurfnKid	Flannel	I got everything you said earlier, I just hadnt checked :)
+2007-02-10T10:08:00.000Z	SurfnKid	Flannel	you know how on Win2k there's groups where you add users, is this just like it?
+2007-02-10T12:41:00.000Z	Flannel	SurfnKid	No, sorry.  I have no idea what groups are like in Win2K
+2007-02-10T12:42:00.000Z	SurfnKid	Flannel	its cool, but they are just like on linux, simpler tho
+2007-02-28T12:24:00.000Z	Flannel	SurfnKid	How do you want to transfer them? ftp?
+2007-02-28T12:25:00.000Z	Flannel	SurfnKid	what protocol?
+2007-02-28T12:25:00.000Z	Flannel	SurfnKid	So... ftp? or what?
+2007-02-28T12:26:00.000Z	Flannel	SurfnKid	er... There's a few protocols.  Whatever method you end up using, you'll need a protocol.
+2007-02-28T12:27:00.000Z	Flannel	SurfnKid	Especially if it's client/server (and the server is always the server), a client-server model is probably best (ftp or ssh (scp))
+2007-02-28T12:27:00.000Z	Flannel	SurfnKid	right, that still uses a protocol, whether FTP or Samba, or whatever
+2007-02-28T12:28:00.000Z	Flannel	SurfnKid	scp is ftp over ssh, in a nutshell.
+2007-02-28T12:29:00.000Z	SurfnKid	Flannel	i see
+2007-02-28T12:31:00.000Z	SurfnKid	Flannel	gonna try scp then n see
+2007-02-28T12:32:00.000Z	SurfnKid	Flannel	gee thats easy
+2007-02-28T12:32:00.000Z	SurfnKid	Flannel	where does the user@host:filename drop it?  / <-root?
+2007-02-28T12:33:00.000Z	Flannel	SurfnKid	to the home directory of where you login
+2007-04-07T13:13:00.000Z	Flannel	SurfnKid	you need to make 40GB extended, then two logical partitions inside of that
+2007-04-07T13:13:00.000Z	Flannel	SurfnKid	NBrepresent: http://www.pcguide.com/ref/hdd/file/structPartitions-c.html  for more info on the Primary/extended/logical thing
+2007-04-07T13:14:00.000Z	Flannel	SurfnKid	Eh?  You can expand partitions.  Also, look into LVM
+2007-04-07T13:15:00.000Z	SurfnKid	Flannel	yes i know i can, thats what i want to do so I dont reformat the darn thing, ill look into LVM :D
+2008-09-05T00:06:00.000Z	Flannel	SurfnKid	Dapper has 1.0.10, and medibuntu has Skype for dapper
+2008-09-05T00:07:00.000Z	SurfnKid	Flannel	um.. medibuntu? so shouldi install medibuntu?
+2008-09-05T00:07:00.000Z	Flannel	SurfnKid	you don't have to install medibuntu, you just have to download the skype package from there.
+2008-09-05T00:07:00.000Z	SurfnKid	Flannel	and not install skype from the website?
+2008-09-05T00:07:00.000Z	SurfnKid	Flannel	ah ok
+2008-09-05T00:07:00.000Z	Flannel	SurfnKid	Because the website (obviously) isn't meant for dapper
+2008-09-05T00:08:00.000Z	SurfnKid	Flannel	yep thats right, how would i go about downloading from medibuntu?
+2008-09-05T00:09:00.000Z	Flannel	SurfnKid	Well, assuming you're not adding the repos, you just need to download the package: http://packages.medibuntu.org/dapper/skype.html  click the "i386" at the bottom ofthatpage, and you should be able to download the deb.  then just double click on it, ... hmmm, gdebi might be installed by default on dapper.  I honestly don't remember anymore.
+2008-09-05T00:10:00.000Z	SurfnKid	Flannel	yes it is, from skype.com gdebi picked up the .deb
+2008-09-05T00:10:00.000Z	SurfnKid	Flannel	thanks let me install that
+2008-09-05T00:10:00.000Z	Flannel	SurfnKid	alright, well, download that deb, and then install it, and gdebi will bring in whatever deps you need
+2008-09-05T00:35:00.000Z	SurfnKid	Flannel	you there? it says, "Error: Conflicts with the installed package skype"
+2008-09-07T09:47:00.000Z	Flannel	SurfnKid	Please ask in #ubuntu-offtopic, not here, thanks.

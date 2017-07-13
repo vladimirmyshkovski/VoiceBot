@@ -1,0 +1,94 @@
+2008-12-14T05:39:00.000Z	randal		Hey guys i need to change a setting in user/group in the admin panel but everything is greyed out/not letting me click anything plz help
+2008-12-14T05:40:00.000Z	randal		Hey guys i need to change a setting in user/group in the admin panel but everything is greyed out/not letting me click anything plz help
+2008-12-14T05:41:00.000Z	randal		How do i do administrative tasks do i have to log into root how
+2008-12-14T05:42:00.000Z	ActionParsnip	randal	if you need power, put sudo at the start of the command
+2008-12-14T05:42:00.000Z	ActionParsnip	randal	forget about root alltogether and you'll be fine
+2008-12-14T05:42:00.000Z	randal	ActionParsnip	 im trying to change seting in user/group setting it doesent let me
+2008-12-14T05:43:00.000Z	ActionParsnip	randal	then use gksudo <program name>
+2008-12-14T05:43:00.000Z	randal	ActionParsnip	 im trying to change setting in administrator user/group settings
+2008-12-14T05:44:00.000Z	randal	ActionParsnip	any idea
+2008-12-14T05:45:00.000Z	ActionParsnip	randal	what command do you run to get the app up?
+2008-12-14T05:46:00.000Z	randal	ActionParsnip	 i click system-administration-users and groups and then click root then manage groups
+2008-12-14T05:47:00.000Z	randal	ActionParsnip	its user settings
+2008-12-14T05:47:00.000Z	randal	ActionParsnip	 it doesent let me change anything
+2008-12-14T05:48:00.000Z	randal	ActionParsnip	 any idea
+2008-12-14T05:48:00.000Z	ActionParsnip	randal	i'd check what app that runs, then try gksudo <app name>
+2008-12-14T05:48:00.000Z	randal	ActionParsnip	 how do i check what app it runs
+2008-12-14T05:50:00.000Z	ActionParsnip	randal	you could edit the menu to check the command line
+2009-08-16T23:12:00.000Z	randal	ActionParsnip	 what do you mean
+2009-08-16T23:13:00.000Z	ActionParsnip	randal	the ownership my pass from the user to root. root in general is to be avoided
+2009-08-24T12:05:00.000Z	ActionParsnip	randal	or if you have a terminal open you can run: sudo -i
+2010-05-31T02:56:00.000Z	ActionParsnip	randal	i always use the nvidia vdpau ppa and install nvidia-glx-185  works perfectly :)
+2010-05-31T02:57:00.000Z	randal	ActionParsnip	how do i do that in terminal
+2010-05-31T02:58:00.000Z	ActionParsnip	randal	sudo add-apt-repository ppa:nvidia-vdpau/ppa; sudo apt-get update; sudo apt-get install nvidia-glx-185
+2010-05-31T03:01:00.000Z	randal	ActionParsnip	and is this the latest drivers for nivida 8800 gts 512 videocard
+2010-05-31T03:02:00.000Z	ActionParsnip	randal	i think it has some weird 256 driver i havent heard of, but it will give you the 195 driver
+2010-05-31T03:02:00.000Z	ActionParsnip	randal	it'll work
+2010-05-31T03:02:00.000Z	randal	ActionParsnip	 apt-get install nivida-glx-185 cannot find package
+2010-05-31T03:04:00.000Z	randal	ActionParsnip	so what do i do
+2010-05-31T03:04:00.000Z	ActionParsnip	randal	theres this too: http://www.ubuntuupdates.org/ppas/27
+2010-05-31T03:05:00.000Z	randal	ActionParsnip	 i typed it in wrong its installing thanks ill report back if it works
+2010-05-31T03:05:00.000Z	ActionParsnip	randal	np man :)
+2010-05-31T03:06:00.000Z	ActionParsnip	randal	thats all i use, i dont use jockey. it seems to give me grief so I just dont bother with it
+2010-05-31T03:06:00.000Z	randal	ActionParsnip	 i dont understand why i cant install it graphically tho i used to be able to but now its messes up my graaphics
+2010-05-31T03:06:00.000Z	ActionParsnip	randal	me too with my 6150 so I found a way around
+2010-05-31T03:06:00.000Z	randal	ActionParsnip	this started to happan with 10.04
+2010-05-31T03:07:00.000Z	randal	ActionParsnip	 you wouldnt happan to know how to change the longin scrren with a custom gdm not just the background
+2010-05-31T03:07:00.000Z	ActionParsnip	randal	i've used it since jaunty, works great
+2010-05-31T03:08:00.000Z	ActionParsnip	randal	i do :)
+2010-05-31T03:08:00.000Z	ActionParsnip	randal	http://maketecheasier.com/change-login-and-boot-screen-in-ubuntu-lucid/2010/05/13
+2010-05-31T03:08:00.000Z	randal	ActionParsnip	 hold that thought i just tried to enable effects and it asks me to install a video driver now?
+2010-05-31T03:12:00.000Z	randal	ActionParsnip	 I dont know what i should do now my grapghics are messing up now
+2010-05-31T03:12:00.000Z	ActionParsnip	randal	you can always remove the nvidia packages and use the open driver
+2010-05-31T03:12:00.000Z	randal	ActionParsnip	 whats open drivers
+2010-05-31T03:13:00.000Z	ActionParsnip	randal	the default driver is noveau in lucid, you were using that driver when you first installed
+2010-05-31T03:13:00.000Z	randal	ActionParsnip	 ya that worked but i want to enable appearance effects
+2010-05-31T03:14:00.000Z	ActionParsnip	randal	that ppa is all i got dude
+2010-05-31T03:15:00.000Z	randal	ActionParsnip	with that ppa does that install the driver becaus ewhen i did that and then try to enable effects it asked me to install drivers
+2010-05-31T03:16:00.000Z	ActionParsnip	randal	did you see the dkms stae run?
+2010-05-31T03:17:00.000Z	randal	ActionParsnip	i think ill try and run it agian after i unistall the drviers agian
+2010-05-31T03:17:00.000Z	randal	ActionParsnip	 could you send me those codes agian
+2010-05-31T03:17:00.000Z	ActionParsnip	randal	you could try reinstalling dkms to make the kernel module build
+2010-05-31T03:18:00.000Z	randal	ActionParsnip	what is dkms and send me the code to reinstall it thanks
+2010-05-31T03:18:00.000Z	ActionParsnip	randal	sudo add-apt-repository ppa:nvidia-vdpau/ppa; sudo apt-get update; sudo apt-get install --reinstall nvidia-glx-185
+2010-05-31T03:24:00.000Z	randal	ActionParsnip	so i have glx185 install but it still wont let me enable effects should i try and install the drivers off the nivida site manually
+2010-05-31T03:24:00.000Z	ActionParsnip	randal	try: sudo nvidia-xconfig   then reboot
+2010-05-31T03:25:00.000Z	randal	ActionParsnip	command not found
+2010-05-31T03:26:00.000Z	ActionParsnip	randal	then something isn't right, the app is pulled down with the driver, as is nvidia-settings
+2010-05-31T03:27:00.000Z	randal	ActionParsnip	its gives me an option of install nivida settings should i do that
+2010-05-31T03:27:00.000Z	ActionParsnip	randal	sure, the driver doesn't sound installed though
+2010-05-31T03:28:00.000Z	randal	ActionParsnip	 its sais its install i tried to do the glx-185 and it said it was installed
+2010-05-31T03:29:00.000Z	randal	ActionParsnip	 i installed nvidia setting and it said when opening it you do not apear to be using the Nvidia x driver
+2010-05-31T03:30:00.000Z	randal	ActionParsnip	 how can i install this driver manually
+2010-05-31T03:30:00.000Z	randal	ActionParsnip	 could this be causing the problem
+2010-05-31T03:30:00.000Z	randal	ActionParsnip	 Working around bugs in the new kernel video architecture
+2010-05-31T03:31:00.000Z	ActionParsnip	randal	worth a try
+2010-05-31T03:31:00.000Z	randal	ActionParsnip	 should i try to install the drviers manually of the nvida website
+2010-05-31T03:32:00.000Z	randal	ActionParsnip	if so it tells be to stop x and all open gl programs how do i do that
+2010-05-31T03:35:00.000Z	randal	ActionParsnip	 so can you help me
+2010-05-31T03:36:00.000Z	ActionParsnip	randal	thats all I got dude, you can remove the nvidia-glx-185 package as well as the other nvidia stuff and you should beok
+2010-05-31T03:37:00.000Z	randal	ActionParsnip	185 works fine but it wont let me enable effects do you know how to stop x and all open gl programs
+2010-05-31T03:37:00.000Z	ActionParsnip	randal	sudo /etc/init/gdm stop may do it
+2010-05-31T03:39:00.000Z	randal	ActionParsnip	 im trying something differnt i opened pagage manager and typed nvidia but i dont know what ones to install
+2010-05-31T03:50:00.000Z	randal	ActionParsnip	i have an idea should i install 9.10 witch works for me and then just upgrade to 10.04 do you think that would work
+2010-05-31T03:51:00.000Z	ActionParsnip	randal	can't see why not
+2010-05-31T03:51:00.000Z	randal	ActionParsnip	so is that a yes you think it will work
+2010-05-31T03:51:00.000Z	ActionParsnip	randal	makes sense, i'd say yes
+2010-05-31T03:52:00.000Z	randal	ActionParsnip	ook ill do that. thats gona take a long time to instal ;/
+2010-05-31T03:53:00.000Z	randal	ActionParsnip	well thanks for your help
+2010-05-31T03:59:00.000Z	randal	ActionParsnip	 is there a way to put 9.10 boot splash on 10.04
+2010-05-31T03:59:00.000Z	ActionParsnip	randal	not sure there dude
+2010-10-30T09:44:00.000Z	ActionParsnip	randal	will you please use the pastebin, you have flooded repeatedly and scrolling the channel is not helpful nor fair to other users
+2010-10-30T09:44:00.000Z	ActionParsnip	randal	if you obey the floodbot instead of scrolling the channel to death then you won't have a problem
+2010-10-30T09:45:00.000Z	randal	ActionParsnip	sorry ill use pastbin for now on
+2010-10-30T09:45:00.000Z	ActionParsnip	randal	cool :)
+2010-10-30T09:52:00.000Z	ActionParsnip	randal	can you ping 8.8.8.8?
+2010-10-30T09:52:00.000Z	randal	ActionParsnip	 how do you ping
+2010-10-30T09:52:00.000Z	ActionParsnip	randal	same as in any OS you can name
+2010-10-30T09:52:00.000Z	randal	ActionParsnip	 i dont know how
+2010-10-30T09:53:00.000Z	ActionParsnip	randal	open a terminal with CTRL+ALT+T then type: ping 8.8.8.8 -c 4   and hit enter
+2010-10-30T09:53:00.000Z	ActionParsnip	randal	you never did a ping in windows before?
+2010-10-30T09:55:00.000Z	randal	ActionParsnip	 i typed that in put it did not ping it it just gave me options
+2010-10-30T09:55:00.000Z	ActionParsnip	randal	ok try: ping 8.8.8.8    instead
+2010-10-30T09:56:00.000Z	randal	ActionParsnip	 it pinged fine i think sent 4 recieved 4
+2010-10-30T09:58:00.000Z	ActionParsnip	randal	sounds like your DNS sucks then. If you run: gksudo gedit /etc/resolv.conf    delete ALL text and add this line:  nameserver 8.8.8.8   save the new file, close gedit and all browsers then retry the browser, see if it flys

@@ -1,0 +1,94 @@
+2009-09-27T15:02:00.000Z	jacquesdupontd		hey everbody
+2009-09-27T15:02:00.000Z	jacquesdupontd		im using compiz fusion and avant window navigator and im bored about putting effec to none to launch warsow before
+2009-09-27T15:03:00.000Z	jacquesdupontd		is there a command to place after warsow to disble the 3d ?
+2009-09-27T15:03:00.000Z	jacquesdupontd		u think its about composite
+2009-09-27T15:04:00.000Z	Dr_Willis	jacquesdupontd	 you mean disable the 3d desktop - run the game.. reenable the 3d desktop stuff?
+2009-09-27T15:04:00.000Z	Dr_Willis	jacquesdupontd	 metacity --replace  && game && compiz --replace
+2009-09-27T15:06:00.000Z	Dr_Willis	jacquesdupontd	 i wouldent think the GAME would have anything to do with disableing desktop features
+2009-11-06T18:28:00.000Z	Dr_Willis	jacquesdupontd	 you could use unetbootin or other ways to make a frugal/live cd type install to a flash drive also.
+2009-11-06T18:30:00.000Z	jacquesdupontd	Dr_Willis	the thing is i already got a live cd in fact usb live disk working perfectly but the boot is really too slow i would like to be as fast as it can be when it's really installed and then will try to make it bootable with an interface to make it an installer disk too
+2009-11-06T18:31:00.000Z	Dr_Willis	jacquesdupontd	 i never bother doing a 'full' type install to a flash drive.  I do belive the alternative installer cd lets you tell it where to install grub.   Of course i know enough grub-fu to repair my bootloader if i accidently install over my desktops mbr and not the flash drives mbr by mistake :)
+2009-11-06T19:02:00.000Z	Dr_Willis	jacquesdupontd	 you could potentially do a full install from a .iso to usb drive by creative use of virtualbox.
+2009-11-06T19:03:00.000Z	jacquesdupontd	Dr_Willis	i'm gonna do it from windows doesn't mind in fact but do you know how i could tell him not to touch my grub and even better to install a grub on the usb disk itself
+2009-11-06T19:05:00.000Z	jacquesdupontd	Dr_Willis	but more i'm thinking about it more i think that there's many things to invent with usb bootable disk
+2009-11-06T19:05:00.000Z	Dr_Willis	jacquesdupontd	 i would be VERY suprised if it worked with deamontools in windows. I dont recall if the desktop cd has an option at the end to tell where to install th4e bootloader to or not. I do belive the alternative installer cd does.
+2009-11-06T19:05:00.000Z	jacquesdupontd	Dr_Willis	i'm nearly shocked that it doesn't already exist what i'm thinking about
+2009-11-06T19:06:00.000Z	Dr_Willis	jacquesdupontd	 ive just been toying with grub2 and booting  iso files. from what i gather a 'full' install to a usb flash drive can wear them out.
+2009-11-06T19:06:00.000Z	jacquesdupontd	Dr_Willis	then you think installation = modifying my grub
+2009-11-06T19:06:00.000Z	Dr_Willis	jacquesdupontd	 you could install in virtualbox to a 4gb hard dive image file..  or have virtualbox boot the cd and the flash drive and isntallthat way
+2009-11-06T19:07:00.000Z	jacquesdupontd	Dr_Willis	i want an installation flash key with a real installation on it and a boot menu where you can either choose to run your personnal xubuntu standalone or install the native xubuntu on any computer
+2009-11-06T19:07:00.000Z	Dr_Willis	jacquesdupontd	  You could even set up grub2 on the thing.. boot the iso. and then have it install itself to a 2nd partition in a 'full' type install.
+2009-11-06T19:07:00.000Z	jacquesdupontd	Dr_Willis	do you understand my idea ?
+2009-11-06T19:08:00.000Z	Dr_Willis	jacquesdupontd	 most people use the usb-creator tool and the persistant save file feature for that. I hear it works muych better in 9.10 now then it did in 9.04
+2009-11-06T19:08:00.000Z	jacquesdupontd	Dr_Willis	cause the problem of create a usb bootable disk live is that even if it's persistant it works perfectly like mine saving everything but booting is as slow as trying ubuntu from a live cd, it's not booting like it would boot if it was installed on a computer
+2009-11-06T19:09:00.000Z	Dr_Willis	jacquesdupontd	 i think you will find the 'full install to flash drive' will not be that much faster.
+2009-11-06T19:10:00.000Z	jacquesdupontd	Dr_Willis	i'm always answering you before you talk me about something, just remember one thing if you see me agin, when  i come on the channel to ask something you can be sure i know the subject perfectly and i've googled a lot before and i come to see the biggest guys that could be 1 or 2 to follow my idea or to help me
+2009-11-06T19:10:00.000Z	Dr_Willis	jacquesdupontd	 and a 'full' install may not work as good on a varity of hardware.. for example if you install the nvidia drivers for box X. and box Z needs the OLDER nvidia drivers.. well you will have issues.
+2009-11-06T19:11:00.000Z	Dr_Willis	jacquesdupontd	 ive seen others discuss the topic in here as well.. ive been working on several threads/forums getting grub2  multi iso boot flash drives going. :)
+2009-11-06T19:11:00.000Z	jacquesdupontd	Dr_Willis	first you should see how fastest it is even when it's live and usb2.0 when it booted it's really faster than the ubuntu on the harddisk 5400 prm
+2009-11-06T19:12:00.000Z	jacquesdupontd	Dr_Willis	that's call flash memory and it does change all, so it should be at least as fast to boot but we can understand that it's not cause how do you want that an installation complete is taking many gigs and the cd is only 700 megs, it's only because everytime it's booting it's extracting files, do you understand ?
+2009-11-06T19:13:00.000Z	Dr_Willis	jacquesdupontd	 if you say so.. You could test out what you want to do in virtualbox that way it wont mess up your system mbr no matter what.
+2009-11-06T19:15:00.000Z	jacquesdupontd	Dr_Willis	but in fact hrm that's kinda bad cause it will install it for my computer and if i run it on a intel computer for example as i have an amd it won't play his role of real live cd going on every computer, so i have to find a way to have the live cd extracted completely but with the same checks for the system hardwares on boot, would be at least faster
+2009-11-06T19:18:00.000Z	jacquesdupontd	Dr_Willis	anyway i'll do that myself for it to work perfectly with any os monday, and i'll come here back to give it to everybody, but really i'm suprised that nobody thought about it and realised it cause it's not that hard.
+2009-11-09T18:52:00.000Z	Dr_Willis	jacquesdupontd	 use unetbootin, or usb-disk-creator, or inzxtall grub2 and make it bootable
+2009-11-09T18:53:00.000Z	Dr_Willis	jacquesdupontd	  usb-disk-cretor and unetbootin make it easy to make a cd to a live usb drive
+2009-11-09T18:53:00.000Z	jacquesdupontd	Dr_Willis	thx i know it and i wouldn't come here if usb-disk-creator would work but they only work for usb pen drive not for usb har disk of 250 gb
+2009-11-09T18:53:00.000Z	Dr_Willis	jacquesdupontd	  unetbootin can. :)
+2009-11-09T18:54:00.000Z	Dr_Willis	jacquesdupontd	 i set up grub2 to boot an iso file on my portable 200gb hd - for easy installing
+2009-11-09T18:54:00.000Z	jacquesdupontd	Dr_Willis	i already made a usb pen drive with a live cd of xubuntu .iso and i' would like to exactly copy the file of my pen drive and try to boot then on the hdd
+2009-11-09T18:54:00.000Z	Dr_Willis	jacquesdupontd	 try the dd command i guess.. but that will be goofy.
+2009-11-09T18:55:00.000Z	Dr_Willis	jacquesdupontd	 or read up on syslinux, and copy all files to the HD. and run syslinux on it to make it bootable
+2009-11-09T18:55:00.000Z	jacquesdupontd	Dr_Willis	i have the exact files needed on the pen drive that works then i just need it to be bootable, you know i don't think grub is installed on the pendrive even
+2009-11-09T18:55:00.000Z	Dr_Willis	jacquesdupontd	 use grub or syslinux to make it bootable and make proper config files to boot it
+2009-11-09T18:55:00.000Z	jacquesdupontd	Dr_Willis	how to run syslinux on it ?
+2009-11-09T18:56:00.000Z	Dr_Willis	jacquesdupontd	 with the syslinux command and th eproper options. Read up on syslinux - its worth learning all about
+2009-11-09T18:57:00.000Z	jacquesdupontd	Dr_Willis	no problem but for now i'm trying ubebootin didn't thought it could work better than usb-creator
+2009-11-09T18:58:00.000Z	Dr_Willis	jacquesdupontd	 they both just install syslinux to make the disk bootable, and copy over the files.. and make a syslinux.cfg file
+2009-11-09T18:58:00.000Z	Dr_Willis	jacquesdupontd	 once ya learn how syslinux works you can do the job by hand. :)
+2009-11-09T18:58:00.000Z	jacquesdupontd	Dr_Willis	but i'm always impressed how fast is UNEtboootin compared to usb-creator, it takes like 1 minutes to copy files, is it normal ?
+2009-11-09T18:59:00.000Z	Dr_Willis	jacquesdupontd	 the making of the persistant save file takes a long time.. the actual install is just copying over 700mb of files.
+2009-11-09T18:59:00.000Z	jacquesdupontd	Dr_Willis	anyway i had previewed to read about syslinux
+2009-11-09T19:00:00.000Z	jacquesdupontd	Dr_Willis	understood but last time i tried on my usb pen drive it didn't worked with unetbootin as it was working perfectly with usb-creator
+2009-11-09T19:00:00.000Z	jacquesdupontd	Dr_Willis	thx a lot i'm gonna try that
+2009-11-09T19:00:00.000Z	Dr_Willis	jacquesdupontd	 config files for syslinux differances
+2009-11-14T12:19:00.000Z	Dr_Willis	jacquesdupontd	 entries in the gdm menus You mean? (i just got here)
+2009-11-14T12:19:00.000Z	Dr_Willis	jacquesdupontd	 or are you meaning Grub menus to change the default splash/gdm theme/stuff like from Kubuntu to Ubvuntu to ubunhtu-studio?
+2009-11-14T12:20:00.000Z	jacquesdupontd	Dr_Willis	yes You understood
+2009-11-14T12:21:00.000Z	Dr_Willis	jacquesdupontd	 thats is proberly dosable.. but would be rather complex. You would have to parse the boot options and have a script do the proper changes (proberly by chning soft links)
+2009-11-14T12:21:00.000Z	Dr_Willis	jacquesdupontd	  There is a tool called epidermis that can select/install grub/spash/xsplash/gdm themes with a few clicks,.
+2009-11-14T12:22:00.000Z	jacquesdupontd	Dr_Willis	hrm i'm pretty sure i already did that one time really easily, i was thinking about your way but wouldn't be interesting
+2009-11-14T12:22:00.000Z	Dr_Willis	jacquesdupontd	 perhaps check out the tool and suggest a  way to do the changes automatically at boot.
+2009-11-14T12:22:00.000Z	Dr_Willis	jacquesdupontd	 theres the old dpkg-reconfigure usplash I recall from the older releases.. but im not sure that works any more in 9.10
+2009-11-14T12:22:00.000Z	jacquesdupontd	Dr_Willis	i'm sure we can have an argument on the line of the menuentry that would say to load directly this window manager
+2009-11-14T12:23:00.000Z	Dr_Willis	jacquesdupontd	 ive been playing/tweaking/twiddling with al the splash/boot graphics and stuff since beta. :) its amuseing.. but in the bottom line. not worht messing with much since you just see the gfx for such a short time
+2009-11-14T12:23:00.000Z	Dr_Willis	jacquesdupontd	 you are talking about different things..
+2009-11-14T12:23:00.000Z	Dr_Willis	jacquesdupontd	 laiunching a specific window manager from GDM is easy. You just make a proper whatever.desktop entry for it
+2009-11-14T12:23:00.000Z	Dr_Willis	jacquesdupontd	 that wont affect the gdm theme or usplash stuff or xsplash stuff
+2009-11-14T12:24:00.000Z	jacquesdupontd	Dr_Willis	in fact it's about really tweaking the splash, it's about just launching ubuntu as it was xubuntu or kubuntu or lubuntu
+2009-11-14T12:24:00.000Z	jacquesdupontd	Dr_Willis	just the correct Window Manager would be sufficient, i don't care about the splash, i could replace it with an artwork i would do with all the logos of every window managers
+2009-11-14T12:25:00.000Z	Dr_Willis	jacquesdupontd	 and the splash changes are just graphic files. then you got the specific login manager to change.. THEN you got to set the  login manager to boot whatever desktop you want.
+2009-11-14T12:25:00.000Z	Dr_Willis	jacquesdupontd	 then you STILL will have some issues with some of those desktops  goofing each other up.
+2009-11-14T12:26:00.000Z	Dr_Willis	jacquesdupontd	 given all the features of grub2. there may be a way to get it to change the default login manager some how. Or you could pass the kernel some option. that would be  part of what you want.
+2009-11-14T12:26:00.000Z	jacquesdupontd	Dr_Willis	don't you think there is a cleaner way to launch it than making a launcher on the startup ? you see in the login screen you have a selector of window manager, with an argument isn't it possible that it set it to the right one just by changing the grub entry ?
+2009-11-14T12:27:00.000Z	jacquesdupontd	Dr_Willis	grub2 is boring but when you learnt it it's really really good, but this different files that gengerates the grub.cfg are not that well working
+2009-11-14T12:28:00.000Z	Dr_Willis	jacquesdupontd	 you would have to do a lot of things real real real fast as the system boots.  there are scripts that read the boot options. You could do somthing with that script. but  On my systems all this would have to be done very quickly.
+2009-11-14T12:28:00.000Z	Dr_Willis	jacquesdupontd	 i got grub2 set to boot the whatever.iso files from my /boot partition. :) if i want to test some new ubuntuwhatever.iso i can do it from my grub menu now. :) grub2 is handy
+2009-11-14T12:29:00.000Z	jacquesdupontd	Dr_Willis	ok nevermind i'll do as i was doing before and choosing from the login screen but do you have an answer for : why is it slower with the different window manager than the original one (gnome)
+2009-11-14T12:29:00.000Z	Dr_Willis	jacquesdupontd	 i will point out that just having the various whatever-desktops installed on the same machine can cause a lot of issues also.
+2009-11-14T12:29:00.000Z	Dr_Willis	jacquesdupontd	 ive never found it slower. Guess it depends on what wm you are running
+2009-11-14T12:29:00.000Z	Dr_Willis	jacquesdupontd	 watch out for lubuntu - it really goofed things up on my one machine. :)
+2009-11-14T12:30:00.000Z	jacquesdupontd	Dr_Willis	hrm gnome is not faster than a xfce or a lxde don't you think ??? :)
+2009-11-14T12:30:00.000Z	jacquesdupontd	Dr_Willis	you didn't read me well i just talked about it before you :)
+2009-11-14T12:30:00.000Z	Dr_Willis	jacquesdupontd	 lxde seemed as fast as gnome to me.. but its running different file managers, and everything else.. so how do you even benchmark this ?
+2009-11-14T12:30:00.000Z	jacquesdupontd	Dr_Willis	it runs lxde really good
+2009-11-14T12:31:00.000Z	jacquesdupontd	Dr_Willis	the thing is we are talking about ressources not speed, and it seems when im checking system monitor that it's changing nearly nothing from a gnome to a lxde and some soft are starting 2 times
+2009-11-14T12:32:00.000Z	jacquesdupontd	Dr_Willis	that's why i was thinking installing sudo apt-get install lxde or xfce is not installing it well
+2009-11-14T12:32:00.000Z	Dr_Willis	jacquesdupontd	 monitoring resources can be tricky. but i rarely worry about it any more.  When running all these desktops - its possible some services for gnome are starting up and staying running  even tho you are runing lxed
+2009-11-14T12:33:00.000Z	Dr_Willis	jacquesdupontd	  with gnome and kde - a single kde or gnome app will load a lot of libs and start some support services - so even under lxde  the resources used will be higher then an app designed for lxde
+2009-11-14T12:34:00.000Z	jacquesdupontd	Dr_Willis	your finally pointing what i'm thinking, and i know it's not that disturbing on our computer but i find it just stupid as i'm someone that wants everthing to be perfectly done and not the one who won't care cause it's still running enought fas
+2009-11-14T12:36:00.000Z	jacquesdupontd	Dr_Willis	oh my god, computers will never be perfect, that is sure if you are not trying to stop loading things not needed :)
+2009-11-14T12:36:00.000Z	jacquesdupontd	Dr_Willis	they won't be perfect alone that is sure :)
+2009-11-14T12:36:00.000Z	jacquesdupontd	Dr_Willis	but i think that if we are on linux it's to run only what is sufficient, otherwise i would run winshit with all the services
+2009-11-14T12:37:00.000Z	jacquesdupontd	Dr_Willis	for how long have you been using ubuntu ?
+2009-11-14T12:39:00.000Z	Dr_Willis	jacquesdupontd	 nothing stopping you from wriging your own scripts to launch exactly what you want.. but you are wanting everything to be automatic- thats the harder part
+2009-11-14T12:40:00.000Z	jacquesdupontd	Dr_Willis	ok i took that in notes

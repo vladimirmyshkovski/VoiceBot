@@ -1,0 +1,94 @@
+2009-09-06T21:43:00.000Z	trineox		ok 1 sec
+2009-09-06T21:43:00.000Z	TheVenerableZ	trineox	the commented line didn't work
+2009-09-06T21:46:00.000Z	TheVenerableZ		ok someone kick jack
+2009-09-06T21:46:00.000Z	TheVenerableZ		or op me so i can
+2009-09-06T21:46:00.000Z	trineox		TheVenerable2: oh ok i just saw that....i have vista on my machine so let me look at my grub 1 sec
+2009-09-06T21:49:00.000Z	trineox	TheVenerableZ	hey my entry is at the bottom after end of automatic kernals list
+2009-09-06T21:51:00.000Z	TheVenerableZ	trineox	Do you have any ideas? I have two separate drives, one with ubuntu and one with windows. I want to mount the first disk in grub  for WIndows
+2009-09-06T21:52:00.000Z	trineox	TheVenerableZ	well your grub menu entry needs to be fixed.....
+2009-09-06T21:52:00.000Z	TheVenerableZ	trineox	I'm trying to fix it, but I don't know what to put there
+2009-09-06T21:53:00.000Z	trineox	TheVenerableZ	ok, you need to basically cut and paste line 154 to line 164 needs to pasted to the bottom
+2009-09-06T21:54:00.000Z	trineox		how do i use the pastebin and ill paste mine
+2009-09-06T21:56:00.000Z	TheVenerableZ	trineox	After doing that, I get "Error 11: Unrecognized device string"
+2009-09-06T21:57:00.000Z	trineox		!pastebinit
+2009-09-06T21:58:00.000Z	TheVenerableZ		Does anyone know what a "Error 11: Unrecognized device string" means? I upgraded ubuntu 32 bit to 64 bit, and now I can't mount my windows drive
+2009-09-06T22:01:00.000Z	trineox		!paste | trineox
+2009-09-06T22:02:00.000Z	trineox		i have no luck with using pastebin...im still a linux newbie
+2009-09-06T22:05:00.000Z	trineox		ok thanks ActionParsnip
+2009-09-06T22:08:00.000Z	trineox	TheVenerableZ	check your pastebin i replied to it...that was simple
+2009-09-06T22:08:00.000Z	trineox	TheVenerableZ	look at my menu.lst....all the way at the bottom
+2009-09-06T22:11:00.000Z	TheVenerableZ	trineox	Where are your replies? I cant see them at http://paste.ubuntu.com/266201/
+2009-09-06T22:12:00.000Z	trineox		here http://paste.ubuntu.com/266214/
+2009-09-06T22:13:00.000Z	TheVenerableZ	trineox	thanks, i'm trying it now
+2009-09-06T22:13:00.000Z	trineox	TheVenerableZ	no problem now are you having problems accessing your windows drive from linux too or just booting windows?
+2009-09-06T22:15:00.000Z	TheVenerableZ	trineox	now I'm getting error 13, not 11
+2009-09-06T22:15:00.000Z	TheVenerableZ	trineox	Could it be the vista bootloader? Could the ubuntu installer have ruined that?
+2009-09-06T22:16:00.000Z	trineox	TheVenerableZ	it shouldnt have but if you think it might have you can run your vista disk and choose repair
+2009-09-06T22:17:00.000Z	trineox	TheVenerableZ	if you choose vista then it fails it could be the vista bootloader
+2009-09-06T22:17:00.000Z	trineox	TheVenerableZ	ive had a problem before and the repair option repaired it
+2009-09-06T22:18:00.000Z	trineox	TheVenerableZ	just make sure that your grub is correct, because your windows entry isnt in the correct place it should be at the bottom that i do know
+2009-09-06T22:19:00.000Z	TheVenerableZ	trineox	I overwrote my grub with yours.
+2009-09-06T22:19:00.000Z	TheVenerableZ	trineox	just the error message changed from 11 to 13.
+2009-09-06T22:19:00.000Z	TheVenerableZ	trineox	Any ideas on how to fix the vista boot files?
+2009-09-06T22:19:00.000Z	trineox	TheVenerableZ	vista your best option is run your vista disk choose repair it will fix the boot loader
+2009-09-06T22:20:00.000Z	trineox	TheVenerableZ	ill look up your error see if i can help you better
+2009-09-06T22:22:00.000Z	TheVenerableZ	trineox	your grub messed something up. Now I can't even boot into ubuntu any more
+2009-09-06T22:23:00.000Z	trineox	TheVenerableZ	well your ubuntu cd has a repair option for that
+2009-09-06T22:23:00.000Z	trineox	TheVenerableZ	u needed to only correct your grub entry by putting the windows entry to the bottom
+2009-09-06T22:24:00.000Z	trineox	TheVenerableZ	mine obviously wasnt the same i was only showing that my vista entry is at the bottom
+2009-09-06T22:24:00.000Z	trineox	TheVenerableZ	yours was above the ubuntu entries
+2009-09-06T22:25:00.000Z	TheVenerableZ	trineox	oooh, my bad. How can I revert that?
+2009-09-06T22:25:00.000Z	trineox	TheVenerableZ	well best bet would be to run the repair option on your ubuntu cd first
+2009-09-06T22:26:00.000Z	trineox	TheVenerableZ	it will fix the menu
+2009-09-06T22:26:00.000Z	TheVenerableZ	trineox	so, repair ubuntu, then repair windows?
+2009-09-06T22:26:00.000Z	trineox	TheVenerableZ	yes
+2009-09-06T22:27:00.000Z	TheVenerableZ	trineox	where's the repair option?
+2009-09-06T22:27:00.000Z	trineox	TheVenerableZ	well i feel the entry was wrong soo the repair of ubuntu will fix it and you should be able to boot either windows or ubuntu
+2009-09-06T22:28:00.000Z	trineox	TheVenerableZ	once you boot ubuntu cd choose restore
+2009-09-06T22:28:00.000Z	TheVenerableZ	trineox	I booted into the CD, and i don't see a repair option
+2009-09-06T22:28:00.000Z	trineox	TheVenerableZ	restore?
+2009-09-06T22:28:00.000Z	TheVenerableZ		Try ubuntu without any change to your computer, Install Ubuntu, Check cd for defects, test memory, boot from first hard disk
+2009-09-06T22:29:00.000Z	trineox	TheVenerableZ	boot without installing
+2009-09-06T22:29:00.000Z	trineox	TheVenerableZ	we can just repaste your old menu
+2009-09-06T22:30:00.000Z	TheVenerableZ	trineox	OK, I chose "Try Ubuntu without any change to your computer"
+2009-09-06T22:30:00.000Z	trineox	TheVenerableZ	good , remember how u edited your menu?
+2009-09-06T22:31:00.000Z	trineox	TheVenerableZ	edit it again but paste your old one from your link which i have
+2009-09-06T22:31:00.000Z	TheVenerableZ	trineox	So just paste from my link, but move windows to the bottom?
+2009-09-06T22:31:00.000Z	trineox	TheVenerableZ	yes
+2009-09-06T22:32:00.000Z	trineox	TheVenerableZ	starting with line 154 to 164 that section needs to be pasted to the bottom
+2009-09-06T22:32:00.000Z	trineox	TheVenerableZ	your link was http://paste.ubuntu.com/266201/
+2009-09-06T22:33:00.000Z	TheVenerableZ		thanks trineox
+2009-09-06T22:33:00.000Z	TheVenerableZ	trineox	how do i mount the drive?
+2009-09-06T22:33:00.000Z	trineox	TheVenerableZ	np ...go to system u dont see your drive?
+2009-09-06T22:34:00.000Z	trineox	TheVenerableZ	oops places lol...
+2009-09-06T22:35:00.000Z	TheVenerableZ	trineox	i see the disk in Places
+2009-09-06T22:35:00.000Z	trineox	TheVenerableZ	good
+2009-09-06T22:35:00.000Z	TheVenerableZ	trineox	but I can't edit the file unless i sudo
+2009-09-06T22:35:00.000Z	trineox	TheVenerableZ	yep
+2009-09-06T22:35:00.000Z	TheVenerableZ	trineox	let me find out how to get to the drive via terminal
+2009-09-06T22:36:00.000Z	trineox	TheVenerableZ	hmm let me think about that
+2009-09-06T22:36:00.000Z	TheVenerableZ	trineox	/dev/disk doesn't exist
+2009-09-06T22:37:00.000Z	trineox		anyone know how to run the text editor in sudo mode besides terminal?
+2009-09-06T22:38:00.000Z	trineox	TheVenerableZ	if you can get the editor to run in sudo without using terminal ull have it
+2009-09-06T22:38:00.000Z	TheVenerableZ	trineox	i just updated it
+2009-09-06T22:38:00.000Z	trineox		thx Nitrodist
+2009-09-06T22:38:00.000Z	trineox	TheVenerableZ	cool...u rebooting?
+2009-09-06T22:39:00.000Z	TheVenerableZ	trineox	http://paste.ubuntu.com/266229
+2009-09-06T22:39:00.000Z	TheVenerableZ		that's the menu.lst file now, rebooting
+2009-09-06T22:39:00.000Z	trineox	TheVenerableZ	thats better looks good
+2009-09-06T22:40:00.000Z	TheVenerableZ	trineox	ok, so now ubuntu loads but vista still has error code 13
+2009-09-06T22:40:00.000Z	trineox	TheVenerableZ	ya i saw something
+2009-09-06T22:41:00.000Z	trineox	TheVenerableZ	on your windows entry
+2009-09-06T22:41:00.000Z	trineox	TheVenerableZ	you are missing makeactive entry
+2009-09-06T22:41:00.000Z	TheVenerableZ	trineox	what should I do now?
+2009-09-06T22:42:00.000Z	trineox	TheVenerableZ	take a look at mine again http://paste.ubuntu.com/266214/
+2009-09-06T22:42:00.000Z	TheVenerableZ		banbhfive: no, what's that?
+2009-09-06T22:42:00.000Z	trineox	TheVenerableZ	yours doesnt show it as a active partition
+2009-09-06T22:42:00.000Z	TheVenerableZ	trineox	can you send me the line(s) i should add/change?
+2009-09-06T22:43:00.000Z	TheVenerableZ	trineox	i'm really lost now, sorry
+2009-09-06T22:43:00.000Z	trineox	TheVenerableZ	yes
+2009-09-06T22:45:00.000Z	TheVenerableZ	trineox	I added makeactive aboce chainloader +1, second to last line
+2009-09-06T22:45:00.000Z	TheVenerableZ	trineox	rebooting now
+2009-09-06T22:45:00.000Z	trineox	TheVenerableZ	good
+2009-09-06T22:46:00.000Z	TheVenerableZ	trineox	check pm
+2009-09-06T22:46:00.000Z	trineox	TheVenerableZ	 k

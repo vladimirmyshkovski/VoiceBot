@@ -1,0 +1,94 @@
+2006-11-19T16:26:00.000Z	pfred1		or it's just not that good a file manager now is it?
+2006-11-19T16:27:00.000Z	pfred1		so why did they call it Ubuntu anyways and not simply Debian done right?
+2006-11-19T16:28:00.000Z	pfred1		chmod (1)            - change file access permissions
+2006-11-19T16:29:00.000Z	pfred1		my OS shouldn't have a philosophy either!
+2006-11-19T16:29:00.000Z	pfred1		my hammer in my garage doesn't have a philosophy
+2006-11-19T16:30:00.000Z	Jordan_U	pfred1	Doesn't have SSH either.
+2009-11-27T12:54:00.000Z	pfred1	Jordan_U	OK
+2009-11-27T12:34:00.000Z	Jordan_U	pfred1	24 is the same as 32 if that is why you are asking
+2009-11-27T12:34:00.000Z	pfred1	Jordan_U	really I see no way of even checking it yet.
+2009-11-27T12:38:00.000Z	Jordan_U	pfred1	Yes, all distros are ( or will be ) using no xorg.conf by default
+2009-11-27T12:38:00.000Z	Jordan_U	pfred1	You can still create one if you need one
+2009-11-27T12:39:00.000Z	pfred1	Jordan_U	I've seen different opinions about that on some forums I was lead to from Google so I am not entirely sure if that is 100% accurate or not.
+2009-11-27T12:41:00.000Z	Jordan_U	pfred1	Upsream Xorg has slowly been depending less and less on an Xorg.conf and doing more autodetection, Ubuntu does not need an Xorg.conf anymore and therefore doesn't ship one by default ( though it will add one if you change the default, for instance installing nvidia drivers through Hardware Drivers )
+2009-11-27T12:41:00.000Z	pfred1	Jordan_U	well I hate to break it to anyone but I had better hardware detection in 2003
+2009-11-27T12:42:00.000Z	Jordan_U	pfred1	What gfx card?
+2009-11-27T12:42:00.000Z	pfred1	Jordan_U	and got the XF86Config files to prove it too!
+2009-11-27T12:42:00.000Z	Jordan_U	pfred1	Anecdotes don't really mean much :)
+2009-11-27T12:43:00.000Z	pfred1	Jordan_U	sec let me check
+2009-11-27T12:43:00.000Z	pfred1	Jordan_U	ATI Technologies Inc Rage 128 Pro Ultra TF
+2009-11-27T12:44:00.000Z	Jordan_U	pfred1	Though a slightly more meaningfull anecdote is that I see a *lot* less questions about not getting full resolution in this channel now than a few years ago
+2009-11-27T12:44:00.000Z	pfred1	Jordan_U	oh i have full resolution it is the dozen other resolutions I seem to be missing
+2009-11-27T12:45:00.000Z	pfred1	Jordan_U	that and i am getting horrible artifacts on my screen when I drag a window
+2009-11-27T12:45:00.000Z	pfred1	Jordan_U	which is why I want to check the dolor depth and hopefully change it to something that'll make that stop!
+2009-11-27T12:54:00.000Z	Jordan_U	pfred1	Sorry, only one dash ( -configure )
+2009-11-27T12:46:00.000Z	Jordan_U	pfred1	Try turing off compiz ( desktop effects in System > Preferences > Appearance ) and can you pastebin the output of "xrandr" ?
+2009-11-27T12:46:00.000Z	Jordan_U	pfred1	Why do you suspect color depth is the problem
+2009-11-27T12:47:00.000Z	pfred1	Jordan_U	because supposedly this card sucks in 16 bit and is better in 32 or 24 if you prefer
+2009-11-27T12:47:00.000Z	pfred1	Jordan_U	really I'm just hoping to make the artifacts go away
+2009-11-27T12:48:00.000Z	Jordan_U	pfred1	Try disabling compiz
+2009-11-27T12:50:00.000Z	pfred1	Jordan_U	desktop effects are disabled.
+2009-11-27T12:51:00.000Z	pfred1	Jordan_U	typically I don't go in for nonsense like that and turn that sort of thing off but its been off.
+2009-11-27T12:51:00.000Z	pfred1	Jordan_U	should i enable the desktop effects?
+2009-11-27T12:52:00.000Z	Jordan_U	pfred1	If they are disabled you probably don't have hardware accellerated 3d right now
+2009-11-27T12:52:00.000Z	pfred1	Jordan_U	yes is there like an xf86config like app for xorg?
+2009-11-27T12:53:00.000Z	Jordan_U	pfred1	Xorg --configure
+2009-11-27T12:53:00.000Z	pfred1	Jordan_U	because something tells me this is configged like garbage now
+2009-11-27T12:53:00.000Z	pfred1	Jordan_U	ta will try that!
+2009-11-27T12:54:00.000Z	Jordan_U	pfred1	I doube that artifacts would be caused by misconfiguration, sounds like a driver problem to me
+2009-11-27T12:54:00.000Z	pfred1	Jordan_U	one more question run that in an xterm in X or drop to a console and run it?
+2009-11-27T12:55:00.000Z	pfred1	Jordan_U	I doubt i am using the correct driver
+2009-11-27T12:55:00.000Z	Jordan_U	pfred1	Console
+2009-11-27T12:55:00.000Z	pfred1	Jordan_U	this system has run Ubuntu 6.04 I believe it was and it didn't do these things
+2009-11-27T12:56:00.000Z	Jordan_U	pfred1	COuld be a regressuion in the radeon driver, I assume you never used fglrx?
+2009-11-27T12:56:00.000Z	pfred1	Jordan_U	never even heard of it but I'll search the term now that i have
+2009-11-27T12:57:00.000Z	pfred1	Jordan_U	usually I'm a nvidia kind of a guy but I'm fresh out now
+2009-11-27T12:57:00.000Z	Jordan_U	pfred1	It's the proprietary ati driver, it's never been installed by default so you would have had to install it yourself
+2009-11-27T12:58:00.000Z	pfred1	Jordan_U	at this stage of the game if it fixes what is going on I'd give it a shot but I am just thinking the wrong driver is running
+2009-11-27T12:58:00.000Z	Jordan_U	pfred1	Can you pastebin your /var/log/Xorg.0.log ?
+2009-11-27T12:58:00.000Z	pfred1	Jordan_U	sure
+2009-11-27T13:00:00.000Z	pfred1	Jordan_U	ah, any section in particular or the whole thing? its 788 lines long.
+2009-11-27T13:01:00.000Z	Jordan_U	pfred1	Whole thing, you can use pastebinnit ( sudo apt-get install pastebinnit && pastebinnit /var/log/Xorg.0.log )
+2009-11-27T13:01:00.000Z	pfred1	Jordan_U	easier than copy paste wit hthe mouse!
+2009-11-27T13:02:00.000Z	pfred1	Jordan_U	E: Couldn't find package pastebinnit
+2009-11-27T13:03:00.000Z	Jordan_U	pfred1	Sorry, only one n, pastebinit
+2009-11-27T13:03:00.000Z	pfred1	Jordan_U	k
+2009-11-27T13:04:00.000Z	pfred1	Jordan_U	http://pastebin.com/f358dbb2c
+2009-11-27T13:05:00.000Z	Jordan_U	pfred1	How bizzarre, it's using fbdev
+2009-11-27T13:05:00.000Z	pfred1	Jordan_U	its all bizarre to me!
+2009-11-27T13:06:00.000Z	Jordan_U	pfred1	Create an xorg.conf and put "ati" as the driver in the device section
+2009-11-27T13:06:00.000Z	pfred1	Jordan_U	if it wasn't for the window drag artifact things and having no resolution change I'd be happy I mean it sort of works.
+2009-11-27T13:07:00.000Z	Jordan_U	pfred1	ANd you get full resolution ttys :)
+2009-11-27T13:08:00.000Z	pfred1	Jordan_U	yeah between the drag artifacts and my lack of usable resolutions I knew something had to be messed up thanks for all your help
+2009-11-27T13:08:00.000Z	pfred1	Jordan_U	I haven't setup a system since 2003 so I'm a little rusty
+2009-11-27T13:08:00.000Z	Jordan_U	pfred1	np, there may be a good reason why it's not using ati though so don't think just adding that is a sure bet
+2009-11-27T13:10:00.000Z	pfred1	Jordan_U	I've been thinking I'll merge some info from an olf XF86Config file i have on this system because the monitor is "unknown" really I should just get a new gfx card
+2009-11-27T13:11:00.000Z	Jordan_U	pfred1	Try this for an xorg.conf: http://pastebin.com/f7ea3d326
+2009-11-27T13:11:00.000Z	pfred1	Jordan_U	sec have to let my cat out bbiab
+2009-11-27T13:15:00.000Z	Jordan_U	pfred1	This isn't a PPC mac is it?
+2009-11-27T13:15:00.000Z	pfred1	Jordan_U	~
+2009-11-27T13:15:00.000Z	Jordan_U	pfred1	?
+2009-11-27T13:15:00.000Z	pfred1	Jordan_U	opps just got back from cat there no it is an old Gateway
+2009-11-27T13:16:00.000Z	Jordan_U	pfred1	Just so you know I have to leave in about 15 minutes
+2009-11-27T13:17:00.000Z	pfred1	Jordan_U	I never used this PC very much in the past but now that I am using it I am not liking this video adapter much I think i need to change it.
+2009-11-27T13:28:00.000Z	Jordan_U	pfred1	If you mean selecting a windows when you move the mouse over it and then raising it after a period of time, yes gnome has that option
+2009-11-27T13:29:00.000Z	pfred1	Jordan_U	yeah others fixed me up with where to find it i feel much better now and will stay in The Gnome the new KDE is horrible!
+2009-11-27T13:29:00.000Z	Jordan_U	pfred1	Have you tried the xorg.conf I sent you?
+2009-11-27T13:30:00.000Z	pfred1	Jordan_U	i downloaded it but I'll probably fix the modeline section put in my old ones and I am thinking of just putting a new video adapter into this machine too
+2009-11-27T13:31:00.000Z	Jordan_U	pfred1	With fbdev you can only have one resolution ( determined at boot )
+2009-11-27T13:31:00.000Z	pfred1	Jordan_U	yeah it is horrible I tried changing res doing some youtube earlier and was like wth?
+2009-11-27T13:32:00.000Z	pfred1	Jordan_U	from poking around some and not having settings in places i should have I knew something major bad was up.
+2009-11-27T13:32:00.000Z	Jordan_U	pfred1	I need to manually use fbdev because of a crappy sis card I have but I've never heard of it being used by default
+2009-11-27T13:33:00.000Z	pfred1	Jordan_U	I just loaded this machine up yesterday I haven't changed very much yet.
+2009-11-27T13:33:00.000Z	Jordan_U	pfred1	I need to leave soon, do you mind trying that xorg.conf now to satisfy my curiosity? :)
+2009-11-27T13:33:00.000Z	pfred1	Jordan_U	i was running SuSE 8.2 since 2003 before and hadn't messed with much there for quite some time now.
+2009-11-27T13:34:00.000Z	pfred1	Jordan_U	sure i'll drop it in and restart X you've been a great help
+2009-11-27T13:36:00.000Z	pfred1	Jordan_U	bbiab
+2009-11-27T13:42:00.000Z	pfred1	Jordan_U	http://pastebin.com/f130573a3
+2009-11-27T13:43:00.000Z	Jordan_U	pfred1	Sorry, it's late, remove the extra quote after "ati"
+2009-11-27T13:43:00.000Z	pfred1	Jordan_U	heh OK but hey I'll come back tomorrow OK?
+2009-11-27T13:44:00.000Z	Jordan_U	pfred1	Ok, I won't be here :)
+2009-11-27T13:44:00.000Z	pfred1	Jordan_U	no? when then?
+2009-11-27T13:44:00.000Z	Jordan_U	pfred1	Wednesday
+2009-11-27T13:45:00.000Z	pfred1	Jordan_U	I made a note of it C U then!
+2009-11-27T13:45:00.000Z	Jordan_U	pfred1	Bye

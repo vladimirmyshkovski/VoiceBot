@@ -1,0 +1,94 @@
+2010-12-24T21:15:00.000Z	iszak		depends.
+2010-12-24T21:15:00.000Z	iszak		10.10 is buggy
+2010-12-24T21:17:00.000Z	jrib	iszak	do you want help fixing it?  What exactly does "broke" mean?
+2010-12-24T21:17:00.000Z	iszak	jrib	can you fix the logging me out instead of shutting down or restarting bug?
+2010-12-24T21:18:00.000Z	jrib	iszak	what's the bug number?
+2010-12-24T21:18:00.000Z	iszak	jrib	no idea.
+2010-12-24T21:18:00.000Z	jrib	iszak	then how can you make that statement...
+2010-12-24T21:19:00.000Z	iszak	jrib	http://ubuntuforums.org/showthread.php?t=1141794
+2010-12-24T21:20:00.000Z	jrib	iszak	does the issue persist with a freshly created new user?
+2010-12-24T21:20:00.000Z	iszak	jrib	no idea, i haven't tried, but that's just one of the bugs I've encountered.
+2010-12-24T21:20:00.000Z	jrib	iszak	I'm telling you to try so we can troubleshoot
+2010-12-24T21:20:00.000Z	iszak	jrib	that problem is the least of my worries, if you want to help me, help me get one of my monitors to display the right resolution.
+2010-12-24T21:21:00.000Z	iszak	jrib	already done.
+2010-12-24T21:21:00.000Z	jrib	iszak	you need to be more specific.
+2010-12-24T21:23:00.000Z	iszak	jrib	I edited xorg to add the resolution i want, and restarted, didn't work.
+2010-12-24T21:23:00.000Z	jrib	iszak	pastebin your xorg.conf
+2010-12-24T21:24:00.000Z	iszak	jrib	http://pastebin.com/BvCNp3qp
+2010-12-24T21:25:00.000Z	iszak	jrib	** sorry
+2010-12-24T21:27:00.000Z	iszak	jrib	Let me tell you a little about my setup, I have 3 x 23" Samsung P2370's two of which are on the DVI and one is on a mini display port (active) to DVI ,that is the that one I'm having problems with.
+2010-12-24T21:28:00.000Z	jrib	iszak	there are other suggestions on that wiki page from ubottu, what happens when you try them?
+2010-12-24T21:28:00.000Z	iszak	jrib	any in particular?
+2010-12-24T21:29:00.000Z	jrib	iszak	whatever works :)  I have no experience with the setup you described, so we just have to try and see.  This mini display port by the way is still from your ati card?
+2010-12-24T21:29:00.000Z	iszak	jrib	yeah.
+2010-12-24T21:31:00.000Z	jrib	iszak	also, do you know if ati provides some special program to configure things?  I know nvidia does
+2010-12-24T21:31:00.000Z	iszak	jrib	it does of which I tried to use to solve with no luck, it's called ATI Catalyst Control Center.
+2010-12-24T21:31:00.000Z	jrib	iszak	ah
+2010-12-24T21:32:00.000Z	iszak	jrib	made some amendments, trying it out, if not rm -fr /media/ubuntu/
+2010-12-24T21:33:00.000Z	jrib	iszak	keep in mind these are issues with ati's driver :)  But of course you have to have some things work regardless of whose fault it is
+2010-12-24T21:33:00.000Z	iszak	jrib	nothing to do with ATI Drivers, it was working before..
+2010-12-24T21:34:00.000Z	jrib	iszak	before what?
+2010-12-24T21:34:00.000Z	iszak	jrib	^
+2010-12-24T21:34:00.000Z	jrib	iszak	you fsck the drive?
+2010-12-24T21:35:00.000Z	iszak	jrib	no.
+2010-12-24T21:35:00.000Z	jrib	iszak	you should see what the result of that is
+2010-12-24T23:08:00.000Z	iszak	jrib	I found out why it wasn't working, turnt out my active mini displayport to dvi adapter got fried (despite being < 3 months old) as it requires USB power which probably over loaded it. $80 down the drain.
+2011-02-08T06:20:00.000Z	jrib	iszak	you forgot to tell us what you expect!
+2011-02-08T06:20:00.000Z	iszak	jrib	I expect it to find all occurances of a string in files and override those files.
+2011-02-08T06:21:00.000Z	jrib	iszak	why not use sed -i instead of the redirection?
+2011-02-08T06:22:00.000Z	iszak	jrib	^
+2011-02-08T06:22:00.000Z	jrib	iszak	who says?
+2011-02-08T06:22:00.000Z	iszak	jrib	I saw it in the man
+2011-02-08T06:22:00.000Z	iszak	jrib	nvm thinking of xargs
+2011-02-08T06:23:00.000Z	iszak	jrib	will look into that, thanks.
+2011-02-08T06:24:00.000Z	jrib	iszak	I think with -i, you will have an easier time.  My guess is that the redirection is happening at the end like: (grep blah | xargs blargh) > file.  Do you have a "filename" file? :P
+2011-02-08T06:24:00.000Z	iszak	jrib	filename is a variable/token that xargs uses
+2011-02-08T06:24:00.000Z	jrib	iszak	yes, but not if what I just said is happening
+2011-02-08T06:26:00.000Z	jrib	iszak	I get one when I run something similar here :/
+2011-02-08T06:26:00.000Z	iszak	jrib	oh
+2011-02-08T06:26:00.000Z	iszak	jrib	you're right, ya.
+2011-02-08T06:26:00.000Z	iszak	jrib	why doesn't xargs replace the instance of filename?
+2011-02-08T06:27:00.000Z	iszak	jrib	and how do I use the -i option, I tried like sed -i *.php 's/foo/bar/g'
+2011-02-08T06:27:00.000Z	jrib	iszak	sed -i 's/foo/bar/' filename
+2011-02-08T06:27:00.000Z	iszak	jrib	I don't want to manually have to input all the filenames though.
+2011-02-08T06:28:00.000Z	jrib	iszak	note, if you want backups, you can pass a suffix to -i
+2011-02-08T06:28:00.000Z	iszak	jrib	I want to find multiple files and replace all instances of a string inside them
+2011-02-08T06:28:00.000Z	iszak	jrib	will that command do such a thing?
+2011-02-08T06:29:00.000Z	jrib	iszak	right, so change your command to: grep -lr "search" ./ | xargs -I filename sed -i 's/search/replace/g' filename
+2011-02-08T06:30:00.000Z	jrib	iszak	<3
+2011-02-08T06:33:00.000Z	iszak	jrib	say I'm starting a program from CLI like nautilus and I'm doing nautilus /path/to/directory &, it still outputs things to the terminal, how to prevent that?
+2011-02-08T06:34:00.000Z	jrib	iszak	you could use nohup and then output would go to a file nohup creates (and you'd have the added benefit of not having nautilus close when you close your terminal), or you could append 2>&1 > /dev/null  to your command
+2011-02-08T06:34:00.000Z	iszak	jrib	nah I don't no output, thanks for the later command!
+2011-02-08T06:35:00.000Z	iszak	jrib	is there any shortcut for that 2>&1 > /dev/null seems like a PITA To type.
+2011-02-08T06:35:00.000Z	jrib	iszak	I think &> /dev/null works too (we're redirecting stdout and stderr)
+2011-02-08T06:36:00.000Z	iszak	jrib	great! perfect, thanks.
+2011-02-08T06:36:00.000Z	iszak	jrib	except it takes power over the terminal, so hmm
+2011-02-08T06:36:00.000Z	jrib	iszak	you still need the & at the end
+2011-02-08T06:39:00.000Z	iszak	jrib	okay i've got another one for you if you're up for it?
+2011-02-08T06:39:00.000Z	jrib	iszak	if I know, sure
+2011-02-08T06:40:00.000Z	iszak	jrib	I want to find all files and directories that contain a string (find -name "*string*") obv. and then mv them to a new path with a different string.
+2011-02-08T06:41:00.000Z	jrib	iszak	if the find command returns foo/file1 and bar/file2 do you want them both to go to directory C as C/file1 and C/file2, or...?
+2011-02-08T06:52:00.000Z	iszak	jrib	sorry got distracted, that use case shouldn't occur.
+2011-02-08T06:52:00.000Z	jrib	iszak	I'm not sure what you want to do
+2011-02-08T06:53:00.000Z	iszak	jrib	I find to find all say files and folders with a particular string e.g. "foobar" and move it to "foobaz" instead.
+2011-02-08T06:55:00.000Z	iszak	jrib	makes sense?
+2011-02-08T06:56:00.000Z	jrib	iszak	do you mean you want to rename all the files?  But not actually move their location?
+2011-02-08T06:56:00.000Z	iszak	jrib	well essentially a rename is a move, isn't it?
+2011-02-08T06:57:00.000Z	jrib	iszak	I'm just trying to understand better what you want
+2011-02-08T06:57:00.000Z	iszak	jrib	I want to find all filese and folders with a particular string, and rename them to be without that particular string.
+2011-02-08T06:57:00.000Z	jrib	iszak	you can either use « rename » or find with -exec
+2011-02-08T06:58:00.000Z	iszak	jrib	I just usually use move to rename, is there a problem with that? (any adverse affects)
+2011-02-08T06:58:00.000Z	jrib	iszak	no, you are correct that renaming is essentially a mv (I just wasn't sure about what you wanted to do)
+2011-02-08T06:59:00.000Z	iszak	jrib	okay well how would I do it? find -name "*string*" | xargs -I filename mv filename (how to put filename with replaced string here)
+2011-02-08T07:00:00.000Z	iszak	jrib	I heard you can use backticks to perform like a sub-command e.g. mv filename `sed 's/string/replacement/g'`
+2011-02-08T07:00:00.000Z	jrib	iszak	you always choose the hard way -_-  I would do: rename --no-act 's/foo/bar/g' **/*foo*
+2011-02-08T07:00:00.000Z	iszak	jrib	I can't help it!
+2011-02-08T07:01:00.000Z	iszak	jrib	I guess I don't know the rename command well enough to use it effectively.
+2011-02-18T06:38:00.000Z	jrib	iszak	you can do it in compiz, ask #compiz
+2011-02-18T06:38:00.000Z	iszak	jrib	I know you can do it with a bunch of commands BUT I don't want to restrict dragging from desktops, will ask there.
+2011-04-08T07:00:00.000Z	iszak	jrib	would be nice to see the apt-fast implementation in the repo :( oh well
+2011-04-08T06:55:00.000Z	jrib	iszak	yes, axel...
+2011-04-08T06:56:00.000Z	iszak	jrib	I meant so I just do apt-get-axel or so
+2011-04-08T06:56:00.000Z	jrib	iszak	oh.  no, not that I know of
+2011-04-08T06:56:00.000Z	jrib	iszak	it's best to just choose a good mirror for your location
+2012-10-13T15:09:00.000Z	iszak	jrib	thanks, that led me to synclient, which lead me to searching, which led me to http://askubuntu.com/questions/192959/how-to-disable-three-finger-gestures-on-touchpad :) thanks

@@ -1,0 +1,93 @@
+2009-06-08T04:14:00.000Z	jreyes332	mdg	it's a compaq armada m300
+2009-06-08T04:14:00.000Z	mdg	jreyes332	wow!
+2009-06-08T04:15:00.000Z	jreyes332	mdg	still, there's a tutorial out there that points out how to install xubuntu in this machine
+2009-06-08T04:16:00.000Z	mdg	jreyes332	Sorry I just got here - you doing an install?
+2009-06-08T04:17:00.000Z	jreyes332	mdg	in fact, it's already installed, the problem is the boot up: it won't take to the login prompt, instead it stops with a "loading manual drivers" message
+2009-06-08T04:17:00.000Z	mdg	jreyes332	what's it say just before that?
+2009-06-08T04:18:00.000Z	jreyes332	mdg	it gives me some udevd-events..... abnormal exits
+2009-06-08T04:19:00.000Z	mdg	jreyes332	how long do you let it try loading?
+2009-06-08T04:20:00.000Z	jreyes332	mdg	it got stuck for about two hours in that "Loading manual drivers" this morning. But it takes about 5 minutes to get from the splash screen to the error messages
+2009-06-08T04:20:00.000Z	mdg	jreyes332	how big a swap file did you make?
+2009-06-08T04:21:00.000Z	jreyes332	mdg	twice the ram, that it 512 MB
+2009-06-08T04:21:00.000Z	jreyes332	mdg	intalled it yesterday, never got to work
+2009-06-08T04:22:00.000Z	mdg	jreyes332	odd that Ctrl + Alt + F2 does not get you to a terminal
+2009-06-08T04:23:00.000Z	jreyes332	mdg	it doesn't give me a prompt, it's just the blinking cursor... are there any instruction I can enter there?
+2009-06-08T04:23:00.000Z	mdg	jreyes332	how long was the computer running before you installed?
+2009-06-08T04:23:00.000Z	mdg	jreyes332	lots of stuff you can at the cursor
+2009-06-08T04:24:00.000Z	jreyes332	mdg	I reinstalled it today, it was not running before I installed it. Are you suggesting that the installation is corrupt due to a hot CPU?
+2009-06-08T04:24:00.000Z	mdg	jreyes332	no, now that I know you reinstalled and not running before that
+2009-06-08T04:24:00.000Z	mdg	jreyes332	do you have the link you used for install?
+2009-06-08T04:25:00.000Z	jreyes332	mdg	the problem with the blinking cursor is tat it doesn't write anything on the screen
+2009-06-08T04:25:00.000Z	mdg	jreyes332	did you use the alternate install CD?
+2009-06-08T04:26:00.000Z	jreyes332	mdg	yes I did
+2009-06-08T04:27:00.000Z	mdg	jreyes332	did you do the bios upgrade thing?
+2009-06-08T04:28:00.000Z	jreyes332	mdg	yes, burned the cd and did that stuff, I also thought it would help
+2009-06-08T04:29:00.000Z	mdg	jreyes332	perhaps you should try 8.10
+2009-06-08T04:31:00.000Z	jreyes332	mdg	perhaps. But I was opting for another distro entirely. Any suggestion? I don't want to go that far and get Damn Small
+2009-06-08T04:31:00.000Z	mdg	jreyes332	are you set on xubuntu feel?
+2009-06-08T04:32:00.000Z	jreyes332	mdg	not really. I have ubuntu in this laptop. In that old one Knoppix ran almost smoothly from the CD, just some problems with OpenOffice, which I understand
+2009-06-08T04:32:00.000Z	mdg	jreyes332	perhaps zenwalk - based on slackware - one of the oldest distros
+2009-06-08T04:33:00.000Z	mdg	jreyes332	arch or debian if you really like to tweak the setup
+2009-06-08T04:34:00.000Z	jreyes332	mdg	I'll give them a look, the main objective was to get the laptop in this little Wireless network in my house, the Windows install was (is) very very slow
+2009-06-08T04:35:00.000Z	mdg	jreyes332	what kind of wifi card?
+2009-06-08T04:36:00.000Z	jreyes332	mdg	Cnet USB card, ran well in Knoppix
+2009-06-08T04:36:00.000Z	mdg	jreyes332	you will probably have best luck in zenwalk
+2009-06-08T04:37:00.000Z	jreyes332	mdg	great! thanks a lot for your help, I'll see what I can do.
+2009-06-08T04:38:00.000Z	mdg	jreyes332	your welcome!  good luck :)
+2009-06-08T04:44:00.000Z	mdg	jreyes332	what other linux are you running?
+2009-06-08T04:44:00.000Z	jreyes332	mdg	centOS 5.2 for college
+2009-06-08T04:44:00.000Z	mdg	jreyes332	you may want to try crunchbang too
+2009-06-08T04:45:00.000Z	jreyes332	mdg	Ubuntu based... sounds good. But does it use ubuntu's repos?
+2009-06-08T04:47:00.000Z	jreyes332	mdg	good. Do you think I'll get to run a good video app, live VLC, on that box?
+2009-06-08T04:48:00.000Z	mdg	jreyes332	Yes!
+2009-06-08T04:48:00.000Z	mdg	jreyes332	grab the firefox extension VideoDownloadHelper
+2009-06-08T04:49:00.000Z	jreyes332	mdg	Already got it! :)... by any chance, do you thing xbmc might work?
+2009-06-08T04:50:00.000Z	jreyes332	mdg	a media center. It's great, you should take a look, it's got great reviews everywhere: www.xbmc.org
+2009-06-08T04:51:00.000Z	jreyes332	mdg	http://lifehacker.com/5103464/five-best-media-center-applications  check that link, it was chosen the best media center app by lifehacker.com readers
+2009-06-08T04:51:00.000Z	mdg	jreyes332	looks very interesting :)
+2009-06-08T04:54:00.000Z	jreyes332	mdg	btw, do you know a good wireless router I could get? I have an aging Belkin one that's giving me problems with the LAN setup
+2009-06-08T04:55:00.000Z	mdg	jreyes332	I use a belkin too
+2009-06-08T04:56:00.000Z	mdg	jreyes332	I'm not up to N yet - still using G
+2009-06-08T04:57:00.000Z	jreyes332	mdg	but now N sounds pretty cool. Still, G is enough for good enough for fast file transfer, isn't it?
+2009-06-08T04:57:00.000Z	mdg	jreyes332	sure
+2009-06-08T04:57:00.000Z	mdg	jreyes332	my computers are older - so I stick with a little older stuff
+2009-06-08T04:57:00.000Z	jreyes332	mdg	like what?
+2009-06-08T04:59:00.000Z	jreyes332	mdg	what distro are they running?
+2009-06-08T05:00:00.000Z	mdg	jreyes332	and I have Ubuntu 8.10 on a G4 iMac
+2009-06-08T05:02:00.000Z	mdg	jreyes332	By the way, crunchbang ran great on the old Dell L60o0r - surfed for hours!
+2009-06-08T05:04:00.000Z	jreyes332	mdg	what are Crunchbang advantages against Xubuntu
+2009-06-08T05:04:00.000Z	mdg	jreyes332	Its even lighter than xubuntu
+2009-06-08T05:27:00.000Z	mdg	jreyes332	You've done some installs before!
+2009-06-08T05:27:00.000Z	jreyes332	mdg	why?
+2009-06-08T05:27:00.000Z	mdg	jreyes332	that was very good tutoring of cypha
+2009-06-08T05:28:00.000Z	jreyes332	mdg	yes, i've done like 8 installs on this machine
+2009-06-08T05:28:00.000Z	mdg	jreyes332	which distros?
+2009-06-08T05:29:00.000Z	jreyes332	mdg	one virtual CentOS, the rest Ubuntu. Most of them failed due to overheated CPU
+2009-06-08T05:30:00.000Z	jreyes332	mdg	also did more virtual machine installs on some friends laptops and stuff
+2009-06-08T05:30:00.000Z	mdg	jreyes332	what's your box  running now/what is box?
+2009-06-08T05:34:00.000Z	jreyes332	mdg	this is a Sony VAIO, 1GB ram, 1.8 centrino, 100 GB disk. running Ubuntu 9.04 and windows
+2009-06-08T05:35:00.000Z	mdg	jreyes332	and it would overheat the CPU? or is that another box
+2009-06-08T05:36:00.000Z	jreyes332	mdg	yes, that's weird, I had rough nights installing both 8.10 and 9.04
+2009-06-08T05:39:00.000Z	mdg	jreyes332	I learned the partition table lesson the hard way LOL
+2009-06-08T05:39:00.000Z	jreyes332	mdg	I learned the whole Ubuntu think the hard way.
+2009-06-08T06:19:00.000Z	jreyes332	mdg	thanks. I had rough times upgrading, so I wanted yo help a ibt
+2009-06-08T06:37:00.000Z	jreyes332	mdg	what was wrong with cypha?
+2009-06-08T06:37:00.000Z	mdg	jreyes332	He thought he was having problems starting x, but he needed to Ctrl + AlT+ F7
+2009-06-08T06:37:00.000Z	mdg	jreyes332	Then he said his dual display didn't work
+2009-06-08T06:38:00.000Z	jreyes332	mdg	told him to back up conf files
+2009-06-08T06:38:00.000Z	mdg	jreyes332	I guess he didn't get that done....
+2009-06-08T06:39:00.000Z	jreyes332	mdg	he didn't want to. How long have you been a Linux user?
+2009-06-08T06:39:00.000Z	mdg	jreyes332	He's supposed to come back.
+2009-06-08T06:39:00.000Z	mdg	jreyes332	I started with Damnsmalllinux 2.2 - about 2 1/2 -3 years
+2009-06-08T06:41:00.000Z	mdg	jreyes332	I hope you are around the next time I have problems - you did a great job :)
+2009-06-08T06:41:00.000Z	jreyes332	mdg	I thought you were here to solve your problems or to help people out?
+2009-06-08T06:42:00.000Z	mdg	jreyes332	to learn!
+2009-06-08T06:42:00.000Z	mdg	jreyes332	I actually downloaded a distro called INX (console) only with some tutorials about CLI to learn
+2009-06-08T06:43:00.000Z	jreyes332	mdg	hey, does DSL use rpms, debs or you have to compile everything?
+2009-06-08T06:43:00.000Z	mdg	jreyes332	I forget what they call them - not debs -there's other names
+2009-06-08T06:44:00.000Z	mdg	jreyes332	I checking now.....page is loading slow
+2009-06-08T06:45:00.000Z	jreyes332	mdg	how easy is it to install apps on that distro?
+2009-06-08T06:46:00.000Z	mdg	jreyes332	Uh oh - its offline
+2009-06-08T06:46:00.000Z	mdg	jreyes332	They have the apps you want to add in a compressed form - run in memory
+2009-06-08T06:46:00.000Z	jreyes332	mdg	ok, doesnt matter. got 2 go. next time you may see me logged as jreyes33, not jreyes332
+2009-06-08T06:49:00.000Z	mdg	jreyes332	http://en.wikipedia.org/wiki/Damn_Small_Linux- see the mydsl system

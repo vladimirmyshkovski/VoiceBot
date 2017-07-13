@@ -1,0 +1,94 @@
+2008-04-02T07:47:00.000Z	MeatGrinder	coldboot	are there options for me?
+2008-04-02T07:48:00.000Z	coldboot	MeatGrinder	You can also get the proprietary driver from ATI.
+2008-04-02T07:48:00.000Z	MeatGrinder	coldboot	ahh maybe that will help
+2008-04-02T07:48:00.000Z	MeatGrinder	coldboot	didn't know they had linux drivers
+2008-04-02T07:48:00.000Z	coldboot	MeatGrinder	You can get it from the apt repository
+2008-04-02T07:48:00.000Z	MeatGrinder	coldboot	how so?
+2008-04-02T07:48:00.000Z	coldboot	MeatGrinder	They've had them for a while, and the install process can be clunky.
+2008-04-02T07:49:00.000Z	coldboot	MeatGrinder	Do: apt-cache search fglrx
+2008-04-02T07:49:00.000Z	MeatGrinder	coldboot	do you have a link to instructions?
+2008-04-02T07:50:00.000Z	coldboot	MeatGrinder	You have an 8500?
+2008-04-02T07:50:00.000Z	MeatGrinder	coldboot	yes
+2008-04-02T07:50:00.000Z	coldboot	MeatGrinder	Use the default driver then.
+2008-04-02T07:51:00.000Z	MeatGrinder	coldboot	hmm why does youtube vids lag out my machine?
+2008-04-02T07:51:00.000Z	coldboot	MeatGrinder	I've never used the other driver, I worked for ATI on the Linux Driver Team. =)
+2008-04-02T07:51:00.000Z	coldboot	MeatGrinder	Probably a video issue, are they eating up all your CPU?
+2008-04-02T07:51:00.000Z	MeatGrinder	coldboot	yup
+2008-04-02T07:51:00.000Z	MeatGrinder	coldboot	i tried all the fixes in the forums
+2008-04-02T07:51:00.000Z	MeatGrinder	coldboot	no dice
+2008-04-02T07:51:00.000Z	coldboot	MeatGrinder	You probably don't have any acceleration, what driver are you using now?
+2008-04-02T07:52:00.000Z	MeatGrinder	coldboot	not sure
+2008-04-02T07:52:00.000Z	coldboot	MeatGrinder	type "grep Driver /etc/X11/xorg.conf" at the console
+2008-04-02T07:52:00.000Z	MeatGrinder	coldboot	default ubuntu installed i guess
+2008-04-02T07:52:00.000Z	MeatGrinder	coldboot	ok
+2008-04-02T07:52:00.000Z	coldboot	MeatGrinder	Pastebin the result (pastebin.com)
+2008-04-02T07:52:00.000Z	coldboot	MeatGrinder	Then give me the link.
+2008-04-02T07:53:00.000Z	MeatGrinder	coldboot	http://pastebin.com/m686a2703
+2008-04-02T07:54:00.000Z	coldboot	MeatGrinder	The '"Driver "ati"' line tells me you're using the open-source driver already.
+2008-04-02T07:54:00.000Z	MeatGrinder	coldboot	hmm that good or bad?
+2008-04-02T07:54:00.000Z	MeatGrinder	coldboot	I'm in mass too!
+2008-04-02T07:54:00.000Z	coldboot	MeatGrinder	That's the driver you have to use.
+2008-04-02T07:55:00.000Z	coldboot	MeatGrinder	Fascinating, you know how to use IRC. =)
+2008-04-02T07:55:00.000Z	coldboot	MeatGrinder	I bet you're not Canadian.
+2008-04-02T07:55:00.000Z	MeatGrinder	coldboot	been a loooong time not since Q3 days lol
+2008-04-02T07:55:00.000Z	coldboot	MeatGrinder	I'm not sure what we can do to fix this problem. I've been using the proprietary ATI driver the whole time.
+2008-04-02T07:56:00.000Z	coldboot	MeatGrinder	Let me look for you.
+2008-04-02T07:56:00.000Z	MeatGrinder	coldboot	i know, it's too bad, it's kind of a dog on my system, google earth runs like crap too
+2008-04-02T07:56:00.000Z	MeatGrinder	coldboot	flickers like mad..........OK thanks
+2008-04-02T07:58:00.000Z	coldboot	MeatGrinder	Is anything else that has to do with flash going slow?
+2008-04-02T07:58:00.000Z	coldboot	MeatGrinder	Are you in 32-bit or 64-bit linux?
+2008-04-02T07:59:00.000Z	MeatGrinder	coldboot	32 and yes all flash is 100% cpu
+2008-04-02T07:59:00.000Z	MeatGrinder	coldboot	haven't tried any 3d stuff other than google earth and that seems to be lagging to with all kinds of flickering prob due to compiz effects
+2008-04-02T07:59:00.000Z	coldboot	MeatGrinder	That's probably just flash.
+2008-04-02T08:00:00.000Z	coldboot	MeatGrinder	You're using compiz on a crappy video card, that's your problem.
+2008-04-02T08:00:00.000Z	MeatGrinder	coldboot	i tried all the flash fixes on that post in the forum, noc improvement
+2008-04-02T08:00:00.000Z	coldboot	MeatGrinder	Turn off Compiz, the 8500 won't be able to handle it well at all.
+2008-04-02T08:00:00.000Z	MeatGrinder	coldboot	yeah but I disabled all effects and youtube still is slow
+2008-04-02T08:00:00.000Z	coldboot	MeatGrinder	I'm not sure what could be wrong with flash, what browser?
+2008-04-02T08:00:00.000Z	MeatGrinder	coldboot	FF
+2008-04-02T08:01:00.000Z	coldboot	MeatGrinder	What version of Firefox and Ubuntu?
+2008-04-02T08:01:00.000Z	MeatGrinder	coldboot	7.10 with updates and latest FF (let me ck v.)
+2008-04-02T08:01:00.000Z	MeatGrinder	coldboot	FF is 2.0.0.13
+2008-04-02T08:02:00.000Z	coldboot	MeatGrinder	Is there some other 2d intensive graphics thing you can get your hands on that's not flash?
+2008-04-02T08:02:00.000Z	coldboot	MeatGrinder	I'm sort of out of ideas.
+2008-04-02T08:06:00.000Z	coldboot	MeatGrinder	It's not the connection for sure.
+2008-04-02T08:06:00.000Z	MeatGrinder	coldboot	marcel, BTW I tried this link and tried all the fixes http://ubuntuforums.org/showthread.php?t=661833
+2008-04-02T08:06:00.000Z	coldboot	MeatGrinder	I'm out of ideas. Maybe if you do a test of something 3d, it would help.
+2008-04-02T08:06:00.000Z	MeatGrinder	coldboot	google earth is 3d and that seems to dog out a bit
+2008-04-02T08:07:00.000Z	coldboot	MeatGrinder	That's too heavy, find something lighter.
+2008-04-02T08:07:00.000Z	coldboot	MeatGrinder	Some OpenGL test would do.
+2008-04-02T08:07:00.000Z	MeatGrinder	coldboot	oddly gnometetris dogs out the machine on repeated keystrokes too but probably unrelated
+2008-04-02T08:07:00.000Z	MeatGrinder	coldboot	need opengl test somehow
+2008-04-02T08:08:00.000Z	coldboot	MeatGrinder	glxgears
+2008-04-02T08:08:00.000Z	MeatGrinder	coldboot	ok
+2008-04-02T08:08:00.000Z	coldboot	MeatGrinder	apt-get install mesa-utils
+2008-04-02T08:08:00.000Z	coldboot	MeatGrinder	/usr/bin/glxgears
+2008-04-02T08:09:00.000Z	MeatGrinder	coldboot	ok
+2008-04-02T08:09:00.000Z	coldboot	MeatGrinder	For future reference: sudo aptitude install apt-file && sudo apt-file update && apt-file search name_of_some_file_from_unknown_package_like_maybe_glxgears
+2008-04-02T08:09:00.000Z	MeatGrinder	coldboot	mesa-util is already newest version
+2008-04-02T08:09:00.000Z	coldboot	MeatGrinder	Okay, just type glxgears and tell us the FPS
+2008-04-02T08:09:00.000Z	coldboot	MeatGrinder	It will report every 5 seconds
+2008-04-02T08:10:00.000Z	coldboot	MeatGrinder	Mine goes 10713.308 FPS, but I've got an nVidia 8800 GTS with the proprietary driver. =)
+2008-04-02T08:10:00.000Z	MeatGrinder	coldboot	gears looks ok but using 72% of cpu
+2008-04-02T08:10:00.000Z	coldboot	MeatGrinder	What's the FPS?
+2008-04-02T08:10:00.000Z	coldboot	MeatGrinder	Type glxgears from a console, it spits out to console.
+2008-04-02T08:11:00.000Z	MeatGrinder	coldboot	dont see fps on gears
+2008-04-02T08:11:00.000Z	coldboot	MeatGrinder	Launch glxgears from gnome-terminal
+2008-04-02T08:11:00.000Z	MeatGrinder	coldboot	fps is 1800
+2008-04-02T08:12:00.000Z	MeatGrinder	coldboot	in a window
+2008-04-02T08:12:00.000Z	coldboot	MeatGrinder	I guess that's pretty good.
+2008-04-02T08:12:00.000Z	coldboot	MeatGrinder	For a crappy old card. I would guess it's got something to do with flash.
+2008-04-02T08:12:00.000Z	MeatGrinder	coldboot	yeah i think 3d is ok, maybe it is my machine but youtube runs fine in windoze
+2008-04-02T08:12:00.000Z	coldboot	MeatGrinder	You could try downloading Opera and see if flash still goes slow, then you can rule out firefox.
+2008-04-02T08:13:00.000Z	coldboot	MeatGrinder	No, it's probably flash.
+2008-04-02T08:13:00.000Z	MeatGrinder	coldboot	good idea ill try it now
+2008-04-02T08:13:00.000Z	coldboot	MeatGrinder	If 3D is good performance, there will be nothing wrong with 2d.
+2008-04-02T08:13:00.000Z	coldboot	MeatGrinder	Flash for Linux is crappy and they don't pay much attention to it. It's always breaking on me.
+2008-04-02T08:13:00.000Z	MeatGrinder	coldboot	ahhh, i should try it on another distro just for hahas
+2008-04-02T08:15:00.000Z	MeatGrinder	coldboot	installed opera flash doesnt play, says to click to activate but I do and nothing
+2008-04-02T08:15:00.000Z	coldboot	MeatGrinder	At this point I don't know any more than you do about what to fix. I would just search for "flash 100% cpu linux OR ubuntu" in google without the quotes and keep going through the shit.
+2008-04-02T08:15:00.000Z	MeatGrinder	coldboot	affirmative
+2008-04-02T08:15:00.000Z	coldboot	MeatGrinder	That doesn't mean anything, it usually never works in Opera to start.
+2008-04-02T08:16:00.000Z	MeatGrinder	coldboot	yeah opera's not offering any info
+2008-04-02T08:16:00.000Z	coldboot	MeatGrinder	Don't stay up all night, this is going to be very boring and unrewarding.
+2008-04-02T08:16:00.000Z	MeatGrinder	coldboot	I know, I should be working important stuff like getting my CAC card working

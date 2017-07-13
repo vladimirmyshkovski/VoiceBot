@@ -1,0 +1,93 @@
+2009-01-06T05:03:00.000Z	gogereaver	nbeebo	oh thats easy jst record your pcm
+2009-01-06T05:03:00.000Z	gogereaver	nbeebo	no mic nedded
+2009-01-06T05:03:00.000Z	nbeebo	gogereaver	 wooot, where??? been looking for this for 1 week atleast
+2009-01-06T05:04:00.000Z	gogereaver	nbeebo	for recording device just slect wave or pcm
+2009-01-06T05:04:00.000Z	nbeebo	gogereaver	ok ill try
+2009-01-06T05:06:00.000Z	nbeebo	gogereaver	in the gnome volume control there is 2 options to change input source, line, mic (default), cd and front mic, what does line do? and how does cd work?
+2009-01-06T05:06:00.000Z	gogereaver	nbeebo	cd would capture any cd you played
+2009-01-06T05:06:00.000Z	gogereaver	nbeebo	that would work
+2009-01-06T05:07:00.000Z	gogereaver	nbeebo	as long as your playing back cds
+2009-01-06T05:07:00.000Z	gogereaver	nbeebo	in mic you should be able to chage the mic source you would change it to your soundcard
+2009-01-06T05:08:00.000Z	nbeebo	gogereaver	im gonna try to mount a directory as a cd, that must be possible, but in the end i want live stream but im sure thats possible too somehow..
+2009-01-06T05:08:00.000Z	gogereaver	nbeebo	i think its done in system
+2009-01-06T05:08:00.000Z	gogereaver	nbeebo	yea it is done threw system sounds
+2009-01-06T05:09:00.000Z	nbeebo	gogereaver	 no options to change the soundcard thing.. someone gave me a screenshot of it i didnt have that option... dammit
+2009-01-06T05:09:00.000Z	gogereaver	nbeebo	change the sound capture from your mic to the soundcard itsself
+2009-01-06T05:10:00.000Z	gogereaver	nbeebo	in the system menu
+2009-01-06T05:11:00.000Z	nbeebo	gogereaver	 oh the sound stuff there isnt the volume mixer.. let me see what i can do...
+2009-01-06T05:17:00.000Z	gogereaver	nbeebo	system prefs sound in recording slect yor card
+2009-01-06T05:18:00.000Z	nbeebo	gogereaver	should i change to capture alsa instead of just alsa?
+2009-01-07T06:45:00.000Z	gogereaver	nbeebo	lol did you get sound workin
+2009-01-07T06:45:00.000Z	nbeebo	gogereaver	nooope..
+2009-01-07T06:45:00.000Z	gogereaver	nbeebo	its soooo easy
+2009-01-07T06:45:00.000Z	gogereaver	nbeebo	just go to capture in the voulm manger
+2009-01-07T06:45:00.000Z	gogereaver	nbeebo	and unmute the speaker icon
+2009-01-07T06:49:00.000Z	nbeebo	gogereaver	this is my current settings.. http://data.fuskbugg.se/skalman01/-------------------------------------------------------------------------------------------Screenshot.png
+2009-01-07T06:50:00.000Z	gogereaver	nbeebo	in the device drop down menu you would be able to slect capture
+2009-01-07T06:50:00.000Z	gogereaver	nbeebo	thats what you wanna unmute should be a speaker icon
+2009-01-07T06:51:00.000Z	nbeebo	gogereaver	that is done isnt it..
+2009-01-07T06:52:00.000Z	gogereaver	nbeebo	i ment
+2009-01-07T06:53:00.000Z	gogereaver	nbeebo	in device manager on that windows
+2009-01-07T06:53:00.000Z	gogereaver	nbeebo	switch the device to capture
+2009-01-07T06:53:00.000Z	gogereaver	nbeebo	it should say like hda capture
+2009-01-07T06:54:00.000Z	nbeebo	gogereaver	ok ill try
+2009-01-07T06:54:00.000Z	gogereaver	nbeebo	from there you can switch the recording input i did this myself yesterday
+2009-01-07T06:55:00.000Z	gogereaver	nbeebo	you should only see 2 icons your speaker and mic
+2009-01-07T06:56:00.000Z	nbeebo	gogereaver	theres 2 options one is ALSA PCM other is monitor source, rest is the same, capture etc
+2009-01-07T06:56:00.000Z	nbeebo	gogereaver	i cant use sound yet no speakers, so i cant test
+2009-01-07T06:57:00.000Z	gogereaver	nbeebo	looks like its your option window on your setup
+2009-01-07T06:57:00.000Z	gogereaver	nbeebo	inout source
+2009-01-07T06:57:00.000Z	gogereaver	nbeebo	input
+2009-01-07T06:58:00.000Z	nbeebo	gogereaver	 there is 2 of those 'input source" , both with the options - mic, front mic, line and cd
+2009-01-07T06:58:00.000Z	gogereaver	nbeebo	then it looks right
+2009-01-07T06:59:00.000Z	nbeebo	gogereaver	hm ok, which should i choose?
+2009-01-07T06:59:00.000Z	gogereaver	nbeebo	it should grab any sound
+2009-01-07T06:59:00.000Z	gogereaver	nbeebo	mic with the speaker unmuted in recording looks correct
+2009-01-07T07:00:00.000Z	nbeebo	gogereaver	but which options with those input source stuff, line mic mic boost or cd? line?
+2009-01-07T07:00:00.000Z	gogereaver	nbeebo	just turn off the mic you dont whant it capturing both
+2009-01-07T07:00:00.000Z	gogereaver	nbeebo	it doesent relly matter
+2009-01-07T07:00:00.000Z	nbeebo	gogereaver	but it doesnt work, tried with sound...
+2009-01-07T07:00:00.000Z	gogereaver	nbeebo	its a old trick with soundcards
+2009-01-07T07:01:00.000Z	gogereaver	nbeebo	humm maybe it just doesent support it
+2009-01-07T07:01:00.000Z	gogereaver	nbeebo	i have a capture option in alisa
+2009-01-07T07:01:00.000Z	nbeebo	gogereaver	NooooooOoOoo.... maybe do it in another way, within the system not the soundcard
+2009-01-07T07:01:00.000Z	nbeebo	gogereaver	alsa* just so u wont type that again..
+2009-01-07T07:02:00.000Z	gogereaver	nbeebo	that lets me switch  my input fro my mic to master/pcm
+2009-01-07T07:02:00.000Z	nbeebo	gogereaver	ok
+2009-01-07T07:03:00.000Z	gogereaver	nbeebo	im a acer one fan lol not  eepc
+2009-01-07T07:03:00.000Z	nbeebo	gogereaver	uhm ok lol
+2009-01-07T07:04:00.000Z	gogereaver	nbeebo	you could always run a cable from the sound card to line in its cheap and easy
+2009-01-07T07:05:00.000Z	gogereaver	nbeebo	all you need is a pice of 4m audio cable and a ipod head phone spliter
+2009-01-07T07:05:00.000Z	gogereaver	nbeebo	so you dont need to kep removing it
+2009-01-07T07:09:00.000Z	nbeebo	gogereaver	hmm back.. yeah maybe i should, but what u mean with the ipod part?
+2009-01-07T07:09:00.000Z	nbeebo	gogereaver	 oh now i see
+2009-01-07T07:09:00.000Z	nbeebo	gogereaver	i think i have one, or i can buy one at computer store
+2009-01-07T07:09:00.000Z	gogereaver	nbeebo	yea cuple bucks at walmart
+2009-01-07T07:10:00.000Z	gogereaver	nbeebo	for both parts
+2009-01-07T07:10:00.000Z	gogereaver	nbeebo	just run the 4mm cable from the soundcards output to line in
+2009-01-07T07:10:00.000Z	gogereaver	nbeebo	the splitter lets you conect your speakers to
+2009-01-07T07:10:00.000Z	nbeebo	gogereaver	pretty expensive to pay 1000 dollars for a trip to walmart.. lol
+2009-01-07T07:11:00.000Z	gogereaver	nbeebo	well any store
+2009-01-07T07:11:00.000Z	nbeebo	gogereaver	yeah i know, im logical thinker...
+2009-01-07T07:11:00.000Z	nbeebo	gogereaver	ok thanks and buy all try that tomorrow
+2009-01-07T07:12:00.000Z	gogereaver	nbeebo	yea then line in is capturing all sound output
+2009-01-07T07:12:00.000Z	gogereaver	nbeebo	old tv cards used this trick
+2009-01-07T07:12:00.000Z	nbeebo	gogereaver	k ill try right away then.. lol
+2009-01-07T07:13:00.000Z	gogereaver	nbeebo	heh just rember splitter first lol
+2009-01-07T07:13:00.000Z	gogereaver	nbeebo	on the output
+2009-01-07T07:15:00.000Z	gogereaver	nbeebo	heh sometimes if you cant get softwhere to do it thers always a way to get the hardware to
+2009-01-07T07:18:00.000Z	nbeebo	gogereaver	yep.. but really everything is technical.. even atoms o_O
+2009-01-07T07:19:00.000Z	gogereaver	nbeebo	better off just using cds thow being it will recored all that way even game sounds
+2009-01-07T07:21:00.000Z	gogereaver	nbeebo	if just using cd playback it wil only steam the music on the disk
+2009-01-07T07:22:00.000Z	nbeebo	gogereaver	yeah for now, but since ive seen live screencast as if the webcamera took it  but it wasnt, and each program uses a different port for sound so tou speak, so if i find a super leet haxxor i think its possible.. lol
+2009-01-07T07:22:00.000Z	nbeebo	gogereaver	different sound port*
+2009-01-07T07:22:00.000Z	gogereaver	nbeebo	with the line in lead setup i said any output on your pc can be recorded
+2009-01-07T07:23:00.000Z	gogereaver	nbeebo	no hacks nedded
+2009-01-07T07:23:00.000Z	gogereaver	nbeebo	dont knoe why your softwhere doesent have that option
+2009-01-07T07:23:00.000Z	nbeebo	gogereaver	yeah... .. but trying to broadcast internet radio through a game.. but maybe u can do that with mounting a directory/folder as a cd...
+2009-01-07T07:25:00.000Z	gogereaver	nbeebo	acully that would  mean you need brodcastong softwhere that supports mp3 playback
+2009-01-07T07:25:00.000Z	gogereaver	nbeebo	i only knoe how to do that with shoutcast and some winamp plugins
+2009-01-07T07:26:00.000Z	nbeebo	gogereaver	hmm yeah.. but ill take that later on
+2009-01-07T07:26:00.000Z	gogereaver	nbeebo	never did it in linux but i bet icecash can do it
+2009-01-21T04:17:00.000Z	gogereaver	nbeebo	adsusr
+2009-01-21T04:18:00.000Z	gogereaver	nbeebo	addusr

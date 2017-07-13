@@ -1,0 +1,92 @@
+2009-10-30T03:59:00.000Z	RenatoSilva		updating to karmic, will pidgin be removed for the new client?
+2009-10-30T04:00:00.000Z	ActionParsnip	RenatoSilva	no, you can still install it
+2009-10-30T04:00:00.000Z	RenatoSilva	ActionParsnip	what if I didn't have it?
+2009-10-30T04:00:00.000Z	ActionParsnip	RenatoSilva	sudo apt-get install pidgin
+2009-10-30T04:05:00.000Z	ActionParsnip	RenatoSilva	i use carrier, its a fork of pidgin but you can directly ask the devs for functionality
+2009-10-30T04:06:00.000Z	RenatoSilva	ActionParsnip	does carrier IM still exist?
+2009-10-30T04:06:00.000Z	ActionParsnip	RenatoSilva	totally
+2009-10-30T04:07:00.000Z	RenatoSilva	ActionParsnip	I stopped using it when I felt it was a failed fork
+2009-11-13T13:53:00.000Z	ActionParsnip	RenatoSilva	http://ubuntuforums.org/showthread.php?t=1002384
+2009-11-13T13:54:00.000Z	ActionParsnip	RenatoSilva	i'd also ask in #vbox
+2010-07-23T04:52:00.000Z	ActionParsnip	RenatoSilva	its not maintained but is in the repo
+2010-07-23T04:55:00.000Z	RenatoSilva	ActionParsnip	^
+2010-07-23T04:56:00.000Z	ActionParsnip	RenatoSilva	it does work, just nobody is coding for it but the code works. I use it on my laptop just dandy
+2010-07-23T04:57:00.000Z	RenatoSilva	ActionParsnip	ok I know, I just thought that the vista decoration was so cool that people would create a replacement. I heard of Jasper
+2011-08-31T07:09:00.000Z	ActionParsnip	RenatoSilva	http://paste.ubuntu.com/678505/
+2011-08-31T07:09:00.000Z	ActionParsnip	RenatoSilva	755 as zykotick9 says
+2011-08-31T07:10:00.000Z	RenatoSilva	ActionParsnip	home, not home's content
+2011-08-31T07:11:00.000Z	ActionParsnip	RenatoSilva	oh, the actual folder /home ?
+2011-08-31T07:11:00.000Z	RenatoSilva	ActionParsnip	NO
+2011-08-31T07:11:00.000Z	RenatoSilva	ActionParsnip	/home/YOU
+2011-08-31T07:11:00.000Z	ActionParsnip	RenatoSilva	specify the folder and I can find out
+2011-08-31T07:11:00.000Z	ActionParsnip	RenatoSilva	ok, gimme a sec
+2011-08-31T07:11:00.000Z	RenatoSilva	ActionParsnip	you'll find the default as asked?
+2011-08-31T07:12:00.000Z	ActionParsnip	RenatoSilva	http://paste.ubuntu.com/678507/
+2011-08-31T07:12:00.000Z	ActionParsnip	RenatoSilva	indeed
+2011-08-31T07:13:00.000Z	RenatoSilva	ActionParsnip	I wanna know default permissions, not yours
+2011-08-31T07:13:00.000Z	ActionParsnip	RenatoSilva	those are default, i haven't touched them
+2011-08-31T07:13:00.000Z	ActionParsnip	RenatoSilva	in my case they are one and the same thing
+2011-08-31T07:14:00.000Z	ActionParsnip	RenatoSilva	that's why I am giving you it
+2011-08-31T07:15:00.000Z	RenatoSilva	ActionParsnip	I haven't touched mine too, dumb
+2011-08-31T07:15:00.000Z	ActionParsnip	RenatoSilva	weird
+2011-08-31T07:15:00.000Z	RenatoSilva	ActionParsnip	why would I ask at all?
+2011-08-31T07:15:00.000Z	ActionParsnip	RenatoSilva	you may have been chowning and chmodding you folderz and wanted the default access.
+2011-08-31T07:16:00.000Z	ActionParsnip	RenatoSilva	lots of reasons exists why you would ask
+2011-08-31T07:16:00.000Z	RenatoSilva	ActionParsnip	sorry?
+2011-08-31T07:16:00.000Z	ActionParsnip	RenatoSilva	not at all
+2011-08-31T07:16:00.000Z	ActionParsnip	RenatoSilva	confused really
+2011-08-31T07:42:00.000Z	ActionParsnip	RenatoSilva	can you expand the question please
+2011-08-31T07:46:00.000Z	ActionParsnip	RenatoSilva	you can set a lower or higher swappiness value
+2011-08-31T07:49:00.000Z	ActionParsnip	RenatoSilva	the swapiness value tells the kernel how often to use swap, high swapiness will make the swap space be used more, lower will try and keep apps in ram and use swap less
+2011-09-29T20:52:00.000Z	ActionParsnip	RenatoSilva	sure, type ren then hit TAB
+2011-09-29T20:52:00.000Z	RenatoSilva	ActionParsnip	sorry? what are you talking about? I have no idea
+2012-02-20T02:13:00.000Z	ActionParsnip	RenatoSilva	MD5 test it then use unetbootin
+2012-02-20T02:15:00.000Z	ActionParsnip	RenatoSilva	I'd use a true install. Its easier to work wit
+2012-02-20T02:15:00.000Z	ActionParsnip	RenatoSilva	you never extract the iso
+2012-02-20T02:25:00.000Z	ActionParsnip	RenatoSilva	oh god not another "I hate unity". Am I right?
+2012-02-20T02:17:00.000Z	ActionParsnip	RenatoSilva	wubi installs ubuntu to a drive image file stored in NTFS, its fine as a try before you buy but as a long term thing its not great
+2012-02-20T02:18:00.000Z	RenatoSilva	ActionParsnip	ok thanks, ubuntu.com is not clear about that
+2012-02-20T02:18:00.000Z	ActionParsnip	RenatoSilva	use unetbootin and you can make a bootable USB to test the OS with as well as install from
+2012-02-20T02:19:00.000Z	ActionParsnip	RenatoSilva	you can use WIndows 7 to resize its own NTFS partition to make free space to install to
+2012-02-20T02:19:00.000Z	ActionParsnip	RenatoSilva	grub2 can boot the ISO but you will have windows boot loader which is rubbish
+2012-02-20T02:19:00.000Z	RenatoSilva	ActionParsnip	I'm going to the yet somewhat working ubuntu installation now, so it's just unetbootin --help and I'll get there?
+2012-02-20T02:20:00.000Z	ActionParsnip	RenatoSilva	once you run unetbootin, you'll see what is going on
+2012-02-20T02:20:00.000Z	ActionParsnip	RenatoSilva	if you only have windows installed, you don't have grub2
+2012-02-20T02:21:00.000Z	RenatoSilva	ActionParsnip	I just sound to have only windows
+2012-02-20T02:21:00.000Z	RenatoSilva	ActionParsnip	I've been upgrading since years I think a clear install is worth now
+2012-02-20T02:22:00.000Z	RenatoSilva	ActionParsnip	look what I've lost completely with oneiric (please do watch): http://www.videolog.tv/video.php?id=670508
+2012-02-20T02:24:00.000Z	ActionParsnip	RenatoSilva	thats just some ubuntu desktop....so what?
+2012-02-20T02:24:00.000Z	RenatoSilva	ActionParsnip	what do you mean
+2012-02-20T02:25:00.000Z	RenatoSilva	ActionParsnip	that was natty, oneiric runied it
+2012-02-20T02:25:00.000Z	RenatoSilva	ActionParsnip	no cube no custom theme no emerald (I KNOW about emerald)
+2012-02-20T02:26:00.000Z	ActionParsnip	RenatoSilva	lets repeat the same ol same ol;  Gnome is not the ONLY desktop. If you install XFCE and use that, it will act and run like that
+2012-02-20T02:26:00.000Z	RenatoSilva	ActionParsnip	I'm sorry, what's your point exactly
+2012-02-20T02:26:00.000Z	RenatoSilva	ActionParsnip	what do you mean like that
+2012-02-20T02:26:00.000Z	ActionParsnip	RenatoSilva	you can install xfce4 and logoff, log on to the xfce session and you can replace xfwin4 with compiz
+2012-02-20T02:27:00.000Z	RenatoSilva	ActionParsnip	because I've been told it would be "like that" with gnome-shell or the fallback package
+2012-02-20T02:27:00.000Z	ActionParsnip	RenatoSilva	xfce is fully available in Oneiric and will look just like that video does
+2012-02-20T02:27:00.000Z	ActionParsnip	RenatoSilva	xfce will look and feel like gnome2
+2012-02-20T02:28:00.000Z	RenatoSilva	ActionParsnip	ok but I have a problem, through all trouble with oneiric I've deleted compiz config so how would be the steps? install xfce, then what? sorry
+2012-02-20T02:28:00.000Z	ActionParsnip	RenatoSilva	sudo apt-get --reinstall install compiz xfce4
+2012-02-20T02:29:00.000Z	ActionParsnip	RenatoSilva	basically, you think Oneiric is Unity. Which isn't true at all, its a real ignorant view. Other desktops exist and you can get a desktop just like that video with no effort at all but you think 'oneiric spoiled it'....
+2012-02-20T02:30:00.000Z	RenatoSilva	ActionParsnip	then it's just start configuring in the settings manager and so forth? ok thanks, maybe I'll give it a try...(still thinking about using new gnome)...if so, do you know a reliable ppa to get emerald from? I downloaded one from google search but it didn't work in oneiric
+2012-02-20T02:30:00.000Z	RenatoSilva	ActionParsnip	basically I think what?
+2012-02-20T02:31:00.000Z	ActionParsnip	RenatoSilva	emerald is dead dude
+2012-02-20T02:31:00.000Z	ActionParsnip	RenatoSilva	how has "oneiric runied it"?
+2012-02-20T02:33:00.000Z	RenatoSilva	ActionParsnip	I've seen a few hits for emerald in oneiric involving compiling it so I think its development is not dead in upstream
+2012-02-20T02:43:00.000Z	ActionParsnip	RenatoSilva	still no reply yet...
+2012-02-20T02:35:00.000Z	ActionParsnip	RenatoSilva	so how has "oneiric ruined it"? exactly?
+2012-02-20T02:35:00.000Z	RenatoSilva	ActionParsnip	so you speak for the whole web on that? Sorry but there's a git codebase in github iirc
+2012-02-20T02:37:00.000Z	ActionParsnip	RenatoSilva	http://askubuntu.com/questions/79923/how-to-install-emerald-theme-manager-and-dual-switch-between-emerald-themes-and    gets you emerald in Oneiric
+2012-02-20T02:38:00.000Z	RenatoSilva	ActionParsnip	will take a look at that link thanks
+2012-02-20T02:38:00.000Z	ActionParsnip	RenatoSilva	you still haven't answered my question....
+2012-02-20T02:39:00.000Z	RenatoSilva	ActionParsnip	how oneiric ruined it?
+2012-02-20T02:39:00.000Z	ActionParsnip	RenatoSilva	yes...
+2012-02-20T02:44:00.000Z	RenatoSilva	ActionParsnip	it's in the buffer waiting for flush...:)
+2012-02-20T02:44:00.000Z	ActionParsnip	RenatoSilva	nice
+2012-02-20T02:49:00.000Z	RenatoSilva	ActionParsnip	well, in natty I had customized compiz along with a theme created in gnome-appearance-settings (or -manager, can't recall), and emerald decorator with a custom theme. After upgrade to oneiric it simply disappeared, all this, that's how it ruined it
+2012-02-20T02:51:00.000Z	ActionParsnip	RenatoSilva	then install xfce and youwill be fine, it will still be Oneiric
+2012-02-20T02:51:00.000Z	ActionParsnip	RenatoSilva	you mean "Unity installed and wreked my settings"
+2012-02-20T02:51:00.000Z	ActionParsnip	RenatoSilva	Oneiric isn't Unity....
+2012-02-20T02:53:00.000Z	RenatoSilva	ActionParsnip	ok considering that
+2012-02-24T05:06:00.000Z	RenatoSilva	ActionParsnip	thanks for the guest tip

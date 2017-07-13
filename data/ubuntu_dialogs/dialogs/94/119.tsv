@@ -1,0 +1,94 @@
+2005-05-06T10:30:00.000Z	holycow		gimp is a completely underrated application, i really wish people would give it a serious try ... it's just hard to 'unlearn'
+2005-05-06T10:32:00.000Z	holycow		dataw0lf, i'm sorry to get personal btw ...
+2005-05-06T10:32:00.000Z	holycow		dataw0lf, your rather... negative response seemed unfounded and personal
+2005-05-06T10:33:00.000Z	holycow		dataw0lf, *nod* your usecase doesn't sound like a printe/other graphic design use case tho ... maybe there are tools its missing for you?
+2005-05-06T10:34:00.000Z	holycow		dataw0lf, if i had the time i would personally offer tutorials to any graphic designer taht wanted to try gimp tho
+2005-05-06T10:34:00.000Z	ivoks	holycow	that egzist
+2005-05-06T10:35:00.000Z	ivoks	holycow	http://www.gimp.org/tutorials/
+2005-05-06T10:35:00.000Z	ivoks	holycow	http://gimpguru.org/Tutorials/
+2005-05-06T10:35:00.000Z	holycow	ivoks	i'm fairly profficient in gimp these days :) danke
+2005-05-06T10:36:00.000Z	ivoks	holycow	ok :)
+2005-05-11T13:29:00.000Z	holycow	ivoks	your croatian?
+2005-05-11T13:29:00.000Z	ivoks	holycow	yes
+2005-05-11T13:30:00.000Z	holycow	ivoks	oh i see what your currency stuff posting was, your currency is now stronger against the dollar eh?
+2005-05-11T13:30:00.000Z	ivoks	holycow	nope... it's 5kn for 1$
+2005-05-11T13:31:00.000Z	holycow	ivoks	but you said it used to be 10k to $1
+2005-05-11T13:31:00.000Z	ivoks	holycow	euro didn't change rate, only $... it's going down every month
+2005-05-11T13:31:00.000Z	ivoks	holycow	yes
+2005-05-11T13:31:00.000Z	ivoks	holycow	not 10k (as 10 000), but 10KN :)
+2005-05-11T13:32:00.000Z	holycow	ivoks	i grokked :) my nomenclature sucks, i know nothing of the balkans :)
+2005-05-11T13:32:00.000Z	ivoks	holycow	:)
+2005-05-11T13:33:00.000Z	ivoks	holycow	blakan is part of the world where world doesn't want to have anything to do with :)
+2005-05-11T13:36:00.000Z	holycow	ivoks	p2p file sharing crap that doesn't work
+2005-05-11T13:36:00.000Z	ivoks	holycow	?
+2005-05-11T13:36:00.000Z	holycow	ivoks	oh sorry i thought you were asking the question :)
+2005-05-11T13:37:00.000Z	ivoks	holycow	i know very good what emule is... i'm fighting against it :)
+2005-05-11T13:38:00.000Z	holycow	ivoks	in what sense? fighting your own personal emule adiction perhaps?
+2005-05-11T13:38:00.000Z	ivoks	holycow	great job, heh? :)
+2005-05-11T13:39:00.000Z	ivoks	holycow	slaves? :)
+2005-05-11T13:39:00.000Z	ivoks	holycow	this is only my part time job :)
+2005-05-11T13:39:00.000Z	holycow	ivoks	lol what is? helping in #ubunt?
+2005-05-11T13:39:00.000Z	ivoks	holycow	i developted 60node cluster and complex firewall
+2005-05-11T13:40:00.000Z	ivoks	holycow	nope :) university admin :)
+2005-05-11T13:40:00.000Z	holycow	ivoks	ah cool
+2005-05-11T13:40:00.000Z	holycow	ivoks	your in the wrong channel then :)
+2005-05-11T13:41:00.000Z	ivoks	holycow	maybe... maybe not
+2005-05-11T13:41:00.000Z	holycow	ivoks	cool
+2005-05-11T13:41:00.000Z	holycow	ivoks	what city are you in over there?
+2005-05-11T13:41:00.000Z	ivoks	holycow	zagreb
+2005-05-11T13:45:00.000Z	holycow	ivoks	hey i need to build a transparent firewall/packet sniffer sitting between the net and my router ... i want to see all the packets that attempt to get in to gauge against our rules... someone mentioned i should setup a layer two firewall, am i thinking the right approach here?
+2005-05-11T13:46:00.000Z	ivoks	holycow	u need bridge firewall
+2005-05-11T13:47:00.000Z	holycow	ivoks	oh thanku
+2005-05-11T13:48:00.000Z	ivoks	holycow	that's machine with/without IP
+2005-05-11T13:48:00.000Z	ivoks	holycow	that filter traffic without anybody knows it egzist
+2005-05-11T13:48:00.000Z	holycow	ivoks	holycow i developted 60node cluster and complex firewall <-- okay now you got my attention
+2005-05-11T13:48:00.000Z	ivoks	holycow	? :))
+2005-05-11T13:49:00.000Z	ivoks	holycow	debian
+2005-05-11T13:49:00.000Z	ivoks	holycow	but i'm planing to swith on ubuntu
+2005-05-11T13:50:00.000Z	ivoks	holycow	at least on clients... server will stay on debian
+2005-05-11T13:50:00.000Z	holycow	ivoks	right on
+2005-05-11T13:51:00.000Z	ivoks	holycow	but i'll see...
+2005-05-11T13:51:00.000Z	ivoks	holycow	bigest problem is that this 60 computers are diskless
+2005-05-11T13:51:00.000Z	ivoks	holycow	and when i update/upgrade one, rest are too
+2005-05-11T13:51:00.000Z	holycow	ivoks	yeah lots of variables depending on the job it needs to do
+2005-05-11T13:51:00.000Z	holycow	ivoks	you mount from a central disk array right?
+2005-05-11T13:52:00.000Z	ivoks	holycow	but that is slow...
+2005-05-11T13:52:00.000Z	ivoks	holycow	yeah... imagine one server with 60 nodes, catching mount from it
+2005-05-11T13:52:00.000Z	ivoks	holycow	that server lives on the edge :)
+2005-05-11T13:53:00.000Z	ivoks	holycow	so, i'm planing to put disks in all clients
+2005-05-11T13:53:00.000Z	ivoks	holycow	and have 60 separate ubuntu instalations
+2005-05-11T13:53:00.000Z	ivoks	holycow	with ubuntu that's easy, there aren't so much updates as in sarge
+2005-05-11T13:53:00.000Z	ivoks	holycow	and i can have stable distro for 18 months
+2005-05-11T13:54:00.000Z	holycow	ivoks	how are you getting to install so many linux clients then?
+2005-05-11T13:54:00.000Z	ivoks	holycow	heh... i'll pay 2 guys to work that for me :)
+2005-05-11T13:54:00.000Z	ivoks	holycow	i'll develop kickstart file and build my own installation
+2005-05-11T13:55:00.000Z	ivoks	holycow	it will be "put CD in and go to other comp"
+2005-05-11T13:55:00.000Z	ivoks	holycow	instalaion will do all things by it self
+2005-05-11T13:55:00.000Z	holycow	ivoks	i plan on the same thing for all of our offices
+2005-05-11T13:56:00.000Z	holycow	ivoks	all clients will have hd's but all home dirs backed up live with rsync or some such.   the kickstarted reimage will restore latest backup files and theyre off and running
+2005-05-11T13:56:00.000Z	holycow	ivoks	cool to see that happening accross the pond :)
+2005-05-11T13:56:00.000Z	ivoks	holycow	http://cluster.grad.hr/index.php?page=monitor
+2005-05-11T13:56:00.000Z	ivoks	holycow	use NFS, not rsync
+2005-05-11T13:56:00.000Z	holycow	ivoks	not over the internet :)
+2005-05-11T13:57:00.000Z	ivoks	holycow	ah... over the net..
+2005-05-11T13:57:00.000Z	ivoks	holycow	check out NFSv4
+2005-05-11T13:57:00.000Z	ivoks	holycow	i think they fixed some security issues, but i'm not sure...
+2005-05-11T13:57:00.000Z	ivoks	holycow	my cluster is still on 2.4 :)
+2005-05-11T13:57:00.000Z	holycow	ivoks	cool
+2005-05-14T11:06:00.000Z	holycow	ivoks	apt-get install runit
+2005-05-14T11:06:00.000Z	ivoks	holycow	somehow i don't feel like it :)
+2005-05-14T11:07:00.000Z	ivoks	holycow	i could try, maybe...
+2005-05-14T11:08:00.000Z	ivoks	holycow	xmms2
+2005-05-14T11:08:00.000Z	ivoks	holycow	but that's something totally different
+2005-05-14T11:09:00.000Z	ivoks	holycow	xmms2.xmms.org
+2005-05-14T11:10:00.000Z	holycow	ivoks	*nod*
+2005-05-14T11:54:00.000Z	holycow	ivoks	the runit scripts seem incredibly simple ... neat --> http://smarden.org/runit/runscripts.html#privoxy
+2005-05-14T11:54:00.000Z	ivoks	holycow	but the system doesn't boot :)
+2005-05-14T11:54:00.000Z	holycow	ivoks	thats because you need runit scripts :)
+2005-05-14T12:58:00.000Z	holycow	ivoks	hey, it almost seems like ... i donno ... you have used debian once before eh?
+2005-05-14T12:59:00.000Z	ivoks	holycow	i don't see ubuntu being any different than debian :)
+2005-05-18T16:11:00.000Z	holycow	ivoks	accidentally tho, they didn't mean to commoditize it and loose control over it
+2005-05-26T12:09:00.000Z	ivoks	holycow	to much to read :)
+2005-05-26T12:16:00.000Z	holycow	ivoks	but well worth it
+2005-06-22T12:08:00.000Z	holycow	ivoks	rofl
+2005-06-22T12:08:00.000Z	holycow	ivoks	every windows user i run into that wants to try linux, i tell them to forget everything they learned on windows

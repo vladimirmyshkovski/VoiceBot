@@ -1,0 +1,94 @@
+2009-09-07T20:59:00.000Z	Sidewinder1		AFLunatic> What happens when you try to boot the demo?
+2009-09-07T21:01:00.000Z	Sidewinder1		AFLunatic>When you downloaded the iso, did you do an "md5sum" check to verify?
+2009-09-07T21:01:00.000Z	AFLunatic	Sidewinder1	no
+2009-09-07T21:01:00.000Z	Sidewinder1		St
+2009-09-07T21:01:00.000Z	Sidewinder1		AFLunatic>Stand by, I type very slowly
+2009-09-07T21:02:00.000Z	AFLunatic		k
+2009-09-07T21:03:00.000Z	Sidewinder1		AFLunatic> That may be it. Do a search for a winbloze campatible "md5sum" program and check the hash against what you downloaded. If that checks out, maybe you burned to disk at too fast a speed. Do it as slow (3X?) as you can.
+2009-09-07T21:04:00.000Z	AFLunatic		i just did a checksum on the iso
+2009-09-07T21:04:00.000Z	AFLunatic		md5sum: WARNING: 67 of 68 listed files could not be read
+2009-09-07T21:04:00.000Z	AFLunatic		md5sum: WARNING: 1 of 1 computed checksum did NOT match
+2009-09-07T21:04:00.000Z	AFLunatic		That's what it says
+2009-09-07T21:04:00.000Z	Sidewinder1		AFLunatic>Found your problem!!!
+2009-09-07T21:05:00.000Z	AFLunatic		Bad ISO?
+2009-09-07T21:05:00.000Z	Sidewinder1		Yes
+2009-09-07T21:05:00.000Z	Sidewinder1		Redownload
+2009-09-07T21:06:00.000Z	AFLunatic		I downloaded the torrent
+2009-09-07T21:06:00.000Z	AFLunatic		Cause it was extremely fast
+2009-09-07T21:06:00.000Z	AFLunatic		I'm assuming I shouldn't download the torrent?
+2009-09-07T21:06:00.000Z	Sidewinder1		AFLunatic>Then chk md5sum, reburn at slow speed, you might want to clean your burner if it's dusty :-)
+2009-09-07T21:07:00.000Z	Sidewinder1		AFLunatic>Nothing wrong with torrents
+2009-09-07T21:07:00.000Z	AFLunatic		Just to be clear, while running the md5sum.. the command is '>md5sum -c ubuntu-9.04-desktop-i386.iso'
+2009-09-07T21:07:00.000Z	AFLunatic		Right?
+2009-09-07T21:07:00.000Z	Sidewinder1		AFLunatic>Go to a torrent site listed at ubuntu.com
+2009-09-07T21:08:00.000Z	Sidewinder1		AFLunatic>Looks right to me; the proof is the error messages that it returned.
+2009-09-07T21:09:00.000Z	AFLunatic		Should I download 'Ubuntu alternate' or 'Ubuntu desktop'?
+2009-09-07T21:10:00.000Z	Sidewinder1		AFLunatic>After 11 hrs. I certainly understand your frustration!
+2009-09-07T21:10:00.000Z	AFLunatic		Yea, i'm dying for sleep but not until I get this working
+2009-09-07T21:10:00.000Z	Sidewinder1		desktop, you might want to try Hardy Heron as it's a long term service version.
+2009-09-07T21:11:00.000Z	Sidewinder1		AFLunatic>HH is what I'm using
+2009-09-07T21:11:00.000Z	Sidewinder1		Also, if you're tired may I make a suggestion?
+2009-09-07T21:13:00.000Z	Sidewinder1		AFLunatic>You may wish to sleep and come back when you're fresh. I know I make more "bone-head" choices and decisions when I'm tired.
+2009-09-07T21:28:00.000Z	Sidewinder1		IsmAvatar>Also if your system locks, shut down this way: http://en.wikipedia.org/wiki/Magic_SysRq_key
+2009-09-07T21:30:00.000Z	Sidewinder1		tool> Are you certain that it wasn't installed? Some programs execute only from the command line.
+2009-09-07T21:31:00.000Z	Sidewinder1		tool> What progie are you trying to install?
+2009-09-07T21:34:00.000Z	Sidewinder1		tool> This is gonna sound like a dumb question, and I'm not trying to be insulting but did you click on the "All" button or "installed"?
+2009-09-07T21:35:00.000Z	Sidewinder1		tool> I can't understand why it'd be blank.
+2009-09-07T21:35:00.000Z	Sidewinder1		tool> try what simplexo said.
+2009-09-07T21:37:00.000Z	Sidewinder1		tool> sudo apt-get install -f
+2009-09-07T21:39:00.000Z	Sidewinder1		lol
+2009-09-07T21:40:00.000Z	Sidewinder1		negative
+2009-09-07T21:40:00.000Z	Sidewinder1		np
+2009-09-07T21:41:00.000Z	Sidewinder1		beasty>Been readin' my wiki corrections eh?
+2009-09-07T21:43:00.000Z	Sidewinder1		beasty>Actually, I don't correct people, that would be somewhat rude. :-)
+2009-09-07T21:44:00.000Z	Sidewinder1		beasty> On occasion.
+2009-09-07T21:45:00.000Z	Sidewinder1		m3f> It's GRUB that needs to be reinstalled.
+2009-09-07T21:49:00.000Z	Sidewinder1	m3F	May very well be GRUB2, I know what it is but am unfamiliar with it's idiosyncrasies.
+2009-09-07T21:51:00.000Z	Sidewinder1		!ask | raul
+2009-09-07T21:52:00.000Z	Sidewinder1		And whom does it represent? :-)
+2009-09-07T21:52:00.000Z	Sidewinder1		Sorry, couldn't resist.
+2009-09-07T21:54:00.000Z	Sidewinder1		And my wife says I'm pathetic. Hmmm
+2009-09-07T21:54:00.000Z	Sidewinder1		What does she know?
+2009-09-07T21:56:00.000Z	Sidewinder1		ROFL
+2009-09-07T21:56:00.000Z	Sidewinder1		This is gonna be good. :-)
+2009-09-07T21:57:00.000Z	Sidewinder1		I better keep my mouth shut while I'm ahead...
+2009-09-07T21:58:00.000Z	Sidewinder1		No,...shut-up Side... Side slaps himself silly..
+2009-09-07T23:12:00.000Z	Sidewinder1		m4x> Sounds like a hardware problem, mobo etc.
+2009-09-07T23:14:00.000Z	Sidewinder1		m4x> Not if the problem is hardware related, ie: your motherboard or one of it's chips is bad. Try booting to live CD and see what happens.
+2009-09-07T23:18:00.000Z	Sidewinder1		m4x> That's beyond my ability, sorry, but if you can boot by bypassing, if it keeps up, you could remove the vendor's partition. I would check with someone more knowlegable than I brfore doing that.
+2009-09-07T23:33:00.000Z	Sidewinder1		maxsteel>Call UPS
+2009-09-07T23:41:00.000Z	Sidewinder1		!hi | b3rz3rk3r>
+2009-09-07T23:52:00.000Z	Sidewinder1		!ask
+2009-09-07T23:53:00.000Z	Sidewinder1		wow
+2009-09-07T23:55:00.000Z	Sidewinder1		TheEvilOne>Boot to live CD and click check for errors
+2009-09-07T23:56:00.000Z	Sidewinder1		You gotta be kiddin'
+2009-09-07T23:58:00.000Z	Sidewinder1		Bache>gksudo nautilus will allow you to delete root files, but BE CAREFUL, oyu might want to back up first.
+2009-09-07T23:59:00.000Z	Sidewinder1		Bache>sudo apt-get remove acrobat would probably be better to try first.
+2009-09-08T00:23:00.000Z	AFLunatic		I desperately want Ubuntu
+2009-09-08T00:15:00.000Z	AFLunatic		Anyone know a fix for the DRDY ERR?
+2009-09-08T00:16:00.000Z	AFLunatic		How'd you get around it?
+2009-09-08T00:16:00.000Z	AFLunatic		I've been at it for 13 hours
+2009-09-08T00:17:00.000Z	AFLunatic		I've tried on 3 different hard drives
+2009-09-08T00:17:00.000Z	AFLunatic		Installing ubuntu that is
+2009-09-08T00:17:00.000Z	AFLunatic		There's no way it's the drive
+2009-09-08T00:18:00.000Z	AFLunatic		I REALLY like ubuntu
+2009-09-08T00:18:00.000Z	AFLunatic		But Kubuntu, Ubuntu, Xubuntu all do the same thing
+2009-09-08T00:18:00.000Z	AFLunatic		I can't get it installed
+2009-09-08T00:18:00.000Z	AFLunatic		Is there any other distro that is really similar to Kubuntu?
+2009-09-08T00:20:00.000Z	AFLunatic		Is Fedora a lot like Ubuntu?
+2009-09-08T00:20:00.000Z	AFLunatic		Anyone know how similar Fedora and Ubuntu are?
+2009-09-08T00:23:00.000Z	AFLunatic		I just need something that's going to work
+2009-09-08T00:23:00.000Z	AFLunatic		But it just will NOT install on my system
+2009-09-08T00:23:00.000Z	AFLunatic		Not everyone can just go buy a system anytime they want
+2009-09-08T00:24:00.000Z	AFLunatic		2 gigs
+2009-09-08T00:24:00.000Z	AFLunatic		DRDY ERR
+2009-09-08T00:24:00.000Z	AFLunatic		Whenever I boot from LiveCD
+2009-09-08T00:24:00.000Z	AFLunatic		Or install inside of Windows
+2009-09-08T00:25:00.000Z	AFLunatic		I guess the DRDY ERR just doesn't have a fix
+2009-09-08T00:25:00.000Z	AFLunatic		lol
+2009-09-08T00:25:00.000Z	AFLunatic		Yes
+2009-09-08T00:25:00.000Z	AFLunatic		I've been trying to install it for 13 and a half hours now
+2009-09-08T00:27:00.000Z	AFLunatic		Yes, 2 others
+2009-09-08T00:27:00.000Z	Sidewinder1		AFLunatic> How did you make out?
+2009-09-08T00:27:00.000Z	AFLunatic		AMD 2800+
+2009-09-08T00:27:00.000Z	AFLunatic	Sidewinder1	no go

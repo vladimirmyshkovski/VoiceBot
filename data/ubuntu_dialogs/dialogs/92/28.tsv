@@ -1,0 +1,92 @@
+2009-09-11T21:04:00.000Z	racha	Halitech	kk
+2009-09-11T20:34:00.000Z	Halitech	racha	what does lspci show?
+2009-09-11T20:35:00.000Z	racha	Halitech	i am new with ubuntu so ... u will need me what to do and i wil give u back informations
+2009-09-11T20:35:00.000Z	Halitech	racha	open a terminal and type in lspci then use !pastebin to give us the info
+2009-09-11T20:38:00.000Z	racha	Halitech	http://paste.ubuntu.com/269237/
+2009-09-11T20:39:00.000Z	racha	Halitech	u need "01:06.0 Multimedia audio controller: C-Media Electronics Inc CM8738 (rev 10)
+2009-09-11T20:39:00.000Z	Halitech	racha	first thing I see is your onboard sound is still enabled, go into your bios and disable it
+2009-09-11T20:40:00.000Z	racha	Halitech	... hmmm... i will try :S ... i will come back in 5-10 min :)
+2009-09-11T20:45:00.000Z	racha	Halitech	in my BIOS there is no option to disable onboard sound card :S
+2009-09-11T20:46:00.000Z	Halitech	racha	strange
+2009-09-11T20:46:00.000Z	racha	Halitech	I dont have any problems on Windows ...
+2009-09-11T20:46:00.000Z	racha	Halitech	idk why it dont work on ubuntu :S
+2009-09-11T20:47:00.000Z	racha	Halitech	and one more thing i tink i heard something on Turning on ubuntu but when i try to play music from Youtube nothing :S
+2009-09-11T20:48:00.000Z	Halitech	racha	I'm using XFCE so I'm not sure on the exact location, but look under system admin and see if there is something about sound there
+2009-09-11T20:49:00.000Z	racha	Halitech	u can help me a litle with that because its my First day on ubuntu :)
+2009-09-11T20:49:00.000Z	Halitech	racha	will do what I can but I don't have all the same menus as you do
+2009-09-11T20:49:00.000Z	racha	Halitech	so where can i start :)
+2009-09-11T20:50:00.000Z	Halitech	racha	go to system - admin - sounds (I think)
+2009-09-11T20:50:00.000Z	racha	Halitech	i have that on Preferences
+2009-09-11T20:51:00.000Z	Halitech	racha	ok, see if there is a test button
+2009-09-11T20:51:00.000Z	racha	Halitech	i hear noice ... so it work ?
+2009-09-11T20:52:00.000Z	Halitech	racha	if you are hearing the sound then yes, the sound card is working and you are looking at other things you need to do to get youtube working
+2009-09-11T20:53:00.000Z	racha	Halitech	like what ?
+2009-09-11T20:53:00.000Z	Halitech	racha	use pastebin again and post the output of cat /etc/apt/sources.list
+2009-09-11T20:53:00.000Z	racha	Halitech	can u please w8 just 1 min i need to reboot something is Bugged :S
+2009-09-11T20:55:00.000Z	racha	Halitech	What did u say ...
+2009-09-11T20:55:00.000Z	Halitech	racha	use pastebin again and post the output of cat /etc/apt/sources.list
+2009-09-11T20:56:00.000Z	racha	Halitech	btw. is there shortcut to terminal ?
+2009-09-11T20:56:00.000Z	Halitech	racha	no
+2009-09-11T20:57:00.000Z	racha	Halitech	http://paste.ubuntu.com/269248/
+2009-09-11T21:02:00.000Z	Halitech	racha	check here http://www.psychocats.net/ubuntu/sources
+2009-09-11T21:02:00.000Z	racha	Halitech	... i will try that ...
+2009-09-11T21:03:00.000Z	Halitech	racha	thats going to be step 1
+2009-09-11T21:03:00.000Z	racha	Halitech	i need to that like in Tutorial or something else ?
+2009-09-11T21:04:00.000Z	Halitech	racha	just follow the screenshots
+2009-09-11T21:05:00.000Z	Halitech	racha	thats fine
+2009-09-11T21:06:00.000Z	Halitech	racha	just say yes
+2009-09-11T21:06:00.000Z	racha	Halitech	ok .. sorry didnt see Screen Shot :)
+2009-09-11T21:07:00.000Z	Halitech	racha	there should be info on getting the keyring
+2009-09-11T21:09:00.000Z	racha	Halitech	i think i am done :D
+2009-09-11T21:10:00.000Z	Halitech	racha	ok, now step 2 :) http://www.psychocats.net/ubuntu/nonfree
+2009-09-11T21:12:00.000Z	racha	Halitech	i get : Cannot install 'ubuntu-restricted-extras'
+2009-09-11T21:13:00.000Z	Halitech	racha	ok, close the add/remove programs and open Synaptic and search for it
+2009-09-11T21:13:00.000Z	racha	Halitech	search for "Ubuntu restricted extras" ?
+2009-09-11T21:13:00.000Z	Halitech	racha	yes
+2009-09-11T21:14:00.000Z	racha	Halitech	install ?:D
+2009-09-11T21:14:00.000Z	Halitech	racha	you are using ubuntu and not kubuntu or xubuntu?
+2009-09-11T21:15:00.000Z	racha	Halitech	i just get my CD from mail today :)
+2009-09-11T21:15:00.000Z	Halitech	racha	but it doesn't tell you what the conflicting software is?
+2009-09-11T21:15:00.000Z	racha	Halitech	no :S
+2009-09-11T21:15:00.000Z	Halitech	racha	ok, close synaptic and open the terminal again
+2009-09-11T21:15:00.000Z	racha	Halitech	its possible u can access my pc with "Remote Desktop" or something ?:D
+2009-09-11T21:16:00.000Z	Halitech	racha	possible but I dont like doing that to people I don't know
+2009-09-11T21:16:00.000Z	racha	Halitech	ok ... what to type in Terminal ?
+2009-09-11T21:16:00.000Z	Halitech	racha	sudo apt-get install ubuntu-restricted-extras
+2009-09-11T21:20:00.000Z	racha	Halitech	done :)
+2009-09-11T21:21:00.000Z	Halitech	racha	ok, now run sudo apt-get install w32codecs flashplugin-nonfree
+2009-09-11T21:21:00.000Z	racha	Halitech	done ..
+2009-09-11T21:22:00.000Z	Halitech	racha	ok, try to open youtube and see what happens
+2009-09-11T21:22:00.000Z	racha	Halitech	Help him i need to go in WC ... :)
+2009-09-11T21:23:00.000Z	racha	Halitech	Agein nothing :S
+2009-09-11T21:23:00.000Z	Halitech	racha	have you installed the drivers for your video card?
+2009-09-11T21:24:00.000Z	racha	Halitech	Video work fine :S ... it instaled it Auto. i didnt installed anything ... just a sec i will come back in 2 min
+2009-09-11T21:27:00.000Z	racha	Halitech	And when i start test on "Sound" i dont hear all my 5.1 ... :S
+2009-09-11T21:29:00.000Z	Halitech	racha	in the terminal, run alsamixer and make sure nothing is muted
+2009-09-11T21:29:00.000Z	Halitech	racha	don't blame Ubuntu because something doesn't work properly, blame the hardware manufactorers for not releasing drivers or specs so we can create drivers that work properly
+2009-09-11T21:32:00.000Z	racha	Halitech	When i start test with OSS all my 5.1 Work ...
+2009-09-11T21:32:00.000Z	Halitech	racha	ok, use OSS then, now try youtube and see what happens
+2009-09-11T21:43:00.000Z	racha	Halitech	i cant belive they dont have drivers for ubuntu :S
+2009-09-11T21:33:00.000Z	racha	Halitech	nothing like allways maybe to try some mp3's ?
+2009-09-11T21:34:00.000Z	racha	Halitech	It Works but no Bass and low q. :(((
+2009-09-11T21:35:00.000Z	racha	Halitech	is there something i can do with that ?
+2009-09-11T21:36:00.000Z	racha	Halitech	u are here ?
+2009-09-11T21:37:00.000Z	Halitech	racha	yeah, try mp3s, youtube wouldn't work for me until I had decent video drivers installed (not sure on why)
+2009-09-11T21:37:00.000Z	racha	Halitech	i dont hear my Center and Bass speaker ?
+2009-09-11T21:38:00.000Z	racha	Halitech	its possible to change something ?
+2009-09-11T21:38:00.000Z	racha	Halitech	and its not 100% quality :S
+2009-09-11T21:40:00.000Z	Halitech	racha	I'm not sure, mine worked after plugging in the card
+2009-09-11T21:41:00.000Z	racha	Halitech	but where or who can help me with that ... i cant with out Bass :S and more then 50% effects of my songs :(
+2009-09-11T21:41:00.000Z	racha	Halitech	is there anyway to make it work with Windows drivers ?
+2009-09-11T21:42:00.000Z	racha	Halitech	they work perfectly
+2009-09-11T21:42:00.000Z	Halitech	racha	look in the forum and see if there is any help there or wait for a bit and ask about 5.1 issues in here
+2009-09-11T21:42:00.000Z	Halitech	racha	windows drivers are for windows and not linux
+2009-09-11T21:42:00.000Z	racha	Halitech	Is there anyone who can make from Windows Drivers - Drivers for linux ?
+2009-09-11T21:46:00.000Z	racha	Halitech	but if it work with OSS there need to be something to get all my 5.1 to work ?
+2009-09-11T21:48:00.000Z	racha	Halitech	Sidewiner ... u knowe any1 who can help me with 5.1 ?
+2009-09-11T21:48:00.000Z	Halitech	racha	most times the devs are working on getting basic functionality so depending on who is working on the driver for this card, getting 5.1 to work may not be a priority for them ... you could try playing around with the mixer settings and see if there is any settings there that might help
+2009-09-11T22:02:00.000Z	Halitech	racha	no, its just different then windows
+2009-09-11T22:02:00.000Z	racha	Halitech	can i use normal MSN with that software for Windows appl?
+2009-09-11T22:03:00.000Z	Halitech	racha	no
+2009-09-11T22:04:00.000Z	Halitech	racha	but there are numerous native apps that will work with the msn protocal
+2009-09-11T22:18:00.000Z	racha	Halitech	me agein :D ... and what can i do about youtube ?

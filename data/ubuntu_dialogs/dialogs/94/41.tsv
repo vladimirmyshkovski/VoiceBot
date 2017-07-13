@@ -1,0 +1,94 @@
+2010-02-05T07:21:00.000Z	Kengine		/dev/sda1 /mnt/sda1 ntfs-3g users,defaults,umask=000 0 0   <- should I add exactly this line ?
+2010-02-05T07:21:00.000Z	Kengine		ae86-drifter1:
+2010-02-05T07:22:00.000Z	ZykoticK9	Kengine	it's "user" not "users"
+2010-02-05T07:22:00.000Z	Kengine	ZykoticK9	so I put my username ?
+2010-02-05T07:22:00.000Z	ZykoticK9	Kengine	no you type "user" not "users"
+2010-02-05T07:23:00.000Z	Kengine	ZykoticK9	and defaults
+2010-02-05T07:23:00.000Z	ZykoticK9	Kengine	sorry don't have any "defaults" in my fstab so not sure
+2010-02-05T07:24:00.000Z	Kengine	ZykoticK9	should I reboot now ?
+2010-02-05T07:24:00.000Z	ZykoticK9	Kengine	i have no idea --- "sudo mount -a" will test your fstab
+2010-02-05T07:25:00.000Z	Kengine	ZykoticK9	it showed that error
+2010-02-05T07:26:00.000Z	ZykoticK9	Kengine	sorry i don't use NTFS so just address the channel
+2010-02-05T07:27:00.000Z	Kengine	ZykoticK9	its a new internal drive, how do i know if its NTFS or something ?
+2010-02-05T07:28:00.000Z	ZykoticK9	Kengine	your origional post "/dev/sda1 /mnt/sda1 ntfs-3g users,defaults,umask=000 0 0" if for an NTFS drive.  Is it formatted/etc?
+2010-02-05T07:28:00.000Z	Kengine	ZykoticK9	no its not formatted, i just plugged it in, the command I got is from a website
+2010-02-05T07:29:00.000Z	ZykoticK9	Kengine	try "sudo mount /dev/sda1 /mnt/sda1" < assumes /mnt/sda1 exists as a directory -- then type "mount" and see if it's mounted and what filesystem it's using
+2010-02-05T07:30:00.000Z	ZykoticK9	Kengine	"sudo fdisk -l" might be more helpful if the mount fails
+2010-02-05T07:31:00.000Z	ZykoticK9	Kengine	don't PM people without asking -- Especially don't SPAM PM people!  ever!
+2010-02-05T07:32:00.000Z	Kengine	ZykoticK9	you expect me to paste it here ?
+2010-02-05T07:32:00.000Z	ZykoticK9	Kengine	/dev/sda1 is your root partition !!!  NOT your new drive.  Right now do "sudo umount /mnt/sda1"
+2010-02-05T07:33:00.000Z	ZykoticK9	Kengine	"sudo fdisk -l" do you see another sdX where X is a letter like b,c,etc?
+2010-02-05T07:34:00.000Z	Kengine	ZykoticK9	I see sdb 500 gig
+2010-02-05T07:34:00.000Z	Kengine	ZykoticK9	Disk /dev/sdb doesn't contain a valid partition table
+2010-02-05T07:35:00.000Z	ZykoticK9	Kengine	you need to partition and format your new drive (GUI app would be gparted)
+2010-02-05T07:35:00.000Z	ZykoticK9	Kengine	you should take the line out of your fstab file!!!
+2010-02-05T07:36:00.000Z	Kengine	ZykoticK9	thanks, I just did that
+2010-02-05T07:37:00.000Z	ZykoticK9	Kengine	are you good with gparted?  partitioning / formatting?  what filesystem are you going to use (makes a big difference, espcially if you want to use this with different OSs other then just linux)
+2010-02-05T07:39:00.000Z	Kengine	ZykoticK9	ok i got gaprted installed, what label should i put ? msdos ?
+2010-02-05T07:39:00.000Z	Kengine	ZykoticK9	yes I think I want to use linux mostly, maybe 400 gig linux, 100 gig of widows
+2010-02-05T07:39:00.000Z	ZykoticK9	Kengine	what filesystem do you want?  (Side note - i'm NO expert in gparted at all, i'm more a cli guy)
+2010-02-05T07:40:00.000Z	Kengine	ZykoticK9	any file system that works on linux will do fine
+2010-02-05T07:41:00.000Z	ZykoticK9	Kengine	so i'd create a linux partition of about 400G and a Windows of 100G with Gparted...  not sure if that's straightforward or not with gparted, i'm hoping it is
+2010-02-05T07:41:00.000Z	ZykoticK9	Kengine	you'll want to format the linux side either ext3 or ext4 - your choice
+2010-02-05T07:42:00.000Z	Kengine	ZykoticK9	one thing, can I access this 2nd hdd from my windows, my windows is inside the sun virtualbox inside Ubuntu
+2010-02-05T07:42:00.000Z	ZykoticK9	Kengine	are you using Virtualbox OSE (from repo) or direct from Sun PUEL version?  or do you know.
+2010-02-05T07:42:00.000Z	Kengine	ZykoticK9	I dont know, I am using a free one
+2010-02-05T07:43:00.000Z	Kengine	ZykoticK9	but I can access a shared folder with ubuntu
+2010-02-05T07:43:00.000Z	ZykoticK9	Kengine	they are both free (as in beer), did you install it from Ubuntu repo?  if so then it's the OSE and doesn't support USB in any way, so this drive might not work.
+2010-02-05T07:44:00.000Z	Kengine	ZykoticK9	so if it supports USB then this will work ? I can check it with a USB drive
+2010-02-05T07:44:00.000Z	ZykoticK9	Kengine	to install the "real" version of VirtualBox see instructions for adding repository at http://www.virtualbox.org/wiki/Linux_Downloads
+2010-02-05T07:45:00.000Z	Kengine	ZykoticK9	should I create the new drive as extended partition ? I am not thinking of booting from this drive
+2010-02-05T07:46:00.000Z	ZykoticK9	Kengine	you can just use Primary so long as you don't want more then 4 partitions on the drive (it doesn't actually matter that much whichever you do)
+2010-02-05T07:47:00.000Z	Kengine	ZykoticK9	should I go for ex2 or ex3 ?
+2010-02-05T07:47:00.000Z	ZykoticK9	Kengine	3!
+2010-02-05T07:52:00.000Z	Kengine	ZykoticK9	ok got it formatted with gparted
+2010-02-05T07:53:00.000Z	ZykoticK9	Kengine	now you should be able to mount it with "sudo mount /dev/sdb1 /mnt/sda1" <using old mount point you gave
+2010-02-05T07:56:00.000Z	Kengine	ZykoticK9	sweet I got it mounted, so how do I make it automount ?
+2010-02-05T07:57:00.000Z	ZykoticK9	Kengine	add a line to fstab like "/dev/sdb1 /mnt/sda1  ext3    errors=remount-ro 0       1"
+2010-02-05T07:58:00.000Z	Kengine	ZykoticK9	what are the chances that Ubuntu is gonna automount it ? should I reboot and check ?
+2010-02-05T07:58:00.000Z	ZykoticK9	Kengine	zero
+2010-02-05T07:58:00.000Z	Kengine	ZykoticK9	lol ok
+2010-02-05T07:58:00.000Z	ZykoticK9	Kengine	wait is this a USB drive?
+2010-02-05T07:59:00.000Z	Kengine	ZykoticK9	no internal 2nd hard drive in Ultrabay
+2010-02-05T07:59:00.000Z	ZykoticK9	Kengine	then ya fstab is required
+2010-02-05T07:59:00.000Z	Kengine	ZykoticK9	before mounting it I saw Ubuntu recognized it after formatting
+2010-02-05T08:07:00.000Z	ZykoticK9	Kengine	cool
+2010-02-05T08:07:00.000Z	Kengine	ZykoticK9	lol, but I cant copy data on it
+2010-02-05T08:08:00.000Z	ZykoticK9	Kengine	"cd /mnt && sudo chmod ugo+rwx sda1"
+2010-02-05T08:08:00.000Z	ZykoticK9	Kengine	that gives everyone read/write/execute
+2010-02-05T08:09:00.000Z	Kengine	ZykoticK9	its sdb right ?
+2010-02-05T08:09:00.000Z	ZykoticK9	Kengine	oh if you're not using fstab you need to "cd /media" then find out where/what it's mounting as (you could also use the "mount" command to find out)
+2010-02-05T08:10:00.000Z	Kengine	ZykoticK9	should I add that line in fstab ?
+2010-02-05T08:10:00.000Z	ZykoticK9	Kengine	not if it's automounting correctly
+2010-02-05T08:12:00.000Z	Kengine	ZykoticK9	when i right click on it, it says "The permission of disk could not be determined" in the permission tab
+2010-02-05T08:13:00.000Z	ZykoticK9	Kengine	you need to change the permission on the mount point (filesystem), not the device!
+2010-02-05T08:14:00.000Z	Kengine	ZykoticK9	I just used that command you gave me cd /mnt && sudo chmod ugo+rwx sda1
+2010-02-05T08:14:00.000Z	ZykoticK9	Kengine	that probably won't work!  it's probably NOT mounted to /mnt/sda1!
+2010-02-05T08:15:00.000Z	Kengine	ZykoticK9	so I need to mount it and change its permission everytime I boot ?
+2010-02-05T08:16:00.000Z	ZykoticK9	Kengine	no of course not - you just need to get it setup correctly
+2010-02-05T08:16:00.000Z	ZykoticK9	Kengine	could you pastebin the output of the command "mount"
+2010-02-05T08:17:00.000Z	Kengine	ZykoticK9	wow, I can copy-paste in the fat32, but I cant do that in ext3
+2010-02-05T08:17:00.000Z	ZykoticK9	Kengine	fat32 doesn't have any permission
+2010-02-05T08:17:00.000Z	Kengine	ZykoticK9	can I just use the whole drive as fat32 then instead of ext3, will there be any performance problems ?
+2010-02-05T08:18:00.000Z	ZykoticK9	Kengine	sure just gparted the drive, remove the ext and use MS's crappy file system - no problems :)
+2010-02-05T08:18:00.000Z	Kengine	ZykoticK9	so I can run any programs from this file system right ?
+2010-02-05T08:19:00.000Z	ZykoticK9	Kengine	run programs from?  you're going to install programs onto this drive somehow (not sure how that's going to work out).
+2010-02-05T08:21:00.000Z	Kengine	ZykoticK9	this is my mount http://ubuntu.pastebin.com/m63471486
+2010-02-05T08:23:00.000Z	ZykoticK9	Kengine	so if you want to use ext3 then "cd /media && sudo chmod ugo+rwx disk" and you'll be able to use the ext3 by any user (or your idea to use FAT is probably even easier, although FAT is a pretty old/terrible filesystem by todays standards, but fast)
+2010-02-05T08:24:00.000Z	Kengine	ZykoticK9	sweet that works, but how do I make my system auto-do it everytime
+2010-02-05T08:25:00.000Z	ZykoticK9	Kengine	fstab
+2010-02-05T08:25:00.000Z	Kengine	ZykoticK9	so I just add that line to my fstab ?
+2010-02-05T08:26:00.000Z	ZykoticK9	Kengine	yes but do you want it mounting to /mnt/sda1?  I'd create a different mount point (a directory somewhere on your filesystem) to mount it too each time (all up to you though)
+2010-02-05T08:28:00.000Z	Kengine	ZykoticK9	just tell me, now if I change that hard drive to 250gig:FAT32 and 250gig:ext3, can I add the same command in fstab and it will work fine ? (commnad is cd /media && sudo chmod ugo+rwx disk)
+2010-02-05T08:29:00.000Z	ZykoticK9	Kengine	it depends on what Ubuntu decides to automount the drives at (i can't say for sure) - you can use the "mount" command to find out where the ext3 filesystem is being mounted, then you need to run the chmod command against the mount point.  does that make sense?
+2010-02-05T08:30:00.000Z	Kengine	ZykoticK9	/dev/sdb1 on /media/disk type ext3 (rw,nosuid,nodev,uhelper=hal)
+2010-02-05T08:31:00.000Z	ZykoticK9	Kengine	so /media/disk is the mount point
+2010-02-05T08:31:00.000Z	Kengine	ZykoticK9	so I add this for automount in fstab ? cd /media/disk && sudo chmod ugo+rwx disk
+2010-02-05T08:32:00.000Z	ZykoticK9	Kengine	no the fstab line is different!
+2010-02-05T08:33:00.000Z	Kengine	ZykoticK9	in order to automount and make it read-write enable what is the line I need to add to fstab ?
+2010-02-05T08:34:00.000Z	ZykoticK9	Kengine	the fstab line will look like "/dev/sdb1 /mnt/sda1               ext3    errors=remount-ro 0       1" --- the chmod you only need to do once and it's all good from then on!
+2010-02-05T08:36:00.000Z	Kengine	ZykoticK9	I just added this line end of my fstab
+2010-02-05T08:37:00.000Z	ZykoticK9	Kengine	if it's currently mount "sudo umount /mnt/sda1" and then try "sudo mount -a" and see if it works
+2010-02-05T08:37:00.000Z	Kengine	ZykoticK9	now I am gonna do that other statement cd /media/disk && sudo chmod ugo+rwx disk
+2010-02-05T08:38:00.000Z	ZykoticK9	Kengine	i gotta go, i'm sure someone else can pick up the torch for you - just explain your trying to create an fstab entry for a new drive.  best of luck man :)
+2010-02-05T08:38:00.000Z	Kengine	ZykoticK9	thanks a lot man, i am very greatfull

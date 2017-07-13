@@ -1,0 +1,94 @@
+2011-01-15T07:50:00.000Z	bugs_bugger		hey guys. does anyone know how to build sources in a way to make them portable?
+2011-01-15T07:51:00.000Z	OvermindDL1	bugs_bugger	 Portable in what way?  Architecture? kernel revisions?  Etc...?
+2011-01-15T07:51:00.000Z	bugs_bugger	OvermindDL1	uh....arc, i guess?
+2011-01-15T07:52:00.000Z	bugs_bugger	OvermindDL1	i just know about a program (Blender) that is executable on the most linux distros right away. it has glib included, if that is of any matter.
+2011-01-15T07:52:00.000Z	OvermindDL1	bugs_bugger	 Hmm, that is difficult, the exectuable file format does not easily allow multiple architectures in one binary.  What architectures?
+2011-01-15T07:53:00.000Z	OvermindDL1	bugs_bugger	 Blender is 32-bit x86 by default, which will work on 32-bit and 64-bit x86 systems
+2011-01-15T07:53:00.000Z	OvermindDL1	bugs_bugger	 If all you want to support is x86, that is easy, build for 32-bit and it will run on all
+2011-01-15T07:53:00.000Z	bugs_bugger	OvermindDL1	ah, i see
+2011-01-15T07:55:00.000Z	OvermindDL1	bugs_bugger	 64-bit x86 will run 32-bit x86 as well since 64-bit x86 CPU's have 32-bit support with a simple kernel flag (which is built in so you do not even need to think of it other then 'it works').
+2011-01-15T07:55:00.000Z	bugs_bugger	OvermindDL1	but how am i going to keep all the files in one folder from which my program is executable. usually, when compiling, make would install bins into /usr/bin and libs into some other folder etc
+2011-01-15T07:56:00.000Z	OvermindDL1	bugs_bugger	 That is what you are supposed to do, why do you want to keep everything in one folder?
+2011-01-15T07:56:00.000Z	bugs_bugger	OvermindDL1	mhh...just a second. im trying to get aim straight....
+2011-01-15T07:57:00.000Z	OvermindDL1	bugs_bugger	 http://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/index.html
+2011-01-15T07:58:00.000Z	bugs_bugger	OvermindDL1	what i would like to have is a way to compile sources that way i can wrap em up in an archive and extract em on another system and execut em right away
+2011-01-15T07:58:00.000Z	OvermindDL1	bugs_bugger	 As per the above link, technically you can put everything in, say, /usr/share/myprogram and that will work, just make a symlink to /usr/share/bin or whatever
+2011-01-15T07:59:00.000Z	OvermindDL1	bugs_bugger	 Oh, so you do not care about proper installation?
+2011-01-15T07:59:00.000Z	OvermindDL1	bugs_bugger	 You can do that fine, as long as it is the right architecture, it should 'just work'
+2011-01-15T07:59:00.000Z	OvermindDL1	bugs_bugger	 Run it from your home directory is fine
+2011-01-15T08:01:00.000Z	bugs_bugger	OvermindDL1	i got the architecture thing wrong. i dont care about that, i could build two versions, x64 and x86. but what i want to achieve is to have that program being executable right out of the archive without creating any symlinks. all dependencies should be contained in the programs folder itself
+2011-01-15T08:02:00.000Z	bugs_bugger	OvermindDL1	did i get out right now?
+2011-01-15T08:02:00.000Z	OvermindDL1	bugs_bugger	 That is perfectly fine, as long as the program is programmed in such a way to get all of its files from its own directory (or cwd if you prefer) it would work.
+2011-01-15T08:04:00.000Z	OvermindDL1	bugs_bugger	 And?  users can still install it locally
+2011-01-15T08:04:00.000Z	OvermindDL1	bugs_bugger	 local_install
+2011-01-15T08:04:00.000Z	OvermindDL1	bugs_bugger	 instead of install
+2011-01-15T08:04:00.000Z	OvermindDL1	bugs_bugger	 or just do not install it and run it directly
+2011-01-15T08:04:00.000Z	bugs_bugger	OvermindDL1	darn! didnt know about that....oh my
+2011-01-15T08:05:00.000Z	bugs_bugger	OvermindDL1	how am i supposed to run it directly?
+2011-01-15T08:05:00.000Z	OvermindDL1	bugs_bugger	 as long as your make file supports local_install that will work fine, or as stated, just do not install it and run it directly
+2011-01-15T08:05:00.000Z	OvermindDL1	bugs_bugger	 when you "make" it builds all the files, "make install" just copies those built files to wherever, when you just 'make' without the install you can just access those temp files directly, usually in ./bin in most setups, or whatever you set it up as
+2011-01-15T08:06:00.000Z	bugs_bugger	OvermindDL1	ah, i see...
+2011-01-15T08:07:00.000Z	bugs_bugger	OvermindDL1	so, lets hope i dont need to be root to execute make in the first place...
+2011-01-15T08:09:00.000Z	OvermindDL1	bugs_bugger	 No, you can run make as user, 'make install' requires root, 'make local_install' can be run as a normal user
+2011-01-15T08:09:00.000Z	bugs_bugger	OvermindDL1	ok, nice...
+2011-01-15T08:09:00.000Z	OvermindDL1	bugs_bugger	 Assuming you put in a local_install thing
+2011-01-15T08:12:00.000Z	bugs_bugger	OvermindDL1	i try if the sources are capable of handling local_install. btw, there's no such way for deb's i guess?
+2011-01-15T08:12:00.000Z	OvermindDL1	bugs_bugger	 Nope, but a deb is just a .tar.gz, you can extract it locally and run them directly anyway, sometimes need to set some environment variables to get the program to run locally, but it runs
+2011-01-15T08:13:00.000Z	OvermindDL1	bugs_bugger	 Well, a deb 'might' have something akin to local_install, I have never looked...
+2011-01-15T08:13:00.000Z	OvermindDL1	bugs_bugger	 Hmm...
+2011-01-15T08:13:00.000Z	bugs_bugger	OvermindDL1	well, it seems i learned some new stuff tonite....never had the idea to "file" a deb to see what it actually is....
+2011-01-15T08:14:00.000Z	OvermindDL1	bugs_bugger	 Extract the .tar.gz part out with  ar vx the file.deb
+2011-01-15T08:14:00.000Z	OvermindDL1	bugs_bugger	 Extract the .tar.gz part out with  ar vx the_file.deb
+2011-01-15T08:15:00.000Z	bugs_bugger	OvermindDL1	what does the vx argument do?
+2011-01-15T08:15:00.000Z	OvermindDL1	bugs_bugger	 http://linux.about.com/library/cmd/blcmdl1_ar.htm
+2011-01-15T08:16:00.000Z	OvermindDL1	bugs_bugger	 verbose and extract in other words, it extracts a data.tar.gz out of it
+2011-01-15T08:16:00.000Z	OvermindDL1	bugs_bugger	 And that has all the file information
+2011-01-15T08:18:00.000Z	bugs_bugger	OvermindDL1	nice...will try that asap. im just ssh-ing into my university's pool to see wether i can compile local_install....
+2011-01-15T08:21:00.000Z	bugs_bugger	OvermindDL1	hey, just out of curiousity: any way to get me into the sudoers file? the admins of the pool seem to know the game, its the IT chair ^^
+2011-01-15T08:22:00.000Z	OvermindDL1	bugs_bugger	 Heh, not without already having admin access.  ;-)
+2011-01-15T08:22:00.000Z	OvermindDL1	bugs_bugger	 Why not convince them to switch to Ubuntu Server Cloud, then each student can have their own virtual computer to do what they want?
+2011-01-15T08:24:00.000Z	bugs_bugger	OvermindDL1	as i expected :D well actually i am really happy we've got ubuntu while the rest of the "mortal-crowd" pools got win7 but this also means no tinkerin with rights ^^
+2011-01-15T08:24:00.000Z	bugs_bugger	OvermindDL1	well, i guess they've got their network system all figured out
+2011-01-15T08:26:00.000Z	bugs_bugger	OvermindDL1	after all, you're supposed educate yourself in there, not to randomly spam the servers with your facourit software
+2011-01-15T08:28:00.000Z	bugs_bugger	OvermindDL1	at least we can demand apps but i dont want to be running to my roots office everytime i'd like to try a new application :)
+2011-01-15T08:28:00.000Z	OvermindDL1	bugs_bugger	 As stated, try to convince them to switch to ubuntu cloud so you can get your own little virtual install.  :)
+2011-01-15T08:29:00.000Z	bugs_bugger	OvermindDL1	how does it work? its on ubuntu servers, innit?
+2011-01-15T08:30:00.000Z	OvermindDL1	bugs_bugger	 Yes, but they can setup a full 'local install' of ubuntu that you have root in without affecting anyone or anything else.
+2011-01-15T08:33:00.000Z	bugs_bugger	OvermindDL1	mhh....i will mention it if an opportunity presents itself. but i guess there are some good reasons they build it the way it is
+2011-01-15T08:35:00.000Z	bugs_bugger	OvermindDL1	they got their own nifty server system anyways. supports ssh connection and the graphical nx-client
+2011-01-15T08:52:00.000Z	OvermindDL1	bugs_bugger	 Sorry I took so long to respond, I am at work.  Yes, and they could hoist their entire system into such virtual systems on ubuntu server cloud, would give them more reliability, greater failover, among many other advancements.
+2011-01-15T08:53:00.000Z	OvermindDL1	bugs_bugger	 If you host more then one server machine, ubuntu server cloud is always better from what I have seen.
+2011-01-15T08:54:00.000Z	bugs_bugger	OvermindDL1	nevermind. im about to fall to sleep anyway ^^ just meddling with some sources here. its 5 am....
+2011-01-15T08:54:00.000Z	OvermindDL1	bugs_bugger	 Ah but is it early for you, onl 10pm here...
+2011-01-15T08:55:00.000Z	bugs_bugger	OvermindDL1	so wheres base for you? im in europe, gmt+1
+2011-01-15T08:55:00.000Z	OvermindDL1	bugs_bugger	 USA GMT-7
+2011-01-15T08:55:00.000Z	bugs_bugger	OvermindDL1	UTC +1 to be more accurate ^^
+2011-01-15T08:56:00.000Z	bugs_bugger	OvermindDL1	greets from over the sea :D im just unpacking a deb of DropBox here. will see if its executable
+2011-01-15T08:56:00.000Z	OvermindDL1	bugs_bugger	 Heh, if the deb does not work get the source and 'make' (no install) it and it will work.  :0
+2011-01-15T08:56:00.000Z	bugs_bugger	OvermindDL1	will do
+2011-01-15T09:02:00.000Z	bugs_bugger	OvermindDL1	Its working!!
+2011-01-15T09:02:00.000Z	OvermindDL1	bugs_bugger	 Hah, awesome.
+2011-01-15T09:03:00.000Z	bugs_bugger	OvermindDL1	i just got a shell interface since im on ssh with PuttY but i got Xming running and should be able to get the X Output as soon as i remember the switch to execute the  bin in non-terminal mode....^^
+2011-01-15T09:04:00.000Z	OvermindDL1	bugs_bugger	 Are you starting an X session?  If so you could just use x11vnc to vnc into it over your ssh connection with an ssh tunnel
+2011-01-15T09:04:00.000Z	OvermindDL1	bugs_bugger	 Since you are using putty and are on windows
+2011-01-15T09:06:00.000Z	bugs_bugger	OvermindDL1	yep, i am. its currently the only machine working here. since its a really old pc i did not even get xubuntu installed. weird enough: windows xp runs quite smoothly
+2011-01-15T09:07:00.000Z	OvermindDL1	bugs_bugger	 Then VNC over an SSH Tunnel through PuTTy should work wonderfully
+2011-01-15T09:08:00.000Z	bugs_bugger	OvermindDL1	well i dont have VNC but Xming. A windows subsitute for X
+2011-01-15T09:09:00.000Z	bugs_bugger	OvermindDL1	whats odd though is that normally i get the display output on my desktop as soon as i start a program. how can i get this one running with a gui instead of cmd-line interface
+2011-01-15T09:13:00.000Z	bugs_bugger	OvermindDL1	gernerally speaking: whenever i type, say, "firefox" in the terminal, i dont get a command-line iterface but its starting up the gui and transfering it to my x-server
+2011-01-15T09:14:00.000Z	bugs_bugger	OvermindDL1	seems to be somehow related to a proper installation....
+2011-01-15T09:15:00.000Z	OvermindDL1	bugs_bugger	 Correct, only thing that would appear on the terminal would be standard/error out, which firefox does not have
+2011-01-15T09:16:00.000Z	bugs_bugger	OvermindDL1	nah, it just lists the available switches...
+2011-01-15T09:16:00.000Z	OvermindDL1	bugs_bugger	 It may not be detected an X session to hook to
+2011-01-15T09:19:00.000Z	bugs_bugger	OvermindDL1	hah, now i wont have to install windows binaries in wine to get most of the applications running, just unpacking them will do the job....
+2011-01-15T09:20:00.000Z	bugs_bugger	OvermindDL1	so, no w(h)ining anymore ;-D
+2011-01-15T09:20:00.000Z	OvermindDL1	bugs_bugger	 Heh, always great when everything gets setup and working.  :)
+2011-01-15T09:21:00.000Z	bugs_bugger	OvermindDL1	yep. it means that, at least some times, in the end p.e.b.c.a.c. can be overcome by a stiff upper lip :)
+2011-01-15T09:22:00.000Z	bugs_bugger	OvermindDL1	*p.e.b.c.a.k.
+2011-01-15T09:22:00.000Z	OvermindDL1	bugs_bugger	 Hah, I still deal with pebcak everyday in my job.  :p
+2011-01-15T09:22:00.000Z	bugs_bugger	OvermindDL1	dont we all
+2011-01-15T09:28:00.000Z	bugs_bugger	OvermindDL1	ZykoticK9: (dunno if double nick-adressing works) thanks for the accompaniance. see you around i guess, i will stumble upon my next issue soon enough ^^ bye
+2011-01-15T09:28:00.000Z	OvermindDL1	bugs_bugger	 It does, you do not even need to specify at the start, but any point in the message.  :)
+2011-01-15T09:29:00.000Z	bugs_bugger	OvermindDL1	noted as the last thing to have learned today :D over and out
+2011-01-15T09:29:00.000Z	OvermindDL1	bugs_bugger	Hah, sleep well!
+2011-01-15T09:30:00.000Z	bugs_bugger	OvermindDL1	tha....Zzz

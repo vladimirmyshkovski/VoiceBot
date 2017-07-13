@@ -1,0 +1,93 @@
+2006-01-28T10:29:00.000Z	galgoz		azunai, fairly big, mine is still downloading
+2006-01-28T10:30:00.000Z	galgoz		azunai, I am at get 43
+2006-01-28T10:30:00.000Z	galgoz		azunai, hehe, I am using azureus right now too,
+2006-01-28T10:31:00.000Z	galgoz		azunai, a bittorrent client
+2006-01-28T10:31:00.000Z	galgoz		azunai, so I am downlaoding other stuff as well, my connection is 6 down
+2006-01-28T10:32:00.000Z	galgoz		azunai, although I am luckily dling at about 6.5 typically
+2006-01-28T10:32:00.000Z	galgoz		azunai, I am using apt get, just using some of my bandwidth on azureus dlwonloading other stuff
+2006-01-28T10:33:00.000Z	galgoz		azunai, k, I am new too
+2006-01-28T10:34:00.000Z	slavik	galgoz	then you have a problem ...
+2006-01-28T10:35:00.000Z	galgoz	slavik	??
+2006-01-28T10:35:00.000Z	slavik	galgoz	you need to stop calling him ^^
+2006-01-28T10:35:00.000Z	galgoz	slavik	heheh, mainly via IM or Nextel DC
+2006-01-28T10:36:00.000Z	slavik	galgoz	you need to get rid of all wired in the computer room that can possibly carry a network connection, remove all window (make the solid walls) then paint the room with aluminum based paint
+2006-01-28T10:36:00.000Z	galgoz	slavik	um, tree?
+2006-01-28T10:37:00.000Z	galgoz	slavik	that is my way of saying you lost me
+2006-01-28T10:37:00.000Z	slavik	galgoz	the point was to cut off all your ability to communicate outside the room ...
+2006-01-28T10:38:00.000Z	galgoz	slavik	ah :)
+2006-01-28T10:38:00.000Z	galgoz	slavik	he understands now, he installed it thursday cause of my ranting and about 15 min later I got a call and he was like "dude, ubunut rules"
+2006-01-28T10:50:00.000Z	slavik	galgoz	what do you use right now?
+2006-01-28T10:52:00.000Z	slavik	galgoz	is firefox set as the default browser?
+2006-01-28T10:52:00.000Z	galgoz	slavik	I think so, if the only place you set that is in firefox
+2006-01-28T10:54:00.000Z	slavik	galgoz	http://kb.mozillazine.org/Setting_Your_Default_Browser
+2006-01-28T10:55:00.000Z	slavik	galgoz	that was done using google :)
+2006-01-28T10:56:00.000Z	galgoz	slavik	see, I always think I need the ubuntu forums
+2006-01-28T10:58:00.000Z	galgoz	slavik	it is set as default "firefox %s" is in the box just like the doc you had me read says but clicking on a link still does nothing
+2006-01-28T10:58:00.000Z	slavik	galgoz	read on, it tells you how to reconfigure that.
+2006-01-28T11:00:00.000Z	galgoz	slavik	when I run update-alternatives --config x-www-browser
+2006-01-28T11:00:00.000Z	galgoz	slavik	it says I have only one browser installed
+2006-01-28T11:04:00.000Z	galgoz	slavik	There is only 1 program which provides x-www-browser
+2006-01-28T11:04:00.000Z	slavik	galgoz	try installing mozilla or some other browser and set that as default, the set firefox as default again ...
+2006-01-28T11:04:00.000Z	galgoz	slavik	will do
+2006-01-28T11:05:00.000Z	slavik	galgoz	things like that can happen in windows ... sometimes programs request a special browser instead of the default one
+2006-01-28T11:06:00.000Z	galgoz	slavik	I am not using windows???
+2006-01-28T11:06:00.000Z	slavik	galgoz	scroll down more
+2006-01-28T11:06:00.000Z	galgoz	slavik	I went to the end
+2006-01-28T11:07:00.000Z	slavik	galgoz	I will pm you, the passage, ok?
+2006-01-28T11:07:00.000Z	galgoz	slavik	sure
+2006-01-28T11:15:00.000Z	galgoz	slavik	I did a google search on creating a symlink for firefox 1.5 and it is on the ubuntu forums :) guess I will find the answer when the forums are back up
+2006-01-28T11:15:00.000Z	slavik	galgoz	you are using badger?
+2006-01-28T11:15:00.000Z	slavik	galgoz	did you set up  1.5 the same way as in the wiki guide?
+2006-01-28T11:16:00.000Z	galgoz	slavik	automaix set up my firefox
+2006-01-28T11:16:00.000Z	galgoz	slavik	yeah, on ubuntu 5.10
+2006-01-28T11:16:00.000Z	galgoz	slavik	did I break it heheh :)
+2006-01-28T11:16:00.000Z	slavik	galgoz	no clue
+2006-01-28T11:17:00.000Z	galgoz	slavik	no worries, like I said, according to my google search the answer is on the forums and they will be back up soon
+2006-01-28T11:17:00.000Z	slavik	galgoz	did you try the google cache file?
+2006-01-28T11:17:00.000Z	galgoz	slavik	no, good idea
+2006-01-28T11:36:00.000Z	galgoz	slavik	my browser issue is fixed, thanks
+2006-01-28T11:36:00.000Z	slavik	galgoz	did you do what the guide said?
+2006-01-28T11:36:00.000Z	slavik	galgoz	even Linux is not free of problems that Windows had first. ^^
+2006-01-28T11:37:00.000Z	galgoz	slavik	I did the symlink stuff
+2006-01-28T11:38:00.000Z	galgoz	slavik	I know all OS's have their issues, I just like linux's issues more :)
+2006-01-28T11:39:00.000Z	slavik	galgoz	I don't ... because I don't know how to fix them. :(
+2006-01-28T11:39:00.000Z	galgoz	slavik	you just did
+2006-01-28T11:39:00.000Z	galgoz	slavik	google the problem and find the solution
+2006-01-28T11:40:00.000Z	slavik	galgoz	where do the $PATh and the $SHELL variables get set?
+2006-01-28T11:41:00.000Z	galgoz	slavik	in windows?
+2006-01-28T11:41:00.000Z	slavik	galgoz	on linux ...
+2006-01-28T11:41:00.000Z	galgoz	slavik	hehehe, I don't know
+2006-01-28T11:41:00.000Z	galgoz	slavik	I can tell you on windows
+2006-01-28T11:42:00.000Z	slavik	galgoz	I need it for linux
+2006-01-28T11:42:00.000Z	galgoz	slavik	soory too new to linux
+2006-01-28T11:43:00.000Z	slavik	galgoz	exactly ...
+2006-01-28T11:44:00.000Z	galgoz	slavik	I did a google search on " where do the $PATh and the $SHELL variables get set in linux" and it has some interesting results
+2006-01-28T11:44:00.000Z	slavik	galgoz	it also depends on the distro
+2006-01-28T11:45:00.000Z	galgoz	slavik	which was why I was in the habit of just doing those searches on the ubuntu forums
+2006-01-28T11:54:00.000Z	slavik	galgoz	apt-get install best-os-evar
+2006-01-28T12:19:00.000Z	slavik	galgoz	ubuntu is not a real package
+2006-01-28T12:19:00.000Z	galgoz	slavik	so it is safe to proceed
+2006-01-28T12:19:00.000Z	slavik	galgoz	from what I've been told, yes.
+2006-01-28T12:20:00.000Z	galgoz	slavik	I like your anser :)
+2006-01-28T12:20:00.000Z	slavik	galgoz	my understanding is that ubuntu-desktop is there to require a load of other packages, some which maybe be useless.
+2006-01-28T12:20:00.000Z	galgoz	slavik	and I am wanting to remove some of them
+2006-01-28T12:20:00.000Z	galgoz	slavik	I was just afraid it would remove all of them
+2006-01-28T12:39:00.000Z	slavik	galgoz	I'd say yes, but I read of a problem that required 32bit os to get ndiswrapper to work
+2006-01-28T12:39:00.000Z	galgoz	slavik	and if I am not using ndiswrapper?
+2006-01-28T12:40:00.000Z	galgoz	slavik	i was just scared that there would be lots of issues
+2006-01-28T12:40:00.000Z	slavik	galgoz	it depends on the windows driver for the card
+2006-01-28T12:41:00.000Z	galgoz	slavik	what depends on the windows driver?
+2006-01-28T12:41:00.000Z	slavik	galgoz	the way it was ... 64bit os, 64bit ndiswrapper, no 64bit windows driver
+2006-01-28T12:41:00.000Z	galgoz	slavik	ah, ok
+2006-01-28T12:41:00.000Z	galgoz	slavik	so if i don't use any windows drivers I am ok
+2006-01-28T12:42:00.000Z	slavik	galgoz	should be
+2006-01-28T12:42:00.000Z	slavik	galgoz	that is the only problem I read about with 64bit os
+2006-01-28T12:42:00.000Z	galgoz	slavik	converting will require a format and reinstall correct?
+2006-01-28T12:42:00.000Z	slavik	galgoz	probably
+2006-01-28T12:43:00.000Z	slavik	galgoz	the funny part is that anandtech had an article about gcc 3.3 optimizing 32bit code better than gcc 4.0, while gcc 4.0 did that for 64bit code.
+2006-01-28T12:43:00.000Z	galgoz	slavik	well, I have gcc 3.3 and 4.0 installed and run the one I need anyways
+2006-01-28T12:44:00.000Z	galgoz	slavik	some aps require gcc 3.3 to compile correct
+2006-01-28T12:44:00.000Z	slavik	galgoz	was about to say that
+2006-01-28T12:44:00.000Z	galgoz	slavik	I am kinda proud I even install this with as little linux exp as I have
+2006-01-28T12:45:00.000Z	slavik	galgoz	trust me, you are not far behind me on *nix experience :)
+2006-01-28T12:45:00.000Z	galgoz	slavik	where you at?

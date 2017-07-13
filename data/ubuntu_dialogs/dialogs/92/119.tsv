@@ -1,0 +1,92 @@
+2005-04-25T13:49:00.000Z	pestilence	Fazer_	any luck?
+2005-04-25T13:51:00.000Z	Fazer_	pestilence	omg! hi!
+2005-04-25T13:51:00.000Z	Fazer_	pestilence	well, I finally got the ethernet to work
+2005-04-25T13:52:00.000Z	pestilence	Fazer_	cool
+2005-04-25T13:52:00.000Z	Fazer_	pestilence	now, I am trying to config. my wifi card
+2005-04-25T13:52:00.000Z	pestilence	Fazer_	so did you install?
+2005-04-25T13:52:00.000Z	pestilence	Fazer_	or still livecd
+2005-04-25T13:52:00.000Z	Fazer_	pestilence	Still live cd
+2005-04-25T13:52:00.000Z	pestilence	Fazer_	you in it right now?
+2005-04-25T13:52:00.000Z	Fazer_	pestilence	I am on my desktop with the lappy right beside me
+2005-04-25T13:54:00.000Z	pestilence	Fazer_	so did you try installing ndiswrapper-utils?
+2005-04-25T13:54:00.000Z	Fazer_	pestilence	Oh yes, I used that .deb from my usb drive =)
+2005-04-25T13:55:00.000Z	pestilence	Fazer_	so what seems to be the problem
+2005-04-25T13:55:00.000Z	Fazer_	pestilence	well, my wlan card just doesn't get on the network, not to mention, the lights don't blink/turn on
+2005-04-25T13:56:00.000Z	pestilence	Fazer_	if there are no lights, then i would say ndiswrapper didn't work
+2005-04-25T13:57:00.000Z	Fazer_	pestilence	damn
+2005-04-25T13:57:00.000Z	pestilence	Fazer_	what does ndiswrapper -l tell you?
+2005-04-25T13:58:00.000Z	Fazer_	pestilence	I just removed the driver, but it used to tell me that mn720-ankh driver present, hardware present
+2005-04-25T13:58:00.000Z	pestilence	Fazer_	strange.
+2005-04-25T14:02:00.000Z	pestilence	Fazer_	so can you reinstall the mn720-ankh driver
+2005-04-25T14:02:00.000Z	Fazer_	pestilence	I did that twice =) same effect.
+2005-04-25T14:02:00.000Z	pestilence	Fazer_	and modprobe ndiswrapper
+2005-04-25T14:02:00.000Z	pestilence	Fazer_	and see what lspci tells you?
+2005-04-25T14:02:00.000Z	Fazer_	pestilence	yeah, i did the modprobe and what not.
+2005-04-25T14:02:00.000Z	pestilence	Fazer_	ok.
+2005-04-25T14:02:00.000Z	pestilence	Fazer_	maybe it's the wrong driver then.
+2005-04-25T14:04:00.000Z	pestilence	Fazer_	so iwconfig shows a card?
+2005-04-25T14:04:00.000Z	Fazer_	pestilence	Yeah
+2005-04-25T14:05:00.000Z	pestilence	Fazer_	oh.
+2005-04-25T14:06:00.000Z	pestilence	Fazer_	so, my card won't do iwlist scanning either.
+2005-04-25T14:06:00.000Z	Fazer_	pestilence	What card do you have?
+2005-04-25T14:06:00.000Z	pestilence	Fazer_	so you might not be totally out of luck.  did you try just setting the AP ESSID?
+2005-04-25T14:07:00.000Z	Fazer_	pestilence	What do you mean AP ESSID?
+2005-04-25T14:07:00.000Z	pestilence	Fazer_	mine is a mini-pci card, installed by gateway
+2005-04-25T14:08:00.000Z	pestilence	Fazer_	you just say "iwconfig wlan0 essid MYESSID" where MYESSID is your essid.
+2005-04-25T14:09:00.000Z	pestilence	Fazer_	it was me that found the deb.  and it's in hoary, assuming you are using a hoary livecd
+2005-04-25T14:09:00.000Z	Fazer_	pestilence	correct, I am.
+2005-04-25T14:09:00.000Z	pestilence	Fazer_	i found it on an official repository
+2005-04-25T14:10:00.000Z	pestilence	Fazer_	so, that version of ndiswrapper works with that kernel.
+2005-04-25T14:10:00.000Z	pestilence	Fazer_	i have a laptop that uses it right now.
+2005-04-25T14:10:00.000Z	Fazer_	pestilence	Alright, so, let me install it again.
+2005-04-25T14:13:00.000Z	pestilence	Fazer_	you have a .sys file too?
+2005-04-25T14:13:00.000Z	Fazer_	pestilence	yes
+2005-04-25T14:13:00.000Z	pestilence	Fazer_	do you know the essid for your wireless network?
+2005-04-25T14:14:00.000Z	Fazer_	pestilence	by that yu mean, the name?
+2005-04-25T14:14:00.000Z	pestilence	Fazer_	yes.  default is sometimes "linksys" :)
+2005-04-25T14:14:00.000Z	pestilence	Fazer_	i didn't know you could have spaces.
+2005-04-25T14:15:00.000Z	Fazer_	pestilence	Yeah, strange, XP shows it as "Go Away"
+2005-04-25T14:16:00.000Z	pestilence	Fazer_	anyways.  you should try 'iwconfig wlan0 essid "Go Away" key off' assuming you are not using WEP
+2005-04-25T14:16:00.000Z	pestilence	Fazer_	and then iwconfig to see if it worked
+2005-04-25T14:16:00.000Z	Fazer_	pestilence	Hmm, I am using WEP, so how shall I input it?
+2005-04-25T14:17:00.000Z	pestilence	Fazer_	iwconfig wlan0 essid "Go Away" key open "YOURKEYGOESHERE"
+2005-04-25T14:18:00.000Z	pestilence	Fazer_	also, scanning will not work if your AP doesn't broadcast it's essid
+2005-04-25T14:19:00.000Z	Fazer_	pestilence	Yeah, so, I did that, and i did iwconfig
+2005-04-25T14:19:00.000Z	pestilence	Fazer_	what do you mean by nothing
+2005-04-25T14:19:00.000Z	Fazer_	pestilence	As in no change in iwconfig
+2005-04-25T14:20:00.000Z	pestilence	Fazer_	it shows 44:44:44:44:44... as the AP?
+2005-04-25T14:20:00.000Z	Fazer_	pestilence	No, its a bunch of OOs
+2005-04-25T14:21:00.000Z	pestilence	Fazer_	when you entered the key, did you enter a passphrase, or the hexidecimal key?
+2005-04-25T14:21:00.000Z	Fazer_	pestilence	passprhase, shit, so I should prefix it with s: ?
+2005-04-25T14:21:00.000Z	pestilence	Fazer_	yep.
+2005-04-25T14:23:00.000Z	Fazer_	pestilence	I didn't do the "sed" commands from that howto you sent me yesterday
+2005-04-25T14:24:00.000Z	pestilence	Fazer_	i don't know if the sed stuff was neccessary
+2005-04-25T14:25:00.000Z	Fazer_	pestilence	well, i did try it earlier on, still no luck though
+2005-04-25T14:27:00.000Z	pestilence	Fazer_	worth a shot, what's it gonna hurt :)
+2005-04-25T14:27:00.000Z	pestilence	Fazer_	i still think the lights should come on when you modprobe ndiswrapper
+2005-04-25T14:28:00.000Z	Fazer_	pestilence	That's what i was thinking too!
+2005-04-25T14:31:00.000Z	pestilence	Fazer_	you might also try changing "open" to "restricted"
+2005-04-25T14:31:00.000Z	pestilence	Fazer_	in the iwconfig command
+2005-04-25T14:32:00.000Z	pestilence	Fazer_	also, this leads me to believe that you will be successful if you stick to it long enough
+2005-04-25T14:32:00.000Z	pestilence	Fazer_	http://www.linuxquestions.org/hcl/showproduct.php?product=2100
+2005-04-25T14:32:00.000Z	pestilence	Fazer_	look at the output from lspci at the bottom...matches yours
+2005-04-25T14:33:00.000Z	Fazer_	pestilence	yes yes it does!
+2005-04-25T14:34:00.000Z	pestilence	Fazer_	and if you search for "MicroSuck" on this page: http://ndiswrapper.sourceforge.net/phpwiki/index.php/List
+2005-04-25T14:34:00.000Z	pestilence	Fazer_	you will see that somebody has it working :)
+2005-04-25T14:34:00.000Z	pestilence	Fazer_	so, try this one:  http://ankhcraft.com/drivers/mn720-ankh.zip
+2005-04-25T14:36:00.000Z	Fazer_	pestilence	haha yeah,t hats the first thing I tried
+2005-04-25T14:36:00.000Z	Fazer_	pestilence	i think itm ight be because of the boot parameters I have to the LiveCD?
+2005-04-25T14:36:00.000Z	pestilence	Fazer_	what boot parameters are you passing?
+2005-04-25T14:36:00.000Z	Fazer_	pestilence	Hmm, I forgot, do you know how I can check?
+2005-04-25T14:37:00.000Z	pestilence	Fazer_	don't know.
+2005-04-25T14:38:00.000Z	Fazer_	pestilence	I gave it "noapic nolapic pci=noacpi"
+2005-04-25T14:39:00.000Z	Fazer_	pestilence	Hmm...you wouldn't believe this.
+2005-04-25T14:39:00.000Z	pestilence	Fazer_	there's an easy way to tell.  reboot without those parameters :)
+2005-04-25T14:40:00.000Z	Fazer_	pestilence	If i do, then i can't use ethernet or usb!
+2005-04-25T14:42:00.000Z	pestilence	Fazer_	lsmod |grep ndiswrapper
+2005-04-25T14:42:00.000Z	pestilence	Fazer_	perhaps rmmod ndiswrapper and then modprobe ndiswrapper
+2005-04-25T14:43:00.000Z	Fazer_	pestilence	when I put it on the other slot, it says that the driver is present but the hardware isn't there.
+2005-04-25T14:44:00.000Z	pestilence	Fazer_	did you try rmmod ndisrapper and then modprobe ndiswrapper?
+2005-04-25T14:45:00.000Z	Fazer_	pestilence	wait, when I did lsmod , it says ndiswrapper         10904   0
+2005-04-25T14:46:00.000Z	Fazer_	pestilence	I tried that, still nothing.
+2005-04-25T14:46:00.000Z	pestilence	Fazer_	bummer.  i gotta work now, you'll figure it out eventually :)

@@ -1,0 +1,92 @@
+2009-04-20T20:28:00.000Z	Pici	iceroot	its locked.
+2009-09-11T00:08:00.000Z	Pici	iceroot	All a dist-upgrade does is pull in packages that have new dependencies, it just so happens that this is often done for kernel upgrades.
+2009-09-11T00:09:00.000Z	iceroot	Pici	yes, i was reading the manpage
+2009-09-11T00:09:00.000Z	iceroot	Pici	dont tell me, i know gksudo, just telling him why he dont get more free space
+2009-09-11T00:09:00.000Z	Pici	iceroot	You suggested using sudo nautilus, thats not correct.
+2009-09-11T00:10:00.000Z	iceroot	Pici	i didnt, just read his post and my
+2009-09-11T00:10:00.000Z	iceroot	Pici	i was just quoting him
+2009-09-30T22:25:00.000Z	Pici	iceroot	fyi, they're called packages, not pakets
+2009-09-30T22:26:00.000Z	iceroot	Pici	ok...
+2009-11-02T19:20:00.000Z	iceroot	Pici	thx
+2009-12-02T19:13:00.000Z	Pici	iceroot	er.. no.  Debian in #debian, Ubuntu in #ubuntu
+2009-12-02T19:15:00.000Z	iceroot	Pici	#debian for terminal-questions, #ubuntu for gui-questions (i am using) :)
+2009-12-02T19:16:00.000Z	iceroot	Pici	and for ubuntu-specific questions of course
+2009-12-28T18:01:00.000Z	Pici	iceroot	Actually it doesnt matter.
+2009-12-28T18:03:00.000Z	iceroot	Pici	test it, its different
+2010-01-26T22:52:00.000Z	Pici	iceroot	other way around.
+2010-01-26T22:53:00.000Z	iceroot	Pici	hm
+2010-01-26T22:54:00.000Z	iceroot	Pici	thx
+2010-01-26T23:35:00.000Z	Pici	iceroot	Depending on your block size, the max filesystem size differs.  See http://en.wikipedia.org/wiki/Ext3#Size_limits
+2010-01-26T23:36:00.000Z	iceroot	Pici	thx
+2010-04-23T17:12:00.000Z	Pici	iceroot	there is no such channel
+2010-06-28T21:53:00.000Z	iceroot	Pici	PAE = 1.8GB ram per process and more then 4GB for the whole system
+2010-06-28T21:54:00.000Z	Pici	iceroot	thanks.
+2010-06-30T17:47:00.000Z	iceroot	Pici	its an interessting topic also for this channel so i dont thing anything has to go to off-topic
+2010-07-01T19:30:00.000Z	Pici	iceroot	Ulmo: We don't use the same package names that debian uses in many cases.
+2010-07-01T19:31:00.000Z	iceroot	Pici	what was the tag i a package that shows its not coming from debian?
+2010-07-01T19:31:00.000Z	iceroot	Pici	or better, what was the tag that it is a (patched) sync of sid
+2010-07-01T19:31:00.000Z	Pici	iceroot	I don't know.
+2010-10-22T00:39:00.000Z	iceroot	Pici	Kartagis its never a good idea
+2011-03-03T20:15:00.000Z	Pici	iceroot	there are 1,204 lines there.
+2011-03-03T20:16:00.000Z	Pici	iceroot	use w3m if you need a cli web browser.
+2011-03-03T20:16:00.000Z	iceroot	Pici	i dont need a browser here :)
+2011-03-30T17:34:00.000Z	Pici	iceroot	Why is that?
+2011-03-30T17:35:00.000Z	iceroot	Pici	http://blog.linuxolution.org/archives/117
+2011-04-14T18:06:00.000Z	Pici	iceroot	No. People use that channel.
+2011-04-14T18:07:00.000Z	iceroot	Pici	for offtopic stuff
+2011-04-14T18:07:00.000Z	iceroot	Pici	but ok
+2011-06-06T18:28:00.000Z	Pici	iceroot	That wasn't really necessary, he asked his question.
+2011-06-06T18:29:00.000Z	iceroot	Pici	he just ask if someone has experience, the answer can only be yes or no. so its not a real question
+2011-07-22T16:46:00.000Z	Pici	iceroot	phper_: 8.04 is still supported on the server, so update-manager and do-release-upgrade should work just fine to upgrade to 10.04.
+2011-07-22T16:47:00.000Z	iceroot	Pici	ah yes, they didnt move the 8.04 repo yet because of the server-edition. thanks for the hint
+2011-07-25T17:13:00.000Z	iceroot	Pici	i thought the installer is creating that automaticly
+2011-07-25T17:14:00.000Z	Pici	iceroot	I've seen it not do that in the past for me :/
+2011-07-25T17:14:00.000Z	iceroot	Pici	ah ok
+2011-08-05T22:10:00.000Z	Pici	iceroot	I think he means he typoed it so we wouldn't have his reall address for some reason
+2011-08-05T22:10:00.000Z	iceroot	Pici	ok
+2011-08-05T22:13:00.000Z	Pici	iceroot	maybe the typoed address is a public one?
+2011-08-05T22:13:00.000Z	iceroot	Pici	it is but he said its a machine inside the lan
+2011-08-05T22:14:00.000Z	iceroot	Pici	so i guess he is using the public ip and because of the nat he cant access the storage in the lan
+2011-09-09T16:31:00.000Z	Pici	iceroot	ActionParsnip, squig: Can we please move the discussion to #ubuntu-offtopic
+2011-09-09T16:31:00.000Z	iceroot	Pici	its ubuntu related about what de to use
+2011-09-09T16:34:00.000Z	iceroot	Pici	its not offtopic
+2011-09-09T16:34:00.000Z	Pici	iceroot	yes it is.  If you want to talk about Oneiric, join #ubuntu+1
+2011-09-09T16:34:00.000Z	iceroot	Pici	xubuntu-desktop is part of ubuntu
+2011-09-09T16:34:00.000Z	iceroot	Pici	we are talking about xfce4 not 11.10
+2011-09-09T16:34:00.000Z	Pici	iceroot	you're all discussing a lot of things.
+2011-09-09T16:34:00.000Z	iceroot	Pici	imo all related to ubuntu and 11.04
+2011-09-09T16:35:00.000Z	Pici	iceroot	its related to 11.10
+2011-09-09T16:35:00.000Z	iceroot	Pici	i dont think so but because you have the possibility to use /kick i am quit now :)
+2011-09-16T19:04:00.000Z	Pici	iceroot	You could mount your sd-card elsewhere and put a symlink at ~Movies instead.
+2011-12-14T00:39:00.000Z	Pici	iceroot	I know that aptitude has a 'why' command, but I'm not sure how to replicate that with just apt-get
+2011-12-14T00:39:00.000Z	iceroot	Pici	aptitude is fine for that, i dont need apt-get
+2011-12-14T00:40:00.000Z	Pici	iceroot	then aptitude why unity  *should* tell you why that dependency is being pulled in.
+2011-12-14T00:40:00.000Z	iceroot	Pici	gnome-session, thanks
+2011-12-14T00:40:00.000Z	iceroot	Pici	it was "aptitude why unity"
+2011-12-14T00:43:00.000Z	iceroot	Pici	fyi apt-rdepends (not installed by default) can do the same
+2011-12-14T00:44:00.000Z	Pici	iceroot	aye, but thats not installed by default and while aptitude isn't either its more likely to be installed.
+2011-12-14T00:46:00.000Z	Pici	iceroot	prefix the line with LANG=C
+2011-12-14T00:46:00.000Z	iceroot	Pici	thx
+2012-01-18T20:35:00.000Z	Pici	iceroot	He said that he downloaded the .deb file from dropbox's website.
+2012-01-18T20:36:00.000Z	iceroot	Pici	and what does that have to do with "nautilus-dropbox"?
+2012-01-18T20:37:00.000Z	Pici	iceroot	That may be the name of the package that dropbox's website has, however only oneiric and precise have that in their repos.
+2012-01-26T19:34:00.000Z	Pici	iceroot	Its listed as a dependency.
+2012-01-26T19:34:00.000Z	iceroot	Pici	my question is "why it is listed"
+2012-01-26T19:35:00.000Z	iceroot	Pici	i dont see anything in libgnome-control-center1 which is needed by deja-dup
+2012-01-26T19:35:00.000Z	Pici	iceroot	Probably because its a tool designed for GNOME. Perhaps it creates an entry in the gnome-control-center?
+2012-01-26T19:35:00.000Z	iceroot	Pici	ts2 ah ok, yes that makes sense
+2012-03-15T18:56:00.000Z	Pici	iceroot	its a perfectly acceptable nick here.
+2012-03-15T18:56:00.000Z	iceroot	Pici	you dont have qwertz keyboard
+2012-05-01T23:14:00.000Z	iceroot	Pici	why?
+2012-05-01T23:16:00.000Z	Pici	iceroot	Becacuse we don't want for 10.04 users to break their installs, its still possible that there are lingering LTS to LTS upgrade bugs out there.
+2012-05-01T23:17:00.000Z	iceroot	Pici	so 10.04 - 12.04 was never tested? and now its tested and bugs are worked on which will result in 12.04.1?
+2012-05-01T23:18:00.000Z	Pici	iceroot	I didn't say that it wasn't tested. There are just so many permutations of installs that there might be some problems that the developers didn't forsee.
+2012-05-01T23:19:00.000Z	iceroot	Pici	hm, ok. bad quality testing in my opionion then but because we only have less then 6 months for a release, i think its ok
+2012-05-01T23:19:00.000Z	Pici	iceroot	Its not bad testing. Its being careful.
+2012-05-01T23:20:00.000Z	iceroot	Pici	why not be careful and use 12.04.2 for that instead of .1.
+2012-05-01T23:20:00.000Z	Pici	iceroot	Because thats what they decided.
+2012-05-01T23:20:00.000Z	iceroot	Pici	and we have to respect that..
+2012-05-01T23:21:00.000Z	iceroot	Pici	thank you for the usefull info about 12.04.1
+2012-05-01T23:21:00.000Z	Pici	iceroot	no problem.
+2012-08-06T16:14:00.000Z	Pici	iceroot	fyi, you can do:  getent group root
+2012-08-06T16:14:00.000Z	iceroot	Pici	thx

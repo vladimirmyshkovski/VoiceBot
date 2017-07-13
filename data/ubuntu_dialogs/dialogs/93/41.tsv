@@ -1,0 +1,93 @@
+2008-04-03T07:54:00.000Z	ChaosTheory		Balthazarguy: Do you have an NVIDIA video card?
+2008-04-03T07:54:00.000Z	ChaosTheory		Balthazarguy: I have the same problem (it gives me resolutions lower than I need).
+2008-04-03T07:54:00.000Z	ChaosTheory		Balthazarguy: Try installing "nvidia-glx-new"
+2008-04-03T07:55:00.000Z	Scunizi	ChaosTheory	he just got the nvidia drivers installed and working but can't change the resolution
+2008-04-03T07:55:00.000Z	ChaosTheory	Scunizi	Oh, I see.
+2008-04-03T07:57:00.000Z	Scunizi	ChaosTheory	you mean that the router is plugged into the ubuntu machine? and is the router wireless?
+2008-04-03T07:57:00.000Z	ChaosTheory	Scunizi	Correct.
+2008-04-03T07:58:00.000Z	Scunizi	ChaosTheory	ok.. access to the router's wireless function has nothing to do with ubuntu. The router is stand alone.. can you access the router's setup screen with ubuntu?
+2008-04-03T07:58:00.000Z	ChaosTheory	Scunizi	I'm not sure, do you know how?
+2008-04-03T07:58:00.000Z	ChaosTheory	Scunizi	The wireless network is already set up.
+2008-04-03T07:58:00.000Z	ChaosTheory	Scunizi	I'm currently "directly connected" to it.
+2008-04-03T07:59:00.000Z	ChaosTheory	Scunizi	The Win XP desktop is going to be the client.
+2008-04-03T07:59:00.000Z	Scunizi	ChaosTheory	well... the router is connected to the cable modem or dls modem and your current desktop is wired directly to it but that doesn't mean wireless is turned on .. go to Firefox and type 192.168.0.1 into the addres bar and see what happens.
+2008-04-03T08:01:00.000Z	ChaosTheory	Scunizi	It's loading. . .
+2008-04-03T08:01:00.000Z	ChaosTheory	Scunizi	Problem loading page.
+2008-04-03T08:01:00.000Z	ChaosTheory	Scunizi	No.
+2008-04-03T08:01:00.000Z	Scunizi	ChaosTheory	ok.. try 192.168.1.1
+2008-04-03T08:01:00.000Z	ChaosTheory	Scunizi	It asks for a username and a password.
+2008-04-03T08:01:00.000Z	Scunizi	ChaosTheory	no www or anything... try hitting enter and see what happens
+2008-04-03T08:02:00.000Z	ChaosTheory	Scunizi	192.168.1.1 --> it asks for a username and a password
+2008-04-03T08:02:00.000Z	Scunizi	ChaosTheory	if that doesn't work in password type admin
+2008-04-03T08:02:00.000Z	ChaosTheory	Scunizi	Doesn't work.
+2008-04-03T08:02:00.000Z	Scunizi	ChaosTheory	what kind of router.. make and model please
+2008-04-03T08:03:00.000Z	ChaosTheory	Scunizi	Linksys, Wireless-G 2.4GHz Broadband Router.
+2008-04-03T08:03:00.000Z	Scunizi	ChaosTheory	hang on while I download the manuel.
+2008-04-03T08:03:00.000Z	Scunizi	ChaosTheory	is it a router and modem together?  if not it should have a model number..
+2008-04-03T08:04:00.000Z	ChaosTheory	Scunizi	Yes, it's a router and a modem together.
+2008-04-03T08:04:00.000Z	Scunizi	ChaosTheory	k.. just a sec
+2008-04-03T08:04:00.000Z	ChaosTheory	Scunizi	It's a Motorola SB4101 SURFboard Cable Modem.
+2008-04-03T08:05:00.000Z	Scunizi	ChaosTheory	so it's not a linksys?  now I'm confused.. which one is it?
+2008-04-03T08:05:00.000Z	ChaosTheory	Scunizi	Linksys is the router.
+2008-04-03T08:05:00.000Z	ChaosTheory	Scunizi	The modem is Motorola.
+2008-04-03T08:05:00.000Z	ChaosTheory	Scunizi	Oh, were you asking if they were both one thing?
+2008-04-03T08:05:00.000Z	ChaosTheory	Scunizi	No.
+2008-04-03T08:05:00.000Z	Scunizi	ChaosTheory	ok.. did you find the model number on the back?
+2008-04-03T08:05:00.000Z	ChaosTheory	Scunizi	For the router?
+2008-04-03T08:06:00.000Z	Scunizi	ChaosTheory	yes
+2008-04-03T08:06:00.000Z	ChaosTheory	Scunizi	WRT54G V8
+2008-04-03T08:06:00.000Z	Scunizi	ChaosTheory	just a sec
+2008-04-03T08:08:00.000Z	Scunizi	ChaosTheory	when you typed "admin" in the password field, was the user name field blank and did you use all lowercase when typing admin?
+2008-04-03T08:09:00.000Z	ChaosTheory	Scunizi	Yes to both.
+2008-04-03T08:10:00.000Z	ChaosTheory	Scunizi	I just went over to the XP laptop and it says some of the internet hardware is still disconnected?
+2008-04-03T08:10:00.000Z	Scunizi	ChaosTheory	did you buy this new or is anyone else using it in the house?
+2008-04-03T08:10:00.000Z	ChaosTheory	Scunizi	I'm the host computer, and there's one other computer running Windows XP that needs to use it (client).
+2008-04-03T08:10:00.000Z	ChaosTheory	Scunizi	It's new.
+2008-04-03T08:12:00.000Z	Scunizi	ChaosTheory	you're not the host.. you're just plugged into it.. meaning you are also a guest of the router.. I suggest you take a look at the manuel at the section on resetting it back to normal then you should be able to get into it.. here's the manuel link.  http://www.linksys.com/servlet/Satellite?c=L_CASupport_C2&childpagename=US%2FLayout&cid=1166859837401&packedargs=sku%3DWRT54G&pagename=Linksys%2FCommon%2FVisitorWrapper&lid=3740137
+2008-04-03T08:12:00.000Z	Scunizi	ChaosTheory	sorry that split. http://www.linksys.com/servlet/Satellite?c=L_CASupport_C2&childpagename=US%2FLayout&cid=1166859837401&packedargs=sku%3DWRT54G&pagename=Linksys%2FCommon%2FVisitorWrapper&lid=3740137401B01&displaypage=download#versiondetail
+2008-04-03T08:13:00.000Z	ChaosTheory	Scunizi	Hm. . .
+2008-04-03T08:13:00.000Z	ChaosTheory	Scunizi	Reset back to normal?
+2008-04-03T08:14:00.000Z	Scunizi	ChaosTheory	yes.. just in case the rom is got some bad info or it was left in a protected state from the factory.. by resetting it, it will get rid of any passwords that are on the router and the default "admin" will work to get into it.
+2008-04-03T08:15:00.000Z	ChaosTheory	Scunizi	Hm, okay. I'm going to go over to the desktop now and see if anything works.
+2008-04-03T08:15:00.000Z	Scunizi	ChaosTheory	k.. that is a good router.. I've got one.. it's based on linux
+2008-04-03T08:17:00.000Z	Scunizi	ChaosTheory	Actually I was wrong.. it's not based on linux.. that's the GL version
+2008-04-03T08:27:00.000Z	Scunizi	ChaosTheory	yep
+2008-04-03T08:27:00.000Z	Scunizi	ChaosTheory	just updated my routers firmware.. you's is linux I believe..
+2008-04-03T08:28:00.000Z	Scunizi	ChaosTheory	now it's my turn.. are YOU there?
+2008-04-03T08:31:00.000Z	ChaosTheory	Scunizi	Sorry, not Scuzini. -_-
+2008-04-03T08:31:00.000Z	Scunizi	ChaosTheory	:)
+2008-04-03T08:31:00.000Z	ChaosTheory	Scunizi	I think I'm just going to revert to having the desktop be the "host."
+2008-04-03T08:32:00.000Z	ChaosTheory	Scunizi	Now, do you know how to fix my screen resolution? =P
+2008-04-03T08:32:00.000Z	Scunizi	ChaosTheory	do you have two nic cards in the machine? one wireless and one wired?
+2008-04-03T08:32:00.000Z	ChaosTheory	Scunizi	yes.
+2008-04-03T08:33:00.000Z	Scunizi	ChaosTheory	ok. then.. screen resolution.. I'll get the link. hang on.
+2008-04-03T08:33:00.000Z	ChaosTheory	Scunizi	it's an NVIDIA driver.
+2008-04-03T08:33:00.000Z	Scunizi	ChaosTheory	https://help.ubuntu.com/community/FixVideoResolutionHowto
+2008-04-03T09:05:00.000Z	Scunizi	ChaosTheory	can you get to system/preferances/appearance?
+2008-04-03T09:06:00.000Z	ChaosTheory	Scunizi	Yes.
+2008-04-03T09:06:00.000Z	Scunizi	ChaosTheory	can you change it from none to the option below none?
+2008-04-03T09:07:00.000Z	ChaosTheory	Scunizi	not without losing my title bars.
+2008-04-03T09:08:00.000Z	Scunizi	ChaosTheory	ok.. go to system/preferances/advanced desktop etc.etc.
+2008-04-03T09:08:00.000Z	ChaosTheory	Scunizi	okay.
+2008-04-03T09:09:00.000Z	Scunizi	ChaosTheory	scroll down while looking on the right side. look for "window decorations" and put a check mark next to it
+2008-04-03T09:09:00.000Z	ChaosTheory	Scunizi	okay, done.
+2008-04-03T09:09:00.000Z	Scunizi	ChaosTheory	now are you still on "NONE" if so put it down  a notch
+2008-04-03T09:10:00.000Z	ChaosTheory	Scunizi	I'm still on "NONE."
+2008-04-03T09:10:00.000Z	Scunizi	ChaosTheory	move it down one level
+2008-04-03T09:10:00.000Z	ChaosTheory	Scunizi	no title bars.
+2008-04-03T09:11:00.000Z	Scunizi	ChaosTheory	ok.. in a terminal type compiz --replace
+2008-04-03T09:12:00.000Z	ChaosTheory	Scunizi	no title bars.
+2008-04-03T09:12:00.000Z	Scunizi	ChaosTheory	type metacity --replace
+2008-04-03T09:13:00.000Z	ChaosTheory	Scunizi	title bars now.
+2008-04-03T09:13:00.000Z	Scunizi	ChaosTheory	you stil here?  netsplit
+2008-04-03T09:14:00.000Z	ChaosTheory	Scunizi	yes.
+2008-04-03T09:14:00.000Z	Scunizi	ChaosTheory	k. go to system/prefrences/advanced etc.etc etc and click on "cube"
+2008-04-03T09:15:00.000Z	ChaosTheory	Scunizi	okay.
+2008-04-03T09:17:00.000Z	ChaosTheory	Scunizi	are you here?
+2008-04-03T09:17:00.000Z	Scunizi	ChaosTheory	ok.. now in the advanced setting box your in, at the top is "general settings" click that.
+2008-04-03T09:17:00.000Z	ChaosTheory	Scunizi	okay, done.
+2008-04-03T09:19:00.000Z	Scunizi	ChaosTheory	ok.. under the tab Desktop Size, in the vertical size option but 4
+2008-04-03T09:19:00.000Z	ChaosTheory	Scunizi	okay, done.
+2008-04-03T09:21:00.000Z	Scunizi	ChaosTheory	click the "back" button in the bottom left corner.. now push ctrl+alt then the left arrow key
+2008-04-03T09:21:00.000Z	ChaosTheory	Scunizi	it says "Desktop 1."
+2008-04-03T09:21:00.000Z	ChaosTheory	Scunizi	"Desk 1," that is.

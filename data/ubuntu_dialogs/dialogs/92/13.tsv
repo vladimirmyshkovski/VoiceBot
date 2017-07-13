@@ -1,0 +1,92 @@
+2011-01-24T16:22:00.000Z	mohanohi		Can anybody help with broken apt-get ?
+2011-01-24T16:22:00.000Z	mohanohi		i am on karmic
+2011-01-24T16:22:00.000Z	mohanohi		and an broken package is the issue
+2011-01-24T16:22:00.000Z	mohanohi		:(
+2011-01-24T16:23:00.000Z	Slydder	mohanohi	what's the problem?
+2011-01-24T16:23:00.000Z	mohanohi	Slydder	unable to install anything from apt-get or aptitude or synaptic
+2011-01-24T16:24:00.000Z	Slydder	mohanohi	error message?
+2011-01-24T16:24:00.000Z	mohanohi	Slydder	because of an broken package which is also not removing
+2011-01-24T16:24:00.000Z	mohanohi	Slydder	http://pastebin.com/720p6XNZ
+2011-01-24T16:27:00.000Z	mohanohi	Slydder	??
+2011-01-24T16:27:00.000Z	Slydder	mohanohi	execute update-desktop-database and tell me if you get an error?
+2011-01-24T16:28:00.000Z	mohanohi	Slydder	: symbol lookup error: update-desktop-database: undefined symbol: g_option_context_new
+2011-01-24T16:28:00.000Z	Slydder	mohanohi	just a sec
+2011-01-24T16:29:00.000Z	mohanohi	Slydder	: ok
+2011-01-24T16:30:00.000Z	Slydder	mohanohi	you can try reinstalling destop-file-utils
+2011-01-24T16:31:00.000Z	Slydder	mohanohi	s/destop-file-utils/desktop-file-utils/
+2011-01-24T16:32:00.000Z	mohanohi	Slydder	: via apt-get ?
+2011-01-24T16:32:00.000Z	Slydder		better would be directly with dpkg
+2011-01-24T16:33:00.000Z	mohanohi	Slydder	: http://pastebin.com/fn6xUcuy
+2011-01-24T16:34:00.000Z	mohanohi	Slydder	: i have manually deleted the package openshot by nautilus somehow
+2011-01-24T16:34:00.000Z	mohanohi	Slydder	: but its in database of dpkg
+2011-01-24T16:34:00.000Z	Slydder		dpkg --purge openshot
+2011-01-24T16:35:00.000Z	mohanohi	Slydder	:  subprocess installed post-removal script returned error exit status 127
+2011-01-24T16:35:00.000Z	Slydder		reinstall desktop-file-utils with dpkg
+2011-01-24T16:35:00.000Z	Slydder		until that error is gone you will continue to have problems
+2011-01-24T16:37:00.000Z	mohanohi	Slydder	:   cannot access archive: No such file or directory
+2011-01-24T16:38:00.000Z	Slydder		download the package from packages.ubuntu.com
+2011-01-24T16:38:00.000Z	Slydder	mohanohi	http://packages.ubuntu.com/karmic/desktop-file-utils
+2011-01-24T16:38:00.000Z	mohanohi	Slydder	: ok..
+2011-01-24T16:38:00.000Z	Slydder	mohanohi	that was karmic you have correct?
+2011-01-24T16:38:00.000Z	mohanohi	Slydder	: s
+2011-01-24T16:39:00.000Z	mohanohi	Slydder	: where to copy the package?
+2011-01-24T16:39:00.000Z	mohanohi	Slydder	: so that dpkg recognises
+2011-01-24T16:40:00.000Z	Slydder		doesn't matter. just save it somewhere in your home directory and then do a dpkg install
+2011-01-24T16:40:00.000Z	mohanohi	Slydder	: ok
+2011-01-24T16:40:00.000Z	Slydder		you will need to be in the same directory or tell dpkg the exact location.
+2011-01-24T16:42:00.000Z	mohanohi	Slydder	:  cannot access archive: No such file or directory
+2011-01-24T16:42:00.000Z	mohanohi	Slydder	:  its in /home/mohan/download directory
+2011-01-24T16:42:00.000Z	Slydder		then cd to that directory and dpkg -i desktop-file-utils.....deb
+2011-01-24T16:43:00.000Z	mohanohi	Slydder	:  http://pastebin.com/ndQWGbxJ
+2011-01-24T16:43:00.000Z	mohanohi	Slydder	:  my system seriously broken :( :( :( :( :( :(
+2011-01-24T16:45:00.000Z	Slydder	mohanohi	try dpkg-reconfigure -a
+2011-01-24T16:45:00.000Z	mohanohi	Slydder	:  ok
+2011-01-24T16:47:00.000Z	mohanohi	Slydder	:  http://pastebin.com/1J0dt9YE
+2011-01-24T16:48:00.000Z	Slydder	mohanohi	your system is hosed
+2011-01-24T16:48:00.000Z	mohanohi	Slydder	: huh?
+2011-01-24T16:48:00.000Z	mohanohi	Slydder	: oh god!
+2011-01-24T16:49:00.000Z	Slydder	mohanohi	what does apt-get -f install do now?
+2011-01-24T16:50:00.000Z	mohanohi	Slydder	: http://pastebin.com/TXEWSnw0
+2011-01-24T16:52:00.000Z	Slydder	mohanohi	can you post the contents of /var/lib/dpkg/info/desktop-file-utils.postinst
+2011-01-24T16:53:00.000Z	mohanohi	Slydder	: http://pastebin.com/upYCD7yK
+2011-01-24T16:54:00.000Z	Slydder	mohanohi	comment out line 4 and do apt-get -f install
+2011-01-24T16:54:00.000Z	Slydder	mohanohi	sorry. line 6 and 8
+2011-01-24T16:55:00.000Z	mohanohi	Slydder	: if & fi line right?
+2011-01-24T16:55:00.000Z	Slydder		correctg
+2011-01-24T16:55:00.000Z	Slydder		correct
+2011-01-24T16:55:00.000Z	mohanohi	Slydder	: same error
+2011-01-24T16:56:00.000Z	Slydder	mohanohi	then comment out line 4 as well
+2011-01-24T16:57:00.000Z	mohanohi	Slydder	: http://pastebin.com/TPZYcw5M
+2011-01-24T16:57:00.000Z	Slydder	mohanohi	reinstall the desktop-file-utils with dpkg
+2011-01-24T16:58:00.000Z	mohanohi	Slydder	: same error
+2011-01-24T16:59:00.000Z	Slydder	mohanohi	and the contents of /var/lib/dpkg/info/openshot.postremove
+2011-01-24T17:02:00.000Z	mohanohi	Slydder	: is this file? openshot.postrm
+2011-01-24T17:03:00.000Z	Slydder	mohanohi	sorry. should be /var/lib/dpkg/info/openshot.rm
+2011-01-24T17:04:00.000Z	mohanohi	Slydder	: is this file? that file not there. this file is only here openshot.postrm
+2011-01-24T17:04:00.000Z	Slydder		yeah. postrm. sorry.
+2011-01-24T17:04:00.000Z	mohanohi	Slydder	: http://pastebin.com/4Ld04uK1
+2011-01-24T17:05:00.000Z	Slydder		ok. comment lines 4 - 6 and do apt-get -f install
+2011-01-24T17:06:00.000Z	Slydder	mohanohi	ok. comment lines 4 - 6 and do apt-get -f install
+2011-01-24T17:06:00.000Z	mohanohi	Slydder	: same error
+2011-01-24T17:07:00.000Z	Slydder	mohanohi	lines 4,5 and 6 are commented out and you did an apt-get -f install?
+2011-01-24T17:09:00.000Z	mohanohi	Slydder	: http://pastebin.com/7tRtChX4
+2011-01-24T17:09:00.000Z	Slydder	mohanohi	ok. now we are somewhere else. ;)
+2011-01-24T17:10:00.000Z	Slydder		openshot is gone
+2011-01-24T17:10:00.000Z	mohanohi	Slydder	: oh
+2011-01-24T17:10:00.000Z	mohanohi	Slydder	: really?
+2011-01-24T17:10:00.000Z	Slydder		the error now is in the postinst from desktop-file-utils
+2011-01-24T17:11:00.000Z	Slydder		you have to comment out the update-desktop-database call and the if statement around it.
+2011-01-24T17:11:00.000Z	mohanohi	Slydder	: where?
+2011-01-24T17:12:00.000Z	Slydder		in /var/lib/dpkg/info/desktop-file-utils.postinst
+2011-01-24T17:12:00.000Z	Slydder		post the content for me
+2011-01-24T17:13:00.000Z	mohanohi	Slydder	: http://pastebin.com/6kUJLncH
+2011-01-24T17:14:00.000Z	Slydder	mohanohi	ok. try now
+2011-01-24T17:15:00.000Z	mohanohi	Slydder	: ?
+2011-01-24T17:15:00.000Z	Slydder		apt-get -f install
+2011-01-24T17:17:00.000Z	mohanohi	Slydder	: http://pastebin.com/Mpp6UjhL
+2011-01-24T17:18:00.000Z	Slydder	mohanohi	what files do you have when you do ls /var/lib/dpkg/info/desktop-file-utils*
+2011-01-24T17:19:00.000Z	mohanohi	Slydder	: http://pastebin.com/NSvJHBs0
+2011-01-24T17:21:00.000Z	Slydder	mohanohi	do a dpkg --purge desktop-file-utils
+2011-01-24T17:22:00.000Z	mohanohi	Slydder	: http://pastebin.com/KK1nbyeY
+2011-01-24T17:25:00.000Z	Slydder	mohanohi	tough one
+2011-01-24T17:26:00.000Z	mohanohi	Slydder	: :(

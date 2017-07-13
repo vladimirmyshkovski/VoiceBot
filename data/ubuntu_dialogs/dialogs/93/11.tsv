@@ -1,0 +1,93 @@
+2010-11-05T23:02:00.000Z	bleu_		im having an issue where im at the login in screen and when I log in it goes rite back to login screen
+2010-11-05T23:02:00.000Z	fadein	bleu_	what type of session are you trying to launch?
+2010-11-05T23:03:00.000Z	bleu_	fadein	trying to log into the desktop
+2010-11-05T23:03:00.000Z	fadein	bleu_	I know, but is it Gnome, Fluxbox, KDE, etc.?
+2010-11-05T23:04:00.000Z	bleu_	fadein	what ever default is, its a fresh install
+2010-11-05T23:04:00.000Z	fadein	bleu_	ubuntu, kubuntu, xubuntu?
+2010-11-05T23:04:00.000Z	bleu_	fadein	ubuntu
+2010-11-05T23:04:00.000Z	fadein	bleu_	depends on which flavor you installed
+2010-11-05T23:04:00.000Z	bleu_	fadein	ubuntu 10.10
+2010-11-05T23:05:00.000Z	fadein	bleu_	can you log in using one of the other profiles?
+2010-11-05T23:05:00.000Z	fadein	bleu_	such as failsafe?
+2010-11-05T23:06:00.000Z	bleu_	fadein	im rather new to linux so i don know how to do much
+2010-11-05T23:06:00.000Z	bleu_	fadein	how to i get to fail safe login?
+2010-11-05T23:06:00.000Z	fadein	bleu_	at the bottom of the login screen should be a drop-down that says something like "Ubuntu Desktop Editon"
+2010-11-05T23:07:00.000Z	fadein	bleu_	click it, and go into "Recovery Console"
+2010-11-05T23:07:00.000Z	fadein	bleu_	then tell me if that worked
+2010-11-05T23:07:00.000Z	bleu_	fadein	will do brb
+2010-11-05T23:10:00.000Z	bleu_	fadein	ok it loged me into a console
+2010-11-05T23:10:00.000Z	fadein	bleu_	ok.  that means that there is something scurvy with your Gnome setup
+2010-11-05T23:11:00.000Z	bleu_	fadein	from a fresh install? what do i need to do to fix it
+2010-11-05T23:12:00.000Z	fadein	bleu_	in that console, can you see what's in your /usr/share/xsessions/gnome.desktop?
+2010-11-05T23:12:00.000Z	bleu_	fadein	let me go check its in a diff room
+2010-11-05T23:18:00.000Z	bleu_	fadein	ok i can see that dir
+2010-11-05T23:20:00.000Z	bleu_	fadein	?
+2010-11-05T23:21:00.000Z	fadein	bleu_	so you have a gnome.desktop file in there?
+2010-11-05T23:21:00.000Z	bleu_	fadein	yes
+2010-11-05T23:22:00.000Z	bleu_	fadein	i tried to fresh install like 3 times and it still does this
+2010-11-05T23:25:00.000Z	fadein	bleu_	dumb question now: does your gnome.desktop file look like this: pastebin.com/k1GpxL4Q
+2010-11-05T23:25:00.000Z	bleu_	fadein	any idea
+2010-11-05T23:25:00.000Z	bleu_	fadein	you mean if i open it?
+2010-11-05T23:26:00.000Z	fadein	bleu_	yeah
+2010-11-05T23:26:00.000Z	bleu_	fadein	i would have to check
+2010-11-05T23:26:00.000Z	bleu_	fadein	whats the name of the txt editor?
+2010-11-05T23:26:00.000Z	fadein	bleu_	it's a short file.  just cat it.
+2010-11-05T23:27:00.000Z	bleu_	fadein	cat?
+2010-11-05T23:27:00.000Z	fadein	bleu_	cat /usr/share/xsessions/gnome.desktop
+2010-11-05T23:27:00.000Z	bleu_	fadein	ok brb
+2010-11-05T23:28:00.000Z	bleu_	fadein	ok  no it doesnt look like what you put
+2010-11-05T23:28:00.000Z	fadein	bleu_	how different is it?  wildly different?
+2010-11-05T23:29:00.000Z	bleu_	fadein	it says stuff like gnome session this and that
+2010-11-05T23:30:00.000Z	fadein	bleu_	The important thing, I think, is the Exec= part
+2010-11-05T23:30:00.000Z	bleu_	fadein	what is it supposed to say?
+2010-11-05T23:31:00.000Z	fadein	bleu_	I believe that it should look like mine.  Mine works.  I'm curious to see yours...
+2010-11-05T23:31:00.000Z	fadein	bleu_	i think the default editor is called pico
+2010-11-05T23:31:00.000Z	fadein	bleu_	you'll need to use sudo to edit that file
+2010-11-05T23:32:00.000Z	fadein	bleu_	just had another idea.  Log in to the recovery console
+2010-11-05T23:32:00.000Z	fadein	bleu_	when it comes up, run gnome-session in that terminal
+2010-11-05T23:32:00.000Z	bleu_	fadein	ok will try the recovery
+2010-11-05T23:32:00.000Z	fadein	bleu_	it'll try to launch gnome - if it fails, hopefully it will say something useful in the console
+2010-11-05T23:33:00.000Z	fadein	bleu_	that may clue you in on what is wrong
+2010-11-05T23:39:00.000Z	bleu_	fadein	i could log into safe mode session
+2010-11-05T23:40:00.000Z	bleu_	fadein	and the exec=gnome session
+2010-11-05T23:41:00.000Z	fadein	bleu_	let me understand you: when you ran "gnome-session" from the recovery console, it logged you into gnome?
+2010-11-05T23:41:00.000Z	bleu_	fadein	i exited the terminal, loged in under safe mode
+2010-11-05T23:42:00.000Z	bleu_	fadein	and in that file you are asking about the part where exec is it says gnome desktop
+2010-11-05T23:42:00.000Z	fadein	bleu_	yeah, that's the name of the program that the login screen should run after it checks your password
+2010-11-05T23:42:00.000Z	fadein	bleu_	so I'm just asking you to run it manually to see if it gives an error message in the recovery console
+2010-11-05T23:43:00.000Z	bleu_	fadein	oh
+2010-11-05T23:43:00.000Z	fadein	bleu_	otherwise, if it's erroring out, it's probably just throwing the output away
+2010-11-05T23:43:00.000Z	bleu_		let me try to run that from the terminal
+2010-11-05T23:49:00.000Z	bleu_	fadein	i tried running gnome-session from terminal and it kicks me back to the login screen
+2010-11-05T23:49:00.000Z	fadein	bleu_	you weren't able, by chance, to see any helpful error message, were you?
+2010-11-05T23:50:00.000Z	bleu_	fadein	it went way to fast
+2010-11-05T23:50:00.000Z	fadein	bleu_	well, I wasn't expecting it to launch gnome for you, but the fact that it even kicked you out of the recovery console is troubling
+2010-11-05T23:51:00.000Z	fadein	bleu_	did you install this from the LiveCD?  were you able to run Ubuntu off the CD before install?
+2010-11-05T23:51:00.000Z	bleu_	fadein	i didnt try to run the cd, just fresh install
+2010-11-05T23:51:00.000Z	bleu_	fadein	but the fail safe session logs in fine
+2010-11-05T23:52:00.000Z	fadein	bleu_	I wonder if you've got some hardware issue.  It sounds to me like something is crashing
+2010-11-05T23:52:00.000Z	fadein	bleu_	for instance, gnome may be trying to start some 3D-compositing type stuff that your video card doesn't like
+2010-11-05T23:52:00.000Z	bleu_	fadein	what can I do then
+2010-11-05T23:53:00.000Z	fadein	bleu_	for now, not use gnome ;)
+2010-11-05T23:53:00.000Z	bleu_	fadein	lol, how do i pick something else?
+2010-11-05T23:53:00.000Z	fadein	bleu_	actually, better would be to check your X logs
+2010-11-05T23:53:00.000Z	fadein	bleu_	see if the error is in there
+2010-11-05T23:53:00.000Z	bleu_	fadein	where do i find that?
+2010-11-05T23:53:00.000Z	fadein	bleu_	those files are in /var/logs/Xorg*
+2010-11-05T23:53:00.000Z	fadein	bleu_	wait, let me check that for sure.
+2010-11-05T23:54:00.000Z	fadein	bleu_	/var/log/Xorg.0.log is probably the file you want to peek at
+2010-11-05T23:54:00.000Z	fadein	bleu_	you'll be looking for some lines that have (EE) near the beginning, as they indicate errors that the X server recieved
+2010-11-05T23:55:00.000Z	bleu_	fadein	ok will go check
+2010-11-06T00:02:00.000Z	bleu_	fadein	the only line that fails is one that tires to open a dir that doesnt exist
+2010-11-06T00:03:00.000Z	bleu_	fadein	how can i get my nic to work in safe mode so i can try and dl the updates
+2010-11-06T00:04:00.000Z	fadein	bleu_	what directory is it trying to read?  did you try to create that directory to see if that appeases it?
+2010-11-06T00:04:00.000Z	fadein	bleu_	about your 2nd question - I don't know what you're talking about... sorry
+2010-11-06T00:04:00.000Z	bleu_	fadein	var/pd0 or something
+2010-11-06T00:04:00.000Z	fadein	bleu_	yeah, I don't have one of those dirs... weird
+2010-11-06T00:04:00.000Z	bleu_	fadein	my network card, get it to work in safe mode desktop
+2010-11-06T00:05:00.000Z	fadein	bleu_	oh.  It should be working even now.
+2010-11-06T00:05:00.000Z	bleu_	fadein	it shows the device but it doesnt seem to connect
+2010-11-06T00:05:00.000Z	fadein	bleu_	Actually, you may want to sudo apt-get install fluxbox, or blackbox, just to get a working desktop in the meantime
+2010-11-06T00:06:00.000Z	bleu_	fadein	dont i need internet to get them?
+2010-11-06T00:06:00.000Z	fadein	bleu_	You are correct.  I understand now.
+2010-11-06T00:11:00.000Z	bleu_	fadein	well im giving up for the day, thanks for the help

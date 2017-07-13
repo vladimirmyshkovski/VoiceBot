@@ -1,0 +1,92 @@
+2005-09-05T12:26:00.000Z	aftertaf		'/media/[drive] '
+2005-09-05T12:26:00.000Z	aftertaf		cd /media
+2005-09-05T12:26:00.000Z	nalioth	aftertaf	root is not necessary
+2005-09-05T12:26:00.000Z	aftertaf	nalioth	 i meant as in "/"
+2005-09-05T12:27:00.000Z	nalioth	aftertaf	i'm confused ;0
+2005-09-05T12:30:00.000Z	aftertaf	nalioth	 i meant the root of the disk system "/" which has a directory called media...
+2005-09-05T12:30:00.000Z	nalioth	aftertaf	please keep in mind you are speaking most of the time in here to brand new *nix users
+2005-09-05T12:30:00.000Z	aftertaf	nalioth	 ;) ok
+2005-09-05T13:59:00.000Z	nalioth	aftertaf	did waynething msg you?
+2005-09-05T15:12:00.000Z	nalioth	aftertaf	why shouldnt it be possible?
+2005-09-05T15:20:00.000Z	aftertaf	nalioth	 you mean for mail thru proxy????
+2005-09-05T15:25:00.000Z	nalioth	aftertaf	why not?
+2005-09-05T15:32:00.000Z	aftertaf	nalioth	 Belutz :  I've set the proxy server... but still get failed to connect to pop server...
+2005-09-05T15:33:00.000Z	nalioth	aftertaf	have a nap
+2005-09-05T15:33:00.000Z	nalioth	aftertaf	sleep on it
+2005-09-05T15:37:00.000Z	nalioth	aftertaf	ssh tunneling is great fun
+2005-09-05T15:37:00.000Z	aftertaf	nalioth	 :) :) :) :)
+2005-09-05T15:37:00.000Z	nalioth	aftertaf	i do it all the time
+2005-09-05T15:38:00.000Z	nalioth	aftertaf	not really
+2005-09-05T15:38:00.000Z	nalioth	aftertaf	just a *nix box running a ssh server
+2005-09-05T15:39:00.000Z	nalioth	aftertaf	your other box needs to have *nix, a ssh-server and an account you can log into
+2005-09-05T15:39:00.000Z	aftertaf	nalioth	 what's the procedure???
+2005-09-05T15:39:00.000Z	nalioth	aftertaf	then go ask uncle google "ssh tunneling"
+2005-09-06T13:15:00.000Z	nalioth	aftertaf	use your terminal and type "apt-cache search pppoe"
+2005-09-06T13:16:00.000Z	nalioth	aftertaf	have you seen http://packages.ubuntu.com   ?
+2005-09-11T14:19:00.000Z	nalioth	aftertaf	quit stirring
+2005-09-11T14:20:00.000Z	aftertaf	nalioth	 i'm not... but when you ask for help and just get blindwalled... i'm trying to help someone who knows even less than me... thats all
+2005-09-11T14:21:00.000Z	nalioth	aftertaf	ask some1 else. there are many users in here
+2005-09-13T05:21:00.000Z	nalioth	aftertaf	ssh opens up many possibilitys
+2005-09-13T05:21:00.000Z	nalioth	aftertaf	wait until you xforward your first app
+2005-09-13T05:22:00.000Z	aftertaf	nalioth	 thats what im trying to do.....
+2005-09-13T05:23:00.000Z	nalioth	aftertaf	aint but a thing
+2005-09-13T05:40:00.000Z	aftertaf	nalioth	 apt is a super cow :D
+2005-09-19T12:56:00.000Z	nalioth	aftertaf	try it with the livecd
+2005-09-19T12:57:00.000Z	aftertaf	nalioth	 ok. if it freezes then its hardware right?
+2005-09-19T12:57:00.000Z	nalioth	aftertaf	one would think so
+2005-09-19T15:29:00.000Z	nalioth	aftertaf	currently we are using the -unregged system due to bot swarming
+2005-09-19T16:00:00.000Z	nalioth	aftertaf	invite him to -offtopic and teach him your evil ways
+2005-09-20T12:29:00.000Z	nalioth	aftertaf	please do us the favor
+2005-09-20T16:22:00.000Z	aftertaf	nalioth	 not sure..... the ubuntu =nvidia packages mess things up (imhe)
+2005-09-25T07:05:00.000Z	aftertaf	nalioth	 is that just in hoary, w32codecs being removed?
+2005-09-25T07:05:00.000Z	nalioth	aftertaf	all versions
+2005-09-27T12:10:00.000Z	nalioth	aftertaf	howdy
+2005-09-27T14:16:00.000Z	aftertaf	nalioth	1 : guest 0
+2005-09-27T14:45:00.000Z	nalioth	aftertaf	YOU? working? geddoutahere!
+2005-09-27T14:48:00.000Z	nalioth	aftertaf	i'm glad i'm sitting down
+2005-09-27T14:59:00.000Z	aftertaf	nalioth	5 : l00z3rs 0
+2005-09-27T16:06:00.000Z	nalioth	aftertaf	no, i want ALL the packages and their combined size
+2005-09-27T05:55:00.000Z	aftertaf	nalioth	 really????? jeez. when you leaving?
+2005-09-27T05:57:00.000Z	aftertaf	nalioth	 if you have trouble getting back, but you are in good health.... we'll just cross our fingers man
+2005-09-27T07:28:00.000Z	nalioth	aftertaf	if it wasnt 100% plugged in, you still should've gotten some % of packets  ;)
+2005-09-27T07:29:00.000Z	aftertaf	nalioth	 hehe you think so???? (i don't!!) ;p
+2005-10-03T14:51:00.000Z	nalioth	aftertaf	c'mon man, enough denials
+2005-10-03T14:52:00.000Z	nalioth	aftertaf	we KNOW you
+2005-10-03T14:52:00.000Z	aftertaf	nalioth	 are you on ritalin?
+2005-10-16T13:36:00.000Z	aftertaf	nalioth	 could be that yeah :)
+2005-10-17T08:29:00.000Z	nalioth	aftertaf	howdy
+2005-10-19T12:28:00.000Z	nalioth	aftertaf	howdy
+2005-10-19T12:29:00.000Z	aftertaf	nalioth	breezy +1 panic sorting itself out?
+2005-10-19T12:29:00.000Z	nalioth	aftertaf	very slowly
+2005-10-19T12:40:00.000Z	aftertaf	nalioth	yeah right.... panic +1 :D
+2005-10-22T12:01:00.000Z	nalioth	aftertaf	depends on how much physical ram you have
+2005-10-22T12:03:00.000Z	aftertaf	nalioth	 howdy mister :)
+2005-10-23T12:08:00.000Z	aftertaf	nalioth	 he cant su - or sudo.....
+2005-10-23T12:45:00.000Z	nalioth	aftertaf	#ubuntu-fr, s'il vous plait
+2005-10-23T12:46:00.000Z	aftertaf	nalioth	 though, you can tutoye me ..... :D
+2005-10-25T12:33:00.000Z	nalioth	aftertaf	if he ctrl-alt-backspaces and ends up in a console, he may need to try "startx"
+2005-10-25T13:12:00.000Z	aftertaf	nalioth	 with automake & autoconf, doesnt it create a make uninstall for you?
+2005-10-25T13:13:00.000Z	nalioth	aftertaf	thats up to the source writers
+2005-10-25T13:15:00.000Z	aftertaf	nalioth	 can you create debs that way from tarballs then distribute them or use them on another pc?
+2005-10-25T13:16:00.000Z	nalioth	aftertaf	not with checkinstall
+2005-10-25T13:16:00.000Z	aftertaf	nalioth	 ok, but with dpkg?
+2005-10-25T13:16:00.000Z	nalioth	aftertaf	yes with dpkg or apt-get
+2005-10-25T13:20:00.000Z	nalioth	aftertaf	neither of those things are available there
+2005-10-25T13:20:00.000Z	aftertaf	nalioth	 really? i stand corrected...... wow i thought they were
+2005-10-25T13:20:00.000Z	nalioth	aftertaf	they've been removed for legal reasons (at least sun java has been)
+2005-10-31T16:00:00.000Z	nalioth	aftertaf	breezy does
+2005-10-31T16:00:00.000Z	aftertaf	nalioth	 ahh..... :] 
+2005-11-29T13:52:00.000Z	nalioth	aftertaf	polpak: hold up. something makes no sense with bungle
+2005-11-30T15:19:00.000Z	aftertaf	nalioth	 what did i do?
+2005-11-30T15:19:00.000Z	nalioth	aftertaf	you guessed Akonkwa's problem at the same time Akonkwa said wht the problem might be. hopefully you've seen this
+2005-11-30T15:20:00.000Z	aftertaf	nalioth	noe, he was on before asking about video editing software... i told him kino, which i use
+2005-11-30T15:26:00.000Z	aftertaf	nalioth	 is irssi on ubuntu preconfigured to come here?
+2005-11-30T15:26:00.000Z	nalioth	aftertaf	what if Akonkwa is running gdm?
+2005-11-30T15:26:00.000Z	aftertaf	nalioth	 true, but he said he did install kdm.
+2005-11-30T15:27:00.000Z	nalioth	aftertaf	and yes, irssi is default in ubuntu
+2005-11-30T15:27:00.000Z	aftertaf	nalioth	 do you know what file i can edit to give myself webmin access from a certain IP ?
+2005-11-30T15:28:00.000Z	nalioth	aftertaf	i'm unfamiliar with webmin
+2005-11-30T15:45:00.000Z	aftertaf	nalioth	 could well do
+2006-10-05T10:36:00.000Z	aftertaf	nalioth	you know about the new root view in edgy?
+2006-10-05T10:37:00.000Z	nalioth	aftertaf	ask in #ubuntu+1
+2006-10-05T10:51:00.000Z	aftertaf	nalioth	for info.... file called /.hidden

@@ -1,0 +1,94 @@
+2009-05-15T15:42:00.000Z	MaxTesla		How do I install ATi graphic card drivers in Ubuntu 9.04 without getting the black screen of death at reboot
+2009-05-15T15:42:00.000Z	ziroday	MaxTesla	make sure you install the right drivers?
+2009-05-15T15:43:00.000Z	MaxTesla	ziroday	I have tried so many different drivers everything gives me the black screen of death
+2009-05-15T15:45:00.000Z	ziroday	MaxTesla	you use System > Administration > Hardware Drivers
+2009-05-15T15:46:00.000Z	MaxTesla	ziroday	it does not show my graphic drivers ubuntu can not find anything there except my modem card
+2009-05-15T15:46:00.000Z	ziroday	MaxTesla	then there are no drivers for your card, they are already installed
+2009-05-15T15:46:00.000Z	MaxTesla	ziroday	NO because i had nice graphics in windows vista but now it is all pixly
+2009-05-15T15:47:00.000Z	ziroday	MaxTesla	what graphics card?
+2009-05-15T15:47:00.000Z	MaxTesla	ziroday	i have Ati Mobility Radeon X2300 HD
+2009-05-15T15:48:00.000Z	ziroday	MaxTesla	you might find that the fglrx driver has dropped support for that card and you can only use the opensource radeon or radeonhd drivers now
+2009-05-15T15:49:00.000Z	MaxTesla	ziroday	when i follow "READEON" instructions it gives me the black screen of death nad READEONHD instructions are not clear but at reboot it says i must select drivers
+2009-05-15T15:50:00.000Z	ziroday	MaxTesla	okay, you need the radeonhd drivers
+2009-05-15T15:50:00.000Z	ziroday	MaxTesla	please pastebin your /etc/X11/xorg.conf
+2009-05-15T15:50:00.000Z	MaxTesla	ziroday	i did the installation as given on the help page
+2009-05-15T15:50:00.000Z	MaxTesla	ziroday	what????
+2009-05-15T15:50:00.000Z	ziroday	MaxTesla	please pastebin that file
+2009-05-15T15:51:00.000Z	ziroday	MaxTesla	see up two lines
+2009-05-15T15:51:00.000Z	ziroday	MaxTesla	please pastebin your xorg.conf and verify that you have xserver-xorg-video-radeonhd installed
+2009-05-15T15:52:00.000Z	MaxTesla	ziroday	ok ok give me 4 secs
+2009-05-15T15:53:00.000Z	ziroday	MaxTesla	I said *pastebin*
+2009-05-15T15:53:00.000Z	MaxTesla	ziroday	i just came from windows yeasterday
+2009-05-15T15:54:00.000Z	ziroday	MaxTesla	I understand that, but you need to read what is given to you :)
+2009-05-15T15:54:00.000Z	ziroday	MaxTesla	please copy the stuff in that file to http://paste.ubuntu.com and then hit send and copy the url back to us
+2009-05-15T15:54:00.000Z	MaxTesla	ziroday	i went to pastebin home page and copied the text
+2009-05-15T15:55:00.000Z	ziroday	MaxTesla	yay! you did it
+2009-05-15T15:55:00.000Z	MaxTesla	ziroday	yes i did
+2009-05-15T15:55:00.000Z	ziroday	MaxTesla	okay, now do you have the xserver-xorg-video-radeonhd package installed?
+2009-05-15T15:56:00.000Z	MaxTesla	ziroday	no idea
+2009-05-15T15:56:00.000Z	MaxTesla	ziroday	most likely maybe
+2009-05-15T15:56:00.000Z	MaxTesla	ziroday	maybe ;)
+2009-05-15T15:56:00.000Z	ziroday	MaxTesla	do sudo apt-get install xserver-xorg-video-radeonhd
+2009-05-15T15:56:00.000Z	MaxTesla	ziroday	NO
+2009-05-15T15:56:00.000Z	MaxTesla	ziroday	if i do that and reboot i get the black screen of death
+2009-05-15T15:56:00.000Z	ziroday	MaxTesla	good, well it should be installing now
+2009-05-15T15:56:00.000Z	ziroday	MaxTesla	well you won't this time okay
+2009-05-15T15:57:00.000Z	MaxTesla	ziroday	ok but wont it mess with my semi installation of radeonhd?
+2009-05-15T15:57:00.000Z	ziroday	MaxTesla	err possibly, I have no idea what you did previously
+2009-05-15T15:57:00.000Z	ziroday	MaxTesla	anyway, do that for now
+2009-05-15T15:58:00.000Z	MaxTesla	ziroday	i am doing and it is blinking ;)
+2009-05-15T15:58:00.000Z	ziroday	MaxTesla	blinking?
+2009-05-15T15:58:00.000Z	MaxTesla	ziroday	i did THIS https://help.ubuntu.com/community/RadeonHD
+2009-05-15T15:58:00.000Z	MaxTesla	ziroday	ok it is done now what?
+2009-05-15T15:59:00.000Z	ziroday	MaxTesla	now edit your /etc/X11/xorg.conf file to look like this http://paste.ubuntu.com/172933/
+2009-05-15T15:59:00.000Z	MaxTesla	ziroday	it is completed what you said me to do
+2009-05-15T16:01:00.000Z	MaxTesla	ziroday	it wont let me save
+2009-05-15T16:01:00.000Z	MaxTesla	ziroday	how do i save it?
+2009-05-15T16:01:00.000Z	ziroday	MaxTesla	how are you editing the file?
+2009-05-15T16:01:00.000Z	MaxTesla	ziroday	i click places computer etc x11 and the file
+2009-05-15T16:02:00.000Z	MaxTesla	ziroday	i need to edit it via the terminaö
+2009-05-15T16:02:00.000Z	ziroday	MaxTesla	do gksudo gedit /etc/X11/xorg.conf in the terminal
+2009-05-15T16:02:00.000Z	MaxTesla	ziroday	yes i have done it give me 4 sec
+2009-05-15T16:03:00.000Z	MaxTesla	ziroday	ok i have done it
+2009-05-15T16:03:00.000Z	ziroday	MaxTesla	now please logout and log back in
+2009-05-15T16:03:00.000Z	MaxTesla	ziroday	it is done but i recognize all this and this all elads tot he black screen of death
+2009-05-15T16:03:00.000Z	MaxTesla	ziroday	if i do this now
+2009-05-15T16:03:00.000Z	ziroday	MaxTesla	please logout and log back in
+2009-05-15T16:04:00.000Z	MaxTesla	ziroday	i will get the black screen of death
+2009-05-15T16:04:00.000Z	MaxTesla	ziroday	i will get the blacks creen of death and it will take me 15-20 minutes to reinstall ubuntu
+2009-05-15T16:04:00.000Z	MaxTesla	ziroday	if i am not back within 5 minutes you will know that i have the black screen of death
+2009-05-15T16:05:00.000Z	ziroday	MaxTesla	if it "black screens of death" you can do sudo nano /etc/X11/xorg,conf and change "radeonhd" to "ati"
+2009-05-15T16:14:00.000Z	MaxTesla	ziroday	i am back
+2009-05-15T16:14:00.000Z	ziroday	MaxTesla	did it fail?
+2009-05-15T16:14:00.000Z	MaxTesla	ziroday	it did not give me the black screen of death
+2009-05-15T16:14:00.000Z	ziroday	MaxTesla	wonderful
+2009-05-15T16:15:00.000Z	MaxTesla	ziroday	it does work kinda it gave me more screen resolution options but now my monitor which i have connected to my laptop is a bit off and all videos are still very pixly
+2009-05-15T16:16:00.000Z	ziroday	MaxTesla	great
+2009-05-15T16:16:00.000Z	MaxTesla	ziroday	no not great my monitor is now way to the left and still the graphic card is not working even close to what it was under windows
+2009-05-15T16:17:00.000Z	ziroday	MaxTesla	how large is this monitor and at what resolution?
+2009-05-15T16:17:00.000Z	ziroday	MaxTesla	and what do you mean by "pixly videos"
+2009-05-15T16:17:00.000Z	MaxTesla	ziroday	forget about the monitor i can adjust that by going into the monitor options by clicking on it
+2009-05-15T16:18:00.000Z	MaxTesla	ziroday	what is 100% important is to get smoth videos
+2009-05-15T16:18:00.000Z	MaxTesla	ziroday	what i want are smoth videos where the camera can keep up and everything is not a big pixle
+2009-05-15T16:18:00.000Z	ziroday	MaxTesla	okay, well unfortunately I have no idea what you mean by "pixly video"
+2009-05-15T16:18:00.000Z	ziroday	MaxTesla	can you take a screenshot?
+2009-05-15T16:19:00.000Z	MaxTesla	ziroday	what i mean is that when the video moves everything gets messy and you can see the pixles the smal squares you can see them it is not as smoth as when you watch tv
+2009-05-15T16:19:00.000Z	MaxTesla	ziroday	sure if you tell me how
+2009-05-15T16:19:00.000Z	ziroday	MaxTesla	err okay, in a terminal please do metacity --replace
+2009-05-15T16:20:00.000Z	MaxTesla	ziroday	ok i did that it made my monitor blink
+2009-05-15T16:20:00.000Z	ziroday	MaxTesla	okay, now try to play video
+2009-05-15T16:20:00.000Z	MaxTesla	ziroday	ok give me 4 secs
+2009-05-15T16:21:00.000Z	MaxTesla	ziroday	still everything is so pixly
+2009-05-15T16:22:00.000Z	ziroday	MaxTesla	okay, I'm sorry I can't help you any further as I can't completely understand your issue, the nice people in #radeonhd might
+2009-05-15T16:22:00.000Z	MaxTesla	ziroday	also my terminal wont close without asking do i want to close it is still apprently thinking
+2009-05-15T16:22:00.000Z	MaxTesla	ziroday	ok
+2009-05-15T16:22:00.000Z	ziroday	MaxTesla	yes, it is running metacity
+2009-05-15T16:22:00.000Z	MaxTesla	ziroday	what is metacity
+2009-05-15T16:23:00.000Z	ziroday	MaxTesla	open another terminal, type in metacity --replace & disown then you can close both terminal
+2009-05-15T16:23:00.000Z	MaxTesla	ziroday	ok
+2009-05-15T16:23:00.000Z	MaxTesla	ziroday	then i will check in that other channel
+2009-05-15T16:24:00.000Z	MaxTesla	ziroday	i also made a post about it here https://answers.launchpad.net/ubuntu/+question/71091
+2009-05-15T16:24:00.000Z	MaxTesla	ziroday	if you could go there and help me it would be great
+2009-05-15T16:25:00.000Z	ziroday	MaxTesla	I have already tried to help you, I have explained I cannot fully understand your issue.
+2009-05-15T16:25:00.000Z	MaxTesla	ziroday	ok thanks for your time, atleast you didnt give me the black screen of death and that is always something
+2009-05-15T16:41:00.000Z	MaxTesla	ziroday	are you still here?

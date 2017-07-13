@@ -1,0 +1,93 @@
+2005-11-28T09:54:00.000Z	fletch33		evening all i am trying to install freenx client and i keep getting this:  $/usr/NX/bin/nxclient &
+2005-11-28T09:54:00.000Z	fletch33		bash: $/usr/NX/bin/nxclient: No such file or directory
+2005-11-28T09:54:00.000Z	fletch33		[1]  20399
+2005-11-28T09:54:00.000Z	fletch33		[1]    Exit 127                $/usr/NX/bin/nxclient
+2005-11-28T09:54:00.000Z	fletch33		    anyone know how to fix this
+2005-11-28T09:55:00.000Z	fletch33		sorry
+2005-11-28T09:57:00.000Z	Cole	fletch33	whats wrong?
+2005-11-28T09:57:00.000Z	Cole	fletch33	i wasn't in room
+2005-11-28T09:58:00.000Z	fletch33	Cole	well i dont want to paste again how can i show u this
+2005-11-28T09:59:00.000Z	fletch33	Cole	 basiccaly my terminal says $/usr/nx/bin/nxclient: no such file or directory
+2005-11-28T09:59:00.000Z	Cole	fletch33	err http://pastebin.ca/
+2005-11-28T10:01:00.000Z	fletch33	Cole	 http://pastebin.ca/30492
+2005-11-28T10:02:00.000Z	Cole	fletch33	try typing "ls -l /usr/NX/bin" and what does it say
+2005-11-28T10:03:00.000Z	fletch33	Cole	k 1 sec
+2005-11-28T10:04:00.000Z	fletch33	Cole	no such file or directory
+2005-11-28T10:04:00.000Z	Cole	fletch33	how did you install the NX client?
+2005-11-28T10:05:00.000Z	Cole	fletch33	link?
+2005-11-28T10:05:00.000Z	fletch33	Cole	https://wiki.ubuntu.com/FreeNX
+2005-11-28T10:09:00.000Z	Cole	fletch33	sudo ls -l /usr/NX/bin
+2005-11-28T10:12:00.000Z	fletch33	Cole	 i got " nxclient, mxesd,nxprint,mxssh
+2005-11-28T10:12:00.000Z	Cole	fletch33	will you pastebin it i want to see permissions/owner/group stuff
+2005-11-28T10:13:00.000Z	fletch33	Cole	 how do i do that
+2005-11-28T10:15:00.000Z	Cole	fletch33	how did you know the 4 files.. i want to see all the output for the files
+2005-11-28T10:16:00.000Z	Cole	fletch33	did you put the -l in there thats a dash L
+2005-11-28T10:16:00.000Z	Cole	fletch33	but lowercase L
+2005-11-28T10:16:00.000Z	fletch33	Cole	ok i will try again sorry
+2005-11-28T10:16:00.000Z	Cole	fletch33	np .... -l is for long format.. it shows more info
+2005-11-28T10:18:00.000Z	fletch33	Cole	 " ls: user/NX/bin: No such file or directory"
+2005-11-28T10:20:00.000Z	fletch33	Cole	bimberi http://pastebin.ca/30497
+2005-11-28T10:22:00.000Z	Cole	fletch33	how about a "sudo -l /usr/NX" and then a "sudo -l /usr"
+2005-11-28T10:22:00.000Z	fletch33	Cole	k 1 sec
+2005-11-28T10:22:00.000Z	Cole	fletch33	np
+2005-11-28T10:24:00.000Z	fletch33	Cole	http://pastebin.ca/30498
+2005-11-28T10:25:00.000Z	Cole	fletch33	err my bad ... "sudo ls -l /usr/NX" and "sudo ls -l /usr"
+2005-11-28T10:25:00.000Z	fletch33	Cole	ha 1 sec
+2005-11-28T10:27:00.000Z	fletch33	Cole	 http://pastebin.ca/30499
+2005-11-28T10:29:00.000Z	Cole	fletch33	ooohh ok.. are you trying to use sudo to start the client?
+2005-11-28T10:29:00.000Z	fletch33	Cole	 start the client
+2005-11-28T10:30:00.000Z	Cole	fletch33	when you where trying to type /usr/NX/bin/nxclient & where you putting sudo in front of it?
+2005-11-28T10:30:00.000Z	fletch33	Cole	i didnt realize i only needed the client on here and i installed the rest on the machine i am trying to control
+2005-11-28T10:30:00.000Z	fletch33	Cole	yes
+2005-11-28T10:31:00.000Z	fletch33	Cole	 i tyoed "$sudo apt-get install nxclient" to install and then "$/usr/NX/bin/nxclient &" to start it
+2005-11-28T10:32:00.000Z	fletch33	Cole	 but it says it cant find it in /bin
+2005-11-28T10:32:00.000Z	Cole	fletch33	can't find /bin when you do what?
+2005-11-28T10:33:00.000Z	fletch33	Cole	 http://pastebin.ca/30500
+2005-11-28T10:34:00.000Z	Cole	fletch33	ok you don't have to type $
+2005-11-28T10:34:00.000Z	Cole	fletch33	you know your currently root.. there is no need to be root.. be your normal user sean
+2005-11-28T10:35:00.000Z	fletch33	Cole	 so get rid of $ for starting or when i installed
+2005-11-28T10:35:00.000Z	Cole	fletch33	either.. you don't need to put a $ in front.. that means as a normal user.. where as # is the prompt when your root
+2005-11-28T10:36:00.000Z	fletch33	Cole	 so i should install again and then execute again
+2005-11-28T10:36:00.000Z	Cole	fletch33	do you see how your currently root@Sean ???  you should be root unless you are doing something very specific
+2005-11-28T10:36:00.000Z	Cole	fletch33	err should NOT be root (typo)
+2005-11-28T10:37:00.000Z	fletch33	Cole	 ok how do i change that (sorry and thanks)
+2005-11-28T10:37:00.000Z	Cole	fletch33	np.. did you at soem point do a "sudo su"?
+2005-11-28T10:38:00.000Z	fletch33	Cole	 dont htink so
+2005-11-28T10:38:00.000Z	Cole	fletch33	how did you open your terminal?
+2005-11-28T10:38:00.000Z	fletch33	Cole	with a shortkut i made on my desktop
+2005-11-28T10:38:00.000Z	Cole	fletch33	do you know what that shortcut points to?
+2005-11-28T10:39:00.000Z	fletch33	Cole	cant remeber
+2005-11-28T10:39:00.000Z	fletch33	Cole	 bad typer sorry
+2005-11-28T10:40:00.000Z	fletch33	Cole	apps, system tools, root terminal
+2005-11-28T10:40:00.000Z	Cole	fletch33	it isn't a problem. it appears that the shortcut creates a terminal as root the super user.. i would suggest using the terminal in Applications-Accessories-Terminal
+2005-11-28T10:40:00.000Z	fletch33	Cole	 and restarting the whole gat apt
+2005-11-28T10:40:00.000Z	Cole	fletch33	that is the super user one.. with that one if not careful. you can mess your system up. its like typing sudo in front of every command
+2005-11-28T10:41:00.000Z	fletch33	Cole	 thanks for your help i will try that
+2005-11-28T10:41:00.000Z	Cole	fletch33	i'd close that window and open up a normal on from the accessories window
+2005-11-28T10:41:00.000Z	Cole	fletch33	then i have a couple thigns for you to try.. we will fix the permissions on the fiels .. and then hopefully get the application to start
+2005-11-28T10:41:00.000Z	fletch33	Cole	 k ready
+2005-11-28T10:42:00.000Z	Cole	fletch33	"sudo chown -R root /usr/NX"
+2005-11-28T10:43:00.000Z	fletch33	Cole	 k got sean@sean
+2005-11-28T10:43:00.000Z	Cole	fletch33	good.. now try the command "sudo chown -R root /usr/NX" if you haven't yet
+2005-11-28T10:44:00.000Z	fletch33	Cole	 k did that
+2005-11-28T10:44:00.000Z	Cole	fletch33	"sudo chgrp -R root /usr/NX"
+2005-11-28T10:44:00.000Z	fletch33	Cole	y
+2005-11-28T10:44:00.000Z	fletch33	Cole	 no not that 1 sec
+2005-11-28T10:45:00.000Z	fletch33	Cole	 k done
+2005-11-28T10:46:00.000Z	Cole	fletch33	"ls -l /usr" and then "ls -l /usr/NX" and then "ls -l /usr/NX/bin" and paste then to the pastebin
+2005-11-28T10:46:00.000Z	fletch33	Cole	 1 sec
+2005-11-28T10:46:00.000Z	Cole	fletch33	np
+2005-11-28T10:49:00.000Z	fletch33	Cole	 http://pastebin.ca/30501
+2005-11-28T10:49:00.000Z	Cole	fletch33	next time a lower case L is in order.. but since youc an see it.. it must have worked..
+2005-11-28T10:50:00.000Z	Cole	fletch33	now try trying "/usr/NX/bin/nxclient"
+2005-11-28T10:50:00.000Z	fletch33	Cole	 k
+2005-11-28T10:51:00.000Z	fletch33	Cole	 i cant thank u enough it is working
+2005-11-28T10:51:00.000Z	Cole	fletch33	np goodluck with that
+2005-11-28T10:51:00.000Z	fletch33	Cole	i hope i can soon help others now i just have to figure otu how to use it
+2005-11-28T10:53:00.000Z	fletch33	Cole	 1 more ? wil i always have to type a command line to start it or will i be able to make it an option somewhere like in apps
+2005-11-28T10:54:00.000Z	Cole	fletch33	click "applications" "system tools"  "applications menu edditor"
+2005-11-28T10:54:00.000Z	Cole	fletch33	and a program shoudl start
+2005-11-28T10:55:00.000Z	fletch33	Cole	thanks
+2005-11-28T10:56:00.000Z	Cole	fletch33	when you create a new entry  the command line would be /usr/NX/bin/nxclient
+2005-11-28T10:56:00.000Z	Cole	fletch33	and the name would be whatever you want to call it
+2005-11-28T10:57:00.000Z	fletch33	Cole	 ok trying that thanks

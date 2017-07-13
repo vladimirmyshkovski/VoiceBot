@@ -1,0 +1,92 @@
+2008-04-19T04:55:00.000Z	amenado		Orbixx-> what policies you can not control?
+2008-04-19T04:56:00.000Z	amenado		Orbixx-> would you like to use another tool? perhaps the command line?
+2008-04-19T04:57:00.000Z	amenado		Orbixx-> what? you are going to sit there 2/47 and view the monitor for spikes?
+2008-04-19T04:58:00.000Z	amenado		Orbixx-> then that should be possible, use -j LOG on your rulez
+2008-04-19T04:59:00.000Z	amenado		SeaPhor-> may I suggest saving a copy of your working /etc/network/interfaces file
+2008-04-19T05:01:00.000Z	SeaPhor	amenado	will do and thanks for the advice! :-))
+2008-04-26T22:38:00.000Z	SeaPhor	amenado	YES! Thanks :-))
+2008-04-26T22:39:00.000Z	SeaPhor	amenado	Im gonna email em to myself and post them on my website so i can always find them ;-)
+2008-04-26T22:39:00.000Z	SeaPhor	amenado	i'd love to have a cp of that!
+2008-04-26T22:41:00.000Z	SeaPhor	amenado	I share the mem probs thanks to a bad car wreck!
+2008-04-26T23:11:00.000Z	SeaPhor	amenado	can you look at this fstab to see if this is what i do? http://paste.ubuntu-nl.org/64546/
+2008-04-27T06:34:00.000Z	SeaPhor	amenado	Ohhh Yeah! I copy/pasted the whole thing! all the teminals everything!
+2008-04-27T06:35:00.000Z	SeaPhor	amenado	will be posted on my website :-))
+2008-04-27T21:02:00.000Z	SeaPhor	amenado	hey, finally got wireless working but there are some issues- it keeps loosing its setings?
+2008-04-27T21:03:00.000Z	SeaPhor	amenado	no,,, i posted whole thing with screen-shots here http://www.wood-bee-co.com/woodbeeco/index.php?option=com_content&task=view&id=38&Itemid=63
+2008-04-27T21:08:00.000Z	SeaPhor	amenado	no, i never have been roaming
+2008-04-27T21:08:00.000Z	SeaPhor	amenado	should i be?
+2008-04-27T21:10:00.000Z	SeaPhor	amenado	well i can be on for 2 minutes or 2hours but looses conn-settings no matter what,, and my laptop thats never had a problem is doing it to, and i upgraded it friday
+2008-04-27T21:15:00.000Z	SeaPhor	amenado	that is how it acts, but looses all config settings is strange
+2008-04-28T07:36:00.000Z	SeaPhor	amenado	 thanks for your help too, you told me to take notes ,,, well look here   http://www.wood-bee-co.com/woodbeeco/index.php?option=com_content&task=view&id=39&Itemid=63
+2008-04-28T07:38:00.000Z	SeaPhor	amenado	btw, lol, that series doesnt work in 7.10
+2008-04-28T07:39:00.000Z	SeaPhor	amenado	the notes i took, no wireless in 7.10
+2008-04-28T07:39:00.000Z	amenado	SeaPhor	you were able to make it work on 8.04 though right?
+2008-04-28T07:39:00.000Z	SeaPhor	amenado	followed the exact same path,,, no-go
+2008-04-28T07:40:00.000Z	amenado	SeaPhor	which chip does your wifi client have?
+2008-04-28T07:40:00.000Z	SeaPhor	amenado	yes-but buggy, would lose its settings, took notes on that too, here,,, http://www.wood-bee-co.com/woodbeeco/index.php?option=com_content&task=view&id=38&Itemid=63
+2008-04-28T07:41:00.000Z	SeaPhor	amenado	rtl8185
+2008-04-28T07:42:00.000Z	SeaPhor	amenado	i am currenetly concidering upgrading instead of the fresh install i did
+2008-04-28T07:42:00.000Z	amenado	SeaPhor	go for it.
+2008-04-28T07:43:00.000Z	SeaPhor	amenado	here's the odd thing, my laptop that's never had a prob with the wireless started doing the exact same thing after upgrading to hardy???
+2008-04-28T07:45:00.000Z	SeaPhor	amenado	cant, unfortunately, i'm having to live with my In-Laws,, cat5 thru the house with large old people=not cool
+2008-05-04T05:22:00.000Z	SeaPhor	amenado	;-))
+2008-05-04T06:53:00.000Z	SeaPhor	amenado	well it was nice while it lasted,,, just lost wireless and cant figure out why, have it all logged at http://www.wood-bee-co.com/woodbeeco/index.php?option=com_content&task=view&id=38&Itemid=63
+2008-05-04T06:56:00.000Z	SeaPhor	amenado	nope, custom, manual config- saved,,, all doc'd at the site i gave
+2008-05-04T07:03:00.000Z	SeaPhor	amenado	i click on NM and select manual config, that opens a box (pic on the site) that only option is "Unlock", i select that and put in password, then i am able to select wireless/ properties and select the saved working config and before would find and get connected, not now though,,,
+2008-05-04T07:08:00.000Z	SeaPhor	amenado	linksys
+2008-05-04T07:09:00.000Z	SeaPhor	amenado	and yes, when i select unlock, it asks for sudo password
+2008-05-04T07:11:00.000Z	SeaPhor	amenado	did you see the screen shot?
+2008-05-04T07:14:00.000Z	SeaPhor	amenado	the 3rd pic down,   http://www.wood-bee-co.com/woodbeeco/index.php?option=com_content&task=view&id=38&Itemid=63
+2008-05-04T07:15:00.000Z	SeaPhor	amenado	3rd one down, under"I click nm, the other nm icon, and manual config, greyed-out nm with only option to "Unlock" or “close” "
+2008-05-04T07:31:00.000Z	SeaPhor	amenado	 well i'm gonna just go buy an Airlink AWLL3028 Wireless-G USB 2.0 Adapter, i heard those just work,,, couldn't be any worse than now
+2008-05-04T07:38:00.000Z	SeaPhor	amenado	there's just gotta be 1 simple little thing wrong in a config file somewhere, it works then it doesn't, is driving me mad
+2008-05-04T07:44:00.000Z	SeaPhor	amenado	well keep your eyes open for this issue, gotta be more than just me with it. no one else seems to have seen the "Unlock" part either
+2008-05-04T09:49:00.000Z	SeaPhor	amenado	hey, did you get last,, wireless lost again
+2008-05-04T09:50:00.000Z	SeaPhor	amenado	cant get it back, tried everything
+2008-05-04T09:50:00.000Z	SeaPhor	amenado	no wireless at all
+2008-05-04T09:51:00.000Z	SeaPhor	amenado	im looking at the airlink 3028
+2008-05-04T23:23:00.000Z	SeaPhor	amenado	hey bro,,, after upgrade thru the update mamnager and configuring the wireless, worked for about 2 hours then lost its settings and couldn't get it back,,, so just now i fresh installed 8.04 and config'd ndis and the if and its working again but don't know how long, we'll see
+2008-05-08T04:22:00.000Z	SeaPhor	amenado	heya, good to see ya
+2008-05-08T04:25:00.000Z	amenado	SeaPhor	perhaps this article is a read for you.. http://www.linux.com/feature/132701
+2008-05-08T04:26:00.000Z	SeaPhor	amenado	yeah, i told ya about upgrading vs fresh install right?
+2008-05-08T04:30:00.000Z	SeaPhor	amenado	I went back to 7.10 and got all updates and such and could not get the wireless to work, so I upgraded instead of fresh install and followed the steps i posted and it worked right away, for about 30 min, and hasn't since :-))
+2008-05-08T04:31:00.000Z	SeaPhor	amenado	i will study the article in the link you sent me, and THANKS!
+2008-05-08T04:32:00.000Z	SeaPhor	amenado	someone mentioned that "AirLink" cards and USB work out of the box, do you know?
+2008-05-08T04:34:00.000Z	SeaPhor	amenado	dont matter what it is i'm tired of messing with it, its no-longer a project,, lol ,, do you remember the chipset?
+2008-05-08T04:37:00.000Z	SeaPhor	amenado	I will buy one tonight if i know it will work strait off,,, just wanna make sure i get the right one with the right chipset
+2008-05-11T08:31:00.000Z	SeaPhor	amenado	heya ya!!!!
+2008-05-11T08:33:00.000Z	SeaPhor	amenado	thank you for your time
+2008-05-11T08:37:00.000Z	SeaPhor	amenado	have you heard of "adjusting the power input/output of a PCI device, namely a PCI Wireless NIC"?
+2008-05-11T08:39:00.000Z	SeaPhor	amenado	i dont know, someone here told me i needed to adjust the power of my nic
+2008-05-11T08:41:00.000Z	SeaPhor	amenado	Thanks
+2008-05-11T08:43:00.000Z	SeaPhor	amenado	any switches to edit output? cause thats just a list,, how do i edit?
+2008-05-17T02:50:00.000Z	SeaPhor	amenado	I finally have workin wireless!!
+2008-05-17T02:51:00.000Z	SeaPhor	amenado	Airlink AWLH4130 108 PCI Wireless-G 108Mbps PCI
+2008-05-17T02:52:00.000Z	SeaPhor	amenado	i shut down, took out old card, put in new one, powered on, and i had wireless, no config nothing!
+2008-05-17T03:53:00.000Z	SeaPhor	amenado	do you know of a way to recover UUIDs to edit ftab?
+2008-05-17T03:53:00.000Z	SeaPhor	amenado	*fstab
+2008-05-17T03:55:00.000Z	SeaPhor	amenado	no,,, i am trying to get guardian some help
+2008-05-17T03:55:00.000Z	SeaPhor	amenado	zvacet , thank you
+2008-05-18T02:30:00.000Z	SeaPhor	amenado	  do you know anything about this? I get this warning message after input username and pwd on boot: User's $HOME/.dmrc file is being ignored. This prevents... File should be owned by user and have 644 permissions. User's $HOME directory must be owned by user and not be writable by others.
+2008-05-18T02:31:00.000Z	SeaPhor	amenado	K, cool just thought I'd check
+2008-05-18T07:51:00.000Z	SeaPhor	amenado	:-)
+2008-05-20T04:35:00.000Z	SeaPhor	amenado	and then there's people like me, I do a fresh install every week just to fix all the things I've "fixed" that week! ;-) but on a serious note, i could use your help in a bit?
+2008-05-20T04:37:00.000Z	SeaPhor	amenado	cool, i have here lately, lol, but those days are gone with the new wireless card :-))))))
+2008-05-20T04:39:00.000Z	SeaPhor	amenado	speaking of which, i have only done the alternate install once, and that was with help from someone in almost real-time on the forum (before i knew about this channel)
+2008-05-20T04:42:00.000Z	SeaPhor	amenado	i most certainly will, however, i was helping someone who is now downloading the alt ISO to attempt an install because the live cd kept freezing, any chance you can help him?
+2008-05-20T04:43:00.000Z	SeaPhor	amenado	he was/is??
+2008-05-20T04:44:00.000Z	SeaPhor	amenado	ok
+2008-05-20T04:55:00.000Z	SeaPhor	amenado	i see you met the person i was referring to :-)
+2008-05-22T05:16:00.000Z	SeaPhor	amenado	any chance you're there?
+2008-06-08T09:48:00.000Z	SeaPhor	amenado	i did man touch,,, and now i feel kinda dirty
+2008-06-13T08:02:00.000Z	SeaPhor	amenado	can you log into it?
+2008-06-13T08:02:00.000Z	amenado	SeaPhor	i can log in to it yes, its not my router its a friend, and am trying to assist him so I can login to his ubuntu behind that firewall
+2008-06-13T08:05:00.000Z	SeaPhor	amenado	if you can log into it (i haven't used that particular one) but you should have a security section, some uncomfortable but necessary browsing and see what options are there, sorry i cant help more that that on that router
+2008-06-13T08:07:00.000Z	amenado	SeaPhor	i already have done those, thanks... am seeking info on what DMZ really meant on that router, and how to acquire the external ip address of the router to be assigned to an ubuntu box rather than the 192.168.x.x address
+2008-06-13T08:07:00.000Z	SeaPhor	amenado	tracert doesn't show that?
+2008-06-13T08:08:00.000Z	SeaPhor	amenado	sorry. thought you wanted to know the wan addy for the router
+2008-06-18T07:26:00.000Z	SeaPhor	amenado	heya bro!
+2008-06-25T04:51:00.000Z	SeaPhor	amenado	ty, i'll look into it
+2008-06-25T04:56:00.000Z	SeaPhor	amenado	how would i monitor (real-time) when a user logs on and what directory user is in at the moment? and what port user is logged in thru?
+2008-08-19T19:19:00.000Z	SeaPhor	amenado	if i wanted to run a script, a program at start-up, would i add that to the rc.local file?
+2008-08-19T19:21:00.000Z	SeaPhor	amenado	thats the only way i could think of, is there a better way?

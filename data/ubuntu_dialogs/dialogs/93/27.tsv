@@ -1,0 +1,93 @@
+2009-12-07T16:22:00.000Z	VirusTB		help!
+2009-12-07T16:23:00.000Z	VirusTB		uhm.. whats a key ring, and why does it always ask me for a password and for some reason, the passowrd doesnt worlk?
+2009-12-07T16:23:00.000Z	indus	VirusTB	yah just some crazy way of asking for password for a task
+2009-12-07T16:23:00.000Z	indus	VirusTB	is this for the wireless?
+2009-12-07T16:23:00.000Z	VirusTB	indus	 ok, so whats the password?
+2009-12-07T16:24:00.000Z	indus	VirusTB	well, you should know it
+2009-12-07T16:24:00.000Z	VirusTB	indus	 it seems to always pop up after i enter my login passpwrd?
+2009-12-07T16:24:00.000Z	VirusTB	indus	 and If i dont know the passoword?
+2009-12-07T16:24:00.000Z	indus	VirusTB	go to accessories >passwords and encryptions and delete it and create new
+2009-12-07T16:26:00.000Z	VirusTB	indus	 ok did it,
+2009-12-07T16:26:00.000Z	indus	VirusTB	ok good
+2009-12-07T16:26:00.000Z	indus	VirusTB	under passwords you did i suppose
+2009-12-07T16:26:00.000Z	VirusTB	indus	 or can i delet it n system works fine without it?
+2009-12-07T16:27:00.000Z	VirusTB	indus	 i dont have that issue on my desktop.... (this laptoio i Wubi'd
+2009-12-07T16:27:00.000Z	indus	VirusTB	well, you cant delete system password i believe
+2009-12-07T16:27:00.000Z	indus	VirusTB	but network , empathy etc you can
+2009-12-07T16:27:00.000Z	VirusTB	indus	..
+2009-12-07T16:29:00.000Z	indus	VirusTB	yes
+2009-12-07T16:37:00.000Z	VirusTB	indus	help pleae z1 trying to run " sudo apt-get update "
+2009-12-07T17:36:00.000Z	VirusTB	indus	hi
+2009-12-11T15:57:00.000Z	VirusTB	indus	 my netbook HDD is parted into 4 ( win XP, win xp recovery (acer) , DATA (for my data)  and a ext3 partition
+2009-12-11T15:57:00.000Z	indus	VirusTB	what data
+2009-12-11T15:53:00.000Z	indus	VirusTB	?
+2009-12-11T15:54:00.000Z	indus	VirusTB	i dont understand question
+2009-12-11T15:54:00.000Z	indus	VirusTB	ok and?
+2009-12-11T15:56:00.000Z	indus	VirusTB	yes select / and /home as moount points
+2009-12-11T15:56:00.000Z	indus	VirusTB	if you have 2 partitions
+2009-12-11T15:56:00.000Z	indus	VirusTB	or just / is enough, dont forget swap partition
+2009-12-11T15:56:00.000Z	VirusTB	indus	 i am reinstalling it Ubuntu netbook, over my ubuntu desktop version
+2009-12-11T15:58:00.000Z	indus	VirusTB	yeah 10 to 15 gb for / and rest for /home and a 2gb swap
+2009-12-11T15:59:00.000Z	indus	VirusTB	/ and /home will be ext3 and swap is swap file system
+2009-12-11T15:59:00.000Z	VirusTB	indus	 ActionParsnip  do I need a swap ?
+2009-12-11T16:00:00.000Z	indus	VirusTB	yeah always
+2009-12-11T16:00:00.000Z	indus	VirusTB	keep swap 2 gb
+2009-12-11T16:00:00.000Z	indus	VirusTB	create it from the free space if you have
+2009-12-11T16:00:00.000Z	indus	VirusTB	how much is free space?
+2009-12-11T16:01:00.000Z	indus	VirusTB	this data partition you say, is tis a windows partition
+2009-12-11T16:01:00.000Z	VirusTB	indus	 no free space (onlt space i can use is 55GB which i had Ubuntu desktop version on last week (but i deletd that partition in Windows yesterday  and mesed up my grub
+2009-12-11T16:01:00.000Z	indus	VirusTB	if you delete a partition you are automatically left with free space of that size
+2009-12-11T16:02:00.000Z	indus	VirusTB	just / and /home and swap
+2009-12-11T16:02:00.000Z	VirusTB	indus	 ah oki need to be under LIVE mode?
+2009-12-11T16:02:00.000Z	indus	VirusTB	yeah you on live cd right?
+2009-12-11T16:03:00.000Z	VirusTB	indus	 yes (live usb on netbook )  but i went strigh to second option (install netbook remx)  if i need to edit the partitions i should "run netbook remix withut any changes to computer)  right?
+2009-12-11T16:03:00.000Z	indus	VirusTB	no same thing but no live environment
+2009-12-11T16:05:00.000Z	VirusTB	indus	 i restarted already, i know how to use Gparted so that can help me edit the partitiotns
+2009-12-11T16:05:00.000Z	indus	VirusTB	ok np
+2009-12-11T16:05:00.000Z	indus	VirusTB	so in gparted you can create te partitions
+2009-12-11T16:06:00.000Z	VirusTB	indus	 i messed my netbook :( Win XP wouldnt even load @ boot, who told me to delet the ubuntu partion while under Win Xp (and then told me to restart) is gonna be a dead man!
+2009-12-11T16:06:00.000Z	indus	VirusTB	lol
+2009-12-11T16:06:00.000Z	VirusTB	indus	 i get grub error 17 ( i guess it cant find grub)
+2009-12-11T16:06:00.000Z	indus	VirusTB	i told you use live cd
+2009-12-11T16:06:00.000Z	VirusTB	indus	 so i got to reinstall ubuntu over
+2009-12-11T16:06:00.000Z	indus	VirusTB	why r u booting from hdd
+2009-12-11T16:06:00.000Z	VirusTB	indus	 i am using a live cd
+2009-12-11T16:07:00.000Z	indus	VirusTB	then ? why r u seeing grub errors
+2009-12-11T16:07:00.000Z	VirusTB	indus	 becuase i DELETED the Ubuntu partiton (right click> delet) under Windows XP
+2009-12-11T16:08:00.000Z	indus	VirusTB	in live cd , it will not show any such things, HDD Is not involved at all
+2009-12-11T16:08:00.000Z	indus	VirusTB	anyways, if you cant boot windows, you will have to fixmbr with windowscd
+2009-12-11T16:09:00.000Z	indus	VirusTB	so how are you booting unr?
+2009-12-11T16:09:00.000Z	indus	VirusTB	no cd rom? then? usb?
+2009-12-11T16:10:00.000Z	VirusTB	indus	 im booting from USB now, but how do I boot the "windows-cd fixmbr" like llutz  said?
+2009-12-11T16:10:00.000Z	indus	VirusTB	nvm
+2009-12-11T16:10:00.000Z	indus	VirusTB	did your netbook come with windows ?
+2009-12-11T16:11:00.000Z	indus	VirusTB	follow me first, then follow others
+2009-12-11T16:11:00.000Z	VirusTB	indus	 yes came with win XP, and hen i used Wubi to install 9.04... n then upgraded to 9.10 via command line
+2009-12-11T16:12:00.000Z	indus	VirusTB	ok then what happened
+2009-12-11T16:12:00.000Z	VirusTB	indus	 ok
+2009-12-11T16:13:00.000Z	VirusTB	indus	  my ubuntu wouldnt load properly (because i shut it down badly by pressing the power button)
+2009-12-11T16:13:00.000Z	indus	VirusTB	ok right now what is the status of your netbook
+2009-12-11T16:13:00.000Z	indus	VirusTB	do u have windows working ok?
+2009-12-11T16:14:00.000Z	VirusTB	indus	 so hen i booted up under windows, and thought  deleting the Ubuntu partition would soulve my problem, ... but it seems that the whole netbook is searching for the Grub to boot... and now i get error 17 each time i start up my netbook (and i cant get any further than that)
+2009-12-11T16:14:00.000Z	indus	VirusTB	so now you are booting from live usb?
+2009-12-11T16:15:00.000Z	VirusTB	indus	 yes now I am on live USB (with Netbook remix) but before i had the desktop version running on my netbook
+2009-12-11T16:15:00.000Z	indus	VirusTB	ok so you reached the live desktop?
+2009-12-11T16:15:00.000Z	indus	VirusTB	started partitioning?
+2009-12-11T16:16:00.000Z	VirusTB	indus	indus  yes under Netboot remix live now, trying to see which partition i can edit ( i have 4 partitions, [ win xp, defualy win xp recovery for acer, DATA partition, and 55GB where ubuntu used to be
+2009-12-11T16:17:00.000Z	indus	VirusTB	so edit the 55 gb partition , edit partitions
+2009-12-11T16:17:00.000Z	VirusTB	indus	 can I resize the partions? i want to make my DATA partiion larger ( i dont need 80 GB for win XP at the momment)
+2009-12-11T16:17:00.000Z	indus	VirusTB	no idea probably yes
+2009-12-11T16:17:00.000Z	indus	VirusTB	not sure if the data disappears
+2009-12-11T16:18:00.000Z	VirusTB	indus	 :S ok i dont want data to dissappeazr
+2009-12-11T16:20:00.000Z	VirusTB	indus	 ok  so whould I  part the 55GB that my ubuntu used to be on? since i need some  '  / '   and a ' / home '  ?>
+2009-12-11T16:20:00.000Z	indus	VirusTB	yes
+2009-12-11T16:21:00.000Z	indus	VirusTB	whats on the 'DATA' partition?
+2009-12-11T16:21:00.000Z	VirusTB	indus	 my music i am copying it over to an EX HDD now :P
+2009-12-11T16:22:00.000Z	indus	VirusTB	ok you can resize it , then when you have some more space , create the ubuntu partitions
+2009-12-11T16:22:00.000Z	indus	VirusTB	or lessspace whatever
+2009-12-11T16:23:00.000Z	VirusTB	indus	 so i need to creat two  "ext3' parttions?
+2009-12-11T16:23:00.000Z	indus	VirusTB	yes
+2009-12-11T16:23:00.000Z	VirusTB	indus	 any recomemed sizes?
+2009-12-11T16:23:00.000Z	indus	VirusTB	and leave some space for swap partition
+2009-12-11T16:23:00.000Z	indus	VirusTB	2 gb
+2009-12-11T16:24:00.000Z	indus	VirusTB	for / keep 10 gb and /home the remaining space minus swap space

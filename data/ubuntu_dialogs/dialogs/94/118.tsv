@@ -1,0 +1,94 @@
+2005-06-20T13:51:00.000Z	madsen		Hmm, how do I make cp NOT overwrite existing files? (Without -i, because then I'll have to hit 'No' for every file.)
+2005-06-20T05:32:00.000Z	madsen		Weird... My firefox just started exiting with status 0 when run... It's like it doesn't even try to start up.
+2005-06-20T05:33:00.000Z	podge	madsen	Are you running firefox from a terminal window?
+2005-06-20T05:33:00.000Z	madsen	podge	Yup
+2005-06-20T05:34:00.000Z	podge	madsen	Installed any plugins or extensions recently?
+2005-06-20T05:34:00.000Z	madsen	podge	Yeah, but it ran fine for a while. Untill X crashed.
+2005-06-20T05:35:00.000Z	podge	madsen	Was it a plugin or an extension?
+2005-06-20T05:35:00.000Z	madsen	podge	I had to restart firefox to finish the extension install and it came up just fine afterwards.
+2005-06-20T05:35:00.000Z	madsen	podge	extension.
+2005-06-20T05:35:00.000Z	podge	madsen	yep..
+2005-06-20T05:35:00.000Z	madsen	podge	I installed like 6 extensions...
+2005-06-20T05:36:00.000Z	madsen	podge	But I think I've started firefox 8 times since then --- no problems.
+2005-06-20T05:36:00.000Z	podge	madsen	Try running the profile manager.. firefox -ProfileManager
+2005-06-20T05:36:00.000Z	podge	madsen	Maybe something stuffed with the default profile..
+2005-06-20T05:37:00.000Z	podge	madsen	Create a new profile..
+2005-06-20T05:37:00.000Z	podge	madsen	And run with that..
+2005-06-20T05:37:00.000Z	madsen	podge	I'm trying, but nothing happens. :(
+2005-06-20T05:37:00.000Z	podge	madsen	So you can't even create a new profile?
+2005-06-20T05:38:00.000Z	madsen	podge	Yeah, I can, but I can't run ff with it.
+2005-06-20T05:38:00.000Z	podge	madsen	firefox -P profile
+2005-06-20T05:38:00.000Z	podge	madsen	Doesn't work?
+2005-06-20T05:39:00.000Z	madsen	podge	Nope, it just hangs.
+2005-06-20T05:40:00.000Z	podge	madsen	Hmm... that hurts bad..
+2005-06-20T05:40:00.000Z	madsen	podge	Indeed...
+2005-06-20T05:40:00.000Z	madsen	podge	I tried debugging a little with strace, but it doesn't say anything unusual.
+2005-06-20T05:40:00.000Z	podge	madsen	Time to reinstall or delete your .mozilla directory..
+2005-06-20T05:41:00.000Z	madsen	podge	Well, my .mozilla dir ain't going nowhere... So perhaps an FF reinstall...
+2005-06-20T05:41:00.000Z	podge	madsen	Maybe only delete the /home/madsen/.mozilla/firefox directory..
+2005-06-20T05:42:00.000Z	madsen	podge	Yeah, that's the one I want to keep. :) Well, perhaps copy the firefox-dir to a different location and then try replacing the pref-files one by one and see which one b0rks it.
+2005-06-20T05:43:00.000Z	madsen	podge	But I doubt it's anything with my profile since I can't create a new one...
+2005-06-20T05:45:00.000Z	madsen	podge	Hmm, removing the .mozilla/firefox dir didn't do anything... It still just hangs... (Instead of returning 0 as it did with the original profile.)
+2005-06-20T05:49:00.000Z	podge	madsen	So I guess a reinstall is in order.. :(
+2005-06-20T05:50:00.000Z	madsen	podge	Yup, and that did the job. Now it even works again with my old profile and settings. :)
+2005-06-20T05:50:00.000Z	madsen	podge	Thanks for your time. :)
+2005-06-20T05:50:00.000Z	podge	madsen	Strange..
+2005-06-20T05:50:00.000Z	podge	madsen	So you still have the extensions etc?
+2005-06-20T05:51:00.000Z	madsen	podge	yup!
+2005-06-20T05:51:00.000Z	madsen	podge	But yeah, indeed odd...
+2005-06-20T05:51:00.000Z	podge	madsen	I have trouble understanding how the system firefox install was corrupted...
+2005-06-20T05:52:00.000Z	madsen	podge	Yeah, me too.
+2005-06-20T05:52:00.000Z	madsen	podge	It might have something to do with my X crashing. (That's when it stopped working.)
+2005-06-20T05:52:00.000Z	madsen	podge	I'm playing with the composite extension and stuff and it _is_ pretty unstable after all...
+2005-06-20T05:53:00.000Z	podge	madsen	Doing your own extension work?
+2005-06-20T05:53:00.000Z	madsen	podge	No, just messing around with drop-shadows in Xorg and stuff.
+2005-06-20T05:53:00.000Z	podge	madsen	Cool.. looks good no doubt (when it is running)..
+2005-06-20T05:54:00.000Z	podge	madsen	any screenshots?
+2005-06-20T05:54:00.000Z	madsen	podge	It runs alright here, but it is a bit unstable.
+2005-06-20T05:54:00.000Z	madsen	podge	I can make you one, just a sec.
+2005-06-20T06:00:00.000Z	podge	madsen	How is your screenshot going?
+2005-06-20T06:07:00.000Z	madsen	podge	http://lillesvin.net/stuff/ubuntu_shadows.png
+2005-06-20T06:07:00.000Z	madsen	podge	Sorry about the delay, my X crashed again (probably because of the composite ext.)
+2005-06-20T06:09:00.000Z	podge	madsen	Nice!!
+2005-06-20T06:09:00.000Z	madsen	podge	:)
+2005-06-20T06:09:00.000Z	podge	madsen	Only problem is the gnome panels look so plain compared to the window toolbars..
+2005-06-20T06:10:00.000Z	madsen	podge	Yeah, but the menu and the clock overlays the bg image, so it's really hard to make it look better.
+2005-06-20T06:11:00.000Z	podge	madsen	So are you a tester or are you just interested in crashing every 15 minutes? :)
+2005-06-20T06:11:00.000Z	madsen	podge	the latter. :)
+2005-06-20T06:11:00.000Z	madsen	podge	Just had to try it out. I've spent sooo long on Debian missing such options.
+2005-06-20T06:12:00.000Z	podge	madsen	Do any other window managers have that feature?
+2005-06-20T06:13:00.000Z	madsen	podge	Well, the feature is implemented in Xorg and the WMs can utilize it... So basically all WMs have it...
+2005-06-20T06:14:00.000Z	podge	madsen	Nice.. seems like the Xorg guys are really firing up..
+2005-06-20T06:15:00.000Z	madsen	podge	Yeah. Alpha transparency is also supported now, though I don't know how to use it. Hehe.
+2005-06-20T06:16:00.000Z	madsen	podge	In reasonably short time translucent menus and good drop shadows should be a reality in Linux.
+2005-06-20T06:16:00.000Z	podge	madsen	What country are you from?
+2005-06-20T06:16:00.000Z	madsen	podge	Denmark, why?
+2005-06-20T06:16:00.000Z	podge	madsen	It's not filled out in your profile.. :)
+2005-06-20T06:16:00.000Z	madsen	podge	What profile?
+2005-06-20T06:16:00.000Z	podge	madsen	When I right click on your IRC username..
+2005-06-20T06:17:00.000Z	madsen	podge	Oh! :)
+2005-06-20T06:17:00.000Z	madsen	podge	I use irssi, so I don't "right click" anywhere. ;)
+2005-06-20T06:17:00.000Z	podge	madsen	My project at the moment is getting my Sun Rays to work on Ubuntu.. pretty much everything figured out except ALSA sound..
+2005-06-20T06:18:00.000Z	madsen	podge	Sub Rays?
+2005-06-20T06:18:00.000Z	madsen	podge	Sun, even.
+2005-06-20T06:18:00.000Z	podge	madsen	Yeah.. Sun Ray thin clients..
+2005-06-20T06:19:00.000Z	madsen	podge	Oh! Sweet!
+2005-06-20T06:20:00.000Z	podge	madsen	http://nz.sun.com/product-images/large/I1_hw_sunray150_lg.jpg
+2005-06-20T06:20:00.000Z	podge	madsen	Picked them up for $85 (Australian Dollars)..
+2005-06-20T06:20:00.000Z	madsen	podge	Nice! :)
+2005-06-20T06:20:00.000Z	madsen	podge	The library in a town where I used to live had like 40 of those. They're pretty nice!
+2005-06-20T06:21:00.000Z	podge	madsen	I have a few around the house.. so I have Internet/Music roaming with my smart card..
+2005-06-20T06:22:00.000Z	madsen	podge	Hehe, neat!
+2005-06-20T06:31:00.000Z	podge	madsen	Those wobbly windows are pretty cool!
+2005-06-20T06:31:00.000Z	madsen	podge	Yeah. :)
+2005-06-20T06:33:00.000Z	podge	madsen	So what do I need to have the wobbly windows on Ubuntu? :)
+2005-06-20T06:33:00.000Z	madsen	podge	Hehe, I have absolutely no clue. :)
+2005-06-20T06:34:00.000Z	madsen	podge	Perhaps the latest CVS version of Xorg and some patches for it and an insane gfx card. ;)
+2005-06-20T06:35:00.000Z	podge	madsen	Good point!
+2005-06-20T06:36:00.000Z	madsen	podge	:)
+2005-06-20T06:36:00.000Z	podge	madsen	What do you think of the Sun Looking Glass interface?
+2005-06-20T06:37:00.000Z	madsen	podge	Looks pretty nice, but a bit over the top for me. :)
+2005-06-20T06:38:00.000Z	podge	madsen	I loaded it up on SUSE a while ago.. it was cool.. but limited..
+2005-06-20T06:39:00.000Z	madsen	podge	Didn't it require your first born and an evil gfx card?
+2005-06-20T06:39:00.000Z	podge	madsen	It ran okay on my GeForce 2 GTS..
+2005-06-20T06:40:00.000Z	madsen	podge	Really! I'll have to try it out some time. :)

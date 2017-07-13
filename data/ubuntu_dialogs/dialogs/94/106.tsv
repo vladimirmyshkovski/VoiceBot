@@ -1,0 +1,94 @@
+2006-12-27T10:04:00.000Z	blazemonger		man ubuntu's frozen up like 3 times when ive tried to run a simple program
+2006-12-27T10:04:00.000Z	blazemonger		somethings up
+2006-12-27T10:04:00.000Z	blazemonger		and its not my hardware
+2006-12-27T10:04:00.000Z	blazemonger		wtf is happening to me?
+2006-12-27T10:04:00.000Z	blazemonger		6.10 is buggy
+2006-12-27T10:04:00.000Z	blujay	blazemonger	what program?
+2006-12-27T10:04:00.000Z	blujay	blazemonger	what video card and drivers?
+2006-12-27T10:05:00.000Z	blujay	blazemonger	that's old
+2006-12-27T10:05:00.000Z	blujay	blazemonger	such an old card with such an old driver may very well hve poor 3D support, and since it's loaded into the kernel, it could crash it
+2006-12-27T10:06:00.000Z	blujay	blazemonger	I mean that card is over 10 years old I think
+2006-12-27T10:06:00.000Z	blujay	blazemonger	are you sure that you can boot into Dapper and run the same program with the same driver and not crash?  (please use my nickname so I can find your lines)
+2006-12-27T10:07:00.000Z	blujay	blazemonger	no offense but if you don't type my nick then I'm not going to be able to follow this conversation very well
+2006-12-27T10:07:00.000Z	blazemonger	blujay	the same exact game works PERFECT in windows
+2006-12-27T10:07:00.000Z	blujay	blazemonger	ok, I understand.  But that's a different driver.  Again, are you sure Dapper works perfectly with it?
+2006-12-27T10:08:00.000Z	blujay	blazemonger	what version are you using now?
+2006-12-27T10:08:00.000Z	blazemonger	blujay	im using 6.10 now
+2006-12-27T10:08:00.000Z	blujay	blazemonger	and when did you run it on Dapper?
+2006-12-27T10:08:00.000Z	blazemonger	blujay	right before edgy came out
+2006-12-27T10:09:00.000Z	blujay	blazemonger	were you using the same video driver?
+2006-12-27T10:09:00.000Z	blazemonger	blujay	yes i was
+2006-12-27T10:09:00.000Z	blujay	blazemonger	what driver is that?
+2006-12-27T10:09:00.000Z	blazemonger	blujay	128
+2006-12-27T10:09:00.000Z	blazemonger	blujay	r128
+2006-12-27T10:09:00.000Z	blujay	blazemonger	are there any errors in your syslogs or in ~/.xsession-errors ?
+2006-12-27T10:10:00.000Z	blazemonger	blujay	(gnome-panel:4444): Gtk-WARNING **: gtk_widget_size_allocate(): attempt to alloc
+2006-12-27T10:10:00.000Z	blujay	blazemonger	that's not an error actually, just a warning, and it isn't related to billiard-gl :)
+2006-12-27T10:11:00.000Z	blazemonger	blujay	could it be ubuntu doesnt like my hardware?
+2006-12-27T10:11:00.000Z	blujay	blazemonger	well, it could be a hardware problem.  If you really care, I suggest you file some bug reports.  :)
+2006-12-27T10:12:00.000Z	blujay	blazemonger	are there any 3d apps that don't freeze?
+2006-12-27T10:12:00.000Z	blazemonger	blujay	penguin racer doesnt freeze
+2006-12-27T10:12:00.000Z	blujay	blazemonger	and I know you said it works in Windows, but sometimes Linux handles hardware differently.  My motherboard has a strange IRQ issue that can cause Windows to bluescreen but Linux just boots on and makes a minor complaint
+2006-12-27T10:13:00.000Z	blazemonger	blujay	it does the opposite to me
+2006-12-27T10:13:00.000Z	blujay	blazemonger	all I know to suggest now (other than changing hardware) is to file some bug reports
+2006-12-27T10:13:00.000Z	blazemonger	blujay	ive filed bug reports before but never were fixed
+2006-12-27T10:13:00.000Z	blujay	blazemonger	where did you file them?
+2006-12-27T10:14:00.000Z	blazemonger	blujay	the apt repositories
+2006-12-27T10:14:00.000Z	blujay	blazemonger	um...like on what web site?
+2006-12-27T10:14:00.000Z	blazemonger	blujay	dont know a website
+2006-12-27T10:14:00.000Z	blujay	blazemonger	...by what method did you file a bug report then?  ...?
+2006-12-27T10:15:00.000Z	blujay	blazemonger	apt repos are not bug-reporting stations...
+2006-12-27T10:15:00.000Z	blujay	blazemonger	try www.launchpad.net :)  file some there
+2006-12-27T10:15:00.000Z	blujay	blazemonger	sounds like a hardware problem to me
+2006-12-27T10:15:00.000Z	blujay	blazemonger	it's not overclocked, is it?
+2006-12-27T10:16:00.000Z	blujay	blazemonger	is it overheating?
+2006-12-27T10:16:00.000Z	blazemonger	blujay	i dont overclock..could it be i need to reconfigure a kernel?
+2006-12-27T10:16:00.000Z	blujay	blazemonger	that shouldn't be necessary.  maybe it's just that Linux is a bit more stringent with your particular hardware.  again, all I can recommend is to file some bug reports on launchpad
+2006-12-27T10:17:00.000Z	blazemonger	blujay	what do i do if linux is more strigent with my ahrdware?
+2006-12-27T10:17:00.000Z	blujay	blazemonger	get different hardware, or ...file bug reports and help the devs fix the crashes
+2006-12-27T10:18:00.000Z	blujay	blazemonger	I understand...same here
+2006-12-27T10:18:00.000Z	blazemonger	blujay	i do art
+2006-12-27T10:18:00.000Z	blujay	blazemonger	I suggest you look in your syslogs for errors...maybe you can tweak something that's causing a problem
+2006-12-27T10:19:00.000Z	blazemonger	blujay	i dont know how to do that
+2006-12-27T10:19:00.000Z	blujay	blazemonger	sudo less /var/log/syslog, for starters...look at the different log files for things that might be hardware problems in the boot process
+2006-12-27T10:20:00.000Z	blujay	blazemonger	another possibility is to go to the Ubuntu forums and mailing lists and ask there...other folks might have more ideas
+2006-12-27T10:21:00.000Z	blujay	blazemonger	you might try Debian instead of Ubuntu...you never know
+2006-12-27T10:21:00.000Z	blazemonger	blujay	ive tried debian
+2006-12-27T10:22:00.000Z	blujay	blazemonger	try Debian again...it's updated often
+2006-12-27T10:22:00.000Z	blujay	blazemonger	testing
+2006-12-27T10:22:00.000Z	blujay	blazemonger	a rock
+2006-12-27T10:26:00.000Z	blujay	blazemonger	no offense, but if I could offer a suggestion?  :)  Leave this channel, post on the ubuntu forum and on the ubuntu-users list, and go to launchpad.net and file a bug report on billiard-gl and whatever other apps crash.  then wait patiently for answers :)
+2006-12-27T10:28:00.000Z	blujay	blazemonger	are you asking rhetorical questions now?
+2006-12-27T10:28:00.000Z	blujay	blazemonger	methinks you need to look inside yourself for the answers you need :)
+2006-12-27T10:29:00.000Z	blujay	blazemonger	try this: http://linuxfromscratch.org =)
+2006-12-27T10:29:00.000Z	blazemonger	blujay	that onez hard
+2006-12-27T10:29:00.000Z	blujay	blazemonger	maybez zo butz youz learnz lotz
+2006-12-27T10:29:00.000Z	blujay	blazemonger	if I don't hear from you in 5 minutes I'll call 911
+2006-12-27T10:30:00.000Z	blazemonger	blujay	so i have alot to learn about linux? so your'e sure it wouldnt be the kernel?
+2006-12-27T10:31:00.000Z	blujay	blazemonger	no, I'm not sure about anything.  I'm not even at your computer.  I can't help you any more, I'm afraid.  I've already told you my recommendations.  Now the rest is up to you.  :)
+2006-12-27T10:31:00.000Z	blujay	blazemonger	yes, I can't fix it for you, sorry :p
+2006-12-27T10:32:00.000Z	blujay	blazemonger	part of the fun is fixing it yourself.  I just spent 90 minutes getting fuzzyocr to work in SpamAssassin to filter out image spam.  now finally it works!
+2006-12-27T10:32:00.000Z	blujay	blazemonger	you shouldn't trust any system built by someone who says something like that :)
+2006-12-27T10:33:00.000Z	blujay	blazemonger	uh...no...it's a system of Perl modules...not binary stuff...not 3D stuff...not driver stuff...not kernel stuff...so no...not everything crashes, ok!?  :)
+2006-12-27T10:33:00.000Z	blujay	blazemonger	whoa!  why did you suddenly bring up ACPI??
+2006-12-27T10:35:00.000Z	blujay	blazemonger	well, you might try adding something to the kernel boot line...I recommend searching the Ubuntu wiki for info
+2006-12-27T10:42:00.000Z	blazemonger	blujay	now i disab;led acpi and billard-gl either just locks up and sends me back to gdm login
+2006-12-27T10:43:00.000Z	blujay	blazemonger	ok, check the logs for errors
+2006-12-27T10:45:00.000Z	blujay	blazemonger	why do you have PNP disabled?  and what kind of CPU do you have?
+2006-12-27T10:45:00.000Z	blazemonger	blujay	i have a p4
+2006-12-27T10:45:00.000Z	blazemonger	blujay	is pn p supposed to be enabled? i can reboot and enable it again in the bios
+2006-12-27T10:46:00.000Z	blujay	blazemonger	I dunno, try it if you want
+2006-12-27T10:46:00.000Z	blujay	blazemonger	like I said, look in the logs for errors...I already said that but you seem to ignore half of what I suggest :)
+2006-12-27T10:46:00.000Z	blazemonger	blujay	it now just locks up and sends me back to the login screen
+2006-12-27T10:46:00.000Z	blujay	blazemonger	something's probably segfaulting
+2006-12-27T10:47:00.000Z	blazemonger	blujay	how can i tell if it's from billard-gl
+2006-12-27T10:47:00.000Z	blujay	blazemonger	for the last time...look in the logs
+2006-12-27T10:49:00.000Z	blujay	blazemonger	are you using two computers?
+2006-12-27T10:49:00.000Z	blujay	blazemonger	ok, here's a problem...
+2006-12-27T10:49:00.000Z	blujay	blazemonger	most likely, when it crashes and restarts gdm, it clears out the ~/.xsession-errors file
+2006-12-27T10:51:00.000Z	blujay	blazemonger	ooh, ooh...look in the X log file
+2006-12-27T10:53:00.000Z	blujay	blazemonger	it looks like this is boiling down to what I said earlier...file a bug report!
+2006-12-27T10:54:00.000Z	blujay	blazemonger	you told me earlier that you didn't actually file a bug report
+2006-12-27T10:54:00.000Z	blujay	blazemonger	go to launchpad.net and FILE A BUG REPORT, please
+2006-12-27T10:55:00.000Z	blujay	blazemonger	sorry, but I'm through with this problem...my last words are, file a bug report.  there's nothing more we can do.
+2006-12-27T10:58:00.000Z	blujay	blazemonger	because people like you refuse to help by filing bug reports?

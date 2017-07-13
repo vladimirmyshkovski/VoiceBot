@@ -1,0 +1,92 @@
+2006-03-30T14:39:00.000Z	Healot		which file did you link and where? chem199 :)
+2006-03-30T14:40:00.000Z	chem199	Healot	libjavaplugin_oji.so
+2006-03-30T14:40:00.000Z	Healot		to where?
+2006-03-30T14:40:00.000Z	chem199	Healot	the firefox plugin folder
+2006-03-30T14:40:00.000Z	Healot		which is where?
+2006-03-30T14:41:00.000Z	chem199	Healot	/usr/lib/firefox/plugin
+2006-03-30T14:45:00.000Z	chem199	Healot	any ideas
+2006-03-30T14:45:00.000Z	Healot	chem199	you're on breezy right?
+2006-03-30T14:45:00.000Z	chem199		no
+2006-03-30T14:45:00.000Z	chem199		dapper
+2006-03-30T14:45:00.000Z	chem199		i made it work in breezy
+2006-03-30T14:45:00.000Z	chem199		i forgot how i did it
+2006-03-30T14:46:00.000Z	Healot		ok, the same "/usr/lib/mozilla-firefox/plugins", wrong directory though
+2006-03-30T14:46:00.000Z	chem199	Healot	there is no /usr/lib/mozilla-firefox/plugins in dapper
+2006-03-30T14:48:00.000Z	Healot		"ln -s /usr/lib/firefox/plugins/libjavaplugin_oji.so" then... see if the links broken?
+2006-03-30T14:49:00.000Z	chem199	Healot	how do i check?
+2006-03-30T14:50:00.000Z	Healot		nvm, i just give you the answer... you people never read...
+2006-03-30T14:50:00.000Z	chem199		?
+2006-03-30T14:50:00.000Z	chem199	Healot	i have read quite a bit, I am here as a last resort
+2006-03-30T14:51:00.000Z	Healot		"ln -s /usr/lib/firefox/plugins/libjavaplugin_oji.so", wth?
+2006-03-30T14:51:00.000Z	chem199		i typed that
+2006-03-30T14:51:00.000Z	chem199		i get nothing
+2006-03-30T14:51:00.000Z	chem199		no error prompt
+2006-03-30T14:52:00.000Z	Healot		"ls -l /usr/lib/firefox/plugins/libjavaplugin_oji.so", wth? you've been faithfull and fooled
+2006-03-30T14:52:00.000Z	Healot		i really typed wrong :)
+2006-03-30T14:52:00.000Z	chem199	Healot	i am confused
+2006-03-30T14:52:00.000Z	Healot		you should be :)
+2006-03-30T14:52:00.000Z	chem199		ok
+2006-03-30T14:53:00.000Z	Healot		because I typed the wrong command :)
+2006-03-30T14:53:00.000Z	chem199		yea it is good
+2006-03-30T14:53:00.000Z	Healot		"ls -l" - to check to link of a symbolic link
+2006-03-30T14:53:00.000Z	chem199		it is good
+2006-03-30T14:54:00.000Z	chem199		do you want the read out
+2006-03-30T14:54:00.000Z	chem199		"/usr/lib/firefox/plugins/libjavaplugin_oji.so -> /usr/java/jre1.5.0/plugin/i386/ns7/libjavaplugin_oji.so"
+2006-03-30T14:54:00.000Z	Healot		btw, which version of breeezy do you use?
+2006-03-30T14:54:00.000Z	chem199	Healot	i am in dapper
+2006-03-30T14:54:00.000Z	Healot		dapper... I mean
+2006-03-30T14:54:00.000Z	chem199		test 5 i think
+2006-03-30T14:54:00.000Z	chem199		the newest one
+2006-03-30T14:55:00.000Z	Healot		with Sun's JRE?
+2006-03-30T14:55:00.000Z	chem199		yea
+2006-03-30T14:55:00.000Z	Healot		is it a 32bit/64bit release?
+2006-03-30T14:55:00.000Z	chem199		32 bit
+2006-03-30T14:56:00.000Z	Healot		try to start mozila firefox again, then load a page with Java applet
+2006-03-30T14:56:00.000Z	chem199		i tried that
+2006-03-30T14:57:00.000Z	chem199	Healot	still nothing
+2006-03-30T14:57:00.000Z	Healot	chem199	invoke "java", use fullpath
+2006-03-30T14:58:00.000Z	chem199		Usage: gij [OPTION]  ... CLASS [ARGS]  ...
+2006-03-30T14:58:00.000Z	chem199		          to invoke CLASS.main, or
+2006-03-30T14:58:00.000Z	chem199		       gij -jar [OPTION]  ... JARFILE [ARGS]  ...
+2006-03-30T14:58:00.000Z	chem199		          to execute a jar file
+2006-03-30T14:58:00.000Z	chem199		Try `gij --help' for more information.
+2006-03-30T14:58:00.000Z	chem199		sorry
+2006-03-30T14:58:00.000Z	chem199		i assume it works
+2006-03-30T14:59:00.000Z	Healot		wrong java... the sun' jre java
+2006-03-30T14:59:00.000Z	chem199		i am sorry, i didnt mean to send it
+2006-03-30T14:59:00.000Z	chem199		yea
+2006-03-30T14:59:00.000Z	chem199		just typed java in the directory
+2006-03-30T14:59:00.000Z	Healot		better in full path
+2006-03-30T14:59:00.000Z	chem199		yea
+2006-03-30T15:00:00.000Z	Healot		"/usr/java/jre1.5.0/bin/java:
+2006-03-30T15:00:00.000Z	chem199		Healot:
+2006-03-30T15:00:00.000Z	chem199		sorry
+2006-03-30T15:00:00.000Z	chem199		yea that is what i did the second time
+2006-03-30T15:01:00.000Z	chem199	Healot	 "bash: /usr/java/jre1.5.0/bin/java: No such file or directory"
+2006-03-30T15:01:00.000Z	chem199		but when i entered the directory it worked
+2006-03-30T15:01:00.000Z	Healot	chem199	try the other path... up up level
+2006-03-30T15:02:00.000Z	Healot		or somewhere around that...
+2006-03-30T15:02:00.000Z	chem199		i am sorry, i am working in two windows, i am getting a little confused.
+2006-03-30T15:03:00.000Z	Healot	chem199	you should be
+2006-03-30T15:03:00.000Z	chem199		sorry, confused, or both?
+2006-03-30T15:04:00.000Z	chem199	Healot	when i enter the directory and type ./java it works
+2006-03-30T15:04:00.000Z	Healot		the worst you can do is "sudo updatedb && sudo locate java" ;_) chem199
+2006-03-30T15:04:00.000Z	Healot		which directory, againm chem199 ?
+2006-03-30T15:05:00.000Z	chem199	Healot	 /usr/java/jre1.5.0_06/
+2006-03-30T15:05:00.000Z	Healot		how the heck you get "/usr/java/jre1.5.0/plugin/i386/ns7/"?
+2006-03-30T15:06:00.000Z	chem199	Healot	what? no the java is in /usr/java/jre1.5.0_06/bin/java
+2006-03-30T15:07:00.000Z	Healot		and how the heck you link a different "libjava" plugin?
+2006-03-30T15:07:00.000Z	Healot		man, you're confused for sure
+2006-03-30T15:07:00.000Z	Healot		two different versions of JRE?
+2006-03-30T15:08:00.000Z	chem199	Healot	no, i linked the libjavaplugin_oji.so to the firefox directory from the /usr/java direectory
+2006-03-30T15:08:00.000Z	chem199		it is installed in the right places, it just wont activate
+2006-03-30T15:09:00.000Z	Healot		man, you need to figure out which JRE you install and where?
+2006-03-30T15:09:00.000Z	Healot		and state full path of your JRE
+2006-03-30T15:10:00.000Z	Healot		it makes you reach the mount(ains)
+2006-03-30T15:10:00.000Z	chem199	Healot	 "/usr/java/jre1.5.0_06/"
+2006-03-30T15:10:00.000Z	Healot		the java plugin dir? of you JRE, not Firefox's
+2006-03-30T15:10:00.000Z	chem199	Healot	yea
+2006-03-30T15:11:00.000Z	chem199		that is where sun told me to put it
+2006-03-30T15:11:00.000Z	Healot		how the hell did you get this "/usr/java/jre1.5.0/plugin/" then?
+2006-03-30T15:11:00.000Z	Healot		state the full path of the actual java plugin path, not the symlink
+2006-03-30T15:12:00.000Z	chem199	Healot	thanks for the help, i think i am going to work on it in the morning, it is like 3 am here

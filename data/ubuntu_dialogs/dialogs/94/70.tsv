@@ -1,0 +1,94 @@
+2007-09-04T12:29:00.000Z	ikonia	kousotu	even worse
+2007-09-04T12:29:00.000Z	kousotu	ikonia	how?
+2007-09-04T12:29:00.000Z	ikonia	kousotu	he's in the development channel and choses not to use it
+2007-09-04T12:29:00.000Z	kousotu	ikonia	I do that too at times
+2007-09-04T12:30:00.000Z	kousotu	ikonia	cause it's not nearly as active
+2007-09-04T12:30:00.000Z	ikonia	kousotu	thats because it development
+2007-09-04T12:31:00.000Z	kousotu	ikonia	maybe, but I stillget help here. usually my questions haveto deal with linux in general,
+2007-09-04T12:32:00.000Z	ikonia	kousotu	then this is not the appropriate channel - this is ubuntu support, not generic linux support
+2007-09-04T12:32:00.000Z	kousotu	ikonia	I am running ubunty Gustsy. I stay here to help as well as get answers when I ned them
+2007-09-04T12:35:00.000Z	kousotu	ikonia	I'm NOT off-topic
+2007-09-04T12:35:00.000Z	ikonia	kousotu	you are
+2007-09-04T12:43:00.000Z	ikonia	kousotu	do you have to say "lol" in every sentence ?
+2007-09-04T12:46:00.000Z	ikonia	kousotu	its the recyle bin
+2007-09-04T12:46:00.000Z	kousotu	ikonia	that didn't work
+2007-09-04T12:46:00.000Z	ikonia	kousotu	who owns it ?
+2007-09-04T12:47:00.000Z	ikonia	kousotu	the directory
+2007-09-04T12:48:00.000Z	kousotu	ikonia	it's a USB drive
+2007-09-04T12:48:00.000Z	kousotu	ikonia	and I'm the only user on the partion
+2007-09-04T12:48:00.000Z	ikonia	kousotu	I'll ask you again. Who is the linux user that owns the .trash directory and the files inside it
+2007-09-04T12:50:00.000Z	kousotu	ikonia	same as the name I'm using here
+2007-09-04T12:51:00.000Z	ikonia	kousotu	so you should be able to rm or delete them using a file manager
+2007-09-04T12:51:00.000Z	kousotu	ikonia	the GFX one won't do it?
+2007-09-04T12:52:00.000Z	kousotu	ikonia	GFX = graphics
+2007-09-04T12:54:00.000Z	ikonia	kousotu	just keep it, its like 8 k
+2007-09-04T12:54:00.000Z	kousotu	ikonia	was simply courious
+2007-09-04T12:55:00.000Z	kousotu	ikonia	I won't fill 11gb anytime soon on Linux
+2007-09-05T09:19:00.000Z	ikonia	kousotu	is there any chance you can stop making pointless comment
+2007-09-05T12:54:00.000Z	ikonia	kousotu	he doesn't need to do that
+2007-09-05T12:55:00.000Z	kousotu	ikonia	3g is for read fuse is for write
+2007-09-05T12:55:00.000Z	ikonia	kousotu	no  its not
+2007-09-05T12:55:00.000Z	ikonia	kousotu	please don't say thing you don't understand
+2007-09-05T12:56:00.000Z	kousotu	ikonia	don't go assuming I don't understad something
+2007-09-05T12:56:00.000Z	ikonia	kousotu	you don't as you've just said something thats incorrect
+2007-09-05T12:57:00.000Z	kousotu	ikonia	ok, whatever. you think you know it al fine, be my guest
+2007-09-05T12:57:00.000Z	ikonia	kousotu	ntfs-3g is NOT for read access
+2007-09-05T12:58:00.000Z	kousotu	ikonia	then tell me, why would it refuse to mount wthout 3g then?
+2007-09-05T12:58:00.000Z	ikonia	kousotu	user error ?
+2007-09-05T12:58:00.000Z	ikonia	kousotu	most of the time it is
+2007-09-05T13:00:00.000Z	ikonia	kousotu	depends if you installed the jdk - thats not the default
+2007-09-05T13:01:00.000Z	kousotu	ikonia	I''m not dealing with you. you can't admit that I just might know something thatyou don't
+2007-09-05T13:02:00.000Z	ikonia	kousotu	I don't  know what your talking about
+2007-09-05T13:02:00.000Z	ikonia	kousotu	your just making incorrect comments and I'm explaining its wrong
+2007-09-05T13:02:00.000Z	ikonia	kousotu	gusty is not 7.04 stable
+2007-09-05T13:03:00.000Z	ikonia	kousotu	and as you can see drew2 did not need ntfs-3g to mount his disk
+2007-09-05T13:03:00.000Z	kousotu	ikonia	this is true, but the packages are merely dev versions for the most part
+2007-09-05T13:03:00.000Z	ikonia	kousotu	in gusty yes - as its in development
+2007-09-05T13:03:00.000Z	ikonia	kousotu	not fesity
+2007-09-05T13:04:00.000Z	kousotu	ikonia	I would hav gona ahead and installed 3g, then not writen
+2007-09-05T13:04:00.000Z	ikonia	kousotu	and thats why you don't understand what your doing and shouldn't give out incorrect advice
+2007-09-05T13:04:00.000Z	kousotu	ikonia	also, Sun microsystems controls Java, not Can. (w/e the ubuntu dev compay is)
+2007-09-05T13:05:00.000Z	ikonia	kousotu	please stop saying things you don't understand, ubuntu packages sun java
+2007-09-05T13:05:00.000Z	ikonia	kousotu	no - its incorrect advice
+2007-09-05T13:06:00.000Z	ikonia	kousotu	you don't NEED ntfs-3g to mount a read only NTFS disck
+2007-09-05T13:08:00.000Z	ikonia	kousotu	just drop it and think about what advice your offering to people
+2007-09-05T13:09:00.000Z	kousotu	ikonia	you think about it. justbecause it's different done NOT make it wrong
+2007-09-05T13:09:00.000Z	ikonia	kousotu	I'm not going into it, but giving out incorrect and potentially dangerous advice is not a good idea
+2007-09-05T13:09:00.000Z	kousotu	ikonia	again, it's not WRONG ADVICE
+2007-09-05T13:10:00.000Z	ikonia	kousotu	its potentially dangeours advice
+2007-09-05T13:10:00.000Z	kousotu	ikonia	only if used incorectly. AKA USER ERROR
+2007-09-05T13:11:00.000Z	kousotu	ikonia	you can code in a thousanddifferent ways, it will have the same end result
+2007-09-05T13:13:00.000Z	kousotu	ikonia	I dare you to tell me that statement is wrong
+2007-09-05T13:14:00.000Z	ikonia	kousotu	this is offtopic nonsense that I'm not going to discuss
+2007-09-05T13:15:00.000Z	kousotu	ikonia	bull, it's righton targt, you're just too stupid, bullheaded, ignorant (pick one) to admit it
+2007-09-11T11:07:00.000Z	kousotu	ikonia	new realteks aren't
+2007-09-11T11:12:00.000Z	ikonia	kousotu	how do you want to auto connect - what service
+2007-09-11T11:13:00.000Z	ikonia	kousotu	let him ask then
+2007-09-11T11:14:00.000Z	kousotu	ikonia	....
+2007-09-11T15:51:00.000Z	ikonia	kousotu	whats the problem - ie: what are the symptoms, why have you run a strace
+2007-09-11T15:51:00.000Z	kousotu	ikonia	doesn't open, perriod
+2008-04-28T20:23:00.000Z	kousotu	ikonia	you cheated!
+2008-04-28T20:23:00.000Z	ikonia	kousotu	pardon ?
+2008-04-28T20:24:00.000Z	kousotu	ikonia	I was actually typng out elp for him by hand, and you go and  use the bot
+2008-04-28T21:19:00.000Z	kousotu	ikonia	gutsy
+2008-04-28T21:12:00.000Z	ikonia	kousotu	beryl is dead as I told you the other day
+2008-04-28T21:13:00.000Z	kousotu	ikonia	compiz-fusion don't ork on hardy it "doesn't exist"
+2008-04-28T21:13:00.000Z	ikonia	kousotu	your talking nonsense
+2008-04-28T21:13:00.000Z	ikonia	kousotu	it's installed by default
+2008-04-28T21:13:00.000Z	kousotu	ikonia	plus.. looking for how to get emerald themes up again
+2008-04-28T21:14:00.000Z	ikonia	kousotu	how is looking to get emerald themes up a problem ?
+2008-04-28T21:14:00.000Z	kousotu	ikonia	I upgraded from Gutsy, and my themes aren't working
+2008-04-28T21:18:00.000Z	ikonia	kousotu	your supposed to use any external repo's before the upgrade
+2008-04-28T21:18:00.000Z	kousotu	ikonia	please explain, I'm confused
+2008-04-28T21:18:00.000Z	ikonia	kousotu	where did you get emerald from  ?
+2008-04-28T21:18:00.000Z	kousotu	ikonia	snatic
+2008-04-28T21:19:00.000Z	ikonia	kousotu	but which repo
+2008-04-28T21:19:00.000Z	ikonia	kousotu	ok, so it looks like it's not in hardy for the upgrade
+2008-04-28T21:20:00.000Z	kousotu	ikonia	but it IS in hardy, it just doesn't work
+2008-04-28T21:20:00.000Z	ikonia	kousotu	it's probably the gutsy version not removed
+2008-04-28T21:20:00.000Z	kousotu	ikonia	and yet it uninstalled the gutsy compiz?
+2008-04-28T21:20:00.000Z	ikonia	kousotu	because there is a reaplcment version
+2008-04-28T21:21:00.000Z	kousotu	ikonia	ok, gotcha :)
+2008-04-28T21:21:00.000Z	kousotu	ikonia	any idea if emerald may be supported at a later date?
+2008-04-28T21:21:00.000Z	ikonia	kousotu	no idea, I think it's replaced with ccsm
+2008-04-28T21:22:00.000Z	ikonia	kousotu	it's replaced by ccsm

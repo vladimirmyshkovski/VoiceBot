@@ -1,0 +1,94 @@
+2011-01-11T10:15:00.000Z	Hypoglybetic		Hi. I just installed Ubuntu Desktop 10.10.  I rebooted my machine and now I have  grub> sitting on my screen. Not sure what to do.
+2011-01-11T10:17:00.000Z	Jordan_U	Hypoglybetic	Do you have more than one hard drive?
+2011-01-11T10:17:00.000Z	Hypoglybetic	Jordan_U	I am using a Dell Perc 6i PCI card to manage a RAID5 array of5 disks 4TB
+2011-01-11T10:18:00.000Z	Jordan_U	Hypoglybetic	Does "ls -l" at the grub shell seem to list the array as a single drive, and correctly display its contents?
+2011-01-11T10:20:00.000Z	Jordan_U	Hypoglybetic	Interesting. It doesn't list any filesystems that it *can* understand?
+2011-01-11T10:21:00.000Z	Jordan_U	Hypoglybetic	Never mind, misread.
+2011-01-11T10:21:00.000Z	Hypoglybetic	Jordan_U	Just the hd0,gpt2: ext2
+2011-01-11T10:21:00.000Z	Hypoglybetic	Jordan_U	So it can read the swap partition..i guess
+2011-01-11T10:22:00.000Z	Jordan_U	Hypoglybetic	If you "ls (hd0,gpt2)/" do you see what looks like the files of a root filesystem? (/var, /etc...)
+2011-01-11T10:23:00.000Z	Hypoglybetic	Jordan_U	Yes
+2011-01-11T10:23:00.000Z	Jordan_U	Hypoglybetic	What happens when you run "configfile (hd0,gpt2)/boot/grub/grub.cfg"?
+2011-01-11T10:24:00.000Z	Hypoglybetic	Jordan_U	My screen was cleared, grub> _ is now at the top of the screen
+2011-01-11T10:25:00.000Z	Jordan_U	Hypoglybetic	Any errors if you run "source (hd0,gpt2)/boot/grub/grub.cfg"?
+2011-01-11T10:26:00.000Z	Hypoglybetic	Jordan_U	none
+2011-01-11T10:26:00.000Z	Jordan_U	Hypoglybetic	Do you see kernel images if you "ls /boot/"?
+2011-01-11T10:26:00.000Z	Hypoglybetic	Jordan_U	nothing happened, no error, no confirmation, no msg
+2011-01-11T10:27:00.000Z	Hypoglybetic	Jordan_U	I see system map, abi, memtest86+, vmcoreinfo, vmlinuz, nothing about Kernel
+2011-01-11T10:30:00.000Z	Jordan_U	Hypoglybetic	The files like "vmlinuz-2.6.32-25-generic" are the kernel images.
+2011-01-11T10:30:00.000Z	Hypoglybetic	Jordan_U	Oh, okay
+2011-01-11T10:31:00.000Z	Jordan_U	Hypoglybetic	Are you familiar with tab completion?
+2011-01-11T10:31:00.000Z	Hypoglybetic	Jordan_U	I'm experienced with computer hardware, electronics, and windows but I don't know anything about Linux
+2011-01-11T10:33:00.000Z	Jordan_U	Hypoglybetic	In a bash shell you can type the first few characters of a filename then hit the tab key to automatically complete the rest of it. The same is true for the grub shell, and for your IRC client with nicknames (try typing "Jord<TAB>").
+2011-01-11T10:33:00.000Z	Hypoglybetic	Jordan_U	...oh god that helps
+2011-01-11T10:34:00.000Z	Jordan_U	Hypoglybetic	:)
+2011-01-11T10:34:00.000Z	Hypoglybetic	Jordan_U	neat
+2011-01-11T10:35:00.000Z	Jordan_U	Hypoglybetic	To boot manually from the grub shell run "linux /boot/vmlinuz-2.6.32-25-generic root=/dev/sda2" (use tab completion for vmlinuz...) then "initrd /boot/initrd.img-2.6.31-20-generic" then simply run "boot".
+2011-01-11T10:36:00.000Z	Jordan_U	Hypoglybetic	By the way, as a first experience with Linux you've been thrown into the deep end. This is far from normal :)
+2011-01-11T10:37:00.000Z	Hypoglybetic	Jordan_U	I've been trying to setup a f-ing ESXi 4.1 server for 2 weeks straight, said screw it and tried to run ubuntu and consolidate Win Home Server into Ubuntu for my media purposes.  I've been trying to get Ubuntu to install correctly/not corrupted/not bugged for 3 days now
+2011-01-11T10:39:00.000Z	Hypoglybetic	Jordan_U	Btw, file not found on the linux command
+2011-01-11T10:41:00.000Z	Jordan_U	Hypoglybetic	Did you use tab completion? The filename I gave was just a quick example from my system, it won't work on yours. Use "linux /boot/vmlin<TAB> root=/dev/sda2" then "initrd /boot/initrd<TAB>" then "boot".
+2011-01-11T10:42:00.000Z	Hypoglybetic	Jordan_U	Ah, okay.
+2011-01-11T10:42:00.000Z	Hypoglybetic	Jordan_U	 i appreciate your help
+2011-01-11T10:43:00.000Z	Hypoglybetic	Jordan_U	 invalid magic number
+2011-01-11T10:43:00.000Z	Jordan_U	Hypoglybetic	That means that the file wasn't actually a linux kernel. Let me recheck my instructions.
+2011-01-11T10:45:00.000Z	Hypoglybetic	Jordan_U	 Maybe I should just start there,again? lol
+2011-01-11T10:47:00.000Z	Jordan_U	Hypoglybetic	Have you ever seen the error "out of disk"? It's a symptom of a BIOS bug that won't cause problems untill you need to read files far into a large drive (so it can pop up unexpectedly on a previously working system).
+2011-01-11T10:47:00.000Z	Hypoglybetic	Jordan_U	No, I haven't.
+2011-01-11T10:48:00.000Z	Hypoglybetic	Jordan_U	I know if I use my nForce 680i fakeRAID i can overflow my bios' raid size (limit of 2 TB), but Ubuntu reads it, until it restarts. xD -- But this time I'm usingthe hardware raid from Dell
+2011-01-11T10:49:00.000Z	Jordan_U	Hypoglybetic	You're familiar with the difference between FakeRAID and true hardware RAID, and you're currently using true hardware RAID?
+2011-01-11T10:50:00.000Z	Hypoglybetic	Jordan_U	 Yes, the Dell PERC 6i PCI-e 4x ($300 retail) card sitting in my computer is hardware raid.
+2011-01-11T10:50:00.000Z	Hypoglybetic	Jordan_U	 If It isn't heads will role
+2011-01-11T10:51:00.000Z	Hypoglybetic	Jordan_U	and it isn't hardware assisted raid either.
+2011-01-11T10:51:00.000Z	Hypoglybetic	Jordan_U	 or shouldn't be
+2011-01-11T10:53:00.000Z	Jordan_U	Hypoglybetic	Then I'm really curious why you're having problems. The file that you tried to load was not a valid linux kernel, but it should have been. It may be that the file got corrupted at some point. Did you run the integrity test on the Ubuntu install CD?
+2011-01-11T10:54:00.000Z	Hypoglybetic	Jordan_U	 Us windows users never run that stuff. ..i mean, no. I think? I don't remember.
+2011-01-11T10:54:00.000Z	Hypoglybetic	Jordan_U	 Normally I don't, but I do remember doing it for one of this newly burned disks, perhaps it was the server CD i verified?
+2011-01-11T10:55:00.000Z	Jordan_U	Hypoglybetic	Try booting from the install CD and running the check. If it fails then you have your answer.
+2011-01-11T10:58:00.000Z	Hypoglybetic	Jordan_U	The Driver BIOS did its startup check, everything looks fine.  Booting to Ubuntu LIVE
+2011-01-11T10:59:00.000Z	Hypoglybetic	Jordan_U	 Do I install ubuntu or Try Ubuntu? Where is the disk verify option?
+2011-01-11T11:00:00.000Z	Jordan_U	Hypoglybetic	You have to press any key during the first five seconds of boot to see the menu (The boot menu is displayed by default on the server install CD which is what I thought you had used).
+2011-01-11T11:01:00.000Z	Hypoglybetic	Jordan_U	I have both CDs here...
+2011-01-11T11:02:00.000Z	Jordan_U	Hypoglybetic	Run the check on the one you installed from.
+2011-01-11T11:02:00.000Z	Hypoglybetic	Jordan_U	checking disk now
+2011-01-11T11:06:00.000Z	Hypoglybetic	Jordan_U	 No errors found
+2011-01-11T11:07:00.000Z	Jordan_U	Hypoglybetic	Ok. Can you boot from the LiveCD, run boot info script as explained here: http://ubuntuforums.org/showthread.php?t=1291280 and pastebin the RESULTS.txt it produces?
+2011-01-11T11:08:00.000Z	Hypoglybetic	Jordan_U	will do
+2011-01-11T11:50:00.000Z	Hypoglybetic	Jordan_U	http://dl.dropbox.com/u/6629357/RESULTS.txt
+2011-01-11T11:54:00.000Z	Hypoglybetic	Jordan_U	 ?? :o
+2011-01-11T11:56:00.000Z	Jordan_U	Hypoglybetic	You should definitely be seeing a menu at boot.
+2011-01-11T11:57:00.000Z	Hypoglybetic	Jordan_U	 well, lets see what happens *rebooting*
+2011-01-11T11:58:00.000Z	Hypoglybetic	Jordan_U	Okay, I booted into Grub, again, however there is NOT an error.
+2011-01-11T11:59:00.000Z	Hypoglybetic	Jordan_U	 it says "gnu grub version 1.98..........ubuntu4,and then a paragraph of bash-like editing is suported. Again, no actual error
+2011-01-11T12:00:00.000Z	Jordan_U	Hypoglybetic	If you run "cat /boot/grub/grub.cfg" from the grub shell does it appear to be a normal text file (no unprintable garbage that would suggest corruption)?
+2011-01-11T12:01:00.000Z	Hypoglybetic	Jordan_U	 :| out of disk
+2011-01-11T12:01:00.000Z	Hypoglybetic	Jordan_U	 so what does that mean again? shoot myself? ....
+2011-01-11T12:01:00.000Z	Jordan_U	Hypoglybetic	That explains everything. You do indeed have a buggy BIOS, and it's easy to work around :)
+2011-01-11T12:02:00.000Z	Hypoglybetic	Jordan_U	 Which BIOS? Dell PERC bios or motherboard BIOS?
+2011-01-11T12:02:00.000Z	Jordan_U	Hypoglybetic	Motherboard.
+2011-01-11T12:02:00.000Z	Hypoglybetic	Jordan_U	 you know, for $50 a pop I could go buy some DELL PowerEdge 2850 servres off of ebay and fix all my fing problems. ...
+2011-01-11T12:03:00.000Z	Hypoglybetic	Jordan_U	would you like to guess the name brand of the MB? ill give you a hint, their support is 0.
+2011-01-11T12:03:00.000Z	Jordan_U	Hypoglybetic	You can work around the problem by creating a small /boot/ partition near the beginning of the drive. That way everything that needs to be read through the BIOS is within your BIOSs limits.
+2011-01-11T12:04:00.000Z	Hypoglybetic	Jordan_U	I received other errors in ESXi, perhaps this will explain it.
+2011-01-11T12:04:00.000Z	Hypoglybetic	Jordan_U	 oh, that doesn't sound tooo bad.
+2011-01-11T12:09:00.000Z	Hypoglybetic	Jordan_U	Do you have a link to a walkthrough or how am I to do this?
+2011-01-11T12:12:00.000Z	Jordan_U	Hypoglybetic	Looking for a good guide now.
+2011-01-11T12:12:00.000Z	Hypoglybetic	Jordan_U	Thanks :)
+2011-01-11T12:24:00.000Z	Jordan_U	Hypoglybetic	I can't find a good guide, and it would take me a few hours to download the server iso. So I'll try to walk you through installing with a separate /boot (it's not too hard) but you'll have to describe or upload pictures of what you see.
+2011-01-11T12:24:00.000Z	Hypoglybetic	Jordan_U	 okay
+2011-01-11T12:24:00.000Z	Hypoglybetic	Jordan_U	 I have a web cam ..lol
+2011-01-11T12:26:00.000Z	Jordan_U	Hypoglybetic	Go through the install up untill partitioning, choose manual partitioning then upload a picture (or try to figure it out yourself, you probably can).
+2011-01-11T12:30:00.000Z	Hypoglybetic	Jordan_U	Running setup now.
+2011-01-11T12:33:00.000Z	Hypoglybetic	Jordan_U	I'm at the partitioner
+2011-01-11T12:36:00.000Z	Hypoglybetic	Jordan_U	I want to make a Boot (100megs), Root (4TB), and swap (6GB), so 3 partitions? (im guessing here)
+2011-01-11T12:41:00.000Z	Jordan_U	Hypoglybetic	I just finished downloading the minimal install iso which uses the same installer as the server iso. I'll have step by step screenshots in a few minutes.
+2011-01-11T12:42:00.000Z	Hypoglybetic	Jordan_U	 So I should use the Server Install disk then?
+2011-01-11T12:42:00.000Z	Jordan_U	Hypoglybetic	Yes.
+2011-01-11T12:43:00.000Z	Hypoglybetic	Jordan_U	 rebooting
+2011-01-11T12:45:00.000Z	Jordan_U	Hypoglybetic	http://jordanu.dyndns.org/ubuntu_server_separate_boot_screenshots/
+2011-01-11T12:50:00.000Z	Hypoglybetic	Jordan_U	an entire GB to my 'boot' area, such a waste of my 4 TBs xD
+2011-01-11T12:50:00.000Z	Jordan_U	Hypoglybetic	1 GB is not required, but as you say it's not much when you have 4 TB :)
+2011-01-11T12:51:00.000Z	Hypoglybetic	Jordan_U	That was painless.  Would you mind assisting me in setting  up some things? or suggesting some progams/walkthroughs. I want to host my website and Media Server on this machine as well as virtual machines.
+2011-01-11T12:54:00.000Z	Jordan_U	Hypoglybetic	Just ask (here or in #ubuntu-server) and I'll help where I can.
+2011-01-11T12:57:00.000Z	Hypoglybetic	Jordan_U	thanks a billion.  hopefully I'll get this to work smoothly.
+2011-01-11T12:57:00.000Z	Jordan_U	Hypoglybetic	You're welcome.

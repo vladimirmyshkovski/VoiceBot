@@ -1,0 +1,94 @@
+2006-02-25T10:33:00.000Z	jedrick		im just new to linux can someone help me
+2006-02-25T10:35:00.000Z	jetscreamer	jedrick	/etc/gdm/gdm.conf
+2006-02-25T10:35:00.000Z	jedrick	jetscreamer	?
+2006-02-25T10:35:00.000Z	jedrick	jetscreamer	<jetscreamer> jedrick: /etc/gdm/gdm.conf <-- what shall i do
+2006-02-25T10:37:00.000Z	jetscreamer	jedrick	edit it. but you need to know what to put. might be easier to just apt-get remove --purge gdm && apt-get install gdm
+2006-02-25T10:40:00.000Z	jetscreamer	jedrick	just mount all the partitions you have and look to see which one is the one you want.
+2006-02-25T10:40:00.000Z	jedrick	jetscreamer	what will i change in fstab?
+2006-02-25T10:41:00.000Z	jetscreamer	jedrick	you have a line mounting /var ?
+2006-02-25T10:41:00.000Z	jedrick	jetscreamer	yes, i can see it from here using partition magic. i can even browse to it
+2006-02-25T10:42:00.000Z	jedrick	jetscreamer	here's the fstab # /etc/fstab: static file system information.## <file system> <mount point>   <type>  <options>       <dump>  <pass>proc            /proc           proc    defaults        0       0/dev/hda5       /               ext3    defaults,errors=remount-ro 0       1/dev/hda7       /boot           ext3    defaults        0       2/dev/hda6       none            swap    sw              0       0/dev/hdd        /media/cdrom0   udf,iso9660 r
+2006-02-25T10:46:00.000Z	jedrick	jetscreamer	what now? what will i edit on my fstab
+2006-02-25T10:46:00.000Z	jetscreamer	jedrick	use the pastebin, post your fstab
+2006-02-25T10:47:00.000Z	jetscreamer	jedrick	what does ls /var return also paste in there
+2006-02-25T10:47:00.000Z	jedrick	jetscreamer	k
+2006-02-25T10:47:00.000Z	jedrick	jetscreamer	where will i paste it?
+2006-02-25T10:50:00.000Z	jedrick	jetscreamer	what will i paste again? all the files on my var?
+2006-02-25T10:50:00.000Z	jetscreamer	jedrick	you have a lot of files in var?
+2006-02-25T10:50:00.000Z	jedrick	jetscreamer	yes
+2006-02-25T10:50:00.000Z	jetscreamer	jedrick	why do you think you have unmounted /var?
+2006-02-25T10:51:00.000Z	jedrick	jetscreamer	cause i redo my boot grub using install cd and maybe i messed it up
+2006-02-25T10:51:00.000Z	jedrick	jetscreamer	i have 14 files on my /var
+2006-02-25T10:51:00.000Z	jetscreamer	jedrick	do you know for a fact that you had a seperate /var partition previously?
+2006-02-25T10:52:00.000Z	jedrick	jetscreamer	yes
+2006-02-25T10:52:00.000Z	jetscreamer	jedrick	ok so which hd/partition was it
+2006-02-25T10:52:00.000Z	jedrick	jetscreamer	what you mean?.. like what. be specific please im just new to linux :(
+2006-02-25T10:53:00.000Z	jetscreamer	jedrick	and where is that fstab in the pastebin, and why do you not have a line mounting /var in it
+2006-02-25T10:53:00.000Z	jetscreamer	jedrick	that was which harddrive and partition was it
+2006-02-25T10:53:00.000Z	jedrick	jetscreamer	that fstab i  just pasted is from my root /etc/fstab
+2006-02-25T10:54:00.000Z	jetscreamer	jedrick	show me the link to the paste eh
+2006-02-25T10:54:00.000Z	jedrick	jetscreamer	ok
+2006-02-25T10:55:00.000Z	jedrick	jetscreamer	will i paste the fstab again?
+2006-02-25T10:55:00.000Z	jetscreamer	jedrick	the pastebin should have shown you a link to give out
+2006-02-25T10:55:00.000Z	jedrick	jetscreamer	i mean what will i paste?
+2006-02-25T10:55:00.000Z	jedrick	jetscreamer	the file from my /var or the fstab
+2006-02-25T10:56:00.000Z	jedrick	jetscreamer	ok wait please
+2006-02-25T10:58:00.000Z	jedrick	jetscreamer	http://paste.ubuntu-nl.org/8936
+2006-02-25T11:00:00.000Z	jetscreamer	jedrick	/var seems to be mounted as an ext3 partition
+2006-02-25T11:00:00.000Z	jedrick	jetscreamer	so what should i do?
+2006-02-25T11:01:00.000Z	jetscreamer	jedrick	what files are you saying you can look at in partition magic
+2006-02-25T11:01:00.000Z	jedrick	jetscreamer	all my linux files
+2006-02-25T11:02:00.000Z	jetscreamer	jedrick	where did the fstab come from then
+2006-02-25T11:03:00.000Z	jedrick	jetscreamer	fstab comes from the root. in /etc/fstab
+2006-02-25T11:04:00.000Z	jetscreamer	jedrick	how did you get that file if all your linux files are visible in partition magic
+2006-02-25T11:04:00.000Z	jetscreamer	jedrick	i'm not seeing the problem yet
+2006-02-25T11:05:00.000Z	jedrick	jetscreamer	?
+2006-02-25T11:05:00.000Z	jetscreamer	jedrick	are you running the linux atm?
+2006-02-25T11:06:00.000Z	jedrick	jetscreamer	no, im on my windows
+2006-02-25T11:07:00.000Z	jetscreamer	jedrick	ok so why do you not have a line for /var in the fstab anymore
+2006-02-25T11:09:00.000Z	jedrick	jetscreamer	dunno, maybe i mess it up when i redo boot grub and i remember that i change some settings on disk partiton, the / swap and /var, i think i change the /var into /boot.
+2006-02-25T11:10:00.000Z	jedrick	jetscreamer	i redo the boot grub cause i can't boot to my linux when i install a fresh installation on windows
+2006-02-25T11:10:00.000Z	jetscreamer	jedrick	grub has nothing to do with fstab
+2006-02-25T11:11:00.000Z	jetscreamer	jedrick	your /var seems to be a seperate partition
+2006-02-25T11:12:00.000Z	jedrick	jetscreamer	what shall i do then?
+2006-02-25T11:12:00.000Z	jetscreamer	jedrick	cat /proc/mounts
+2006-02-25T11:13:00.000Z	jedrick	jetscreamer	can i just point it to var using a live cd.
+2006-02-25T11:13:00.000Z	jetscreamer	jedrick	ok so which partition is it that holds your /var... hda8? hda3?
+2006-02-25T11:14:00.000Z	jedrick	jetscreamer	hda4
+2006-02-25T11:14:00.000Z	jedrick	jetscreamer	oh it's hda6 cause my root is hda5
+2006-02-25T11:15:00.000Z	jedrick	jetscreamer	then it's hda7
+2006-02-25T11:15:00.000Z	jetscreamer	jedrick	/dev/hda7       /boot           ext3    defaults        0       2
+2006-02-25T11:16:00.000Z	jedrick	jetscreamer	then it's hda8
+2006-02-25T11:17:00.000Z	jetscreamer	jedrick	if it's really hda8, add  /dev/hda8  /boot  ext3  defaults  0  4  to your fstab
+2006-02-25T11:17:00.000Z	jetscreamer	jedrick	if it's really hda8, add  /dev/hda8  /var  ext3  defaults  0  4  to your fstab
+2006-02-25T11:17:00.000Z	jetscreamer	jedrick	how did your fstab get changed
+2006-02-25T11:17:00.000Z	jedrick	jetscreamer	?
+2006-02-25T11:18:00.000Z	jedrick	jetscreamer	dunno maybe when i run the winmac_fstab file
+2006-02-25T11:18:00.000Z	jedrick	jetscreamer	i will add /dev/hda7       /var           ext3    defaults        0       4  ?
+2006-02-25T11:18:00.000Z	jetscreamer	jedrick	change the 7 to whichever it is
+2006-02-25T11:19:00.000Z	jetscreamer	jedrick	if it's not ext3, change that to auto
+2006-02-25T11:19:00.000Z	jedrick	jetscreamer	what if i change both to /var is it ok?
+2006-02-25T11:19:00.000Z	jedrick	jetscreamer	it's ext3
+2006-02-25T11:19:00.000Z	jetscreamer	jedrick	just add the line, and if it's not 8, put the correct number
+2006-02-25T11:20:00.000Z	jedrick	jetscreamer	i'll add this one?  /dev/hda7       /var           ext3    defaults        0       4
+2006-02-25T11:21:00.000Z	jetscreamer	jedrick	make it /dev/hda8 since you said it was on hda8
+2006-02-25T11:21:00.000Z	jetscreamer	jedrick	but yeah
+2006-02-25T11:21:00.000Z	jedrick	jetscreamer	so i'll add this one?  /dev/hda8       /var           ext3    defaults        0       4
+2006-02-25T11:21:00.000Z	jetscreamer	jedrick	yes, and if it's really on hda8, and has your /var files, it should function
+2006-02-25T11:22:00.000Z	jedrick	jetscreamer	what if it's not?
+2006-02-25T11:22:00.000Z	jedrick	jetscreamer	change to hda7
+2006-02-25T11:22:00.000Z	jetscreamer	jedrick	change the 8 to the correct #
+2006-02-25T11:22:00.000Z	jetscreamer	jedrick	you already have a line for hda7
+2006-02-25T11:23:00.000Z	jetscreamer	jedrick	and your /boot is needed, so it's probably not hda7
+2006-02-25T11:23:00.000Z	jedrick	jetscreamer	so only the 8 or so on
+2006-02-25T11:23:00.000Z	jetscreamer	jedrick	yeah or just trial & error, if 8 don't work, try 1,2,3,4,5,6,7,8,9,10.....
+2006-02-25T11:24:00.000Z	jetscreamer	jedrick	next time just use one partiton or lvm
+2006-02-25T11:24:00.000Z	jedrick	jetscreamer	ok
+2006-02-25T11:25:00.000Z	jedrick	jetscreamer	will i just add /dev/hda8       /var           ext3    defaults        0       4  . at the bottom?
+2006-02-25T11:25:00.000Z	jetscreamer	jedrick	yeah or wherever
+2006-02-25T11:26:00.000Z	jedrick	jetscreamer	ok
+2006-02-25T12:15:00.000Z	jedrick	jetscreamer	still there?
+2006-02-25T12:16:00.000Z	jedrick	jetscreamer	man it's still not working, can i just past the /var files on my root var?
+2006-02-25T12:16:00.000Z	jetscreamer	jedrick	i take it it's still not working
+2006-02-25T12:17:00.000Z	jetscreamer	jedrick	yes you can
+2006-02-25T12:17:00.000Z	jetscreamer	jedrick	remove that line you added, or comment it out with a # in front

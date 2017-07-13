@@ -1,0 +1,93 @@
+2007-08-12T15:47:00.000Z	ahmadsaifan		linuxboi, you still helping me?
+2007-08-12T15:47:00.000Z	ahmadsaifan		ok..
+2007-08-12T15:48:00.000Z	ahmadsaifan		yes
+2007-08-12T15:48:00.000Z	ahmadsaifan		i have to use wired connection
+2007-08-12T15:49:00.000Z	ahmadsaifan		im using wired now
+2007-08-12T15:49:00.000Z	ahmadsaifan		i need wifi though
+2007-08-12T15:49:00.000Z	ahmadsaifan		how can i disable gnome network manager?
+2007-08-12T15:50:00.000Z	ahmadsaifan		because, before  on here, people tell me it pokes around my wireless card
+2007-08-12T15:50:00.000Z	ahmadsaifan		how can i ping my router?
+2007-08-12T15:51:00.000Z	ahmadsaifan		no i dont, but i know what it means
+2007-08-12T15:51:00.000Z	linuxbo1	ahmadsaifan	you know how to ping....
+2007-08-12T15:40:00.000Z	linuxbo1	ahmadsaifan	use network manager....no ?
+2007-08-12T15:40:00.000Z	linuxbo1	ahmadsaifan	network manager doesn't work ?
+2007-08-12T15:43:00.000Z	linuxbo1	ahmadsaifan	what do you mean by you have no internet connection ?
+2007-08-12T15:44:00.000Z	linuxbo1	ahmadsaifan	have you ever had internet connection on ubuntu ?
+2007-08-12T15:46:00.000Z	linuxbo1	ahmadsaifan	but never using the wifi
+2007-08-12T15:47:00.000Z	linuxbo1	ahmadsaifan	yeah ...
+2007-08-12T15:48:00.000Z	linuxbo1	ahmadsaifan	you can connect to you access point ?
+2007-08-12T15:49:00.000Z	linuxbo1	ahmadsaifan	why do you want to disable gnome network :S
+2007-08-12T15:51:00.000Z	linuxbo1	ahmadsaifan	ok you know the address (ip) of your router ?
+2007-08-12T15:52:00.000Z	linuxbo1	ahmadsaifan	ok ping google.Fr
+2007-08-12T15:52:00.000Z	linuxbo1	ahmadsaifan	 yeah but it's dangerous ....
+2007-08-12T15:52:00.000Z	linuxbo1	ahmadsaifan	open a terminal
+2007-08-12T15:54:00.000Z	linuxbo1	ahmadsaifan	you have internet connection working....
+2007-08-12T15:56:00.000Z	linuxbo1	ahmadsaifan	you know how to do it ?
+2007-08-12T15:56:00.000Z	linuxbo1	ahmadsaifan	have you another computer from where you can talk ...
+2007-08-12T15:56:00.000Z	linuxbo1	ahmadsaifan	be patient ......
+2007-08-12T15:57:00.000Z	linuxbo1	ahmadsaifan	if you want to make it work you have to plug out your wired connection ...
+2007-08-12T15:59:00.000Z	linuxbo1	ahmadsaifan	ok you have what kind of encryption
+2007-08-12T15:59:00.000Z	linuxbo1	ahmadsaifan	wpa or wpe ?
+2007-08-13T16:01:00.000Z	ahmadsaifan	linuxbo1	nothing happens!!!
+2007-08-13T16:01:00.000Z	linuxbo1	ahmadsaifan	what do you mean by nothing
+2007-08-13T16:01:00.000Z	linuxbo1	ahmadsaifan	what did you do ...
+2007-08-13T16:02:00.000Z	linuxbo1	ahmadsaifan	you were connected to your router ?
+2007-08-13T16:03:00.000Z	linuxbo1	ahmadsaifan	no ...
+2007-08-13T16:04:00.000Z	linuxbo1	ahmadsaifan	your connection is secured ?
+2007-08-13T16:04:00.000Z	linuxbo1	ahmadsaifan	by what ?
+2007-08-13T16:04:00.000Z	linuxbo1	ahmadsaifan	wep ?
+2007-08-13T16:05:00.000Z	linuxbo1	ahmadsaifan	have you entered a password in network manager.... ?
+2007-08-13T16:05:00.000Z	linuxbo1	ahmadsaifan	you put your passphrase and what happended
+2007-08-13T16:06:00.000Z	linuxbo1	ahmadsaifan	ok connect again and do tape "ifconfig" in your terminal then copy and paste on http://paste.ubuntu-nl.org
+2007-08-13T16:09:00.000Z	linuxbo1	ahmadsaifan	so ?
+2007-08-13T16:09:00.000Z	linuxbo1	ahmadsaifan	you were not connnected....
+2007-08-13T16:11:00.000Z	linuxbo1	ahmadsaifan	when did you tape ifconfig you were on wifi...
+2007-08-13T16:13:00.000Z	linuxbo1	ahmadsaifan	whatever
+2007-08-13T16:14:00.000Z	linuxbo1	ahmadsaifan	sorry iwlist eth0 scanning
+2007-08-13T16:17:00.000Z	linuxbo1	ahmadsaifan	which one is your router ?
+2007-08-13T16:18:00.000Z	linuxbo1	ahmadsaifan	ok do :
+2007-08-13T16:18:00.000Z	linuxbo1	ahmadsaifan	sudo iwconfig eth1 ESSID Saifan key "YOUR KEY" channel 6
+2007-08-13T16:19:00.000Z	linuxbo1	ahmadsaifan	replace YOUR KEY  by you passphrase
+2007-08-13T16:21:00.000Z	linuxbo1	ahmadsaifan	copy past what you did
+2007-08-13T16:21:00.000Z	linuxbo1	ahmadsaifan	hidde it .....
+2007-08-13T16:25:00.000Z	linuxbo1	ahmadsaifan	what is the wrong argument in your case your key ?
+2007-08-13T16:26:00.000Z	linuxbo1	ahmadsaifan	no what is the invalid argument your key ?
+2007-08-13T16:27:00.000Z	linuxbo1	ahmadsaifan	you have a wrong argument right what is it ?
+2007-08-13T16:27:00.000Z	linuxbo1	ahmadsaifan	82BA ????
+2007-08-13T16:28:00.000Z	linuxbo1	ahmadsaifan	ok you tapped a wrong argument your key is not a key ?
+2007-08-13T16:28:00.000Z	linuxbo1	ahmadsaifan	how many numbers or letter  have your key
+2007-08-13T16:33:00.000Z	ahmadsaifan	linuxbo1	you still here?
+2007-08-13T16:33:00.000Z	linuxbo1	ahmadsaifan	13 letters  ?
+2007-08-13T16:33:00.000Z	linuxbo1	ahmadsaifan	i am back
+2007-08-13T16:34:00.000Z	linuxbo1	ahmadsaifan	no
+2007-08-13T16:35:00.000Z	linuxbo1	ahmadsaifan	you have tape that what happened ?
+2007-08-13T16:35:00.000Z	linuxbo1	ahmadsaifan	same error ?
+2007-08-13T16:35:00.000Z	linuxbo1	ahmadsaifan	no way
+2007-08-13T16:36:00.000Z	linuxbo1	ahmadsaifan	: "sudo iwconfig eth1 ESSID Saifan key  aaaaaaaaaa channel 6"
+2007-08-13T16:36:00.000Z	linuxbo1	ahmadsaifan	like that
+2007-08-13T16:36:00.000Z	linuxbo1	ahmadsaifan	tape it and show me copy and past
+2007-08-13T16:36:00.000Z	linuxbo1	ahmadsaifan	no !!!
+2007-08-13T16:38:00.000Z	linuxbo1	ahmadsaifan	 ok your key is wrong
+2007-08-13T16:38:00.000Z	linuxbo1	ahmadsaifan	 you cannot have 13 letters ?
+2007-08-13T16:39:00.000Z	linuxbo1	ahmadsaifan	aaaaa was for test 10 letters
+2007-08-13T16:40:00.000Z	linuxbo1	ahmadsaifan	key wep have either 10, 26 or 58 letters
+2007-08-13T16:40:00.000Z	linuxbo1	ahmadsaifan	you told me your have 13 letters your are sure ....
+2007-08-13T16:42:00.000Z	linuxbo1	ahmadsaifan	ok lol
+2007-08-13T16:44:00.000Z	linuxbo1	ahmadsaifan	 your key have you put it by yourself ?
+2007-08-13T16:44:00.000Z	linuxbo1	ahmadsaifan	you know how to configure your router ?
+2007-08-13T16:46:00.000Z	linuxbo1	ahmadsaifan	iwlist eth1 key
+2007-08-13T16:47:00.000Z	ahmadsaifan	linuxbo1	you want me to pastebin that?
+2007-08-13T16:50:00.000Z	ahmadsaifan	linuxbo1	i have no idea
+2007-08-13T16:50:00.000Z	linuxbo1	ahmadsaifan	because I use wep encryption ?
+2007-08-13T16:51:00.000Z	linuxbo1	ahmadsaifan	what do you see
+2007-08-13T05:01:00.000Z	linuxbo1	ahmadsaifan	give me iwlist eth1 scanning...
+2007-08-13T05:03:00.000Z	linuxbo1	ahmadsaifan	to see if your wireless card support wpa
+2007-08-13T05:03:00.000Z	linuxbo1	ahmadsaifan	do it
+2007-08-13T05:04:00.000Z	linuxbo1	ahmadsaifan	ok
+2007-08-13T05:08:00.000Z	linuxbo1	ahmadsaifan	give me the  your full sudo iwconfig eth1 ESSID Saifan key  aaaaaaaaaaaaa channel 6 with your key ....
+2007-08-13T05:08:00.000Z	linuxbo1	ahmadsaifan	I will try it .....
+2007-08-13T05:09:00.000Z	linuxbo1	ahmadsaifan	 can you give it to me
+2007-08-13T05:09:00.000Z	linuxbo1	ahmadsaifan	something wrong with your bad argument
+2007-08-13T05:09:00.000Z	ahmadsaifan	linuxbo1	same arguemtn
+2007-08-13T05:09:00.000Z	linuxbo1	ahmadsaifan	with your key
+2007-08-13T05:10:00.000Z	linuxbo1	ahmadsaifan	ok try with your key and change one letter

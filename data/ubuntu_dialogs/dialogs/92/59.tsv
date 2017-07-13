@@ -1,0 +1,92 @@
+2007-12-14T21:09:00.000Z	KinPumpkinKing		does anyone here use Avast? after updating, mine doesn't run... can anyone help? :p
+2007-12-14T21:09:00.000Z	boris_	KinPumpkinKing	why do you need avast ???
+2007-12-14T21:10:00.000Z	KinPumpkinKing	boris_	 I thought it'd be good to have? I don't know jack about Linux, so I figured there could be viruses from the internet...?
+2007-12-14T21:10:00.000Z	boris_	KinPumpkinKing	there are no viruses spreading in the wild, currently.
+2007-12-14T21:11:00.000Z	KinPumpkinKing	boris_	 oh, hmkay, so should I uninstall it? :p
+2007-12-14T21:11:00.000Z	boris_	KinPumpkinKing	and there was only one REAL virus for linux, and it failed to start because of a kernel bug.
+2007-12-14T21:12:00.000Z	KinPumpkinKing	boris_	 rofl... hmkay. What about firewalls, do I need those?
+2007-12-14T21:13:00.000Z	boris_	KinPumpkinKing	firewall is already installed, and should protect your computer even with default config
+2007-12-14T21:14:00.000Z	KinPumpkinKing	boris_	oh I see. Thank you very much
+2007-12-14T21:16:00.000Z	boris_	KinPumpkinKing	 you dont have to configure your firewall. it's already configured to shield you. if you dont believe me, test it with ShieldsUP
+2007-12-14T21:16:00.000Z	KinPumpkinKing	boris_	no, I trust you. ^
+2007-12-14T21:16:00.000Z	KinPumpkinKing	boris_	^^
+2007-12-14T21:19:00.000Z	KinPumpkinKing	boris_	one final question, is there a list of *online* games for Linux/Ubuntu anywhere? Every site I find lists only a few...
+2007-12-14T21:19:00.000Z	boris_	KinPumpkinKing	do you mean games you play with your browser ?
+2007-12-14T21:20:00.000Z	boris_	KinPumpkinKing	or the games you install on a PC ?
+2007-12-14T21:20:00.000Z	KinPumpkinKing	boris_	installation ones
+2007-12-14T21:21:00.000Z	boris_	KinPumpkinKing	http://gaming.gwos.org/         this site seems to be down currently
+2007-12-14T21:21:00.000Z	boris_	KinPumpkinKing	but i can tell you a few games, if you want
+2007-12-14T21:21:00.000Z	KinPumpkinKing	boris_	oh, I'd love that.
+2007-12-14T21:23:00.000Z	boris_	KinPumpkinKing	Tremulous, located in Ubuntu's repos, you can install it using the Add/Remove program, theres Wolfenstein Enemy Territory, and True Combat : Elite, ET's mod. Then there's Enemy Territory Quake Wars, a quite new game with a native linux client. And there is Urban Terror. Those are the games I play, but there are others. I can tell you more, if you want
+2007-12-14T21:24:00.000Z	KinPumpkinKing	boris_	those will get me started, thank you
+2007-12-14T21:24:00.000Z	boris_	KinPumpkinKing	I can give you websites for those games, if you want
+2007-12-14T21:25:00.000Z	boris_	KinPumpkinKing	but there arent many linux games, so dont expect gaming to be as good as in windows
+2007-12-14T21:25:00.000Z	boris_	KinPumpkinKing	 IMO, lack of games is only thing that keeps Linux non-widely used. But as linux gains more community, game makers will start producing games for it
+2007-12-14T21:26:00.000Z	KinPumpkinKing	boris_	I can't seem to find tremulous on Add/Remove
+2007-12-14T21:28:00.000Z	KinPumpkinKing	boris_	I wrote down what you said for reference. Could you give me the website for Enemy Territory?
+2007-12-14T21:28:00.000Z	boris_	KinPumpkinKing	open System>Administration>Software sources and make sure that Universe is enabled
+2007-12-14T21:29:00.000Z	boris_	KinPumpkinKing	Quake Wars or Wolfenstein ?
+2007-12-14T21:30:00.000Z	KinPumpkinKing	boris_	 uuuhhh.... like, what's the difference?
+2007-12-14T21:30:00.000Z	boris_	KinPumpkinKing	well, Quake Wars isn't free and is newer
+2007-12-14T21:30:00.000Z	KinPumpkinKing	boris_	hm, Wolfenstein, then
+2007-12-14T21:31:00.000Z	boris_	KinPumpkinKing	i dont think that Wolfenstein ET has website. but download link : http://games.softpedia.com/get/Freeware-Games/Return-To-Castle-Wolfenstein-Enemy-Territory-FREE-FULL-GAME.shtml
+2007-12-14T21:31:00.000Z	boris_	KinPumpkinKing	oh, wait a little
+2007-12-14T21:31:00.000Z	boris_	KinPumpkinKing	i gave you windows link
+2007-12-14T21:31:00.000Z	KinPumpkinKing	boris_	what is the Universe thing? Main server? It says "download from" and it gives me the option of our Brazillian server and main server... do you mean I should change to main?
+2007-12-14T21:32:00.000Z	boris_	KinPumpkinKing	no
+2007-12-14T21:33:00.000Z	boris_	KinPumpkinKing	http://www.fileshack.com/file.x?fid=2743    wolfenstein ET
+2007-12-14T21:34:00.000Z	boris_	KinPumpkinKing	once it's downloaded, open up terminal and type "./et-linux-2.60.x86.run"
+2007-12-14T21:34:00.000Z	boris_	KinPumpkinKing	and before that "chmod +x et-linux-2.60.x86.run"
+2007-12-14T21:35:00.000Z	boris_	KinPumpkinKing	BEFORE
+2007-12-14T21:36:00.000Z	KinPumpkinKing	boris_	hmkay, I wrote that down. Should I get packages from my brazilian server or main server?
+2007-12-14T21:36:00.000Z	boris_	KinPumpkinKing	brazilian server
+2007-12-14T21:36:00.000Z	boris_	KinPumpkinKing	dont worry about the terminal work. in the end, you'll see its quite simple
+2007-12-14T21:37:00.000Z	boris_	KinPumpkinKing	i can tell you a few terminal commands you'll probably need to know, if you want
+2007-12-14T21:38:00.000Z	KinPumpkinKing	boris_	yesh, I'd like that. I only know of dpkg -i packagename
+2007-12-14T21:38:00.000Z	boris_	KinPumpkinKing	join #ubuntu1 channel
+2007-12-14T21:47:00.000Z	KinPumpkinKing	boris_	I'm downloading Tremulous now... one hour to go. Thank you. Does it take over 64mb of video memory?
+2007-12-14T21:49:00.000Z	boris_	KinPumpkinKing	well, im not sure, but tremulous doesnt generally require a good computer
+2007-12-14T21:52:00.000Z	boris_	KinPumpkinKing	you only got 64 MB of video memory ?
+2007-12-14T21:52:00.000Z	KinPumpkinKing	boris_	 yeah... it's an over 5 years old computer.
+2007-12-14T21:52:00.000Z	boris_	KinPumpkinKing	i guess no fancy effects for you
+2007-12-14T21:52:00.000Z	KinPumpkinKing	boris_	 I've only come across one game that doesn't run on it, though
+2007-12-14T21:53:00.000Z	boris_	KinPumpkinKing	what game ? oh, and btw - ET quake wars wont run on it
+2007-12-14T21:53:00.000Z	KinPumpkinKing	boris_	hmkay, I'm not paying for anything anyway... :p~ The game is Archlord. It needs at least 128 video memory
+2007-12-14T21:55:00.000Z	boris_	KinPumpkinKing	well, what flavour of ubuntu you got ?
+2007-12-14T21:56:00.000Z	KinPumpkinKing	boris_	what do you mean? Version? If so, it's 7.10
+2007-12-14T21:56:00.000Z	boris_	KinPumpkinKing	do you have Ubuntu, Xubuntu or Kubuntu ?
+2007-12-14T21:56:00.000Z	KinPumpkinKing	boris_	 Ubuntu
+2007-12-14T21:56:00.000Z	boris_	KinPumpkinKing	then i guess it runs quite slowly ?
+2007-12-14T21:57:00.000Z	KinPumpkinKing	boris_	nope
+2007-12-14T21:57:00.000Z	boris_	KinPumpkinKing	how much RAM u got ?
+2007-12-14T21:57:00.000Z	KinPumpkinKing	boris_	I have 768mb ram memory
+2007-12-14T21:57:00.000Z	boris_	KinPumpkinKing	k
+2007-12-14T21:59:00.000Z	KinPumpkinKing	boris_	20%, lol...
+2007-12-14T21:59:00.000Z	boris_	KinPumpkinKing	what ?
+2007-12-14T21:59:00.000Z	KinPumpkinKing	boris_	Tremulous' download :(
+2007-12-14T22:00:00.000Z	boris_	KinPumpkinKing	ok
+2007-12-14T22:02:00.000Z	boris_	KinPumpkinKing	btw, did you install your graphics' card driver ?
+2007-12-14T22:02:00.000Z	KinPumpkinKing	boris_	I don't know, not manually, but Linux did detect the card driver...
+2007-12-14T22:02:00.000Z	KinPumpkinKing	boris_	the card, I mean. the driver, I dunno
+2007-12-14T22:03:00.000Z	KinPumpkinKing	boris_	but I played tuxcart on full speed, so I guess that means it's okay?
+2007-12-14T22:04:00.000Z	boris_	KinPumpkinKing	yes, probably
+2007-12-14T22:06:00.000Z	boris_	KinPumpkinKing	just to make sure : open System>Administration>Restricted driver manager
+2007-12-14T22:07:00.000Z	KinPumpkinKing	boris_	ya, okay, my NVIDIA acceleration driver is checked
+2007-12-14T22:07:00.000Z	KinPumpkinKing	boris_	I had to authorize that on install... so that's why I fugired it'd be fine
+2007-12-14T22:08:00.000Z	KinPumpkinKing	boris_	well, right after installation.
+2007-12-14T22:08:00.000Z	boris_	KinPumpkinKing	do you know how to use self complete function ?
+2007-12-14T22:08:00.000Z	KinPumpkinKing	boris_	I don't know what's that, so, no.
+2007-12-14T22:09:00.000Z	boris_	KinPumpkinKing	you can just type a part of my name, or filename, or whatever, and press TAB so it will autocomplete itself. type "bor" and press TAB
+2007-12-14T22:10:00.000Z	KinPumpkinKing	boris_	oooh, that I knew, cuz I have used mirc scripts before, ^^.
+2007-12-14T22:10:00.000Z	KinPumpkinKing	boris_	I thought you were talking about something in Ubuntu.
+2007-12-14T22:10:00.000Z	boris_	KinPumpkinKing	well, you can use same feature in gnome terminal, because you have to include special slashes when typing some filenames
+2007-12-14T22:11:00.000Z	KinPumpkinKing	boris_	my keyboard has those slashes. do you mean \ and /?
+2007-12-14T22:12:00.000Z	boris_	KinPumpkinKing	yes, but , for example, directory called 'Program Files'  will have to be typed 'Program\ Files/' in terminal, else it wont work
+2007-12-14T22:13:00.000Z	KinPumpkinKing	boris_	oh, I see.
+2007-12-14T22:13:00.000Z	boris_	KinPumpkinKing	this is most notable when using compatibility layers like WINE
+2007-12-14T22:13:00.000Z	KinPumpkinKing	boris_	oh, but I have windows on this computer as well, so I don't intend to use WINE so soon...
+2007-12-14T22:13:00.000Z	boris_	KinPumpkinKing	since it uses Windows' directory tree, which linux terminal doesnt support
+2007-12-14T22:14:00.000Z	KinPumpkinKing	boris_	since I like to play Gunz: the Duel and some other games.
+2007-12-14T22:14:00.000Z	KinPumpkinKing	boris_	and it's probably hard to configurate WINE for me.
+2007-12-14T22:14:00.000Z	boris_	KinPumpkinKing	im gonna play tremulous, bye
+2007-12-14T22:14:00.000Z	KinPumpkinKing	boris_	bai bai!

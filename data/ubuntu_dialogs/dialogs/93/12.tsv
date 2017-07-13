@@ -1,0 +1,93 @@
+2011-05-31T08:43:00.000Z	phong_		hi guys, is there winamp for linux?
+2011-05-31T08:43:00.000Z	phong_		or any similar type of winamp for linux?
+2011-05-31T08:43:00.000Z	phong_		how can i instlal that?
+2011-05-31T08:44:00.000Z	phong_		i really want something where it has internet radio
+2011-05-31T08:44:00.000Z	phong_		I know winamp for windows has Shoutcast radio
+2011-05-31T08:44:00.000Z	KM0201	phong_	do you have a link to a shoutcast?.. i'll try to test one.
+2011-05-31T08:45:00.000Z	KM0201	phong_	why on earth would i have winamp
+2011-05-31T08:45:00.000Z	phong_	KM0201	because in winamp. i just click on the radio channel
+2011-05-31T08:47:00.000Z	KM0201	phong_	i just clicked on a station and it worked.
+2011-05-31T08:49:00.000Z	KM0201	phong_	it's working fien for me
+2011-05-31T08:49:00.000Z	KM0201	phong_	possible i guess... sudo apt-get install ubuntu-restricted-extras
+2011-05-31T08:50:00.000Z	phong_	KM0201	198MB to download ;)
+2011-05-31T08:50:00.000Z	KM0201	phong_	ok.. you should have installed them during install.. to be truthful, but thats irrelevant now.
+2011-05-31T08:51:00.000Z	phong_	KM0201	is there any good things i need to know more about linux?
+2011-05-31T08:52:00.000Z	KM0201	phong_	probably plenty, but at this point, they'll fall on deaf ears to you, use the OS, as you encounter problems/concerns, ask questions.
+2011-05-31T08:54:00.000Z	KM0201	phong_	there might be some minor variations in "how" you do it, but yes, anything you can do in fedora, you can do in ubuntu.
+2011-05-31T08:56:00.000Z	KM0201	phong_	you can create a sudo user in fedora, but fedora does not use apt-get... it uses YUM...
+2011-05-31T08:56:00.000Z	phong_	KM0201	than it is different in commands
+2011-05-31T08:57:00.000Z	KM0201	phong_	did you not pay attention to what i said.. "How you do it, may be different.. but you should be able to do everything in ubuntu, you did in fedora"
+2011-05-31T09:02:00.000Z	phong_	KM0201	last question: does fedora has similar type of 'software center' ?
+2011-05-31T09:02:00.000Z	KM0201	phong_	if you have questionsa bout fedora, ask in #fedora.. to my knowledge, no it doesn't.
+2011-05-31T09:02:00.000Z	phong_	KM0201	thanks . oh well...i like ubuntu
+2011-05-31T09:05:00.000Z	phong_	KM0201	i can't really play shoutcast..it said i need  an x-shockwave\ flash
+2011-05-31T09:06:00.000Z	KM0201	phong_	sudo apt-get install flash-plugin  (I think.. lemme verify that)
+2011-05-31T09:06:00.000Z	KM0201	phong_	actually... the version of flash in the repos sucks... so hold on a sec..
+2011-05-31T09:07:00.000Z	KM0201	phong_	calm down.. go here, and download it...  http://get.adobe.com/flashplayer/completion/?installer=Flash_Player_10.3_for_other_Linux_%28.tar.gz%29
+2011-05-31T09:08:00.000Z	KM0201	phong_	just go to that link and download that .tar file
+2011-05-31T09:09:00.000Z	KM0201	phong_	did you download it.
+2011-05-31T09:09:00.000Z	phong_	KM0201	yes i did saved
+2011-05-31T09:10:00.000Z	KM0201	phong_	go to where ever you downloaded it, and extract it...
+2011-05-31T09:10:00.000Z	phong_	KM0201	done
+2011-05-31T09:10:00.000Z	phong_	KM0201	 next?
+2011-05-31T09:10:00.000Z	KM0201	phong_	now go to the folder you extracted to... and you should see "libflashplayer.so"
+2011-05-31T09:11:00.000Z	KM0201	phong_	right click that .so file, and choose copy
+2011-05-31T09:11:00.000Z	phong_	KM0201	done, next?
+2011-05-31T09:11:00.000Z	KM0201	phong_	now, go to your home folder, and at the top, click "View/Show Hidden Files
+2011-05-31T09:12:00.000Z	phong_	KM0201	yeap..next
+2011-05-31T09:12:00.000Z	KM0201	phong_	go down to .mozilla and open that folder
+2011-05-31T09:12:00.000Z	phong_	KM0201	ok
+2011-05-31T09:12:00.000Z	KM0201	phong_	inside .mozilla should be a folder called firefox
+2011-05-31T09:13:00.000Z	phong_	KM0201	done
+2011-05-31T09:13:00.000Z	KM0201	phong_	now inside .mozilla/firefox   right click, create new folder, and create a folder named "plugins"
+2011-05-31T09:13:00.000Z	KM0201	phong_	after you do that.. paste the libflashplayer.so inside the plugins folder
+2011-05-31T09:13:00.000Z	phong_	KM0201	done, and plaste insdie that polder?
+2011-05-31T09:14:00.000Z	KM0201	phong_	yup
+2011-05-31T09:14:00.000Z	KM0201	phong_	then close, and restart firefox
+2011-05-31T09:14:00.000Z	phong_	KM0201	why does it work like a charm?
+2011-05-31T09:15:00.000Z	phong_	KM0201	thanks
+2011-05-31T09:15:00.000Z	phong_	KM0201	u're the best
+2011-05-31T09:15:00.000Z	KM0201	phong_	cuz i'm awesome..lol
+2011-05-31T09:15:00.000Z	phong_	KM0201	yes master
+2011-05-31T09:15:00.000Z	phong_	KM0201	just like magic
+2011-05-31T09:23:00.000Z	KM0201	phong_	there's ways... to put it in Wine I believe (not sure how successful you'll be)... try to use Linux alternatives (open office, libre office, abiword, gnumeric, etc.)
+2011-05-31T09:24:00.000Z	phong_	KM0201	sorry i dont drink wine
+2011-05-31T09:24:00.000Z	phong_	KM0201	what does it has to do with wine
+2011-06-05T08:23:00.000Z	phong_	KM0201	hi brother
+2011-06-05T08:23:00.000Z	phong_	KM0201	i got it work by a link that show me
+2011-06-05T08:23:00.000Z	phong_	KM0201	 no need internet at all
+2011-06-05T08:23:00.000Z	KM0201	phong_	good, but i didn't show it.. someone else did.
+2011-06-05T08:24:00.000Z	phong_	KM0201	i got my Tenda w311u working now...works like a charm
+2011-06-05T08:24:00.000Z	phong_	KM0201	all i have to do is add blacklist  xxxxxxx 3 lines of codes
+2011-06-05T08:25:00.000Z	phong_	KM0201	i'll try to figure out the belkin
+2011-06-05T08:25:00.000Z	phong_	KM0201	can my pc connect 2 usb wirless?
+2011-06-05T08:25:00.000Z	KM0201	phong_	possibly, but i'd leave well enough alone
+2011-06-05T08:27:00.000Z	phong_	KM0201	lol both works now
+2011-06-05T08:28:00.000Z	KM0201	phong_	that means they likely use the same driver
+2011-06-05T08:28:00.000Z	phong_	KM0201	u meant i don't need to install driver for each brand ?
+2011-06-05T08:28:00.000Z	phong_	KM0201	nicely..both are working ;)
+2011-06-05T08:33:00.000Z	phong_	KM0201	i just want to tell you that i really love ubuntu
+2011-06-05T08:33:00.000Z	phong_	KM0201	and i want to let you know, i hate Mac..fuking mac
+2011-06-05T08:33:00.000Z	KM0201	phong_	lol, well i'm glad
+2011-06-05T08:35:00.000Z	phong_	KM0201	i notice that Ubuntu runs faster then windows
+2011-06-05T08:36:00.000Z	KM0201	phong_	typically...
+2011-06-05T08:37:00.000Z	phong_	KM0201	 is it good idea to instal WINE?
+2011-06-05T08:50:00.000Z	KM0201	phong_	it can usb boot.
+2011-06-05T08:50:00.000Z	phong_	KM0201	really how?
+2011-06-05T08:50:00.000Z	phong_	KM0201	cause right now i boot from CD
+2011-06-05T08:50:00.000Z	KM0201	phong_	how?
+2011-06-05T09:01:00.000Z	phong_	KM0201	how to install 7z
+2011-06-05T09:02:00.000Z	phong_	KM0201	nevermind i got it
+2011-06-05T09:04:00.000Z	phong_	KM0201	u there?
+2011-06-05T09:05:00.000Z	phong_	KM0201	UNetbootin, i am confused about "Space used to preserve files across reboots (Ubuntu Only)" what is this?
+2011-06-07T08:50:00.000Z	KM0201	phong_	lsusb should show usb devices
+2011-06-07T08:52:00.000Z	KM0201	phong_	lsusb
+2011-06-07T08:52:00.000Z	phong_	KM0201	i did it and what?
+2011-06-07T08:53:00.000Z	KM0201	phong_	do you see your devices?
+2011-06-07T08:55:00.000Z	KM0201	phong_	sorry, i'm not really able to understand your question.
+2011-06-07T08:55:00.000Z	phong_	KM0201	i got it.. i can see it with browsing thru /media ;)
+2011-06-07T08:55:00.000Z	phong_	KM0201	thanks
+2011-06-07T08:55:00.000Z	KM0201	phong_	ok.
+2011-06-07T08:55:00.000Z	phong_	KM0201	1 last thing,  how can i do copy file to  my home desktop
+2011-06-07T08:56:00.000Z	KM0201	phong_	i think i have a PDF that has a bazillion terminal commands in it.. might be handy for you... there's also several "wallpapers" out there that have them.
+2011-06-07T08:59:00.000Z	KM0201	phong_	http://galpotha.wordpress.com/2009/04/06/linuxunix-terminal-commands-quick-reference-wallpapers/

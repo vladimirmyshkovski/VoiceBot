@@ -1,0 +1,94 @@
+2011-01-01T18:01:00.000Z	geirha	sresu_	It's already started, unless you specifically stopped it.
+2011-01-01T18:02:00.000Z	geirha	sresu_	''service cron status''
+2011-01-01T18:02:00.000Z	geirha	sresu_	Most likely your script fails for some reason.
+2011-01-01T18:03:00.000Z	sresu_	geirha	Yeah, its running - cron start/running, process 1067 Same what ps aux | grep cron gives
+2011-01-01T18:04:00.000Z	geirha	sresu_	If you install the bsd-mailx package, cron should mail you with the output of the script.
+2011-01-01T18:04:00.000Z	geirha	sresu_	You can read those mails by running the mail command.
+2011-01-01T18:07:00.000Z	geirha	sresu_	You want it to run every minute from 4 am to 5 am?
+2011-01-01T18:07:00.000Z	sresu_	geirha	That was just set as parameter to see if it atleat works. I would change it if it works
+2011-01-01T18:08:00.000Z	sresu_	geirha	I don't find any mistake in the script nor in crontab. Is it?
+2011-01-01T18:08:00.000Z	geirha	sresu_	Well, either install the bsd-mailx package, or put at the end of the command:    >/tmp/output 2>&1
+2011-01-01T18:08:00.000Z	geirha	sresu_	Then look at /tmp/output to see what's wrong.
+2011-01-01T18:09:00.000Z	sresu_	geirha	I don't want mail of the ouput.
+2011-01-01T18:09:00.000Z	sresu_	geirha	Hold on
+2011-01-01T18:10:00.000Z	sresu_	geirha	The file/folder /tmp/output doesn't exist
+2011-01-01T18:10:00.000Z	geirha	sresu_	* * * * * root /etc/gadmin-rsync/scripts/gadmin-rsync-Ubuntu.sh >/tmp/output 2>&1
+2011-01-01T18:10:00.000Z	sresu_	geirha	Oh sorry. Where do you want me to add it
+2011-01-01T18:11:00.000Z	geirha	sresu_	Then wait a couple of minutes for cron to detect the new job and run it.
+2011-01-01T18:11:00.000Z	sresu_	geirha	You want me to add the line you suggested?
+2011-01-01T18:11:00.000Z	geirha	sresu_	Yes, for testing.
+2011-01-01T18:11:00.000Z	sresu_	geirha	 * * * * * root /etc/gadmin-rsync/scripts/gadmin-rsync-Ubuntu.sh >/tmp/output 2>&1? Instead of the old ones? There is no time set for it all *
+2011-01-01T18:13:00.000Z	sresu_	geirha	I added that line at the end of all the lines. Waiting for it to detect
+2011-01-01T18:15:00.000Z	geirha	sresu_	Most likely it's unable to find one or more command because cron has a different PATH env.
+2011-01-01T18:16:00.000Z	geirha	sresu_	I have to go, hope you figure it out.
+2011-01-01T18:16:00.000Z	sresu_	geirha	Well, different path as in>
+2011-01-01T18:17:00.000Z	sresu_	geirha	Ah.. no, I don't think I would be able to.. I tried to do that early this morning. Then though of asking here
+2011-01-01T18:18:00.000Z	sresu_	geirha	Well, thanks anyways. Well just what is the different path you are saying
+2011-01-01T18:31:00.000Z	geirha	sresu_	I'm back.   run '' env >/tmp/envoutput '' as a cron-job and compare that with the output of env run in an interactive shell.
+2011-01-01T18:33:00.000Z	sresu_	geirha	I'm adding  env >/tmp/envoutput to crontab. Hold on.
+2011-01-01T18:35:00.000Z	sresu_	geirha	I'm not sure how to compare that
+2011-01-01T18:35:00.000Z	geirha	sresu_	Well, mainly just look at what PATH is in each one. You'll find it's different.
+2011-01-01T18:36:00.000Z	sresu_	geirha	As in? I'm not able to get you properly ...
+2011-01-01T18:37:00.000Z	sresu_	geirha	I can see this in crontab thou - PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+2011-01-01T18:37:00.000Z	sresu_	geirha	You said "compare that with the output of env run in an interactive shell" .. how do I do that?
+2011-01-01T18:37:00.000Z	geirha	sresu_	Ah, then that's the PATH your script run from cron will have.
+2011-01-01T18:37:00.000Z	geirha	sresu_	So, did /tmp/output have any error messages?
+2011-01-01T18:38:00.000Z	sresu_	geirha	The file/folder /tmp/output doesn't exist
+2011-01-01T18:38:00.000Z	sresu_	geirha	even after adding the line you said
+2011-01-01T18:38:00.000Z	geirha	sresu_	Hm. So the job never even runs, that's odd.
+2011-01-01T18:39:00.000Z	sresu_	geirha	Hold on
+2011-01-01T18:39:00.000Z	sresu_	geirha	But i found envoutput file in tmp
+2011-01-01T18:39:00.000Z	sresu_	geirha	You want  me to pastebin it?
+2011-01-01T18:39:00.000Z	geirha	sresu_	No, /tmp/output would be useful though.
+2011-01-01T18:40:00.000Z	sresu_	geirha	Didn't you just now suggested about evoutput something?
+2011-01-01T18:40:00.000Z	sresu_	geirha	"compare that with the output of env run"
+2011-01-01T18:40:00.000Z	geirha	sresu_	That was just to give you an idea what environment your script will have when run from cron.
+2011-01-01T18:41:00.000Z	sresu_	geirha	So, now what?
+2011-01-01T18:42:00.000Z	geirha	sresu_	So your env job ran, but not the other job. Are you sure you have the right number of fields on that line?
+2011-01-01T18:43:00.000Z	sresu_	geirha	crontab - http://pastebin.com/Lty9b50C
+2011-01-01T18:43:00.000Z	geirha	sresu_	Uhm. The last line is wrong. There's no timespec or user
+2011-01-01T18:45:00.000Z	geirha	sresu_	Just remove that line. It's probably causing a syntax error and makes cron not run any of those jobs or something.
+2011-01-01T18:45:00.000Z	sresu_	geirha	gobbe: Pkay last lines is not as per seven fields. Okay. But that what geirha suggested to add.. Is'nt it?
+2011-01-01T18:45:00.000Z	geirha	sresu_	It was, but I expected you to add the 6 first fields yourself.
+2011-01-01T18:45:00.000Z	sresu_	geirha	" env >/tmp/envoutput" right?
+2011-01-01T18:46:00.000Z	sresu_	geirha	Sorry, I didn't realize that. But wondering how that work though
+2011-01-01T18:46:00.000Z	geirha	sresu_	I have no idea how or why that would work.
+2011-01-01T18:47:00.000Z	sresu_	geirha	Its fine now? - http://pastebin.com/N4hfEfP4
+2011-01-01T18:49:00.000Z	geirha	sresu_	Yes, that's right. After a couple of minutes, that job should run for the first time, and /tmp/output should be created
+2011-01-01T18:49:00.000Z	sresu_	geirha	I see output file in tmp now
+2011-01-01T18:50:00.000Z	sresu_	geirha	I saw output file created now.. after making that change
+2011-01-01T18:50:00.000Z	geirha	sresu_	Right, and what does it contain?
+2011-01-01T18:50:00.000Z	sresu_	geirha	It contains what the cript should run actually
+2011-01-01T18:51:00.000Z	sresu_	geirha	 I mean the output of the script
+2011-01-01T18:51:00.000Z	geirha	sresu_	Ok, good. Then all you need to do is set the correct date and time for it to run.
+2011-01-01T18:52:00.000Z	sresu_	geirha	Well, have you used gadmin-rsync?
+2011-01-01T18:52:00.000Z	geirha	sresu_	No, never heard of it.
+2011-01-01T18:53:00.000Z	geirha	sresu_	Oh, it's a gtk+ frontend for rsync. It doesn't make sense to run that from cron, use rsync instead.
+2011-01-01T18:53:00.000Z	sresu_	geirha	Well anyways, I want that script to run every 4 hours of uptime
+2011-01-01T18:53:00.000Z	sresu_	geirha	So what should be done for that?
+2011-01-01T18:54:00.000Z	geirha	sresu_	0 */4 * * *
+2011-01-01T18:54:00.000Z	sresu_	geirha	How a step value?
+2011-01-01T18:54:00.000Z	geirha	sresu_	''man 5 crontab''
+2011-01-01T18:55:00.000Z	sresu_	geirha	Pk. I'll see that
+2011-01-01T18:56:00.000Z	sresu_	geirha	Hold on please
+2011-01-01T18:56:00.000Z	geirha	sresu_	The GUI will not pop up on your desktop though ... not when run from cron.
+2011-01-01T18:57:00.000Z	sresu_	geirha	Yeah, forget the GUI. I just needed the script to run :)
+2011-01-01T18:57:00.000Z	geirha	sresu_	Ah, the script doesn't have GUI, I see. I got confused.
+2011-01-01T18:58:00.000Z	sresu_	geirha	Yes:)
+2011-01-01T18:58:00.000Z	sresu_	geirha	But still. One moment
+2011-01-01T18:59:00.000Z	sresu_	geirha	Don't you think it should be * 4 1 * * ?
+2011-01-01T18:59:00.000Z	geirha	sresu_	That will run it, at every minute between 4 am to 5 am on the first day of each month.
+2011-01-01T19:00:00.000Z	geirha	sresu_	0 */4 * * *
+2011-01-01T19:00:00.000Z	sresu_	geirha	How did you make out between 4am to 5am?
+2011-01-01T19:00:00.000Z	sresu_	geirha	 Okay, I'm making that change for 4hours uptime
+2011-01-01T19:01:00.000Z	geirha	sresu_	The first field says at what minute to run. * means 0-59, i.e. every minute.
+2011-01-01T19:03:00.000Z	sresu_	geirha	Well, just for testing I'd change it to every 1 minute of uptime. Then it would be like what?
+2011-01-01T19:03:00.000Z	geirha	sresu_	The one I showed you will run at 00:00, 04:00, 08:00, 12:00, 16:00 and 20:00
+2011-01-01T19:03:00.000Z	sresu_	geirha	Yes, I got that
+2011-01-01T19:04:00.000Z	geirha	sresu_	I just use * * * * * for testing.
+2011-01-01T19:04:00.000Z	sresu_	geirha	Ah-ok
+2011-01-01T19:04:00.000Z	sresu_	geirha	Anyways, thanks a lot :)
+2011-01-01T19:08:00.000Z	sresu_	geirha	What is timespec debugging you tried?
+2011-01-01T19:09:00.000Z	geirha	sresu_	Hm?
+2011-01-01T19:10:00.000Z	sresu_	geirha	timespec debugging ?
+2011-01-01T19:10:00.000Z	sresu_	geirha	Oh na. nothing. Got it now

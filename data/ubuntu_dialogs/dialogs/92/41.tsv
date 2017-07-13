@@ -1,0 +1,92 @@
+2009-06-16T12:22:00.000Z	Neconide		What handles sound in Ubuntu
+2009-06-16T12:22:00.000Z	Neconide		rhythmbox?
+2009-06-16T12:22:00.000Z	ectospasm	Neconide	what do you mean "sound"?  pulseaudio does most of the sound on a stock system.
+2009-06-16T12:23:00.000Z	ectospasm	Neconide	that's probably pulseaudio
+2009-06-16T12:23:00.000Z	Neconide	ectospasm	is there a way to reset it from terminal without rebooting
+2009-06-16T12:38:00.000Z	Neconide	ectospasm	I need to create a new partition. lol
+2009-06-16T12:23:00.000Z	ectospasm	Neconide	try this as your user (not root):  ps -ef | grep pulseaudio
+2009-06-16T12:23:00.000Z	ectospasm	Neconide	find the running process, and kill it
+2009-06-16T12:24:00.000Z	Neconide	ectospasm	neconide  6344  6341  0 Jun13 ?        00:00:00 /usr/lib/pulseaudio/pulse/gconf-helper
+2009-06-16T12:24:00.000Z	Neconide	ectospasm	(there's more than that) but which one is the PID
+2009-06-16T12:25:00.000Z	ectospasm	Neconide	look for this line:  /usr/bin/pulseaudio --start
+2009-06-16T12:25:00.000Z	Neconide	ectospasm	not there
+2009-06-16T12:26:00.000Z	Neconide	ectospasm	neconide@infected:~$ ps -ef | grep pulseaudio                          neconide  6341     1  1 Jun13 ?        00:48:25 /usr/bin/pulseaudio -D --log-target=syslog                    neconide  6344  6341  0 Jun13 ?        00:00:00 /usr/lib/pulseaudio/pulse/gconf-helper            neconide  9233  9198  0 03:24 pts/2    00:00:00 grep pulseaudio             neconide@infected:~$
+2009-06-16T12:26:00.000Z	ectospasm	Neconide	what version of Ubuntu are you using?
+2009-06-16T12:26:00.000Z	Neconide	ectospasm	8.10
+2009-06-16T12:27:00.000Z	ectospasm	Neconide	Aha!
+2009-06-16T12:27:00.000Z	Neconide	ectospasm	I suppose I might
+2009-06-16T12:27:00.000Z	Neconide	ectospasm	you have an x86 processor?
+2009-06-16T12:27:00.000Z	Neconide	ectospasm	because ive been having TONS of bugs due to my amd
+2009-06-16T12:27:00.000Z	ectospasm	Neconide	x86_64, but in 8.10 I was running i386
+2009-06-16T12:28:00.000Z	ectospasm	Neconide	what sorts of bugs?
+2009-06-16T12:28:00.000Z	Neconide	ectospasm	when upgrading does it just update the sys files or does it need to reconstruct the OS -- wiping all data?
+2009-06-16T12:28:00.000Z	ectospasm	Neconide	that depends
+2009-06-16T12:28:00.000Z	Neconide	ectospasm	random terminal/firefox/pidgin bugs
+2009-06-16T12:28:00.000Z	ectospasm	Neconide	does your data and all other software exist on one partition?
+2009-06-16T12:29:00.000Z	Neconide	ectospasm	I have winblowsXP and ubuntu 8.10 on the same partition
+2009-06-16T12:29:00.000Z	ectospasm	Neconide	wubi?
+2009-06-16T12:29:00.000Z	Neconide	ectospasm	yep
+2009-06-16T12:30:00.000Z	Neconide	ectospasm	was having trouble switching bootup to cdrom
+2009-06-16T12:30:00.000Z	ectospasm	Neconide	well, then...  I don't know how to help you except maybe move all your data to another device, then wipe and reinstall
+2009-06-16T12:31:00.000Z	Neconide	ectospasm	well I'd love to do that but I'm too lazy. Is it possible to create a _new_ partition within ubuntu? I want to install slackware
+2009-06-16T12:31:00.000Z	Neconide	ectospasm	I have more than enough HDD space to hold it
+2009-06-16T12:32:00.000Z	ectospasm	Neconide	not unless you have a chunk of free space
+2009-06-16T12:32:00.000Z	ectospasm	Neconide	so make another wubi part, and go!
+2009-06-16T12:32:00.000Z	Neconide	ectospasm	Well I have 700GB free in this partition, would 'Unallocated' be free HDD space or is that a partition within itself
+2009-06-16T12:34:00.000Z	Neconide	ectospasm	gparted doesn't allow the creation of new partitions, only partition tables.
+2009-06-16T12:34:00.000Z	ectospasm	Neconide	explain to me the difference.
+2009-06-16T12:35:00.000Z	Neconide	ectospasm	A partition table is your table of partitions. I.E. /dev/sda1 /dev/sda2 they all exist within the partition table.
+2009-06-16T12:35:00.000Z	ectospasm	Neconide	and how do you add partitions?  By editing the partition table!
+2009-06-16T12:35:00.000Z	Neconide	ectospasm	right but gparted only lets you create _new_ partition tables
+2009-06-16T12:36:00.000Z	ectospasm	Neconide	gparted *should* allow you to resize partitions, IIRC
+2009-06-16T12:36:00.000Z	Neconide	ectospasm	it's a relatively easy task in windows vista but seems to be just as hard in winXP as it is in Ubuntu
+2009-06-16T12:37:00.000Z	Neconide	ectospasm	resize, but not create. I don't have any partitions that aren't in use
+2009-06-16T12:37:00.000Z	ectospasm	Neconide	so boot the LiveCD and use gparted from that
+2009-06-16T12:37:00.000Z	ectospasm	Neconide	make sure you back up all your data BEFORE doing any of this!
+2009-06-16T12:38:00.000Z	Neconide	ectospasm	I don't think you're getting it. gparted doesn't allow you to in any way -create a new partition- / and none of the partitions i have aren't in literal use
+2009-06-16T12:38:00.000Z	ectospasm	Neconide	I didn't think that was your problem
+2009-06-16T12:39:00.000Z	ectospasm	Neconide	you need to resize the existing ones first, no?
+2009-06-16T12:39:00.000Z	Neconide	ectospasm	O/T, you're quite the multi-tasker, you seem to be helping a handful of people. lol
+2009-06-16T12:40:00.000Z	Neconide	ectospasm	right but I have more than enough memory in Unallocated to support an operating system
+2009-06-16T12:40:00.000Z	Neconide	ectospasm	the only problem is creating a new partition
+2009-06-16T12:40:00.000Z	ectospasm	Neconide	so use your tool of choice, fdisk, cfdisk (prolly easier), etc.
+2009-06-16T12:40:00.000Z	Neconide	ectospasm	alright I'll read up on cfdisk. thanks :D
+2009-06-16T12:47:00.000Z	Neconide	ectospasm	 FATAL ERROR: Cannot open disk drive - Press any key to exit cfdisk
+2009-06-16T12:47:00.000Z	Neconide	ectospasm	I used cfdisk /dev/sda (all my partitions begin with /dev/sda)
+2009-06-16T12:47:00.000Z	ectospasm	Neconide	did you say "cfdisk /dev/for/hd?
+2009-06-16T12:47:00.000Z	ectospasm	Neconide	sometimes cfdisk has problems
+2009-06-16T12:47:00.000Z	ectospasm	Neconide	try fdisk
+2009-06-16T12:48:00.000Z	Neconide	ectospasm	alright, thanks.
+2009-06-16T12:48:00.000Z	Neconide	ectospasm	neconide@infected:~$ fdisk /dev/sda Unable to open /dev/sda
+2009-06-16T12:48:00.000Z	Neconide	ectospasm	could it have anything to do with wubi?
+2009-06-16T12:48:00.000Z	ectospasm	Neconide	does /dev/sda exist?
+2009-06-16T12:49:00.000Z	Neconide	ectospasm	it's what my partitions are on
+2009-06-16T12:49:00.000Z	ectospasm	Neconide	"ls /dev/sd*" <- Does /dev/sda exist?
+2009-06-16T12:49:00.000Z	Neconide	ectospasm	yes // /dev/sda  /dev/sda1  /dev/sda2  /dev/sda3  /dev/sda4  /dev/sda5
+2009-06-16T12:50:00.000Z	Neconide	ectospasm	I feel like an idiot, i forgot to sudo
+2009-06-16T12:50:00.000Z	Neconide	ectospasm	sudo cfdisk /dev/sda
+2009-06-16T12:51:00.000Z	Neconide	ectospasm	ah
+2009-06-16T12:52:00.000Z	Neconide	ectospasm	go with vista if you have <4gb RAM
+2009-06-16T12:52:00.000Z	Neconide	ectospasm	otherwise its slow as fuck
+2009-06-16T12:52:00.000Z	Neconide	ectospasm	yeah lol
+2009-06-16T12:52:00.000Z	Neconide	ectospasm	it's 3am. that's my excuse. :P
+2009-06-16T12:53:00.000Z	ectospasm	Neconide	same here, but I don't claim it
+2009-06-16T12:53:00.000Z	Neconide	ectospasm	XP pro sp3 is good. I prefer derek's modded sp3 /w vista vg black skin
+2009-06-16T12:54:00.000Z	ectospasm	Neconide	it comes with home.  If the school doesn't give it to me I'm gonna STEAL it.
+2009-06-16T12:54:00.000Z	Neconide	ectospasm	:O stealing is bad you're going to hell
+2009-06-16T12:55:00.000Z	Neconide	ectospasm	jk
+2009-06-16T12:55:00.000Z	ectospasm	Neconide	So?
+2009-06-16T12:55:00.000Z	Neconide	ectospasm	are you christian?
+2009-06-16T12:55:00.000Z	ectospasm	Neconide	Roman Catholic
+2009-06-16T12:55:00.000Z	Neconide	ectospasm	Ah so you believe in God and such?
+2009-06-16T12:56:00.000Z	ectospasm	Neconide	I try to
+2009-06-16T12:56:00.000Z	ectospasm	Neconide	and this conversation is getting offtopic
+2009-06-16T12:56:00.000Z	Neconide	ectospasm	I, myself, am an atheist. Though I respect the beliefs of others, and I just want to see if you're going to rage on me for it :X
+2009-06-16T12:57:00.000Z	ectospasm	Neconide	nope, atheists have a religion like any other, so I respect that.
+2009-06-16T12:57:00.000Z	Neconide	ectospasm	good man.
+2009-06-16T12:57:00.000Z	ectospasm	Neconide	I'm not even convinced you're wrong...
+2009-06-16T12:57:00.000Z	Neconide	ectospasm	I was raised roman catholic but gave up on it when I saw the more logical side of it (no disrespect intended)
+2009-06-16T12:58:00.000Z	Neconide	ectospasm	but yeah this is getting a little too off-topic :X
+2009-06-16T12:59:00.000Z	ectospasm	Neconide	pm?
+2009-06-16T13:00:00.000Z	ectospasm	Neconide	don't worry, I am NOT going to preach.
+2009-06-16T13:03:00.000Z	Neconide	ectospasm	you afk? PM lol

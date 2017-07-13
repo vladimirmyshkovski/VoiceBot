@@ -1,0 +1,92 @@
+2011-04-17T07:24:00.000Z	jorell		hi
+2011-04-17T07:24:00.000Z	jorell		is there where I can get help with ubuntu
+2011-04-17T07:25:00.000Z	edbian	jorell	You're here :)_
+2011-04-17T07:26:00.000Z	edbian	jorell	Just ask here.  No need to PM
+2011-04-17T07:32:00.000Z	edbian	jorell	Well yes.  But only if your hardware supports it.  I looked once and learned my hardware does not support it acting as an AP
+2011-04-17T07:37:00.000Z	edbian	jorell	what is your chipset?
+2011-04-17T07:40:00.000Z	edbian	jorell	Do what shcherbak said.  If you want to find the chipset look at the output of sudo lspci.  The chipset of my wifi card is BCM4306
+2011-04-17T07:42:00.000Z	edbian	jorell	If the list is overwhelming you can pastebin it (paste.ubuntu.com)
+2011-04-17T07:43:00.000Z	jorell	edbian	thanks
+2011-04-17T07:44:00.000Z	jorell	edbian	I see the wireless, but it doesn't say a chipset
+2011-04-17T07:45:00.000Z	edbian	jorell	What does it say for that line?
+2011-04-17T07:45:00.000Z	edbian	jorell	Your chipset is AR%001X
+2011-04-17T07:46:00.000Z	edbian	jorell	yeah that
+2011-04-17T07:47:00.000Z	edbian	jorell	Yeah.  Or run this: sudo iwconfig wlan0 mode master
+2011-04-17T07:48:00.000Z	edbian	jorell	Your device does not support master mode. (not surprising most don't)
+2011-04-17T07:48:00.000Z	edbian	jorell	just get a router :)
+2011-04-17T07:48:00.000Z	jorell	edbian	I have an engenius long range client bridge/AP
+2011-04-17T07:48:00.000Z	edbian	jorell	IDK what that is.
+2011-04-17T07:49:00.000Z	edbian	jorell	a wifi ap ?
+2011-04-17T07:49:00.000Z	edbian	jorell	Why do you need your wifi card to share the signal then?  Just use that AP
+2011-04-17T07:50:00.000Z	edbian	jorell	haha.  Does it have a web interface?  (do you have a typical home router with wifi ?)
+2011-04-17T07:50:00.000Z	jorell	edbian	negative
+2011-04-17T07:51:00.000Z	jorell	edbian	at least, I don't think so
+2011-04-17T07:51:00.000Z	jorell	edbian	it doesn't have multiple ports
+2011-04-17T07:51:00.000Z	edbian	jorell	does it have 1 port?
+2011-04-17T07:51:00.000Z	jorell	edbian	it has 1 port
+2011-04-17T07:52:00.000Z	edbian	jorell	plug the industry AP into your router.  connect the computer to the router (through wifi or a cable) check the router's dhcp table.  look for the address of the industry AP.  Put that IP into your firefox address bar.
+2011-04-17T07:53:00.000Z	jorell	edbian	oh, I see
+2011-04-17T07:53:00.000Z	edbian	jorell	:)
+2011-04-17T07:56:00.000Z	jorell	edbian	where is the dhcp table?
+2011-04-17T07:57:00.000Z	edbian	jorell	It's a list the router keeps of all the addresses it's given out.  THe AP should have an entry in the list.
+2011-04-17T07:57:00.000Z	jorell	edbian	yes, but... I can't find the lost
+2011-04-17T07:58:00.000Z	jorell	edbian	list*
+2011-04-17T07:58:00.000Z	edbian	jorell	Are you logged into the router?
+2011-04-17T07:58:00.000Z	jorell	edbian	yes, I am
+2011-04-17T07:58:00.000Z	edbian	jorell	It might also be called a DHCP table or a client table
+2011-04-17T07:58:00.000Z	edbian	jorell	What brand of router?
+2011-04-17T07:58:00.000Z	jorell	edbian	netgear
+2011-04-17T07:59:00.000Z	edbian	jorell	attached devices ?
+2011-04-17T07:59:00.000Z	jorell	edbian	what do you mean?
+2011-04-17T08:00:00.000Z	jorell	edbian	desktop, ps3, and now the wireless ap
+2011-04-17T08:00:00.000Z	edbian	jorell	I'm guessing what to click based on forum posts I found:  http://forum1.netgear.com/showthread.php?t=62237
+2011-04-17T08:01:00.000Z	edbian	jorell	Perhaps this is helpful to you: http://documentation.netgear.com/dgfv338/enu/202-10161-01/DGFV338_RM-08-17.html
+2011-04-17T08:11:00.000Z	jorell	edbian	I have searched every link on the netgear file
+2011-04-17T08:11:00.000Z	jorell	edbian	and nothing says dhcp log
+2011-04-17T08:12:00.000Z	edbian	jorell	You're back :)
+2011-04-17T08:12:00.000Z	jorell	edbian	yup
+2011-04-17T08:13:00.000Z	edbian	jorell	there is definitely a way to find the DHCP clients connected to your network.  I suppose we could just guess.  What is your private address.  What is the router's private address?
+2011-04-17T08:14:00.000Z	jorell	edbian	192.168.0.1
+2011-04-17T08:14:00.000Z	edbian	jorell	that's the router I presume.  What is your machine's IP ?
+2011-04-17T08:15:00.000Z	edbian	jorell	Are you guessing?  run ip addr in the terminal
+2011-04-17T08:17:00.000Z	edbian	jorell	... your router told you the IP of your computer?
+2011-04-17T08:17:00.000Z	jorell	edbian	 Address Reservation Table
+2011-04-17T08:17:00.000Z	edbian	jorell	That is the thing we were looking for :)  That's equivalent to the DHCP table.
+2011-04-17T08:18:00.000Z	edbian	jorell	what is the address for your industrial AP ?
+2011-04-17T08:18:00.000Z	jorell	edbian	it only has my tower and the ps3
+2011-04-17T08:18:00.000Z	jorell	edbian	it doesn't have the AP
+2011-04-17T08:18:00.000Z	edbian	jorell	Connect the industial ap to it?
+2011-04-17T08:18:00.000Z	jorell	edbian	it is
+2011-04-17T08:18:00.000Z	jorell	edbian	;)
+2011-04-17T08:18:00.000Z	edbian	jorell	mmmm... Something is up with this thing.
+2011-04-17T08:19:00.000Z	jorell	edbian	so it would appear
+2011-04-17T08:19:00.000Z	edbian	jorell	I assumed it would connect to the router when plugged in.  Unfortunately I have to idea how to use it so we're stuck again.  What brand / model is it?
+2011-04-17T08:19:00.000Z	jorell	edbian	the lan button in front is lit, signifying it's connected....
+2011-04-17T08:19:00.000Z	edbian	jorell	Perhaps it isn't DHCP.
+2011-04-17T08:19:00.000Z	jorell	edbian	the ap or the lan router
+2011-04-17T08:19:00.000Z	edbian	jorell	the AP
+2011-04-17T08:20:00.000Z	jorell	edbian	engenius senao long range wireless client bridge/ap
+2011-04-17T08:21:00.000Z	edbian	jorell	I'm just googling for a manual for the thing...
+2011-04-17T08:21:00.000Z	jorell	edbian	easier searched than found
+2011-04-17T08:21:00.000Z	edbian	jorell	what's the model number?  ECBXXXX ?
+2011-04-17T08:21:00.000Z	edbian	jorell	so far yes
+2011-04-17T08:22:00.000Z	edbian	jorell	FYI  This has NOTHING to do with Ubuntu.  I think the ops are giving us the benefit of the doubt here ;)
+2011-04-17T08:23:00.000Z	jorell	edbian	yeah
+2011-04-17T08:23:00.000Z	edbian	jorell	I can't find it
+2011-04-17T08:23:00.000Z	jorell	edbian	I was thinking I should take this to my boss on monday
+2011-04-17T08:23:00.000Z	edbian	jorell	good call
+2011-04-17T08:23:00.000Z	jorell	edbian	my original question was only about the ubuntu/adapter used as a desktop AP
+2011-04-17T08:24:00.000Z	jorell	edbian	which we determined was infeasible since it can't go into master mode
+2011-04-17T08:24:00.000Z	jorell	edbian	but, thanks. For help with both. I really appreciate it :)
+2011-04-17T08:24:00.000Z	edbian	jorell	I know.  I wanted to get the AP to work if we could but we couldn't.  :(
+2011-04-17T08:25:00.000Z	jorell	edbian	sure couldn't. It could be broken
+2011-04-17T08:26:00.000Z	edbian	jorell	Hopefully not.  It looks like a big ticket item
+2011-04-17T08:26:00.000Z	jorell	edbian	m'eh. Got it from work
+2011-04-17T08:26:00.000Z	edbian	jorell	pardon?
+2011-04-17T08:26:00.000Z	jorell	edbian	I work in a tech office
+2011-04-17T08:26:00.000Z	edbian	jorell	oh, got it 'from' work
+2011-04-17T08:26:00.000Z	jorell	edbian	well, i'm a work study at the I.T. dept of my university
+2011-04-17T08:27:00.000Z	edbian	jorell	neat :)  Good luck with it!
+2011-04-17T08:27:00.000Z	jorell	edbian	I'll ask my boss if he knows, or if it's defective
+2011-04-17T08:27:00.000Z	jorell	edbian	easy to replace
+2011-04-17T08:27:00.000Z	edbian	jorell	:)

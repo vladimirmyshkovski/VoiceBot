@@ -1,0 +1,92 @@
+2005-04-05T09:18:00.000Z	keyhack		It's annoying how the fglrx cannot work with composite, and ati works with composite but its extremely slow
+2005-04-05T09:19:00.000Z	kotatsu	keyhack	it's fast if you're using a < 9500 ati card
+2005-04-05T09:19:00.000Z	keyhack	kotatsu	great, newer card slower results
+2005-04-05T09:19:00.000Z	kotatsu	keyhack	I have a 9100 in my workstation at work and I get accelerated xrender
+2005-04-05T09:19:00.000Z	keyhack	kotatsu	regardless, it's annoying how it doesnt work properly
+2005-04-05T09:19:00.000Z	kotatsu	keyhack	yup... ati can't/won't release the specs necessary to write acceleration into the FOSS driver
+2005-04-05T09:20:00.000Z	kotatsu	keyhack	yup, that's why I don't use the ati propriety driver... still too many issues
+2005-04-05T09:20:00.000Z	keyhack	kotatsu	fglrx works great for me
+2005-04-05T09:20:00.000Z	keyhack	kotatsu	minus the fact that composite won't work
+2005-04-05T09:21:00.000Z	kotatsu	keyhack	not for me... no proper compositing support and it doesn't play nice with a framebuffer console
+2005-04-05T09:21:00.000Z	kotatsu	keyhack	it's possible it's a problem with radeonfb, but since radeonfb works just fine with the FOSS ati driver I'm sure it's probably fglrx
+2005-04-05T09:21:00.000Z	keyhack	kotatsu	I haven't seen any issues but the composite problem
+2005-04-05T09:22:00.000Z	kotatsu	keyhack	use radeonfb?
+2005-04-05T09:22:00.000Z	keyhack	kotatsu	what?
+2005-04-05T09:22:00.000Z	kotatsu	keyhack	do you use a framebuffer console?
+2005-04-05T09:22:00.000Z	keyhack	kotatsu	what is that
+2005-04-05T09:23:00.000Z	kotatsu	keyhack	ah, ok =) a framebuffer console allows you to run your text console in supported vesa modes
+2005-04-05T09:23:00.000Z	kotatsu	keyhack	in the case of radeonfb (the radeon framebuffer kernel module) you can also run in nonstandard modes... my text console behind X is 1280x800
+2005-04-05T09:23:00.000Z	keyhack	kotatsu	oh, sounds cool
+2005-04-05T09:23:00.000Z	kotatsu	keyhack	if I use fglrx, I can't switch to my console without getting screen corruption when I switch back to X... and it can only be solved by restarting the x server
+2005-04-05T09:24:00.000Z	kotatsu	keyhack	of course, it's still an improvement over the old fglrx, where switching down to a framebuffer console would lock up the computer
+2005-04-05T09:24:00.000Z	keyhack	kotatsu	well I didnt know you can make the text console outside X run at a different resolution
+2005-04-05T09:25:00.000Z	kotatsu	keyhack	give it a try... if you're using the ubuntu stock kernel, just add "radeonfb" to /etc/mkinitrd/modules and dpkg-reconfigure (kernel version)
+2005-04-05T09:25:00.000Z	kotatsu	keyhack	on reboot you'll get a high-res console
+2005-04-05T09:27:00.000Z	keyhack	kotatsu	dpkg-reconfigure linux-i386 ?
+2005-04-05T09:28:00.000Z	kotatsu	keyhack	nope, you'll have to reconfigure the package that actually contains the kernel... for me, it's "linux-image-2.6.10-5-686"
+2005-04-05T09:28:00.000Z	keyhack	kotatsu	even so, this does not help me get Composite working lol
+2005-04-05T09:28:00.000Z	kotatsu	keyhack	nope hehe
+2005-04-05T09:28:00.000Z	kotatsu	keyhack	only way to get compositing on ati right now is to use "radeon" or "ati" in your xorg.conf file
+2005-04-05T09:29:00.000Z	keyhack	kotatsu	and sacrafice OpenGL support, and still have slow UI
+2005-04-05T09:29:00.000Z	kotatsu	keyhack	you lose DRI but the ui isn't very slow
+2005-04-05T09:29:00.000Z	kotatsu	keyhack	you don't have acceleration is all
+2005-04-05T09:29:00.000Z	kotatsu	keyhack	2d stuffs work fine
+2005-04-05T09:29:00.000Z	keyhack	kotatsu	Two other people here are work are using ATI as their driver, and Composite is extremely slow
+2005-04-05T09:30:00.000Z	keyhack	kotatsu	Let me change it, and see for myself, I'll bbiab
+2005-04-05T09:30:00.000Z	kotatsu	keyhack	depends
+2005-04-05T09:30:00.000Z	keyhack	kotatsu	brb
+2005-04-05T09:30:00.000Z	kotatsu	keyhack	xcompmgr is buggy and mainly a tech demo
+2005-04-05T09:40:00.000Z	keyhack	kotatsu	however, using the generic "ati", all the composite, shadow, translucency stuff is rather slow
+2005-04-05T09:40:00.000Z	kotatsu	keyhack	transparency isn't accelerated (yet?) and the default shadow settings are pretty ridiculous
+2005-04-05T09:41:00.000Z	kotatsu	keyhack	if you just run composite without any special effects it makes the UI feel very smooth, since you gain the xfixes/xdamage/xcomposite stuff
+2005-04-05T09:41:00.000Z	kotatsu	keyhack	no more trails when you move windows over each other, etc.
+2005-04-05T09:43:00.000Z	keyhack	kotatsu	meh, disabling the shadow stuff did help some
+2005-04-05T09:43:00.000Z	keyhack	kotatsu	but when is this supposed to get better?
+2005-04-05T09:43:00.000Z	kotatsu	keyhack	when ATI releases specs for their 9500+ cards *shrug*
+2005-04-05T09:43:00.000Z	kotatsu	keyhack	maybe never
+2005-04-05T09:44:00.000Z	kotatsu	keyhack	overall I find unaccelerated X with compositing to be more responsive than DRI with fglrx... but then, I don't use OpenGL for anything
+2005-04-05T09:44:00.000Z	kotatsu	keyhack	try these settings for composite and see if it's better
+2005-04-05T09:44:00.000Z	keyhack	kotatsu	not from this experience, having the translucency for X has definitely slowed it down
+2005-04-05T09:44:00.000Z	kotatsu	keyhack	$ xcompmgr -c -S -r 5 -o 0.8 -t -4 -l -8
+2005-04-05T09:45:00.000Z	kotatsu	keyhack	yeah, there's no acceleration for that at all yet... don't use it
+2005-04-05T09:45:00.000Z	kotatsu	keyhack	if you want full (experimental) acceleration for render, get an nvidia card
+2005-04-05T09:45:00.000Z	keyhack	kotatsu	Yeah, let me slap a nvidia card right into my laptop
+2005-04-05T09:45:00.000Z	kotatsu	keyhack	=)
+2005-04-05T09:46:00.000Z	kotatsu	keyhack	same situation for me
+2005-04-05T09:46:00.000Z	keyhack	kotatsu	xcompmgr not found
+2005-04-05T09:46:00.000Z	kotatsu	keyhack	I'm mainly talking about using "bare" xcompmgr vs. DRI fglrx
+2005-04-05T09:46:00.000Z	kotatsu	keyhack	using compositing without any transparency or shadowing makes the UI more responsive
+2005-04-05T09:47:00.000Z	keyhack	kotatsu	But no OpenGL support
+2005-04-05T09:47:00.000Z	kotatsu	keyhack	err... how were you getting shadows and transparency before then?
+2005-04-05T09:47:00.000Z	keyhack	kotatsu	using the KDE control center
+2005-04-05T09:47:00.000Z	kotatsu	keyhack	yup, if you need OGL your only choice is fglrx
+2005-04-05T09:47:00.000Z	kotatsu	keyhack	oh, didn't know you were using KDE
+2005-04-05T09:47:00.000Z	kotatsu	keyhack	not sure what KDE offers as far as adjustments, but you might apt-get install xcompmgr
+2005-04-05T09:47:00.000Z	kotatsu	keyhack	it offers a few options you can tweak
+2005-04-05T09:48:00.000Z	kotatsu	keyhack	if KDE's window manager already has a compositing manager built in it will interfere though... not sure if you can turn it off or what
+2005-04-05T09:48:00.000Z	kotatsu	keyhack	yeah heh... is there an option to turn it off?
+2005-04-05T09:49:00.000Z	keyhack	kotatsu	yeah, I did
+2005-04-05T09:49:00.000Z	keyhack	kotatsu	ok, I give you that the menus appear to be more responsive
+2005-04-05T09:50:00.000Z	kotatsu	keyhack	and no funky redraw artifacts =P
+2005-04-05T09:50:00.000Z	keyhack	kotatsu	but I think I'll prob stick to fglrx
+2005-04-05T09:50:00.000Z	kotatsu	keyhack	entirely your choice =)
+2005-04-05T09:51:00.000Z	kotatsu	keyhack	I don't use openGL for anything so I have no need to use the fglrx driver
+2005-04-05T09:52:00.000Z	kotatsu	keyhack	that, and I like having a working framebuffer console... but then most people probably don't use their console at all
+2005-04-05T09:53:00.000Z	keyhack	kotatsu	got mine working fine
+2005-04-05T09:53:00.000Z	kotatsu	keyhack	with fglrx?
+2005-04-05T09:53:00.000Z	keyhack	kotatsu	but I also switched the driver in Xorg from fglrx to ati I think before I tested it out
+2005-04-05T09:53:00.000Z	kotatsu	keyhack	my screen corrupts when I switch to a console then back
+2005-04-05T09:54:00.000Z	kotatsu	keyhack	when I'm using fgrlx
+2005-04-05T09:54:00.000Z	keyhack	kotatsu	yeah, I can try it for you
+2005-04-05T09:54:00.000Z	keyhack	kotatsu	because I dont think I'm sticking with the ati driver
+2005-04-05T09:54:00.000Z	kotatsu	keyhack	let me know how it goes hehe
+2005-04-05T09:54:00.000Z	keyhack	kotatsu	I eventually want to be able to play games in Linux (the only thing keeping me using a Windows partition)
+2005-04-05T09:54:00.000Z	kotatsu	keyhack	it's entirely possible it's some random quirk with my laptop... ati doesn't officially say that you can use fglrx with laptop chipsets
+2005-04-05T09:55:00.000Z	kotatsu	keyhack	ditto, but eventually != now =P
+2005-04-05T09:55:00.000Z	keyhack	kotatsu	well, when I get a game to install I will
+2005-04-05T09:55:00.000Z	kotatsu	keyhack	I figure by the time I can acceptably play games on linux, I'll be using OGL on my desktop anyway so that luminocity/metacity can do its thing
+2005-04-05T09:55:00.000Z	keyhack	kotatsu	I'm waiting to get Far Cry tomorrow
+2005-04-05T09:55:00.000Z	kotatsu	keyhack	btw, nvidia is what you want to use for gaming in linux... ati performance is abysmal even with fglrx
+2005-04-05T09:56:00.000Z	keyhack	kotatsu	then it looks like I have to keep Windows around then after all
+2005-04-05T09:56:00.000Z	kotatsu	keyhack	yup. I keep a windows partition too, gaming just isn't at the level in linux that it is in windows yet
+2005-04-05T09:57:00.000Z	keyhack	kotatsu	let me reboot to try out the radeonfb

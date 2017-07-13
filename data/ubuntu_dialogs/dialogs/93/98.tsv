@@ -1,0 +1,93 @@
+2005-04-22T07:30:00.000Z	frank		Anyone know how to get alsa working?   Failed to construct test pipeline for 'ALSA - Advanced Linux Sound Architecture'
+2005-04-22T07:30:00.000Z	crimsun	frank	is esd running?
+2005-04-22T07:31:00.000Z	crimsun	frank	System>Preferences>Multimedia Systems Selector>Default Sink>ESD>Test
+2005-04-22T07:31:00.000Z	frank	crimsun	the esd and oss tests work
+2005-04-22T07:33:00.000Z	frank	crimsun	do you know how I could fix this?
+2005-04-22T07:52:00.000Z	crimsun	frank	sorry, I was busy
+2005-04-22T07:52:00.000Z	crimsun	frank	ok, so did that test succeed?
+2005-04-22T07:52:00.000Z	frank	crimsun	the esd and oss tests work
+2005-04-22T07:52:00.000Z	crimsun	frank	ok, and was your problem with xmms originally?
+2005-04-22T07:54:00.000Z	frank	crimsun	I never used xmms. Its for getting a game to run and apparently it does if it uses alsa instead of oss
+2005-04-22T07:54:00.000Z	frank	crimsun	xmms works
+2005-04-22T07:56:00.000Z	crimsun	frank	ok, so your game requires direct alsa access?
+2005-04-22T07:56:00.000Z	crimsun	frank	if so, simply killing esd before starting your game should suffice.
+2005-04-22T07:57:00.000Z	frank	crimsun	Isaw that posted elsewhere but it doesn't work. And I actually run the game inside a chroot.
+2005-04-22T07:58:00.000Z	frank	crimsun	shouldn't I be supposed to be able to select alsa in the multimedia switcher?
+2005-04-22T07:59:00.000Z	crimsun	frank	yes, does it not work?
+2005-04-22T08:00:00.000Z	frank	crimsun	no I get a Failed to construct test pipeline for 'ALSA - Advanced Linux Sound Architecture'
+2005-04-22T08:05:00.000Z	crimsun	frank	ah, interesting.
+2005-04-22T08:06:00.000Z	crimsun	frank	ok, please paste the output of the following commands to http://pastebin.com: lsmod, lspci -v, lspnp, dmesg, cat /proc/asound/modules, cat /proc/asound/cards
+2005-04-22T08:06:00.000Z	crimsun	frank	(lspci if your sound card is pci, lspnp if it's isa)
+2005-04-22T08:07:00.000Z	frank	crimsun	should I do all this only outside the chroot?
+2005-04-22T08:08:00.000Z	crimsun	frank	wherever you're experiencing the problem
+2005-04-22T08:08:00.000Z	frank	crimsun	ok
+2005-04-22T08:17:00.000Z	crimsun	frank	ping me when the url's up
+2005-04-22T08:18:00.000Z	frank	crimsun	I sent what you asked?
+2005-04-22T08:18:00.000Z	crimsun	frank	sorry, I didn't see the url
+2005-04-22T08:19:00.000Z	frank	crimsun	http://pastebin.com/269821
+2005-04-22T08:19:00.000Z	crimsun	frank	thanks, sec
+2005-04-22T08:22:00.000Z	crimsun	frank	ok, and amixer output?
+2005-04-22T08:23:00.000Z	frank	crimsun	amixer in there
+2005-04-22T08:24:00.000Z	crimsun	frank	thanks, sec
+2005-04-22T08:26:00.000Z	crimsun	frank	interesting. Nothing in there leads me to believe ALSA _shouldn't_ be working. Does aplay -Dplughw:0,0 foo.wav work?
+2005-04-22T08:26:00.000Z	crimsun	frank	(after you kill esd)
+2005-04-22T08:29:00.000Z	frank	crimsun	it works
+2005-04-22T08:29:00.000Z	crimsun	frank	ok, so your issue is related to the chroot->alsa stuff, which I'm not terribly familiar with
+2005-04-22T08:30:00.000Z	crimsun	frank	I believe it's related to the use of hw:0,0 directly
+2005-04-22T08:30:00.000Z	crimsun	frank	will have to investigate, I don't know offhand
+2005-04-22T08:31:00.000Z	frank	crimsun	snd_seq_device  is what the game complains about
+2005-04-22T08:31:00.000Z	crimsun	frank	hmm, that the sequencer stuff
+2005-04-22T08:32:00.000Z	frank	crimsun	and I tried a Point2Play hardware test outside the chroot too with the same failure
+2005-04-22T08:33:00.000Z	crimsun	frank	sudo modprobe snd-seq
+2005-04-22T08:33:00.000Z	frank	crimsun	then what?
+2005-04-22T08:34:00.000Z	crimsun	frank	try again
+2005-04-22T08:36:00.000Z	frank	crimsun	ALSA lib seq_hw.c:462:(snd_seq_hw_open) SNDRV_SEQ_IOCTL_PVERSION failed: Invalid argument is what cedega gives me
+2005-04-22T08:39:00.000Z	crimsun	frank	ok, I'm not familiar with that one, and nothing's turning up in mantis
+2005-04-22T08:40:00.000Z	frank	crimsun	what's mantis?
+2005-04-22T08:40:00.000Z	crimsun	frank	it's ALSA's bug tracking system
+2005-04-22T08:40:00.000Z	frank	crimsun	ko
+2005-04-22T08:42:00.000Z	frank	crimsun	would uninstalling alsa, esd, oss then installing alsa again help?
+2005-04-22T08:42:00.000Z	crimsun	frank	no
+2005-04-22T10:01:00.000Z	frank	crimsun	Thanks alot for your help a while ago. I hope I'll be able to figure out a solution
+2005-04-22T10:04:00.000Z	crimsun	frank	np, g'luck
+2005-04-23T09:14:00.000Z	crimsun	frank	what's the problem with via integrateD?
+2005-04-23T09:16:00.000Z	frank	crimsun	you remember my problem last night? I think its via specific
+2005-04-23T09:16:00.000Z	crimsun	frank	I'm sorry, but I don't. I haven't slept, and I have a horrid memory.
+2005-04-23T09:16:00.000Z	crimsun	frank	refresh, please?
+2005-04-23T09:16:00.000Z	frank	crimsun	see https://bugzilla.ubuntu.com/show_bug.cgi?id=6303  https://bugzilla.ubuntu.com/show_bug.cgi?id=8529
+2005-04-23T09:17:00.000Z	frank	crimsun	My alsa is not working for a game through cedega
+2005-04-23T09:18:00.000Z	frank	crimsun	aplay works however but I think I need a  /dev/snd/seq  which I dont have
+2005-04-23T09:19:00.000Z	crimsun	frank	I'm not sure what the latter bug report has to do with sound...
+2005-04-23T09:19:00.000Z	crimsun	frank	the former has been resolved upstream; did you toggle the iec958 capture monitor?
+2005-04-23T09:20:00.000Z	frank	crimsun	 could you tell a command to  reload alsa without rebooting to test changes to  /etc/modutils/alsa-base   ?
+2005-04-23T09:21:00.000Z	crimsun	frank	sudo /etc/init.d/alsa force-reload
+2005-04-23T09:21:00.000Z	crimsun	frank	changes should not be made to /etc/modutils/alsa-base but to /etc/modprobe.d/alsa-base
+2005-04-23T09:21:00.000Z	frank	crimsun	 I don't have a iec958 capture monitor in alsamixer
+2005-04-23T09:22:00.000Z	frank	crimsun	yeah I knew that
+2005-04-23T09:24:00.000Z	frank	crimsun	And wasn't able to fix the problem and I think I don't have the exact same hardware  (bug is for rev 50 and I have rev 60)  The second bug is relevant because what  am missing is /dev/snd/seq
+2005-04-23T09:24:00.000Z	crimsun	frank	the bug affects all cmi9761s
+2005-04-23T09:24:00.000Z	crimsun	frank	regardless of revision
+2005-04-23T09:25:00.000Z	crimsun	frank	the second bug takes me to a mozilla-firefox issue
+2005-04-23T09:26:00.000Z	frank	crimsun	 https://bugzilla.ubuntu.com/show_bug.cgi?id=8529
+2005-04-23T09:28:00.000Z	crimsun	frank	that issue seems to have been worked around...
+2005-04-23T09:30:00.000Z	frank	crimsun	but the fix dosen't work for me
+2005-04-23T09:30:00.000Z	crimsun	frank	that's because that's completely different from your issue
+2005-04-23T09:31:00.000Z	crimsun	frank	your issue is that the wrong parameters are being passed, not that the node doesn't exist
+2005-04-23T09:31:00.000Z	frank	crimsun	I'm outa my league here
+2005-04-23T09:32:00.000Z	crimsun	frank	if you have a _lot_ of RAM (i.e., >= 768 MB), try an i386 live cd
+2005-04-23T09:32:00.000Z	frank	crimsun	the module snd_seq_device is loaded but I don't have a /dev/snd/seq   device
+2005-04-23T09:32:00.000Z	frank	crimsun	I had thought of that... I'll try it
+2005-04-23T09:38:00.000Z	frank	crimsun	last question: do you think I should have a /dev/snd/seq  ?
+2005-04-23T09:39:00.000Z	crimsun	frank	if you sudo modprobe snd-seq, you should be fine.
+2005-04-25T06:46:00.000Z	crimsun	frank	/usr/share/applications/*.desktop
+2005-04-25T06:47:00.000Z	crimsun	frank	/usr/share/pixmaps/*  for the icons, usually
+2005-04-25T06:47:00.000Z	frank	crimsun	thanks. menu-editor is still buggy
+2005-04-26T08:19:00.000Z	frank	crimsun	maybe you can help:   Open Office 1.1.3 used to run but now it segfaults. I don't know how I broke it
+2005-04-26T08:20:00.000Z	crimsun	frank	sorry, not an OO.o person. Have you checked bugzilla?
+2005-04-26T08:20:00.000Z	frank	crimsun	yeah and I did'nt find anything
+2005-04-26T08:49:00.000Z	crimsun	frank	no, you munged the syntax
+2005-04-26T08:49:00.000Z	crimsun	frank	sorry
+2005-04-29T08:37:00.000Z	crimsun	frank	/var/log/dmesg ?
+2005-04-29T08:37:00.000Z	crimsun	frank	or do you want all the lsb output, too?
+2005-05-03T09:52:00.000Z	frank	crimsun	where do I submit a bug report for a universe package? (streamtuner)
+2005-05-03T09:52:00.000Z	crimsun	frank	launchpad.ubuntu.com/malone

@@ -1,0 +1,92 @@
+2010-11-16T20:59:00.000Z	hero1900		my usb broadband does not work it appears and i configure well but cant connect any help?? my usb is Qualcomm
+2010-11-16T21:00:00.000Z	sosaited	hero1900	You are trying with Network Manager > Mobile Broadband?. Which Modem do you have?. And which Ubuntu?
+2010-11-16T21:02:00.000Z	sosaited	hero1900	Is it a CDMA/EVDO connection, or GSM ?
+2010-11-16T21:02:00.000Z	sosaited	hero1900	Try by unchecking "Mobile Broadband" by right clicking on the network applet icon, and then connect
+2010-11-16T21:03:00.000Z	sosaited	hero1900	You mean it is disabled/Grayed out?. Did you create a new connection and filled all necessary details?
+2010-11-16T21:04:00.000Z	sosaited	hero1900	Can't you tell what modem it is by looking up its make and stuff on the modem itself?
+2010-11-16T21:09:00.000Z	sosaited	hero1900	There is no company name on the modem?
+2010-11-16T21:17:00.000Z	sosaited	hero1900	Do you have wvdial installed?
+2010-11-16T21:18:00.000Z	hero1900	sosaited	nope should i??
+2010-11-16T21:19:00.000Z	sosaited	hero1900	If you don't have internet access on that machine, either look for wvdial deb file in the cd, or download it on some other machine and copy it there.
+2010-11-16T21:20:00.000Z	hero1900	sosaited	okey already installing so what to do after that?
+2010-11-16T21:21:00.000Z	hero1900	sosaited	is gnome ppp okey
+2010-11-16T21:37:00.000Z	sosaited	hero1900	You can edit the file by "sudo gedit /etc/wvdial.conf" If you are having problem
+2010-11-16T21:25:00.000Z	sosaited	hero1900	gnome-ppp is fine if it can detect your modem
+2010-11-16T21:28:00.000Z	sosaited	hero1900	Can you post the contents of file "/etc/wvdial.conf?
+2010-11-16T21:28:00.000Z	hero1900	sosaited	i think it is ttyUSB02  since i use dmesg as i read in a topic in the net is what i did right???
+2010-11-16T21:30:00.000Z	hero1900	sosaited	http://paste.ubuntu.com/533082/
+2010-11-16T21:30:00.000Z	sosaited	hero1900	It could be that. Sometimes few modems are detected as usb mass storage devices, or detected as both storage device and the modem.
+2010-11-16T21:32:00.000Z	hero1900	sosaited	mmmmm so how we can know from the cofiguration file it tool the ttySL0 which i think is my regular modem
+2010-11-16T21:34:00.000Z	sosaited	hero1900	Can you edit that to : http://paste.ubuntu.com/533084/ While replacing "apn" with your apn, and phone number, username and password as well
+2010-11-16T21:34:00.000Z	sosaited	hero1900	And then try by "sudo wvdial".
+2010-11-16T21:34:00.000Z	sosaited	hero1900	Wait wait. You have a regular modem installed as well?
+2010-11-16T21:34:00.000Z	hero1900	sosaited	yup since i cant see from the gui where i can change those so i do it from the configuration file thx
+2010-11-16T21:35:00.000Z	sosaited	hero1900	Then wvdial made the file for that.
+2010-11-16T21:35:00.000Z	sosaited	hero1900	Just a sec
+2010-11-16T21:37:00.000Z	sosaited	hero1900	Try with http://paste.ubuntu.com/533087/ this. And edit the modem to ttyUSB02 if 01 doesn't work.
+2010-11-16T21:39:00.000Z	hero1900	sosaited	okey finish what to do next
+2010-11-16T21:39:00.000Z	sosaited	hero1900	"sudo wvdial"
+2010-11-16T21:42:00.000Z	hero1900	sosaited	ops cant no such file or directory in /dev/ttyUSB01 also for 02 maybe used by another application??? cant been access even with sudo i can see them in the terminal
+2010-11-16T21:43:00.000Z	sosaited	hero1900	Did you tried with USB1 and USB2?
+2010-11-16T21:43:00.000Z	hero1900	sosaited	oh my mistake it is ttyUSB1 and ttyUSB2
+2010-11-16T21:44:00.000Z	hero1900	sosaited	wait connecting
+2010-11-16T21:44:00.000Z	hero1900	sosaited	here what i get http://paste.ubuntu.com/533097/
+2010-11-16T21:44:00.000Z	sosaited	hero1900	If it shows some weird symbols and then some IP address, that means its connected.
+2010-11-16T21:46:00.000Z	sosaited	hero1900	The new config I sent you, http://paste.ubuntu.com/533087/, didn't have the +Fclass command. As I said, wvdial had configured for your PCI modem
+2010-11-16T21:46:00.000Z	sosaited	hero1900	No need. You just need the apn, username/psw and phone number to dial
+2010-11-16T21:47:00.000Z	sosaited	hero1900	I don't know about HSDPA, but for EDGE based GSM, it is either *99# or *99***1#
+2010-11-16T21:48:00.000Z	sosaited	hero1900	You might want to confirm the APN and number if you are not sure from your provider or their website
+2010-11-16T22:16:00.000Z	sosaited	hero1900	Oh wait,. gnome-ppp will have the same problem. It will detect your internal modem. Is there no way to disable that from the BIOS setup?
+2010-11-16T21:54:00.000Z	sosaited	hero1900	Any luck?
+2010-11-16T21:54:00.000Z	hero1900	sosaited	http://paste.ubuntu.com/533100/ this show that ttyUSB2 is the one right??
+2010-11-16T21:55:00.000Z	sosaited	hero1900	Probably, but not definitely. All USB modems install more than one tty
+2010-11-16T21:55:00.000Z	hero1900	sosaited	here what i get when connect using ttyUSB2 http://paste.ubuntu.com/533104/
+2010-11-16T21:56:00.000Z	hero1900	sosaited	i use ttyUSB0 and 1 and 2 and not working
+2010-11-16T21:58:00.000Z	sosaited	hero1900	Did you also try with ttyUSB0? You will also get could not get information from serial port, if some other program is trying to access the modem.
+2010-11-16T21:58:00.000Z	sosaited	hero1900	Make sure that Network Manager's connection entry is deleted and it is disabled
+2010-11-16T22:00:00.000Z	hero1900	sosaited	for ttyUSB0 i got diffrent erorr look http://paste.ubuntu.com/533108/
+2010-11-16T22:01:00.000Z	sosaited	hero1900	Which Ubuntu version are you using?. Up till 10.04, I could not use Network Manager to connect to my PCMCIA 3G CDMA modem (Which is connected to a PCI-PCMCIA adapter on my desktop). And I had to use gnome-ppp
+2010-11-16T22:02:00.000Z	hero1900	sosaited	i have laptop hp dv6 with ubuntu 10.10
+2010-11-16T22:04:00.000Z	sosaited	hero1900	That hints that modem is indeed at USB2 but is being used by some other program. BTW remove the "Init2 = ATQ0 V1 E1 S0=0 &C1 &D2"  and rename Init3 to 2 and then try
+2010-11-16T22:07:00.000Z	hero1900	sosaited	for IP how to make it dynamic ?
+2010-11-16T22:07:00.000Z	sosaited	hero1900	Did you tried by removing that Init2?. Didn't work?
+2010-11-16T22:07:00.000Z	hero1900	sosaited	it does not
+2010-11-16T22:08:00.000Z	sosaited	hero1900	That is normal AT commands for most GSM modems. I added that as your wvdialconf ran for your internal modem, otherwise it would have added the necessary init commands
+2010-11-16T22:08:00.000Z	sosaited	hero1900	Which provider are you using?
+2010-11-16T22:11:00.000Z	sosaited	hero1900	I would suggest you to remove the internal modem and run wvdialconf so it generates AT commands specific and supported by your modem. OR install gnome-ppp and see if it detects your modem.
+2010-11-16T22:12:00.000Z	hero1900	sosaited	but in gnome-ppp cant specify the username and password or anything
+2010-11-16T22:13:00.000Z	sosaited	hero1900	Run it as sudo. "sudo gnome-ppp"
+2010-11-16T22:21:00.000Z	hero1900	sosaited	i think it is the same problem as in the default network manager try and try and try without success
+2010-11-16T22:21:00.000Z	sosaited	hero1900	as I said, it will still detect your internal modem . Can you do "sudo modprobe usbserial vendor=0x05c6 product=0x9000" and then try? make sure that the vendor and product ids are the same as you got from lsusb
+2010-11-16T22:22:00.000Z	sosaited	hero1900	Not necessarily. I couldn't get mine connected in Network Manager in 10.04, but could with gnome-ppp/wvdial.
+2010-11-16T22:24:00.000Z	hero1900	sosaited	what if uninstall my modem drive? since it is closed source
+2010-11-16T22:25:00.000Z	sosaited	hero1900	Modem drive?
+2010-11-16T22:25:00.000Z	hero1900	sosaited	connected finally
+2010-11-16T22:26:00.000Z	sosaited	hero1900	How?.
+2010-11-16T22:27:00.000Z	sosaited	hero1900	LMAO. So Network manager was still trying to access the modem port.
+2010-11-16T22:28:00.000Z	hero1900	sosaited	also is there any way to disable a device from being identify by the kernel i forget that i am in linux
+2010-11-16T22:28:00.000Z	hero1900	sosaited	thx so much for your help
+2010-11-16T22:29:00.000Z	sosaited	hero1900	Congrats. And my pleasure.
+2010-11-16T22:29:00.000Z	hero1900	sosaited	really appreciated thx  i learn so much today
+2010-11-16T22:30:00.000Z	sosaited	hero1900	You first need to find the loaded module : sudo modprobe -l | grep "modem" OR sudo modprobe -l | grep "usb"
+2010-11-16T22:31:00.000Z	hero1900	sosaited	aha i understand this and read about it little how to add and remove modules so -l means to be unloaded???
+2010-11-16T22:32:00.000Z	sosaited	hero1900	-l is to list the device, grep shows you just the lines with the word "modem" in them.
+2010-11-16T22:32:00.000Z	sosaited	hero1900	sudo modprobe -r" is to remove
+2010-11-16T22:34:00.000Z	hero1900	sosaited	 oh thx so much  can i ask you something it is really good when i face a problem then i can learn oh to tweek and handle things in linux but is there any source that make it little easier for me like even books that i can read
+2010-11-16T22:36:00.000Z	sosaited	hero1900	If you want to learn to fix stuff that you will face, the best thing to do is just ask and search for that specific problem on Internet. If you want to learn about Linux/Ubuntu in general, there are plenty of online guides and ebooks even. But I can't name anything specific as I have personally never tried them.
+2010-11-16T22:37:00.000Z	sosaited	hero1900	You will slowly learn the basic commands and how stuff works in linux as you use it more and more, and run into problems :).
+2010-11-16T22:37:00.000Z	sosaited	hero1900	No problem at all.
+2010-11-16T22:41:00.000Z	hero1900	sosaited	have little problem hehehehe my ubuntu does not recognize that connection so cant use it what to do?
+2010-11-16T22:43:00.000Z	sosaited	hero1900	are you using two connections on it?
+2010-11-16T22:44:00.000Z	hero1900	sosaited	i disconnet from my current connection so i can test the one using gnome ppa
+2010-11-16T22:44:00.000Z	hero1900	sosaited	or i should disable the whole network manager???
+2010-11-16T22:44:00.000Z	sosaited	hero1900	Did you try sudo wvdial?
+2010-11-16T22:45:00.000Z	sosaited	hero1900	That would be a good idea, but if it is not interfering with the modem now, it won't be the problem
+2010-11-16T22:46:00.000Z	hero1900	sosaited	i did use wvdial and now connected and get ip and defie DNS all stuff
+2010-11-16T22:46:00.000Z	hero1900	sosaited	so should i disconnect now and try to connect using it???
+2010-11-16T22:46:00.000Z	sosaited	hero1900	But you can't browse still? That is weird.
+2010-11-16T22:47:00.000Z	sosaited	hero1900	GSm providers usually give two APNs. one for WAP, and one for internet/computer. Did you use the Internet one?
+2010-11-16T22:49:00.000Z	hero1900	sosaited	it is okey working now
+2010-11-16T22:50:00.000Z	sosaited	hero1900	Glad to hear that
+2010-11-16T22:51:00.000Z	sosaited	hero1900	:). yeah it is. BTW unless you have an unlimited data package, using Mobile 3g/gsm connection on regular rates will be expensive
+2010-11-16T22:53:00.000Z	hero1900	sosaited	yup i dont like them also slow and expensive it is just for 2 days thats all

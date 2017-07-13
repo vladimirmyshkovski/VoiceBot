@@ -1,0 +1,92 @@
+2006-01-28T10:38:00.000Z	tonyyarusso		How can I go from ati.com fglrx back to the repos one?
+2006-01-28T10:38:00.000Z	slavik	tonyyarusso	does ati provide a way to remove their drivers?
+2006-01-28T10:38:00.000Z	tonyyarusso	slavik	No idea.
+2006-01-28T10:39:00.000Z	slavik	tonyyarusso	have you tried editing the config file in the proper location, beside that ... no clue
+2006-01-28T10:39:00.000Z	tonyyarusso	slavik	Well, the problem with that is the line will be fglrx in xorg.conf either way.
+2006-01-28T10:40:00.000Z	slavik	tonyyarusso	maybe the symbolic link would be different? I honestly don't know hwo to help you
+2006-01-28T10:40:00.000Z	tonyyarusso	slavik	That's a good suggestion anyway.  I can search around.
+2006-01-28T10:57:00.000Z	slavik	tonyyarusso	I think there is a --force option
+2006-01-28T11:00:00.000Z	slavik	tonyyarusso	apt-get doesn't want to do something?
+2006-01-28T11:00:00.000Z	tonyyarusso	slavik	Correct.
+2006-01-28T11:00:00.000Z	slavik	tonyyarusso	hold on ...
+2006-01-28T11:01:00.000Z	tonyyarusso	slavik	I have fglrx from ati.com, and I want to change it back to the repos one.  Will wait.
+2006-01-28T11:01:00.000Z	slavik	tonyyarusso	http://www.die.net/doc/linux/man/man8/apt-get.8.html
+2006-01-28T11:02:00.000Z	slavik	tonyyarusso	what does apt-get say when you try to install the stuff from the repo?
+2006-01-28T11:03:00.000Z	tonyyarusso	slavik	Reinstallation of xorg-driver-fglrx is not possible, it cannot be downloaded.
+2006-01-28T11:03:00.000Z	slavik	tonyyarusso	maybe something with the package file is messed up?
+2006-01-28T11:05:00.000Z	tonyyarusso	slavik	I don't think so, I think it's because it's confused by the version number / markings of where it's coming from.
+2006-01-28T11:05:00.000Z	tonyyarusso	slavik	--force-yes didn't change anything.
+2006-01-28T11:06:00.000Z	slavik	tonyyarusso	I am out of options ...
+2006-01-28T11:06:00.000Z	tonyyarusso	slavik	If I download the repos .deb separately, dpkg -i always overwrites, true?
+2006-01-28T11:06:00.000Z	slavik	tonyyarusso	I am not familiar with dpckg, sorry.
+2006-01-28T11:38:00.000Z	tonyyarusso	slavik	Believe it or not, I liked not having a graphical installer.
+2006-04-03T09:45:00.000Z	slavik	tonyyarusso	you can't
+2006-04-03T09:46:00.000Z	tonyyarusso	slavik	How come?  It must be possible at some level.
+2006-04-03T09:46:00.000Z	slavik	tonyyarusso	unless you comepile in a diff dir ... you don't need to do "make install" ... as 'make' should ciompile everything
+2006-04-03T09:46:00.000Z	slavik	tonyyarusso	are you compiling from deb or you have a tarball?
+2006-04-03T09:46:00.000Z	tonyyarusso	slavik	Ah, so that will give me something I can run, but not a package.
+2006-04-03T09:47:00.000Z	slavik	tonyyarusso	if you use the prefix command, it should install ALL files (don't quote me on that) into the dir you specify
+2006-04-03T09:47:00.000Z	tonyyarusso	slavik	Tarball.  I'm changing random stuff in some files just for kicks.  (It's evil...)
+2006-04-03T09:47:00.000Z	tonyyarusso	slavik	Hmm...okay.
+2006-04-03T09:47:00.000Z	slavik	tonyyarusso	use the prefix parameter to configure
+2006-04-03T09:48:00.000Z	tonyyarusso	slavik	I'll give it a shot.
+2006-04-03T09:56:00.000Z	slavik	tonyyarusso	make calls make which will look for Makefile and use commands for some "standard" process (ie: compile everything)
+2006-04-03T10:15:00.000Z	slavik	tonyyarusso	libgtk2.0-dev
+2006-04-03T10:02:00.000Z	slavik	tonyyarusso	I don't think it's possible ...
+2006-04-03T10:02:00.000Z	tonyyarusso	slavik	Dang.  (I have a suspicious looking thing from .configure)
+2006-04-03T10:02:00.000Z	slavik	tonyyarusso	better start typing :P
+2006-04-03T10:03:00.000Z	tonyyarusso	slavik	:)
+2006-04-03T10:03:00.000Z	tonyyarusso	slavik	That's what I'm going to do instead, gotta run in a GUI shell to do that though (or screen it).
+2006-04-03T10:04:00.000Z	slavik	tonyyarusso	you can redirect the stuff from configure
+2006-04-03T10:04:00.000Z	tonyyarusso	slavik	With a > or somthing?
+2006-04-03T10:04:00.000Z	slavik	tonyyarusso	yes
+2006-04-03T10:09:00.000Z	tonyyarusso	slavik	or any others: Okay, my output snippet from ./configure is at http://paste.ubuntu-nl.org/11025 - what's it mean?
+2006-04-03T10:09:00.000Z	slavik	tonyyarusso	install libgtk2-dev
+2006-04-03T10:09:00.000Z	tonyyarusso	slavik	That's an easy answer.  :)
+2006-04-03T10:10:00.000Z	tonyyarusso	slavik	nickrud: Oh my.  That has a few dependencies!
+2006-04-03T10:11:00.000Z	tonyyarusso	slavik	nickrud: Shouldn't there be a better way of informing people what -dev package they need from these errors?  How are you supposed to know?
+2006-04-03T10:11:00.000Z	slavik	tonyyarusso	it tells you right there
+2006-04-03T10:12:00.000Z	tonyyarusso	slavik	nickrud: So just put lib in front, take out the +-, and add -dev on the end.
+2006-04-03T10:12:00.000Z	slavik	tonyyarusso	use synaptic
+2006-04-03T10:12:00.000Z	tonyyarusso	slavik	nickrud: Okay.
+2006-04-03T10:15:00.000Z	tonyyarusso	slavik	nickrud: Okay, what about this one?: configure: error: --enable-application=APP is required
+2006-04-03T10:16:00.000Z	tonyyarusso	slavik	Got the package.  What's the parameter bit mean?
+2006-04-03T10:16:00.000Z	tonyyarusso	slavik	Do I need to manually preface with that for it to work?
+2006-04-03T10:19:00.000Z	tonyyarusso	slavik	Okay.  So it's smart, but not enough to then add that on it's own.
+2006-04-03T10:20:00.000Z	slavik	tonyyarusso	Linux and Unix don't do things for you
+2006-04-03T10:21:00.000Z	tonyyarusso	slavik	Point.
+2006-04-03T10:21:00.000Z	tonyyarusso	slavik	I like the analogy, btw.
+2006-04-03T10:21:00.000Z	slavik	tonyyarusso	it's what it is ...
+2006-04-03T10:28:00.000Z	tonyyarusso	slavik	nickrud: It looks like it's working now, btw.
+2006-04-03T10:35:00.000Z	slavik	tonyyarusso	there is always a time to learn
+2006-04-03T10:35:00.000Z	tonyyarusso	slavik	Yeah, it's called summer. :)
+2006-04-03T10:41:00.000Z	tonyyarusso	slavik	And vice versa.
+2006-04-07T13:24:00.000Z	tonyyarusso	slavik	Dang.  Might I have a bios setting for that or something?  (Maybe?  Trying to make grub-splashimage pretty.)
+2006-04-07T13:25:00.000Z	slavik	tonyyarusso	the actual grub boot select thing?
+2006-04-07T13:25:00.000Z	tonyyarusso	slavik	Yeah.  You can get a background image for the menu, but it doesn't look all that hot b/c of the vga setting / resolution.
+2006-04-07T13:26:00.000Z	slavik	tonyyarusso	you can't change the resolution...
+2006-04-07T13:26:00.000Z	tonyyarusso	slavik	Hmm, all right.  No chance of built in hardware anything?
+2006-04-17T12:24:00.000Z	tonyyarusso	slavik	Hey.
+2006-06-14T09:34:00.000Z	slavik	tonyyarusso	wtf?
+2006-06-14T09:34:00.000Z	tonyyarusso	slavik	Take a look.  Who knew?
+2006-06-14T09:34:00.000Z	slavik	tonyyarusso	how? just in google?
+2006-06-14T09:35:00.000Z	tonyyarusso	slavik	No, click the G, and you'll get a list of options, Google, Yahoo, Wikipedia, and others.  There are like 9.
+2007-03-18T10:33:00.000Z	tonyyarusso	slavik	well, that's not really true.
+2007-03-18T10:33:00.000Z	slavik	tonyyarusso	isn't it? it's the first track :P
+2007-03-18T10:33:00.000Z	tonyyarusso	slavik	The MBR just says where /boot is, and how to look at it, but /boot isn't the MBR itself.
+2007-03-18T10:34:00.000Z	slavik	tonyyarusso	so, where is /boot located? my emphasis is that it is not exactly part of the / filesystem
+2007-03-18T10:34:00.000Z	tonyyarusso	slavik	it is too part of / - how would it not be?
+2007-03-18T10:35:00.000Z	tonyyarusso	slavik	Mine's on a separate partition, but it doesn't need to be at all
+2007-03-18T10:36:00.000Z	slavik	tonyyarusso	how can grub read the config file if there is no file system mounted?
+2007-03-18T10:36:00.000Z	slavik	tonyyarusso	are you saying that grub reads the hdd directly?
+2007-03-18T10:36:00.000Z	tonyyarusso	slavik	yes
+2007-03-18T10:37:00.000Z	tonyyarusso	slavik	No, it figures out the filesystem I think, but it operates by hardware location, not mount point
+2007-03-18T10:37:00.000Z	tonyyarusso	slavik	(hence not being able to put /boot on certain types of filesystems - grub only understands some)
+2007-03-18T10:38:00.000Z	slavik	tonyyarusso	but why not just put grub and all of its stuff in the first track of an hdd, since the first track is unused (besides the first block) anyway ...
+2007-03-18T10:39:00.000Z	tonyyarusso	slavik	It depends.  (and is being discussed by the powers that be)
+2007-03-18T10:41:00.000Z	tonyyarusso	slavik	b/c windows boot is weird?
+2007-03-18T10:42:00.000Z	slavik	tonyyarusso	besides the obvious things ...
+2007-09-04T09:25:00.000Z	slavik	tonyyarusso	dhcp? and is the network interface enabled?
+2007-09-04T09:26:00.000Z	tonyyarusso	slavik	tried re-running the dhcp client (yes it's configured to use it), and yes, it's enabled.  Tried disabling and re-enabling too, as well as resetting the lease in the router.
+2007-09-04T09:26:00.000Z	slavik	tonyyarusso	any errors that dhclient gives you?
+2007-09-04T09:27:00.000Z	tonyyarusso	slavik	No DHCPOFFERS

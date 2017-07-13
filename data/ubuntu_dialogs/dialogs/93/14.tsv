@@ -1,0 +1,93 @@
+2011-03-06T07:33:00.000Z	Wes_	pw-toxic	ls -ld /tmp ?
+2011-03-06T07:34:00.000Z	pw-toxic	Wes_	drwxrwxrwxt 24 root root 4096 2011-03-06 03:27
+2011-03-06T07:34:00.000Z	Wes_	pw-toxic	does that file already exist?
+2011-03-06T07:35:00.000Z	pw-toxic	Wes_	can i do a rm -r /tmp ?
+2011-03-06T07:35:00.000Z	Wes_	pw-toxic	it might be worth trying to figure out *why* it's failing. Let's see, linux, something like this should work:
+2011-03-06T07:35:00.000Z	Wes_	pw-toxic	NO
+2011-03-06T07:35:00.000Z	Wes_	pw-toxic	  strace COMMAND 2>&1 | grep /tmp/
+2011-03-06T07:35:00.000Z	Wes_	pw-toxic	look for the system call that's failing, and why  (e.g. EPERM)
+2011-03-06T07:37:00.000Z	pw-toxic	Wes_	eh.. do you want me to paste the command "strace COMMAND 2>&1 | grep /tmp/" into the terminal?
+2011-03-06T07:40:00.000Z	Wes_	pw-toxic	substituting COMMAND for whatever it is you're trying to do, yes - "strace" will tell you *everything* that's giong on inside your process.  The grep command filters out anything unrelated to the tmp dir.
+2011-03-06T07:41:00.000Z	Wes_	pw-toxic	be careful deleting from /tmp. You can accidentally cause yourself a lot of grief.
+2011-03-06T07:41:00.000Z	pw-toxic	Wes_	hm ok then i should really stop it ;)
+2011-03-06T07:42:00.000Z	pw-toxic	Wes_	i thought those files are only related to this command
+2011-03-06T07:42:00.000Z	Wes_	pw-toxic	No. The tmp directory is a dumping ground for all kinds of things that need to jot something down for a minute.
+2011-03-06T07:44:00.000Z	Wes_	pw-toxic	No, you shouldn't have... but it should come back next time you reboot or whatever
+2011-03-06T07:44:00.000Z	pw-toxic	Wes_	and i cant reboot my server because im just resyncing 3 raid arrays ;L)
+2011-03-06T07:44:00.000Z	pw-toxic	Wes_	who else uses this folder?
+2011-03-06T07:45:00.000Z	Wes_	pw-toxic	any program using the tmpdir, tmpnam, and tmpname interfaces in your C library
+2011-03-06T07:45:00.000Z	Wes_	pw-toxic	plus all kinds of scripts, etc ad nauseum
+2011-03-06T07:45:00.000Z	pw-toxic	Wes_	 ;(
+2011-03-06T07:45:00.000Z	Wes_	pw-toxic	no more random deleting, okay? :)
+2011-03-06T07:45:00.000Z	pw-toxic	Wes_	can i reboot while a raid is resynced?
+2011-03-06T07:45:00.000Z	Wes_	pw-toxic	NO
+2011-03-06T07:46:00.000Z	pw-toxic	Wes_	damnit this takes about 2-3 days ;)
+2011-03-06T07:46:00.000Z	pw-toxic	Wes_	i have 12 hard drives connected ;(
+2011-03-06T07:46:00.000Z	Wes_	pw-toxic	what the hell kind of raid takes 2-3 days to sync up?
+2011-03-06T07:46:00.000Z	pw-toxic	Wes_	6 * 1TB :)  well i think its a bit faster.. ill check how far it is
+2011-03-06T07:47:00.000Z	pw-toxic	Wes_	i even dont know why the raid is resyncing...
+2011-03-06T07:48:00.000Z	pw-toxic	Wes_	ok i think the resync is done by tommorrow.. its already on 24% and it started at 2 hours 48 minutes ago
+2011-03-06T07:48:00.000Z	pw-toxic	Wes_	why shouldnt i restart while resyncing?
+2011-03-06T07:49:00.000Z	Wes_	pw-toxic	1) it's bad luck  2) I don't know the specifics of your RAID system, so I don't know what the side-effects will be.  Likely just make you start all over again, but I'm not taking that chance. :)
+2011-03-06T07:50:00.000Z	pw-toxic	Wes_	2*2TB raid1; 6*1TB raid5; 2*500GB raid1; 320GB system drive; 500GB system drive (crashed hard drive)
+2011-03-06T07:51:00.000Z	pw-toxic	Wes_	well lets just hope i didnt make any severe damage by deleteing the /tmp/orbit... folder
+2011-03-06T07:51:00.000Z	pw-toxic	Wes_	i just thought that tmp folders are not important at all ;)
+2011-03-06T07:51:00.000Z	Wes_	pw-toxic	just be glad you didn't erase the hidden files in there :P
+2011-03-06T07:52:00.000Z	pw-toxic	Wes_	the only hidden files there are .X0-lock and .esd-1000
+2011-03-06T07:52:00.000Z	Wes_	pw-toxic	the first one is probably a lock semaphore for you windowing system; I don't recognized the other one
+2011-03-06T07:53:00.000Z	Wes_	pw-toxic	A lock semaphore is..... like the conch, in Lord of the Flies
+2011-03-06T07:53:00.000Z	pw-toxic	Wes_	will everything is still running so it looks liek i didnt do a severe damage ;)
+2011-03-06T07:54:00.000Z	pw-toxic	Wes_	however you really discourage me not to use vncserver as root? i have done this the last 6 months
+2011-03-06T07:55:00.000Z	Wes_	pw-toxic	I have no opinion on the matter
+2011-03-06T08:00:00.000Z	pw-toxic	Wes_	ok i try it the other way round.. what do you think is the most easy file editor for a terminal?
+2011-03-06T08:00:00.000Z	Wes_	pw-toxic	emacs
+2011-03-06T08:00:00.000Z	Wes_	pw-toxic	Okay, maybe not emacs
+2011-03-06T08:01:00.000Z	Wes_	pw-toxic	But I'll help you learn if you'd like!
+2011-03-06T08:04:00.000Z	pw-toxic	Wes_	shouldnt strg + x close the editor? ;((( nothing happens
+2011-03-06T08:05:00.000Z	Wes_	pw-toxic	which editor?
+2011-03-06T08:05:00.000Z	pw-toxic	Wes_	nano
+2011-03-06T08:05:00.000Z	Wes_	pw-toxic	control-X
+2011-03-06T08:05:00.000Z	pw-toxic	Wes_	yes thats "strg-x" in german ;)
+2011-03-06T08:05:00.000Z	pw-toxic	Wes_	nothing happens ;(
+2011-03-06T08:05:00.000Z	pw-toxic	Wes_	im gonna kill putty now ;(
+2011-03-06T08:05:00.000Z	Wes_	pw-toxic	oh. And wierd.
+2011-03-06T08:05:00.000Z	Wes_	pw-toxic	maybe the de localization for nano changes the commands?
+2011-03-06T08:06:00.000Z	pw-toxic	Wes_	no its just strange...  after restarting putty control-x works
+2011-03-06T08:07:00.000Z	Wes_	pw-toxic	wierd. I've logged probably in excess of 5,000 hours in putty and never had that happen
+2011-03-06T08:07:00.000Z	pw-toxic	Wes_	im special!
+2011-03-06T08:07:00.000Z	Wes_	pw-toxic	apparently so, lol!
+2011-03-06T08:08:00.000Z	pw-toxic	Wes_	but still nano totally sucks in comparison with gedit ;(  i think i will install vmware on my desktop and run ubuntu on it and then i do ssh -X my-server     what do you think about this solution?
+2011-03-06T08:09:00.000Z	Wes_	pw-toxic	what problem are you trying to solve?
+2011-03-06T08:09:00.000Z	pw-toxic	Wes_	copy and paste with a mouse for example ;)   syntax highligthing
+2011-03-06T08:10:00.000Z	pw-toxic	Wes_	nice search highlithning
+2011-03-06T08:10:00.000Z	pw-toxic	Wes_	copy and paste trhough different files
+2011-03-06T08:10:00.000Z	Wes_	pw-toxic	so, you want an editor for your ubuntu box to display on a windows box, and you want the editor to not-suck?
+2011-03-06T08:10:00.000Z	pw-toxic	Wes_	copare two different file versions
+2011-03-06T08:10:00.000Z	pw-toxic	Wes_	something like this yes ;)
+2011-03-06T08:11:00.000Z	Wes_	pw-toxic	install the mingw x server on windows. Run your favourite editor on ubuntu, redirect the display to the windows box
+2011-03-06T08:11:00.000Z	Wes_	pw-toxic	run the mingw x server in no-root-window mode, it's better
+2011-03-06T08:11:00.000Z	pw-toxic	Wes_	so i think i will install ubuntu on VMWare and then i do "ssh -X my-file-server" and then do "sudo su" and "gedit /etc/mdadm/mdadm.conf"
+2011-03-06T08:11:00.000Z	Wes_	pw-toxic	that would work, but my solution is better, faster and easier :D\
+2011-03-06T08:12:00.000Z	pw-toxic	Wes_	how can anything be faster than VMWare? i can switch instantly to ubuntu in <1 second
+2011-03-06T08:12:00.000Z	pw-toxic	Wes_	and i have a full GUI
+2011-03-06T08:12:00.000Z	pw-toxic	Wes_	just for you to know: i got 8GB ram and 200GB of a SSD hard drive ;)
+2011-03-06T08:12:00.000Z	Wes_	pw-toxic	how can a discrete ubuntu box NOT be faster than one running under emulation?
+2011-03-06T08:13:00.000Z	pw-toxic	Wes_	everything <1 is out of the meassurement range and drops to 0 seconds ;)
+2011-03-06T08:13:00.000Z	Wes_	pw-toxic	*shrug* - I have plenty of usability experience that says two boxes is better than one box emulating two
+2011-03-06T08:14:00.000Z	Wes_	pw-toxic	not cygwin, cygwin X, use the X server
+2011-03-06T08:14:00.000Z	pw-toxic	Wes_	to be honest, im not sure if i have really understood your solution
+2011-03-06T08:14:00.000Z	pw-toxic	Wes_	i know how to use cygwin X .. i then can run native linux programs using cygwin as an x-server
+2011-03-06T08:15:00.000Z	Wes_	pw-toxic	you install an X server on windows.   Then you run your program on your ubuntu box. Instead of displaying on the ubuntu box, you tell it to display on the windows box
+2011-03-06T08:15:00.000Z	pw-toxic	Wes_	yeah ok then i understand it, but i dont think that the gedit then looks native like if i would run it on ubuntu right?
+2011-03-06T08:15:00.000Z	Wes_	pw-toxic	it should look exactly the same, within the confines of your window manager
+2011-03-06T08:17:00.000Z	Wes_	pw-toxic	This is what a real workspace looks like IMO - http://www.page.ca/~wes/desk.jpg :)
+2011-03-06T08:18:00.000Z	pw-toxic	Wes_	oh.. i have 4 monitors myself .. one desktop over 4 monitors: 19" 22" 22"(eizo) and 37" for TV and full hd blu-ray movies ;)))
+2011-03-06T08:18:00.000Z	Wes_	pw-toxic	I had to change down to only one display recently. Neck problems. :( :( :( :(
+2011-03-06T08:19:00.000Z	pw-toxic	Wes_	BUT the difference is: my computer makes 0dB noise, because everything is watercooled... but now we should stop this here if i dont want to get kicked out of here for off topic ;)
+2011-03-06T08:20:00.000Z	pw-toxic	Wes_	thats one of the key points why i changed to windows7 for my desktop because it is hard to use 4 monitors from two different graphic card vendors (nvidia and AMD) in ubuntu while windows runs this out of the box
+2011-03-06T08:20:00.000Z	pw-toxic	Wes_	do you know if this is possible with ubuntu?
+2011-03-06T08:21:00.000Z	Wes_	pw-toxic	No clue.  Probably, if you work hard enough, almost anything is possible. :)  ... But I generally prefer a mixed environment, anyhow - pick the best tool for the job at hand, leave the politics at the door.
+2011-03-06T08:22:00.000Z	pw-toxic	Wes_	well as i just told you.. i LOVE nice enviroment.... and in this case ubuntu is totally kickass ... i LOVE the 3D cube with multi desktop ;)))
+2011-03-06T08:23:00.000Z	pw-toxic	Wes_	i'm totally missing the multi desktop environment of gnome/KDE on windows... i couldnt find any windows addon which makes me use serveral work benches at a time in windows7 which works fluently within < 150ms to switch between them
+2011-03-06T08:24:00.000Z	Wes_	pw-toxic	really? 'cause XPSP2 has one
+2011-03-06T08:24:00.000Z	pw-toxic	Wes_	i have TONS of active windows... the more windows you have the more it takes

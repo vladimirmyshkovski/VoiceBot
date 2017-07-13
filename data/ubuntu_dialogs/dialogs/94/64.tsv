@@ -1,0 +1,94 @@
+2007-10-22T06:52:00.000Z	gutsy1		Can someone help me to get compiz working?
+2007-10-22T06:53:00.000Z	gutsy1		ok, anyone wanna help, compiz isn't working, please...anyone
+2007-10-22T06:53:00.000Z	sohum	gutsy1	what's the problem?
+2007-10-22T06:56:00.000Z	gutsy1	sohum	I uninstalled compiz and beryl,  then after i reinstalled compizfusion, it doesn't work,, when I click "Compiz Settings Manager" nothing happens, and when I try to enable visual effects in the appearence menu, it tells me that the composite extension isn't available.... what gives?
+2007-10-22T06:56:00.000Z	sohum	gutsy1	what video card are you using?
+2007-10-22T06:57:00.000Z	gutsy1	sohum	nvidia something or other, it works with compiz, I had compiz running earlier today, but it farted out on me
+2007-10-22T06:58:00.000Z	sohum	gutsy1	are you using the packaged nvidia driver, or the one from their website?
+2007-10-22T06:59:00.000Z	gutsy1	sohum	I believe I am using the packaged one, I just enabled  the restricted driver, which driver should i use?
+2007-10-22T07:00:00.000Z	sohum	gutsy1	could you search synaptic for nvidia-glx and tell me which one is installed?
+2007-10-22T07:01:00.000Z	gutsy1	sohum	NVIDIA binary XFree86 4.x/X.Org 'new' driver
+2007-10-22T07:02:00.000Z	sohum	gutsy1	right. in that case run nvidia-xconfig in a terminal window, and restart X (log out, Ctrl-Alt-Backspace, login)
+2007-10-22T07:03:00.000Z	gutsy1	sohum	should that make everything work?
+2007-10-22T07:04:00.000Z	sohum	gutsy1	theoretically
+2007-10-22T07:04:00.000Z	gutsy1	sohum	i get this message "Using X configuration file: "/etc/X11/xorg.conf".ERROR: Unable to write to directory '/etc/X11'."
+2007-10-22T07:04:00.000Z	sohum	gutsy1	oh, right, prepend a sudo (sudo nvidia-xconfig)
+2007-10-22T07:05:00.000Z	gutsy1	sohum	i get this message "Using X configuration file: "/etc/X11/xorg.conf".Backed up file '/etc/X11/xorg.conf' as '/etc/X11/xorg.conf.backup'New X configuration file written to '/etc/X11/xorg.conf'"
+2007-10-22T07:05:00.000Z	gutsy1	sohum	is that what i should get
+2007-10-22T07:05:00.000Z	sohum	gutsy1	cool, so it worked. now restart X
+2007-10-22T07:08:00.000Z	gutsy1	sohum	no go on that, it still tells me that The Composite extension is not available
+2007-10-22T07:10:00.000Z	sohum	gutsy1	coudl you run this in a terminal window and post the results?: sudo grep ARGB /etc/X11/xorg.conf
+2007-10-22T07:13:00.000Z	gutsy1	sohum	that did nothing
+2007-10-22T07:14:00.000Z	sohum	gutsy1	so no output?
+2007-10-22T07:14:00.000Z	gutsy1	sohum	none at all
+2007-10-22T07:14:00.000Z	sohum	gutsy1	ok. sudo <your favorite text editor> /etc/X11/xorg.conf
+2007-10-22T07:15:00.000Z	gutsy1	sohum	there isn't anything in the file
+2007-10-22T07:15:00.000Z	sohum	gutsy1	huh? /etc/X11/xorg.cong is empty?
+2007-10-22T07:16:00.000Z	sohum	gutsy1	conf, sorry
+2007-10-22T07:16:00.000Z	gutsy1	sohum	 there isn't anything in it at all
+2007-10-22T07:16:00.000Z	gutsy1	sohum	ubuntu 7.1
+2007-10-22T07:17:00.000Z	gutsy1	sohum	I installed XGL would that effect anything?
+2007-10-22T07:17:00.000Z	sohum	gutsy1	i don't understand how your xorg.conf has nothing in it. that should not happen.
+2007-10-22T07:17:00.000Z	sohum	gutsy1	ah. yes. i think so, anyway, i've never used XGL.
+2007-10-22T07:18:00.000Z	gutsy1	sohum	how do i uninstall xgl, that must be the problem
+2007-10-22T07:18:00.000Z	sohum	gutsy1	well, how did you install it? through packages? compiling?
+2007-10-22T07:19:00.000Z	gutsy1	sohum	i opened terminal and typed sudo apt-get install xserver-xgl
+2007-10-22T07:21:00.000Z	sohum	gutsy1	ok, so sudo apt-get remove xserver-xgl
+2007-10-22T07:36:00.000Z	gutsy1	sohum	i've tried everything, i uninstalled xgl, uninstalled compiz, reinstalled compiz, then restarted the comp, nothing will work...
+2007-10-22T07:37:00.000Z	sohum	gutsy1	wait, when yo usay unisntalled compiz... are you using third party repos (like tevin0's ) for compiz?
+2007-10-22T07:38:00.000Z	gutsy1	sohum	could you elaborate? this is what i typed to install...sudo apt-get install compiz compizconfig-settings-manager
+2007-10-22T07:38:00.000Z	sohum	gutsy1	could you post the output of sudo apt-cache policy compiz ?
+2007-10-22T07:39:00.000Z	gutsy1	sohum	Installed: 1:0.6.0+git20071008-0ubuntu1
+2007-10-22T07:40:00.000Z	sohum	gutsy1	right, you are. could you disable the third party repos, uninstall ALL compiz related stuff, and then reinstall ubuntu-desktop?
+2007-10-22T07:41:00.000Z	gutsy1	sohum	think you could tell me how to do all of that, sorry, i just switched from windows
+2007-10-22T07:43:00.000Z	sohum	gutsy1	there's a good howto at http://kevin.vanzonneveld.net/techblog/article/upgrade_to_ubuntu_gutsy_with_compizfusion/ STOP, WAIT
+2007-10-22T07:44:00.000Z	sohum	gutsy1	scroll down to "Cleanup repository list" and do that section and the next one, "Remove old compiz packages"
+2007-10-22T07:45:00.000Z	gutsy1	sohum	where is that located at? synaptic?
+2007-10-22T07:45:00.000Z	sohum	gutsy1	then scoll down the "Gutsy's compiz fusion" and follow it from there
+2007-10-22T07:45:00.000Z	sohum	gutsy1	where is what located at?
+2007-10-22T07:46:00.000Z	sohum	gutsy1	the guide i'm referring to is at http://kevin.vanzonneveld.net/techblog/article/upgrade_to_ubuntu_gutsy_with_compizfusion/
+2007-10-22T07:46:00.000Z	gutsy1	sohum	nvm
+2007-10-22T08:10:00.000Z	gutsy1	sohum	I went through that whole process on that page you gave me, when i click on visual effects, it still says "The Composite extension is not available"
+2007-10-22T08:11:00.000Z	sohum	gutsy1	as in, you have hustsy's compiz fusion?
+2007-10-22T08:11:00.000Z	sohum	gutsy1	and you have aiglx?
+2007-10-22T08:12:00.000Z	gutsy1	sohum	i don't think so, how would i find out?
+2007-10-22T08:13:00.000Z	sohum	gutsy1	glxinfo
+2007-10-22T08:13:00.000Z	sohum	gutsy1	no, sorry, glxinfo | grep direct
+2007-10-22T08:14:00.000Z	gutsy1	sohum	direct rendering: Yes
+2007-10-22T08:14:00.000Z	sohum	gutsy1	cool, now try the nvidia-xconfig thing, and the grep ARGB thing, and post output to pastebin
+2007-10-22T08:15:00.000Z	sohum	gutsy1	actually, jsut tell me if there is output from the grep ARGB thing
+2007-10-22T08:16:00.000Z	gutsy1	sohum	what is the command for that?
+2007-10-22T08:17:00.000Z	sohum	gutsy1	sudo nvidia-xconfig then sudo grep ARGB /etc/X11/xorg.conf
+2007-10-22T08:19:00.000Z	gutsy1	sohum	there is output
+2007-10-22T08:19:00.000Z	sohum	gutsy1	cool. now restart X again.
+2007-10-22T08:24:00.000Z	gutsy1	sohum	now when i click to enable effects i get this message "Failed to execute child process "compiz" (No such file or directory)"
+2007-10-22T08:25:00.000Z	sohum	gutsy1	well, that's progress ;)
+2007-10-22T08:25:00.000Z	gutsy1	sohum	i really appreciate the help
+2007-10-22T08:25:00.000Z	sohum	gutsy1	hm. try reinstalling compiz
+2007-10-22T08:26:00.000Z	sohum	gutsy1	sudo aptitude reinstall compiz compiz-core compiz-fusion-plugins-extra compiz-fusion-plugins-main compiz-fusion-plugins-unofficial compiz-gnome compiz-plugins compizconfig-settings-manager libcompizconfig-backend-gconf libcompizconfig0 python-compizconfig
+2007-10-22T08:27:00.000Z	sohum	gutsy1	if you get a message about some of them not being installed, run it again, changing reinstall to install
+2007-10-22T08:28:00.000Z	gutsy1	sohum	GOT IT!!! One more thing, do you know how to install the thing where i can configure compiz?
+2007-10-22T08:28:00.000Z	sohum	gutsy1	really? cool! sudo aptitude install ccsm
+2007-10-22T08:29:00.000Z	sohum	gutsy1	oh, and use aptitude from now on. it makes life easier when you have complex conflicts
+2007-10-22T08:31:00.000Z	gutsy1	sohum	how do i install that again
+2007-10-22T08:31:00.000Z	sohum	gutsy1	sudo aptitude install ccsm
+2007-10-22T08:33:00.000Z	gutsy1	sohum	that's not working now
+2007-10-22T08:33:00.000Z	sohum	gutsy1	what compiz? or the command?
+2007-10-22T08:33:00.000Z	gutsy1	sohum	ccsm isn't working
+2007-10-22T08:34:00.000Z	sohum	gutsy1	oh. well, that's it.
+2007-10-22T08:35:00.000Z	gutsy1	sohum	where is it in synaptic
+2007-10-22T08:35:00.000Z	sohum	gutsy1	just search for compizconfig, i guess
+2007-10-22T08:36:00.000Z	gutsy1	sohum	i get libcompizconfig
+2007-10-22T08:37:00.000Z	gutsy1	sohum	The program 'ccsm' is currently not installed.
+2007-10-22T08:37:00.000Z	sohum	gutsy1	oh, it's in universe
+2007-10-22T08:37:00.000Z	sohum	gutsy1	not main
+2007-10-22T08:38:00.000Z	gutsy1	sohum	eh?
+2007-10-22T08:38:00.000Z	sohum	gutsy1	so you need to enable the universe repo
+2007-10-22T08:38:00.000Z	sohum	gutsy1	System-> Admin_> Software Sources
+2007-10-22T08:39:00.000Z	sohum	gutsy1	and check the second checkbox (comunity maintained...universe)
+2007-10-22T08:39:00.000Z	sohum	gutsy1	then update, and you should have it
+2007-10-22T08:40:00.000Z	gutsy1	sohum	update what?
+2007-10-22T08:41:00.000Z	sohum	gutsy1	oh, it's called reload under synaptic
+2007-10-22T08:46:00.000Z	gutsy1	sohum	i got that installed, but when i click preferences in the custom menu of visual effects, nothing happens
+2007-10-22T08:48:00.000Z	sohum	gutsy1	run ccsm in a terminal and post output?
+2007-10-22T08:48:00.000Z	gutsy1	sohum	it works thanks a lot

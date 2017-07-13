@@ -1,0 +1,94 @@
+2011-06-10T02:15:00.000Z	tomreyn		whats the name of the helper bot here again?
+2011-06-10T02:15:00.000Z	tomreyn		oh it's ubottu
+2011-06-10T02:16:00.000Z	tomreyn		!unity | tomreyn
+2011-06-10T02:17:00.000Z	devan	tomreyn	can you help me with dell recovery
+2011-06-10T02:17:00.000Z	tomreyn	devan	i need help my self right now but i can try. what's your issue?
+2011-06-10T02:18:00.000Z	devan		i dont know what i need to do. do i need to download the ubuntu image again to make it?
+2011-06-10T02:20:00.000Z	devan	tomreyn	i dont know what i need to do. do i need to download the ubuntu image again to make it?
+2011-06-10T02:20:00.000Z	tomreyn	devan	what are you trying to accomplish?
+2011-06-10T02:20:00.000Z	devan	tomreyn	im trying to make a recovery usb stick
+2011-06-10T02:21:00.000Z	tomreyn	devan	okay. i'll explain in a minute. why do you want to make a recovery usb stick?
+2011-06-10T02:22:00.000Z	devan	tomreyn	in case I want to change the hard drive, or something bad happens
+2011-06-10T02:22:00.000Z	tomreyn	devan	ok, which ubuntu version are you on?
+2011-06-10T02:22:00.000Z	devan	tomreyn	11.04
+2011-06-10T02:23:00.000Z	tomreyn	devan	okay so you have unity?
+2011-06-10T02:24:00.000Z	devan	tomreyn	yes
+2011-06-10T02:24:00.000Z	tomreyn	devan	okay open he unity menu where you can type + search, and type "usb-creator-gtk"
+2011-06-10T02:25:00.000Z	devan	tomreyn	ok
+2011-06-10T02:25:00.000Z	tomreyn	devan	do you have an ISO image of ubuntu there?
+2011-06-10T02:25:00.000Z	devan	tomreyn	i have the startup creator
+2011-06-10T02:26:00.000Z	tomreyn	devan	you mean you just started this application, right?
+2011-06-10T02:26:00.000Z	devan	tomreyn	yes
+2011-06-10T02:27:00.000Z	tomreyn	devan	what i wanted to ask: do you have an image file on your hard disk or a CD-ROM or DVD-ROM for installing ubuntu 11.04?
+2011-06-10T02:28:00.000Z	devan	tomreyn	i think i have a cd to install it
+2011-06-10T02:28:00.000Z	tomreyn	devan	related question: how did you install ubuntu 11.04?
+2011-06-10T02:28:00.000Z	devan	tomreyn	i installed it with i live cd
+2011-06-10T02:29:00.000Z	tomreyn	devan	okay, then insert this live cd into the cd-rom drive.
+2011-06-10T02:29:00.000Z	devan	tomreyn	ok, let me get it
+2011-06-10T02:30:00.000Z	devan	tomreyn	got it
+2011-06-10T02:30:00.000Z	tomreyn	devan	okay some window might pop up when you insert the disk. you can close this
+2011-06-10T02:31:00.000Z	devan	tomreyn	it said it was un able to mount
+2011-06-10T02:32:00.000Z	tomreyn	devan	okay, just ignore this
+2011-06-10T02:32:00.000Z	devan	tomreyn	did that
+2011-06-10T02:32:00.000Z	tomreyn	devan	does it show another window asking whether you want to upgrade? if so, cancel.
+2011-06-10T02:32:00.000Z	devan	tomreyn	no
+2011-06-10T02:33:00.000Z	tomreyn	devan	okay, now back to the start media creator window
+2011-06-10T02:33:00.000Z	devan	tomreyn	ok
+2011-06-10T02:33:00.000Z	tomreyn	devan	you should be able to select this cdrom now in the upper part of the window
+2011-06-10T02:33:00.000Z	tomreyn	devan	in fact it should already show up there
+2011-06-10T02:34:00.000Z	devan	tomreyn	got it, so open up the cd
+2011-06-10T02:34:00.000Z	tomreyn	devan	just make sure it is the only and selected entry up there
+2011-06-10T02:35:00.000Z	devan	tomreyn	the cd is selected on the desktop
+2011-06-10T02:36:00.000Z	tomreyn	devan	ok, but does it list the cd-rom in the upper text box on the usb creator window?
+2011-06-10T02:37:00.000Z	devan	tomreyn	the dell recovery thing asks me to choose a base image
+2011-06-10T02:37:00.000Z	tomreyn	devan	what is the "dell recovery thing"? you are running ubuntu 11.04 right now, right?
+2011-06-10T02:38:00.000Z	devan	tomreyn	i am running an application called Dell Recovery, it was in the software center
+2011-06-10T02:39:00.000Z	tomreyn	devan	i see, can you quit it and return to the ubuntu start media creator, please?
+2011-06-10T02:39:00.000Z	devan	tomreyn	sure
+2011-06-10T02:39:00.000Z	devan	tomreyn	ok, there
+2011-06-10T02:41:00.000Z	tomreyn	devan	okay, once again: what is listed in the upper text box ("source media") on the ubuntu start media creator screen?
+2011-06-10T02:41:00.000Z	devan	tomreyn	the live cd
+2011-06-10T02:41:00.000Z	tomreyn	devan	okay and this says ubuntu 11.04 or something?
+2011-06-10T02:42:00.000Z	devan	tomreyn	yes
+2011-06-10T02:42:00.000Z	tomreyn	devan	okay now connect your usb key.
+2011-06-10T02:42:00.000Z	devan	tomreyn	its connected
+2011-06-10T02:42:00.000Z	tomreyn	devan	be aware that any data currently stored on your usb key will get deleted if you continue
+2011-06-10T02:43:00.000Z	devan	tomreyn	i thought that. dont really have anything. whats next
+2011-06-10T02:43:00.000Z	tomreyn	devan	is your USB key listed in the lower text box of ubuntu start media creator?
+2011-06-10T02:43:00.000Z	devan	tomreyn	yes
+2011-06-10T02:43:00.000Z	tomreyn	devan	okay, what capacity does the usb key have?
+2011-06-10T02:44:00.000Z	devan	tomreyn	2GB
+2011-06-10T02:44:00.000Z	tomreyn	devan	okay, then just hit 'create start media'
+2011-06-10T02:44:00.000Z	devan	tomreyn	ok
+2011-06-10T02:45:00.000Z	tomreyn	devan	it will now copy siles from your dvd-rom to the usb key. this will take a while.
+2011-06-10T02:45:00.000Z	devan	tomreyn	will i still be able to somewhat use the disk
+2011-06-10T02:45:00.000Z	tomreyn	devan	which disk?
+2011-06-10T02:45:00.000Z	devan	tomreyn	the usb
+2011-06-10T02:45:00.000Z	tomreyn	devan	no, i'm afraid not.
+2011-06-10T02:46:00.000Z	devan	tomreyn	ok. i guess ill have to find something else, since i mainly use dropbox. i only really use it when i need to bring files directly to someone
+2011-06-10T02:47:00.000Z	tomreyn	devan	consider buying a new one, those aren't so expensive nowadays.
+2011-06-10T02:48:00.000Z	devan	tomreyn	ok, ill think about it, but ill probably be able to find something else
+2011-06-10T02:48:00.000Z	devan	tomreyn	after this, do i startup dell recovery
+2011-06-10T02:48:00.000Z	devan	tomreyn	it says the installation failed
+2011-06-10T02:48:00.000Z	tomreyn	devan	i do not know dell recovery, so i'm afraid i can't tell what it does and whether it makes sense for you to use it
+2011-06-10T02:49:00.000Z	tomreyn	devan	does it provide more details?
+2011-06-10T02:50:00.000Z	devan	tomreyn	it says there was an input/output error
+2011-06-10T02:50:00.000Z	devan		tomreyn:i think the disk was scratched
+2011-06-10T02:51:00.000Z	tomreyn	devan	okay so you can either try to clean the cdrom and retry, or you can download an ISOP image and use that instead.
+2011-06-10T02:51:00.000Z	devan	tomreyn	i think ill just redownload the image
+2011-06-10T02:52:00.000Z	tomreyn	devan	sorry i mean "ISO", not "ISOP"
+2011-06-10T02:52:00.000Z	tomreyn	devan	okay do you know where to download from and which one?
+2011-06-10T02:52:00.000Z	devan	tomreyn	ya, from ubuntu.com
+2011-06-10T02:54:00.000Z	tomreyn	devan	okay, and you know which file to download from there?
+2011-06-10T02:54:00.000Z	tomreyn	devan	if so, just do it.
+2011-06-10T02:54:00.000Z	devan	tomreyn	i go to download right?
+2011-06-10T02:54:00.000Z	tomreyn	devan	yes, but do you know whether you have the 32 or 64 bit variant?
+2011-06-10T02:55:00.000Z	devan		tomreyn:i have a 32 bit
+2011-06-10T02:55:00.000Z	tomreyn	devan	okay so download that again
+2011-06-10T02:55:00.000Z	devan	tomreyn	its going right now
+2011-06-10T03:01:00.000Z	tomreyn	devan	once your download is complete, bring the ubuntu start media creator window to front again and, next to the upper text box (source media), click "browse..." then select the ISO image you downloaded.
+2011-06-10T03:01:00.000Z	tomreyn	devan	then make sure your USB key is still selected in the lower text box. then click on "delete media", then confirm, then (when it's done deleting) click on "create start media" (as we did before).
+2011-06-10T03:01:00.000Z	devan	tomreyn	ok
+2011-06-10T03:02:00.000Z	tomreyn	devan	i need to leave for some minutes, and may not be able to help out later. but feel free to try reaching me or anyone else here again.
+2011-06-10T03:02:00.000Z	devan	tomreyn	no problem
+2011-06-10T03:19:00.000Z	devan	tomreyn	thanks for your help. its going now

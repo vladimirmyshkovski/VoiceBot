@@ -1,0 +1,92 @@
+2006-02-19T17:19:00.000Z	steve60		1exit
+2006-02-19T17:19:00.000Z	steve60		!exit
+2006-02-19T10:25:00.000Z	steve60		Hi there
+2006-02-19T10:26:00.000Z	steve60		can anyone tell me is there another program out there that i can use other then xsane cause its not working for me
+2006-02-19T10:26:00.000Z	steve60		!downloads
+2006-02-19T10:28:00.000Z	soundray	steve60	kooka
+2006-02-19T10:28:00.000Z	soundray	steve60	but if xsane doesn't work, it may be a driver or firmware issue.
+2006-02-19T10:28:00.000Z	soundray	steve60	is your imaging device supposed to be supported?
+2006-02-19T10:30:00.000Z	soundray	steve60	there seem to be two drivers out there. Which one do you use?
+2006-02-19T10:32:00.000Z	soundray	steve60	are you on breezy?
+2006-02-19T10:33:00.000Z	soundray	steve60	I recommend that you stick with Ubuntu's version of xsane until you've run a few checks: 'sudo sane-find-scanner' first. Paste the output on http://paste.ubuntu-nl.org please.
+2006-02-19T10:34:00.000Z	soundray	steve60	compiling your own sane package is a last resort.
+2006-02-19T10:35:00.000Z	soundray	steve60	are you positive that 0.97 doesn't?
+2006-02-19T10:37:00.000Z	soundray	steve60	'sudo sane-find-scanner'. Paste the output on http://paste.ubuntu-nl.org please.
+2006-02-19T10:40:00.000Z	soundray	steve60	two questions: How is your scanner connected? And what webpage were you referring to wrt. 0.97 vs 0.99?
+2006-02-19T10:41:00.000Z	soundray	steve60	what website?
+2006-02-19T10:44:00.000Z	soundray	steve60	that page does not mention microtek.
+2006-02-19T10:44:00.000Z	soundray	steve60	the reason I doubt your interpretation is that the microtek driver has been around for a long time.
+2006-02-19T10:45:00.000Z	soundray	steve60	I suspect your problem is in the parallel port device support.
+2006-02-19T10:47:00.000Z	soundray	steve60	look on the web while I'm doing the same.
+2006-02-19T10:52:00.000Z	soundray	steve60	you told me that, and I'm pretty sure that you misinterpreted something there. Now upgrading to 0.99 is a *lot* of trouble, ie. you shouldn't do it unless absolutely necessary.
+2006-02-19T10:52:00.000Z	soundray	steve60	oops, sorry, old post.
+2006-02-19T10:53:00.000Z	soundray	steve60	still reading, give me a couple of minutes.
+2006-02-19T10:54:00.000Z	soundray	steve60	can you give me that model name again, it scrolled off
+2006-02-19T10:54:00.000Z	soundray	steve60	tx
+2006-02-19T11:02:00.000Z	soundray	steve60	yes
+2006-02-19T11:03:00.000Z	soundray	steve60	found the scanner, and indeed it's been supported for a *long* time.
+2006-02-19T11:04:00.000Z	soundray	steve60	it won't autodetect it. You have to tell sane which backend to use.
+2006-02-19T11:04:00.000Z	steve60	soundray	how ???
+2006-02-19T11:06:00.000Z	soundray	steve60	try xsane microtek2:/dev/lp0 (if lp0 is where your scanner is connected)
+2006-02-19T11:07:00.000Z	soundray	steve60	oh, and make sure it is connected and switched on ;)
+2006-02-19T11:09:00.000Z	steve60	soundray	it tells me invaild argument on LP0 1 2 3 4
+2006-02-19T11:12:00.000Z	soundray	steve60	do you have the parport module loaded?
+2006-02-19T11:12:00.000Z	soundray	steve60	do you have the parport module loaded?
+2006-02-19T11:15:00.000Z	soundray	steve60	'sudo modprobe parport'
+2006-02-19T11:15:00.000Z	soundray	steve60	you didn't change the case on the xsane command, did you?
+2006-02-19T11:16:00.000Z	steve60	soundray	case????
+2006-02-19T11:16:00.000Z	soundray	steve60	capital/lowercase letters
+2006-02-19T11:17:00.000Z	steve60	soundray	you mean Xsane microtek2:/dev/lp0
+2006-02-19T11:17:00.000Z	soundray	steve60	no, I mean xsane microtek2:/dev/lp0
+2006-02-19T11:18:00.000Z	steve60	soundray	ok i got another query come up now saying access denied
+2006-02-19T11:19:00.000Z	soundray	steve60	excellent. Try 'gksudo xsane  microtek2:/dev/lp0' now.
+2006-02-19T11:20:00.000Z	steve60	soundray	warning box popped up telling me about running xsane in Root
+2006-02-19T11:22:00.000Z	steve60	soundray	i tried gksudo xsane  microtek2:/dev/lp0 it warns me about running in root i continued and then it tells me invalid argument
+2006-02-19T11:22:00.000Z	soundray	steve60	you need to be in the lp group. Do a 'sudo adduser steve lp'. You're going to have to login again. Then try scanimage -d microtek2:/dev/lp0 -n
+2006-02-19T11:23:00.000Z	soundray	steve60	and if you get any errors, paste them on http://paste.ubuntu-nl.org if you can't make sense of them.
+2006-02-19T11:24:00.000Z	steve60	soundray	brb
+2006-02-19T11:31:00.000Z	steve60	soundray	ok restarted trying XSane again still now luck
+2006-02-19T11:31:00.000Z	soundray	steve60	'scanimage -d microtek2:/dev/lp0 -n' -- paste errors to pastebin if not making sense.
+2006-02-19T11:32:00.000Z	steve60	soundray	scanimage: open of device microtek2:/dev/lp0 failed: Invalid argument
+2006-02-19T11:34:00.000Z	soundray	steve60	not having a scanner, I get the same error here. Do you have a parallel printer, so we could verify your parallel port working?
+2006-02-19T11:34:00.000Z	steve60	soundray	the printer here is a parallel but its running on USB and is working via USB at the moment aswell
+2006-02-19T11:36:00.000Z	soundray	steve60	it would take a while to test your parallel port using the printer. Let's think of something else first.
+2006-02-19T11:36:00.000Z	soundray	steve60	do you have more than one parallel port?
+2006-02-19T11:36:00.000Z	steve60	soundray	on the back of the PC or the Scanner
+2006-02-19T11:36:00.000Z	soundray	steve60	PC.
+2006-02-19T11:37:00.000Z	steve60	soundray	and it is plugged into the right port on the scanner
+2006-02-19T11:37:00.000Z	soundray	steve60	one of the two connections on your scanner is for passthrough (connecting a printer).
+2006-02-19T11:37:00.000Z	soundray	steve60	does your scanner work under another operating system?
+2006-02-19T11:38:00.000Z	steve60	soundray	it worked fine under windows XP Pro
+2006-02-19T11:38:00.000Z	steve60	soundray	that was using the Twain in Adobe
+2006-02-19T11:38:00.000Z	steve60	soundray	or something like that i think
+2006-02-19T11:39:00.000Z	soundray	steve60	how old is your scanner?
+2006-02-19T11:40:00.000Z	steve60	soundray	i dont know it's my dads im trying to set this up for him if i cant get this working he will want me to reinstall Windows and i have spent all day yesterday setting up most of the stuff on here from help from guys like yourself and the forum aswell
+2006-02-19T11:41:00.000Z	soundray	steve60	roughly, is the scanner's age better expressed in weeks or in years?
+2006-02-19T11:42:00.000Z	steve60	soundray	" did not know scanner came with a sell by date" its about 1999 i think
+2006-02-19T11:43:00.000Z	soundray	steve60	I'm asking because the model has changed apparently, and that could have affected its compatibility with sane.
+2006-02-19T11:43:00.000Z	steve60	soundray	that what it says on the warrenty sticker on the side
+2006-02-19T11:43:00.000Z	soundray	steve60	but if it's that old, the driver should be okay.
+2006-02-19T11:43:00.000Z	steve60	soundray	yeah it would be my luck just to get screwed up scanner
+2006-02-19T11:45:00.000Z	steve60	soundray	remember you told me that "sudo modprobe parport" am i suppose to get any feedback of that command at all
+2006-02-19T11:45:00.000Z	soundray	steve60	no.
+2006-02-19T11:45:00.000Z	steve60	soundray	oh right
+2006-02-19T11:45:00.000Z	soundray	steve60	but I would expect it to be loaded by default.
+2006-02-19T11:46:00.000Z	soundray	steve60	that's a good suggestion (njs12345). Also try 'dmesg | grep lp'
+2006-02-19T11:47:00.000Z	soundray	steve60	yes, why not, we'll have a look at it.
+2006-02-19T11:49:00.000Z	steve60	soundray	done
+2006-02-19T11:50:00.000Z	soundray	steve60	that's all looking good.
+2006-02-19T11:50:00.000Z	soundray	steve60	could you run 'tail -f /var/log/syslog' in a separate terminal while you enter the scanimage command from above, and see whether any errors are logged?
+2006-02-19T11:53:00.000Z	steve60	soundray	ok done that pasted it in the paste bin
+2006-02-19T11:55:00.000Z	soundray	steve60	interesting... I'm going to have to educate myself on what hpiod is. Give me a few minutes.
+2006-02-19T12:01:00.000Z	steve60	soundray	i'll have to give up for now
+2006-02-19T12:01:00.000Z	soundray	steve60	it seems that hpiod is trying to manage all printing aspects. Since sane is trying to access a printer port, it interferes. You could try '/etc/init.d/hplip stop' and try scanimage again to verify.
+2006-02-19T12:01:00.000Z	soundray	steve60	can you run this one test? I think we're close.
+2006-02-19T12:02:00.000Z	steve60	soundray	failed on the first  ok on the second
+2006-02-19T12:02:00.000Z	soundray	steve60	eh?
+2006-02-19T12:03:00.000Z	steve60	soundray	have a look on that pastebin
+2006-02-19T12:03:00.000Z	steve60	soundray	i gotta go
+2006-02-19T12:04:00.000Z	soundray	steve60	okay.
+2006-02-19T12:04:00.000Z	steve60	soundray	i appreciate all the help you have give me thank you
+2006-02-19T12:04:00.000Z	steve60	soundray	seeya
+2006-02-19T12:04:00.000Z	steve60	soundray	thanks again

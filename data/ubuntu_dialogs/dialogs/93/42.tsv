@@ -1,0 +1,93 @@
+2008-04-01T10:51:00.000Z	robm2		Can someone help me with a samba issue? After intalling a new HD and sharing a folder on that drive. All my old shares are no longer visable on windows.  I've even removed the share on the new HD but the windows pcs still can't see my old shares.
+2008-04-01T10:51:00.000Z	Gnea	robm2	install swat and reset them up
+2008-04-01T10:52:00.000Z	robm2	Gnea	I'd prefer to try to fix what I already had before intsalling something new. Any suggestions before trying that?
+2008-04-01T10:53:00.000Z	Gnea	robm2	swat will work on your current configuration
+2008-04-01T10:54:00.000Z	Gnea	robm2	apt-get install swat, then enable it via /etc/inetd.conf (should have it set) then point your web browser to http://localhost:901 and login as admin
+2008-04-01T10:54:00.000Z	robm2	Gnea	since it only takes a min to install I'll try installing swat, can you help after I do?
+2008-04-01T10:54:00.000Z	Gnea	robm2	don't forget to install samba-doc if you haven't already - once you use it you will see how nice it is
+2008-04-01T10:55:00.000Z	Gnea	robm2	i'll be around for a little while, gotta sleep soon
+2008-04-01T10:55:00.000Z	Gnea	robm2	dpkg -l | grep ^ii | grep samba-doc
+2008-04-01T10:57:00.000Z	robm2	Gnea	looks like I have it all installed now. What next
+2008-04-01T10:57:00.000Z	Gnea	robm2	sudo netstat -nap | grep 901
+2008-04-01T10:58:00.000Z	Gnea	robm2	should see something like this: tcp        0      0 0.0.0.0:901             0.0.0.0:*               LISTEN     5096/xinetd
+2008-04-01T10:58:00.000Z	Gnea	robm2	good. open firefox or whatever and throw it at http://localhost:901
+2008-04-01T10:58:00.000Z	Gnea	robm2	and just hand it root's credentials
+2008-04-01T10:59:00.000Z	robm2	Gnea	that doesn't load up. I'm connected to ewbmin just fine though.
+2008-04-01T10:59:00.000Z	Gnea	robm2	is this a personal or production system?
+2008-04-01T11:00:00.000Z	robm2	Gnea	personal
+2008-04-01T11:00:00.000Z	Gnea	robm2	egads, webmin is just... evil! okay, i'll hold back anymore opinions on that... is samba running on the same computer you're on or another host?
+2008-04-01T11:01:00.000Z	Gnea	robm2	oh ok, then point your web browser at that system then, giving it 901 as the port number
+2008-04-01T11:02:00.000Z	robm2	Gnea	I did, unable to connect. I tried connecting using vnc and and I couldn't load http://localhost:901
+2008-04-01T11:03:00.000Z	Gnea	robm2	ok. when you installed swat, did it installed anything else, like openbsd-inetd?
+2008-04-01T11:04:00.000Z	Gnea	robm2	btw, what version of ubuntu do you have on there?
+2008-04-01T11:04:00.000Z	robm2	Gnea	no it doesn't look like it installed anything else
+2008-04-01T11:04:00.000Z	robm2	Gnea	was that supposed to be netstat -nap | grep 901  ?
+2008-04-01T11:05:00.000Z	Gnea	robm2	yes.
+2008-04-01T11:09:00.000Z	robm2	Gnea	when I typed the netstat command, the results were several lines of
+2008-04-01T11:10:00.000Z	Gnea	robm2	ignore those, there should be one that says LISTEN on it
+2008-04-01T11:11:00.000Z	robm2	Gnea	none of them say listen  just lots of stream connected (7 lines)
+2008-04-01T11:12:00.000Z	Gnea	robm2	ok then it didn't start right - do you get any results with this command: dpkg -l | grep ^ii | grep inetd    ?
+2008-04-01T11:13:00.000Z	robm2	Gnea	-bash: pkg: command not found
+2008-04-01T11:13:00.000Z	Gnea	robm2	dpkg  :)
+2008-04-01T11:13:00.000Z	robm2	Gnea	I copies and pasted your line exactly
+2008-04-01T11:14:00.000Z	robm2	Gnea	ii update-inetd 4.27-0.2 inetd.conf updater
+2008-04-01T11:14:00.000Z	Gnea	robm2	ok, give this a shot then: apt-get install xinetd
+2008-04-01T11:15:00.000Z	robm2	Gnea	okay done.
+2008-04-01T11:15:00.000Z	Gnea	robm2	now check it again:   netstat -nap | grep 901 | grep LISTEN
+2008-04-01T11:16:00.000Z	robm2	Gnea	I ran netstat -nap | grep 901 | grep LISTEN and didn't get an error or anything but I still can't load the web page
+2008-04-01T11:17:00.000Z	Gnea	robm2	ok, check to see if this file exists: /etc/xinetd.d/swat
+2008-04-01T11:17:00.000Z	robm2	Gnea	-bash: /etc/xinet.d/swat: No such file or directory
+2008-04-01T11:17:00.000Z	Gnea	robm2	try this then:  dpkg-reconfigure swat
+2008-04-01T11:18:00.000Z	robm2	Gnea	 okay done
+2008-04-01T11:18:00.000Z	Gnea	robm2	see if it's there now
+2008-04-01T11:18:00.000Z	robm2	Gnea	still doesn't exist
+2008-04-01T11:19:00.000Z	robm2	Gnea	rob@Ubuntu:~# dpkg-reconfigure swat
+2008-04-01T11:20:00.000Z	Gnea	robm2	don't worry about pasting anything :)
+2008-04-01T11:20:00.000Z	Gnea	robm2	what number does this command provide?  ls /etc/xinetd.d/ | wc -l
+2008-04-01T11:21:00.000Z	Gnea	robm2	what about http://pastebin.ca ?
+2008-04-01T11:22:00.000Z	robm2	Gnea	http://pastebin.ca/965793
+2008-04-01T11:22:00.000Z	Gnea	robm2	sec
+2008-04-01T11:24:00.000Z	Gnea	robm2	put that in your /etc/xinetd.d/swat  http://pastebin.ca/965796
+2008-04-01T11:26:00.000Z	robm2	Gnea	uh. I dont have a folder inetd.d
+2008-04-01T11:26:00.000Z	robm2	Gnea	i thought maybe I was doing someting wrong in ssh so I loggedin with vnc and I can't find it
+2008-04-01T11:27:00.000Z	Gnea	robm2	it's xinetd.d lol
+2008-04-01T11:29:00.000Z	robm2	Gnea	okay, I created the file swat and pasted your text
+2008-04-01T11:29:00.000Z	Gnea	robm2	ok, now: /etc/init.d/xinetd restart
+2008-04-01T11:29:00.000Z	robm2	Gnea	stopping, starting
+2008-04-01T11:30:00.000Z	robm2	Gnea	okay I can access the webpage now, whats the un/pass same as my regular?
+2008-04-01T11:30:00.000Z	Gnea	robm2	whatever you set root to :)
+2008-04-01T11:30:00.000Z	robm2	Gnea	okay logged in
+2008-04-01T11:30:00.000Z	Gnea	robm2	if you login as regular user you won't be able to do everything
+2008-04-01T11:30:00.000Z	robm2	Gnea	I'm as root
+2008-04-01T11:31:00.000Z	Gnea	robm2	oh ok cool. click on stuff. read things. dive in. enjoy.
+2008-04-01T11:31:00.000Z	robm2	Gnea	:( that doesn't exactly help
+2008-04-01T11:32:00.000Z	Gnea	robm2	the only way to learn it is to, quite honestly, USE it
+2008-04-01T11:32:00.000Z	Gnea	robm2	you've got icons across the top. click on them, experiment, poke around - just don't click on 'commit' yet
+2008-04-01T11:32:00.000Z	robm2	Gnea	i was fine before installing swat. it's just that ever since I installed the new hd and shared a folder my other shares weren't accessable from windows. howe am I supposed to figure out  why
+2008-04-01T11:33:00.000Z	Gnea	robm2	check out your shares button
+2008-04-01T11:33:00.000Z	robm2	Gnea	the existing shares are still there
+2008-04-01T11:33:00.000Z	Gnea	robm2	you should have a drop-down list of all of your shares.
+2008-04-01T11:33:00.000Z	Gnea	robm2	then see if they're browsable or available
+2008-04-01T11:34:00.000Z	robm2	Gnea	browsable is no. if I change that to yes, I supopse that will fix... if I set default that makes it for all shares?
+2008-04-01T11:34:00.000Z	Gnea	robm2	make it 'yes', it will only affect that share.
+2008-04-01T11:35:00.000Z	Gnea	robm2	and if it doesn't work right away, 'restart all' on the status button will fix that :)
+2008-04-01T11:36:00.000Z	robm2	Gnea	neat, one of my shares got deleted when I changed to to browsable and commited changes
+2008-04-01T11:37:00.000Z	Gnea	robm2	are you sure about that? click on another button then go back to it and try to select it again
+2008-04-01T11:37:00.000Z	robm2	Gnea	no, I was mistaken, it keeps changeing to print$. CAn I delete print$ I dont have any printers
+2008-04-01T11:38:00.000Z	Gnea	robm2	print$ is a default printer thing for samba, it's harmless. best off to leave it alone.
+2008-04-01T11:41:00.000Z	robm2	Gnea	when it says available that does that mean. I set browsable adn available to yes on both. I stil can't connect with windows
+2008-04-01T11:42:00.000Z	robm2	Gnea	brb rebooting windows
+2008-04-01T11:47:00.000Z	Gnea	robm2	wb
+2008-04-01T11:48:00.000Z	robm2	Gnea	hi
+2008-04-01T11:48:00.000Z	robm2	Gnea	 rebooted winows. still can't connect to \\myubuntu previously I could atleast do that and see the printers folder now it doesn't even
+2008-04-01T11:48:00.000Z	robm2	Gnea	windows can't find it, check spelling etc.
+2008-04-01T11:48:00.000Z	Gnea	robm2	did you set your windows box to the same workgroup as the samba server?
+2008-04-01T11:49:00.000Z	robm2	Gnea	yes, it always has been. Aside from installing the new hd on ubuntu, and creating the share onthat hd I made absolutely no changes to anything else
+2008-04-01T11:49:00.000Z	robm2	Gnea	that's why I'm so frustrated that it just stopped working and wont see my other shares
+2008-04-01T11:50:00.000Z	Gnea	robm2	ok, just checking. what sort of security do you have set for samba? is it share or user?
+2008-04-01T11:54:00.000Z	robm2	Gnea	some how smb was turned off. started it up again, seems fine.... crossing fingers by readding the share on the new hd
+2008-04-01T11:54:00.000Z	Gnea	robm2	ok
+2008-04-01T11:57:00.000Z	robm2	Gnea	okay looks good thanks. just want to say that swat gui is a little unuser friendly when choosing shares. I have to rechoose the share many times because it keeps loading the printer one even though i picked something else and clicked choose
+2008-04-01T11:58:00.000Z	robm2	Gnea	i appreciate it. time for bed
+2008-04-01T11:58:00.000Z	Gnea	robm2	yeah, it's fairly hard-edged a bit, but it's really the most user-friendly gui for setting up samba correctly
+2008-04-01T11:59:00.000Z	Gnea	robm2	cheers, nite

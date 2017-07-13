@@ -1,0 +1,93 @@
+2008-07-17T04:51:00.000Z	FAJALOU		why would you want / & /home on the same drive?  just put /home on a different partition,
+2008-07-17T04:52:00.000Z	unop	FAJALOU	there could be quite a few reasons for choosing to do that - for one, it is easier to image a single partition rather than two
+2008-07-24T06:09:00.000Z	unop	FAJALOU	does sudo work tho? or does it fail?
+2008-07-24T06:09:00.000Z	FAJALOU	unop	 sudo works, it's just annoying and i never got that in the past.
+2008-07-24T06:09:00.000Z	unop	FAJALOU	/etc/hosts must have an entry for your HOSTNAME for sudo to be able to to resolve your hostname's IP address
+2008-07-24T06:09:00.000Z	unop	FAJALOU	what does this return?  grep $HOSTNAME /etc/hosts
+2008-07-24T06:10:00.000Z	FAJALOU	unop	 i went into the /etc/hosts and added line 127.0.1.1 UP2 and now it works.
+2008-07-24T06:11:00.000Z	unop	FAJALOU	so your problem's resolved now?
+2008-07-29T09:47:00.000Z	unop	FAJALOU	cedega might be able to do it - though it costs...
+2008-07-29T09:47:00.000Z	FAJALOU	unop	 i hear that cedega can't do it either.
+2008-08-12T10:42:00.000Z	unop	FAJALOU	http://ubuntuforums.org/showthread.php?p=5444476
+2008-08-14T12:20:00.000Z	unop	FAJALOU	setting up name resolution in samba.  http://oreilly.com/catalog/samba/chapter/book/ch07_03.html
+2008-08-14T12:23:00.000Z	FAJALOU	unop	confused :|
+2008-08-14T12:26:00.000Z	FAJALOU	unop	going to bed night
+2008-08-15T11:09:00.000Z	unop	FAJALOU	it's not a service, so you don't have to start it, just use it as and when needed
+2008-08-16T12:34:00.000Z	unop	FAJALOU	you might need to use sudo there
+2008-08-16T12:34:00.000Z	unop	FAJALOU	sorry, i misread
+2008-08-16T12:34:00.000Z	unop	FAJALOU	is /home/louie/Network a mount-point?
+2008-08-16T12:34:00.000Z	FAJALOU	unop	yes
+2008-08-16T12:35:00.000Z	unop	FAJALOU	what kind of a volume are you trying to mount there?  i mean, filesystem
+2008-08-16T12:35:00.000Z	FAJALOU	unop	 i am trying to unmount it so i can delete it:  i followed a bad tutorial online
+2008-08-16T12:36:00.000Z	unop	FAJALOU	 sudo umount /home/louie/Network
+2008-08-16T12:36:00.000Z	FAJALOU	unop	 says device is busy?
+2008-08-16T12:37:00.000Z	unop	FAJALOU	do you have any files open on the volume? is your current directory /home/louie/Network ?
+2008-08-16T12:37:00.000Z	FAJALOU	unop	 no not that i know of?
+2008-08-16T12:38:00.000Z	unop	FAJALOU	 try this.  lsof | grep -i "/home/louie/Network"
+2008-08-16T12:40:00.000Z	FAJALOU	unop	  bash       4452      louie  cwd       DIR       0,23      4096          1 /home/louie/Network
+2008-08-16T12:40:00.000Z	unop	FAJALOU	heh,  cd && sudo umount /home/louie/Network
+2008-08-16T12:40:00.000Z	unop	FAJALOU	cd  on it's own takes you to your $HOME directory
+2008-08-16T12:41:00.000Z	unop	FAJALOU	do you happen to have another terminal open?
+2008-08-16T12:42:00.000Z	FAJALOU	unop	 no, there is another directory mounted:  i think it is inside of ~/Network
+2008-08-16T12:42:00.000Z	unop	FAJALOU	you'll need to umount that first then
+2008-08-16T12:43:00.000Z	unop	FAJALOU	hmm,  paste the output of the mount command to the pastebin.
+2008-08-16T12:45:00.000Z	FAJALOU	unop	 http://paste.ubuntu.com/37923/
+2008-08-16T12:45:00.000Z	unop	FAJALOU	no, paste the output of  mount  not umount
+2008-08-16T12:45:00.000Z	unop	FAJALOU	just mount on its own
+2008-08-16T12:46:00.000Z	unop	FAJALOU	bahh.   which pastebinit || sudo aptitude install pastebinit;  pastebinit < <(mount)
+2008-08-16T12:47:00.000Z	unop	FAJALOU	that command will return a URL ..
+2008-08-16T12:49:00.000Z	FAJALOU	unop	http://pastebin.com/f10b7a846
+2008-08-16T12:50:00.000Z	unop	FAJALOU	 does this still return anything?  lsof | grep -i "/home/louie/Network"
+2008-08-16T12:51:00.000Z	FAJALOU	unop	 yes
+2008-08-16T12:51:00.000Z	FAJALOU	unop	bash       4452      louie  cwd       DIR       0,23      4096          1 /home/louie/Network
+2008-08-16T12:52:00.000Z	unop	FAJALOU	hmm. you still have a terminal/shell open that is accessing this directory ..
+2008-08-16T12:53:00.000Z	FAJALOU	unop	 opening system-manager to investigate
+2008-08-16T12:53:00.000Z	unop	FAJALOU	you could just kill that pid.  kill 4452
+2008-08-16T12:54:00.000Z	FAJALOU	unop	 it turns back nothing!!! whoot, fusesmb was still running in the background
+2008-08-16T12:55:00.000Z	FAJALOU	unop	 i killed fusesmb and it unmounted. cool
+2008-08-16T12:55:00.000Z	unop	FAJALOU	that's a bit unsafe .. you should run an fsck on the device now to make sure
+2008-08-16T12:55:00.000Z	FAJALOU	unop	 just run sudo fsck now?
+2008-08-16T12:57:00.000Z	FAJALOU	unop	 how should i fsck it?
+2008-08-16T12:58:00.000Z	FAJALOU	unop	 how should i fsck it?
+2008-08-16T12:58:00.000Z	unop	FAJALOU	 it was a bit unclear from your mount output which network volume was mounted there - basically you want to fsck the device that housed the shared directory
+2008-08-16T12:59:00.000Z	FAJALOU	unop	so the device that housed ~/Network?
+2008-08-16T12:59:00.000Z	unop	FAJALOU	no, the device that housed the shared directory that was mounted on ~/Network ..
+2008-08-16T12:59:00.000Z	unop	FAJALOU	this might be on a remote machine
+2008-08-16T13:00:00.000Z	FAJALOU	unop	that was my computer's home directory...
+2008-08-16T13:01:00.000Z	unop	FAJALOU	i'm confused .. you mounted a local share on a local directory?
+2008-08-16T13:01:00.000Z	unop	FAJALOU	ok, then you fsck the device that houses the home directory
+2008-08-16T13:02:00.000Z	unop	FAJALOU	that might require you to step down into single user mode and unmount the device first
+2008-08-16T13:03:00.000Z	unop	FAJALOU	yes
+2008-08-25T08:44:00.000Z	unop	FAJALOU	chkdsk in windows safe mode
+2008-08-25T08:45:00.000Z	FAJALOU	unop	 he cannot access windows
+2008-08-25T08:46:00.000Z	unop	FAJALOU	well, only the windows tools can reliably restore the volume .. so you might want to investigate more on this in ##windows
+2008-08-25T08:52:00.000Z	unop	FAJALOU	and how is he trying to mount this device now?
+2008-08-25T08:53:00.000Z	FAJALOU	unop	 usser:    sudo ntfs-3g /dev/sdc1 /mount/Window_Corrupt -o force
+2008-08-25T08:54:00.000Z	unop	FAJALOU	he's got the command all wrong
+2008-08-25T08:54:00.000Z	FAJALOU	unop	 when he plugged in that command it went through successfully
+2008-08-25T08:55:00.000Z	FAJALOU	unop	 so where can his drive now?
+2008-08-25T08:55:00.000Z	unop	FAJALOU	use mount to find out
+2008-08-25T08:55:00.000Z	FAJALOU	unop	 just type in mount?
+2008-08-25T08:55:00.000Z	unop	FAJALOU	yes
+2008-08-25T09:03:00.000Z	FAJALOU	unop	usser:  it worked thank you
+2009-12-24T10:33:00.000Z	unop	FAJALOU	 pm-suspend  # but it isn't the command used when suspending
+2009-12-24T10:33:00.000Z	FAJALOU	unop	 when i put that in, it ways that it must be run as root, but i don't have to press the button on gnome-panel as root?
+2009-12-24T10:34:00.000Z	unop	FAJALOU	like i said, it isn't the command used in suspending
+2009-12-24T10:34:00.000Z	FAJALOU	unop	 that one works, so do you know what the command is actually?
+2009-12-24T10:35:00.000Z	unop	FAJALOU	the gnome-power-manager (or equivalent) and acpi handle it using system calls, etc - no commands really used in the process
+2009-12-24T10:35:00.000Z	FAJALOU	unop	 what?  can you tell me what/where i can look to see what command occurs when i press that button
+2009-12-24T10:36:00.000Z	unop	FAJALOU	what's unclear about my language? i said no commands are used
+2009-12-24T10:37:00.000Z	FAJALOU	unop	 how can no commands be used?!  Last time it was gnome-pwr-cmd, but that is no longer available?
+2009-12-24T10:37:00.000Z	unop	FAJALOU	maybe you need to define 'commands'. do you mean shell commands or API calls?
+2009-12-24T10:38:00.000Z	FAJALOU	unop	 lol.  what  i want to do is link a key combination to a command, or api call, so my computer suspends.
+2009-12-24T10:40:00.000Z	unop	FAJALOU	see http://ubuntuforums.org/showthread.php?t=813387&page=2
+2009-12-24T10:40:00.000Z	FAJALOU	unop	as the forums says; the shortcut isn't working...
+2009-12-24T10:42:00.000Z	unop	FAJALOU	but this guy claims it does - http://ubuntuforums.org/showpost.php?p=8309702&postcount=16
+2009-12-24T10:42:00.000Z	FAJALOU	unop	 right yah lowre down.  how does the gui suspend w/o a command/sudo pw?
+2009-12-24T10:43:00.000Z	unop	FAJALOU	he uses the DBUS command line interface to send DBUS messages to the power manager - not really a command per se and it doesn't require root/sudo privileges
+2009-12-24T10:44:00.000Z	FAJALOU	unop	 is there a way to bind my command to that?
+2009-12-24T10:45:00.000Z	unop	FAJALOU	yea, the code is for a shell script, copy it into a text file, save it, make it executable and then call it passing the appropriate argument/parameter i.e. 'suspend' or 'hibernate'
+2009-12-24T10:45:00.000Z	FAJALOU	unop	 haha. ohk :)
+2009-12-24T10:47:00.000Z	FAJALOU	unop	 YES! thanks!
+2009-12-24T10:47:00.000Z	FAJALOU	unop	 i am also having issues with notifications in empathy?
+2009-12-24T10:49:00.000Z	FAJALOU	unop	 where are custom keybindings saved?  i am still getting an error that gnome-pwr-cmd cannot be found :(

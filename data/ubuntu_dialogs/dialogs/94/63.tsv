@@ -1,0 +1,94 @@
+2008-07-16T13:08:00.000Z	ethana2		who's up for a challenge?
+2008-07-16T13:08:00.000Z	ikonia	ethana2	just ask the question
+2008-07-16T13:09:00.000Z	ikonia	ethana2	why dont you tell us the isue
+2008-07-16T13:10:00.000Z	ikonia	ethana2	tell us the problem
+2008-07-16T13:10:00.000Z	ikonia	ethana2	your talking and not saying anything
+2008-07-16T13:11:00.000Z	ikonia	ethana2	no you don't
+2008-07-16T13:11:00.000Z	ethana2	ikonia	i don't what?
+2008-07-16T13:11:00.000Z	ikonia	ethana2	you need to boot from the "safe" or fall back mode
+2008-07-16T13:11:00.000Z	ikonia	ethana2	you don't need to chroot anything
+2008-07-16T13:11:00.000Z	ikonia	ethana2	so ?
+2008-07-16T13:11:00.000Z	ikonia	ethana2	you wanted xorg fixe
+2008-07-16T13:11:00.000Z	ethana2	ikonia	so i can't get online
+2008-07-16T13:12:00.000Z	ikonia	ethana2	so ?
+2008-07-16T13:12:00.000Z	ikonia	ethana2	you wanted to fix you
+2008-07-16T13:12:00.000Z	ikonia	ethana2	what are you talking about survived libc6 ?
+2008-07-16T13:12:00.000Z	ikonia	ethana2	what are you talking about libc6 for ?
+2008-07-16T13:12:00.000Z	ethana2	ikonia	libc6 on hardy alpha 3
+2008-07-16T13:13:00.000Z	ikonia	ethana2	what has that got to do with anything on your current problem ?
+2008-07-16T13:13:00.000Z	ikonia	ethana2	stop for a minute
+2008-07-16T13:13:00.000Z	ikonia	ethana2	1.) has gnome always crashed 2.) how/when does it crash 3.) what changed to make it start crashing
+2008-07-16T13:14:00.000Z	ikonia	ethana2	just answer my questions, thats all we want
+2008-07-16T13:14:00.000Z	ikonia	ethana2	why are you doing startx ?
+2008-07-16T13:14:00.000Z	ikonia	ethana2	gnome should launch by default
+2008-07-16T13:14:00.000Z	ikonia	ethana2	has it ever ?
+2008-07-16T13:14:00.000Z	ikonia	ethana2	so what did you change
+2008-07-16T13:15:00.000Z	ikonia	ethana2	it just reset ?
+2008-07-16T13:15:00.000Z	ikonia	ethana2	shut down properly, as in normally - or did it just flick off
+2008-07-16T13:15:00.000Z	ikonia	ethana2	that doesnt happen - machines don't do a tidy shutdown for no reason
+2008-07-16T13:16:00.000Z	ethana2	ikonia	then i'm going insane
+2008-07-16T13:16:00.000Z	ikonia	ethana2	I don't think your being %100 honest
+2008-07-16T13:16:00.000Z	ikonia	ethana2	I can see that
+2008-07-16T13:16:00.000Z	ikonia	ethana2	tell me a little more about what really happened ? did you click shutdown ? did you type reboot ?
+2008-07-16T13:17:00.000Z	ethana2	ikonia	i was watching it apply updates
+2008-07-16T13:17:00.000Z	ethana2	ikonia	then the screen goes black and i see text
+2008-07-16T13:17:00.000Z	ikonia	ethana2	thats not possible. X to crash and you see text - sure, but a machine doesn't do a controlled shutdown without user interaction
+2008-07-16T13:18:00.000Z	ethana2	ikonia	i know it's not possible, which is part of why i'm not liking this--  the universe is out to frigging get me
+2008-07-16T13:18:00.000Z	ikonia	ethana2	no it woulnd't
+2008-07-16T13:18:00.000Z	ikonia	ethana2	machines can't do controlled shutdown on their own
+2008-07-16T13:18:00.000Z	ikonia	ethana2	they crash - or stay up
+2008-07-16T13:19:00.000Z	ikonia	ethana2	well, first thing to do is check the hardware
+2008-07-16T13:19:00.000Z	ethana2	ikonia	 ...okay
+2008-07-16T13:19:00.000Z	ethana2	ikonia	you want a pastebin of my lshw ?
+2008-07-16T13:19:00.000Z	ikonia	ethana2	check the cpu fan, run memtest for say 4 -5 hours let it run through at least 3 complete passes
+2008-07-16T13:20:00.000Z	ikonia	ethana2	no thanks, don't need to see your hardware, you need to run a few basic checks on it
+2008-07-16T13:20:00.000Z	ikonia	ethana2	or however long it take for 3 - 4 complete passes
+2008-07-16T13:20:00.000Z	ikonia	ethana2	on most machines thats 4 -5 hours
+2008-07-16T13:20:00.000Z	ikonia	ethana2	so about 4 - 5 hours then
+2008-07-16T13:21:00.000Z	ikonia	ethana2	have you ever run memcheck before ?
+2008-07-16T13:21:00.000Z	ethana2	ikonia	i got myself into this mess right before time to go to bed..  i don't suppose i can pass memtest the 'three complete passes' parameter?
+2008-07-16T13:21:00.000Z	ethana2	ikonia	once, to see what it did
+2008-07-16T13:22:00.000Z	ikonia	ethana2	just let it run over night
+2008-07-16T13:22:00.000Z	ikonia	ethana2	more than 3 passes is fine
+2008-07-16T13:22:00.000Z	ikonia	ethana2	let it run and go to sleep
+2008-07-16T13:22:00.000Z	ethana2	ikonia	alright
+2008-07-16T13:22:00.000Z	ikonia	ethana2	come back in the morning with the results
+2008-07-16T13:22:00.000Z	ikonia	ethana2	with a little luck it will be 0 errors
+2008-07-16T20:02:00.000Z	ikonia	ethana2	how should we know ?
+2008-07-16T20:02:00.000Z	ikonia	ethana2	sometimes parts can be faulty - thats not just dell
+2008-07-16T20:04:00.000Z	ethana2	ikonia	I ran memtest and it failed
+2008-07-16T20:04:00.000Z	ikonia	ethana2	no problem,
+2008-07-16T20:04:00.000Z	ethana2	ikonia	do you see machines fail often?
+2008-07-16T20:05:00.000Z	ikonia	ethana2	not really
+2008-07-16T20:05:00.000Z	ethana2	ikonia	yeah, something's out to get me
+2008-07-16T21:16:00.000Z	ethana2	ikonia	memtest saw the problem, but the dell diagnostic didn't so far, and that's what they want to see
+2008-07-16T21:30:00.000Z	ikonia	ethana2	it can be things like temperature related, so maybe it only shows up after X ammount of time
+2008-07-16T21:32:00.000Z	ethana2	ikonia	if it took 5 hours for the error to happen, would you say it could be ignored?
+2008-07-16T21:32:00.000Z	ikonia	ethana2	no
+2008-07-16T21:33:00.000Z	ethana2	ikonia	dell wants me to reinstall first, so I'm doing that now..
+2008-07-16T21:33:00.000Z	ikonia	ethana2	ok
+2008-11-30T03:37:00.000Z	ikonia	ethana2	probably because your not using a shared /boot partition
+2008-11-30T03:37:00.000Z	ethana2	ikonia	I think I'd have to wipe my Dell Utility partition..
+2008-11-30T03:37:00.000Z	ikonia	ethana2	no
+2008-11-30T03:37:00.000Z	ethana2	ikonia	Do you think Dell would get mad?
+2008-11-30T03:37:00.000Z	ikonia	ethana2	use an extended partition
+2008-11-30T03:38:00.000Z	ethana2	ikonia	I am
+2008-11-30T03:38:00.000Z	ethana2	ikonia	wait, you can put a shared /boot on an extended partition you mean?
+2008-11-30T03:38:00.000Z	ikonia	ethana2	yes
+2008-11-30T03:38:00.000Z	ikonia	ethana2	lay it out how you want, but make sure you use a shared /boot
+2008-11-30T03:39:00.000Z	ethana2	ikonia	Do you think wiping the defective Dell utility partition would void my warranty or anything?
+2008-11-30T03:39:00.000Z	ikonia	ethana2	contact dell
+2008-11-30T03:39:00.000Z	ethana2	ikonia	After returning my Dell three times already for repair, the last thing I want to do is involve them for anything...
+2008-11-30T03:40:00.000Z	ikonia	ethana2	you need to ask them, rather than take the word of strangers on an irc channel as to the legality of your warrenty
+2008-11-30T03:41:00.000Z	ikonia	ethana2	gents take the dell bashing elsewhere please
+2008-11-30T03:41:00.000Z	ethana2	ikonia	sorry, my mom got a 1525n and it's going very well for her
+2008-11-30T03:51:00.000Z	ikonia	ethana2	please stop discussing dell - I asked you a few minutes ago
+2008-11-30T03:52:00.000Z	ethana2	ikonia	sorry, how about this:  How do I get a version of Ubuntu with debug symbols compiled in?
+2008-11-30T03:52:00.000Z	ikonia	ethana2	strip the binaries
+2008-11-30T03:52:00.000Z	ikonia	ethana2	why does debug symbols matter to you ?
+2008-11-30T03:53:00.000Z	ethana2	ikonia	because when stuff crashes I run it in gdb, and it always says 'no debug symbols found' (x100) then 'oh, by the way, this app crashed
+2008-11-30T03:53:00.000Z	ikonia	ethana2	oh, you want it WITH debug symbols in
+2008-11-30T03:53:00.000Z	ethana2	ikonia	yes
+2008-11-30T03:53:00.000Z	ikonia	ethana2	sorry, I miss-read
+2008-11-30T03:53:00.000Z	ikonia	ethana2	there are normally packages with debug sybols in the repo, eg: core-utils, core-utils-debug-sybols
+2008-11-30T03:54:00.000Z	ikonia	ethana2	doubt you'll find all packages the same

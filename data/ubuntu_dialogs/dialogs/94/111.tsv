@@ -1,0 +1,94 @@
+2005-10-02T10:45:00.000Z	dooglus		we mostly use the american system, but traditionally 10^12 is a billion, 10^9 is a thousand million and 10^6 is a million.  no milliard anywhere
+2005-10-02T10:46:00.000Z	dooglus		!tell atty about java
+2005-10-02T10:46:00.000Z	_jason	dooglus	 its not as bad as the 80 in french
+2005-10-02T10:46:00.000Z	_jason	dooglus	 yeah... makes no sense to me
+2005-10-03T09:02:00.000Z	dooglus	_jason	I think you just need to bookmark places in nautilus
+2005-10-03T09:02:00.000Z	dooglus	_jason	but don't bookmark too much, especially remote places, or you'll find your system start crawling)
+2005-10-03T09:03:00.000Z	_jason	dooglus	 thanks, but I wanted to remove a link: for example "Desktop"
+2005-10-03T09:03:00.000Z	dooglus	_jason	I don't know if you can.
+2005-10-10T10:53:00.000Z	_jason	dooglus	both, I upgraded to totem-xine when I say it in gstreamer... it uses the codec MPEG (libmpeg2) do you know if there is a newer one?
+2005-10-10T10:53:00.000Z	dooglus	_jason	did you try mplayer?  is that the same?  could it be the saturation is turned down on the video overlay?
+2005-10-10T10:54:00.000Z	_jason	dooglus	how can i change the saturation?
+2005-10-10T10:55:00.000Z	dooglus	_jason	I have a crappy sis card,and I use 'sisctrl' to adjust the levels.  I guess it's different for different cards
+2005-10-10T10:55:00.000Z	_jason	dooglus	 oh ok
+2005-10-27T08:51:00.000Z	dooglus	_jason	if you want a take a screenshot without user interaction: "import -window root /tmp/screen.png" will do it.  it's in the 'imagemagick' package.
+2005-11-04T07:54:00.000Z	dooglus	_jason	don't use -O if you're using -P
+2005-11-04T07:55:00.000Z	_jason	dooglus	 thanks!
+2005-11-28T09:43:00.000Z	_jason	dooglus	install flashplayer-mozilla as well
+2005-11-28T09:47:00.000Z	dooglus	_jason	as well, or instead of?
+2005-11-28T09:48:00.000Z	_jason	dooglus	I only have the mozilla one isntalled and it works however I have seen people recommend installing both
+2005-11-28T09:49:00.000Z	dooglus	_jason	I removed the 'nonfree' and installed the one you suggested.  that worked, thanks.
+2005-11-28T09:49:00.000Z	_jason	dooglus	great
+2005-12-14T17:37:00.000Z	_jason	dooglus	what's that?
+2005-12-14T17:37:00.000Z	_jason	dooglus	is 1.5 patched against it?
+2005-12-17T06:10:00.000Z	dooglus	_jason	I don't know of a utility, but you can expand the .deb files and compare the contents.
+2005-12-17T06:10:00.000Z	dooglus	_jason	use "ar xf <file.deb>" to get two .tgz files, and 'tar xf' to expand them
+2005-12-17T06:11:00.000Z	_jason	dooglus	hrmm I meant like if I had libflashplayer.so and wanted to change the second byte to 7 instead of 3 or something
+2005-12-17T06:12:00.000Z	_jason	dooglus	basically automating what would be done in a hex editor
+2005-12-17T06:13:00.000Z	dooglus	_jason	got a minute or two?
+2005-12-17T06:13:00.000Z	_jason	dooglus	sure
+2005-12-17T06:13:00.000Z	dooglus	_jason	sorry.  what did you want to do?
+2005-12-17T06:14:00.000Z	dooglus	_jason	you want to script the editing of a binary file?
+2005-12-17T06:14:00.000Z	_jason	dooglus	basically I can go into a hex editor and edit the nth byte to whatever value I want.  I was wondering if there was a command line utility.
+2005-12-17T06:14:00.000Z	_jason	dooglus	yeah, I guess I could do it in perl or some other language but I thought there may be something like sed for it
+2005-12-17T06:14:00.000Z	dooglus	_jason	it would be easy enough to do with a python script
+2005-12-17T06:15:00.000Z	_jason	dooglus	k thanks
+2005-12-17T06:18:00.000Z	dooglus	_jason	like this: echo 'abcdef' > file.txt; python -c "f = open('file.txt', 'r+'); f.seek(3); f.write('z')"; cat file.txt
+2005-12-17T06:18:00.000Z	_jason	dooglus	ah thanks! you didn't have to, I would have looked it up :)
+2005-12-17T06:19:00.000Z	dooglus	_jason	it's ok.  helps me remember it too :)
+2005-12-17T06:20:00.000Z	dooglus	_jason	if you want to specify the byte in hex: echo 'abcdef' > file.txt; python -c "f = file('file.txt', 'r+'); f.seek(3); f.write('%c' % 0x41)"; cat file.txt
+2005-12-22T10:08:00.000Z	dooglus	_jason	bash: .bashrc: command not found
+2005-12-22T10:08:00.000Z	_jason	dooglus	.bashrc
+2005-12-22T10:08:00.000Z	_jason	dooglus	edit that file :P
+2005-12-22T10:09:00.000Z	dooglus	_jason	ok
+2005-12-22T10:09:00.000Z	_jason	dooglus	~/.bashrc
+2005-12-22T10:09:00.000Z	_jason	dooglus	search for 'prompt' and you'll see where the info is.  You'll probably need to see the man or google to see what you can add in there
+2005-12-23T07:31:00.000Z	_jason	dooglus	I wish I knew, I curse at java every time I view top
+2005-12-23T07:32:00.000Z	dooglus	_jason	I wrote a little alias that lists my processes in order of size.  the java_vm is always huge.
+2005-12-26T17:37:00.000Z	_jason	dooglus	?
+2005-12-26T17:38:00.000Z	dooglus	_jason	quite a few content types need plugins which are only available for windows
+2005-12-26T17:38:00.000Z	_jason	dooglus	ok
+2005-12-26T08:14:00.000Z	dooglus	_jason	if you've set up a service like ssh, wouldn't that be because you wanted people to connect to the ssh port?  and if so, why would you then block that port with a firewall?
+2005-12-26T08:15:00.000Z	_jason	dooglus	you may want to control who connects using the firewall?
+2005-12-26T08:15:00.000Z	dooglus	_jason	fair enough.
+2005-12-26T08:16:00.000Z	_jason	dooglus	to be honest I don't really know :), but if I see someone running a dictionary attack I just block him for a couple of hours
+2005-12-28T08:33:00.000Z	dooglus	_jason	if you say "tar xf file.tar a b c" it will only extract a, b and c from file.tar.  the a, b and c arguments refer to contents of file.tar - they aren't treated as tarfiles themselves
+2005-12-28T08:33:00.000Z	_jason	dooglus	ah I see
+2005-12-28T09:22:00.000Z	_jason	dooglus	markive ctrl+H
+2006-01-17T16:15:00.000Z	_jason	dooglus	mwe, so is that just to unzip recursively basically?
+2006-01-18T10:51:00.000Z	_jason	dooglus	checkinstall is broken in breezy?
+2006-01-18T10:52:00.000Z	dooglus	_jason	in dapper, sorry.
+2006-01-18T10:52:00.000Z	_jason	dooglus	oops, yeah just read your next line ;P  had me worried I couldn't remove all my checkinstall packages
+2006-01-23T11:33:00.000Z	dooglus	_jason	I've heard reports that some people have "adm" as the admin group rather than "admin" in their sudoers.  I don't know if that's something left over from hoary, or where it comes from
+2006-01-23T11:33:00.000Z	_jason	dooglus	oh, I did not know that
+2006-01-23T11:34:00.000Z	dooglus	_jason	I don't know it for a fact, but I've seen a couple of people here with "adm" as their admin group
+2006-01-23T11:34:00.000Z	_jason	dooglus	even in /etc/sudoers?
+2006-01-23T11:34:00.000Z	dooglus	_jason	yes
+2006-01-23T11:34:00.000Z	_jason	dooglus	interesting
+2006-02-26T16:01:00.000Z	_jason	dooglus	ubuntu-base I think
+2006-03-01T11:09:00.000Z	_jason	dooglus	wow, more than what the man lists, now to find out what they all mean
+2006-03-04T08:13:00.000Z	_jason	dooglus	doesn't exist for me in ff1.5, might be an addon from the ubuntu team?
+2006-03-04T08:14:00.000Z	dooglus	_jason	right; I meant in the default breezy install.
+2006-03-04T08:36:00.000Z	_jason	dooglus	irc.freenode.net died for me, what happened with the firefox bug?
+2006-03-04T08:37:00.000Z	dooglus	_jason	search for NoAsk in /usr/share/doc/firefox/changelog.Debian.gz
+2006-03-04T08:38:00.000Z	_jason	dooglus	not on dapper, but I believe you :)
+2006-03-07T13:53:00.000Z	_jason	dooglus	it only does libs with default options I believe
+2006-03-07T13:54:00.000Z	dooglus	_jason	'libs'?  you mean it only considers removing libraries?  I've had it remove all kinds of packages, not just libraries
+2006-03-07T13:54:00.000Z	_jason	dooglus	I haven't used it much but I think taht's what I read in the man
+2006-03-07T13:55:00.000Z	_jason	dooglus	wait never mind, I am talking about deborphan
+2006-03-07T13:59:00.000Z	dooglus	_jason	I see.  I was wondering if it might be the "UseRecommends = yes" setting, but even changing that still doesn't make it ask about nano
+2006-05-11T11:06:00.000Z	dooglus	_jason	I right click and say 'open with'.  I see 'mplayer' in the list.  will clicking it change the default?
+2006-05-11T11:06:00.000Z	_jason	dooglus	no, click on properties then open with tab
+2006-05-11T11:06:00.000Z	dooglus	_jason	magical!  thanks a lot!
+2006-05-11T11:07:00.000Z	_jason	dooglus	use totem-xine
+2006-05-11T11:08:00.000Z	dooglus	_jason	I heard that totem-gstreamer was supposed to be great in dapper.  does it still not work?
+2006-05-11T11:09:00.000Z	_jason	dooglus	I don't know, I haven't tried it
+2006-05-15T09:41:00.000Z	dooglus	_jason	why do you suggest 'sudo' sometimes and 'gksudo' others?  is there any advantage of one over the other?  I use 'sudo' for everything, myself.
+2006-05-15T09:41:00.000Z	_jason	dooglus	gksudo for gui stuff
+2006-05-15T09:41:00.000Z	dooglus	_jason	sudo works for gui stuff too for me
+2006-05-15T09:42:00.000Z	_jason	dooglus	yes, but you run the risk of having an app writing to config files in your $HOME as root and changing ownership (seems to happen with k3b for example)
+2006-05-15T09:42:00.000Z	_jason	dooglus	like some of those .Xauthority ownership problems we see sometimes are most likely due to something like that
+2006-05-15T09:42:00.000Z	dooglus	_jason	I think that was an old k3b bug.  It doesn't happen any more, does it.
+2006-06-09T06:22:00.000Z	dooglus	_jason	what about 'grumpy groundhog'?  did that get cancelled?
+2006-06-09T06:23:00.000Z	_jason	dooglus	I heard something about that.  I think it was supposed to be more bleeding edge, right?  Don't know about it's progress
+2006-06-09T06:25:00.000Z	dooglus	_jason	I think the idea was that grumpy would never be frozen - a bit like debian sid

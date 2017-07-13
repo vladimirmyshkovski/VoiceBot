@@ -17,7 +17,9 @@ bot = ChatBot(
 	trainer="chatterbot.trainers.UbuntuCorpusTrainer"
 )
 
+bot.train()
 
+bot.logger.info('Trained database generated successfully!')
 
 
 def get_feedback():

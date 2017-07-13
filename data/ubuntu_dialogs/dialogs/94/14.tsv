@@ -1,0 +1,94 @@
+2011-01-09T11:15:00.000Z	DBoyz		i set my bios (or something like that) to boot my thumb
+2011-01-09T11:17:00.000Z	DBoyz		pendrive linux's software i downloaded
+2011-01-09T11:17:00.000Z	rusty149	DBoyz	Are you in Windows atm
+2011-01-09T11:17:00.000Z	rusty149	DBoyz	Did you get that software via the Ubuntu site
+2011-01-09T11:19:00.000Z	rusty149	DBoyz	Do you know how to set USB as the first boot device in BIOS
+2011-01-09T11:20:00.000Z	DBoyz	rusty149	yes, i set my laptop to boot usb first since october when i tried ubuntu 10.04
+2011-01-09T11:21:00.000Z	rusty149	DBoyz	So what happens when you try to boot?
+2011-01-09T11:22:00.000Z	DBoyz	rusty149	currently i am trying to install ubuntu 10.10, what i got is the error i mention above
+2011-01-09T11:24:00.000Z	rusty149	DBoyz	Is the error message during pendrivelinux software making the usb stick
+2011-01-09T11:25:00.000Z	rusty149	DBoyz	Sorry, It is during install, so you see the ubuntu GUI installer?
+2011-01-09T11:27:00.000Z	rusty149	DBoyz	Just clarify what stage you were at when you got the error message. In W7, pendrivelinux, grub, ubuntu splash screen ???
+2011-01-09T11:35:00.000Z	DBoyz	rusty149	anything yet?
+2011-01-09T11:55:00.000Z	DBoyz	rusty149	okay
+2011-01-09T11:57:00.000Z	rusty149	DBoyz	Have you tried the alternate install CD
+2011-01-09T11:57:00.000Z	rusty149	DBoyz	Have you tried the alternate install USB
+2011-01-09T11:58:00.000Z	rusty149	DBoyz	Yes it is a seperate .iso  it uses a text-based installer
+2011-01-09T12:01:00.000Z	rusty149	DBoyz	Here is the link,  http://releases.ubuntu.com/maverick/ubuntu-10.10-alternate-amd64.iso
+2011-01-09T12:01:00.000Z	DBoyz	rusty149	im here to seek help before i re-download the .iso
+2011-01-09T12:05:00.000Z	rusty149	DBoyz	That isn't an issue. Just stick with pendrivelinux
+2011-01-09T12:08:00.000Z	DBoyz	rusty149	is there a way to know that the .iso file i downloaded isn't corrupted? i was using download accelerator and got dc-ed twice during dl-ing
+2011-01-09T12:08:00.000Z	rusty149	DBoyz	Anyway, back to the problem. The alternate .iso produces the same version of Ubuntu but uses a different text-based installer with more functions
+2011-01-09T12:08:00.000Z	rusty149	DBoyz	Use md5
+2011-01-09T12:15:00.000Z	DBoyz	rusty149	Flare183: checked, they are the same value
+2011-01-09T12:17:00.000Z	rusty149	DBoyz	OK, so the problem is elsewhere. I stiill suggest the alternative install
+2011-01-09T12:26:00.000Z	DBoyz	rusty149	where do i download ubuntu alternate iso file?
+2011-01-09T12:27:00.000Z	rusty149	DBoyz	http://releases.ubuntu.com/maverick/ubuntu-10.10-alternate-amd64.iso
+2011-01-10T17:47:00.000Z	rusty149	DBoyz	When installing alternate form pendrivelinux, what do you see
+2011-01-10T17:47:00.000Z	DBoyz	rusty149	ello there, nice to meet you again
+2011-01-10T17:49:00.000Z	rusty149	DBoyz	is that a graphical menu?
+2011-01-10T17:50:00.000Z	rusty149	DBoyz	OK, if yo uhave option for Try ubuntu without installing, then that is not alternate cd
+2011-01-10T17:51:00.000Z	DBoyz	rusty149	there's no option for alternate iso's on pendrivelinux
+2011-01-10T17:53:00.000Z	rusty149	DBoyz	You should still use the Ubuntu option, but make sure the correct .iso is selected.
+2011-01-10T17:54:00.000Z	rusty149	DBoyz	What is the name of the .iso you are using?
+2011-01-10T17:56:00.000Z	DBoyz	rusty149	i only realized that it was amd64 instead of i386 after 3 hours of dl-ing
+2011-01-10T17:57:00.000Z	rusty149	DBoyz	Which one do you need?
+2011-01-10T17:58:00.000Z	rusty149	DBoyz	does your computer support 64-bit
+2011-01-10T18:03:00.000Z	rusty149	DBoyz	Try  unlisted linux iso (New Syslinux)
+2011-01-10T18:04:00.000Z	DBoyz	rusty149	whats that?
+2011-01-10T18:04:00.000Z	rusty149	DBoyz	I don't think you are selecting the correct file, so that will let you select any file.
+2011-01-10T18:05:00.000Z	rusty149	DBoyz	In Universal USB Installer, select it as the distro from bottom of list
+2011-01-10T18:07:00.000Z	DBoyz	rusty149	any link to dl new syslinux?
+2011-01-10T18:07:00.000Z	rusty149	DBoyz	No
+2011-01-10T18:07:00.000Z	rusty149	DBoyz	Just choose it from the list
+2011-01-10T18:09:00.000Z	rusty149	DBoyz	In pendrivelinux program choose it as a distrubution, Try unlisted linux iso (new syslinux)
+2011-01-10T18:09:00.000Z	rusty149	DBoyz	Then when Browsing for .iso you be able to select ubuntu-10.10-alternate-amd64
+2011-01-10T18:11:00.000Z	rusty149	DBoyz	For other distributions it restricts you to only files with expected name
+2011-01-10T18:12:00.000Z	rusty149	DBoyz	Just select the USB drive and install it
+2011-01-10T18:14:00.000Z	DBoyz	rusty149	whats the advantage/disadvantage of using amd64?
+2011-01-10T18:26:00.000Z	rusty149	DBoyz	Intel i3 can do 64-bit OS
+2011-01-11T09:07:00.000Z	DBoyz	rusty149	your method didn't work
+2011-01-11T09:07:00.000Z	rusty149	DBoyz	sorry, what method?
+2011-01-11T09:08:00.000Z	DBoyz	rusty149	using try unlisted linux iso (new syslinux) on pendrivelinux
+2011-01-11T09:09:00.000Z	rusty149	DBoyz	Did you see the alternate install screen?
+2011-01-11T09:10:00.000Z	DBoyz	rusty149	NO only a blinking underscore
+2011-01-11T09:11:00.000Z	rusty149	DBoyz	Did you see the Ubuntu logo and some options below?
+2011-01-11T09:11:00.000Z	DBoyz	rusty149	not at all
+2011-01-11T09:14:00.000Z	rusty149	DBoyz	Haave you checked the md5sum?
+2011-01-11T09:15:00.000Z	DBoyz	rusty149	what's the checklist link?
+2011-01-11T09:16:00.000Z	rusty149	DBoyz	http://releases.ubuntu.com/maverick/MD5SUMS
+2011-01-11T09:19:00.000Z	DBoyz	rusty149	values are the same
+2011-01-11T09:23:00.000Z	rusty149	DBoyz	There is a usb-startup-disk.exe creator on the cdimages. It is same software used in Linux and always works. you could try that
+2011-01-11T09:24:00.000Z	DBoyz	rusty149	links to dl that one pls
+2011-01-11T09:27:00.000Z	rusty149	DBoyz	have you got an ubuntu cd?
+2011-01-11T09:29:00.000Z	rusty149	DBoyz	can you mount the .iso , if not use this http://www.slysoft.com/en/virtual-clonedrive.html
+2011-01-11T09:29:00.000Z	DBoyz	rusty149	what's that
+2011-01-11T09:30:00.000Z	rusty149	DBoyz	after install it will let you open .iso files and read it just like a burnt cd
+2011-01-11T09:31:00.000Z	rusty149	DBoyz	simply double-click and treats it like a folder
+2011-01-11T09:32:00.000Z	DBoyz	rusty149	what do i do next?
+2011-01-11T09:32:00.000Z	rusty149	DBoyz	After install, open the ubuntu .iso and copy usb-creator.exe to your computer
+2011-01-11T09:40:00.000Z	DBoyz	rusty149	im not seeing the reason why i should install that software. i have 7-zip
+2011-01-11T09:41:00.000Z	rusty149	DBoyz	ok, use that then if it supports iso's. But Virtual Clone is different as it mounts the image like a cd drive
+2011-01-11T09:42:00.000Z	rusty149	DBoyz	Open usb-creator.exe
+2011-01-11T09:49:00.000Z	DBoyz	rusty149	what do i do now?
+2011-01-11T09:49:00.000Z	rusty149	DBoyz	open usb-creator.exe
+2011-01-11T09:50:00.000Z	rusty149	DBoyz	click Other...  and selct ubuntu-10.10-alternate-amd64.iso
+2011-01-11T09:51:00.000Z	rusty149	DBoyz	or i386  if you don't have 64bit
+2011-01-11T09:59:00.000Z	DBoyz	rusty149	i got message md5sum don't match
+2011-01-11T10:00:00.000Z	rusty149	DBoyz	from that software
+2011-01-11T10:00:00.000Z	rusty149	DBoyz	can you skip it?
+2011-01-11T10:01:00.000Z	rusty149	DBoyz	you have already check so skip
+2011-01-11T10:10:00.000Z	rusty149	DBoyz	watch this if you are still confused
+2011-01-11T10:11:00.000Z	DBoyz	rusty149	it says installation failed
+2011-01-11T10:12:00.000Z	rusty149	DBoyz	in the windows program?
+2011-01-11T10:14:00.000Z	rusty149	DBoyz	this is very odd, you shouldn't be having this trouble. Did you check the md5sum already?
+2011-01-11T10:14:00.000Z	DBoyz	rusty149	gimme the checklist
+2011-01-11T10:14:00.000Z	rusty149	DBoyz	what is the filename of the iso?
+2011-01-11T10:15:00.000Z	rusty149	DBoyz	http://releases.ubuntu.com/maverick/MD5SUMS
+2011-01-11T10:19:00.000Z	DBoyz	rusty149	same error
+2011-01-11T10:20:00.000Z	rusty149	DBoyz	have you tried pendrivelinux or UNetBootin
+2011-01-11T10:26:00.000Z	DBoyz	rusty149	anything?
+2011-01-11T10:27:00.000Z	rusty149	DBoyz	what kind of machine is it?
+2011-01-11T10:33:00.000Z	rusty149	DBoyz	Try reformat the usb drive and try again
+2011-01-11T10:34:00.000Z	rusty149	DBoyz	You could try it manually, but that is more complicated
+2011-01-11T10:34:00.000Z	DBoyz	rusty149	?

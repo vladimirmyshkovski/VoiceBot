@@ -1,0 +1,93 @@
+2009-05-17T16:51:00.000Z	Slart		!koala
+2009-05-17T16:52:00.000Z	Slart		*I
+2009-05-17T16:54:00.000Z	ManDay	Slart	guess what
+2009-05-13T01:49:00.000Z	Slart	ManDay	sudo halt, sudo shutdown now, or click the little green button thingy
+2009-05-13T01:50:00.000Z	Slart	ManDay	sorry.. sudo shutdown -h now
+2009-05-17T15:11:00.000Z	Slart	ManDay	are you using desktop effects?
+2009-05-17T15:11:00.000Z	Slart	ManDay	install that package.. compizconfig-settings-manager
+2009-05-17T15:12:00.000Z	Slart	ManDay	then there is a setting in the "general" tab for number of horizontal desktops, vertical desktops and such
+2009-05-17T15:14:00.000Z	Slart	ManDay	it's possible.. but there are two "numbers of desktops settings".. one for compiz and one for not running compiz
+2009-05-17T15:14:00.000Z	Slart	ManDay	make sure you find something that sets the right one
+2009-05-17T15:14:00.000Z	Slart	ManDay	I'm not really sure.. it's been too long since I used that
+2009-05-17T15:27:00.000Z	Slart	ManDay	I'm pretty sure I saw a setting for that somewhere.. but I can't find it any more..
+2009-05-17T15:28:00.000Z	Slart	ManDay	oh.. you did? where?
+2009-05-17T15:30:00.000Z	Slart	ManDay	ah.. found it.. thanks
+2009-05-17T15:33:00.000Z	Slart	ManDay	there are some shortcuts for zooming a window in and out.. but I'm not sure if you can still interact with it
+2009-05-17T15:34:00.000Z	Slart	ManDay	also, you can use Alt+Left mousebutton to move windows around when you don't actually see the top window bar
+2009-05-17T15:35:00.000Z	Slart	ManDay	I don't know how to do that.. sounds like it might be possible to override something like minimum window size but it might break the application I suppose
+2009-05-17T15:36:00.000Z	Slart	ManDay	yup, I think so too
+2009-05-17T15:43:00.000Z	Slart	ManDay	which plugin are you using? the "static application switcher" ?
+2009-05-17T15:44:00.000Z	Slart	ManDay	window selector?
+2009-05-17T15:44:00.000Z	Slart	ManDay	or window list?
+2009-05-17T15:45:00.000Z	Slart	ManDay	hmm.. odd.. it works here.. I only get the windows from the current workspace
+2009-05-17T15:47:00.000Z	Slart	ManDay	indeed.. but it's getting better (if that's any consolation)
+2009-05-17T15:50:00.000Z	Slart	ManDay	go ahead
+2009-05-17T15:52:00.000Z	Slart	ManDay	you enabled the plugin? and you are running the desktop effects?
+2009-05-17T15:54:00.000Z	Slart	ManDay	I mean, is the cube plugin activated in the compizconfig-settings-manager? you can enable/disable plugins.. there's a checkbox on the left side or near the plugin name
+2009-05-17T15:55:00.000Z	Slart	ManDay	hmm.. you are running ubuntu jaunty, right?
+2009-05-17T15:55:00.000Z	Slart	ManDay	that is Ubuntu Jaunty alright
+2009-05-17T15:56:00.000Z	Slart	ManDay	then I don't really know why it doesn't work for you.. I've never had any problems with shortcuts in compiz not doing their job..
+2009-05-17T16:22:00.000Z	ManDay	Slart	after i restarted it works
+2009-05-17T16:22:00.000Z	Slart	ManDay	ah.. my faith in compiz is restored =)
+2009-05-17T16:28:00.000Z	Slart	ManDay	any kind of patter to when it doesn't and when it does?
+2009-05-17T16:29:00.000Z	Slart	ManDay	there is a setting for which classes of windows slider and which classes stay fixed when you switch workspaces
+2009-05-17T16:30:00.000Z	Slart	ManDay	check the settings for the "Desktop Wall" in ccsm
+2009-05-17T16:31:00.000Z	Slart	ManDay	there is a setting for "Non Sliding Windows"
+2009-05-17T16:32:00.000Z	Slart	ManDay	those are the window types that stay fixed while you change workspace.. if you remove the "desktop" part there it will slide together with the icons
+2009-05-17T16:32:00.000Z	Slart	ManDay	in the "Viewport switching" tab
+2009-05-17T16:32:00.000Z	Slart	ManDay	correct
+2009-05-17T16:33:00.000Z	Slart	ManDay	hmm.. how are you switch desktops?
+2009-05-17T16:34:00.000Z	Slart	ManDay	and ctrl+arrow sometimes slides the background?
+2009-05-17T16:35:00.000Z	Slart	ManDay	hehe
+2009-05-17T16:35:00.000Z	Slart	ManDay	I removed the desktop part from that configuration and my desktop slides with the icons now... all the time
+2009-05-17T16:55:00.000Z	Slart	ManDay	well.. you've somehow pleased the little gnome in your computer..=)
+2009-05-30T13:33:00.000Z	Slart	ManDay	there is a setting somewhere in the settings manager.. let me check
+2009-05-30T13:36:00.000Z	Slart	ManDay	take a look att he Desktop Wall plugin.. see if "Edge flipping" is enabled
+2009-05-30T13:50:00.000Z	ManDay	Slart	i found a solution
+2009-05-30T13:51:00.000Z	Slart	ManDay	the one I suggested didn't work?
+2009-06-04T21:43:00.000Z	Slart	ManDay	you could look at the size.. I'm not sure if they are actually marked as "meta" in any way
+2009-06-04T21:43:00.000Z	Slart	ManDay	check properties
+2009-06-04T21:43:00.000Z	Slart	ManDay	in synaptic, I mean
+2009-06-04T21:44:00.000Z	Slart	ManDay	right click on it.. click properties.. there is a background color setting somewhere in there
+2009-06-04T21:44:00.000Z	ManDay	Slart	you may have misunderstood me
+2009-06-04T21:44:00.000Z	Slart	ManDay	oh.. you meant the windows..
+2009-06-04T21:45:00.000Z	Slart	ManDay	system, preferences, appearance.. choose a theme that doesn't have transparent borders
+2009-06-04T21:45:00.000Z	Slart	ManDay	I don't think there is an easy checkbox just for transparency
+2009-06-04T21:55:00.000Z	Slart	ManDay	oh.. perhaps it's a compiz thing.. if it's only non-focused windows..
+2009-06-04T21:56:00.000Z	ManDay	Slart	probably - but I cant find it in the ccsm
+2009-06-04T21:58:00.000Z	Slart	ManDay	I can't really find anything either.. there is the "Opacity plugin" but I don't have that enabled
+2009-06-04T22:00:00.000Z	Slart	ManDay	hmm.. let me search some more... there has to be a way to change it
+2009-06-04T22:01:00.000Z	Slart	ManDay	looking at it.. thanks
+2009-06-04T22:03:00.000Z	Slart	ManDay	ah.. that's it.. I've got to remember that for future reference.. thanks cabrey_
+2009-08-13T14:45:00.000Z	Slart	ManDay	not sure if it's in medibuntu or in the regular repos though..
+2009-08-13T14:45:00.000Z	Slart	ManDay	http://en.wikipedia.org/wiki/Empathy_(software)
+2009-08-13T14:46:00.000Z	Slart	ManDay	sounds like it will handle lots of stuff
+2009-12-22T22:02:00.000Z	Slart	ManDay	I think medibuntu used to have it
+2009-12-22T22:04:00.000Z	Slart	ManDay	I just checked the medibuntu site and it seems they only have the fonts for acroread.. not acroread itself.. odd
+2009-12-22T22:05:00.000Z	Slart	ManDay	https://answers.launchpad.net/medibuntu/+question/67509
+2009-12-22T22:06:00.000Z	ManDay	Slart	did ubottu not search partner?
+2009-12-22T22:06:00.000Z	Slart	ManDay	I have no idea... I don't think I've ever used the partner repository before
+2009-12-22T22:09:00.000Z	Slart	ManDay	I just enabled the partner repos on my 64bit 9.10 and acroread pops up for me
+2009-12-22T22:09:00.000Z	Slart	ManDay	it was listed in the 3rd party repositories.. not among the other canonical repos (universe and so on)
+2009-12-22T22:15:00.000Z	Slart	ManDay	evince has a nasty habit of crashing on me every now and then.. =/
+2010-03-29T21:25:00.000Z	Slart	ManDay	apt-cache show <packagename>
+2010-03-29T21:26:00.000Z	Slart	ManDay	or apt-cache search to actually search.. sorry
+2010-05-11T00:30:00.000Z	Slart	ManDay	I'm not sure if the computer knows the reason why it died
+2010-05-11T00:30:00.000Z	Slart	ManDay	if you ask linux users I think the majority will say it checks the disks too much already
+2010-05-11T00:38:00.000Z	Slart	ManDay	don't think there is a simple on/off setting anywhere.. no
+2010-06-12T11:59:00.000Z	Slart	ManDay	I don't think so, I use matlab and sometimes octave
+2010-06-12T12:00:00.000Z	Slart	ManDay	for symbolic stuff I use maple.. I haven't really found anything free that I like
+2010-06-12T12:00:00.000Z	ManDay	Slart	proprietary software makes me vomit
+2010-06-12T12:00:00.000Z	ManDay	Slart	scilab, maxima, scipy/sage they are all great
+2010-06-12T12:01:00.000Z	Slart	ManDay	mm.. scilab has it's quirks.. scipy is on my list of stuff to try though
+2010-06-12T12:02:00.000Z	Slart	ManDay	I can't really remember at the moment.. I think I had some installation problems and then there was something else that bothered me.. might have been some extra packages that weren't available.. matlab, proprietary or not, comes with lots and lots of toys =)
+2010-06-12T12:04:00.000Z	ManDay	Slart	if I were you I'd franky give it another try. I've been using scilab like forever, it has gone through many major improvements and is very good to my opinion. the ponly problem that i might have with it is that it really has no symbolic powers whatsoever - but it offers interfaces to many other apps which can do that for you if you really need it
+2010-06-12T12:05:00.000Z	ManDay	Slart	don't get me wrong but I think if you know your arsenal the open software realm offers you more tools in sum than matlab and maple do together. you will have to pick them manually but alltogether if you know the right packages open can do anything that propritary can (unless you have really VERY specific needs)
+2010-06-12T12:07:00.000Z	ManDay	Slart	besides if you are familar with matlab scilab is pretty close and, if im not wrong about matlab, is far ahead of the latter for the many interfaces it has
+2010-06-12T12:08:00.000Z	Slart	ManDay	if the choice was between open source only or proprietary stuff only I would go open source all the way.. but if I have to chose from open source or (open source and proprietary) the later has more features etc etc..
+2010-06-12T12:09:00.000Z	Slart	ManDay	but this is getting offtopic.. and I feel the need for some breakfast.. I'll be back later
+2012-01-21T01:39:00.000Z	Slart	ManDay	gdebi might work.. if I remember correctly
+2012-01-21T01:40:00.000Z	Slart	ManDay	didn't even find gdebi on my system any more.. so dpkg it is then.. command line only
+2012-01-21T01:43:00.000Z	Slart	ManDay	apt usually has a reson for doing that.. perhaps not a good reason but still a reason
+2012-01-21T01:44:00.000Z	ManDay	Slart	apt-get doesn't tell me its reasons though
+2012-01-21T01:44:00.000Z	Slart	ManDay	nope.. it's usually very vague.. but digging around in the dependencies usually reveal something.. something that doesn't work out or similar

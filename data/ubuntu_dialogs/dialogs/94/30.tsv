@@ -1,0 +1,94 @@
+2010-02-27T01:26:00.000Z	MJ94		!wireless
+2010-02-27T01:26:00.000Z	MJ94		!wireless | hank_
+2010-02-27T01:26:00.000Z	MJ94		now...
+2010-02-27T01:27:00.000Z	MJ94		!wine | MJ94
+2010-02-27T01:29:00.000Z	MJ94		Hey, I'm new to Ubuntu. Wine is to use windows apps right?
+2010-02-27T01:29:00.000Z	MJ94		s/apps/programs
+2010-02-27T01:30:00.000Z	MJ94		Nice.
+2010-02-27T01:30:00.000Z	MJ94		Can I have help on how to use it? Besides !wine :P
+2010-02-27T01:31:00.000Z	jrib	MJ94	why do you want to use it?  And the page is a pretty good intro for beginners
+2010-02-27T01:33:00.000Z	MJ94	jrib	To use the http://www.softpedia.com/get/Security/Security-Related/AceHide-Free.shtml program on my flashdrive on Ubuntu.
+2010-02-27T01:34:00.000Z	jrib	MJ94	erm, doesn't that program just minimize windows?  There's a shortcut for that by default in system -> preferences -> keyboard shortcuts
+2010-02-27T01:34:00.000Z	MJ94	jrib	It hides it, not minimizes.
+2010-02-27T01:34:00.000Z	jrib	MJ94	ok.  Well look for a linux alternative because I doubt very much that will work through wine
+2010-02-27T01:35:00.000Z	MJ94	jrib	Can you show me how? I wanna try.
+2010-02-27T01:35:00.000Z	jrib	MJ94	try what?  using wine?
+2010-02-27T01:36:00.000Z	MJ94	jrib	yes
+2010-02-27T01:37:00.000Z	jrib	MJ94	ubottu's page explains, you just grab the .exe and run wine whatever.exe
+2010-02-27T01:37:00.000Z	MJ94	jrib	...wha?
+2010-08-22T02:13:00.000Z	jrib	MJ94	https://wiki.ubuntu.com/MactelSupportTeam/CommunityHelpPages
+2010-08-22T02:15:00.000Z	MJ94	jrib	smw: just wanted to know how to.
+2010-08-22T02:21:00.000Z	jrib	MJ94	you'll see a new thing when you boot :)
+2010-08-22T02:23:00.000Z	MJ94	jrib	Hmm. where?
+2010-08-22T02:24:00.000Z	jrib	MJ94	when you boot your computer, you will see a new screen
+2010-08-22T02:25:00.000Z	jrib	MJ94	maybe it only shows up if you have more than one OS, idk
+2010-08-22T02:31:00.000Z	jrib	MJ94	how did you install it?
+2010-08-22T02:31:00.000Z	MJ94	jrib	http://downloads.sourceforge.net/refit/rEFIt-0.14.dmg?use_mirror= then .mkpg or whatever it is.
+2010-08-22T02:32:00.000Z	jrib	MJ94	and everything went smoothly through the GUI?
+2010-08-22T02:32:00.000Z	MJ94	jrib	hmm?
+2010-08-22T02:33:00.000Z	jrib	MJ94	something popped up, some sort of configuration window, right?
+2010-08-22T02:34:00.000Z	jrib	MJ94	and then you rebooted?
+2010-08-22T02:35:00.000Z	jrib	MJ94	what is in /efi?
+2010-08-22T02:36:00.000Z	MJ94	jrib	How do I check?
+2010-08-22T02:37:00.000Z	MJ94	jrib	How do I check?
+2010-08-22T02:37:00.000Z	jrib	MJ94	wait, on http://refit.sourceforge.net/doc/c1s1_install.html it links to a .dmg :/
+2010-08-22T02:37:00.000Z	MJ94	jrib	I'm on a mac.
+2010-08-22T02:38:00.000Z	jrib	MJ94	didn't you mention a .mpkg or something?
+2010-08-22T02:38:00.000Z	jrib	MJ94	ah ignore me... continue...
+2010-08-22T02:39:00.000Z	MJ94	jrib	so, what do I do?
+2010-08-22T02:39:00.000Z	jrib	MJ94	what is in /efi ?  That's a directory
+2010-08-22T02:40:00.000Z	MJ94	jrib	-bash: cd: efi: No such file or directory
+2010-08-22T02:40:00.000Z	jrib	MJ94	cd /efi
+2010-08-22T02:41:00.000Z	MJ94	jrib	rEFIt License.rtf refit
+2010-08-22T02:41:00.000Z	jrib	MJ94	in refit?
+2010-08-22T02:42:00.000Z	MJ94	jrib	cd /efi/ && ls
+2010-08-22T02:42:00.000Z	jrib	MJ94	what's inside refit?
+2010-08-22T02:43:00.000Z	MJ94	jrib	enable-always.sh icons   refit.efi
+2010-08-22T02:44:00.000Z	jrib	MJ94	maybe follow the "removing refit" instructions and then the manual install method?  I think I used the manual install as well.  I am not sure why the install didn't work for you.
+2010-08-22T02:48:00.000Z	MJ94	jrib	how do I remove it?
+2010-08-22T02:48:00.000Z	jrib	MJ94	you can also just have ubottu do it by typing: !es | person's_nick
+2010-08-22T02:49:00.000Z	jrib	MJ94	http://refit.sourceforge.net/doc/
+2010-08-22T02:49:00.000Z	MJ94	jrib	I did earlier. the !es.
+2010-08-22T02:49:00.000Z	jrib	MJ94	ah
+2010-08-22T02:49:00.000Z	jrib	MJ94	I trust you, don't worry :)
+2010-08-22T02:54:00.000Z	MJ94	jrib	While booted into Mac OS X, rename or remove the “efi” folder. For a 100% clean de-installation, also remove the folder “rEFItBlesser” inside “Library/StartupItems”.  Can't find Library/StartupItems.
+2010-08-22T02:54:00.000Z	jrib	MJ94	probably why it wasn't working?
+2010-08-22T02:55:00.000Z	MJ94	jrib	so... now what?
+2010-08-22T02:55:00.000Z	jrib	MJ94	install manually?
+2010-08-22T02:57:00.000Z	MJ94	jrib	Download the “Mac disk image” or any of the other two binary distributions from the home page. Double-click to mount or unpack them. means dl http://downloads.sourceforge.net/refit/rEFIt-0.14.dmg?use_mirror= ?
+2010-08-22T03:00:00.000Z	MJ94	jrib	Download the “Mac disk image” or any of the other two binary distributions from the home page. Double-click to mount or unpack them. means dl http://downloads.sourceforge.net/refit/rEFIt-0.14.dmg?use_mirror= ?
+2010-08-22T03:06:00.000Z	MJ94	jrib	What does # Copy the “efi” folder from the rEFIt distribution to the root level of your Mac OS X volume. mean?
+2010-08-22T03:06:00.000Z	jrib	MJ94	do you know what they mean by "the efi folder from the refit distribution"?
+2010-08-22T03:07:00.000Z	MJ94	jrib	I moves efit to the desktop. Now I mv Desktop/efit /?
+2010-08-22T03:08:00.000Z	jrib	MJ94	you copy the "efi" directory to /, the top of your filesystem
+2010-08-22T03:08:00.000Z	MJ94	jrib	How?
+2010-08-22T03:08:00.000Z	jrib	MJ94	same way you copy any folder...
+2010-08-22T03:08:00.000Z	jrib	MJ94	use finder
+2010-08-22T03:10:00.000Z	MJ94	jrib	I'm confused as to *where* to move it.
+2010-08-22T03:10:00.000Z	jrib	MJ94	to /.  The very top of your filesystem
+2010-08-22T03:17:00.000Z	MJ94	jrib	mv Desktop/efi/ /.
+2010-08-22T03:17:00.000Z	jrib	MJ94	why aren't you just using the GUI if you are more comfortable with that?
+2010-08-22T03:18:00.000Z	MJ94	jrib	In regards to this, idk how.
+2010-08-22T03:18:00.000Z	jrib	MJ94	cp -r whatever_it_is/efi /
+2010-08-22T03:20:00.000Z	MJ94	jrib	cp Desktop/efi/ /
+2010-08-22T03:20:00.000Z	jrib	MJ94	not what I said
+2010-08-22T03:21:00.000Z	MJ94	jrib	please repeat it?
+2010-08-22T03:21:00.000Z	jrib	MJ94	just scroll up, you forgot the "-r"
+2010-08-22T03:23:00.000Z	MJ94	jrib	http://ubuntu.pastebin.com/BRwm4KS1
+2010-08-22T03:25:00.000Z	MJ94	jrib	http://ubuntu.pastebin.com/BRwm4KS1
+2010-08-22T03:26:00.000Z	jrib	MJ94	see second line
+2010-08-22T03:28:00.000Z	MJ94	jrib	-bash: cd: /efi/refit: No such file or directory
+2010-08-22T03:28:00.000Z	jrib	MJ94	what was the second line of your pastebin?
+2010-08-22T03:30:00.000Z	jrib	MJ94	for some reason you put a '.' at the end of your command?
+2010-08-22T03:30:00.000Z	MJ94	jrib	cp -r  Desktop/efi/ /
+2010-08-22T03:31:00.000Z	jrib	MJ94	guess not :)  Give the absolute path if you're not suer
+2010-08-22T03:31:00.000Z	jrib	MJ94	you're giving a relative path
+2010-08-22T03:32:00.000Z	jrib	MJ94	the correct one...
+2010-08-22T03:32:00.000Z	MJ94	jrib	Desktop...
+2010-08-22T03:32:00.000Z	jrib	MJ94	start with / and keep going if you aren't sure
+2010-08-22T03:33:00.000Z	MJ94	jrib	The efi folder is on my desktop....
+2010-08-22T03:33:00.000Z	jrib	MJ94	I'm not contesting that.  However, my guess is Desktop is not your desktop because Desktop means Desktop wherever I am now
+2010-08-22T03:34:00.000Z	MJ94	jrib	So, what do I put?
+2010-08-22T03:34:00.000Z	jrib	MJ94	start with / and keep going if you aren't sure
+2010-08-22T03:35:00.000Z	MJ94	jrib	cp: /Users/Michael/Desktop/efi/: unable to copy extended attributes to /: Is a directory
+2010-08-22T03:37:00.000Z	MJ94	jrib	What do I do...?

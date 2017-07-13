@@ -1,0 +1,94 @@
+2010-09-28T14:01:00.000Z	iceroot	llutz_	its there alway a wrapper for uuid -> /dev/sdX? so i always have /dev/sdX?
+2010-09-28T14:02:00.000Z	llutz_	iceroot	i don't think so, maybe udev can do that
+2010-09-28T14:02:00.000Z	iceroot	llutz_	if i am correct i saw a udev-uuid-wrapper-init-script on lenny
+2010-09-28T14:04:00.000Z	llutz_	iceroot	i always use UUIDs or labels so i don't care about device-names
+2010-09-28T14:04:00.000Z	iceroot	llutz_	i dont know if uuids are a good or bad thing, never had anything to do with them
+2010-09-28T14:05:00.000Z	llutz_	iceroot	imho good thing, make things easier when changing drives/using external drives etc
+2010-10-22T16:51:00.000Z	llutz_	iceroot	better show him a vi-tutorial too
+2010-10-22T16:51:00.000Z	iceroot	llutz_	better ubuntu has vim installed by default... :)
+2011-03-12T14:25:00.000Z	iceroot	llutz_	debian is on upstart? (squeeze)
+2011-03-12T14:25:00.000Z	llutz_	iceroot	naaaa never  (hopefully)
+2011-03-12T14:25:00.000Z	iceroot	llutz_	good. strange new things...
+2011-03-12T14:25:00.000Z	llutz_	iceroot	but "service command works fine with squeeze
+2011-03-12T14:25:00.000Z	iceroot	llutz_	but its calling the old init-scripts
+2011-03-12T14:26:00.000Z	llutz_	iceroot	true, but make switching between systems easier
+2011-03-12T14:26:00.000Z	iceroot	llutz_	never touch a running system
+2011-03-12T14:26:00.000Z	iceroot	llutz_	pulseaudio, upstart, wayland....
+2011-03-12T14:27:00.000Z	llutz_	iceroot	upstart is crap, shouldn't be used in the wild (imho)
+2011-03-12T14:29:00.000Z	iceroot	llutz_	luckily it takes years until debian is using new technologies :)
+2011-03-12T14:30:00.000Z	llutz_	iceroot	let's hope that toy story has enough characters left...
+2011-03-12T14:30:00.000Z	iceroot	llutz_	:)
+2011-05-10T17:04:00.000Z	llutz_	iceroot	http://www.unix.com/50494-post4.html
+2011-05-10T17:08:00.000Z	iceroot	llutz_	that is (imo) not an attachment, its just the content from the file inline in the mail
+2011-05-10T17:08:00.000Z	iceroot	llutz_	ah sorry bad eyes :)
+2011-06-07T19:52:00.000Z	llutz_	iceroot	will not be permanent
+2011-08-14T12:55:00.000Z	llutz_	iceroot	not from ubuntu-isos
+2011-08-14T12:56:00.000Z	iceroot	llutz_	doesnt matter what iso
+2011-08-14T12:56:00.000Z	iceroot	llutz_	sure they do
+2011-08-14T12:57:00.000Z	iceroot	llutz_	i am creating my usb-sticks with that method
+2011-08-14T12:57:00.000Z	iceroot	llutz_	used alternate cd
+2011-08-14T12:57:00.000Z	llutz_	iceroot	ok, destop won't
+2011-08-14T12:57:00.000Z	llutz_	iceroot	last alternate i used was 9.10, also failed.
+2011-08-14T12:58:00.000Z	iceroot	llutz_	11.04 i tried and it worked
+2011-08-14T12:58:00.000Z	iceroot	llutz_	i dont get why it should not work
+2011-08-14T12:58:00.000Z	llutz_	iceroot	hybrid-iso is a feature-request, not decided yet afaik
+2011-08-14T12:58:00.000Z	iceroot	llutz_	dd it to a stick is the same as burning it to cd isnt it?
+2011-08-14T12:58:00.000Z	llutz_	iceroot	the way the bootloader works is differnt.
+2011-08-14T12:59:00.000Z	iceroot	llutz_	what is e.g. k3b doing different then dd?
+2011-08-14T12:59:00.000Z	llutz_	iceroot	it "burns" cd/dvd using cdrrecord/wodim
+2011-08-14T13:00:00.000Z	llutz_	iceroot	same reason you cannot use dd to write iso9660 cds
+2011-08-14T13:00:00.000Z	iceroot	llutz_	but the iso-fs is in the iso istn it? and dd is just copying it
+2011-08-14T13:01:00.000Z	llutz_	iceroot	yes but when the bios calls it, cd and usb-devices work different, thus the need of hybrid-iso to get both working
+2011-08-14T13:02:00.000Z	iceroot	llutz_	hm didnt know that, interesting point, i guess i will do some readup
+2011-08-14T13:02:00.000Z	iceroot	llutz_	and hybrid iso means it can run i386 and amd64?
+2011-08-14T13:02:00.000Z	llutz_	iceroot	syslinux has an article on that, unfortunately i don't have www right now to get the link.
+2011-08-14T13:02:00.000Z	iceroot	llutz_	i have access to google :) so no problem
+2011-08-14T13:03:00.000Z	iceroot	llutz_	ok
+2011-08-14T13:05:00.000Z	iceroot	llutz_	but i thought with grub2 there is no different how the bios is handling something because grub2 is doing the job then
+2011-08-14T13:06:00.000Z	iceroot	llutz_	and the call for grub2 should be the same on any devices but i guess i will do some reading on that
+2011-08-14T13:07:00.000Z	llutz_	iceroot	when dd-ing a non-hybrid iso to usb-device, the BIOS won't even be able to run the bootloader. so its not a grub2-thing
+2011-08-14T13:08:00.000Z	iceroot	llutz_	but the bootloader is always at the same position isnt it?
+2011-08-14T13:08:00.000Z	llutz_	iceroot	usb-devices are different in some way. i don't know details
+2011-08-14T13:12:00.000Z	llutz_	iceroot	/usr/share/doc/syslinux/isolinux.txt.gz has some info about
+2011-08-14T13:19:00.000Z	iceroot	llutz_	thanks
+2011-08-14T13:20:00.000Z	iceroot	llutz_	but that bug explains why it was working with 11.04 and not with 9.10
+2011-08-14T13:21:00.000Z	iceroot	llutz_	but i am wrong it was patched after 11.04 release
+2011-08-14T13:22:00.000Z	llutz_	iceroot	so maybe from 11.10+
+2011-08-14T13:22:00.000Z	iceroot	llutz_	maybe i was using a point-release from 11.04
+2011-08-14T13:22:00.000Z	iceroot	llutz_	if there is one already
+2011-08-14T13:56:00.000Z	llutz_	iceroot	which always can be overriden by personal xorg.conf or parts from in in /usr/share/X11/xorg.conf.d
+2011-08-14T13:56:00.000Z	iceroot	llutz_	yes
+2011-09-18T16:59:00.000Z	llutz_	iceroot	use chown/chmod for unix-fs, not mount-options
+2011-09-18T17:00:00.000Z	iceroot	llutz_	hm ok
+2011-09-24T12:37:00.000Z	llutz_	iceroot	means" no more options/parameter for this process known"
+2011-09-24T12:39:00.000Z	llutz_	iceroot	so only the processname is shown in []
+2011-09-24T12:39:00.000Z	iceroot	llutz_	so that means if i start "df" it would be shown as [/bin/df] and if i use "df -h" it would be shown as "/bin/df -f"
+2011-09-24T12:40:00.000Z	llutz_	iceroot	no, afaik those processes mainly are kernel-/system-procs where the kernel has no info how it was called exactly. user-procs like "df" are known with path and all
+2011-09-24T12:41:00.000Z	iceroot	llutz_	ah ok, thank you
+2011-09-24T12:41:00.000Z	llutz_	iceroot	you'd better do some googling about it ;)
+2011-09-24T12:41:00.000Z	iceroot	llutz_	hard with "[]"
+2011-09-24T12:41:00.000Z	iceroot	llutz_	i guess "man ps" should be better
+2011-09-24T12:42:00.000Z	iceroot	llutz_	that was to easy to think about :) thanks
+2011-09-24T12:43:00.000Z	iceroot	llutz_	https://www.linuxquestions.org/questions/linux-general-1/ps-process-names-in-brackets-644364/
+2011-09-24T12:46:00.000Z	llutz_	iceroot	kernel or system-threads... but terminator... no idea why
+2011-09-24T12:47:00.000Z	iceroot	llutz_	also its shown as /usr/bin/termin instead of /usr/bin/terminator...   [/usr/bin/termin] <defunct>
+2011-10-13T12:48:00.000Z	llutz_	iceroot	on "swapon -s"?? it just tells you the state of any swap, no errors or wahtever
+2011-10-13T12:49:00.000Z	iceroot	llutz_	ah sorry -s i thought -a
+2011-10-15T13:28:00.000Z	llutz_	iceroot	apt-cache depends packaename
+2011-10-15T13:29:00.000Z	iceroot	llutz_	thx
+2011-10-20T13:48:00.000Z	llutz_	iceroot	if it breaks sudo-usage, its a bug, not a feature
+2011-10-20T13:49:00.000Z	iceroot	llutz_	first i want to see if that is the reason why his sudo is not working anymore
+2011-10-28T17:17:00.000Z	iceroot	llutz_	unix
+2011-10-28T17:17:00.000Z	llutz_	iceroot	nope
+2011-11-04T17:33:00.000Z	iceroot	llutz_	wrong nick
+2011-12-07T19:57:00.000Z	llutz_	iceroot	there former was virtualbox and -ose , its all virtualbox now
+2011-12-07T19:57:00.000Z	iceroot	llutz_	hm ok, i thought one of them was called vbox
+2011-12-13T14:25:00.000Z	llutz_	iceroot	Gentoo64 it is a troll
+2011-12-13T14:26:00.000Z	iceroot	llutz_	i am not sure if it is a troll of if he is just "slow"
+2011-12-13T14:26:00.000Z	iceroot	llutz_	but when you think its a troll fell free to kick him
+2011-12-13T14:26:00.000Z	llutz_	iceroot	scroll back 60min, just a poor little troll
+2011-12-13T14:34:00.000Z	iceroot	llutz_	ah i thought you are op too
+2011-12-13T14:34:00.000Z	llutz_	iceroot	unfortunately not :)
+2012-04-05T13:03:00.000Z	iceroot	llutz_	:)
+2012-05-17T14:20:00.000Z	llutz_	iceroot	getent passwd
+2012-05-17T14:20:00.000Z	iceroot	llutz_	yes

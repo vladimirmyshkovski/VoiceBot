@@ -1,0 +1,94 @@
+2009-08-05T06:17:00.000Z	bankix	queso_	Okay: Look at the "Bus" and the "Device" number. Do you have an example line for me? Then I could use these values.
+2009-08-05T06:20:00.000Z	bankix	queso_	Could you post me a line of your "lsusb" output with the device? Then I could use these values in the example so it's clearer to you.
+2009-08-05T06:21:00.000Z	queso_	bankix	Sure, thanks!  Here's one of the lines: "Bus 001 Device 003: ID 7392:7318"
+2009-08-05T06:22:00.000Z	bankix	queso_	Good. We need the bus number, here 001, so 1, and the device number, here 003, so 3.
+2009-08-05T06:22:00.000Z	queso_	bankix	here is a /sys/devices line:  "/sys/devices/pci0000:00/0000:00:04.0/usb3/power/autosuspend"
+2009-08-05T06:23:00.000Z	bankix	queso_	Now let a loop (for d in /sys/bus/usb/devices/*; do) run over all devices, and look if there are the files */busnum and */devnum
+2009-08-05T06:23:00.000Z	bankix	queso_	The file busnum must match the bus number, the file devnum the device number.
+2009-08-05T06:23:00.000Z	queso_	bankix	run "for d in /sys/bus/usb/devices/*; do" in bash?
+2009-08-05T06:24:00.000Z	bankix	queso_	Yes, that's the head of your loop.
+2009-08-05T06:24:00.000Z	bankix	queso_	You need to write a script, btw.
+2009-08-05T06:25:00.000Z	queso_	bankix	Ooh, lol. :) Write a script . . . hmm. I don't exactly know how to do that for this purpose.
+2009-08-05T06:25:00.000Z	bankix	queso_	When you did find the appropriate directory in /sys/bus/usb/devices, you could resolve the pci bus path with "readlink".
+2009-08-05T06:26:00.000Z	bankix	queso_	This will point to the /sys/devices/pci* path
+2009-08-05T06:26:00.000Z	bankix	queso_	Never wrote a shell script before?
+2009-08-05T06:26:00.000Z	queso_	bankix	I know how make scripts executable and modify them, but never wrote any from scratch, no. :/
+2009-08-05T06:29:00.000Z	queso_	bankix	sorry, don't mean to keep you up
+2009-08-05T06:31:00.000Z	bankix	queso_	Sorry, no bash for beginners tonigt.
+2009-08-05T06:32:00.000Z	bankix	queso_	Perhaps write down the important steps:
+2009-08-05T06:32:00.000Z	queso_	bankix	lol
+2009-08-05T06:32:00.000Z	queso_	bankix	sure, I'm willing to learn. :)
+2009-08-05T06:32:00.000Z	bankix	queso_	first you have to call "lsusb" and cut out busnumber and devicenumber.
+2009-08-05T06:33:00.000Z	bankix	queso_	then wander through /sys/bus/usb/devices, with the for loop I posted. In $d is the name of the directory you test
+2009-08-05T06:34:00.000Z	bankix	queso_	Look if there is $d/busnum an $d/devnum (if [ -e $d/busnum -a $d/devnum ]; then)
+2009-08-05T06:34:00.000Z	bankix	queso_	Then look into busnum and devnum, and compare it to the numbers you got from lspci.
+2009-08-05T06:35:00.000Z	bankix	queso_	If both match, $d is the usb device directory of the device you were looking for.
+2009-08-05T06:36:00.000Z	bankix	queso_	If you need the /sys/devices/pci* path, simply call "readlink $d", this will return you the relative path. Prepend $d, and you get the absolute path.
+2009-08-05T06:36:00.000Z	bankix	queso_	that should be all.
+2009-08-05T06:36:00.000Z	queso_	bankix	great, thanks for your time, I really appreciate it.
+2009-08-05T06:37:00.000Z	bankix	queso_	Good luck. It's not too hard, looking to half a dozend bash script should teach you enough.
+2009-08-05T06:38:00.000Z	queso_	bankix	I'll probably be able to figure it out now.  Thanks again :)
+2009-08-05T07:09:00.000Z	bankix	queso_	You'll have to change it to -1
+2009-08-05T07:09:00.000Z	bankix	queso_	e.g. by echo: "echo -1 > /where/the/device/file/is"
+2009-08-05T07:10:00.000Z	queso_	bankix	how do I change it?  I tried sudo vi, it didn't like that, lol
+2009-08-05T07:10:00.000Z	queso_	bankix	aah, cool, I'll give it a shot
+2009-08-05T07:10:00.000Z	bankix	queso_	Ah, better "echo -- -1" to avoid parameter confusion.
+2009-08-05T07:11:00.000Z	bankix	queso_	Forget about the "--", just "echo -1". Echo doesn't recognize -- .
+2009-08-05T07:11:00.000Z	queso_	bankix	that's weird, it says permission denied even when I sudo that
+2009-08-05T07:11:00.000Z	bankix	queso_	What device is it?
+2009-08-05T07:11:00.000Z	bankix	queso_	A harddisk?
+2009-08-05T07:11:00.000Z	queso_	bankix	no, it's a usb wireless adapter
+2009-08-05T07:12:00.000Z	bankix	queso_	I cite the documentation: +It is worth mentioning that many USB drivers don't support +autosuspend.  In fact, at the time of this writing (Linux 2.6.23) the +only drivers which do support it are the hub driver, kaweth, usblp, +usblcd, usb-skeleton (which doesn't count), and usb-storage.
+2009-08-05T07:12:00.000Z	queso_	bankix	intermittently my internet access will be lost and the only way to restore it is by rebooting (restarting network doesn't work).  a co-worker suggested it might be the power/autosuspend for usb that is turning it off.
+2009-08-05T07:13:00.000Z	bankix	queso_	Ah!
+2009-08-05T07:13:00.000Z	queso_	bankix	ooh :( so either I have been going down the wrong path, or I need to disable autosuspend for the whole hub?
+2009-08-05T07:14:00.000Z	queso_	bankix	which command?  it was this:  sudo echo -1 > /sys/devices/pci0000:00/0000:00:04.1/usb1/1-2/power/autosuspend
+2009-08-05T07:15:00.000Z	bankix	queso_	Hehehe, everybody gets trapped some day ;-)
+2009-08-05T07:15:00.000Z	bankix	queso_	"echo -1" is executed as root. But you redirect the output of sudo -- as normal user.
+2009-08-05T07:15:00.000Z	queso_	bankix	ooh, I get trapped on a regular basis, lol.
+2009-08-05T07:15:00.000Z	bankix	queso_	Therefor the permission is denied.
+2009-08-05T07:16:00.000Z	bankix	queso_	Do it as root: "sudo su -" then the echo line again.
+2009-08-05T07:16:00.000Z	queso_	bankix	doh!  would sudo `echo -1 > /sys/devices/pci0000:00/0000:00:04.1/usb1/1-2/power/autosuspend` work?
+2009-08-05T07:16:00.000Z	bankix	queso_	Due you embedd the command into the script later and call the whole script via sudo, everything will work properly.
+2009-08-05T07:17:00.000Z	bankix	queso_	Quoting it doesn't help.
+2009-08-05T07:17:00.000Z	queso_	bankix	okay, your method worked
+2009-08-05T07:18:00.000Z	bankix	queso_	Then embedd that command into your script and give it a shot.
+2009-08-05T07:18:00.000Z	queso_	bankix	It wrote it, great!  now to see if it helps :) if it does, I will make a script somehow to do that on bootup
+2009-08-05T07:19:00.000Z	queso_	bankix	my script is probably not following the best procedures. I just echo'd the directory, then tailed the $d/busnum and $d/devnum to find the right combination, lol
+2009-08-05T07:20:00.000Z	bankix	queso_	Paste it me to paste.ubuntu.com, I'll have a look.
+2009-08-05T07:22:00.000Z	queso_	bankix	http://paste.ubuntu.com/247641/
+2009-08-05T07:23:00.000Z	bankix	queso_	Okay, there's missing something ;-)
+2009-08-05T07:23:00.000Z	queso_	bankix	lol! I'm sure there's a lot missing ;)
+2009-08-05T07:24:00.000Z	bankix	queso_	To read the first line of file "busnum" into the variable busnumber, use "read busnumber < busnum"
+2009-08-05T07:25:00.000Z	bankix	queso_	To compare two variables, use: if [ "$var1" = "$var2" ]; then
+2009-08-05T07:25:00.000Z	bankix	queso_	To compare two sets, you can use: if [ "$var1a" = "$var1b" -a "$var2a" = "$var2b" ]; then
+2009-08-05T07:26:00.000Z	queso_	bankix	the "-a" is OR?
+2009-08-05T07:27:00.000Z	bankix	queso_	No, -a is and, -o is or.
+2009-08-05T07:27:00.000Z	queso_	bankix	awesome :)
+2009-08-05T07:29:00.000Z	queso_	bankix	you are giving me a scripting lesson after all ;)
+2009-08-05T07:29:00.000Z	bankix	queso_	Okay, last step: How to get the numbers out of lsusb.
+2009-08-05T07:29:00.000Z	bankix	queso_	I did notice......
+2009-08-05T07:29:00.000Z	queso_	bankix	use regex somehow?
+2009-08-05T07:29:00.000Z	bankix	queso_	The bus number: lsusb | grep "ID 152d:2329" | cut -d":" -f1 |cut -d" " -f2
+2009-08-05T07:30:00.000Z	bankix	queso_	And the device number: lsusb | grep "ID 152d:2329" | cut -d":" -f1 |cut -d" " -f4
+2009-08-05T07:30:00.000Z	bankix	queso_	Where "152d:2329" is the USB vendor/product ID of your wireless stick.
+2009-08-05T07:31:00.000Z	queso_	bankix	so cool, thanks so much.
+2009-08-05T07:31:00.000Z	bankix	queso_	You may insert a space before the last "cut" if you like.
+2009-08-05T07:32:00.000Z	bankix	queso_	Ah, I forgot: You'll have to put the result into a variable:
+2009-08-05T07:32:00.000Z	bankix	queso_	varname=$(commandline)
+2009-08-05T07:32:00.000Z	queso_	bankix	I don't know script etiquette . . is this a script that will be designed to run by root?
+2009-08-05T07:32:00.000Z	bankix	queso_	The script must run as root because of the echo to the sysfs-file.
+2009-08-05T07:33:00.000Z	queso_	bankix	after I have the script complete, where is the standard place to put something like this, and where do I add it so it runs at boot?
+2009-08-05T07:34:00.000Z	bankix	queso_	And you'll have to get rid of the leading zeros in the busnumber/devicenumber: $varname=${varname##0}
+2009-08-05T07:35:00.000Z	bankix	queso_	You could put it in /usr/local/sbin, or /usr/sbin. To have it called at boot time is a very very different thing...
+2009-08-05T07:35:00.000Z	bankix	queso_	The _right_ way would be to write an udev rule where the autosuspend is disabled when the stick is inserted or detected.
+2009-08-05T07:36:00.000Z	bankix	queso_	But not this night.....
+2009-08-05T07:36:00.000Z	queso_	bankix	write a udev rule?  okay, I'll keep that in mind for the future. for now, I can just run the script after I boot (which presumably won't be often if turning autosuspend off solves my problem)
+2009-08-05T07:38:00.000Z	queso_	bankix	thanks again so much for your help, you've been quite thorough in your setting me off in the right direction.  and I'm not so frightened by scripts anymore, lol
+2009-08-05T07:38:00.000Z	bankix	queso_	For now, call the script before "exit 0" in /etc/rc.local.
+2009-08-05T07:39:00.000Z	bankix	queso_	But first test it as root for a few times by calling it from commandline and checking the content of the autosuspend file.
+2009-08-05T07:39:00.000Z	bankix	queso_	To be sure it works properly.
+2009-08-05T07:39:00.000Z	queso_	bankix	okay, yes, I will be sure to do that
+2009-08-05T07:41:00.000Z	bankix	queso_	Have a closer look to the bash manpage. It's a programming manual. There you'll find things like "${name##pattern}" for string manipulation and much more.
+2009-08-05T07:43:00.000Z	queso_	bankix	I'm definitely going to do that, thanks -- now I'll be able to do some of this at work. I'm a web developer and work in linux but this script is for my home machine.
+2009-08-05T07:44:00.000Z	queso_	bankix	goodnight! :D

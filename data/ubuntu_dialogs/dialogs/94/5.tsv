@@ -1,0 +1,94 @@
+2011-10-23T01:01:00.000Z	s1	Masxmasx	seems like a multiple sound conflicted issue there. can you at least reach to The GRUB Menu !
+2011-10-23T01:01:00.000Z	Masxmasx	s1	I can reach the install-to-hdd/memcheck/livecd menu, if that was what you meant
+2011-10-23T01:04:00.000Z	s1	Masxmasx	Yes .. press "e" there and type this  .. acpi=off .. after quiet splash .. as a boot option then press Ctrl+X to boot , when you reach the Desktop make sure you sudo update and upgrade the system.
+2011-10-23T01:06:00.000Z	Masxmasx	s1	nothing happens when I press "e"
+2011-10-23T01:07:00.000Z	s1	Masxmasx	no menu shows up!
+2011-10-23T01:07:00.000Z	Masxmasx	s1	correct, still the installer boot menu
+2011-10-23T01:07:00.000Z	s1	Masxmasx	so you are in the LiveCD now , Right !
+2011-10-23T01:08:00.000Z	Masxmasx	s1	yes, in the installer boot menu. Options: run ubuntu from this USB / Install ubuntu on a hard disk / test memory / boot from first hdd / advanced options / help
+2011-10-23T01:10:00.000Z	s1	Masxmasx	is there FKeys as an options , or what does Advaced options show!
+2011-10-23T01:13:00.000Z	Masxmasx	s1	found it, had to press <tab>. Now it shows a completely grey screen. No desktop.
+2011-10-23T01:17:00.000Z	s1	Masxmasx	am a bit lost there .. Back tot he GRUB Menu .. what do you see if you press Advanced options and / help
+2011-10-23T01:18:00.000Z	Masxmasx	s1	advanced options only shows "back...". Help shows some f-keys, then after a few seconds it shows a lot of text, and goes into the ubuntu 11.10 splashscreen
+2011-10-23T01:19:00.000Z	s1	Masxmasx	 yes help ,  is there F6 Key as an option !
+2011-10-23T01:19:00.000Z	Masxmasx	s1	after the splash screen it shows a lot of text again, and then gives me a cmd line. It tells me "to run a command as administrator, use sudo command", see "man sudo_root" for details
+2011-10-23T01:19:00.000Z	Masxmasx	s1	should I go check that out first, or stay in this cmd line?
+2011-10-23T01:20:00.000Z	Masxmasx	s1	http://i.imgur.com/5ycqT.jpg is where I am now. (sorry for the flash, I can retake it without flash if necessary)
+2011-10-23T01:23:00.000Z	s1	Masxmasx	thats okay , thanks ..  what happens if you run startx ..
+2011-10-23T01:24:00.000Z	Masxmasx	s1	it outputs a lot of text, it hangs at "ddxSigGiveUp: Closing log" for a few seconds, then: xinit: giving up, xinit: unable to connect to X server: Connection refused, xinit: server error. Then it gives me back the cmd line
+2011-10-23T01:27:00.000Z	s1	Masxmasx	okay , thats graphic card driver issue .. go back to the GRUB Menu o try some boot option .. but while you on that screen check what graphic card you have " sudo lshw -C Video "  Nvidia , or  ..
+2011-10-23T01:28:00.000Z	Masxmasx	s1	it says: PCI (sysfs)
+2011-10-23T01:28:00.000Z	s1	Masxmasx	Yeah , waite for a sec ..
+2011-10-23T01:29:00.000Z	Masxmasx	s1	intel corp 33MHz vga_comp_controller
+2011-10-23T01:30:00.000Z	Masxmasx	s1	for your knowledge, I have before tried to install the graphics card on this device when I was running 11.04. It made the system not boot anymore. I couldn't get the right resolution before I attempted that though.
+2011-10-23T01:30:00.000Z	Masxmasx	s1	Intel GMA 500 integrated graphics card
+2011-10-23T01:31:00.000Z	s1	Masxmasx	okay , thats an onboard one ..
+2011-10-23T01:32:00.000Z	Masxmasx	s1	yes. It's a netbook. I think it only has an onboard one.
+2011-10-23T01:34:00.000Z	s1	Masxmasx	Yeah , so now i got the boot option that might pass you to the Desktop .. all you you need now is to paste that option to boot.
+2011-10-23T01:35:00.000Z	Masxmasx	s1	should I reboot and go back to the option menu?
+2011-10-23T01:35:00.000Z	s1	Masxmasx	Press Ctrl+Alt+BAckspace to reboot .. when you see the GRUB Menu press "e"
+2011-10-23T01:35:00.000Z	s1	Masxmasx	Yes.
+2011-10-23T01:35:00.000Z	Masxmasx	s1	ctrl alt backspace does not make it reboot.
+2011-10-23T01:36:00.000Z	Masxmasx	s1	I'll just use the power button to reboot
+2011-10-23T01:37:00.000Z	Masxmasx	s1	pressing "e" does not do anything.
+2011-10-23T01:38:00.000Z	Masxmasx	s1	I can "Press ENTER to boot or TAB to edit a menu entry"
+2011-10-23T01:38:00.000Z	s1	Masxmasx	Okay , Tab then ..
+2011-10-23T01:38:00.000Z	s1	Masxmasx	do you see the kernel Menu !
+2011-10-23T01:41:00.000Z	s1	Masxmasx	you see quiet splash in a line there ..
+2011-10-23T01:41:00.000Z	Masxmasx	s1	should I <tab> on run ubuntu from this USB, or on Install Ubuntu on a HDD?
+2011-10-23T01:42:00.000Z	s1	Masxmasx	Tab to edit the boot option ..
+2011-10-23T01:43:00.000Z	Masxmasx	s1	ok, do you need to know what it says?
+2011-10-23T01:43:00.000Z	s1	Masxmasx	is there a " quiet splash " under a line there ..
+2011-10-23T01:43:00.000Z	Masxmasx	s1	/casper/vmlinuz noprompt cdrom-detect/try-usb=true file=/cdrom/preseed/ubuntu.seed boot=casper presistent initrd=/casper/initrd.lz splash --
+2011-10-23T01:46:00.000Z	s1	Masxmasx	okay , replace -- with i915.modeset=1 .. then press ESc should take you back to the first menu try Run Ubuntu from USB
+2011-10-23T01:48:00.000Z	Masxmasx	s1	this takes me to the same screen I showed you a picture of. I'm at ubuntu@ubuntu:~$
+2011-10-23T01:49:00.000Z	s1	Masxmasx	okay , try i915.modeset=0
+2011-10-23T01:52:00.000Z	Masxmasx	s1	same screen again
+2011-10-23T01:52:00.000Z	Masxmasx	s1	I think I can just press enter to boot into the edited option
+2011-10-23T01:54:00.000Z	s1	Masxmasx	Alright , Enter it is .. now try adding this option as well .. acpi=off
+2011-10-23T01:55:00.000Z	Masxmasx	s1	same thing with acpi=off and i915.modeset=0
+2011-10-23T01:56:00.000Z	s1	Masxmasx	and if you replaced acpi=force with =off ..
+2011-10-23T01:57:00.000Z	Masxmasx	s1	you mean replace acpi=off with =force?
+2011-10-23T01:57:00.000Z	s1	Masxmasx	also try =1 on that modeset .
+2011-10-23T01:57:00.000Z	Masxmasx	s1	im trying =1 and =off now, that gives me a light grey screen
+2011-10-23T01:58:00.000Z	s1	Masxmasx	Yes , acpi=force ..
+2011-10-23T01:58:00.000Z	s1	Masxmasx	nice step ..
+2011-10-23T01:58:00.000Z	Masxmasx	s1	in combination with modeset?
+2011-10-23T01:58:00.000Z	s1	Masxmasx	Yes .. i915.modeset=1
+2011-10-23T02:00:00.000Z	Masxmasx	s1	that gives me the same as in the picture.
+2011-10-23T02:00:00.000Z	Masxmasx	s1	should I go and try 10.04?
+2011-10-23T02:00:00.000Z	s1	Masxmasx	what if you remove splash ..
+2011-10-23T02:00:00.000Z	s1	Masxmasx	Yeah try
+2011-10-23T02:02:00.000Z	Masxmasx	s1	thus gives me many errors, a lot of "stdin: error 0"
+2011-10-23T02:02:00.000Z	Masxmasx	s1	and...the same screen again. I'll go try 10.04.
+2011-10-23T02:03:00.000Z	s1	Masxmasx	press Alt+F5 .. see if that pass you throu ..
+2011-10-23T02:03:00.000Z	s1	Masxmasx	Alright. g'luck
+2011-10-23T02:03:00.000Z	Masxmasx	s1	thanks a lot.
+2011-10-23T02:05:00.000Z	s1	Masxmasx	You're welcome , hope you get it working .. it just so happend that i've faced the same issue bu with a different card so i used a diff boot option and it passed me throu ..then i had to active the card driver.
+2011-10-23T02:05:00.000Z	Masxmasx	s1	I've been having issues with the graphic card on ubuntu before, sadly. I really appreciate your help.
+2011-10-23T02:06:00.000Z	s1	Masxmasx	so keep trying with those options.
+2011-10-23T02:07:00.000Z	s1	Masxmasx	have you tried with the install option .. did it pass to the desktop!
+2011-10-23T02:07:00.000Z	Masxmasx	s1	it did not
+2011-10-23T02:08:00.000Z	s1	Masxmasx	okay , i feel ya .. lemme know how it goes.
+2011-10-23T02:10:00.000Z	s1	Masxmasx	but it looks like you have instaled Ubuntu on the HDD .. Right!
+2011-10-23T02:10:00.000Z	Masxmasx	s1	I had, but it didn't work after it crashed during update to 11.10
+2011-10-23T02:11:00.000Z	s1	Masxmasx	okay , so you have a broken 11.10 on the HDD .
+2011-10-23T02:11:00.000Z	Masxmasx	s1	correct
+2011-10-23T02:11:00.000Z	Masxmasx	s1	on the SSD to be precise
+2011-10-23T02:13:00.000Z	s1	Masxmasx	:-) , so have you tried to sudo apt-get update && sudo apt-get upgrade from there!  might help
+2011-10-23T02:13:00.000Z	Masxmasx	s1	it can't boot
+2011-10-23T02:13:00.000Z	Masxmasx	s1	broken drivers, it says
+2011-10-23T02:14:00.000Z	s1	Masxmasx	Oh!
+2011-10-23T02:14:00.000Z	Masxmasx	s1	it gives me the option to continue regardless, but the system does not respond to anything
+2011-10-23T02:15:00.000Z	Masxmasx	s1	10.04 boots.
+2011-10-23T02:18:00.000Z	s1	Masxmasx	Yeah i bet ..
+2011-10-23T02:20:00.000Z	s1	Masxmasx	you got to that login screen after which menu ! is that the broken 11.10 .
+2011-10-23T02:20:00.000Z	Masxmasx	s1	I don't understand what you just asked
+2011-10-23T02:21:00.000Z	s1	Masxmasx	the tty login screen with no X with your Ubuntu user-name ..
+2011-10-23T02:22:00.000Z	Masxmasx	s1	I did not get to a login screen when I just booted 10.04 from the USB, it takes me straight to the desktop
+2011-10-23T02:23:00.000Z	s1	Masxmasx	Oh okay , so that tty screen with no X was the broken 11.10 .
+2011-10-23T02:23:00.000Z	Masxmasx	s1	I think so
+2011-10-23T02:24:00.000Z	s1	Masxmasx	is that system monted and shown in your 10.04 .
+2011-10-23T02:25:00.000Z	Masxmasx	s1	yes.
+2011-10-23T02:25:00.000Z	Masxmasx	s1	Not anymore though, I am currently already installing 10.04
+2011-10-23T02:27:00.000Z	s1	Masxmasx	Alright cool .

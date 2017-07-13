@@ -1,0 +1,93 @@
+2006-12-10T15:16:00.000Z	livingdaylight	Slart	ok
+2006-12-10T14:51:00.000Z	Slart	livingdaylight	didn't work? how? what did you expect? what did you get?
+2006-12-10T14:51:00.000Z	Slart	livingdaylight	hmmm.. that should work.. hold on.. I'll try
+2006-12-10T14:53:00.000Z	Slart	livingdaylight	it worked here.. what's the url you tried to copy?
+2006-12-10T14:54:00.000Z	livingdaylight	Slart	here is the url i tried http://www.oshoworld.com/onlinebooks/BookXMLMain.asp?BookName=discourse+series/the%20goose%20is%20out.txt
+2006-12-10T14:54:00.000Z	livingdaylight	Slart	i wanted to grab all the text to edit
+2006-12-10T14:55:00.000Z	Slart	livingdaylight	ok.. just cpy paste only pasted the first line... paste special, without formatting worked though.. try it.. it's in the edit menu
+2006-12-10T14:56:00.000Z	livingdaylight	Slart	that is what i got only the first line, what did you do different?
+2006-12-10T14:56:00.000Z	Slart	livingdaylight	use "paste special" instead of paste
+2006-12-10T14:58:00.000Z	livingdaylight	Slart	i don't see a "paste special"
+2006-12-10T14:58:00.000Z	Slart	livingdaylight	in open office.. edit menu.. just below "paste" ?
+2006-12-10T14:59:00.000Z	livingdaylight	Slart	jrib, cool, thx guys!
+2006-12-10T14:59:00.000Z	Slart	livingdaylight	np.. paste special is a life saver when pasting from the web...
+2006-12-10T15:03:00.000Z	livingdaylight	Slart	yea, first time discovered...thx... is there not another way to easily and quickly save stuff? what is tomboy for example?
+2006-12-10T15:03:00.000Z	Slart	livingdaylight	save stuff from the web? you could always use the save command in firefox.. if that was what you meant
+2006-12-10T15:04:00.000Z	livingdaylight	Slart	yes, from the web - a way of quickly copying and pasting for later reference or editing
+2006-12-10T15:05:00.000Z	Slart	livingdaylight	well.. you could always use a simple text editor.. gedit perhaps
+2006-12-10T15:06:00.000Z	livingdaylight	Slart	but how do you tranfer it?
+2006-12-10T15:06:00.000Z	livingdaylight	Slart	openoffice is a bit overkill no?
+2006-12-10T15:06:00.000Z	Slart	livingdaylight	copy/paste... just like in open office.. I havent tried it.. but it should work..
+2006-12-10T15:07:00.000Z	Slart	livingdaylight	ouch.. gedit didn't work at all.. sorry about that  =/
+2006-12-10T15:08:00.000Z	livingdaylight	Slart	i think gedit is not the best tool
+2006-12-10T15:09:00.000Z	Slart	livingdaylight	no.. it looks like open office is your best bet for now...
+2006-12-10T15:09:00.000Z	livingdaylight	Slart	do you know the tool called basket?
+2006-12-10T15:10:00.000Z	Slart	livingdaylight	nope.. it's a text editor?
+2006-12-10T15:10:00.000Z	livingdaylight	Slart	 i just wonder if and what limit on size capacity
+2006-12-10T15:10:00.000Z	livingdaylight	Slart	no, its a notepad
+2006-12-10T15:11:00.000Z	Slart	livingdaylight	you could always try vi or emacs btw.. and I'll look up basket
+2006-12-10T15:14:00.000Z	Slart	livingdaylight	seems like basket only allows ~32000 bytes of text
+2006-12-10T15:15:00.000Z	livingdaylight	Slart	ok, well figured out! thx i dont quite know how much text that is, lol
+2006-12-10T15:15:00.000Z	Slart	livingdaylight	your url was bigger than that...1 byte=1 character.. it you're not using unicode or such
+2006-12-10T15:16:00.000Z	livingdaylight	Slart	yea, that was a chunk of text, therefore i figured openoffice was the best tool, but for smaller text i thought maybe something easier would suit better
+2006-12-10T15:17:00.000Z	Slart	livingdaylight	yes.. for smaller texts it looks perfect
+2007-01-11T17:58:00.000Z	Slart	livingdaylight	chat=IRC? then xchat is one
+2007-01-11T17:59:00.000Z	Slart	livingdaylight	but there is one official version that isn't free any more... but there are also unofficial versions that are free.. not cracked or anything.. just free
+2007-01-11T17:59:00.000Z	livingdaylight	Slart	sorry, i mean like gaim
+2007-01-11T17:59:00.000Z	Slart	livingdaylight	miranda im is one alternative
+2007-01-11T17:59:00.000Z	Slart	livingdaylight	I think gaim exists for windows too..
+2007-01-11T06:03:00.000Z	livingdaylight	Slart	do you know which one to choose?
+2007-01-11T06:04:00.000Z	livingdaylight	Slart	 gaim.exe; gaimedebug.exe; gaim.no.gtk.exe
+2007-01-11T06:04:00.000Z	Slart	livingdaylight	when I used windows I used Miranda.. it worked nicely for me
+2007-01-11T06:04:00.000Z	Slart	livingdaylight	try them =) I have no idea
+2007-01-11T06:04:00.000Z	livingdaylight	Slart	what does nogtc and debug mean?
+2007-01-11T06:05:00.000Z	Slart	livingdaylight	debug is probably a version that logs things a bit more.. to find bugs in the program.. gtk is a framwork to make windows, buttons etc.. exists on windows and linux
+2007-01-11T06:06:00.000Z	livingdaylight	Slart	thx
+2007-01-11T06:06:00.000Z	Slart	livingdaylight	you're welcome
+2007-01-11T06:19:00.000Z	Slart	livingdaylight	try miranda then
+2007-01-11T06:20:00.000Z	livingdaylight	Slart	i am now ^^ But disappointed that gaim isn't working in xp for me
+2007-01-11T06:21:00.000Z	livingdaylight	Slart	i have xp on my new laptop and i love loading all my favourite linux apps on it. First thing i installed was Firefox and the openoffice.org and Xchat :D
+2007-01-11T06:22:00.000Z	Slart	livingdaylight	hehe.. gaim will probably be fixed shortly.. they are still working on it
+2007-01-11T06:23:00.000Z	livingdaylight	Slart	hehe.. shoult i remove GTK+ aswell?
+2007-01-11T06:23:00.000Z	Slart	livingdaylight	not unless you need the space..who knows you might install something that needs it
+2007-01-11T06:23:00.000Z	Slart	livingdaylight	gaim version current+1 =)
+2007-01-11T06:24:00.000Z	livingdaylight	Slart	 and miranda doesn't need it?
+2007-01-11T06:24:00.000Z	Slart	livingdaylight	I don't think so.. miranda is a windows only application
+2007-01-11T06:24:00.000Z	livingdaylight	Slart	how come i've never heard of miranda before?
+2007-01-11T06:25:00.000Z	Slart	livingdaylight	been living under a rock? ;)
+2007-01-11T06:26:00.000Z	livingdaylight	Slart	i don't know which one to click on now? :|
+2007-01-11T06:27:00.000Z	Slart	livingdaylight	eh? which one what?
+2007-01-11T06:27:00.000Z	livingdaylight	Slart	which miranda download? too much choice
+2007-01-11T06:27:00.000Z	Slart	livingdaylight	isn't there one with extra everything++
+2007-01-11T06:28:00.000Z	livingdaylight	Slart	there is download and then below it Other download Options
+2007-01-11T06:28:00.000Z	livingdaylight	Slart	nope, nothing that says eveything
+2007-01-11T06:30:00.000Z	livingdaylight	Slart	download (windows nt, 2000,xp only) ; installer (windows nt, 2000, xp) ; download zip archive (windows 9x, ME) ;
+2007-01-11T06:30:00.000Z	Slart	livingdaylight	go with the installer.. you get pretty pictures while waiting =)
+2007-01-11T06:48:00.000Z	livingdaylight	Slart	Miranda is a nice littel application actually?
+2007-01-11T06:48:00.000Z	livingdaylight	Slart	actually!!!
+2007-01-11T06:48:00.000Z	Slart	livingdaylight	of course =)
+2007-01-11T06:48:00.000Z	Slart	livingdaylight	I only recommend nice little applications =)
+2007-01-11T06:49:00.000Z	Slart	livingdaylight	it's modular too so you can install another message reading module if you want more or less functionality.. and lots of other things
+2007-01-11T06:49:00.000Z	livingdaylight	Slart	another message reading module?
+2007-01-11T06:50:00.000Z	Slart	livingdaylight	yes.. the module that's responsible for showing the chat window to you.. you can download other ones.. they give you other options for history.. some have other layouts etc etc...
+2007-01-11T06:51:00.000Z	Slart	livingdaylight	kind of like plugins for firefox.. but they have larger impact on how the program works
+2007-01-11T06:51:00.000Z	livingdaylight	Slart	bit like themes?
+2007-01-11T06:51:00.000Z	livingdaylight	Slart	ok
+2007-01-11T06:51:00.000Z	Slart	livingdaylight	yes.. but they change more than just looks
+2007-01-11T06:51:00.000Z	livingdaylight	Slart	oooh, exciting. Under options, yea?
+2007-01-11T06:52:00.000Z	Slart	livingdaylight	I think so.. it's been a while.. but I think they are called plugins
+2007-01-11T06:52:00.000Z	Slart	livingdaylight	and there are many many plugins available on their site
+2007-12-24T03:47:00.000Z	Slart	livingdaylight	yes
+2007-12-24T03:47:00.000Z	livingdaylight	Slart	gracias
+2007-12-24T03:48:00.000Z	livingdaylight	Slart	so i don't need to have installed with aptitude to benefit from the plus of aptitude cleaning up?
+2007-12-24T03:48:00.000Z	Slart	livingdaylight	huh? does aptitude do extra cleaning up?
+2007-12-24T03:49:00.000Z	Slart	livingdaylight	you can purge, remove packages, resolve dependencies etc in both clients.. they both use the same system.. apt
+2007-12-24T03:49:00.000Z	livingdaylight	Slart	yes... aptitude cleansup all the orphane packages when removing an application
+2007-12-24T03:49:00.000Z	Slart	livingdaylight	that's apt doing that.. not aptitude
+2007-12-24T03:50:00.000Z	livingdaylight	Slart	i thought aptitude that where apt-get didn't which is why some people prefer aptitude
+2007-12-24T03:50:00.000Z	Slart	livingdaylight	afaik they are the same.. only difference is the gui.. but ask around.. I might be wrong
+2009-11-02T22:41:00.000Z	Slart	livingdaylight	nope
+2009-11-02T22:42:00.000Z	livingdaylight	Slart	yes, i think it is
+2009-11-02T22:43:00.000Z	livingdaylight	Slart	i think upgrading is bad karma
+2009-11-25T04:01:00.000Z	Slart	livingdaylight	convert (Imagemagick)
+2009-11-25T04:02:00.000Z	Slart	livingdaylight	yes

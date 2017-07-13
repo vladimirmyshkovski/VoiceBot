@@ -1,0 +1,92 @@
+2005-05-31T10:44:00.000Z	Dr_Melectaus		Hi
+2005-05-31T10:44:00.000Z	Dr_Melectaus		I asked what would be a good nix distro for a fisrt time user to familiarise himself with
+2005-05-31T10:45:00.000Z	Dr_Melectaus		A guy in freenode directed me to here
+2005-05-31T10:45:00.000Z	Dr_Melectaus		ok
+2005-05-31T10:45:00.000Z	Dr_Melectaus		wheres the best place to download?
+2005-05-31T10:45:00.000Z	thoreauputic	Dr_Melectaus	try the bootable live CD first and see if you like it
+2005-05-31T10:50:00.000Z	thoreauputic	Dr_Melectaus	yes
+2005-05-31T10:50:00.000Z	thoreauputic	Dr_Melectaus	takes a few weeks though, no matter where you are
+2005-05-31T11:10:00.000Z	thoreauputic	Dr_Melectaus	it's very similar to Debian, which means it can do practically anything :)
+2005-05-31T11:11:00.000Z	thoreauputic	Dr_Melectaus	there are usually a few devs hanging around ;)
+2005-05-31T12:13:00.000Z	thoreauputic	Dr_Melectaus	yes
+2005-06-06T13:55:00.000Z	thoreauputic	Dr_Melectaus	first do ` cd Desktop `
+2005-06-06T13:57:00.000Z	thoreauputic	Dr_Melectaus	right click the desktop and choose "terminal"
+2005-06-06T14:39:00.000Z	thoreauputic	Dr_Melectaus	no, bob2 isn't "actually" here
+2005-07-03T09:38:00.000Z	thoreauputic	Dr_Melectaus	look at the bot's URL
+2005-07-03T09:39:00.000Z	thoreauputic	Dr_Melectaus	do you know about repositories?
+2005-07-03T12:00:00.000Z	thoreauputic	Dr_Melectaus	it isn't, usually
+2005-07-03T12:02:00.000Z	Dr_Melectaus	thoreauputic	is there some kind of noob guide. Ive never really used nix before, and i have installed the package for usb adsl modems. But where the hell do i go from there
+2005-07-03T12:08:00.000Z	thoreauputic	Dr_Melectaus	I think the problem is USb modems in general
+2005-07-06T05:25:00.000Z	thoreauputic	Dr_Melectaus	i think you want ` sudo apt-get install gstreamer0.8-mad ` ?
+2005-07-06T05:26:00.000Z	thoreauputic	Dr_Melectaus	just use the command I gave you above
+2005-07-06T05:27:00.000Z	Dr_Melectaus	thoreauputic	will it enable me to play mp3s?
+2005-07-06T05:27:00.000Z	thoreauputic	Dr_Melectaus	with totem or rhythmbox, yes
+2005-07-06T05:28:00.000Z	Dr_Melectaus	thoreauputic	says there already installed
+2005-07-06T05:28:00.000Z	thoreauputic	Dr_Melectaus	you can also use beep-media-player, which plays mp3 by default - just enable esound output
+2005-07-06T05:29:00.000Z	thoreauputic	Dr_Melectaus	sudo apt-get install beep-media-player
+2005-07-06T05:29:00.000Z	thoreauputic	Dr_Melectaus	it's in the universe repository
+2005-07-06T07:42:00.000Z	thoreauputic	Dr_Melectaus	OK OK -n that's enough !! Please *grin*
+2005-07-06T11:29:00.000Z	thoreauputic	Dr_Melectaus	heh - #debian is a nice spaectator blood sport ;-)
+2005-07-06T11:36:00.000Z	thoreauputic	Dr_Melectaus	hard to say - there's a certain tradition of umm... arrogance I guess
+2005-07-06T11:37:00.000Z	thoreauputic	Dr_Melectaus	don't judge Debian by the channel - it's a great distro
+2005-07-06T11:40:00.000Z	thoreauputic	Dr_Melectaus	anything to do with login, try apt-cache search gdm | grep <keyword> (i suggest)
+2005-07-06T11:41:00.000Z	thoreauputic	Dr_Melectaus	looks like there's a gdm-themes package...
+2005-07-06T11:42:00.000Z	Dr_Melectaus	thoreauputic	not sure if ive got it but is it called xbanner?
+2005-07-06T11:42:00.000Z	thoreauputic	Dr_Melectaus	umm... no idea
+2005-07-06T11:42:00.000Z	thoreauputic	Dr_Melectaus	try gdm-themes
+2005-07-06T11:42:00.000Z	Dr_Melectaus	thoreauputic	whats the name of the one you got and ill try putting that in
+2005-07-06T12:13:00.000Z	thoreauputic	Dr_Melectaus	sure
+2005-07-06T12:14:00.000Z	Dr_Melectaus	thoreauputic	please enlighten me
+2005-07-06T12:14:00.000Z	thoreauputic	Dr_Melectaus	just tell it to use .jpg
+2005-07-06T12:14:00.000Z	Dr_Melectaus	thoreauputic	 tell it in what sense
+2005-07-06T12:14:00.000Z	thoreauputic	Dr_Melectaus	gimp will save in many formats
+2005-07-06T12:16:00.000Z	thoreauputic	Dr_Melectaus	well, open it and save it as .jpg, or you can install imagemagick to do it directly from CLI
+2005-07-06T12:16:00.000Z	thoreauputic	Dr_Melectaus	save as, choose .jpg
+2005-07-06T12:17:00.000Z	thoreauputic	Dr_Melectaus	why do you want .jpg? png is way better...
+2005-07-06T12:17:00.000Z	Dr_Melectaus	thoreauputic	**] 
+2005-07-06T12:18:00.000Z	thoreauputic	Dr_Melectaus	you can compress .png - you choose a lower quality
+2005-07-06T12:20:00.000Z	thoreauputic	Dr_Melectaus	imagemagick is worth instlling - it can do all kinds of things
+2005-07-06T12:21:00.000Z	Dr_Melectaus	thoreauputic	can i apt-get it?
+2005-07-06T12:21:00.000Z	thoreauputic	Dr_Melectaus	of course :)
+2005-07-06T12:21:00.000Z	thoreauputic	Dr_Melectaus	for screenshots you can do, for instance " import -window root screenie.jpg "
+2005-07-06T12:24:00.000Z	thoreauputic	Dr_Melectaus	reading the man page for imagemagick is quite an eye opener...
+2005-07-06T12:26:00.000Z	thoreauputic	Dr_Melectaus	heh - try " display something.jpg"
+2005-07-06T12:27:00.000Z	thoreauputic	Dr_Melectaus	and do look at the man pages - you won't understand them, but it will give you an idea of the power of the tools
+2005-07-06T12:27:00.000Z	Dr_Melectaus	thoreauputic	man pages? is that on there website or something
+2005-07-06T12:28:00.000Z	thoreauputic	Dr_Melectaus	type " man imagemagick"
+2005-07-06T12:28:00.000Z	thoreauputic	Dr_Melectaus	linux has manuals built in
+2005-07-06T12:29:00.000Z	thoreauputic	Dr_Melectaus	typing "man <command>" should be the first thing you try for any command or package ;)
+2005-07-06T12:34:00.000Z	Dr_Melectaus	thoreauputic	you  know how you told me how to apt-get new logon themes, what would it be to get some new system sounds ?
+2005-07-06T12:34:00.000Z	thoreauputic	Dr_Melectaus	that I don't know, sorry
+2005-07-06T12:35:00.000Z	thoreauputic	Dr_Melectaus	if you type "locate *.wav | less " you'll see quite a few sounds, though :)
+2005-08-05T11:54:00.000Z	thoreauputic	Dr_Melectaus	OK - you ?
+2005-08-05T12:38:00.000Z	thoreauputic	Dr_Melectaus	are you using totem-xine or the default ( totem-gstreamer) ?
+2005-08-05T12:38:00.000Z	Dr_Melectaus	thoreauputic	is that some sort of sound codec ?
+2005-08-05T12:39:00.000Z	thoreauputic	Dr_Melectaus	no - different backends /engines for totem
+2005-08-05T12:39:00.000Z	thoreauputic	Dr_Melectaus	i suggest you install totem-xine - gstreamer still has issues
+2005-08-05T12:39:00.000Z	thoreauputic	Dr_Melectaus	just try it
+2005-08-05T12:40:00.000Z	thoreauputic	Dr_Melectaus	sudo apt-get install totem-xine
+2005-08-05T12:41:00.000Z	thoreauputic	Dr_Melectaus	no
+2005-08-05T12:41:00.000Z	thoreauputic	Dr_Melectaus	do you have w32codecs installed?
+2005-08-05T12:47:00.000Z	Dr_Melectaus	thoreauputic	i got the w32codecs
+2005-08-05T12:53:00.000Z	thoreauputic	Dr_Melectaus	hmm - could be good old esd getting in the way as usual - can xmms or beep-media-player play sounds (ogg, mp3) ?
+2005-08-05T12:54:00.000Z	thoreauputic	Dr_Melectaus	just as an experiment, try " killall esd" then run totem again (you never know)
+2005-08-05T14:46:00.000Z	Dr_Melectaus	thoreauputic	im trying to force unmount a CD (install requires 3 CD's) and it says insert disc 2, so i ejected it by putting a bit of wire into the hole in my cd drive that manually opens it, but it still thinks the old CD is mounted, how do i make it kno the 2nd CD is in?
+2005-08-05T14:47:00.000Z	thoreauputic	Dr_Melectaus	oh dear :/
+2005-08-05T14:47:00.000Z	thoreauputic	Dr_Melectaus	the brute force approach is not advised
+2005-08-05T14:47:00.000Z	Dr_Melectaus	thoreauputic	O dear indeed :-\
+2005-08-05T14:47:00.000Z	thoreauputic	Dr_Melectaus	try sudo umount -l /dev/cdrom  (no guarantees)
+2005-08-05T14:48:00.000Z	thoreauputic	Dr_Melectaus	do try to avoid the paper clip approach...
+2005-08-05T14:49:00.000Z	thoreauputic	Dr_Melectaus	lazy umount ( see man mount )
+2005-08-05T14:49:00.000Z	thoreauputic	Dr_Melectaus	or man umount perhaps - one or the other
+2005-08-05T14:54:00.000Z	Dr_Melectaus	thoreauputic	can i somehow install it with the files on my pc, rather than from cd
+2005-08-05T14:55:00.000Z	thoreauputic	Dr_Melectaus	first, did you manage to open your drive without using a crowbar ^H^H^H erm paperclip?
+2005-08-05T14:56:00.000Z	thoreauputic	Dr_Melectaus	what are you installing?
+2005-08-05T14:57:00.000Z	Dr_Melectaus	thoreauputic	TRYING to install UT2K3
+2005-08-05T14:57:00.000Z	thoreauputic	Dr_Melectaus	ah - I know nothing about games, sorry
+2005-08-05T14:57:00.000Z	Dr_Melectaus	thoreauputic	ut2k3 has a linux install script on disc 3, but its fuggerd
+2005-08-05T14:58:00.000Z	thoreauputic	Dr_Melectaus	so it would seem
+2005-09-02T08:34:00.000Z	thoreauputic	Dr_Melectaus	lshw, lspci
+2005-09-02T10:36:00.000Z	Dr_Melectaus	thoreauputic	You about mate?
+2005-09-02T10:36:00.000Z	thoreauputic	Dr_Melectaus	erm yes...
+2005-09-02T10:37:00.000Z	thoreauputic	Dr_Melectaus	nope, sorry :(

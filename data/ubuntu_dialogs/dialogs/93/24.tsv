@@ -1,0 +1,93 @@
+2009-11-27T01:08:00.000Z	mzawieska	ibuclaw	u want me to go to live cd right?
+2009-11-27T00:41:00.000Z	ibuclaw	mzawieska	reboot into LiveCD and run a fsck on the ext4 partition
+2009-11-27T00:42:00.000Z	mzawieska	ibuclaw	when it goes to live cd where shoudl i run this?
+2009-11-27T00:43:00.000Z	ibuclaw	mzawieska	go to System -> Administration -> GParted
+2009-11-27T00:43:00.000Z	ibuclaw	mzawieska	then select the first partition, and right-click -> check
+2009-11-27T00:43:00.000Z	ibuclaw	mzawieska	then 'Apply' and it will run.
+2009-11-27T00:44:00.000Z	mzawieska	ibuclaw	i have ubuntu 9.10 burn on the cd but it ask me try ubuntu with out any changes, install ubuntu,check disk for defect test memory an dboor from first hd where should i choose
+2009-11-27T00:44:00.000Z	ibuclaw	mzawieska	try without any changes
+2009-11-27T00:46:00.000Z	mzawieska	ibuclaw	okay its loading i see the ubuntu sign it will prolly take a while
+2009-11-27T00:49:00.000Z	mzawieska	ibuclaw	okay i am in ubuntu can u tell me what now i should do
+2009-11-27T00:49:00.000Z	ibuclaw	mzawieska	System->Administration->GParted
+2009-11-27T00:50:00.000Z	mzawieska	ibuclaw	okay in there
+2009-11-27T00:50:00.000Z	ibuclaw	mzawieska	in the new window. Right-Click on "/dev/sda1" and select "Check"
+2009-11-27T00:51:00.000Z	ibuclaw	mzawieska	then click the Green Tick "Apply"
+2009-11-27T00:51:00.000Z	mzawieska	ibuclaw	okay its checking /dev/sd1
+2009-11-27T00:54:00.000Z	mzawieska	ibuclaw	it says operation successfully complited just reboot the system right?
+2009-11-27T00:54:00.000Z	ibuclaw	mzawieska	yes
+2009-11-27T00:55:00.000Z	ibuclaw	mzawieska	ensure that the LiveCD is removed from the drive before booting again ;)
+2009-11-27T00:55:00.000Z	mzawieska	ibuclaw	yea i did that :D
+2009-11-27T00:56:00.000Z	mzawieska	ibuclaw	thnx man alot it worked :D
+2009-11-27T00:56:00.000Z	ibuclaw	mzawieska	no probs
+2009-11-27T00:58:00.000Z	mzawieska	ibuclaw	I have another question I have another laptop but the laptop restarts it self when it shows f10 to bios and w/e it restarts over and over again but then after a while says system not found
+2009-11-27T00:59:00.000Z	ibuclaw	mzawieska	and you are unable to book off any devices?
+2009-11-27T01:00:00.000Z	mzawieska	ibuclaw	what u mean exactly
+2009-11-27T01:01:00.000Z	ibuclaw	mzawieska	are you unable to load a LiveCD ? Boot from GRUB?
+2009-11-27T01:01:00.000Z	mzawieska	ibuclaw	let me check
+2009-11-27T01:02:00.000Z	mzawieska	ibuclaw	i see the same menu like b4 try ubuntu with out any changes to ur computer?
+2009-11-27T01:03:00.000Z	ibuclaw	mzawieska	try without any changes.
+2009-11-27T01:04:00.000Z	mzawieska	ibuclaw	by mistake i clicked check for hd defects
+2009-11-27T01:05:00.000Z	ibuclaw	mzawieska	I suppose that may work ... I don't know / unsure what that option is, but if it sounds like what I think it is...
+2009-11-27T01:05:00.000Z	mzawieska	ibuclaw	its checking the hd if its working properly but what should i do when i go to live cd mode like i did b4 ?
+2009-11-27T01:06:00.000Z	ibuclaw	mzawieska	what is installed on the laptop?
+2009-11-27T01:07:00.000Z	mzawieska	ibuclaw	I am not sure but i think I installed ubuntu
+2009-11-27T01:07:00.000Z	mzawieska	ibuclaw	i reformated the disc after i took out the data
+2009-11-27T01:07:00.000Z	mzawieska	ibuclaw	it check the disk it said no error found
+2009-11-27T01:08:00.000Z	mzawieska	ibuclaw	i am rebooting the system now to the menu
+2009-11-27T01:08:00.000Z	ibuclaw	mzawieska	okies, reboot and "try without making changes"
+2009-11-27T01:08:00.000Z	mzawieska	ibuclaw	doin it sir :P
+2009-11-27T01:09:00.000Z	mzawieska	ibuclaw	i will tell u when everything will loads okay
+2009-11-27T01:12:00.000Z	mzawieska	ibuclaw	oki i am in the live cd boss
+2009-11-27T01:12:00.000Z	mzawieska	ibuclaw	what should i do now
+2009-11-27T01:12:00.000Z	ibuclaw	mzawieska	go to GParted again.
+2009-11-27T01:12:00.000Z	ibuclaw	mzawieska	and say what is listed there.
+2009-11-27T01:12:00.000Z	mzawieska	ibuclaw	it says no deviced listed
+2009-11-27T01:13:00.000Z	ibuclaw	mzawieska	can you open a terminal then
+2009-11-27T01:13:00.000Z	mzawieska	ibuclaw	i dont understand but when i check the disk it said it was no error
+2009-11-27T01:13:00.000Z	mzawieska	ibuclaw	i am in terminal
+2009-11-27T01:14:00.000Z	ibuclaw	mzawieska	type in:  sudo fdisk -l
+2009-11-27T01:14:00.000Z	ibuclaw	mzawieska	are you able to put what it outputs into http://paste.ubuntu.com ?
+2009-11-27T01:14:00.000Z	mzawieska	ibuclaw	nothing showed
+2009-11-27T01:16:00.000Z	ibuclaw	mzawieska	you mean it looks like this? http://paste.ubuntu.com/328768/plain/
+2009-11-27T01:16:00.000Z	ibuclaw	mzawieska	in your terminal when you run it.
+2009-11-27T01:16:00.000Z	mzawieska	ibuclaw	correct
+2009-11-27T01:17:00.000Z	ibuclaw	mzawieska	ok, reboot into BIOS configuration.
+2009-11-27T01:17:00.000Z	mzawieska	ibuclaw	u know what i did, i plugged in my usb to the port and gparted showed me the disk
+2009-11-27T01:18:00.000Z	mzawieska	ibuclaw	want me to reboot?
+2009-11-27T01:18:00.000Z	ibuclaw	mzawieska	reboot into BIOS config, yes. It looks like your internal drive is not detected.
+2009-11-27T01:19:00.000Z	ibuclaw	mzawieska	is either no power, dead, or disconnected.
+2009-11-27T01:20:00.000Z	mzawieska	ibuclaw	its seems like it cause when i plug in usb external it showed me in gparted the usb disk
+2009-11-27T01:20:00.000Z	mzawieska	ibuclaw	from bios where should i go
+2009-11-27T01:21:00.000Z	ibuclaw	mzawieska	does the main screen not tell you what hard drives are detected?
+2009-11-27T01:22:00.000Z	mzawieska	ibuclaw	 its not showing disk just mmodel product system board Id service processor processor speed total memory bios version serial number UUID i system factored installed
+2009-11-27T01:23:00.000Z	ibuclaw	mzawieska	and flicking through the menus shows no sign of a hard drive?
+2009-11-27T01:24:00.000Z	mzawieska	ibuclaw	 when i click it it shows No IDE device
+2009-11-27T01:24:00.000Z	ibuclaw	mzawieska	hmm ... so the internal hard drive is either dead, no power or disconnected.
+2009-11-27T01:24:00.000Z	mzawieska	ibuclaw	but the disk worked b4 i took it out and I took all the pictures etc
+2009-11-27T01:25:00.000Z	mzawieska	ibuclaw	power means that the motherboard doesnt give enough power to support the hd i think so
+2009-11-27T01:25:00.000Z	ibuclaw	mzawieska	it may be better for an engineer to have a look at it - or someone who is comfortable with opening/checking that hard drive cables are in correct.
+2009-11-27T01:26:00.000Z	ibuclaw	mzawieska	and in the last resort - swapping the hard drive for another.
+2009-11-27T01:26:00.000Z	mzawieska	ibuclaw	i will figure something out thnx for ur help bud
+2009-11-27T01:37:00.000Z	mzawieska	ibuclaw	is there a way cause i took out the hd and plug in as usb can i installl system on usb?
+2009-11-27T01:37:00.000Z	mzawieska	ibuclaw	i think the motherboard doesnt give enough power for the hd
+2009-11-27T01:40:00.000Z	ibuclaw	mzawieska	not very likely.
+2009-11-27T01:43:00.000Z	mzawieska	ibuclaw	i see the disk its workin on live cd
+2009-11-27T01:43:00.000Z	ibuclaw	mzawieska	hmm?
+2009-11-27T01:43:00.000Z	mzawieska	ibuclaw	the disk showed in gparted
+2009-11-27T01:44:00.000Z	mzawieska	ibuclaw	no way to install the OS on it
+2009-11-27T01:44:00.000Z	mzawieska	ibuclaw	?
+2009-11-27T01:45:00.000Z	ibuclaw	mzawieska	the disk is shown in gparted?
+2009-11-27T01:45:00.000Z	ibuclaw	mzawieska	what size?
+2009-11-27T01:45:00.000Z	mzawieska	ibuclaw	yessir
+2009-11-27T01:45:00.000Z	ibuclaw	mzawieska	okies, not sure what you did, but looks like it is all good for now.
+2009-11-27T01:46:00.000Z	ibuclaw	mzawieska	do what you want with it, I suppose.
+2009-11-27T01:47:00.000Z	mzawieska	ibuclaw	its workin as it was usb the disk i have cables and i plug in the disk to the cables and to the usb
+2009-11-27T01:48:00.000Z	mzawieska	ibuclaw	is there a way to boot it from usb hd?
+2009-11-27T01:49:00.000Z	ibuclaw	mzawieska	yes, when your system initial POST screen shows, you should be allowed to press a button to go to the SBIOS Boot Menu
+2009-11-27T01:49:00.000Z	mzawieska	ibuclaw	i am installin the ubuntu on it
+2009-11-27T01:50:00.000Z	mzawieska	ibuclaw	sbios menu?
+2009-11-27T01:53:00.000Z	ibuclaw	mzawieska	system bios boot menu.
+2009-11-27T01:53:00.000Z	ibuclaw	mzawieska	it's just a list of bootable devices.
+2009-11-27T01:53:00.000Z	mzawieska	ibuclaw	where is that exactly
+2009-11-27T01:53:00.000Z	ibuclaw	mzawieska	when the INITIAL screen loads, it should tell you to press a button to go to the boot menu.
+2009-11-27T01:54:00.000Z	ibuclaw	mzawieska	if you want to boot off an external drive, that is.

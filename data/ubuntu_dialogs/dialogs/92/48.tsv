@@ -1,0 +1,92 @@
+2008-09-05T08:49:00.000Z	powertool08		why can't i create a new host key with a passphrase?
+2008-09-05T08:51:00.000Z	AAA	powertool08	 you can, just hit enter at the prompt
+2008-09-05T08:51:00.000Z	powertool08	AAA	well I can generate one with a passphrase, but sshd won't load it
+2008-09-05T08:52:00.000Z	powertool08	AAA	$ sudo ssh-keygen -t rsa -b 2048 -f /etc/ssh/ssh_host_rsa_key
+2008-09-05T08:52:00.000Z	AAA	powertool08	 ssh-add /path/to/key
+2008-09-05T08:53:00.000Z	powertool08	AAA	I use that command, if I give it a passphrase then I get "Could not load host key" if I don't give it a phrase, it works
+2008-09-05T08:53:00.000Z	AAA	powertool08	 check your ~/.ssh/config and see if you have something preventing that
+2008-09-05T08:54:00.000Z	powertool08	AAA	what would prevent it? example?
+2008-09-05T08:55:00.000Z	AAA	powertool08	 not really sure, there shouldn't be anything in that config that would. it was just the first thing I thought of.   you said load into sshd. sshd is the server and doesn't give a damn about your keys. did you mistype?
+2008-09-05T08:57:00.000Z	powertool08	AAA	I'm trying to generate a new HOST key, not a regular key, and when i restart the server it says it could not load the new key, unless I generate it without the passphrase. Do host keys not normally have passphrases and user keys do?
+2008-09-05T08:58:00.000Z	AAA	powertool08	 that sounds like a permissions issue.  I think you want the key to be 0600 (check me on that) see what ther perms are, they should be very conserved
+2008-09-05T09:00:00.000Z	powertool08	AAA	its not permissions because it works without the passphrase, changed them anyway but it didn't help
+2008-09-05T09:01:00.000Z	AAA	powertool08	 ah! look at /etc/sshd/sshd_config (or whatever) and look for the setting that talke about the type of auth you wanna use.  I think that is the deal
+2008-09-05T09:04:00.000Z	powertool08	AAA	I don't get it, my sshd_config was working fine, the only thing i've done is delete all my keys and try to generate new ones
+2008-09-05T09:05:00.000Z	AAA	powertool08	 and you restared sshd and it still pukes? did you turn on mad debugging? -ddd _I think_
+2008-09-05T09:06:00.000Z	powertool08	AAA	I've been starting it with sudo /etc/init.d/ssh start, how do I add -ddd to this?
+2008-09-05T09:07:00.000Z	AAA	powertool08	 restart
+2008-09-05T09:07:00.000Z	AAA	powertool08	 sorry
+2008-09-05T09:07:00.000Z	AAA	powertool08	 so just start sshd with option that run it in the foreground in debug mode, use the --help to find them
+2008-09-05T09:08:00.000Z	AAA	powertool08	 it will run in your term and you can see the details of the breakage
+2008-09-05T09:11:00.000Z	powertool08	AAA	I think I found it: debug3: Not a RSA1 key file /etc/ssh/ssh_host_rsa_key.
+2008-09-05T09:12:00.000Z	AAA	powertool08	 sweet!
+2008-09-05T09:12:00.000Z	powertool08	AAA	I want ssh2 tho so I don't want the rsa1 key
+2008-09-05T09:21:00.000Z	powertool08	AAA	http://paste.ubuntu.com/43537/ I'm confused, I don't want to use ssh v1 because of vulnerabilities, and adding a passphrase to my host key shouldn't change whether its rsa1 or rsa
+2008-09-05T09:22:00.000Z	AAA	powertool08	 lemme look
+2008-09-05T09:24:00.000Z	AAA	powertool08	 your sshd wants ssh v1 (RSA) and your private key is ssh 2 (DSA). I missed the output earilear, do you have an DSA key? if so that is the problem
+2008-09-05T09:25:00.000Z	powertool08	AAA	how can i make it want a ssh 2 key only, no i don't have a DSA key yet but I did earlier and it failed too, I'll generate one and see what changes
+2008-09-05T09:26:00.000Z	AAA	powertool08	 the is in your sshd_config
+2008-09-05T09:29:00.000Z	AAA	powertool08	 it is in your sshd_config
+2008-09-05T09:29:00.000Z	AAA	powertool08	 you tell it to all ssh 1,2
+2008-09-05T09:30:00.000Z	powertool08	AAA	which line specifically? I have it set to Protocol 2 in the protocol section
+2008-09-05T09:30:00.000Z	AAA	powertool08	 debug3: Not a RSA1 key file /etc/ssh/ssh_host_rsa_key. it is asking for proto 1
+2008-09-05T09:31:00.000Z	powertool08	AAA	http://paste.ubuntu.com/43543/ both rsa & dsa keys fail
+2008-09-05T09:32:00.000Z	AAA	powertool08	 looking
+2008-09-05T09:32:00.000Z	powertool08	AAA	I saw that, why is it asking for protocol 1? my sshd_config says protocol 2 only
+2008-09-05T09:32:00.000Z	AAA	powertool08	 did you stop it first?
+2008-09-05T09:33:00.000Z	powertool08	AAA	yes
+2008-09-05T09:35:00.000Z	AAA	powertool08	 run it in debug mode again and paste the output
+2008-09-05T09:36:00.000Z	AAA	powertool08	 and also, for fun do this $> netstat -lt| grep ssh
+2008-09-05T09:38:00.000Z	powertool08	AAA	stopped it and started again, get this: http://paste.ubuntu.com/43546/
+2008-09-05T09:39:00.000Z	powertool08	AAA	netstat command returns nothing
+2008-09-05T09:40:00.000Z	AAA	powertool08	 what does this return? $> file /etc/ssh/ssh_host_rsa_key
+2008-09-05T09:41:00.000Z	powertool08	AAA	/etc/ssh/ssh_host_rsa_key: writable, regular file, no read permission
+2008-09-05T09:42:00.000Z	powertool08	AAA	run with sudo: ASCII text
+2008-09-05T09:44:00.000Z	AAA	powertool08	 if you cat the rsa and dsa do they look like private keys? (dsa should be shorter than rsa)
+2008-09-05T09:45:00.000Z	AAA	powertool08	 Bind to port 22 on 0.0.0.0 failed: Address already in use.
+2008-09-05T09:45:00.000Z	AAA	powertool08	 that is why I wanted the netsat output =p
+2008-09-05T09:46:00.000Z	powertool08	AAA	$ sudo cat /etc/ssh/ssh_host_rsa_key
+2008-09-05T09:46:00.000Z	AAA	powertool08	 you are already running sshd
+2008-09-05T09:46:00.000Z	powertool08	AAA	it didn't give me any results with the netstat
+2008-09-05T09:46:00.000Z	AAA	powertool08	 $> ps auxww | grep ssh
+2008-09-05T09:46:00.000Z	powertool08	AAA	I'll look for more instances and kill them
+2008-09-05T09:46:00.000Z	AAA	powertool08	 netstat -l
+2008-09-05T09:49:00.000Z	powertool08	AAA	ok, got them all
+2008-09-05T09:49:00.000Z	AAA	powertool08	 now I'm thinking it will work for you :)
+2008-09-05T09:50:00.000Z	AAA	powertool08	 that is why restart is best. /etc/init.d/sshd restart
+2008-09-05T09:53:00.000Z	powertool08	AAA	starting in debug mode it still said address in use :/
+2008-09-05T09:53:00.000Z	AAA	powertool08	 hrm. is localhost up? ifconfig l0
+2008-09-05T09:54:00.000Z	powertool08	AAA	yes
+2008-09-05T09:54:00.000Z	AAA	powertool08	 er lo....
+2008-09-05T09:55:00.000Z	AAA	powertool08	 and netstat -l | grep 22 shows nothing??? serious?
+2008-09-05T09:56:00.000Z	powertool08	AAA	unix  2      [ ACC ]     STREAM     LISTENING     5213223  /var/run/cups/cups.sock
+2008-09-05T09:56:00.000Z	powertool08	AAA	unix  2      [ ACC ]     STREAM     LISTENING     5728352  /tmp/.ICE-unix/dcop30182-1220568133
+2008-09-05T09:57:00.000Z	AAA	powertool08	 but that ain't the problem. this seems fishy
+2008-09-05T09:57:00.000Z	powertool08	AAA	why is cups on port 22?
+2008-09-05T09:57:00.000Z	AAA	powertool08	 it's not. grep 22 matched  LISTENING     5213223
+2008-09-05T09:57:00.000Z	powertool08	AAA	oh
+2008-09-05T09:58:00.000Z	AAA	powertool08	 start sshd in debug mode now that you have all process's stopped.  we are missing something rudimentary
+2008-09-05T09:59:00.000Z	AAA	powertool08	 is DNS setup properly on this box?
+2008-09-05T09:59:00.000Z	powertool08	AAA	ok, I can't get debug mode with /etc/init.d/ssh start, i've been using /usr/sbin/sshd -ddd
+2008-09-05T09:59:00.000Z	powertool08	AAA	as far as I know it is... I can browse without issues
+2008-09-05T10:01:00.000Z	AAA	powertool08	 hrm... what happens when you ssh -vvv localhost ?
+2008-09-05T10:02:00.000Z	powertool08	AAA	sshd -ddd --> http://paste.ubuntu.com/43549/
+2008-09-05T10:04:00.000Z	powertool08	AAA	http://paste.ubuntu.com/43550/
+2008-09-05T10:04:00.000Z	AAA	powertool08	 lemme look. I'm about ready for bed tonight...
+2008-09-05T10:05:00.000Z	AAA	powertool08	 debug2: key_type_from_name: unknown key type '-----BEGIN'
+2008-09-05T10:05:00.000Z	AAA	powertool08	 debug3: key_read: missing whitespace :: you hosed something new :)
+2008-09-05T10:06:00.000Z	AAA	powertool08	 I'm starting to think your ssh keys or filesystem is smoking crack
+2008-09-05T10:07:00.000Z	powertool08	AAA	I'm not sure what I did... I decided I wanted to change all my keys, so I deleted all the host keys in /etc/ssh/ then I deleted all the user keys in /home/user/.ssh/ generated new ones with the commands I gave you at the start and then when I started the server it rejected the keys
+2008-09-05T10:08:00.000Z	powertool08	AAA	I haven't made new user keys but I figured after the server with host keys was running again then I'd get users connected
+2008-09-05T10:09:00.000Z	AAA	powertool08	 you may consider doing something like $> dpkg-reconfigure ssh-server (or similar) I think your config is kinda hosed ;)
+2008-09-05T10:09:00.000Z	powertool08	AAA	ya that would probably be easiest...
+2008-09-05T10:10:00.000Z	powertool08	AAA	Thanks for you help
+2008-09-05T10:11:00.000Z	AAA	powertool08	 good luck!
+2008-09-05T10:49:00.000Z	powertool08	AAA	I suppose I found my problem
+2008-09-05T10:49:00.000Z	AAA	powertool08	 yeah?
+2008-09-05T10:50:00.000Z	powertool08	AAA	Well some more googling turned up an email from somebody with the same problem
+2008-09-05T10:50:00.000Z	powertool08	AAA	The host keys should be generated _without_ a passphrase, because
+2008-09-05T10:51:00.000Z	powertool08	AAA	makes sense I suppose, but I'm alittle bit password crazy
+2008-09-05T10:51:00.000Z	AAA	powertool08	 I have created many ssh keys for sshd without a passphrase, it does work.
+2008-09-05T10:51:00.000Z	powertool08	AAA	Ya but I was trying to create the host key with a passphrase
+2008-09-05T10:51:00.000Z	AAA	powertool08	/dev/urandum and entropy FTW!

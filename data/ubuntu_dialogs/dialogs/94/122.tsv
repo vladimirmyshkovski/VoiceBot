@@ -1,0 +1,94 @@
+2005-01-03T10:56:00.000Z	anir		hello guys..
+2005-01-03T10:57:00.000Z	anir		how are you doing?
+2005-01-03T10:57:00.000Z	anir		hi to all
+2005-01-03T10:58:00.000Z	anir		guys can anyone tell me is it possible to access my other drives from linux???
+2005-01-03T10:58:00.000Z	Quest-Master	anir	Yes
+2005-01-03T10:58:00.000Z	anir	Quest-Master	i have windows installed in the other drive and it is FAT32
+2005-01-03T10:59:00.000Z	Quest-Master	anir	Open up /etc/fstab
+2005-01-03T10:59:00.000Z	Quest-Master	anir	Tell me once you are there
+2005-01-03T10:59:00.000Z	anir	Quest-Master	okay
+2005-01-03T10:59:00.000Z	Quest-Master	anir	Add this line to the end of your fstab
+2005-01-03T11:00:00.000Z	Quest-Master	anir	/dev/hda#       /home/yourusernamehere/windows    vfat    umask=000,user       0       0
+2005-01-03T11:00:00.000Z	Quest-Master	anir	Replace yourusernamehere with your username on Ubuntu
+2005-01-03T11:01:00.000Z	Quest-Master	anir	Still there? ;)
+2005-01-03T11:02:00.000Z	anir	Quest-Master	cant find fstab
+2005-01-03T11:02:00.000Z	Quest-Master	anir	Go to the terminal
+2005-01-03T11:05:00.000Z	anir	Quest-Master	got it
+2005-01-03T11:05:00.000Z	Quest-Master	anir	Add that line at the end I showed you
+2005-01-03T11:05:00.000Z	anir	Quest-Master	i did
+2005-01-03T11:06:00.000Z	anir	Quest-Master	should i type sudo mount-a???
+2005-01-03T11:06:00.000Z	Quest-Master	anir	Yes
+2005-01-03T11:06:00.000Z	Quest-Master	anir	Inside the terminal
+2005-01-03T11:08:00.000Z	anir	Quest-Master	yes i did
+2005-01-03T11:08:00.000Z	Quest-Master	anir	Can you see your drive in /home/yourusername/windows now?
+2005-01-03T11:08:00.000Z	anir	Quest-Master	which command i have to type to see it?
+2005-01-03T11:08:00.000Z	Quest-Master	anir	Just go to /home/yourusername/windows
+2005-01-03T11:10:00.000Z	anir	Quest-Master	nope.. do i have to reboot my sys??
+2005-01-03T11:11:00.000Z	Quest-Master	anir	sudo mount -o remount /dev/partitionnamehere
+2005-01-03T11:13:00.000Z	anir	Quest-Master	it says cant find in etc/fstab or etc mtab
+2005-01-03T11:13:00.000Z	Quest-Master	anir	That doesn't sound good.
+2005-01-03T11:13:00.000Z	anir	Quest-Master	hold on i will be  back okay
+2005-01-03T11:18:00.000Z	Quest-Master	anir	Weird. :\
+2005-01-03T11:19:00.000Z	Quest-Master	anir	Does /home/yourusernamehere/windows exist?
+2005-01-03T11:19:00.000Z	anir	Quest-Master	where did i suppose to create the windows folder?? home/username/... or home/windows??
+2005-01-03T11:20:00.000Z	anir	Quest-Master	yes i have done that..
+2005-01-03T11:21:00.000Z	Quest-Master	anir	And there's nothing inside it?
+2005-01-03T11:21:00.000Z	Quest-Master	anir	Post your last fstab line here
+2005-01-03T11:21:00.000Z	anir	Quest-Master	give me the command to open fstab again
+2005-01-03T11:23:00.000Z	anir	Quest-Master	heck the line i had pasted is not there now????
+2005-01-03T11:23:00.000Z	Quest-Master	anir	You didn't save it then
+2005-01-03T11:23:00.000Z	anir	Quest-Master	no i didnt saved it..:(
+2005-01-03T11:24:00.000Z	anir	Quest-Master	i am such a stupid
+2005-01-03T11:25:00.000Z	anir	Quest-Master	well there are 3 partitions in FAT32..so in # i will write 3..right?
+2005-01-03T11:25:00.000Z	Quest-Master	anir	Correct.
+2005-01-03T11:27:00.000Z	anir	Quest-Master	there is a new file system in the name "windows" has been created bnut when i click it it gives error msg
+2005-01-03T11:27:00.000Z	Quest-Master	anir	What is the message
+2005-01-03T11:28:00.000Z	anir	Quest-Master	unable to  mount the selected volume
+2005-01-03T11:29:00.000Z	anir	Quest-Master	so what should i do?
+2005-01-03T11:29:00.000Z	Quest-Master	anir	Reboot
+2005-01-03T11:29:00.000Z	anir	Quest-Master	so it will work??
+2005-01-03T11:29:00.000Z	Quest-Master	anir	It should
+2005-01-03T11:30:00.000Z	anir	Quest-Master	thank you man.. thank you very much
+2005-01-03T11:30:00.000Z	anir	Quest-Master	yup.. i will reboot.
+2005-01-03T11:34:00.000Z	Quest-Master	anir	I have no idea what is wrong.
+2005-01-03T11:34:00.000Z	anir	Quest-Master	its giving error special device /dev/hda3 does not exist
+2005-01-03T11:35:00.000Z	Quest-Master	anir	Paste me the last fstab line you added again
+2005-01-03T11:36:00.000Z	anir	Quest-Master	heck... there is no line atall...???? :((((
+2005-01-03T11:36:00.000Z	Quest-Master	anir	Did you save it this time?
+2005-01-03T11:37:00.000Z	anir	Quest-Master	yes i did.. but there is not a single line now
+2005-01-03T11:37:00.000Z	anir	Quest-Master	nope
+2005-01-03T11:38:00.000Z	Quest-Master	anir	Join #flood
+2005-01-03T11:38:00.000Z	anir	Quest-Master	hey now its coming..lol
+2005-01-03T11:38:00.000Z	Quest-Master	anir	Post your entire fstab there
+2005-01-03T11:38:00.000Z	Quest-Master	anir	Oh, is it working?
+2005-01-03T11:38:00.000Z	anir	Quest-Master	i am giving you the last line
+2005-01-03T11:39:00.000Z	anir	Quest-Master	/dev/hda3       /home/anir/windows    vfat    umask=000,user       0       0
+2005-01-03T11:39:00.000Z	Quest-Master	anir	Are you sure hda3 exists?
+2005-01-03T11:39:00.000Z	anir	Quest-Master	well i have 3 partitions in FAT system so i gave 3
+2005-01-03T11:40:00.000Z	Quest-Master	anir	Try hda1 or hda2 instead.
+2005-01-03T11:41:00.000Z	anir	Quest-Master	i have given hda1..then what?
+2005-01-03T11:42:00.000Z	Quest-Master	anir	Save it.
+2005-01-03T11:42:00.000Z	anir	Quest-Master	i saved it
+2005-01-03T11:42:00.000Z	anir	Quest-Master	save in the terminal..how?
+2005-01-03T11:44:00.000Z	Quest-Master	anir	Save the fstab
+2005-01-03T11:44:00.000Z	Quest-Master	anir	Go to the terminal
+2005-01-03T11:44:00.000Z	Quest-Master	anir	Type in sudo mount -a
+2005-01-03T11:44:00.000Z	anir	Quest-Master	yes i did
+2005-01-03T11:45:00.000Z	Quest-Master	anir	Did it work?
+2005-01-03T11:45:00.000Z	anir	Quest-Master	its now showing my c drive
+2005-01-03T11:45:00.000Z	Quest-Master	anir	So it worked? :)
+2005-01-03T11:46:00.000Z	anir	Quest-Master	yes..but what about the other 2 partitions??
+2005-01-03T11:46:00.000Z	Quest-Master	anir	Copy and paste that line and do it for the other two partitions
+2005-01-03T11:47:00.000Z	anir	Quest-Master	okay so i will type hda2 and hda3??
+2005-01-03T11:48:00.000Z	anir	Quest-Master	in FAT32 i had C,D E and F..now  in F i have installed UBUNTU and i have Win98SE in C
+2005-01-03T11:48:00.000Z	Quest-Master	anir	Try all three and see which ones work.
+2005-01-03T11:51:00.000Z	anir	Quest-Master	i guess it will not take hda3
+2005-01-03T11:54:00.000Z	Quest-Master	anir	Too bad :(
+2005-01-03T12:00:00.000Z	anir	Quest-Master	hey can i use lindows for free??
+2005-01-03T12:01:00.000Z	Quest-Master	anir	Nope.
+2005-01-03T12:02:00.000Z	anir	Quest-Master	do i have to pay for it?? but linux is free to use..isnt it?
+2005-01-03T12:02:00.000Z	Quest-Master	anir	Some companies like to make money off of Linux.
+2005-01-03T12:02:00.000Z	Quest-Master	anir	That's why I don't use SuSE anymore.
+2005-01-03T12:38:00.000Z	anir	Quest-Master	Rocks
+2005-01-03T12:38:00.000Z	anir	Quest-Master	thank you
+2005-01-03T12:39:00.000Z	anir	Quest-Master	:D thank you all guys

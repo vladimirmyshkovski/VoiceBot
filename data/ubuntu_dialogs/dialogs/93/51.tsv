@@ -1,0 +1,93 @@
+2007-07-31T09:35:00.000Z	Meta4ical		Could anyone help me configure my graphics card to work with fglrx? http://ubuntuforums.org/showthread.php?p=3106882#post3106882
+2007-07-31T09:35:00.000Z	pete83	Meta4ical	OK, so you have the fglrx package installed?
+2007-07-31T09:36:00.000Z	Meta4ical	pete83	Correct ;p
+2007-07-31T09:37:00.000Z	pete83	Meta4ical	OK... um can you paste it to http://paste.ubuntu-nl.org/
+2007-07-31T09:38:00.000Z	Meta4ical	pete83	Paste what?
+2007-07-31T09:38:00.000Z	pete83	Meta4ical	your xorg.conf
+2007-07-31T09:38:00.000Z	Meta4ical	pete83	Oh I added it to my forum post?
+2007-07-31T09:39:00.000Z	pete83	Meta4ical	the other one has line numbers though.
+2007-07-31T09:39:00.000Z	pete83	Meta4ical	then I can tell you what line number to change
+2007-07-31T09:39:00.000Z	Meta4ical	pete83	Ok one moment please
+2007-07-31T09:41:00.000Z	pete83	Meta4ical	  ok, change line 156 to:       Device   "Generic Video Card"
+2007-07-31T09:42:00.000Z	Meta4ical	pete83	done
+2007-07-31T09:43:00.000Z	pete83	Meta4ical	  ok so either reset your xserver, or reset the whole computer (might be more reliable, not sure)
+2007-07-31T09:43:00.000Z	Meta4ical	pete83	ctrl / alt / backspace to reset?
+2007-07-31T09:44:00.000Z	pete83	Meta4ical	  yes, to reset the xserver
+2007-07-31T09:53:00.000Z	pete83	Meta4ical	  oh shit, I just noticed there are two places that had the old one
+2007-07-31T09:54:00.000Z	pete83	Meta4ical	ah, do you remember the paste url?
+2007-07-31T09:55:00.000Z	Meta4ical	pete83	Of course :P http://pastebin.com/d62bdedf
+2007-07-31T09:55:00.000Z	pete83	Meta4ical	and that is your current one, which has no acceleration and uses VESA?
+2007-07-31T09:56:00.000Z	Meta4ical	pete83	Yep that's the latest,
+2007-07-31T09:59:00.000Z	pete83	Meta4ical	ok... I think I'll edit it and post a new modification, ok?
+2007-07-31T10:00:00.000Z	Meta4ical	pete83	sure, thanks a lot btw
+2007-07-31T10:01:00.000Z	pete83	Meta4ical	also, out of curiosity, what card model is it?
+2007-07-31T10:01:00.000Z	Meta4ical	pete83	It's a sapphire radeon x1550 pci-e (256mb)
+2007-07-31T10:01:00.000Z	Meta4ical	pete83	Do you want a link to the forum post again?
+2007-07-31T10:02:00.000Z	pete83	Meta4ical	no, i've got it
+2007-07-31T10:06:00.000Z	pete83	Meta4ical	still there?
+2007-07-31T10:06:00.000Z	Meta4ical	pete83	Yeah, sorry I was reading the forums
+2007-07-31T10:07:00.000Z	pete83	Meta4ical	ok, I think I haven't missed anything this time...
+2007-07-31T10:07:00.000Z	Meta4ical	pete83	Ok ;p
+2007-07-31T10:08:00.000Z	Meta4ical	pete83	were the problems obvious?
+2007-07-31T10:08:00.000Z	pete83	Meta4ical	I wonder if I can send it to you as a text file...
+2007-07-31T10:08:00.000Z	Meta4ical	pete83	You can try?
+2007-07-31T10:08:00.000Z	pete83	Meta4ical	well, it had like 2 of everything, and random garbage I deleted...
+2007-07-31T10:10:00.000Z	Meta4ical	pete83	I never physically added anything but "disable" under the extensions part with composite since one of the guides said fglrx doesn't support it
+2007-07-31T10:10:00.000Z	pete83	Meta4ical	oh wait, you just reminded me of something
+2007-07-31T10:11:00.000Z	pete83	Meta4ical	ok, so you didn't get the xorg.conf file anyways?
+2007-07-31T10:11:00.000Z	Meta4ical	pete83	I accepted it, but the transfer never started
+2007-07-31T10:11:00.000Z	Meta4ical	pete83	you can use pastebin if you want, I can just save it myself
+2007-07-31T10:13:00.000Z	pete83	Meta4ical	http://ubuntuforums.org/showthread.php?p=3108368
+2007-07-31T10:14:00.000Z	Meta4ical	pete83	A guide specifically said turn composite off since fglrx doesn't support it? Section "Extensions"
+2007-07-31T10:14:00.000Z	Meta4ical	pete83	that's how the config was by default
+2007-07-31T10:14:00.000Z	Meta4ical	pete83	the composite part sorry *
+2007-07-31T10:15:00.000Z	pete83	Meta4ical	um.. so you are looking at my modified version?
+2007-07-31T10:15:00.000Z	Meta4ical	pete83	and then this said disable it, https://help.ubuntu.com/community/BinaryDriverHowto/ATI
+2007-07-31T10:15:00.000Z	Meta4ical	pete83	Yeah
+2007-07-31T10:15:00.000Z	pete83	Meta4ical	yeah, so anyways, backup your old xorg.conf, and try my new one
+2007-07-31T10:16:00.000Z	pete83	Meta4ical	um, because it doesn't work with composite, so it might not crash as much with this option
+2007-07-31T10:16:00.000Z	Meta4ical	pete83	that was the default option when I tried with method 1 ;o
+2007-07-31T10:17:00.000Z	pete83	Meta4ical	yeah, but maybe other things have changed
+2007-07-31T10:17:00.000Z	Meta4ical	pete83	Alright I won't argue, I don't know anything myself :P
+2007-07-31T10:17:00.000Z	pete83	Meta4ical	0 means teh same thing as disable
+2007-07-31T10:17:00.000Z	Meta4ical	pete83	Ok, I'll backup my other one and try this
+2007-07-31T10:23:00.000Z	Meta4ical	pete83	I'm having issues copying your .conf into place of the other, I tried cp xorg.conf /etc/X11/xorg.conf but when I view the file, it's blank
+2007-07-31T10:24:00.000Z	pete83	Meta4ical	just "sudo gedit /etc/X11/xorg.conf" and then paste in the text from the ubuntuforums
+2007-07-31T10:33:00.000Z	Meta4ical	pete83	Black screen again, I had to revert to my old xorg.conf to boot back in
+2007-07-31T10:34:00.000Z	pete83	Meta4ical	no error messages?
+2007-07-31T10:34:00.000Z	Meta4ical	pete83	Nope, it boots up as usual and then just as it would normally reach the login screen a completely black screen
+2007-07-31T10:36:00.000Z	pete83	Meta4ical	what do you get for businfo with the command: "sudo lshw -class display"
+2007-07-31T10:37:00.000Z	Meta4ical	pete83	it showed me display 0 and display 1, i'm assuming that's because my video card supports dual display .. anyways i got "bus info: pci@03:00.0"
+2007-07-31T10:38:00.000Z	pete83	Meta4ical	for both of them?
+2007-07-31T10:38:00.000Z	Meta4ical	pete83	No, for display 1 it says "bus info: pci@03:00.1"
+2007-07-31T10:40:00.000Z	pete83	Meta4ical	using feisty?
+2007-07-31T10:40:00.000Z	Meta4ical	pete83	yep, installed it just yesterday
+2007-07-31T10:44:00.000Z	pete83	Meta4ical	I made a slight change to the file, if you want to try again... in the Device section, I removed your two options
+2007-07-31T10:45:00.000Z	pete83	Meta4ical	it should be in the forum: http://ubuntuforums.org/showthread.php?p=3108368
+2007-07-31T10:46:00.000Z	Meta4ical	pete83	Thanks pete, I'm rebooting now
+2007-07-31T10:46:00.000Z	pete83	Meta4ical	*crosses fingers
+2007-07-31T10:52:00.000Z	Meta4ical	pete83	Black screen, reverted to my old xorg.conf :p
+2007-07-31T10:53:00.000Z	pete83	Meta4ical	doh
+2007-07-31T10:53:00.000Z	Meta4ical	pete83	hm?
+2007-07-31T10:55:00.000Z	pete83	Meta4ical	maybe try the other pci busid?
+2007-07-31T10:56:00.000Z	Meta4ical	pete83	isn't that for my 2nd non-existant monitor though?
+2007-07-31T10:56:00.000Z	pete83	Meta4ical	well, I just thought since the screen was black for this busid, maybe they are reversed.. you know I am just brainstorming at this point
+2007-07-31T10:57:00.000Z	Meta4ical	pete83	lol oh
+2007-07-31T10:57:00.000Z	Meta4ical	pete83	I'm going out on a new limb and thinking that's not it, because I tried to enter my password/name at the black screen anyways and i got no sound or anything
+2007-07-31T11:00:00.000Z	Meta4ical	pete83	Thanks for the effort, I guess I'll sit tight and wait for someone to reply to the forum post. Would you perhaps mind helping me install WINE? ;o
+2007-07-31T11:01:00.000Z	pete83	Meta4ical	hahahahaaaha
+2007-07-31T11:01:00.000Z	Meta4ical	pete83	is that a no? ;o lol
+2007-07-31T11:03:00.000Z	pete83	Meta4ical	nah, wine is one of those things I stay away from... I use all linux software
+2007-07-31T11:07:00.000Z	pete83	Meta4ical	ok, one last thing... type this, and say the output...:  "/bin/lspci | grep VGA"
+2007-07-31T11:07:00.000Z	Meta4ical	pete83	Here ;p 03:00.0 VGA compatible controller: ATI Technologies Inc Unknown device 715f
+2007-07-31T11:08:00.000Z	pete83	Meta4ical	that's all it says?
+2007-07-31T11:08:00.000Z	Meta4ical	pete83	Yeah, just that one line
+2007-07-31T11:08:00.000Z	pete83	Meta4ical	ok then, dead end
+2007-07-31T11:09:00.000Z	Meta4ical	pete83	lol
+2007-07-31T11:12:00.000Z	pete83	Meta4ical	did you ever use the firegl-control program?
+2007-07-31T11:12:00.000Z	Meta4ical	pete83	Nope
+2007-07-31T11:13:00.000Z	pete83	Meta4ical	heh. You might try it.. in the package fglrx-control ... and the program is run by the command firegl-control
+2007-07-31T11:14:00.000Z	pete83	Meta4ical	actually, without a hyphen
+2007-07-31T11:15:00.000Z	pete83	Meta4ical	and one other thing, I put a billion options in the xorg.conf file, which has a remote chance of working (see it at http://ubuntuforums.org/showthread.php?p=3108368 ).. other than that, I have to go, and good luck
+2007-07-31T11:17:00.000Z	Meta4ical	pete83	AH I viewed that thread :P
+2007-07-31T11:17:00.000Z	pete83	Meta4ical	ah, ok then goodnight

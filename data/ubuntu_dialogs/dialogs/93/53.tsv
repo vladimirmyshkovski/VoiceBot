@@ -1,0 +1,93 @@
+2007-07-09T11:55:00.000Z	newb		?
+2007-07-09T11:55:00.000Z	newb		oh ok
+2007-07-09T11:55:00.000Z	newb		well i am windows user and i am thining of trying linux
+2007-07-09T11:56:00.000Z	newb		but i wanted to know wha ti would need to be setup?
+2007-07-09T11:56:00.000Z	newb		or if i can get some tips on linux
+2007-07-09T11:56:00.000Z	newb		i got that cd downloaded
+2007-07-09T11:57:00.000Z	newb		no i have not tried it out i am gonna try it on my laptop first
+2007-07-09T11:57:00.000Z	newb		is using linux better?
+2007-07-09T11:57:00.000Z	newb		well i am using a dell and i saw a youtube video runnin on the same laptop
+2007-07-09T11:57:00.000Z	newb		i am very impressed with what i saw
+2007-07-09T11:58:00.000Z	petervk	newb	Just download the *.iso and try it out.
+2007-07-09T11:59:00.000Z	petervk	newb	Some games will work in wine, but not all.
+2007-07-09T12:00:00.000Z	petervk	newb	It sure is. But beryl is not around anymore. it's now called compiz fusion
+2007-07-09T12:01:00.000Z	petervk	newb	Anlar: Yes but performance will not be the same as actually installing.
+2007-07-09T12:01:00.000Z	petervk	newb	Yeah. Warcraft 3 works great.
+2007-07-09T12:02:00.000Z	petervk	newb	What kind of video card do you have?
+2007-07-09T12:02:00.000Z	petervk	newb	Don't be too quick to blow away your windows right away, setting up a dual boot is better for beginners.
+2007-07-09T12:02:00.000Z	petervk	newb	No viruses
+2007-07-09T12:03:00.000Z	petervk	newb	Nvidia cards are great. I asked because wine -> warcraft 3 will need open gl.
+2007-07-09T12:04:00.000Z	petervk	newb	Exactly. you'll have to do that to get it to launch in wine.
+2007-07-09T12:06:00.000Z	petervk	newb	Me?
+2007-07-09T12:06:00.000Z	petervk	newb	shoot
+2007-07-09T12:07:00.000Z	petervk	newb	technology to enable the effects with beryl/compiz fusion
+2007-07-09T12:07:00.000Z	petervk	newb	nothing you have to worry about.
+2007-07-09T12:08:00.000Z	petervk	newb	sort of. It's all automatic now so you don't have to mess with xgl
+2007-07-09T12:08:00.000Z	petervk	newb	compiz fusion is beryl, just a different name and more effects
+2007-07-09T12:09:00.000Z	petervk	newb	definitely 7.04
+2007-07-09T12:10:00.000Z	petervk	newb	http://www.ubuntu.com/getubuntu/download
+2007-07-09T12:11:00.000Z	petervk	newb	yo, quote my whole username if your talking just to me.
+2007-07-09T12:12:00.000Z	newb	petervk	: ok
+2007-07-09T12:12:00.000Z	petervk	newb	thanks.
+2007-07-09T12:15:00.000Z	petervk	newb	I don't understand?
+2007-07-09T12:16:00.000Z	newb	petervk	like xp uses ntfs. win98 was fat32. what does linux use?
+2007-07-09T12:16:00.000Z	petervk	newb	ext3 normally
+2007-07-09T12:16:00.000Z	petervk	newb	But you can use many others. xfs, jfs, reiser4, just not ntfs, and please not fat
+2007-07-09T12:17:00.000Z	petervk	newb	ext3
+2007-07-09T12:17:00.000Z	petervk	newb	its the most popular. You don't want to mess around with different filesystem the first time.
+2007-07-09T12:18:00.000Z	petervk	newb	The cd is not ntfs, and it will work fine
+2007-07-09T12:18:00.000Z	petervk	newb	all cd's and dvd's have their own filesystem (not ext3 or ntfs) and work fine in linux
+2007-07-09T12:19:00.000Z	petervk	newb	that will work fine for warcraft 3
+2007-07-09T12:19:00.000Z	petervk	newb	the laptop your trying this on has the nvidia card, right?
+2007-07-09T12:20:00.000Z	petervk	newb	what do you normally run on windows?
+2007-07-09T12:20:00.000Z	newb	petervk	well office my media player classic firefox, and my once a day warcraft 3
+2007-07-09T12:20:00.000Z	petervk	newb	Linux has a lot of good almost equilivant programs to windows, but everything is a bit different.
+2007-07-09T12:21:00.000Z	petervk	newb	Firefox = Great, Media player = you'll have to use rythmnbox or amarok, warcraft 3 = will work in wine
+2007-07-09T12:22:00.000Z	petervk	newb	Well, first try the livecd, it won't install anything and will allow you to try out a full ubuntu system
+2007-07-09T12:23:00.000Z	petervk	newb	Then if you want to install, i would suggest shrinking the windows partition and installing ubuntu into the free space, and dual booting
+2007-07-09T12:24:00.000Z	petervk	newb	well, once you install ubuntu you don'
+2007-07-09T12:24:00.000Z	petervk	newb	don't have to spend a cent.
+2007-07-09T12:24:00.000Z	newb	petervk	is all linux apps free?
+2007-07-09T12:24:00.000Z	petervk	newb	how big is your hard drive?
+2007-07-09T12:24:00.000Z	petervk	newb	99% of them
+2007-07-09T12:25:00.000Z	petervk	newb	on the laptop?
+2007-07-09T12:26:00.000Z	newb	petervk	oh on laptop i have 120 gig
+2007-07-09T12:27:00.000Z	petervk	newb	usually in linux you install the os and your personal files to seperate partitions.
+2007-07-09T12:28:00.000Z	petervk	newb	home is where your personal files are kept.
+2007-07-09T12:29:00.000Z	petervk	newb	desktop environments. Basically they control how your desktop looks. (a very simple description)
+2007-07-09T12:30:00.000Z	petervk	newb	ubuntu = gnome, kubuntu = kde
+2007-07-09T12:30:00.000Z	petervk	newb	Gnome all the way
+2007-07-09T12:30:00.000Z	petervk	newb	but don't ask everyone as it is a popular topic of flamewars.
+2007-07-09T12:31:00.000Z	petervk	newb	both
+2007-07-09T12:31:00.000Z	petervk	newb	gnome is easier to setup
+2007-07-09T12:32:00.000Z	petervk	newb	what kind of graphics card is in the laptop
+2007-07-09T12:32:00.000Z	petervk	newb	isn't it great
+2007-07-09T12:32:00.000Z	petervk	newb	perfect card for compiz
+2007-07-09T12:33:00.000Z	petervk	newb	you downloaded 7.04, right?
+2007-07-09T12:33:00.000Z	petervk	newb	here, try this
+2007-07-09T12:33:00.000Z	petervk	newb	click System -> Preferences -> desktop effects
+2007-07-09T12:34:00.000Z	newb	petervk	gotcha petervk.
+2007-07-09T12:34:00.000Z	petervk	newb	click enable desktop effects
+2007-07-09T12:34:00.000Z	petervk	newb	not yet
+2007-07-09T12:35:00.000Z	petervk	newb	feisty (7.04) comes with compiz, which is pretty close to beryl
+2007-07-09T12:36:00.000Z	petervk	newb	got compiz running?
+2007-07-09T12:36:00.000Z	newb	petervk	YEAH
+2007-07-09T12:36:00.000Z	petervk	newb	pretty cool. I think I just hooked you on linux.
+2007-07-09T12:36:00.000Z	petervk	newb	firefox
+2007-07-09T12:36:00.000Z	petervk	newb	same as windows.
+2007-07-09T12:37:00.000Z	petervk	newb	there should be a firefox icon on the top of the screen
+2007-07-09T12:38:00.000Z	petervk	newb	less bloat
+2007-07-09T12:38:00.000Z	newb	petervk	is there a system monitor like in windows so i can see resources and processes?
+2007-07-09T12:38:00.000Z	petervk	newb	no DRM.
+2007-07-09T12:39:00.000Z	petervk	newb	System -> Administration -> System Monitor
+2007-07-09T12:39:00.000Z	newb	petervk	how do i configure my iptable?
+2007-07-09T12:39:00.000Z	petervk	newb	think about it, would you program your operating system to include DRM?
+2007-07-09T12:39:00.000Z	petervk	newb	and why would you want to do that?
+2007-07-09T12:40:00.000Z	petervk	newb	iptables is already configured, and you don't need to mess with it. Firewall is up by default.
+2007-07-09T12:42:00.000Z	petervk	newb	just click network icon in the top right of the screen and click manual configuration
+2007-07-09T12:43:00.000Z	petervk	newb	now, don't make too many changes to the live cd as you'll lose everything if you re-boot.
+2007-07-09T12:43:00.000Z	petervk	newb	you'd have to install to keep any changes made
+2007-07-09T12:44:00.000Z	newb	petervk	uhhhhh how do i get my printer to work??
+2007-07-09T12:44:00.000Z	petervk	newb	fun fun. What kind of printer and how is it connected?
+2007-07-09T12:50:00.000Z	petervk	newb	how are things going so far? need anything else?
+2007-07-09T13:15:00.000Z	newb	petervk	u there?

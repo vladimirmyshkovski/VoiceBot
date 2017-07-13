@@ -1,0 +1,93 @@
+2010-06-02T05:03:00.000Z	freezway		so 20.04 will be apri;l
+2010-06-02T05:05:00.000Z	DasEi	freezway	I'm no gfx guru; what's your orininal request ?
+2010-06-02T05:09:00.000Z	freezway	DasEi	do you know how to fix my problem
+2010-06-02T05:09:00.000Z	DasEi	freezway	sry, i missed your response of my last question
+2010-06-02T05:09:00.000Z	DasEi	freezway	I'm no gfx guru; what's your orininal request ?
+2010-06-02T05:10:00.000Z	freezway	DasEi	 Yesterday I tried to compile my kernel. To make a long story short, my graphics drivers got messed up. So I did a reinstall, completely wiping the drive, and I STILL can't get my native resolution. (1920x1080) and am stuck at 1360x768... HELP. I am using the 195 nvidia driver. Before this all happened I had the native resolution
+2010-06-02T05:10:00.000Z	DasEi	freezway	ah, I see, you tried the nvidia-settings, I assume ?
+2010-06-02T05:11:00.000Z	freezway	DasEi	yes
+2010-06-02T05:12:00.000Z	DasEi	freezway	is your monitor detected correctly ?
+2010-06-02T05:12:00.000Z	freezway	DasEi	how do I tell
+2010-06-02T05:13:00.000Z	DasEi	freezway	nvidia setings tells you
+2010-06-02T05:14:00.000Z	freezway	DasEi	where?!
+2010-06-02T05:15:00.000Z	DasEi	freezway	sudo nvidia-settings in trml
+2010-06-02T05:16:00.000Z	freezway	DasEi	it seems to think it 1024x768, but i can set it to 1360x768... I need 1920x1080
+2010-06-02T05:17:00.000Z	DasEi	freezway	if you go   xserver-configuration,  is your monitor detected right ?
+2010-06-02T05:19:00.000Z	freezway	DasEi	yes, but incorrectly
+2010-06-02T05:19:00.000Z	DasEi	freezway	as in model or just as in resolution ?
+2010-06-02T05:20:00.000Z	freezway	DasEi	it just says CRT-0
+2010-06-02T05:20:00.000Z	DasEi	freezway	ic,,  detect display ?
+2010-06-02T05:21:00.000Z	freezway	DasEi	what?
+2010-06-02T05:21:00.000Z	freezway	DasEi	is that under nvidia-settings?
+2010-06-02T05:21:00.000Z	DasEi	freezway	at the bottom of the gui, yes
+2010-06-02T05:22:00.000Z	freezway	DasEi	ah! ty... it does nothing
+2010-06-02T05:26:00.000Z	DasEi	freezway	so it seems dpms doesn't work then, what a monitor is it ?
+2010-06-02T05:27:00.000Z	freezway	DasEi	what is dpms
+2010-06-02T05:27:00.000Z	DasEi	freezway	an autoconfig to detect monitors
+2010-06-02T05:27:00.000Z	freezway	DasEi	how do i run it?
+2010-06-02T05:28:00.000Z	DasEi	freezway	no this time, what a monitor is it ?
+2010-06-02T05:29:00.000Z	freezway	DasEi	its a 1920x1080 viewsonic lcd
+2010-06-02T05:37:00.000Z	freezway	DasEi	u thr?
+2010-06-02T05:39:00.000Z	DasEi	freezway	sudo apt-get install pastebinit
+2010-06-02T05:39:00.000Z	DasEi	freezway	pastebinit /etc/X11/xorg.conf
+2010-06-02T05:39:00.000Z	DasEi	freezway	give url from lst cmd here
+2010-06-02T05:40:00.000Z	freezway	DasEi	i tried editting that... do u want my current or my backup
+2010-06-02T05:41:00.000Z	DasEi	freezway	just run the command and give url
+2010-06-02T05:42:00.000Z	DasEi	freezway	I got it, but please mind
+2010-06-02T05:45:00.000Z	DasEi	freezway	call that link in your browser yourself, see line 45 ?
+2010-06-02T05:46:00.000Z	freezway	DasEi	yes
+2010-06-02T05:47:00.000Z	DasEi	freezway	we shall try to comment it out, if that doesn't work, also insert metamodes, so ... (terminal) :
+2010-06-02T05:47:00.000Z	DasEi	freezway	(close nvidia settings before )
+2010-06-02T05:47:00.000Z	DasEi	freezway	gksudo gedit /etc/X11/xorg.conf
+2010-06-02T05:48:00.000Z	DasEi	freezway	put a "#" without quotes in front of that line, save the file, close it
+2010-06-02T05:49:00.000Z	freezway	DasEi	ok done
+2010-06-02T05:49:00.000Z	DasEi	freezway	restart gdm or reboot
+2010-06-02T05:49:00.000Z	freezway	DasEi	ok will do... bb soon
+2010-06-02T05:53:00.000Z	freezway	DasEi	ok im back, that didn't fix it or make it worse... I am now running irssi so restarting x doesn't close the chat
+2010-06-02T05:55:00.000Z	DasEi	freezway	   Option         "metamodes" "CRT: 1024x768 +0+0, DFP: 1920x1080 +1920+0"
+2010-06-02T05:55:00.000Z	DasEi	freezway	copy that line to clipboard
+2010-06-02T05:56:00.000Z	DasEi	freezway	gksudo gedit   /etc/X11/xorg.conf
+2010-06-02T05:58:00.000Z	freezway	DasEi	ok im there...
+2010-06-02T06:00:00.000Z	DasEi	freezway	replace, safe, close, restart gdm
+2010-06-02T06:00:00.000Z	freezway	DasEi	replace what with what
+2010-06-02T06:00:00.000Z	DasEi	freezway	   Option         "metamodes" "CRT: 1024x768 +0+0, DFP: 1920x1080 +1920+0"
+2010-06-02T06:01:00.000Z	DasEi	freezway	copy that line to clipboard
+2010-06-02T06:01:00.000Z	freezway	DasEi	One sec
+2010-06-02T06:01:00.000Z	DasEi	freezway	  line 62
+2010-06-02T06:01:00.000Z	DasEi	freezway	replace, safe, close, restart gdm
+2010-06-02T06:02:00.000Z	freezway	DasEi	ok... one more time, im back in a gui now
+2010-06-02T06:05:00.000Z	freezway	DasEi	i also dont know what dfp is?
+2010-06-02T06:10:00.000Z	freezway	DasEi	ok... that didn;t work... X gives error parsing file... i have resorted to ctrl-Alt-F1
+2010-06-02T06:11:00.000Z	DasEi	freezway	need the original line back ?
+2010-06-02T06:11:00.000Z	freezway	DasEi	yes... but how do i copy and paste from terminal... I have no gui
+2010-06-02T06:13:00.000Z	DasEi	freezway	no prob, short line :
+2010-06-02T06:13:00.000Z	DasEi	freezway	sudo nano /etc/X11/xorg.conf
+2010-06-02T06:14:00.000Z	freezway	DasEi	ok...
+2010-06-02T06:14:00.000Z	DasEi	freezway	^
+2010-06-02T06:15:00.000Z	freezway	DasEi	ok what now...
+2010-06-02T06:15:00.000Z	DasEi	freezway	re-replaced ? ctrl-o to save, then ctrl-x to quit
+2010-06-02T06:16:00.000Z	DasEi	freezway	restart x
+2010-06-02T06:17:00.000Z	freezway	DasEi	Ok... i will be back soon, i have to eat
+2010-06-02T06:18:00.000Z	DasEi	freezway	I got a viewsonic here, too, in which I onced purged pred the nvidia via synaptic and re-installed it by jockey-gtk to get a fix, but it might be that your kernel lacks dpms, so a look in..
+2010-06-02T06:42:00.000Z	DasEi	freezway	apply upgrades first
+2010-06-02T06:32:00.000Z	freezway	DasEi	Ok, im back... I have X back
+2010-06-02T06:32:00.000Z	DasEi	freezway	I got a viewsonic here, too, in which I onced purged pred the nvidia via synaptic and re-installed it by jockey-gtk to get a fix, but it might be that your kernel lacks dpms, so a look in..
+2010-06-02T06:33:00.000Z	DasEi	freezway	/var/log/Xorg.0.log might tell you more about it's initialisation
+2010-06-02T06:34:00.000Z	freezway	DasEi	so purge anything that looks related? also when do i reboot? after purging? after reinstalling?
+2010-06-02T06:35:00.000Z	DasEi	freezway	under system > admin.., you got a tab saying hardwaredrivers ?
+2010-06-02T06:36:00.000Z	freezway	DasEi	yeah, but take a look at my log file... http://pastebin.com/yy3Y4Y3j
+2010-06-02T06:39:00.000Z	DasEi	freezway	nothin uncommon in log; gksudo synaptic, search for nvidia1...
+2010-06-02T06:39:00.000Z	freezway	DasEi	ok
+2010-06-02T06:41:00.000Z	DasEi	freezway	choose to completly remove the current driver(s)
+2010-06-02T06:41:00.000Z	freezway	DasEi	there are a number of packages, also, gtk-jockey or w/e wants an upgraf
+2010-06-02T06:41:00.000Z	freezway	DasEi	upgrade*
+2010-06-02T06:42:00.000Z	freezway	DasEi	ok.... upgrading... may take a while on my internet....
+2010-06-02T06:42:00.000Z	freezway	DasEi	yeah.... 13 min remaining
+2010-06-02T06:43:00.000Z	DasEi	freezway	caffeine fine here
+2010-06-02T06:50:00.000Z	DasEi	freezway	/ignore -channels #mwsf * JOINS PARTS QUITS NICKS
+2010-06-02T06:51:00.000Z	freezway	DasEi	http://pastebin.com/zm5XZkLh
+2010-06-02T06:57:00.000Z	DasEi	freezway	/ignore -channels * JOINS PARTS QUITS NICKS MODES            a better hit ?
+2010-06-02T06:58:00.000Z	freezway	DasEi	http://pastebin.com/LC6bBTbP
+2010-06-02T07:00:00.000Z	DasEi	freezway	so I don't know from irssi-line then, it does via the config, #irrsi might know better, I'm using it too seldom
+2010-06-02T07:16:00.000Z	DasEi	freezway	still around ?
+2010-06-02T07:17:00.000Z	DasEi	freezway	purge the current nvidia drivers by synaptic, then re-install recommended via jockey (hardwaredrivers), I gtg soon

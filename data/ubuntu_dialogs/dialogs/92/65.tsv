@@ -1,0 +1,92 @@
+2007-06-26T16:41:00.000Z	intangir		you dont run swat from the command line
+2007-06-26T16:41:00.000Z	intangir		and i believe swat is run from inetd
+2007-06-26T16:41:00.000Z	intangir		so you dont start it
+2007-06-26T16:41:00.000Z	intangir		you just goto port 901 or something like that
+2007-06-26T16:41:00.000Z	intangir		localhost:901
+2007-06-26T16:42:00.000Z	intangir		do you have inetd loaded?
+2007-06-26T16:43:00.000Z	intangir		check /etc/inetd.conf
+2007-06-26T16:43:00.000Z	intangir		make sure there is a line in there for swat, and that its not #commented out
+2007-06-26T16:43:00.000Z	intangir		it SHOULD be in there if you installed swat
+2007-06-26T16:44:00.000Z	ParanoyaM	intangir	:swat  stream tcp nowait.400 root /usr/sbin/tcpd /usr/sbin/swat
+2007-06-26T16:44:00.000Z	ParanoyaM		i head this string there
+2007-06-26T16:44:00.000Z	ParanoyaM		had
+2007-06-26T16:44:00.000Z	ParanoyaM		no it is not!
+2007-06-26T16:44:00.000Z	intangir	ParanoyaM	well hrm it should work then, type this: cat /etc/services | grep swat
+2007-06-26T16:45:00.000Z	ParanoyaM		intagir, swat            901/tcp                         # swat
+2007-06-26T16:45:00.000Z	intangir		well thats weird, looks like everything is there
+2007-06-26T16:46:00.000Z	intangir	ParanoyaM	try this: sudo /etc/init.d/inetd restart
+2007-06-26T16:46:00.000Z	ParanoyaM		firefox cannot establish connection with localhost:901
+2007-06-26T16:47:00.000Z	ParanoyaM		intagir, sudo: /etc/init.d/inetd: command not found
+2007-06-26T16:47:00.000Z	intangir	ParanoyaM	aha!
+2007-06-26T16:48:00.000Z	ParanoyaM	intangir	so what i should do?
+2007-06-26T16:48:00.000Z	intangir	ParanoyaM	check my private messages
+2007-06-26T16:49:00.000Z	intangir		bah, i didnt log in so you cant see my queries
+2007-06-26T16:50:00.000Z	intangir	ParanoyaM	first make a backup copy of your inetd.conf
+2007-06-26T16:50:00.000Z	ParanoyaM		i don't see an private messages
+2007-06-26T16:50:00.000Z	intangir	ParanoyaM	apparently swat didnt depend on inetd, even though it needs it, so it didnt add to the config, since it didnt exist yet
+2007-06-26T16:50:00.000Z	intangir	ParanoyaM	type this: sudo cp /etc/inetd.conf inetd.conf.b4
+2007-06-26T16:50:00.000Z	ParanoyaM		intagir, how i should create it
+2007-06-26T16:51:00.000Z	ParanoyaM		ok
+2007-06-26T16:51:00.000Z	intangir	ParanoyaM	sudo apt-get install openbsd-inetd
+2007-06-26T16:51:00.000Z	ParanoyaM		intagir it is ok now
+2007-06-26T16:52:00.000Z	ParanoyaM		intagir, what i should do next?
+2007-06-26T16:53:00.000Z	intangir	ParanoyaM	you installed openbsd-inetd?
+2007-06-26T16:53:00.000Z	ParanoyaM		yes
+2007-06-26T16:53:00.000Z	ParanoyaM		intagir, yes
+2007-06-26T16:53:00.000Z	intangir	ParanoyaM	did you copy the swat line back into inetd.conf?
+2007-06-26T16:53:00.000Z	intangir	ParanoyaM	sudo cat /etc/inetd.conf.b4 >> /etc/inetd.conf
+2007-06-26T16:54:00.000Z	ParanoyaM		intagir, bash: /etc/inetd.conf: Permission denied
+2007-06-26T16:54:00.000Z	intangir	ParanoyaM	sudo cat /etc/inetd.conf.b4 >> /etc/inetd.conf
+2007-06-26T16:54:00.000Z	intangir		it gave you that error?
+2007-06-26T16:55:00.000Z	intangir	ParanoyaM	did it work?
+2007-06-26T16:55:00.000Z	ParanoyaM		intagir, i typed what you said and get this
+2007-06-26T16:55:00.000Z	ParanoyaM		bash: /etc/inetd.conf: Permission denied
+2007-06-26T16:55:00.000Z	intangir	ParanoyaM	ok try it like this instaed ;)
+2007-06-26T16:55:00.000Z	intangir	ParanoyaM	sudo su
+2007-06-26T16:56:00.000Z	intangir	ParanoyaM	cat /etc/inetd.conf.b4 >> /etc/inetd.conf
+2007-06-26T16:56:00.000Z	intangir		lol
+2007-06-26T16:56:00.000Z	intangir	ParanoyaM	then after that: /etc/init.d/inetd restart
+2007-06-26T16:57:00.000Z	ParanoyaM		intagir, cat: /etc/inetd.conf.b4: No such file or directory
+2007-06-26T16:57:00.000Z	intangir		bah, didnt you make the copy before you installed ?
+2007-06-26T16:57:00.000Z	intangir	ParanoyaM	copy this line to the bottom of your inetd.conf file :swatIIstreamItcpInowait.400IrootI/usr/sbin/tcpdI/usr/sbin/swat
+2007-06-26T16:57:00.000Z	intangir		im not sure if you need the first : or not
+2007-06-26T16:57:00.000Z	intangir		thats from what you pasted me
+2007-06-26T16:59:00.000Z	ParanoyaM		intagir, with semicoma?
+2007-06-26T05:00:00.000Z	ParanoyaM		intagir, and where i can find inetd.conf file
+2007-06-26T05:00:00.000Z	intangir	ParanoyaM	1 sec
+2007-06-26T05:00:00.000Z	ParanoyaM		Oh
+2007-06-26T05:00:00.000Z	ParanoyaM		intagir
+2007-06-26T05:00:00.000Z	ParanoyaM		now it works
+2007-06-26T05:00:00.000Z	ParanoyaM		swat asking me username and password
+2007-06-26T05:00:00.000Z	intangir		oh sweet
+2007-06-26T05:00:00.000Z	intangir		grats
+2007-06-26T05:00:00.000Z	ParanoyaM		Intagir, Thank you very much
+2007-06-26T05:01:00.000Z	intangir	ParanoyaM	your welcome
+2007-06-26T05:01:00.000Z	intangir		it woulda worked without issue if swat had correctly depended on inetd
+2007-06-26T05:01:00.000Z	ParanoyaM		intagir, maybe you can help me one more time?
+2007-06-26T05:01:00.000Z	ParanoyaM		i set up swat because i can't see any pc in my workgroup except me
+2007-06-26T05:01:00.000Z	intangir	ParanoyaM	are you using ubuntu? nautilus can actually browse networks pretty well
+2007-06-26T05:02:00.000Z	ParanoyaM		intagir, yes i am using ubuntu, i think it should be easy to see pcs with winxp os
+2007-06-26T05:03:00.000Z	ParanoyaM		intagir, but in my workgroup i can see only my pc, but if i'll type an ip op winxp pc i can access it
+2007-06-26T05:03:00.000Z	intangir	ParanoyaM	maybe your not looking in the right workgroup
+2007-06-26T05:03:00.000Z	ParanoyaM		bo
+2007-06-26T05:04:00.000Z	ParanoyaM		intagir, no! i am in that group here is command line in smb.conf workgroup = HOME
+2007-06-26T05:04:00.000Z	ParanoyaM		intagir, it is 100% correct workgroup
+2007-06-26T05:05:00.000Z	intangir	ParanoyaM	i dont know then, windows is lame ;) blame windows
+2007-06-26T05:05:00.000Z	ParanoyaM		intagir, i know that windows is lame, but i need to access pc
+2007-06-26T05:06:00.000Z	intangir	ParanoyaM	all i can suggest is to goto nautilus: then on the menu select Go->Network
+2007-06-26T05:06:00.000Z	intangir		and browse them out, open windows network
+2007-06-26T05:06:00.000Z	intangir		select the right workgroup
+2007-06-26T05:06:00.000Z	intangir		and it should open them up
+2007-06-26T05:06:00.000Z	ParanoyaM		intagir, it is very pity to me
+2007-06-26T05:06:00.000Z	intangir		it works for me, im in a large office and i can access 30 somethign guys from here
+2007-06-26T05:07:00.000Z	intangir	ParanoyaM	maybe there is something fishy about the network setup
+2007-06-26T05:07:00.000Z	intangir		or maybe its not allowing certain broadcasts
+2007-06-26T05:07:00.000Z	intangir	ParanoyaM	you can try typing in the compute rnames like "smb://someonesbox"
+2007-06-26T05:07:00.000Z	intangir		in nautilus
+2007-06-26T05:08:00.000Z	intangir		nautilus i think can view/mount most windows shares even without samba installed
+2007-06-26T05:08:00.000Z	ParanoyaM		no
+2007-06-26T05:08:00.000Z	ParanoyaM		intagir, no
+2007-06-26T05:08:00.000Z	ParanoyaM		intagir but smb://someonIP - yes
+2007-06-26T05:09:00.000Z	ParanoyaM		intagir
+2007-06-26T05:09:00.000Z	intangir	ParanoyaM	well at least that works, not sure how else to help you on that, mine works already

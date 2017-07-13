@@ -1,0 +1,94 @@
+2007-12-27T19:25:00.000Z	gvsa123		i have three user account in my ubuntu, where i am the admin (default account created in installation). how do i set my account to be able to access other users /home but not the other way around?
+2007-12-27T19:26:00.000Z	stdin	gvsa123	add yourself to their groups
+2007-12-27T19:26:00.000Z	gvsa123	stdin	in manage groups?
+2007-12-27T19:28:00.000Z	gvsa123	stdin	there is only my name on the manage groups... they don't have an entry
+2007-12-27T19:30:00.000Z	gvsa123	stdin	you mean that i belong to the admin group?
+2007-12-27T19:31:00.000Z	stdin	gvsa123	no, so you can edit the groups, you need to add their group to your list of groups
+2007-12-27T19:32:00.000Z	gvsa123	stdin	hmmm... let me absorb that a sec :)
+2007-12-27T19:33:00.000Z	gvsa123	stdin	i should make myself part of their group? but they don't have a group... their main group is me basically... but their names arent' ticked in mange groups
+2007-12-27T19:33:00.000Z	stdin	gvsa123	normally when you add a user they get the primary group name that's the same as their username
+2007-12-27T19:34:00.000Z	gvsa123	stdin	i noticed that from previous installations... but adding them didn't create a group that has their name
+2007-12-27T19:35:00.000Z	gvsa123	stdin	what is the difference between owners and groups anyway?
+2007-12-27T19:35:00.000Z	stdin	gvsa123	owner is the person, only one user can have that user id/name, groups are sets of users
+2007-12-27T19:36:00.000Z	gvsa123	stdin	and this is different from users and groups?
+2007-12-27T19:36:00.000Z	stdin	gvsa123	nope, same thing just different terms
+2007-12-27T19:37:00.000Z	gvsa123	stdin	so the owner in chown, is actually the user? and the group in chgrp is the same groups found in manage groups?
+2007-12-27T19:37:00.000Z	stdin	gvsa123	yeah
+2007-12-27T19:37:00.000Z	gvsa123	stdin	i mean the users in settings
+2007-12-27T19:37:00.000Z	gvsa123	stdin	i see
+2007-12-27T19:38:00.000Z	stdin	gvsa123	check what the group name is for the home directories of the users, if it's different to your group add yourself to it. if not, then you can just "sudo chmod 700 ~/" which makes the owner the only one who can access your home dir (except for root)
+2007-12-27T19:38:00.000Z	gvsa123	stdin	ok... i'll try to sink this is first..
+2007-12-27T19:39:00.000Z	gvsa123	stdin	all other /home/XXX belong to my group... i believe the permissions is drwxr-xr-x
+2007-12-27T19:40:00.000Z	stdin	gvsa123	then you should have read access to them already
+2007-12-27T19:40:00.000Z	gvsa123	stdin	i also want write
+2007-12-27T19:40:00.000Z	stdin	gvsa123	"sudo chmod g+w /home/<username>" for each user
+2007-12-27T19:41:00.000Z	gvsa123	stdin	in 0700 what is 4= ? 2= ? 1=? again.
+2007-12-27T19:41:00.000Z	gvsa123	stdin	<username> is me right?
+2007-12-27T19:42:00.000Z	stdin	gvsa123	4=read, 2=write, 1=execute,  <username> is the name of each user you want write permission to
+2007-12-27T19:42:00.000Z	gvsa123	stdin	oh i get the username already... i'm adding w to their /home/<username>
+2007-12-27T19:43:00.000Z	stdin	gvsa123	yeah, you're just making it so that the group has write access (although if each user is in the same group then all users can read/write to each others home)
+2007-12-27T19:43:00.000Z	gvsa123	stdin	chmod g+w adds write access (+w) to the groups (g) they belong to?
+2007-12-27T19:43:00.000Z	stdin	gvsa123	exactly
+2007-12-27T19:44:00.000Z	gvsa123	stdin	ah yeah... but then they'll also be able to write in my /home
+2007-12-27T19:44:00.000Z	stdin	gvsa123	not if you set your home to 700 (read/write/execute for the owner only)
+2007-12-27T19:45:00.000Z	gvsa123	stdin	ah that's the permissions part of it...
+2007-12-27T19:46:00.000Z	stdin	gvsa123	yeah, "sudo chmod 700 ~/" is the same as it being "drwx------"
+2007-12-27T19:47:00.000Z	gvsa123	stdin	so if i want them to read my files only, i set chmod 0750? not including others
+2007-12-27T19:48:00.000Z	gvsa123	stdin	i'll try to get this straight...
+2007-12-27T19:48:00.000Z	stdin	gvsa123	yeah, that will let them read files in you're home (but remember that each file and directory under your home can have different permissions too)
+2007-12-27T19:48:00.000Z	stdin	gvsa123	so you can have directories and files they can't read even though your home is set to be readable
+2007-12-27T19:49:00.000Z	gvsa123	stdin	oh... is there a hierarchy to what will first be considered? i mean... does permission for directories supersede permissions of files inside them?
+2007-12-27T19:50:00.000Z	gvsa123	stdin	so that /home/folder is 0777, but /home/folder/file is 0000.... which will take effect?
+2007-12-27T19:51:00.000Z	stdin	gvsa123	if the directory is set readable to all but a file inside it is set to readable only to an owner (user), then the files permissions take president
+2007-12-27T19:52:00.000Z	gvsa123	stdin	so file permissions are always above permissions for directory?
+2007-12-27T19:52:00.000Z	stdin	gvsa123	well, in a way. you see to linux, directories are "files" too ;)
+2007-12-27T19:52:00.000Z	gvsa123	stdin	ah yes... i read that a thousand times already... :)
+2007-12-27T19:53:00.000Z	stdin	gvsa123	you have to have access to the directory to access what's inside it, but you can set different permissions on files inside them
+2007-12-27T19:54:00.000Z	gvsa123	stdin	so if the directory is not readable to everyone, even if you set the things inside it to 0777, you still can't read it because you can't get through the first line of permissions? i think this is making sense now... :)
+2007-12-27T19:55:00.000Z	stdin	gvsa123	that's exactly how it works :)
+2007-12-27T19:55:00.000Z	gvsa123	stdin	gvsa123 is trying to absorb :)
+2007-12-27T19:56:00.000Z	gvsa123	stdin	and there's only 3 kinds of permissions right? r w x?
+2007-12-27T19:56:00.000Z	stdin	gvsa123	you're doing well, you've just described it exactly how it works
+2007-12-27T19:56:00.000Z	stdin	gvsa123	well no, there are more but those are the main ones (and probably the only ones you'll need)
+2007-12-27T19:57:00.000Z	stdin	gvsa123	there is "suid", "sgid" and "sticky bit" too
+2007-12-27T19:57:00.000Z	gvsa123	stdin	oh theres still more to this... <gvsa crashes back to earth> lol
+2007-12-27T19:57:00.000Z	gvsa123	stdin	:((
+2007-12-27T19:58:00.000Z	stdin	gvsa123	for example, if you suid (set UID) an executable, then when a user runs that executable it's ran as if the owner ran it (rather than the user)
+2007-12-27T19:59:00.000Z	gvsa123	stdin	User ID?
+2007-12-27T19:59:00.000Z	stdin	gvsa123	yeah, same for sgid (set Group ID), it'd be ran with the permissions of the group that owns the file
+2007-12-27T20:00:00.000Z	stdin	gvsa123	have a look at the permissions for /usr/bin/X, the "s" in there represents suid and sgid (depending where it is in the permissions)
+2007-12-27T20:01:00.000Z	gvsa123	stdin	but you'd have to have x permission to run it in the first place?
+2007-12-27T20:01:00.000Z	stdin	gvsa123	you do, yes :)
+2007-12-27T20:01:00.000Z	gvsa123	stdin	i'll have a look
+2007-12-27T20:02:00.000Z	stdin	gvsa123	"-rwsr-sr-x 1 root root 7460 2007-12-20 19:40 /usr/bin/X" means that anyone can run it, but when they do it'll run as if the user and group that ran it was "root"
+2007-12-27T20:02:00.000Z	gvsa123	stdin	-rwsr-sr-x means owner and group has s?
+2007-12-27T20:02:00.000Z	stdin	gvsa123	yes
+2007-12-27T20:03:00.000Z	gvsa123	stdin	why root? and it still applies to the others group when it doesn't have an s?
+2007-12-27T20:04:00.000Z	gvsa123	stdin	oh because it is owned and belongs to root
+2007-12-27T20:04:00.000Z	stdin	gvsa123	if it was only -rwsr-xr-x, then it would be ran as user: root, group: (your group)
+2007-12-27T20:05:00.000Z	stdin	gvsa123	the other permission "sticky bit" is rather obscure and not really used any more, so you don't have to worry about it
+2007-12-27T20:06:00.000Z	gvsa123	stdin	so SUID is set when you add the s to the user section of ---s------ and SGID is simply when the s is in the group part ------s---?
+2007-12-27T20:06:00.000Z	gvsa123	stdin	 that's the t right?
+2007-12-27T20:06:00.000Z	stdin	gvsa123	yes, to both
+2007-12-27T20:06:00.000Z	gvsa123	stdin	absorbs some more.... :)
+2007-12-27T20:08:00.000Z	stdin	gvsa123	permissions are complicated, but for good reason: you can talor exactly what each user/group can and can not do. for example you could make a file that anyone could write to, but only the user can read (think primitive email :P)
+2007-12-27T20:10:00.000Z	gvsa123	stdin	for that it should be 0733?
+2007-12-27T20:11:00.000Z	stdin	gvsa123	0622, no need for it to be executable ;)
+2007-12-27T20:11:00.000Z	gvsa123	stdin	oh... i see.. i thought you had to add that for them to launch it... :)
+2007-12-27T20:12:00.000Z	stdin	gvsa123	to run it, yes. but they don't need to run it, only write to it
+2007-12-27T20:12:00.000Z	gvsa123	stdin	hey thanks a lot... i'll try to grasp this first before overloading my neural connections...
+2007-12-27T20:13:00.000Z	gvsa123	stdin	i think i get the picture but i won't get into how they would write to a file without launching it first... might fry my brain :)
+2007-12-27T20:13:00.000Z	gvsa123	stdin	thanks again...
+2007-12-27T20:14:00.000Z	stdin	gvsa123	+x means it can be ran/executed, that is the commands will be executed one by one (for a text file).
+2007-12-27T20:15:00.000Z	stdin	gvsa123	make a directory (under /tmp for example) and practice on it,  that way it doesn't matter if you mess it up (/tmp will be cleared on reboot)
+2007-12-27T20:15:00.000Z	gvsa123	stdin	ah that's good... i will try that....
+2007-12-27T20:20:00.000Z	gvsa123	stdin	so how come the groups listed in the command groups isn't the same with the one's listed in groups settings? these are the same groups they refer to? it's just that the terminal lists everything?
+2007-12-27T20:21:00.000Z	gvsa123	stdin	gui vs terminal i mean
+2007-12-27T20:22:00.000Z	stdin	gvsa123	not completely sure, I've never used the groups setting thing (I don't use Gnome) :p
+2007-12-27T20:22:00.000Z	gvsa123	stdin	i see...
+2007-12-27T20:23:00.000Z	stdin	gvsa123	when I edit groups I do it the old fashioned way, I edit /etc/group :)
+2007-12-27T20:25:00.000Z	gvsa123	stdin	that's <group>: X (don't know) : <process ID> : groups?
+2007-12-27T20:26:00.000Z	gvsa123	stdin	oh group ID...
+2007-12-27T20:26:00.000Z	stdin	gvsa123	process ID is the ID (number) given to the process, that has nothing to do with users/groups
+2007-12-27T20:26:00.000Z	gvsa123	stdin	whooops...  :)
+2007-12-27T20:33:00.000Z	gvsa123	stdin	my ubuntu time is up... thanks again... :)

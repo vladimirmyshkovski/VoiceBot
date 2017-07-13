@@ -1,0 +1,93 @@
+2008-11-14T06:52:00.000Z	droids		i've just started getting an error on startup saying that my $HOME/.dmrc file is being ignored, and that i should make sure that i own it and set the permissions to 644.
+2008-11-14T06:52:00.000Z	droids		i checked the permissions and owner and everything is as it should be.
+2008-11-14T06:52:00.000Z	droids		any suggestions?
+2008-11-14T06:52:00.000Z	fryguy	droids	and did you follow those 2 recommendations?
+2008-11-14T06:52:00.000Z	droids	fryguy	indeed i did.
+2008-11-14T06:52:00.000Z	fryguy	droids	what about your home directory? is it owned by you as well?
+2008-11-14T06:53:00.000Z	fryguy	droids	what happens if you delete the file and restart X11?
+2008-11-14T06:53:00.000Z	droids	fryguy	is that really a wise move?
+2008-11-14T06:53:00.000Z	fryguy	droids	there's nothing important in the file, it can be deleted without issue
+2008-11-14T06:53:00.000Z	droids	fryguy	yeah, my home folder is owned by me as well, by the way.
+2008-11-14T06:53:00.000Z	fryguy	droids	if you insist, move it out of the way and restart X
+2008-11-14T06:54:00.000Z	droids	fryguy	deleted and am restarting X.  brb
+2008-11-14T06:55:00.000Z	droids	fryguy	still says that it's being ignored.
+2008-11-14T07:01:00.000Z	droids	fryguy	i replaced it now, but the problem persisted when i deleted it.
+2008-11-14T07:01:00.000Z	fryguy	droids	right, i'm informing jrib of that so he doesn't waste time walking you through something that was already suggested. trying to save everyone a bit of time
+2008-11-14T07:11:00.000Z	droids	fryguy	i found a thread about it on the forums, and i'm trying to change the permissions on my home folder with sudo chmod -R 700, and it's saying that permission is denied to the .gvfs directory in my home.
+2008-11-14T07:11:00.000Z	fryguy	droids	.gvfs contains mounts to other locations, you've likely made a smb/nfs/ssh connection to a remote filesystem
+2008-11-14T07:11:00.000Z	fryguy	droids	700 is also almost certainly not the permissions you want, as you'll likely run into problems with permissions that are that strict
+2008-11-14T07:25:00.000Z	fryguy	droids	you certainly don't have to reinstall
+2008-11-14T07:26:00.000Z	fryguy	droids	you can use find to identify files in your home directory, and do exclusions with that. omit the -R flag from chmod and chown in this case.  see the manpage for find for exact syntax of how to ignore certain files and directories
+2008-11-14T07:28:00.000Z	fryguy	droids	like i said, you'll have to read the manpage, i don't have the linux syntax for it memorized, and I think it's different in BSD (the only manpage for it i have access to right now)
+2008-11-14T07:29:00.000Z	fryguy	droids	if you don't have anything important in your home directory, you can just delete your user and create a new one (and if you do have things that are important, just back them up and/or copy them to the new users directory)
+2008-11-14T07:29:00.000Z	fryguy	droids	it's a reasonable option if you feel like you messed up permissions that badly
+2008-11-14T07:31:00.000Z	droids	fryguy	i think i did.  it's not even letting me open my home folder in the file browser.
+2008-11-14T07:31:00.000Z	droids	fryguy	in fact, it's not letting me do anything.
+2008-11-14T07:34:00.000Z	droids	fryguy	it will not let me use my menues to add a user because it can't access my home folder.  how can i add a user through bash?
+2008-11-14T07:34:00.000Z	fryguy	droids	adduser
+2008-11-14T07:34:00.000Z	fryguy	droids	you'll want to make sure he's a member of the admin group as well, otherwise you won't be able to sudo (make sure this works before you delete your current user, otherwise you will lose root access to the machine, and I really don't want to walk you through how to fix that)
+2008-11-14T07:35:00.000Z	droids	fryguy	right.  i'm not familiar with adding users to groups, could you help me with that?
+2008-11-14T07:35:00.000Z	fryguy	droids	groupadd i think?
+2008-11-14T07:36:00.000Z	fryguy	droids	don't do what dulak says, you don't want to set your default group to admin, you want your default group to be your username
+2008-11-14T07:36:00.000Z	fryguy	droids	no
+2008-11-14T07:37:00.000Z	droids	fryguy	i did it after i created the user.
+2008-11-14T07:37:00.000Z	fryguy	droids	then you are probably ok.
+2008-11-14T07:37:00.000Z	fryguy	droids	"sudo su yournewuser" and then touch a file, and ls -l the file, see if it looks right
+2008-11-14T07:37:00.000Z	fryguy	droids	you'll probably want to cd to /tmp first
+2008-11-14T07:37:00.000Z	fryguy	droids	and then sudo touch a file, and make sure sudo works
+2008-11-14T07:39:00.000Z	droids	fryguy	when i tried to "sudo su nick2", it said 'To run a command as administrator (user "root"), use sudo <command>, See "man sudo_root" for details.
+2008-11-14T07:40:00.000Z	fryguy	droids	hrmm, that's new.  unsure
+2008-11-14T07:42:00.000Z	fryguy	droids	use exit
+2008-11-14T07:43:00.000Z	fryguy	droids	it will fail, unless you are user nick already
+2008-11-14T07:43:00.000Z	droids	fryguy	/ bazhang: what happens if i chown -R nick /home/nick while su?
+2008-11-14T07:44:00.000Z	droids	fryguy	why will it fail?  i thought root had absolute priveleges.
+2008-11-14T07:44:00.000Z	fryguy	droids	you su'd to nick2, not root
+2008-11-14T07:44:00.000Z	droids	fryguy	i'm root at the moment.
+2008-11-14T07:44:00.000Z	droids	fryguy	by accident, really, but i'm still root.
+2008-11-14T07:45:00.000Z	fryguy	droids	it will have the same effect as sudoing (you will fail at .gvfs)
+2008-11-14T07:45:00.000Z	droids	fryguy	any way to change back to nick instead of root without using exit?  exit will close the terminal, and i don't have menu permissions to reopen it.
+2008-11-14T07:45:00.000Z	fryguy	droids	exit will not close the terminal
+2008-11-14T07:46:00.000Z	droids	fryguy	oh, right.
+2008-11-14T07:46:00.000Z	fryguy	droids	a terminal will close when the process that is running in it (your original bash), exits.  you aren't closing the original bash, so the terminal will not close
+2008-11-14T07:47:00.000Z	droids	fryguy	i'm trying to recover some stuff from my root folder, but nick2 doesn't have permissions to enter it.  is there any way to get into the folder?
+2008-11-14T07:48:00.000Z	droids	fryguy	it doesn't like sudo cd.
+2008-11-14T07:48:00.000Z	fryguy	droids	which root folder?  /root?
+2008-11-14T07:48:00.000Z	droids	fryguy	mistyped.  meant home.
+2008-11-14T07:50:00.000Z	fryguy	droids	by default it is, most *nix distributions will have an actual executable file in /bin though as well
+2008-11-14T07:51:00.000Z	fryguy	droids	you can use the one in /bin by specifying /bin/cp instead of just cp
+2008-11-14T07:55:00.000Z	droids	fryguy	would i use the -r option to move whole directories.  oh, and if i copy stuff over, won't it still have the same permissions as before?
+2008-11-14T07:55:00.000Z	fryguy	droids	depending on what options you specify for copy, it might.  read the manpage for cp to get a list of options
+2008-11-14T08:02:00.000Z	droids	fryguy	i know that i can switch between displays with ctrl-alt-fbuttons.  are any of those other gnome sessions, or is it only terminals?
+2008-11-14T08:03:00.000Z	fryguy	droids	ubuntu only starts 1 x session in it's default installation.  starting a second x server is non trivial
+2008-11-14T08:03:00.000Z	droids	fryguy	okay, just thought i would ask.
+2008-11-14T08:07:00.000Z	droids	fryguy	what's the bash command for displaying permissions?
+2008-11-14T08:07:00.000Z	fryguy	droids	stat will do it, so will ls -l
+2008-11-14T08:09:00.000Z	droids	fryguy	whenever i try to access /home/nick2 as nick2, it says permission denied. O.o;
+2008-11-14T08:09:00.000Z	fryguy	droids	ls -ld /home/nick2
+2008-11-14T08:10:00.000Z	droids	fryguy	drw-rw-r-- 3 nick2 nick2 4096 2008-11-13 20:52 /home/nick2
+2008-11-14T08:10:00.000Z	fryguy	droids	then you aren't accessing it as nick2, you are likely nick
+2008-11-14T08:10:00.000Z	fryguy	droids	you need execute permission on that
+2008-11-14T08:10:00.000Z	fryguy	droids	chmod +x /home/nick2
+2008-11-14T08:11:00.000Z	droids	fryguy	that worked, but what did it do?  what does execute permission mean?
+2008-11-14T08:11:00.000Z	fryguy	droids	to cd to a directory, it needs execute permissions
+2008-11-14T08:12:00.000Z	droids	fryguy	could that be my problem for my main user?
+2008-11-14T08:12:00.000Z	fryguy	droids	it could.
+2008-11-14T08:12:00.000Z	fryguy	droids	you really should stop playing with permissions until you know what they do
+2008-11-14T08:13:00.000Z	droids	fryguy	i was just following instructions that were in the beginners section of the forums.  it worked for like, 20 people, and i thought i had a pretty good grasp of what they did, but apparently not.
+2008-11-14T08:17:00.000Z	droids	fryguy	i know you said to stop fooling with permissions, but i think that i have this solved, i just need to make sure that what i'm about to do isn't a terrible idea.
+2008-11-14T08:19:00.000Z	droids	fryguy	i got access to all of my stuff again by accessing a different drive in file browser, navigating to home, right clicking and choosing properties.  under permissions, i gave user:nick file read and write priveleges.  all of my stuff seems to be working at first glance.  question: should i hit the button that says to apply this to all internal files?
+2008-11-14T08:19:00.000Z	fryguy	droids	sure
+2008-11-14T08:23:00.000Z	droids	fryguy	where is the sudoers file, just so i can look in it and make sure that my other account is in it in case not everything is fixed?
+2008-11-14T08:24:00.000Z	fryguy	droids	it's not going to be in the sudoers file
+2008-11-14T08:24:00.000Z	fryguy	droids	log in as the user and type "id" and make sure that under groups you are in admin.  better yet, just try to sudo a command while you are the new user
+2008-11-14T08:27:00.000Z	droids	fryguy	finally, what's the command for deleting a user?  apparently not rmuser.
+2008-11-14T08:27:00.000Z	fryguy	droids	i'm guessing.. deluser
+2008-11-14T08:28:00.000Z	fryguy	droids	second guess would be userdel
+2008-11-14T08:29:00.000Z	droids	fryguy	you
+2008-11-14T08:29:00.000Z	droids	fryguy	you've been amazingly helpful, and i've noticed that you're constantly helping other people as well.  thank you tons.
+2008-11-14T08:30:00.000Z	fryguy	droids	i'm just answering basics. I don't know much :(
+2008-11-14T08:31:00.000Z	droids	fryguy	regardless, you're devoting quite a bit of time just to helping others.  it's awesome.
+2008-11-14T08:42:00.000Z	droids	fryguy	as a final check, what should my permissions on my home folder be before i don't touch them again?  664 or 667?
+2008-11-14T08:44:00.000Z	droids	fryguy	i think it should be 664, since there doesn't seem to be any logic allowing others more access than myself.  on the other hand, i thought that what i was doing last time was right as well, so i figured i'd ask.
+2008-11-14T08:46:00.000Z	fryguy	droids	my home dir is 755
+2008-11-14T08:46:00.000Z	droids	fryguy	alright, so i'll set it to that.

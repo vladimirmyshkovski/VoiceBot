@@ -1,0 +1,93 @@
+2005-06-26T15:38:00.000Z	Heimdall		is there a graphical tool to configure my network card in ubuntu ?
+2005-06-26T15:39:00.000Z	Seveas	Heimdall	what do you mean with 'configure the device'?
+2005-06-26T15:40:00.000Z	Heimdall	Seveas	cyphase : I don't really know, it seems that my card is not working since ubuntu is telling me that eth0 is not connected
+2005-06-26T15:40:00.000Z	Seveas	Heimdall	wired or wireless?
+2005-06-26T15:41:00.000Z	Seveas	Heimdall	then the networking thing will do it..
+2005-06-26T15:41:00.000Z	Seveas	Heimdall	in the terminal type: sudo mii-diag eth0
+2005-06-26T15:42:00.000Z	Heimdall	Seveas	cyphase : you can look at this : http://nico.aunai.free.fr/tmp/RES.TXT
+2005-06-26T15:42:00.000Z	Seveas	Heimdall	you have no IP address, have you enabled DHCP or set a static address?
+2005-06-26T15:43:00.000Z	Seveas	Heimdall	then you forgot to set the IP address :)
+2005-06-26T15:43:00.000Z	Heimdall	Seveas	: no
+2005-06-26T15:43:00.000Z	Heimdall	Seveas	: 192.168.0.1/255.255.255.0
+2005-06-26T15:44:00.000Z	Seveas	Heimdall	set it in the networking applet
+2005-06-26T15:44:00.000Z	Heimdall	Seveas	: in system, admin, networking ?
+2005-06-26T15:44:00.000Z	Seveas	Heimdall	yes...
+2005-06-26T15:45:00.000Z	Heimdall	Seveas	: I did it
+2005-06-26T15:45:00.000Z	Seveas	Heimdall	and have you hit the activate button too?
+2005-06-26T15:45:00.000Z	Heimdall	Seveas	: it is telling me that eth0 is active
+2005-06-26T15:45:00.000Z	Seveas	Heimdall	and the properties tell you it's configured and has the right IP address?
+2005-06-26T15:46:00.000Z	Heimdall	Seveas	: but the little icon in the right top of the screen is telling me that eth0 is disconnected
+2005-06-26T15:46:00.000Z	Seveas	Heimdall	in the terminal type: sudo mii-diag eth0
+2005-06-26T15:47:00.000Z	Heimdall	Seveas	: http://nico.aunai.free.fr/tmp/RES2.TXT
+2005-06-26T15:47:00.000Z	Seveas	Heimdall	there's something wrong with the physical connection
+2005-06-26T15:47:00.000Z	Heimdall	Seveas	: and this too : http://nico.aunai.free.fr/tmp/RES.TXT
+2005-06-26T15:48:00.000Z	Heimdall	Seveas	; what do you mean the "physical connection" ?
+2005-06-26T15:48:00.000Z	Seveas	Heimdall	if you have multiple network cards (like an onboard one and a real card or two real cards) check whether it's conencted to the right socket
+2005-06-26T15:48:00.000Z	Seveas	Heimdall	i mean the cable
+2005-06-26T15:48:00.000Z	Seveas	Heimdall	the cable is broken or not connected well...
+2005-06-26T15:49:00.000Z	Heimdall	Seveas	: well I have only one ethernet card in my laptop, but ubuntu is telling me about two interfaces : Io and eth0
+2005-06-26T15:49:00.000Z	Seveas	Heimdall	that's lo
+2005-06-26T15:49:00.000Z	Heimdall	Seveas	: whats io ?
+2005-06-26T15:50:00.000Z	Seveas	Heimdall	then check on your router/switch if the cable is connected good...
+2005-06-26T15:50:00.000Z	Heimdall	Seveas	; it is a direct connection between two computers
+2005-06-26T15:51:00.000Z	Seveas	Heimdall	then check it on the other pc and make sure you have a crossover cable...
+2005-06-26T08:02:00.000Z	Heimdall	Seveas	: yes itis different
+2005-06-26T08:02:00.000Z	Heimdall	Seveas	: but, how can it be possible that ubuntu does not propose latex packages ?
+2005-06-26T08:03:00.000Z	Seveas	Heimdall	it does :)
+2005-06-26T08:03:00.000Z	Heimdall	Seveas	: well not in the cd, nor in the packages.ubuntu.com
+2005-06-26T08:03:00.000Z	Seveas	Heimdall	tetex-{base,bin,doc,extra}
+2005-06-26T08:04:00.000Z	Heimdall	Seveas	? tetex ? latex ? I havenothing
+2005-06-26T08:05:00.000Z	Seveas	Heimdall	it's in base, are you sure you have installing from the network enabled?
+2005-06-26T08:05:00.000Z	Heimdall	Seveas	; sorry, I don't understand
+2005-06-26T08:05:00.000Z	Seveas	Heimdall	type: apt-cache show tetex-base
+2005-06-26T08:06:00.000Z	Heimdall	Seveas	: no packages found
+2005-06-26T08:06:00.000Z	Seveas	Heimdall	Adding Repositories: http://www.ubuntulinux.org/wiki/AddingRepositoriesHowto
+2005-06-26T08:06:00.000Z	Seveas	Heimdall	For a ready-to-use sources.list with all official Ubuntu repositories, go to paste.ubuntulinux.nl/38
+2005-06-26T08:09:00.000Z	Heimdall	Seveas	: my linux isn't connected to the web
+2005-06-26T08:10:00.000Z	Seveas	Heimdall	then download the tetex packages from packages.ubuntu.com on another machine
+2005-06-26T08:11:00.000Z	Seveas	Heimdall	tetex is a distribution for latex
+2005-06-26T08:33:00.000Z	Seveas	Heimdall	of course there is...
+2005-06-26T08:33:00.000Z	Heimdall	Seveas	: not by default
+2005-06-26T08:33:00.000Z	Seveas	Heimdall	of course not
+2005-06-26T08:34:00.000Z	Seveas	Heimdall	how many people will use it?
+2005-06-26T08:34:00.000Z	Heimdall	Seveas	: of course ??
+2005-06-26T08:34:00.000Z	Heimdall	Seveas	: I don't know... me everyday :-D
+2005-06-26T08:34:00.000Z	Seveas	Heimdall	it's not used by enough people to be included on the cd
+2005-06-26T08:34:00.000Z	Heimdall	Seveas	: but it could be on the cd
+2005-06-26T08:34:00.000Z	Heimdall	Seveas	: well do more cds
+2005-06-26T08:35:00.000Z	Heimdall	Seveas	: how many people don't have internet connection ?
+2005-06-26T08:35:00.000Z	Seveas	Heimdall	no, Ubuntu is and probably always will be one cd
+2005-06-26T08:35:00.000Z	Heimdall	Seveas	: I think this is a big problem with linux.. if you don't have the internet access... you're lost
+2005-06-26T08:35:00.000Z	Seveas	Heimdall	same goes for windows...
+2005-06-26T08:36:00.000Z	Heimdall	Seveas	? with windows what ?
+2005-06-26T08:36:00.000Z	Seveas	Heimdall	how are you going to install software on windows without internet connection?
+2005-06-26T08:37:00.000Z	Heimdall	Seveas	: you buy it :p
+2005-06-26T08:37:00.000Z	Seveas	Heimdall	so, for linux you replace buy with download in an internetcafe and burn
+2005-06-26T08:38:00.000Z	Heimdall	Seveas	: it is surely less accessible for "base people"
+2005-06-26T10:18:00.000Z	Heimdall	Seveas	: I have installed tetex, but this is not the same thing as latex ? :/
+2005-06-26T10:18:00.000Z	Seveas	Heimdall	it is..
+2005-06-26T10:19:00.000Z	Heimdall	Seveas	: oh sorry... I typed tex, and not latex
+2005-06-26T10:20:00.000Z	Heimdall	Seveas	:it is quite long to download all the apckages :/
+2005-06-27T15:44:00.000Z	Seveas	Heimdall	it is
+2005-06-27T15:45:00.000Z	Heimdall	Seveas	: no, I do apt-get install mplayerfor 1h it is not
+2005-06-27T15:45:00.000Z	Seveas	Heimdall	try mplayer-custom
+2005-06-27T15:45:00.000Z	Heimdall	Seveas	: and my pat is updated
+2005-06-27T15:45:00.000Z	Seveas	Heimdall	or tey apt-cache search mplayer for more options
+2005-06-27T15:46:00.000Z	Heimdall	Seveas	: apt-cache show/search gives nothing
+2005-06-27T15:47:00.000Z	Seveas	Heimdall	enable multiverse then
+2005-06-27T15:47:00.000Z	Heimdall	Seveas	multiverse ?
+2005-06-27T15:48:00.000Z	Seveas	Heimdall	Adding Repositories: http://www.ubuntulinux.org/wiki/AddingRepositoriesHowto
+2005-06-27T15:48:00.000Z	Seveas	Heimdall	For a ready-to-use sources.list with all official Ubuntu repositories, go to paste.ubuntulinux.nl/38
+2005-06-27T15:48:00.000Z	Seveas	Heimdall	and also www.ubuntulinux.org/ubuntu/components
+2005-06-30T13:22:00.000Z	Seveas	Heimdall	but it helps though :)
+2005-07-07T14:30:00.000Z	Seveas	Heimdall	by default gaim is installed
+2005-07-10T11:15:00.000Z	Seveas	Heimdall	pan
+2005-07-10T11:15:00.000Z	Heimdall	Seveas	lol don't tell me pan :)
+2005-07-10T11:16:00.000Z	Heimdall	Seveas	I've tried it, and found it not very good...
+2005-07-10T11:16:00.000Z	Heimdall	Seveas	thunderbind is worst for binaries...
+2005-07-10T11:17:00.000Z	Seveas	Heimdall	pan is not good at binaries indeed
+2005-07-10T11:17:00.000Z	Heimdall	Seveas	which one is good so ? :-/
+2005-07-10T11:18:00.000Z	Heimdall	Seveas	ok okay... :-) but you know newsgroups can be a very good way for fast downloading
+2005-07-10T11:18:00.000Z	Seveas	Heimdall	i know, but we do not support such things in here ;)
+2005-07-10T11:19:00.000Z	Heimdall	Seveas	of course, downloading linux free softwares etc... :)
+2005-07-21T16:25:00.000Z	Heimdall	Seveas	(hello) could you remember me what is the latex package you told me about ?

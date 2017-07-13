@@ -1,0 +1,92 @@
+2006-01-15T17:07:00.000Z	wogi		Question: Is there a way to undo your last apt-get install? A package had a lot of dependancies, and didn't install properly anyhow, and it added a bunch of stuff like slapd and mailman and exim, and I just kind of want to go back to the previous state. If I apt-get remove gforge (the package), it doesn't free up nearly as much space as it took, so I guess its not removing all of its dependancies?
+2006-01-15T17:08:00.000Z	mwe	wogi	sudo debfoster. install it if you haven't got it
+2006-01-15T17:08:00.000Z	mwe	wogi	it will ask a lot the first time you run it though
+2006-01-15T17:09:00.000Z	wogi	mwe	mkay :)
+2006-01-15T17:09:00.000Z	mwe	wogi	go with defaults with anything you're unsure about
+2006-01-15T17:10:00.000Z	wogi	mwe	uh oh..Now any apt-get install or remove I do gives me a list of errors in regards to gforge related packages, and is returning an error code..
+2006-01-15T17:11:00.000Z	mwe	wogi	pastebin the errors
+2006-01-15T17:11:00.000Z	wogi	mwe	but its telling me a bunch of stuff, so let me read a bit first..
+2006-01-15T17:12:00.000Z	wogi	mwe	thats the jist of it.
+2006-01-15T17:13:00.000Z	mwe	wogi	I'd try sudo apt-get -f
+2006-01-15T17:20:00.000Z	wogi	mwe	apt-get -f remove gforge-db-postgresq gives me Removing gforge-db-postgresql ...cp: cannot stat `/etc/postgresql/pg_hba.conf': No such file or directory  dpkg: error processing gforge-db-postgresql (--remove): subprocess pre-removal script returned error exit status 1 :/ I think I broke it.. (Thank you for helping me!)
+2006-01-15T17:21:00.000Z	mwe	wogi	sudo apt-get -f with no arguement. just sudo apt-get -f
+2006-01-15T17:21:00.000Z	mwe	wogi	that's what I wanted you to try
+2006-01-15T17:26:00.000Z	wogi	mwe	So that gives me a help file, yeah? But I'm not seeing I guess what I need. I'll keep looking. Thanks!
+2006-01-15T17:27:00.000Z	mwe	wogi	or install the broken package then uninstall it to clean it up
+2006-01-15T17:28:00.000Z	wogi	mwe	ooh clever. :)
+2006-01-15T17:28:00.000Z	mwe	wogi	yeah sometimes windows logic works in linux too
+2006-01-15T17:29:00.000Z	wogi	mwe	heh I think I was mising sudo apt-get -f install (the "install")
+2006-01-15T17:29:00.000Z	mwe	wogi	so it's fixed?
+2006-01-15T17:30:00.000Z	wogi	mwe	Not totally no, but I'm getting some slightly different messages :D
+2006-01-15T17:30:00.000Z	mwe	wogi	ok
+2006-01-15T17:31:00.000Z	mwe	wogi	what is it complaining about?
+2006-01-15T17:32:00.000Z	wogi	mwe	Well the pkg its having trouble removing (even after reinstalling) is gforge-db-postgresql. And it first said it couldn't find /etc/postgresql/pg_hba.conf (I guess removed in a previous uninstall attempt?) and died, so I touch /etc/postgresql/pg_hba.conf, and now its saying cannot open /var/lib/postgres/data/postmaster.pid for reading: no file or directory, so thats where its dying.
+2006-01-15T17:33:00.000Z	mwe	wogi	and you can't remove it either?
+2006-01-15T17:34:00.000Z	wogi	mwe	its like -f isn't powerful enough :P
+2006-01-15T17:34:00.000Z	mwe	wogi	but sudo apt-get --purge remove gforge-db-postgresql wont work?
+2006-01-15T17:35:00.000Z	wogi	mwe	nope. exactly same thing :/
+2006-01-15T17:36:00.000Z	mwe	wogi	well I'd try sudo dpkg --force-all -i /var/cache/apt/gforge-db-post<tab> then sudo dpkg --purge gforge-db-postgresql then
+2006-01-15T17:38:00.000Z	wogi	mwe	That <tab> doesn't completefor me.. I don't have that file..
+2006-01-15T17:38:00.000Z	wogi	mwe	Let me see what I Do have in there.
+2006-01-15T17:38:00.000Z	wogi	mwe	aha, one more dir, "archives"
+2006-01-15T17:42:00.000Z	wogi	mwe	Good gravy.From that dpkg --purge /var... one, it tells me /etc/init.d/postgresql was notfound, and just errors out. Ok.. I'll just need to start over maybe.. install the whole thing again and try debfoster again or something *droop* h8 gforge
+2006-01-15T17:43:00.000Z	mwe	wogi	did you reinstall it first?
+2006-01-15T17:43:00.000Z	mwe	wogi	with dpkg
+2006-01-15T17:44:00.000Z	wogi	mwe	hmm.. With apt I think. But I've tried what you've said. I was just thinking gforge-db-postgresql is depending on something else that Did get successfully uninstalled..
+2006-01-15T17:45:00.000Z	mwe	wogi	sudo apt-get -d install --reinstall gforge-db-postgresql should re-download the .deb
+2006-01-15T17:45:00.000Z	mwe	wogi	the sudo dpkg --force-all -i /var/cache/apt/archives/gforge-db-post<tab> <enter>
+2006-01-15T17:45:00.000Z	wogi	mwe	did it put it in that /var/cache dir..?
+2006-01-15T17:45:00.000Z	wogi	mwe	k
+2006-01-15T17:46:00.000Z	mwe	wogi	then sudo dpkg --purge gforge-db-postgresql
+2006-01-15T17:46:00.000Z	wogi	mwe	The install is failing due to absent /etc/init.d/postgresql
+2006-01-15T17:47:00.000Z	mwe	wogi	even with --force-all?
+2006-01-15T17:47:00.000Z	wogi	mwe	yeah :(
+2006-01-15T17:47:00.000Z	wogi	mwe	dpkg --force-all -i /var/cache/apt/archives/gforge-db-postgresql_3.1-31_all.deb
+2006-01-15T17:47:00.000Z	wogi	mwe	Its right, isn't it?
+2006-01-15T17:48:00.000Z	mwe	wogi	sudo it
+2006-01-15T17:48:00.000Z	wogi	mwe	well I was naughty and sudo su'd earlier.. But I will.
+2006-01-15T17:49:00.000Z	mwe	wogi	that's ok
+2006-01-15T17:50:00.000Z	wogi	mwe	we're trying all the forceful things aren't we.. :/ Maybe there's some manual way I can remove it..
+2006-01-15T17:51:00.000Z	mwe	wogi	I'd go over man dpkg. there are other options
+2006-01-15T17:51:00.000Z	wogi	mwe	kk
+2006-01-15T17:51:00.000Z	mwe	wogi	I just told you what usually works for me
+2006-01-15T06:06:00.000Z	wogi	mwe	do yo uthink the --nocheck option from dpkg-deb might help me?
+2006-01-15T06:09:00.000Z	mwe	wogi	try it
+2006-01-15T06:14:00.000Z	wogi	mwe	Ok. I noticed in upper right corner that I had updates. Clicked on it and it told me to update postgres. Exclaimed "Oh i found a broken pkg!" did some stuff, and now the problem is all gone.. I wonder if I dare try uninstalling postgres. . . >:)
+2006-01-15T06:15:00.000Z	mwe	wogi	oh
+2006-01-15T06:16:00.000Z	mwe	wogi	sudo apt-get update && sudo apt-get dist-upgrade would probably have fixed it then
+2006-01-15T06:16:00.000Z	mwe	wogi	I thinks it's safe to sudo apt-get remove postgresql now
+2006-01-15T06:17:00.000Z	wogi	mwe	i So love this distribution.
+2006-01-15T06:17:00.000Z	mwe	wogi	did you interupt apt or synaptic at some point since it broke?
+2006-01-15T06:18:00.000Z	wogi	mwe	I don't think so. But I went to apt-get remove postgres I'm back to cannot open somesuch file, it isn't there.  hehe interesting.
+2006-01-15T06:18:00.000Z	mwe	wogi	annoying
+2006-01-15T06:18:00.000Z	wogi	mwe	so I try to remove it, and now the gforge-db-postgresql errors are back, but in the upper right hand corner is that red icon that I'm sure when I click on is going to tell me to update postgres..
+2006-01-15T06:19:00.000Z	mwe	wogi	and you can't sudo apt-get --reinstall install it?
+2006-01-15T06:19:00.000Z	mwe	wogi	maybe try sudo apt-get update && sudo apt-get dist-upgrade
+2006-01-15T06:22:00.000Z	mwe	wogi	then sudo apt-get --reinstall install postgresql. did you try that. then sudo apt-get --purge remove postgresql
+2006-01-15T06:22:00.000Z	wogi	mwe	actually the update/dist-upgrade did Not work (just fyi)
+2006-01-15T06:23:00.000Z	mwe	wogi	what failed?
+2006-01-15T06:23:00.000Z	mwe	wogi	pastebin errors
+2006-01-15T06:24:00.000Z	wogi	mwe	what does that mean, pastebin errors?
+2006-01-15T06:24:00.000Z	mwe	wogi	read /msg from ubotu
+2006-01-15T06:27:00.000Z	wogi	mwe	I think you want this?: http://paste.ubuntu-nl.org/6859
+2006-01-15T06:30:00.000Z	mwe	wogi	now that postgresql is installed try apt-get dist-upgrade again
+2006-01-15T06:32:00.000Z	wogi	mwe	It says its up to date. :)
+2006-01-15T06:33:00.000Z	mwe	wogi	so no broken things anymore I guess?
+2006-01-15T06:33:00.000Z	wogi	mwe	hehe until I type apt-get remove gforge-db-postgres or apt-get remove postgres i imagine.
+2006-01-15T06:33:00.000Z	mwe	wogi	go ahead and apt-get remove gforge-db-postgresql if you like
+2006-01-15T06:34:00.000Z	mwe	wogi	I doubt it will break now
+2006-01-15T06:34:00.000Z	mwe	wogi	if it does pastebin the errors
+2006-01-15T06:34:00.000Z	wogi	mwe	au contraire.
+2006-01-15T06:34:00.000Z	wogi	mwe	mkay.
+2006-01-15T06:35:00.000Z	wogi	mwe	http://paste.ubuntu-nl.org/6861
+2006-01-15T06:37:00.000Z	mwe	wogi	this is getting over my head. maybe nailoth knows. it looks like it expects postgresql to be running I don't know if starting postgresql would help
+2006-01-15T06:38:00.000Z	mwe	wogi	is this breezy?
+2006-01-15T06:38:00.000Z	wogi	mwe	yes breezy badger.
+2006-01-15T06:47:00.000Z	mwe	wogi	you can't dpkg --force-all --purge gforge-db-postgresql then dpkg --force-all --purge postgresql to get rid of it?
+2006-01-15T06:49:00.000Z	mwe	wogi	you can't dpkg --force-all --purge gforge-db-postgresql then dpkg --force-all --purge postgresql to get rid of it?
+2006-01-15T06:49:00.000Z	wogi	mwe	http://paste.ubuntu-nl.org/6863
+2006-01-15T06:50:00.000Z	mwe	wogi	what the heck. it's like a virus it wont go away :|
+2006-01-15T06:51:00.000Z	mwe	wogi	I know you can manually manipulate the apt database but I don't know how or if you dare do it
+2006-01-15T06:52:00.000Z	wogi	mwe	:/ I really love this computer. except for this weird thing.. I could probbbably just live with postgres on there..but..urgh. kinda irritating huh.
+2006-01-15T06:53:00.000Z	wogi	mwe	You mentioned someone you thought might have ideas..? nalioth ?

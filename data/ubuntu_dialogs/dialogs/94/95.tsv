@@ -1,0 +1,94 @@
+2006-07-14T15:15:00.000Z	BioGeek		Hi everybody. My /dev/hda1 keeps filling up mysteriously to 100%. I deleted close to 1Gb half an hour ago, and it's already full again.
+2006-07-14T15:16:00.000Z	enyc	BioGeek	use df to help you...
+2006-07-14T15:16:00.000Z	enyc	BioGeek	?what is /dev/hda1 mounted as?
+2006-07-14T15:16:00.000Z	enyc	BioGeek	(see 'cat /proc/mounts')
+2006-07-14T15:17:00.000Z	enyc	BioGeek	what is /dev/hda1 anyway in your case??
+2006-07-14T15:17:00.000Z	enyc	BioGeek	monted where
+2006-07-14T15:18:00.000Z	BioGeek	enyc	It gives '/dev/hda1 / ext3 rw 0 0
+2006-07-14T15:18:00.000Z	BioGeek	enyc	and '/dev/hda1 /dev/.static/dev ext3 rw 0 0'
+2006-07-14T15:19:00.000Z	BioGeek	enyc	and /dev/hda1 is like my hard drive, I suppose
+2006-07-14T15:20:00.000Z	enyc	BioGeek	did you use default ubuntu partitioning?
+2006-07-14T15:20:00.000Z	BioGeek	enyc	yes
+2006-07-14T15:22:00.000Z	enyc	BioGeek	kk ...
+2006-07-14T15:22:00.000Z	enyc	BioGeek	Id try this:-
+2006-07-14T15:22:00.000Z	enyc	BioGeek	"sudo watch --differences=cumulative -n1 du -ks /\*"
+2006-07-14T15:22:00.000Z	enyc	BioGeek	"sudo watch --differences=cumulative -n30 du -ks /\*"
+2006-07-14T15:22:00.000Z	BioGeek	enyc	OK, thanks in advance.
+2006-07-14T15:22:00.000Z	enyc	BioGeek	this mwill show every 30sec the sizes that have chonged of files/dirs in the root (/)
+2006-07-14T15:23:00.000Z	enyc	BioGeek	you could try this inside /var or /usr  etc. as you discover where the growing-data is
+2006-07-14T15:23:00.000Z	enyc	BioGeek	if its all growing of its own accord..... you should do little-else and watch the space usage crawl up ;-) then you should be ablo to find  (whatever)
+2006-07-14T15:23:00.000Z	BioGeek	enyc	Nice trick :-)
+2006-07-14T15:24:00.000Z	BioGeek	enyc	OK, I'll report back in say half an hour if I've found something.
+2006-07-14T15:24:00.000Z	enyc	BioGeek	Notice /\*  which becomes /usr/\*  etc....
+2006-07-14T15:25:00.000Z	enyc	BioGeek	the \* rather than *  means that the '*' will be converted to the list of actual files/arguments every time the 'watch' subcommand is ran (each 30secs) rather than always the same list
+2006-07-14T15:25:00.000Z	enyc	BioGeek	the --differences=cumulative may help you 'see' which values have changed... but will also muck-up if new/old files come/go
+2006-07-14T15:26:00.000Z	enyc	BioGeek	how big is the HDD anyway?
+2006-07-14T15:26:00.000Z	BioGeek	enyc	didn't knew that, I'll realy nead to brush up on my shell coding skils )
+2006-07-14T15:26:00.000Z	BioGeek	enyc	18 Gb, If I'm not mistakne
+2006-07-14T15:27:00.000Z	enyc	BioGeek	which is fine for running ubuntu.... depends what data you add of courle
+2006-07-14T15:29:00.000Z	enyc	BioGeek	heh
+2006-07-14T15:29:00.000Z	enyc	BioGeek	you should learn to use pastebin and show people your  du -ks  'es
+2006-07-14T15:33:00.000Z	BioGeek	enyc	OK, posted first output of du -ks to pastebin: http://paste.ubuntu-nl.org/18041
+2006-07-14T15:36:00.000Z	enyc	BioGeek	please put  'df' 'du -ks /*' 'du -ks /usr/*' 'du -ks /var'   into a pastebin as above ;-)
+2006-07-14T15:38:00.000Z	BioGeek	enyc	OK, compiling information...
+2006-07-14T15:41:00.000Z	enyc	BioGeek	waiting patiently ;-)
+2006-07-14T15:42:00.000Z	BioGeek	enyc	waiting patiently here as well ;-)
+2006-07-14T15:42:00.000Z	enyc	BioGeek	oh... I was waiting for you to pastebin new info... maybe I missed
+2006-07-14T15:43:00.000Z	enyc	BioGeek	I didnt see anything after 'BioGeek> enyc: OK, compiling information...'...
+2006-07-14T15:45:00.000Z	enyc	BioGeek	????? you still there??
+2006-07-14T15:45:00.000Z	BioGeek	enyc	I mean, I'm waiting FOR MY PC to compile the information you requested, but s/he is taking a while.
+2006-07-14T15:45:00.000Z	enyc	BioGeek	aah ok ;-)
+2006-07-14T15:45:00.000Z	BioGeek	enyc	sorry for the misunderstanding
+2006-07-14T15:45:00.000Z	enyc	BioGeek	nm ;-)
+2006-07-14T15:47:00.000Z	enyc	BioGeek	odd. ... like you have millions of tiny files somewhere ;-)
+2006-07-14T15:47:00.000Z	BioGeek	enyc	yes, that's my thougth also...
+2006-07-14T15:48:00.000Z	enyc	BioGeek	let it finish its work ;-)..... ill check if values look sane.....
+2006-07-14T15:49:00.000Z	BioGeek	enyc	I have the output of 'df' and 'du -ks /*' already, the rest is on its way...
+2006-07-14T15:50:00.000Z	enyc	BioGeek	indeeed... lit it finish ;-)
+2006-07-14T15:51:00.000Z	BioGeek	enyc	for the last one, did you mean 'du -ks /var' or 'du -ks /var/*' ?
+2006-07-14T15:51:00.000Z	enyc	BioGeek	/var/*
+2006-07-14T15:52:00.000Z	BioGeek	enyc	OK, here they are: http://paste.ubuntu-nl.org/18045
+2006-07-14T15:52:00.000Z	enyc	BioGeek	reading
+2006-07-14T15:53:00.000Z	BioGeek	enyc	take your time...
+2006-07-14T15:53:00.000Z	enyc	BioGeek	first you have 18gb approx...  i.e. 20,000,000 sort of disk inscluding the swapspace... what the HDD Mfrs will call a 20gb disk
+2006-07-14T15:54:00.000Z	BioGeek	enyc	(What does Mfrs satnd for?)
+2006-07-14T15:55:00.000Z	BioGeek	enyc	s/satnd/stand/
+2006-07-14T15:55:00.000Z	BioGeek	enyc	OK, I see ;-)
+2006-07-14T15:56:00.000Z	enyc	BioGeek	errrm it doesnt add-up.....
+2006-07-14T15:57:00.000Z	BioGeek	enyc	there is more info on my disk than physiclly possible?
+2006-07-14T15:58:00.000Z	enyc	BioGeek	The 'du' totals.... make-up to 5870159 gb
+2006-07-14T15:58:00.000Z	enyc	BioGeek	erm kb... about 5.5 gb
+2006-07-14T15:58:00.000Z	enyc	BioGeek	that doesnt make sense given 'df' shown 18gb partition FULL
+2006-07-14T15:59:00.000Z	enyc	BioGeek	I've never seen that happen before!!!
+2006-07-14T15:59:00.000Z	BioGeek	enyc	OK, so know I've succeed to dumbstruck the ubuntu wizards. How do we proceed?
+2006-07-14T16:00:00.000Z	enyc	BioGeek	I'd be tempted to boot Knoppix or ubuntu-live and 'sudo fsck /dev/hda1' to filesystem-check for bizarre problems
+2006-07-14T16:00:00.000Z	enyc	BioGeek	erm
+2006-07-14T16:00:00.000Z	enyc	BioGeek	paste 'dmesg' into a pastebin ;-)
+2006-07-14T16:00:00.000Z	enyc	BioGeek	so I can see any kernel errors
+2006-07-15T16:01:00.000Z	BioGeek	enyc	[4359990.639000]  atkbd.c: Unknown key pressed (translated set 2, code 0xaa on isa0060/serio0).
+2006-07-15T16:01:00.000Z	BioGeek	enyc	and that many many times...
+2006-07-15T16:02:00.000Z	enyc	BioGeek	ize seen that wany times
+2006-07-15T16:02:00.000Z	enyc	BioGeek	thats not entirely ususual
+2006-07-15T16:02:00.000Z	enyc	BioGeek	my debian system complains about  too many keys pressed ;-)
+2006-07-15T16:02:00.000Z	enyc	BioGeek	anyway
+2006-07-15T16:02:00.000Z	BioGeek	enyc	:-)
+2006-07-15T16:03:00.000Z	enyc	BioGeek	maybe I type too quickly on my Dvorak-layout IBM 1391406 model M clickykeyboard from 1987... dunno
+2006-07-15T16:03:00.000Z	BioGeek	enyc	The Ubuntu 6.06 CD is on it's way in the mail, so I was planning to do a fresh install anyway in a few weeks
+2006-07-15T16:04:00.000Z	enyc	BioGeek	kk that may magically cure it''' annoying though
+2006-07-15T16:04:00.000Z	enyc	BioGeek	if you are going to wipe....
+2006-07-15T16:04:00.000Z	BioGeek	enyc	but I'm stuck for the moment though
+2006-07-15T16:04:00.000Z	enyc	BioGeek	please mail enyc@evtech.org  and let me knom what you found out ;-)....
+2006-07-15T16:04:00.000Z	enyc	BioGeek	and....
+2006-07-15T16:04:00.000Z	BioGeek	enyc	can't even open manpages any more..
+2006-07-15T16:05:00.000Z	BioGeek	enyc	OK, thanks anyway, you've been a great help.
+2006-07-15T16:05:00.000Z	enyc	BioGeek	BEFORE re-using your harddisk (this will take a while btw), boot KNOPPIX with 'knoppix 2 dma noswap' at the knoppix bootprompt and 'badblocks -wvs /dev/hda'  ***This will ERASE everything permanetnly***
+2006-07-15T16:05:00.000Z	enyc	BioGeek	and (importantly) check for badsectors
+2006-07-15T16:06:00.000Z	enyc	BioGeek	and/or cure futnny grown defects on the (potentially suspect) hdd
+2006-07-15T16:08:00.000Z	BioGeek	enyc	OK, sounds scary but I'll give it a try and mail you the results.
+2006-07-15T16:09:00.000Z	enyc	BioGeek	its not scary really... its very good practice to haxe KNOPPIX and do 'memtest' boot  and 'knoppix 2 dma noswap'-followed-by-'badblocks -wvs /dev/hda'  before re-use of machine
+2006-07-15T16:10:00.000Z	enyc	BioGeek	but you MUST note that badblocks with -w  WILL overwrite (destroy) everything
+2006-07-15T16:10:00.000Z	BioGeek	enyc	but for that I'll first have to burn a KNOPPIX CD, no?
+2006-07-15T16:10:00.000Z	enyc	BioGeek	well that would make sense... is that a problem?
+2006-07-15T16:11:00.000Z	BioGeek	enyc	I don't have a CD burner on this machine, but I'll make it on the Windows box.
+2006-07-15T16:12:00.000Z	enyc	BioGeek	its usually worth having a KNOPPIX disk at all times... and keeping the previous-versions you accumilate
+2006-07-15T16:14:00.000Z	BioGeek	enyc	OK, I'm learning all the time here ;-)

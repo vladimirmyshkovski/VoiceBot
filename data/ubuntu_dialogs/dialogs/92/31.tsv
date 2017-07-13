@@ -1,0 +1,92 @@
+2010-07-22T21:10:00.000Z	falconic		Hey Guys.. I have an Acer 5745G laptop and I am dual booting it with Windows 7
+2010-07-22T21:10:00.000Z	falconic		I just finished the 10.04 install
+2010-07-22T21:10:00.000Z	falconic		but seems like the Wifi is not working in Linux
+2010-07-22T21:11:00.000Z	falconic		I enabled the proprietary wifi driver from Jockey
+2010-07-22T21:11:00.000Z	falconic		now it says that the hardware is there..but its disabled
+2010-07-22T21:11:00.000Z	aguitel	falconic	what chipset ?
+2010-07-22T21:11:00.000Z	falconic	aguitel	Its a broadcom
+2010-07-22T21:11:00.000Z	falconic		branded as acer invilink
+2010-07-22T21:12:00.000Z	aguitel	falconic	try to enable driver with hardaware drivers in system menu
+2010-07-22T21:12:00.000Z	falconic		BIT, using that only
+2010-07-22T21:12:00.000Z	falconic	aguitel	done that
+2010-07-22T21:12:00.000Z	aguitel	falconic	broadcom working fine in linux ubuntu/debian
+2010-07-22T21:12:00.000Z	falconic	aguitel	BIT, but even after that wifi is not working
+2010-07-22T21:12:00.000Z	falconic		BIT, u have Acer 5745G ?
+2010-07-22T21:13:00.000Z	aguitel	falconic	wait
+2010-07-22T21:13:00.000Z	falconic		I am on windows 7 right now
+2010-07-22T21:13:00.000Z	falconic		let me check the number from here..
+2010-07-22T21:14:00.000Z	aguitel	falconic	type in terminal :iwconfig
+2010-07-22T21:14:00.000Z	falconic		did that..
+2010-07-22T21:14:00.000Z	aguitel	falconic	appears ?
+2010-07-22T21:14:00.000Z	falconic		its eth0 as the output
+2010-07-22T21:14:00.000Z	falconic		and no wlan0
+2010-07-22T21:14:00.000Z	falconic		in eth0 it shows like Wireless.. but with no ESSID.
+2010-07-22T21:15:00.000Z	aguitel		eth0 is the wireless
+2010-07-22T21:15:00.000Z	falconic		I did iwspy on eth0 it gives no statitics to be collected
+2010-07-22T21:15:00.000Z	falconic		BIT, seems like that.
+2010-07-22T21:15:00.000Z	falconic		but when I fn-F3 it shd be enabled right ?
+2010-07-22T21:15:00.000Z	falconic		the bluetooth turns off and on correctly
+2010-07-22T21:15:00.000Z	falconic		but seems like the Wifi is not.
+2010-07-22T21:15:00.000Z	aguitel	falconic	this is the main page from your chipset:http://wiki.debian.org/wl
+2010-07-22T21:16:00.000Z	falconic		BIT, yes.. but that has hardly any info and in the Notification area wifi signb.. if I right click.. I see "Wireless Disabled)
+2010-07-22T21:16:00.000Z	falconic	aguitel	will read that thanks
+2010-07-22T21:17:00.000Z	aguitel	falconic	https://help.ubuntu.com/community/WifiDocs/Driver/bcm43xx
+2010-07-22T21:17:00.000Z	falconic		but any idea how to enable the wifi card if its disabled some hiw
+2010-07-22T21:18:00.000Z	aguitel	falconic	maybe is disable from bios or your keyboard
+2010-07-22T22:16:00.000Z	falconic	aguitel	BIT, I tried some stuff from the links u sent.. but nothing helps
+2010-07-22T22:17:00.000Z	falconic		the wifi light is off all the time
+2010-07-22T22:20:00.000Z	aguitel	falconic	type lspci and give my the exact chipset
+2010-07-22T22:20:00.000Z	falconic		14E4:4357
+2010-07-22T22:20:00.000Z	falconic	aguitel	14E4:4357
+2010-07-22T22:21:00.000Z	aguitel	falconic	type lspci -vvnn | grep 14e4
+2010-07-22T22:21:00.000Z	falconic		I am on Windows 7 again :(
+2010-07-22T22:22:00.000Z	falconic	aguitel	let me reboot and check.
+2010-07-22T22:24:00.000Z	falconic	aguitel	I am trying to get the logs from ext4 drive on windows
+2010-07-22T22:24:00.000Z	falconic		and examine for any issues in the logs
+2010-07-22T22:24:00.000Z	aguitel	falconic	this is a laptop?
+2010-07-22T22:25:00.000Z	falconic	aguitel	yes
+2010-07-22T22:25:00.000Z	aguitel	falconic	model complete
+2010-07-22T22:25:00.000Z	falconic		Acer 5745G
+2010-07-22T22:27:00.000Z	aguitel		falconic,http://ubuntuforums.org/showthread.php?p=9545842
+2010-07-22T22:28:00.000Z	falconic	aguitel	read that.. that is why trying to get the logs
+2010-07-22T22:30:00.000Z	aguitel		falconic,http://www.oz9aec.net/index.php/linux/351-ubuntu-linux-on-the-acer-aspire-5745g-laptop
+2010-07-22T22:32:00.000Z	falconic	aguitel	"wl 0000:03:00.0: PCI INT A -> GSI 17 (level, low) -> IRQ 17"
+2010-07-22T22:33:00.000Z	falconic		this is what I see in the logs
+2010-07-22T22:34:00.000Z	aguitel	falconic	10.04 version?
+2010-07-22T22:34:00.000Z	falconic	aguitel	yes
+2010-07-22T22:34:00.000Z	aguitel	falconic	with live cd ,something happens?
+2010-07-22T22:35:00.000Z	falconic		nop
+2010-07-22T22:35:00.000Z	falconic	aguitel	the same situation
+2010-07-22T22:35:00.000Z	falconic		the main problem is that the wifi LED is off
+2010-07-22T22:35:00.000Z	falconic		that shd have been on for proper functioning isnt it ?
+2010-07-22T22:35:00.000Z	aguitel	falconic	in this page:https://help.ubuntu.com/community/WifiDocs/Driver/bcm43xx    ,there is a way to enable thw wifi with drivers that are inside live cd
+2010-07-22T22:36:00.000Z	aguitel	falconic	find "b43/STA - No Internet access "
+2010-07-22T22:36:00.000Z	falconic		shd I use Ndiswrapper ?
+2010-07-22T22:37:00.000Z	aguitel	falconic	not necessary
+2010-07-22T22:37:00.000Z	aguitel	falconic	no
+2010-07-22T22:37:00.000Z	falconic	aguitel	u are referring to the modprobe commands ?
+2010-07-22T22:37:00.000Z	falconic		I have already run them..nothing happens
+2010-07-22T22:38:00.000Z	falconic		when I run "modprobe wl"
+2010-07-22T22:38:00.000Z	aguitel	falconic	i have same chipset ,different brand of laptop and it work fine
+2010-07-22T22:38:00.000Z	falconic		can it be because of the NETDEV user ?
+2010-07-22T22:38:00.000Z	falconic		group i mean
+2010-07-22T22:38:00.000Z	aguitel	falconic	with modprobe you load the divers
+2010-07-22T22:38:00.000Z	falconic	aguitel	I have done that.
+2010-07-22T22:38:00.000Z	falconic		but still the light is off
+2010-07-22T22:39:00.000Z	falconic		and I just get a message saying the network is disconnected
+2010-07-22T22:39:00.000Z	aguitel	falconic	the light i think is not about the operatio system
+2010-07-22T22:40:00.000Z	falconic	aguitel	Are u using WICD ?
+2010-07-22T22:41:00.000Z	aguitel	falconic	no ,but you can try with it
+2010-07-22T22:41:00.000Z	falconic		okie
+2010-07-22T22:41:00.000Z	aguitel	falconic	when you install wicd it uninstall network gnome manager
+2010-07-22T22:42:00.000Z	aguitel	falconic	but this is reversible
+2010-07-22T22:42:00.000Z	falconic	aguitel	I will need to download the debs on win 7
+2010-07-22T22:42:00.000Z	falconic		as no internet on the linux system
+2010-07-22T22:43:00.000Z	aguitel	falconic	do you have ethernet cable to connect to router ?
+2010-07-22T22:45:00.000Z	falconic	aguitel	I will need to build the ethernet module also :(
+2010-07-22T22:45:00.000Z	falconic		that is not Out of the box supported
+2010-07-22T22:45:00.000Z	falconic		for which I need build essential tooks
+2010-07-22T22:45:00.000Z	aguitel	falconic	why ?
+2010-07-22T22:45:00.000Z	falconic		http://www.oz9aec.net/index.php/linux/351-ubuntu-linux-on-the-acer-aspire-5745g-laptop
+2010-07-22T22:45:00.000Z	falconic		check here
+2010-07-22T22:46:00.000Z	aguitel	falconic	normally ubuntu not need this for ethernet connection

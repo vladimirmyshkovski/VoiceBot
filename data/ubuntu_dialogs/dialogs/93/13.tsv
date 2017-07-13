@@ -1,0 +1,93 @@
+2011-07-20T01:57:00.000Z	jen		oh ok sorry >.< I need help with getting secondlife
+2011-07-20T01:57:00.000Z	jen		I installed it once with success
+2011-07-20T01:57:00.000Z	jen		but then it crashed, (I used wine)
+2011-07-20T01:57:00.000Z	jen		and I was having more touble so I uninstalled it
+2011-07-20T01:57:00.000Z	jen		now it says something like empty string
+2011-07-20T01:57:00.000Z	jen		when i try to re-install it
+2011-07-20T01:58:00.000Z	jen		o.O
+2011-07-20T01:58:00.000Z	jen		but...that doesnt help me
+2011-07-20T01:58:00.000Z	jen		no! It will crash on you...well maybe
+2011-07-20T01:58:00.000Z	jen		*sigh* are there any experts in here?
+2011-07-20T01:58:00.000Z	wechat	jen	only text from your terminal will help us
+2011-07-20T02:00:00.000Z	wechat	jen	no no
+2011-07-20T02:00:00.000Z	wechat	jen	don't say it
+2011-07-20T02:02:00.000Z	wechat	jen	try to install it and pastebin output to paste.ubuntu.org
+2011-07-20T02:02:00.000Z	wechat	jen	'winecmd' or smthg
+2011-07-20T02:03:00.000Z	wechat	jen	what do u need?
+2011-07-20T02:04:00.000Z	wechat	jen	waht package?
+2011-07-20T02:05:00.000Z	wechat	jen	: u need to go to /home/jen/.wine directory
+2011-07-20T02:12:00.000Z	wechat	jen	good
+2011-07-20T02:51:00.000Z	wechat	jen	http://www.youtube.com/watch?v=lQOkMz3kiS0 Sudo Make Me a Sandwich Robot
+2011-07-20T02:52:00.000Z	wechat	jen	lspci
+2011-07-20T02:55:00.000Z	wechat	jen	alsaconfig
+2011-07-20T02:56:00.000Z	wechat	jen	cat /proc/asound/cards
+2011-07-20T02:57:00.000Z	wechat	jen	 alsaconf && alsactl init
+2011-07-20T03:14:00.000Z	wechat	jen	dpkg -l | grep alsa
+2011-07-20T03:54:00.000Z	wechat	jen	i don't
+2011-07-20T03:54:00.000Z	wechat	jen	check your card there http://www.kernel.org/doc/Documentation/sound/alsa/HD-Audio-Models.txt
+2011-07-20T03:58:00.000Z	wechat	jen	when it was sound?
+2011-07-20T04:04:00.000Z	wechat	jen	and what `ls /dev` is showing?
+2011-07-20T04:04:00.000Z	wechat	jen	U said U had sound . But THEN u have installed *smth*. So remove *smth*.
+2011-07-20T04:05:00.000Z	wechat	jen	pastebin for us
+2011-07-20T04:06:00.000Z	wechat	jen	sudo chmod 755 /dev/dsp*
+2011-07-20T04:06:00.000Z	wechat	jen	: what is idk?
+2011-07-20T04:07:00.000Z	wechat	jen	pastebin =>" tail -50 /val/log/dpkg.log"
+2011-07-20T04:08:00.000Z	wechat	jen	plz
+2011-07-20T04:08:00.000Z	wechat	jen	it shows what u have installed
+2011-07-20T04:09:00.000Z	wechat	jen	ok i also have no /dev/dsp
+2011-07-20T04:11:00.000Z	wechat	jen	Are u in audio group????
+2011-07-20T04:11:00.000Z	wechat	jen	groups jen
+2011-07-20T04:12:00.000Z	wechat	jen	jen@aspire:~$ groups jen
+2011-07-20T04:13:00.000Z	wechat	jen	sudo gpasswd -a audio jen
+2011-07-20T04:14:00.000Z	wechat	jen	sudo adduser jen audio
+2011-07-20T04:16:00.000Z	wechat	jen	pee? wht's it???
+2011-07-20T04:17:00.000Z	wechat	jen	of course america just a little ocean beetween
+2011-07-20T04:18:00.000Z	wechat	jen	no sound?
+2011-07-20T04:18:00.000Z	wechat	jen	sudo chmod 755 /dev/dsp*
+2011-07-20T04:18:00.000Z	wechat	jen	sudo /etc/init.d/alsa restart
+2011-07-20T04:19:00.000Z	wechat	jen	no
+2011-07-20T04:19:00.000Z	wechat	jen	install alsa
+2011-07-20T04:20:00.000Z	wechat	jen	sudo apt-get install alsa-base alsa-utils
+2011-07-20T04:20:00.000Z	wechat	jen	show dpkg.log
+2011-07-20T04:21:00.000Z	wechat	jen	aga
+2011-07-20T04:22:00.000Z	wechat	jen	sudo alsaconf
+2011-07-20T04:23:00.000Z	wechat	jen	sudo alsactl init
+2011-07-20T04:23:00.000Z	wechat	jen	Seven???? To Old!!! I've got 8
+2011-07-20T04:25:00.000Z	wechat	jen	alsaconf
+2011-07-20T04:25:00.000Z	wechat	jen	sudo aplay -l
+2011-07-20T04:27:00.000Z	wechat	jen	find /lib/modules/`uname -r` | grep snd
+2011-07-20T04:29:00.000Z	wechat	jen	find /lib/modules/`uname -r` | grep snd
+2011-07-20T04:29:00.000Z	wechat	jen	a lot of modules?
+2011-07-20T04:30:00.000Z	wechat	jen	sudo aplay -l
+2011-07-20T04:31:00.000Z	wechat	jen	card 0: I82801BAICH2 [Intel 82801BA-ICH2], device 0: Intel ICH [Intel 82801BA-ICH2]
+2011-07-20T04:32:00.000Z	wechat	jen	lspci -v | less
+2011-07-20T04:32:00.000Z	wechat	jen	i'm reading that https://help.ubuntu.com/community/SoundTroubleshooting
+2011-07-20T04:35:00.000Z	wechat	jen	just "lspci -v"
+2011-07-20T04:36:00.000Z	wechat	jen	two sound cards?
+2011-07-20T04:36:00.000Z	wechat	jen	sustem preferences - sound - choose a device
+2011-07-20T04:38:00.000Z	wechat	jen	find /lib/modules/`uname -r` | grep snd-hda-intel
+2011-07-20T04:40:00.000Z	wechat	jen	good
+2011-07-20T05:47:00.000Z	wechat	jen	?
+2011-07-20T04:44:00.000Z	wechat	jen	sudo alsa force-reload
+2011-07-20T04:45:00.000Z	wechat	jen	sudo modprobe snd-hda-intel
+2011-07-20T04:48:00.000Z	wechat	jen	is there a file /etc/modules
+2011-07-20T04:51:00.000Z	wechat	jen	maybe
+2011-07-20T04:51:00.000Z	wechat	jen	and show me /etc/modules
+2011-07-20T04:54:00.000Z	wechat	jen	or modules, or permissons
+2011-07-20T04:55:00.000Z	wechat	jen	twviewer?
+2011-07-20T04:55:00.000Z	wechat	jen	cat /etc/modules
+2011-07-20T05:01:00.000Z	wechat	jen	"lsmod | grep snd" nothing?
+2011-07-20T05:03:00.000Z	wechat	jen	http://paste.ubuntu.com/647763/
+2011-07-20T05:05:00.000Z	wechat	jen	few of modules i guess
+2011-07-20T05:06:00.000Z	wechat	jen	i have 23 modules contra 12 yours strange
+2011-07-20T05:14:00.000Z	wechat	jen	! Ok. U can reboot. 2. U can boot from livecd and "lsmod | grep snd" then we will add them to
+2011-07-20T05:15:00.000Z	wechat	jen	 find /lib/modules/`uname -r` | grep snd | wc -l
+2011-07-20T05:16:00.000Z	wechat	jen	Physical Adress Extension
+2011-07-20T05:22:00.000Z	wechat	jen	sudo modprobe snd_hda_intel
+2011-07-20T05:24:00.000Z	wechat	jen	64?
+2011-07-20T05:25:00.000Z	wechat	jen	wget -c http://mirror.bytemark.co.uk/ubuntu-releases//natty/ubuntu-11.04-desktop-i386.iso
+2011-07-20T05:31:00.000Z	wechat	jen	send me this file to look into your logs "sudo tar cvzf  file.tar.gz /var/log"
+2011-07-20T05:54:00.000Z	wechat	jen	going to disco?
+2011-07-20T07:55:00.000Z	wechat	jen	fish
+2011-07-20T07:56:00.000Z	wechat	jen	narwahl
+2011-07-20T08:00:00.000Z	wechat	jen	how about nick LinusTorwalds?

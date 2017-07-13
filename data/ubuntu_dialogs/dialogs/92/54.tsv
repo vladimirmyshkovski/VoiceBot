@@ -1,0 +1,92 @@
+2008-02-29T02:45:00.000Z	claudio75	danand	i'm back....
+2008-02-29T02:46:00.000Z	claudio75	danand	may i write to you in private?
+2008-02-29T02:46:00.000Z	danand	claudio75	- hello
+2008-02-29T02:46:00.000Z	danand	claudio75	- ok
+2008-02-29T02:46:00.000Z	claudio75	danand	:)
+2008-02-29T02:47:00.000Z	claudio75	danand	can you read me in pvt?
+2008-02-29T02:48:00.000Z	danand	claudio75	- errr no!
+2008-02-29T02:48:00.000Z	danand	claudio75	- have you registered with freenode yet?
+2008-02-29T02:48:00.000Z	claudio75	danand	uhmmm ok...anyway...dmesg's output is not completely visible
+2008-02-29T02:49:00.000Z	claudio75	danand	yes but sometimes it works and sometimes not...anyway
+2008-02-29T02:49:00.000Z	claudio75	danand	tell me what i have to paste in pastebin
+2008-02-29T02:49:00.000Z	danand	claudio75	- errr... ok ... what happens when you type dmesg
+2008-02-29T02:50:00.000Z	claudio75	danand	the output is too long to be read
+2008-02-29T02:52:00.000Z	claudio75	danand	here is it....http://paste.ubuntu-nl.org/57753/  ....there's more before this...but i can't read it
+2008-02-29T02:52:00.000Z	danand	claudio75	- ok  type    dmesg > dmesg.txt    That will put all that output in the file dmesg.txt. Then type    gedit dmesg.txt    select all and copy     then goto the pastebin web site and paste that stuff . then come back and tell me the link
+2008-02-29T02:52:00.000Z	danand	claudio75	- you go too fast :}
+2008-02-29T02:52:00.000Z	danand	claudio75	- :)
+2008-02-29T02:54:00.000Z	claudio75	danand	ok..... http://paste.ubuntu-nl.org/57754/
+2008-02-29T02:54:00.000Z	danand	claudio75	- ok give us a bit ...
+2008-02-29T02:54:00.000Z	claudio75	danand	ok
+2008-02-29T03:04:00.000Z	claudio75	danand	just to know.....are you still there?
+2008-02-29T03:08:00.000Z	claudio75	danand	uhmmm.....are you there? just tell me if you're still alive :p
+2008-02-29T03:11:00.000Z	danand	claudio75	- still here :)
+2008-02-29T03:11:00.000Z	claudio75	danand	ok...any news?
+2008-02-29T03:11:00.000Z	danand	claudio75	- just looking here - http://ubuntuforums.org/showthread.php?s=d283d759844f1ff649791431cf51814d&t=701294
+2008-02-29T03:13:00.000Z	danand	claudio75	- you there?
+2008-02-29T03:15:00.000Z	danand	claudio75	- you there?
+2008-02-29T03:16:00.000Z	claudio75	danand	wait!!!!!!!!!!!!!!!!!!! i wrote acpi=force ...maybe i had to write ACPI=force   ?!!??!
+2008-02-29T03:16:00.000Z	claudio75	danand	yes...i'm here...i was cheking that page
+2008-02-29T03:17:00.000Z	claudio75	danand	maybe i had to write ACPI ...and not acpi  ?!?!?
+2008-02-29T03:18:00.000Z	claudio75	danand	did you read what i wrote???
+2008-02-29T03:18:00.000Z	danand	claudio75	- no - think we done that ok... can you run the command    lsmod | grep apm   for me on that machine and see if you get any output
+2008-02-29T03:19:00.000Z	claudio75	danand	ok
+2008-02-29T03:20:00.000Z	claudio75	danand	 the command lsmod | grep apm doesn't write anything....no output
+2008-02-29T03:21:00.000Z	danand	claudio75	- ok ...
+2008-02-29T03:22:00.000Z	claudio75	danand	do you think that all is caused by my videocard?
+2008-02-29T03:25:00.000Z	danand	claudio75	- i dont think so ... apparently this is quite a problem ... alot of people have reported this
+2008-02-29T03:25:00.000Z	claudio75	danand	 i know...
+2008-02-29T03:25:00.000Z	danand	claudio75	- its a bit of a wierd one - some solutions work for some people but not for others ....
+2008-02-29T03:26:00.000Z	claudio75	danand	eh....please help me....i believe in you :p
+2008-02-29T03:27:00.000Z	danand	claudio75	- we know   acpi=force   doesn't work for us  ... we should remove that from your kernel boot paramaters first...
+2008-02-29T03:27:00.000Z	claudio75	danand	ok
+2008-02-29T03:28:00.000Z	claudio75	danand	ok...i deleted it from kernel line
+2008-02-29T03:28:00.000Z	danand	claudio75	- type gksu gedit /boot/grub/menu.lst and remove just the    acpi=force    from the kernel line
+2008-02-29T03:29:00.000Z	danand	claudio75	- your fast !! :]
+2008-02-29T03:29:00.000Z	claudio75	danand	already done it
+2008-02-29T03:29:00.000Z	claudio75	danand	:)
+2008-02-29T03:29:00.000Z	danand	claudio75	 - :)
+2008-02-29T03:29:00.000Z	danand	claudio75	- ok, quick and dirty method .... can you go back on irc on your other machine...?
+2008-02-29T03:30:00.000Z	claudio75	danand	no please....
+2008-02-29T03:30:00.000Z	claudio75	danand	let me try here
+2008-02-29T03:31:00.000Z	danand	claudio75	- its just we need to reboot the ubuntu machine ... probably alot
+2008-02-29T03:31:00.000Z	claudio75	danand	eh...let's try
+2008-02-29T03:33:00.000Z	claudio75	danand	tell me what to do
+2008-02-29T03:35:00.000Z	danand	claudio75	- when your ready try halting your machine with the poweroff command. try typing    sudo poweroff -f    in a terminal and see it that helps
+2008-02-29T03:35:00.000Z	claudio75	danand	ok
+2008-02-29T04:27:00.000Z	claudio75	danand	so...it didn't work......ah.....my BIOS version is 1.0.7    .....dell bios
+2008-02-29T04:28:00.000Z	danand	claudio75	- ok, welcome back :)
+2008-02-29T04:28:00.000Z	claudio75	danand	:)
+2008-02-29T04:30:00.000Z	danand	claudio75	- could you type        lspci -vvv > lspci.txt && lshw > lshw.txt && lsmod > lsmod.txt       and pastebin the contents of those 3 files as before
+2008-02-29T04:30:00.000Z	claudio75	danand	yes ok
+2008-02-29T04:42:00.000Z	claudio75	danand	so?
+2008-02-29T04:32:00.000Z	claudio75	danand	it says WARNING: you should run this program as super-user. so i typed sudo...but it says the same things
+2008-02-29T04:33:00.000Z	claudio75	danand	ah no wait....it has worked
+2008-02-29T04:34:00.000Z	danand	claudio75	- do you still have windows on your machine?
+2008-02-29T04:35:00.000Z	claudio75	danand	wait
+2008-02-29T04:36:00.000Z	claudio75	danand	lspci.txt http://paste.ubuntu-nl.org/57766/
+2008-02-29T04:37:00.000Z	claudio75	danand	lshw.txt http://paste.ubuntu-nl.org/57767/
+2008-02-29T04:38:00.000Z	claudio75	danand	lsmod.txt http://paste.ubuntu-nl.org/57768/
+2008-02-29T04:42:00.000Z	danand	claudio75	- do you still have windows on your machine?
+2008-02-29T04:42:00.000Z	claudio75	danand	no
+2008-02-29T04:43:00.000Z	claudio75	danand	i have not windows here
+2008-02-29T04:45:00.000Z	claudio75	danand	no wait...did you asked me if i have windows xp or vista????
+2008-02-29T04:48:00.000Z	danand	claudio75	- on the machine with ubuntu on, do you dual boot with any windows system?
+2008-02-29T04:48:00.000Z	claudio75	danand	no!!!
+2008-02-29T04:48:00.000Z	claudio75	danand	i've only gutsy
+2008-02-29T04:49:00.000Z	claudio75	danand	i bought it with vista but i installed ubuntu formatting vista
+2008-02-29T04:49:00.000Z	claudio75	danand	useing all the disk for ubuntu
+2008-02-29T04:51:00.000Z	claudio75	danand	what are you thinking? any new idea?
+2008-02-29T04:53:00.000Z	danand	claudio75	- ok - looks like ArthurArchnix found a site that will help us out ... apparently dell do a utility to enable ubuntu to update the bios ... see http://linux.dell.com/wiki/index.php/Repository/firmware
+2008-02-29T04:54:00.000Z	claudio75	danand	already seen it....but it's a risk!!!
+2008-02-29T04:54:00.000Z	danand	claudio75	- hmmmm...
+2008-02-29T04:55:00.000Z	danand	claudio75	- do you want to try it?
+2008-02-29T04:56:00.000Z	claudio75	danand	no...i'm sorry...the risk is too big
+2008-02-29T04:58:00.000Z	claudio75	danand	still thinking about it? if not then i'll go to sleep....i'll try again tomorrow morning and afternoon
+2008-02-29T05:01:00.000Z	claudio75	danand	i think it's better i go to sleep....i'll ask again tomorrow
+2008-02-29T05:01:00.000Z	danand	claudio75	- ok ... might call it a night myself claudio ... take it easy
+2008-02-29T05:02:00.000Z	claudio75	danand	thanks a lot...you've been patient and gentle
+2008-02-29T05:02:00.000Z	claudio75	danand	:)
+2008-02-29T05:02:00.000Z	danand	claudio75	- no problem ... my pleasure
+2008-02-29T05:02:00.000Z	danand	claudio75	- you learn fast :)
+2008-02-29T05:03:00.000Z	claudio75	danand	ciao

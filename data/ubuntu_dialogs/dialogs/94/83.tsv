@@ -1,0 +1,94 @@
+2007-01-30T13:21:00.000Z	Moniker42	juano	cat?
+2007-01-30T14:05:00.000Z	juano	Moniker42	hehe :P
+2007-01-30T13:20:00.000Z	juano	Moniker42	sudo apt-get install ntfs-3g
+2007-01-30T13:20:00.000Z	juano	Moniker42	did that already ?
+2007-01-30T13:21:00.000Z	Moniker42	juano	it's already installed
+2007-01-30T13:21:00.000Z	juano	Moniker42	cat /etc/fstab
+2007-01-30T13:21:00.000Z	juano	Moniker42	pastebin that
+2007-01-30T13:24:00.000Z	Moniker42	juano	http://rafb.net/p/S8u84Y40.html
+2007-01-30T13:26:00.000Z	Moniker42	juano	did you get that?
+2007-01-30T13:30:00.000Z	juano	Moniker42	sorry yes
+2007-01-30T13:31:00.000Z	juano	Moniker42	what happens whern you get into /media/sda5 ?
+2007-01-30T13:32:00.000Z	Moniker42	juano	there's nothing there
+2007-01-30T13:32:00.000Z	juano	Moniker42	fdisk -l
+2007-01-30T13:32:00.000Z	juano	Moniker42	pastebin me that
+2007-01-30T13:33:00.000Z	Moniker42	juano	2 seconds...
+2007-01-30T13:34:00.000Z	juano	Moniker42	sudo fdisk -l
+2007-01-30T13:34:00.000Z	juano	Moniker42	sorry, my bad
+2007-01-30T13:34:00.000Z	juano	Moniker42	remember the sudo
+2007-01-30T13:34:00.000Z	Moniker42	juano	what does it do?
+2007-01-30T13:35:00.000Z	juano	Moniker42	it lists the partition table
+2007-01-30T13:35:00.000Z	juano	Moniker42	i wanna see whats your sda1 and sda5
+2007-01-30T13:35:00.000Z	juano	Moniker42	ok
+2007-01-30T13:36:00.000Z	juano	Moniker42	just a sec
+2007-01-30T13:36:00.000Z	juano	Moniker42	sec
+2007-01-30T13:37:00.000Z	Moniker42	juano	http://rafb.net/p/kHH64790.html
+2007-01-30T13:39:00.000Z	juano	Moniker42	try a sudo mount -a
+2007-01-30T13:39:00.000Z	Moniker42	juano	someone told me to enter "/dev/hda1 /mnt/windows ntfs-3g users,auto,uid=1000,gid=100,umask=007 0 0" into fstab
+2007-01-30T13:40:00.000Z	juano	Moniker42	nope it should be /dev/sda1 /mnt/windows ntfs-3g users,auto,uid=1000,gid=100,umask=007 0 0   thats /dev/sda with an s
+2007-01-30T13:40:00.000Z	Moniker42	juano	"Mount is denied because NTFS logfile is unclean. "
+2007-01-30T13:40:00.000Z	juano	Moniker42	and also /dev/sda5 /mnt/windows2 ntfs-3g users,auto,uid=1000,gid=100,umask=007 0 0
+2007-01-30T13:40:00.000Z	Moniker42	juano	so should i add that to fstab?
+2007-01-30T13:40:00.000Z	juano	Moniker42	substitute in your fstab your lines
+2007-01-30T13:41:00.000Z	juano	Moniker42	http://rafb.net/p/rZ5DFk43.html
+2007-01-30T13:42:00.000Z	Moniker42	juano	thanks - have you just substitued the lines for it? because if you have i'm just one save-button-click away from it already ;)
+2007-01-30T13:43:00.000Z	juano	Moniker42	sorry vermind that, use this one
+2007-01-30T13:43:00.000Z	juano	Moniker42	use this http://rafb.net/p/CurUkU20.html
+2007-01-30T13:44:00.000Z	juano	Moniker42	first do sudo cp /etc/fstab /etc/fstab.bak
+2007-01-30T13:44:00.000Z	juano	Moniker42	then use http://rafb.net/p/CurUkU20.html for your fstab
+2007-01-30T13:44:00.000Z	juano	Moniker42	after that doo sudo mount -a
+2007-01-30T13:45:00.000Z	juano	Moniker42	you can change fstab anytime you want
+2007-01-30T13:45:00.000Z	juano	Moniker42	do what i told ya
+2007-01-30T13:45:00.000Z	Moniker42	juano	http://rafb.net/p/DNQXE684.html
+2007-01-30T13:46:00.000Z	juano	Moniker42	use http://rafb.net/p/CurUkU20.html for your fstab
+2007-01-30T13:46:00.000Z	Moniker42	juano	i need to do something back in a few minutes...
+2007-01-30T13:46:00.000Z	juano	Moniker42	you have to put that code in /etc/fstab and save
+2007-01-30T13:53:00.000Z	Moniker42	juano	did that i get the same error
+2007-01-30T13:53:00.000Z	juano	Moniker42	did you use this ? http://rafb.net/p/CurUkU20.html as fstab ?
+2007-01-30T13:54:00.000Z	Moniker42	juano	yes.
+2007-01-30T13:54:00.000Z	juano	Moniker42	sudo mkdir /media/windows2
+2007-01-30T13:54:00.000Z	juano	Moniker42	sudo mount -a
+2007-01-30T13:54:00.000Z	Moniker42	juano	same error
+2007-01-30T13:55:00.000Z	juano	Moniker42	cd /media/windows
+2007-01-30T13:55:00.000Z	Moniker42	juano	ok but there's nothing there
+2007-01-30T13:56:00.000Z	juano	Moniker42	cd /media/windows2
+2007-01-30T13:56:00.000Z	Moniker42	juano	done that
+2007-01-30T13:57:00.000Z	juano	Moniker42	mm, should work fine , try sudo mount /dev/sda1 /media/windows
+2007-01-30T13:58:00.000Z	juano	Moniker42	there are 2 folders
+2007-01-30T13:58:00.000Z	juano	Moniker42	windows  that has sda1  and windows2 that has sda5
+2007-01-30T13:58:00.000Z	juano	Moniker42	sudo mkdir /media/windows
+2007-01-30T13:59:00.000Z	juano	Moniker42	after that do  sudo mount -a
+2007-01-30T13:59:00.000Z	Moniker42	juano	and i get this error http://rafb.net/p/FlCafQ12.html
+2007-01-30T14:00:00.000Z	juano	Moniker42	do you have ntfs-3g installed ?
+2007-01-30T14:00:00.000Z	Moniker42	juano	yes
+2007-01-30T14:01:00.000Z	juano	Moniker42	ls -a /media/windows2
+2007-01-30T14:01:00.000Z	juano	Moniker42	sudo ls -a /media/windows2
+2007-01-30T14:02:00.000Z	juano	Moniker42	there you go, theres 1 windows mounted
+2007-01-30T14:02:00.000Z	juano	Moniker42	cd /media/windows2
+2007-01-30T14:02:00.000Z	juano	Moniker42	ls
+2007-01-30T14:03:00.000Z	juano	Moniker42	weird that sda1 didnt mount
+2007-01-30T14:03:00.000Z	juano	Moniker42	cd ..
+2007-01-30T14:04:00.000Z	juano	Moniker42	cd<SPACEBAR><DOT><DOT>
+2007-01-30T14:04:00.000Z	juano	Moniker42	ENTER after that
+2007-01-30T14:04:00.000Z	Moniker42	juano	right right cya now i thought you meant ".." as in "...and then the rest of the command!"
+2007-01-30T14:05:00.000Z	juano	Moniker42	can you boot fine into your sda1 into windows i mean?
+2007-01-30T14:05:00.000Z	juano	Moniker42	ls
+2007-01-30T14:06:00.000Z	juano	Moniker42	sudo mount /dev/sda1 /media/windows
+2007-01-30T14:06:00.000Z	juano	Moniker42	mmm not what we agreed,
+2007-01-30T14:07:00.000Z	juano	Moniker42	cat /etc/mtab and paste it
+2007-01-30T14:08:00.000Z	juano	Moniker42	in windows 2 you should have sda5
+2007-01-30T14:09:00.000Z	Moniker42	juano	http://rafb.net/p/tohkT955.html
+2007-01-30T14:09:00.000Z	juano	Moniker42	if you only want sda5 then change fstab for this: http://rafb.net/p/CkRAgO37.html
+2007-01-30T14:11:00.000Z	juano	Moniker42	sudo mount -a
+2007-01-30T14:11:00.000Z	juano	Moniker42	no prob
+2007-01-30T14:11:00.000Z	juano	Moniker42	mm something seems wrong with sda5
+2007-01-30T14:12:00.000Z	juano	Moniker42	ok lets do this
+2007-01-30T14:12:00.000Z	juano	Moniker42	sudo mkdir /media/mysda5
+2007-01-30T14:13:00.000Z	juano	Moniker42	sudo mkdir /media/mysda5
+2007-01-30T14:13:00.000Z	juano	Moniker42	then use this as fstab http://rafb.net/p/04Vobv46.html
+2007-01-30T14:14:00.000Z	juano	Moniker42	sudo mount -a after the replacing
+2007-01-30T14:15:00.000Z	juano	Moniker42	well something is wrong with sda5
+2007-01-30T14:15:00.000Z	juano	Moniker42	dunno, you got vista on sda5 ?
+2007-01-30T14:15:00.000Z	Moniker42	juano	no that's sda1
+2007-01-30T14:15:00.000Z	juano	Moniker42	ok
+2007-01-30T14:54:00.000Z	Moniker42	juano	i just want to make a post on the ubuntu forums but i'm not entirely sure how to word the problem without just saying "my ntfs's won't work!"

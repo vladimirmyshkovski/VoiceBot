@@ -1,0 +1,94 @@
+2008-03-23T23:35:00.000Z	stefg		!upgrade | subsume
+2008-03-23T23:35:00.000Z	subsume	stefg	That doesn't contain command line instructions
+2008-03-24T04:32:00.000Z	stefg	subsume	do you get the boot menu, and it boots into the blinking nothing, or is that directly after BIOS POST ?
+2008-03-24T04:36:00.000Z	subsume	stefg	yes
+2008-03-24T04:36:00.000Z	subsume	stefg	If I boot into debug mode I can get to a login prompt but if I attempt to login it hangs forever
+2008-03-24T04:37:00.000Z	stefg	subsume	so i take it that your xserver died. ATI card ?
+2008-03-24T04:37:00.000Z	subsume	stefg	...no, because debug mode just goes to prompt....
+2008-03-24T04:37:00.000Z	subsume	stefg	this is right after a dist-upgrade
+2008-03-24T04:37:00.000Z	subsume	stefg	mysteriously my wifi card is gone too
+2008-03-24T04:38:00.000Z	subsume	stefg	and my network card if ifconfig is any indication
+2008-03-24T04:38:00.000Z	stefg	subsume	yeah... so you got a new kernel, but probably the restricted driver failed to upgrade. Can you boot with the old kernel?
+2008-03-24T04:38:00.000Z	subsume	stefg	sure but how do i get those restricted drivers back?
+2008-03-24T04:39:00.000Z	subsume	stefg	they must be available because a clean desktop install of ubuntu installs the card just fine
+2008-03-24T04:40:00.000Z	stefg	subsume	what card is that?
+2008-03-24T04:42:00.000Z	subsume	stefg	i don't think its restricted because an identical hardware machine doesn't have the wifi card in the device manager
+2008-03-24T04:42:00.000Z	stefg	subsume	lspci | grep VGA
+2008-03-24T04:43:00.000Z	subsume	stefg	oh thaty
+2008-03-24T04:43:00.000Z	subsume	stefg	i thought we were talking about the wifi card?
+2008-03-24T04:43:00.000Z	subsume	stefg	its nVidia Corporation NV6 Vanta/Vanta LT
+2008-03-24T04:43:00.000Z	stefg	subsume	no... obviously your x server (the part which does the gui) doesn't work
+2008-03-24T04:44:00.000Z	subsume	stefg	well the wifi stopped working too
+2008-03-24T04:44:00.000Z	stefg	subsume	so did you use automatix/envy ?
+2008-03-24T04:45:00.000Z	subsume	stefg	no idea what you are talking about
+2008-03-24T04:47:00.000Z	stefg	subsume	try 'sudo apt-get install linux-restricted-modules-$(uname -r) && sudo apt-get install nvidia-glx-legacy' then 'sudo /etc/init.d/gdm start'
+2008-03-24T04:48:00.000Z	subsume	stefg	that computer is tanked man. no wifi. no eth0. no way to apt-get
+2008-03-24T04:48:00.000Z	stefg	subsume	ah yes... forgaot
+2008-03-24T04:48:00.000Z	subsume	stefg	its weird because I updated another machine just fine
+2008-03-24T04:49:00.000Z	stefg	subsume	so check in /etc/X11/xorg.conf if the driver is set to 'nvidia'. change it to 'nv' temporarily and see if that gives you a gui for starters
+2008-03-24T04:51:00.000Z	subsume	stefg	do I need to restart...?
+2008-03-24T04:51:00.000Z	subsume	stefg	it was nvidia
+2008-03-24T04:51:00.000Z	stefg	subsume	just 'sudo /etc/init.d/gdm restart'
+2008-03-24T04:52:00.000Z	subsume	stefg	bingo
+2008-03-24T04:52:00.000Z	subsume	stefg	why not just stick with nv?
+2008-03-24T04:53:00.000Z	subsume	stefg	oh wait. login is hanging. =)
+2008-03-24T04:53:00.000Z	stefg	subsume	something with the restricted modules went wrong. so you are now on the (non 3D) free nvidia driver.
+2008-03-24T04:55:00.000Z	subsume	stefg	someway i can upgrade and default to these restricted drivers?
+2008-03-24T04:55:00.000Z	stefg	subsume	yeah... gutsy can be a pita. why not take a neat backup, do a fresh hardy beta install, (hardy works exceptionally well already) and just skip gutsy? It's not worth the effort with all the troubleshootung, to be honest. gutsy is/was a dud
+2008-03-24T04:57:00.000Z	subsume	stefg	will hardy play well with a gusty server?
+2008-03-24T04:58:00.000Z	subsume	stefg	I'm in a 40 computer lab. i can move one to hardy and see how it goes.
+2008-03-24T04:58:00.000Z	subsume	stefg	can I dist-upgrade to gusty?
+2008-03-24T04:58:00.000Z	subsume	stefg	this machine is still hanging at promtp.
+2008-03-24T04:59:00.000Z	stefg	subsume	just to get things straight: From which version did you upgrade to what new version?
+2008-03-24T04:59:00.000Z	subsume	stefg	feisty to gusty
+2008-03-24T05:01:00.000Z	stefg	subsume	ok... so you ended in desaster (like many others). you can spend 6 hours in troubleshooting now, or 2 hours for taking a backup of your data, wiping the disk, install hardy beta from scratch, and restore your personal files
+2008-03-24T05:01:00.000Z	subsume	stefg	no backup necessary
+2008-03-24T05:02:00.000Z	stefg	subsume	so just scrap that... not worth the effort. take a fresh hardy install from scratch
+2008-03-24T05:02:00.000Z	subsume	stefg	can i do it from the command line or must i get disk?
+2008-03-24T05:02:00.000Z	stefg	subsume	you need a disk. you don't upgrade, you completly reinstall
+2008-03-24T05:03:00.000Z	subsume	stefg	ok
+2008-03-24T05:06:00.000Z	subsume	stefg	do you know if there is a lightweight gusty I can get from command line?
+2008-03-24T05:06:00.000Z	subsume	stefg	 I want to make a thin-client from gusty
+2008-03-24T05:07:00.000Z	stefg	subsume	you don't want gutsy. you want hardy (8.04).
+2008-03-24T05:07:00.000Z	subsume	stefg	i'm sorry i meant Hardy!
+2008-03-24T05:07:00.000Z	subsume	stefg	is there a lightweight install of hardy?
+2008-03-24T05:07:00.000Z	stefg	subsume	what do mean by lightweight?
+2008-03-24T05:07:00.000Z	stefg	subsume	what machine/hardware and what purpose?
+2008-03-24T05:08:00.000Z	subsume	stefg	apt-get install edubuntu-addon-light gives you a smaller version of edubuntu
+2008-03-24T05:08:00.000Z	subsume	stefg	i've got some pretty powerful client machines.
+2008-03-24T05:08:00.000Z	subsume	stefg	purpose: an elementary school lab
+2008-03-24T05:08:00.000Z	stefg	subsume	so you are setting up a terminal server?
+2008-03-24T05:09:00.000Z	subsume	stefg	uhm... not sure what you mean by that. but there is a server here.
+2008-03-24T05:09:00.000Z	stefg	subsume	so how much ram has the typical machine?
+2008-03-24T05:09:00.000Z	subsume	stefg	how can I check? =)
+2008-03-24T05:10:00.000Z	stefg	subsume	free -m
+2008-03-24T05:10:00.000Z	subsume	stefg	says total 376
+2008-03-24T05:12:00.000Z	stefg	subsume	ok, that should be enough for a standard desktop install... http://releases.ubuntu.com/releases/8.04/ubuntu-8.04-beta-desktop-i386.iso . but this isn NOT edubuntu
+2008-03-24T05:12:00.000Z	subsume	stefg	i am already downloading that
+2008-03-24T05:13:00.000Z	stefg	subsume	edubuntu has its own channel #edubuntu. you should probably ask there for the lastes edubuntu news
+2008-03-24T05:13:00.000Z	subsume	stefg	I don't need to use edubuntu
+2008-03-24T05:13:00.000Z	subsume	stefg	its a dead project in my mind
+2008-03-24T05:14:00.000Z	subsume	stefg	this lab just happens to have lots of edubuntu
+2008-03-24T05:14:00.000Z	subsume	stefg	you really think gutsy was a dud, eh?
+2008-03-24T05:16:00.000Z	stefg	subsume	the idea behind edubuntu is that you have only one powerful machine in the lab, and use old and obsolete computers just as terminals. all the actual work is done on the powerful machine. But if you have halfway decent machines, you should rather go for ubuntu, it's less complex
+2008-03-24T05:16:00.000Z	subsume	stefg	yeah but these clients are strong enough and i don't want to weigh down the server
+2008-03-24T05:16:00.000Z	subsume	stefg	bah, edubuntu doesn't even do that well. in order to get a good setup you have to customize it
+2008-03-24T05:21:00.000Z	subsume	stefg	I'm just curious but why doesn't this darn computer start without being in recovery mode?
+2008-03-24T05:21:00.000Z	subsume	stefg	even though I can go into recovery mode and then start GDM just fine.
+2008-03-24T05:25:00.000Z	stefg	subsume	no CD burner inreach ?
+2008-03-24T05:26:00.000Z	subsume	stefg	I have a burner. I just want to use it as a thin-client
+2008-03-24T05:26:00.000Z	subsume	stefg	(as well as burning the iso i am downloading)
+2008-03-24T05:26:00.000Z	stefg	subsume	i see... you can do a minimal install then... but that's a different CD :-)
+2008-03-24T05:27:00.000Z	subsume	stefg	what is the source package name for the min install?
+2008-03-24T05:27:00.000Z	stefg	subsume	it's no package.. it's an .iso
+2008-03-24T05:27:00.000Z	subsume	stefg	its a package too, i bet
+2008-03-24T05:27:00.000Z	stefg	subsume	but you have a harddrive inside the client, don't you?
+2008-03-24T05:28:00.000Z	subsume	stefg	well..yeah
+2008-03-24T05:28:00.000Z	subsume	stefg	but I have a NFS loading /home drive
+2008-03-24T05:29:00.000Z	stefg	subsume	so are you going to vnc/rdp/xdmcp into the server, or do you run apps locally?
+2008-03-24T05:29:00.000Z	subsume	stefg	run apps locally
+2008-03-24T05:30:00.000Z	stefg	subsume	so just use the standard install, except tjat you mount /home via nfs
+2008-03-24T05:30:00.000Z	stefg	subsume	so that's not exactly a thin client, but a fat clinet
+2008-03-24T05:31:00.000Z	subsume	stefg	 yes a fat client a la https://help.ubuntu.com/community/UbuntuLTSP/LTSPFatClients
+2008-03-24T05:33:00.000Z	stefg	subsume	but these fat clients don't have a local harddrive. if you have harddisks inside your clients i would just use them as plain network clients, all apps installed locally and save lots of network traffic
+2008-03-24T05:35:00.000Z	stefg	subsume	bedtime for me... good luck with hardy

@@ -1,0 +1,94 @@
+2011-10-16T22:37:00.000Z	mh		do you want xrand -q when the external monitor is connected?
+2011-10-16T22:38:00.000Z	mh		           connected?
+2011-10-16T22:39:00.000Z	x_	mh	connected / on
+2011-10-16T22:26:00.000Z	x_	mh	whats wrong
+2011-10-16T22:27:00.000Z	mh	x_	If I plug the external display, frequency is out of range and my laptop display stops working
+2011-10-16T22:28:00.000Z	mh	x_	how to bring the laptop display back so I can fix this through the gui?
+2011-10-16T22:28:00.000Z	x_	mh	use your function key and the screen button
+2011-10-16T22:29:00.000Z	mh	x_	oh, with function key right.... let me see
+2011-10-16T22:30:00.000Z	mh	x_	nope, it doesn't work. the only thing that works (in the laptop) is ctrl alt F1
+2011-10-16T22:31:00.000Z	mh	x_	so any ideas?
+2011-10-16T22:31:00.000Z	x_	mh	1 sec
+2011-10-16T22:32:00.000Z	x_	mh	xrandr --output LVDS --auto --output VGA --auto --same-as LVDS
+2011-10-16T22:34:00.000Z	x_	mh	that command should clone your display to your vga output
+2011-10-16T22:34:00.000Z	x_	mh	pastebin for me xrandr -q
+2011-10-16T22:36:00.000Z	mh	x_	it gives warning: output VGA not found; ignoring
+2011-10-16T22:36:00.000Z	x_	mh	pastebin for me xrandr -q
+2011-10-16T22:37:00.000Z	mh	x_	I will pastebin. and if I do it while the other monitor is connected, it gives also xrandr: cannot find crtc for output LVDS
+2011-10-16T22:38:00.000Z	mh	x_	do you want xrand -q when the external monitor is
+2011-10-16T22:39:00.000Z	x_	mh	yea
+2011-10-16T22:39:00.000Z	x_	mh	xrandr -q
+2011-10-16T22:41:00.000Z	mh	x_	http://pastebin.com/Yj2z4nEX
+2011-10-16T22:42:00.000Z	x_	mh	xrandr --output LVDS --auto --output VGA-0 --auto --same-as LVDS
+2011-10-16T22:44:00.000Z	x_	mh	?
+2011-10-16T22:45:00.000Z	mh	x_	xrandr: cannot find crtc for output LVDS
+2011-10-16T22:45:00.000Z	x_	mh	try with sudo
+2011-10-16T22:47:00.000Z	mh	x_	but nope. same error
+2011-10-16T22:47:00.000Z	x_	mh	and you want to clone laptop to VGA monitor right?
+2011-10-16T22:48:00.000Z	x_	mh	xrandr --output LVDS --on     does that do anything?
+2011-10-16T22:48:00.000Z	mh	x_	I want to solve this. I cannot see from any of the monitors unless I am in say tty1 (it shows the same in both monitors)
+2011-10-16T22:48:00.000Z	x_	mh	xrandr --output VGA-0 --on     does that do anything?
+2011-10-16T22:49:00.000Z	x_	mh	so in tty1 you can see x and it shows the same in both monitors ?
+2011-10-16T22:50:00.000Z	x_	mh	wait, so you are not in x at all ?
+2011-10-16T22:50:00.000Z	mh	x_	I am in x but when the external monitor is unplugged
+2011-10-16T22:51:00.000Z	x_	mh	well I think you should be in ttty7
+2011-10-16T22:52:00.000Z	x_	mh	so you can ctrl+alt+F7 to go to your x desktop right? do that.
+2011-10-16T22:52:00.000Z	mh	x_	well, that is where I am now, but if I plug the ext. monitor, I can, the external monitor says frequency out of range
+2011-10-16T22:53:00.000Z	mh	x_	I can't
+2011-10-16T22:53:00.000Z	x_	mh	ubuntu 11.10 ?
+2011-10-16T22:53:00.000Z	mh	x_	yes
+2011-10-16T22:53:00.000Z	mh	x_	but I had the same issue in maverick
+2011-10-16T22:54:00.000Z	x_	mh	and your function keys don't let you turn the laptop screen back on ?
+2011-10-16T22:54:00.000Z	mh	x_	that never happened for me in ubuntu. maybe in debian or opensuse I was able. I don't remember
+2011-10-16T22:55:00.000Z	mh	x_	but of course this is something I have done wrong, because this used to work okay
+2011-10-16T22:56:00.000Z	mh	x_	how would I be able to reset the xrandr config?
+2011-10-16T22:56:00.000Z	x_	mh	ok, on my hp laptop, if I plug in an external monitor (VGA-0) my laptop (LVDS) may turn off but with function and my screen key I can turn it back on. so I'm not sure why you can't
+2011-10-16T22:57:00.000Z	x_	mh	and xrandr --output LVDS --on should work, just have a terminal open and hit your up key then enter to send the command again when you plug in the external monitor maybe?
+2011-10-16T22:57:00.000Z	mh	x_	this fujitsu siemens piece of crap does not do anything with fn F4
+2011-10-16T22:58:00.000Z	x_	mh	weird. and f4 is the screen icon?
+2011-10-16T22:58:00.000Z	mh	x_	I just get usage: xrandr [options]
+2011-10-16T22:59:00.000Z	mh	x_	and you know, all the options. maybe with sudo...
+2011-10-16T22:59:00.000Z	mh	x_	Same thing with sudo
+2011-10-16T22:59:00.000Z	x_	mh	try auto intead of on,
+2011-10-16T23:01:00.000Z	x_	mh	those commands work for me dude ;\
+2011-10-16T23:01:00.000Z	mh	x_	would it be different if I do this in tty1 instead of a terminal in x?
+2011-10-16T23:01:00.000Z	x_	mh	no
+2011-10-16T23:02:00.000Z	mh	x_	so I guess I am screwed.
+2011-10-16T23:03:00.000Z	mh	x_	 it all started when I tried the awesome wm
+2011-10-16T23:03:00.000Z	x_	mh	last thing I can think of... is have this typed in terminal and ready to go xrandr  --output VGA-0 --off and plug in ext monitor, hopefully your laptop screen will come back on
+2011-10-16T23:04:00.000Z	x_	mh	have that typed and ready to go and hit enter after you plug in the monitor. then do this if your laptop comes back.  xrandr --output LVDS --auto --output VGA-0 --auto --same-as LVDS
+2011-10-16T23:05:00.000Z	x_	mh	maybe pastebin your /etc/X11/xorg.conf
+2011-10-16T23:06:00.000Z	mh	x_	that did something new. when I go to ctrl alt f7, the screen gradually shuts down... pixel by pixel. I guess you have seen that during your linux life
+2011-10-16T23:06:00.000Z	x_	mh	uhhh... no
+2011-10-16T23:07:00.000Z	mh	x_	xorg.conf does not exist
+2011-10-16T23:07:00.000Z	mh	x_	it's a funny effect
+2011-10-16T23:07:00.000Z	x_	mh	no xorg.conf !?
+2011-10-16T23:08:00.000Z	mh	x_	no
+2011-10-16T23:08:00.000Z	x_	mh	um. did you install binary video drivers?
+2011-10-16T23:08:00.000Z	x_	mh	nothing for, cat /etc/X11/xorg.conf
+2011-10-16T23:09:00.000Z	mh	x_	I don't think so. I have the ATI default stuff
+2011-10-16T23:09:00.000Z	x_	mh	you went to additional drivers and did the automated install ?
+2011-10-16T23:09:00.000Z	mh	x_	cat: /etc/X11/xorg.conf: No such file or directory
+2011-10-16T23:09:00.000Z	mh	x_	mmm, maybe I did that
+2011-10-16T23:10:00.000Z	x_	mh	you need to.
+2011-10-16T23:12:00.000Z	mh	x_	no, only software modem
+2011-10-16T23:12:00.000Z	x_	mh	whats ur graphics card ?
+2011-10-16T23:12:00.000Z	mh	x_	so I guess i did it
+2011-10-16T23:13:00.000Z	mh	x_	ati radeon
+2011-10-16T23:14:00.000Z	mh	x_	system info says "unknown"
+2011-10-16T23:14:00.000Z	x_	mh	lspci find the line for vga compatible
+2011-10-16T23:15:00.000Z	x_	mh	such as. 01:00.0 VGA compatible controller: nVidia Corporation GF108 [GeForce GT 430] (rev a1)
+2011-10-16T23:16:00.000Z	mh	x_	01:05.0 VGA compatible controller: ATI Technologies Inc RS482 [Radeon Xpress 200M]
+2011-10-16T23:17:00.000Z	x_	mh	in the additional drivers, does it say anything is in use with a green icon next to it ?
+2011-10-16T23:19:00.000Z	mh	x_	software modem
+2011-10-16T23:19:00.000Z	x_	mh	go to that link.
+2011-10-16T23:21:00.000Z	mh	x_	so what can I do with this link?
+2011-10-16T23:22:00.000Z	mh	x_	it is an old ati card, there is not much to do with it. it is unsupported by ati
+2011-10-16T23:22:00.000Z	mh	x_	as far as I know.
+2011-10-16T23:23:00.000Z	x_	mh	ahh, then that might be your problem if you cannot install fglrx driver
+2011-10-16T23:23:00.000Z	mh	x_	this used to work before. I did something in awesome manager
+2011-10-16T23:24:00.000Z	x_	mh	reinstall ubuntu then i'd recommend.
+2011-10-16T23:24:00.000Z	mh	x_	changed something in the configuration
+2011-10-16T23:24:00.000Z	x_	mh	I have never heard of awesome manager, although it sounds not so awesome.
+2011-10-16T23:25:00.000Z	mh	x_	oh it is quite awesome indeed, check it out. but yeah thanks for your help
+2011-10-16T23:25:00.000Z	x_	mh	good luck.

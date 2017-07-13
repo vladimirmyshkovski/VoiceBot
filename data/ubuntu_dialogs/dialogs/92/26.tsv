@@ -1,0 +1,92 @@
+2009-11-02T11:29:00.000Z	Greybeard	zoe	can you run Firefox from a terminal?
+2009-11-02T11:25:00.000Z	Greybeard	zoe	problems with sound and Flash are very common, but not all the same, so look in the forums
+2009-11-02T11:25:00.000Z	zoe	Greybeard	I'm very certain this is a pulseaudio issue, if that narrows it down at all...
+2009-11-02T11:26:00.000Z	Greybeard	zoe	is flash using pulseaudio?
+2009-11-02T11:26:00.000Z	Greybeard	zoe	some versions of flash don't work well with pulseaudio, but the most recent ones seem fine
+2009-11-02T11:26:00.000Z	zoe	Greybeard	I believe so. however, on boot I recieve a notification that pulseaudio is not working
+2009-11-02T11:27:00.000Z	Greybeard	zoe	oh, so it's probably a more general pulseaudio problem
+2009-11-02T11:27:00.000Z	Greybeard	zoe	do you get sound from other apps?
+2009-11-02T11:27:00.000Z	zoe	Greybeard	I get sound from most things just fine... I get sound from pidgin until I load a flash video
+2009-11-02T11:28:00.000Z	Greybeard	zoe	can you run the pavucontrol program?
+2009-11-02T11:29:00.000Z	zoe	Greybeard	yes. it gives me a warning stating: Connection failed: Connection refused
+2009-11-02T11:29:00.000Z	Greybeard	zoe	ok, that means that pulseaudio isn't running
+2009-11-02T11:30:00.000Z	zoe	Greybeard	and go to a flash-enabled site, right?
+2009-11-02T11:30:00.000Z	Greybeard	zoe	right
+2009-11-02T11:30:00.000Z	Greybeard	zoe	the flash plugin should give you some error messages on standard error
+2009-11-02T11:31:00.000Z	zoe	Greybeard	that wouldn't happen to be the terminal still, would it? absolute silence there, even though rick in failing to roll me
+2009-11-02T11:31:00.000Z	Greybeard	zoe	if you run "firefox" from a terminal when it's already running, it'll just open a new window
+2009-11-02T11:32:00.000Z	Greybeard	zoe	shut down firefox completely, then run it from a terminal
+2009-11-02T11:32:00.000Z	zoe	Greybeard	oops, my bad. I didn't even notice I already had it up
+2009-11-02T11:32:00.000Z	Greybeard	zoe	it's just a confusing behavior of firefox
+2009-11-02T11:33:00.000Z	zoe	Greybeard	I get this (npviewer.bin:4407): Gtk-WARNING **: /usr/lib/gtk-2.0/2.10.0/engines/libqtcurve.so: wrong ELF class: ELFCLASS64
+2009-11-02T11:33:00.000Z	Greybeard	zoe	so, your Firefox is 64-bit or 32-bit?
+2009-11-02T11:33:00.000Z	zoe	Greybeard	64
+2009-11-02T11:33:00.000Z	Greybeard	zoe	and you installed the 64-bit flash plugin?
+2009-11-02T11:33:00.000Z	zoe	Greybeard	I did
+2009-11-02T11:34:00.000Z	Greybeard	zoe	but flash applets do display, right?
+2009-11-02T11:34:00.000Z	zoe	Greybeard	yes they do
+2009-11-02T11:34:00.000Z	Greybeard	zoe	so, that error probably isn't relevant
+2009-11-02T11:34:00.000Z	Greybeard	zoe	are there any messages about alsa or pulse or anything audio related?
+2009-11-02T11:35:00.000Z	zoe	Greybeard	no, none at all. that was the only error I recieved from firefox
+2009-11-02T11:35:00.000Z	Greybeard	zoe	and if you try another app that plays sound now, it doesn't work?
+2009-11-02T11:36:00.000Z	zoe	Greybeard	Amarox plays just fine
+2009-11-02T11:36:00.000Z	Greybeard	zoe	so the problem is just that Flash doesn't make any sound?
+2009-11-02T11:37:00.000Z	zoe	Greybeard	Pidgin stops making sound aftering trying a flash video also
+2009-11-02T11:37:00.000Z	Greybeard	zoe	can you try to run "pavucontrol" again?
+2009-11-02T11:38:00.000Z	zoe	Greybeard	same falure to connect
+2009-11-02T11:38:00.000Z	Greybeard	zoe	OK, so pulse still isn't running
+2009-11-02T11:38:00.000Z	Greybeard	zoe	what I don't understand is why Amarok would play sound but other apps wouldn't
+2009-11-02T11:39:00.000Z	Greybeard	zoe	yeah, pulseaudio isn't running
+2009-11-02T11:39:00.000Z	zoe	Greybeard	I have my sound set to give preference to my sound card through alsa
+2009-11-02T11:39:00.000Z	zoe	Greybeard	I'd prefer not to use pulse where I don't need to, as its only ever been trouble to me
+2009-11-02T11:40:00.000Z	Greybeard	zoe	well, sound configuration can be very complex unfortunately
+2009-11-02T11:40:00.000Z	Greybeard	zoe	my experience has been that when pulseaudio was first added to Ubuntu, it was very problematic, but in Jaunty, it's been quite good
+2009-11-02T11:40:00.000Z	zoe	Greybeard	I had the same experiance... but now in karmic, its bothersome
+2009-11-02T11:41:00.000Z	Greybeard	zoe	no, pulseaudio is far better
+2009-11-02T11:41:00.000Z	Greybeard	zoe	so you are using Karmic
+2009-11-02T11:41:00.000Z	zoe	Greybeard	yes I am
+2009-11-02T11:41:00.000Z	Greybeard	zoe	yeah, I haven't really switched yet
+2009-11-02T11:41:00.000Z	Greybeard	zoe	I did install Karmic on my laptop, but that seems to be a mistake since it hangs
+2009-11-02T11:44:00.000Z	zoe	Greybeard	any ideas how to fix up the pulse?
+2009-11-02T11:44:00.000Z	Greybeard	zoe	what happens when you start pulseaudio from a terminal?
+2009-11-02T11:45:00.000Z	zoe	Greybeard	using /etc/init.d/pulseadio restart?
+2009-11-02T11:45:00.000Z	Greybeard	zoe	no, just run it as your normal user
+2009-11-02T11:45:00.000Z	Greybeard	zoe	pulseaudio normally runs as an ordinary user
+2009-11-02T11:46:00.000Z	zoe	Greybeard	zoe@zoe-desktop:~$ pulseaudio
+2009-11-02T11:46:00.000Z	Greybeard	zoe	how many sound devices do you have?
+2009-11-02T11:46:00.000Z	zoe	Greybeard	one
+2009-11-02T11:46:00.000Z	zoe	Greybeard	onboard HDA intel
+2009-11-02T11:46:00.000Z	zoe	Greybeard	drivers are fine for it, though
+2009-11-02T11:47:00.000Z	Greybeard	zoe	so the problem may be that pulseaudio is trying to use a non-existent device
+2009-11-02T11:47:00.000Z	zoe	Greybeard	that sounds like it would be consistent with what I've seen
+2009-11-02T11:47:00.000Z	Greybeard	zoe	can you edit /etc/pulse/default.pa ?
+2009-11-02T11:48:00.000Z	Greybeard	zoe	that will require root
+2009-11-02T11:48:00.000Z	zoe	Greybeard	not a problem
+2009-11-02T11:49:00.000Z	Greybeard	zoe	try changing the hw:1,0 to hw:0,0
+2009-11-02T11:49:00.000Z	Greybeard	zoe	it'll probably be a line like "load-module module-alsa-source device=hw:1,0"
+2009-11-02T11:50:00.000Z	zoe	Greybeard	I see that line, but it is commented...
+2009-11-02T11:50:00.000Z	Greybeard	zoe	hmm, do you see any uncommented line like "load-module module-alsa-sink" ?
+2009-11-02T11:51:00.000Z	zoe	Greybeard	that line is also commented
+2009-11-02T11:51:00.000Z	Greybeard	zoe	OK, well, maybe the problem is that other sound-using apps are already running
+2009-11-02T11:52:00.000Z	Greybeard	zoe	try shutting down anything that uses sound, then run "pulseaudio"
+2009-11-02T11:52:00.000Z	zoe	Greybeard	ok. it has control of a shell now, pavucontrol is connected
+2009-11-02T11:52:00.000Z	Greybeard	zoe	great
+2009-11-02T11:53:00.000Z	Greybeard	zoe	so, do sound apps work now?
+2009-11-02T11:53:00.000Z	zoe	Greybeard	... now that pavucontrol is up... I see that internal audio analog stereo was muted
+2009-11-02T11:54:00.000Z	zoe	Greybeard	amarox does not work now
+2009-11-02T11:54:00.000Z	Greybeard	zoe	ok, so what about Flash?
+2009-11-02T11:54:00.000Z	Greybeard	zoe	pavucontrol shows you every app connected to pulseaudio so it helps troubleshooting
+2009-11-02T11:54:00.000Z	zoe	Greybeard	scratch that, amarok works, it was also volume all the way down... why is muted and no volume the default?!?
+2009-11-02T11:55:00.000Z	Greybeard	zoe	ok, great, what about Flash?
+2009-11-02T11:55:00.000Z	zoe	Greybeard	thats working now too
+2009-11-02T11:56:00.000Z	Greybeard	zoe	ok, good, so I think your problem was just that pulseaudio wasn't being started automatically
+2009-11-02T11:56:00.000Z	zoe	Greybeard	looks like it
+2009-11-02T11:57:00.000Z	Greybeard	zoe	unfortunately, I don't know off the top of my head where it's supposed to be started
+2009-11-02T11:57:00.000Z	Greybeard	zoe	especially since I'm still running Jaunty and it may have changed
+2009-11-02T11:57:00.000Z	zoe	Greybeard	its alright, if I need to hand start it for a bit, I don't mind
+2009-11-02T11:58:00.000Z	Greybeard	zoe	did you do anything to disable pulseaudio?
+2009-11-02T11:58:00.000Z	Greybeard	zoe	you might be able to add it to the GNOME startup list, but I'm not sure if that's quite right
+2009-11-02T11:58:00.000Z	zoe	Greybeard	no, this was an issue from the beginning
+2009-11-02T11:58:00.000Z	Greybeard	zoe	hmm, that's odd
+2009-11-02T12:01:00.000Z	zoe	Greybeard	thanks a lot for the help
+2009-11-02T12:01:00.000Z	Greybeard	zoe	sure, no problem; I hope you can figure out how to get pulseaudio to start properly

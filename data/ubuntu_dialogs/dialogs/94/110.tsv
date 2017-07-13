@@ -1,0 +1,94 @@
+2005-10-13T11:38:00.000Z	DShepherd		I am upgrading to breezy from hoary but not all the packages have been downloaded. Is it wise to installed the already downloaded packages myself?
+2005-10-13T11:38:00.000Z	DShepherd		I running out of space :(
+2005-10-13T11:38:00.000Z	nalioth	DShepherd	the pkgs will come when they are ready
+2005-10-15T11:34:00.000Z	nalioth	DShepherd	k3b
+2005-10-15T11:35:00.000Z	DShepherd	nalioth	is that a kde app
+2005-10-15T11:36:00.000Z	nalioth	DShepherd	yes it is. and it is most likely the best cd/dvd burning tool we have available
+2005-10-15T11:38:00.000Z	nalioth	DShepherd	my serpentine segfaults every time i start it
+2005-10-26T16:35:00.000Z	DShepherd	nalioth	how do you escape out of xkill
+2005-10-26T16:35:00.000Z	nalioth	DShepherd	you dont. click on your panel
+2005-10-26T16:37:00.000Z	DShepherd	nalioth	so you must kill something...hmm.. by the way I killed my panel and gaim died with it
+2005-10-26T16:37:00.000Z	nalioth	DShepherd	it'll come back, unless you clicked on the gaim button
+2005-10-26T16:39:00.000Z	DShepherd	nalioth	nope it kill gaim again
+2005-10-26T16:39:00.000Z	nalioth	DShepherd	what are you trying to kill?
+2005-10-26T16:39:00.000Z	DShepherd	nalioth	i clearly clicked the panel only
+2005-10-26T16:40:00.000Z	DShepherd	nalioth	I was just testing it out. I sawthat you guys were just talking about..
+2005-10-26T16:44:00.000Z	nalioth	DShepherd	put a blank disk in the drive
+2005-10-26T16:45:00.000Z	DShepherd	nalioth	is that the only way to launch it
+2005-10-26T16:46:00.000Z	nalioth	DShepherd	it's the only way i've found  (i use k3b to burn disks)
+2005-10-26T16:46:00.000Z	DShepherd	nalioth	ok
+2005-10-26T16:46:00.000Z	nalioth	DShepherd	the nautilus cd burner is very very simple
+2005-10-26T16:47:00.000Z	DShepherd	nalioth	too simple sometimes
+2005-11-18T14:25:00.000Z	nalioth	DShepherd	it should, if you're running an x86 arch
+2005-11-18T14:25:00.000Z	DShepherd	nalioth	ok :(
+2005-11-18T14:50:00.000Z	DShepherd	nalioth	i got sound to work flash in firefox, but not epiphany browser,, I went using the guide at https://wiki.ubuntu.com/RestrictedFormats. Any suggestions on what i need to do to get it runniing on epiphany?
+2005-11-18T14:50:00.000Z	nalioth	DShepherd	did you put your flash plugin in ~/.mozilla/plugins or /usr/lib/mozilla/plugins/  ?
+2005-11-18T14:51:00.000Z	DShepherd	nalioth	libflash-mozplugin.so yes
+2005-11-18T14:52:00.000Z	DShepherd	nalioth	yes libflashplayer.so
+2005-11-18T14:52:00.000Z	nalioth	DShepherd	in your mozilla dir, not firefox dirs?
+2005-11-18T14:53:00.000Z	DShepherd	nalioth	/usr/lib/mozilla/plugins. that's where i am
+2005-11-18T14:54:00.000Z	nalioth	DShepherd	then epiphany should be using them
+2005-11-18T14:56:00.000Z	DShepherd	nalioth	it doesnt seem to be....well it runs the video part of the flash....but not the sound part
+2005-11-18T14:56:00.000Z	DShepherd	nalioth	it only worked for firefox when I did this... A different try: create ~/.mozilla/firefox/rc with the line FIREFOX_DSP="none".
+2005-11-18T14:56:00.000Z	nalioth	DShepherd	ah! that's another problem, that i havent seen a solution to
+2005-11-18T14:58:00.000Z	nalioth	DShepherd	off topic. why are you using epiphany and not galeon?
+2005-11-18T14:58:00.000Z	DShepherd	nalioth	cause...cause......I dont know...options :)
+2005-11-18T14:59:00.000Z	nalioth	DShepherd	galeon (imho) is a better gecko client than epiphany
+2005-11-18T14:59:00.000Z	DShepherd	nalioth	ok. but... i think galeon will have the same problem as epiphany
+2005-11-18T15:08:00.000Z	DShepherd	nalioth	kestas ahh  just as I thought. at  https://wiki.ubuntu.com/RestrictedFormats tells you you can trying add the FIREFOX_DSP="none" line to ~/.mozilla/firefox/rc file. When I comment it out...it doesnt work, when i uncomment it works...
+2005-11-18T15:09:00.000Z	DShepherd	nalioth	kestas now my guess is that I need to enter an entry for epiphany and gaelon too.... Any ideas how that would look?
+2005-11-18T15:10:00.000Z	nalioth	DShepherd	~/.epiphany/blah?
+2005-11-18T15:12:00.000Z	DShepherd	nalioth	thanks...but i mean....the entry in the RC file..what would that look like....EPIPHANY_DSP?
+2005-11-18T15:13:00.000Z	nalioth	DShepherd	perhaps put "epiphany_dsp" into google and see what comes up
+2005-11-18T15:13:00.000Z	DShepherd	nalioth	did that already,,,nothing
+2005-11-18T15:19:00.000Z	DShepherd	nalioth	well galeon has the same problem...
+2005-11-18T15:19:00.000Z	DShepherd	nalioth	it has something to do with DSP being off when firefox runs......
+2005-11-18T15:19:00.000Z	nalioth	DShepherd	i dont run flash things (even on my OSX, where it actually works)
+2005-11-18T15:20:00.000Z	nalioth	DShepherd	ubuntu is rife with sound problems
+2005-11-18T15:21:00.000Z	DShepherd	nalioth	ok tell me this...the rc file. what does rc mean?
+2005-11-18T15:21:00.000Z	nalioth	DShepherd	i've not figured that out yet, which is crazy seein how long i've been using *nix
+2005-11-18T15:22:00.000Z	DShepherd	nalioth	that's ok....I understand
+2005-11-18T15:22:00.000Z	nalioth	DShepherd	if you find out, let me know, please
+2005-11-18T15:22:00.000Z	DShepherd	nalioth	ok
+2005-11-18T15:26:00.000Z	DShepherd	nalioth	adding EPIPHANY_DSP to the rc file doesnt seem to work?
+2005-11-18T15:26:00.000Z	DShepherd	nalioth	do you know how I can kill dsp manually?
+2005-11-18T15:26:00.000Z	nalioth	DShepherd	hunt it down using ps aux
+2005-11-18T15:27:00.000Z	DShepherd	nalioth	I dont see it running 'dsp'
+2005-11-18T15:28:00.000Z	nalioth	DShepherd	/msg ubotu sound
+2005-11-18T15:31:00.000Z	DShepherd	nalioth	why do you like gaelon again?
+2005-11-18T15:31:00.000Z	nalioth	DShepherd	more features and gtk2 (imho)
+2005-11-18T15:44:00.000Z	nalioth	DShepherd	it'll get better. sound has always been an issue in ubuntu
+2005-11-18T15:45:00.000Z	DShepherd	nalioth	always.....mann....I hope that changes pretty soon
+2005-11-18T15:46:00.000Z	DShepherd	nalioth	anyways...I am way pass my bed time. thanks for the advice,, later
+2005-11-18T15:46:00.000Z	nalioth	DShepherd	sleep well
+2005-11-20T12:31:00.000Z	DShepherd	nalioth	thanks for the info
+2005-12-15T10:35:00.000Z	nalioth	DShepherd	 ubotu was knocked offline during the flood attack earlier
+2005-12-15T10:35:00.000Z	DShepherd	nalioth	oh ok
+2006-03-14T12:40:00.000Z	nalioth	DShepherd	apt-cache search clipboard
+2006-03-14T12:41:00.000Z	DShepherd	nalioth	the search said that I have xclipboard installed
+2006-03-14T12:42:00.000Z	DShepherd	nalioth	i dont think that;s what I need though
+2006-06-22T06:43:00.000Z	DShepherd	nalioth	hey
+2006-06-24T16:35:00.000Z	nalioth	DShepherd	?
+2006-06-24T16:35:00.000Z	DShepherd	nalioth	for example.. I want to search for... the work infront. in irrsi
+2006-06-24T16:36:00.000Z	nalioth	DShepherd	why are you issuing nuke orders for /var/ ?
+2006-06-24T16:36:00.000Z	DShepherd	nalioth	oh... not the /var/ folder but the file.. that he was talking about
+2006-06-24T16:36:00.000Z	nalioth	DShepherd	when you are using those commands, please be very specific
+2006-06-24T16:37:00.000Z	DShepherd	nalioth	your right.. i should thanks
+2006-06-24T16:52:00.000Z	DShepherd	nalioth	from what Flannel and gnomefreak were saying update-manager -d should upgrade to Edgy..if it is out..
+2006-06-24T16:53:00.000Z	DShepherd	nalioth	ubotu suggests that when you message upgrade to him.. that can be dangerous or not what people want.
+2006-06-24T16:53:00.000Z	DShepherd	nalioth	can you change it
+2006-06-24T16:53:00.000Z	nalioth	DShepherd	i know nothing about upgrade-mangler
+2006-06-24T16:54:00.000Z	nalioth	DShepherd	PM ubotu the changes you want
+2006-06-24T16:55:00.000Z	DShepherd	nalioth	pm ubotu the changes I want? not sure I understand you
+2006-06-24T16:59:00.000Z	nalioth	DShepherd	you've gotten two messages
+2006-06-24T16:59:00.000Z	DShepherd	nalioth	what you talking about?
+2006-08-23T11:13:00.000Z	DShepherd	nalioth	you around.. I could use some of your wisdom right now?
+2006-08-23T11:13:00.000Z	nalioth	DShepherd	there is plenty of wisdom in this channel
+2006-08-23T11:14:00.000Z	DShepherd	nalioth	see.. wise stuff like that i nee
+2006-08-23T11:22:00.000Z	nalioth	DShepherd	what did you need?
+2006-08-23T11:22:00.000Z	DShepherd	nalioth	windows fix?
+2006-08-23T11:22:00.000Z	nalioth	DShepherd	i don't understand
+2006-08-23T11:24:00.000Z	DShepherd	nalioth	trying to build compiz from source. on doing that compiz says it depends on libstartup-notification-1.0. the latest release (I checked) is 0.8. So it seems that some script is wrong.
+2006-08-23T11:25:00.000Z	DShepherd	nalioth	how does one, like me, get around that
+2006-08-23T11:25:00.000Z	nalioth	DShepherd	file a bug
+2006-08-23T11:25:00.000Z	DShepherd	nalioth	ok

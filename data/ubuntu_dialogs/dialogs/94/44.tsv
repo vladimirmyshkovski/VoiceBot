@@ -1,0 +1,94 @@
+2009-02-21T20:41:00.000Z	savvas	Jewbacca	what are you trying to do? real live example?
+2009-02-21T20:41:00.000Z	Jewbacca	savvas	ah?
+2009-02-21T20:41:00.000Z	savvas	Jewbacca	post the text file at http://paste.ubuntu.com
+2009-02-21T20:41:00.000Z	Jewbacca	savvas	its a cfg from my game
+2009-02-21T20:42:00.000Z	savvas	Jewbacca	what's the name of the archive?
+2009-02-21T20:42:00.000Z	Jewbacca	savvas	its .rar
+2009-02-21T20:42:00.000Z	savvas	Jewbacca	then: unrar x etconfig.rar
+2009-02-21T20:42:00.000Z	Jewbacca	savvas	when i extract the files, everything extract except the txt files
+2009-02-21T20:43:00.000Z	savvas	Jewbacca	follow ikonia's commands and debugging requests :)
+2009-02-21T20:43:00.000Z	Jewbacca	savvas	how do i dubbug
+2009-02-21T20:43:00.000Z	savvas	Jewbacca	ikonia asks you questions, you answer
+2009-02-21T20:46:00.000Z	savvas	Jewbacca	let's start from the top
+2009-02-21T20:46:00.000Z	savvas	Jewbacca	you want to extract a text file that's in a etconfig.rar file, right?
+2009-02-21T20:46:00.000Z	Jewbacca	savvas	yep
+2009-02-21T20:47:00.000Z	savvas	Jewbacca	ok, where is that etconfig.rar located? do you know the full path to it?
+2009-02-21T20:47:00.000Z	Jewbacca	savvas	its located inside the desktop
+2009-02-21T20:48:00.000Z	savvas	Jewbacca	ok, open a new terminal (Applications > Accessories > Terminal) and execute: cd Desktop
+2009-02-21T20:48:00.000Z	Jewbacca	savvas	im there
+2009-02-21T20:48:00.000Z	savvas	Jewbacca	ok now type: file etconfig.rar
+2009-02-21T20:48:00.000Z	savvas	Jewbacca	what does the command reply?
+2009-02-21T20:48:00.000Z	Jewbacca	savvas	etconfig.rar: RAR archive data, v1d, os: Win32
+2009-02-21T20:49:00.000Z	savvas	Jewbacca	ok, now execute: sudo apt-get install unrar
+2009-02-21T20:49:00.000Z	savvas	Jewbacca	enter your password (won't be shown) and press enter
+2009-02-21T20:50:00.000Z	Jewbacca	savvas	look, if i fix this, then my problem solved Unknown file type /home/ishai/.xchat2/perform. Maybe you need to install the Perl or Python plugin?
+2009-02-21T20:51:00.000Z	savvas	Jewbacca	ok, now execute: unrar x etconfig.rar
+2009-02-21T20:51:00.000Z	savvas	Jewbacca	post the output at www.pastebin.com
+2009-02-21T20:51:00.000Z	savvas	Jewbacca	and give me the link to that paste
+2009-02-21T20:51:00.000Z	Jewbacca	savvas	it worked
+2009-02-21T20:52:00.000Z	savvas	Jewbacca	I need to see the output at www.pastebin.com
+2009-02-21T20:52:00.000Z	Jewbacca	savvas	http://pastebin.com/d439bc987
+2009-02-21T20:55:00.000Z	savvas	Jewbacca	post the output of this command at www.pastebin.com : find . -name "*.cfg" -exec file "{}" \;
+2009-02-21T20:56:00.000Z	Jewbacca	savvas	http://pastebin.com/d97c8bdb
+2009-02-21T20:57:00.000Z	savvas	Jewbacca	ok, so what are you trying to do with the files from etconfig.rar ?
+2009-02-21T20:58:00.000Z	Jewbacca	savvas	those txt files are configs for my video game
+2009-02-21T20:59:00.000Z	savvas	Jewbacca	so you are saying there are .txt files in etconfig.rar ?
+2009-02-21T20:59:00.000Z	savvas	Jewbacca	can you tell me where you got that etconfig.rar ?
+2009-02-21T20:59:00.000Z	Jewbacca	savvas	i made it myself :x
+2009-02-21T20:59:00.000Z	savvas	Jewbacca	what did you use?
+2009-02-21T21:00:00.000Z	Jewbacca	savvas	it worked million times for me D: i only needed to install something
+2009-02-21T21:00:00.000Z	savvas	Jewbacca	so this is from windows to linux to play enemy territory, right?
+2009-02-21T21:00:00.000Z	savvas	Jewbacca	execute this and post the output at www.pastebin.com : rar l etconfig.rar
+2009-02-21T21:01:00.000Z	savvas	Jewbacca	sorry, you might need to install rar: sudo apt-get install rar
+2009-02-21T21:01:00.000Z	Jewbacca	savvas	its not installed
+2009-02-21T21:01:00.000Z	savvas	Jewbacca	install rar: sudo apt-get install rar
+2009-02-21T21:02:00.000Z	savvas	Jewbacca	done?
+2009-02-21T21:02:00.000Z	savvas	Jewbacca	execute this and post the output at www.pastebin.com : rar l etconfig.rar
+2009-02-21T21:02:00.000Z	Jewbacca	savvas	if i only fix that i wont see unknown type its all fixed :(
+2009-02-21T21:03:00.000Z	Jewbacca	savvas	http://pastebin.com/d3845fe36
+2009-02-21T21:04:00.000Z	savvas	Jewbacca	did you shut down your computer not normally? Did the power go off?
+2009-02-21T21:05:00.000Z	Jewbacca	savvas	well after i installed linux, when i update it a lightning bolt stroke near by :D my fuse jumped
+2009-02-21T21:05:00.000Z	Jewbacca	savvas	but i have ups so nothing went wrong
+2009-02-21T21:05:00.000Z	savvas	Jewbacca	do you have another copy of that file?
+2009-02-21T21:05:00.000Z	Jewbacca	savvas	which file?
+2009-02-21T21:06:00.000Z	Jewbacca	savvas	the etconfig? its on my ftp :p
+2009-02-21T21:06:00.000Z	savvas	Jewbacca	etconfig.rar - that's the one you say it had .txt files
+2009-02-21T21:06:00.000Z	Jewbacca	savvas	help me out here, let me send you the etconfig and tell me what type it says for you ok?
+2009-02-21T21:06:00.000Z	savvas	Jewbacca	can you tell me the link privately, so I can take a look?
+2009-02-21T21:07:00.000Z	savvas	Jewbacca	or upload it at www.rapidshare.com or whatever
+2009-02-21T21:08:00.000Z	Jewbacca	savvas	www.cohenishai.wippiespace.com
+2009-02-21T21:08:00.000Z	Jewbacca	savvas	find etconfig
+2009-02-21T21:08:00.000Z	savvas	Jewbacca	that's the backup? or the one from Desktop?
+2009-02-21T21:09:00.000Z	Jewbacca	savvas	its the original
+2009-02-21T21:09:00.000Z	savvas	Jewbacca	ok wait please
+2009-02-21T21:09:00.000Z	Jewbacca	savvas	just tell me what type you see inside the archive
+2009-02-21T21:10:00.000Z	savvas	Jewbacca	so when you open this in WinRAR you see .txt files in it?
+2009-02-21T21:11:00.000Z	Jewbacca	savvas	yes, when i drag-and-drop, it doesnt do that :(
+2009-02-21T21:12:00.000Z	savvas	Jewbacca	can you boot to windows and take a screenshot of Winrar to show the .txt files?
+2009-02-21T21:12:00.000Z	Jewbacca	savvas	i only have ubuntu
+2009-02-21T21:13:00.000Z	savvas	Jewbacca	how old is this .rar file?
+2009-02-21T21:13:00.000Z	Jewbacca	savvas	dude...last time some guy gave me something to download and it worked :(
+2009-02-21T21:14:00.000Z	Jewbacca	savvas	its few days old
+2009-02-21T21:15:00.000Z	savvas	Jewbacca	are you sure 10000% that this the etconfig.rar with the .txt files, and not one other file?
+2009-02-21T21:16:00.000Z	savvas	Jewbacca	does your friend use ubuntu as well?
+2009-02-21T21:16:00.000Z	Jewbacca	savvas	yes
+2009-02-21T21:16:00.000Z	Jewbacca	savvas	i only remember i need to install 1 thing and its all fixed ;(
+2009-02-21T21:16:00.000Z	savvas	Jewbacca	can you tell your friend to send me the copy of the file they have?
+2009-02-21T21:16:00.000Z	Jewbacca	savvas	he just went off
+2009-02-21T21:17:00.000Z	savvas	Jewbacca	a simple question: are you trying to install enemy territory and you can't install it?
+2009-02-21T21:18:00.000Z	Jewbacca	savvas	i already played it
+2009-02-21T21:18:00.000Z	Jewbacca	savvas	i only need my config D:
+2009-02-21T21:18:00.000Z	savvas	Jewbacca	so you can't use the etconfig from the etconfig.rar right?
+2009-02-21T21:19:00.000Z	Jewbacca	savvas	can we go into private msg? D:
+2009-02-21T21:19:00.000Z	savvas	Jewbacca	xchat is not enemy territory, don't mix stuff
+2009-02-21T21:19:00.000Z	savvas	Jewbacca	you are explaining two problems at once
+2009-02-21T21:19:00.000Z	savvas	Jewbacca	no, sorry, I'll have to go in a couple of minutes :)
+2009-02-21T21:20:00.000Z	savvas	Jewbacca	I'll say it once more, xchat does not have to do anything with enemy territory!
+2009-02-21T21:20:00.000Z	Jewbacca	savvas	i will also say it, last time when i fixed that xchat problem, it fixed everything ;(
+2009-02-21T21:23:00.000Z	savvas	Jewbacca	you said .txt files
+2009-02-21T21:25:00.000Z	savvas	Jewbacca	so you want to use that etconfig to play enemy territory?
+2009-02-21T21:26:00.000Z	savvas	Jewbacca	wait wait wait
+2009-02-21T21:27:00.000Z	savvas	Jewbacca	execute this: dir -la $HOME | grep -i etconf
+2009-02-21T21:27:00.000Z	savvas	Jewbacca	does it say anything?
+2009-02-21T21:28:00.000Z	Jewbacca	savvas	can i private msg you ;(
+2009-02-21T21:28:00.000Z	savvas	Jewbacca	ok

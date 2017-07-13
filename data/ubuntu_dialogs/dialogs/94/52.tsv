@@ -1,0 +1,94 @@
+2008-06-24T08:05:00.000Z	grtessman		hah me too ;-)
+2008-06-24T08:06:00.000Z	grtessman		if( navigator.javaEnabled() ) {     document.write( "<center><img border=\"0\" src=\"/dana-cached/imgs/progressimg.gif\"></center>"); } else {     document.write( "<center><b>JRE not installed/Java is disabled. </b></center>"); }
+2008-06-24T08:07:00.000Z	grtessman		it's failing the navigator.javaEnabled portion of the test with this plugin
+2008-06-24T08:07:00.000Z	grtessman		i think this is a bug
+2008-06-24T08:07:00.000Z	grtessman		I am getting JRE not installed/Java is disabled
+2008-06-24T08:07:00.000Z	grtessman		bummer
+2008-06-24T08:08:00.000Z	grtessman		Is there an easy way to revert back to Firefox 1.5 ?
+2008-06-24T08:08:00.000Z	grtessman		It's just javascript... one would think this would work
+2008-06-24T08:10:00.000Z	grtessman		Who can verify this bug?
+2008-06-24T08:11:00.000Z	danbhfive	grtessman	which version of java do you have installed?
+2008-06-24T08:11:00.000Z	grtessman	danbhfive	let me check
+2008-06-24T08:12:00.000Z	grtessman	danbhfive	openjdk 6
+2008-06-24T08:12:00.000Z	grtessman	danbhfive	and the icedtea browser plugin
+2008-06-24T08:13:00.000Z	danbhfive	grtessman	icedtea is broken, use the sun version
+2008-06-24T08:13:00.000Z	grtessman	danbhfive	the sun version doesnt install an i386 folder
+2008-06-24T08:13:00.000Z	grtessman	danbhfive	only an AMD folder
+2008-06-24T08:13:00.000Z	danbhfive	grtessman	what?
+2008-06-24T08:14:00.000Z	danbhfive	grtessman	is this 32bit?
+2008-06-24T08:14:00.000Z	grtessman	danbhfive	yes sit
+2008-06-24T08:14:00.000Z	danbhfive	grtessman	i dont understand the folder thing that you are talking about
+2008-06-24T08:15:00.000Z	grtessman	danbhfive	sure let me get that for you
+2008-06-24T08:16:00.000Z	grtessman	danbhfive	/usr/lib/jvm/java-6-openjdk/jre/lib     is supposed to have a i386 directory
+2008-06-24T08:18:00.000Z	danbhfive	grtessman	thats outside of my expertise
+2008-06-24T08:19:00.000Z	grtessman	danbhfive	I have tried ﻿Sun Java runtime install sun-java6-jre from the !Multiverse repository and this bug still exists
+2008-06-24T08:19:00.000Z	grtessman	danbhfive	the javascript    navigator.javaEnabled()    always fails regardless of what java version is used in Firefox
+2008-06-24T08:21:00.000Z	danbhfive	grtessman	sudo aptitude remove icedtea-gcjwebplugin icedtea-java7-plugin && sudo aptitude install sun-java6-plugin && sudo update-java-alternatives -s java-6-sun
+2008-06-24T08:21:00.000Z	danbhfive	grtessman	really?
+2008-06-24T08:22:00.000Z	grtessman	danbhfive	yup
+2008-06-24T08:22:00.000Z	grtessman	danbhfive	try yourself, u will see
+2008-06-24T08:22:00.000Z	danbhfive	grtessman	tried it, and i have it
+2008-06-24T08:22:00.000Z	grtessman	danbhfive	and that works for you?
+2008-06-24T08:23:00.000Z	danbhfive	grtessman	sun-java6-plugin is fine for me, maybe you need to check your sources
+2008-06-24T08:23:00.000Z	grtessman	danbhfive	I have no doubts it was there at one time... but you cannot get it today
+2008-06-24T08:24:00.000Z	grtessman	danbhfive	I get the package was removed using aptitude, or syanptics
+2008-06-24T08:24:00.000Z	danbhfive	grtessman	I just did a reinstall, worked fine
+2008-06-24T08:25:00.000Z	grtessman	danbhfive	did the re-install use the *.gz located in the /etc/alternatives ?  I'll bet it did
+2008-06-24T08:26:00.000Z	danbhfive	grtessman	pastebin your sources.list
+2008-06-24T08:26:00.000Z	grtessman	danbhfive	huh?
+2008-06-24T08:28:00.000Z	danbhfive	grtessman	what bazhang said
+2008-06-24T08:30:00.000Z	grtessman	danbhfive	I have ﻿/etc/apt/sources.list  opened, but I dont know how to paste it to get a link ... is this in NickServ?
+2008-06-24T08:32:00.000Z	danbhfive	grtessman	follow that link, and paste it there
+2008-06-24T08:34:00.000Z	grtessman	danbhfive	I cant figure out how to paste it
+2008-06-24T08:34:00.000Z	danbhfive	grtessman	see the big box?  paste it there, and click paste
+2008-06-24T08:35:00.000Z	danbhfive	grtessman	did you open the link?
+2008-06-24T08:38:00.000Z	grtessman	danbhfive	  here ya go   http://paste.ubuntu.com/22509/
+2008-06-24T08:40:00.000Z	danbhfive	grtessman	do you know the sources gui program?
+2008-06-24T08:41:00.000Z	danbhfive	grtessman	you should fire it up, and check off all the boxes except updates-proposed.   Right now, you seem to be missing multiverse repos
+2008-06-24T08:42:00.000Z	grtessman	danbhfive	  Isnt line 28 and 28 multiverse?
+2008-06-24T08:43:00.000Z	danbhfive	grtessman	yeah, i guess it is
+2008-06-24T08:43:00.000Z	grtessman	danbhfive	   ok, so why the error taht the package isnt found?
+2008-06-24T08:44:00.000Z	danbhfive	grtessman	please, just check the sources gui, it takes 2 secs
+2008-06-24T08:44:00.000Z	grtessman	danbhfive	  ok, do u know the cmd for it?
+2008-06-24T08:44:00.000Z	danbhfive	grtessman	gksu --desktop /usr/share/applications/software-properties.desktop /usr/bin/software-properties-gtk
+2008-06-24T08:45:00.000Z	grtessman	danbhfive	 yes I have seen this before.  What would you like me to do here?
+2008-06-24T08:46:00.000Z	grtessman	danbhfive	  The top 4 are checked and the fifth has a line through the checkbox
+2008-06-24T08:47:00.000Z	grtessman	danbhfive	  under updates..  Important and Recommended are the only ones checked
+2008-06-24T08:47:00.000Z	grtessman	danbhfive	and Check daily with a notify about available updates
+2008-06-24T08:48:00.000Z	danbhfive	grtessman	yeah, i dunno, I guess your sources is ok.  The error still is indicating bad sources.  Maybe you need to run a sudo apt-get update
+2008-06-24T08:49:00.000Z	grtessman	danbhfive	  if you completely remove using Synaptics, you will not be able to get it back.
+2008-06-24T08:50:00.000Z	grtessman	danbhfive	since the package just isnt available.  But you'll have to "completely remove"
+2008-06-24T08:52:00.000Z	danbhfive	grtessman	http://us.archive.ubuntu.com/ubuntu/pool/multiverse/s/sun-java6/ there are the packages, Ill try removing completely, and see what happens
+2008-06-24T08:53:00.000Z	grtessman	danbhfive	  I just did   ﻿sudo apt-get update,    then ran  sudo apt-get install sun-java6-plugin    Package sun-java6-plugin is not available, but is referred to by another package
+2008-06-24T08:56:00.000Z	danbhfive	grtessman	yeah, I dont know, but it is working for me.  maybe you could try checking that ubuntu-desktop is installed.  But, im out of ideas. sorry
+2008-06-24T08:57:00.000Z	grtessman	danbhfive	it's is working from you because you have it archived and u are re-installing
+2008-06-24T08:57:00.000Z	danbhfive	grtessman	no, its redownloading it
+2008-06-24T08:57:00.000Z	grtessman	danbhfive	can you paste me your sources list?
+2008-06-24T08:57:00.000Z	danbhfive	grtessman	I removed, cleaned, and then installed, it d/l'ed and installed
+2008-06-24T08:58:00.000Z	grtessman	danbhfive	ok, then I dont know what's going on.    I cannot download it.
+2008-06-24T08:58:00.000Z	grtessman	danbhfive	are you using and AMD or intel?
+2008-06-24T08:58:00.000Z	danbhfive	grtessman	http://paste.ubuntu.com/22512/     did you check the link I posted earlier.   Im using intel, 32bit
+2008-06-24T08:59:00.000Z	grtessman	danbhfive	  which link did you post earlier?  Let me scroll up.
+2008-06-24T09:00:00.000Z	grtessman	danbhfive	yah sorry I missed that.  These are all the deb and gz packages on nultiverse
+2008-06-24T09:01:00.000Z	danbhfive	grtessman	yeah, thats right where apt would get them.  It just checks your net connection...
+2008-06-24T09:02:00.000Z	grtessman	danbhfive	 right,   Ok, this gives me a few more things to try.  Thank you for your time sir.  I'll also try your sources and see if that makes a difference.
+2008-06-24T09:02:00.000Z	danbhfive	grtessman	yeah, hope it works out
+2008-06-24T09:02:00.000Z	grtessman	danbhfive	yah me too - thanks again.
+2008-06-24T09:21:00.000Z	grtessman	danbhfive	 Ok.. I am using your sources.. then I did a sudo apt-get update    and    sudo apt-get install sun-java6-plugin and still get Package sun-java6-plugin is not available, but is referred to by another package.
+2008-06-24T09:22:00.000Z	danbhfive	grtessman	well, here is a last ditch effort: sudo apt-get install ubuntu-desktop^      ^ is intended
+2008-06-24T09:22:00.000Z	grtessman	danbhfive	  ok... but please note
+2008-06-24T09:24:00.000Z	danbhfive	grtessman	are you using 32bit or 64bit?
+2008-06-24T09:24:00.000Z	grtessman	danbhfive	 32 bit
+2008-06-24T09:25:00.000Z	danbhfive	grtessman	intels support amd64
+2008-06-24T09:26:00.000Z	grtessman	danbhfive	and wols - okay so what is the problem?  I thought I was using i386 .. I use   wubi to install ubuntu.
+2008-06-24T09:27:00.000Z	danbhfive	grtessman	i suggest that you reinstall with 32bit,  for the very trouble you are having
+2008-06-24T09:27:00.000Z	grtessman	danbhfive	ok but this is all automatic with the wubi isnt it?
+2008-06-24T09:27:00.000Z	danbhfive	grtessman	i dont know
+2008-06-24T09:28:00.000Z	grtessman	danbhfive	I am pretty sure I never selected amd options during install
+2008-06-24T09:28:00.000Z	grtessman	danbhfive	so is it safe for me to try the amd options?
+2008-06-24T09:28:00.000Z	danbhfive	grtessman	I really dont know anything at all about wubi, except what it does generally
+2008-06-24T09:30:00.000Z	danbhfive	grtessman	32bit, long story short, 32bit
+2008-06-24T10:30:00.000Z	danbhfive	grtessman	try uname -m
+2008-06-24T10:31:00.000Z	danbhfive	grtessman	i think so, try installing sun-java6-plugin
+2008-06-24T10:36:00.000Z	grtessman	danbhfive	it's not listed
+2008-06-24T10:43:00.000Z	grtessman	danbhfive	yes it's installing now!!!  You guys rock!

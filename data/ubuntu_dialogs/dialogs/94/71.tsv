@@ -1,0 +1,94 @@
+2007-07-27T16:04:00.000Z	rafaelscj		The second
+2007-07-27T13:20:00.000Z	rafaelscj		Hello, I am on Ubuntu live now, and my ps/2 don't work, Help me
+2007-07-27T13:22:00.000Z	rafaelscj		I am on Ubuntu live now, and my mouse ps/2 don't work, Help me
+2007-07-27T13:22:00.000Z	jrad_	rafaelscj	this has to be configured with /etc/X11/xorg.conf
+2007-07-27T13:27:00.000Z	jrad_	rafaelscj	I just sent you my xorg.conf. In this file, look for "Congfigured Mouse"
+2007-07-27T13:28:00.000Z	rafaelscj	jrad_	...
+2007-07-27T13:29:00.000Z	rafaelscj	jrad_	I how can access the meny by keuboard?
+2007-07-27T13:29:00.000Z	jrad_	rafaelscj	oh, thats a good question ...
+2007-07-27T13:29:00.000Z	rafaelscj	jrad_	Ctrl+F2?
+2007-07-27T13:30:00.000Z	jrad_	rafaelscj	no, this does not work ..
+2007-07-27T13:30:00.000Z	jrad_	rafaelscj	I suggest you look into the help programme (either for Gnome or KDE, look for shortcuts)
+2007-07-27T13:30:00.000Z	rafaelscj	jrad_	I will try
+2007-07-27T13:35:00.000Z	rafaelscj	jrad_	I will conect my usb mouse
+2007-07-27T13:45:00.000Z	jrad_	rafaelscj	I am new to ubuntu, I am using Kubuntu, and there is no programme "gedit" in here.
+2007-07-27T13:40:00.000Z	jrad_	rafaelscj	maybe you should look at http://ubuntuforums.org/search.php?searchid=24421333
+2007-07-27T13:41:00.000Z	rafaelscj	jrad_	I openned the dialog "run command" by pressing alt+f2
+2007-07-27T13:43:00.000Z	rafaelscj	jrad_	I now: gedit /etc/X11/Xorg.conf
+2007-07-27T13:44:00.000Z	jrad_	rafaelscj	I think you are right. Look for a line containing "ps"
+2007-07-27T13:45:00.000Z	rafaelscj	jrad_	because you're usink kde
+2007-07-27T13:46:00.000Z	jrad_	rafaelscj	kate, thats fine, but how do you edit this file without a mouse?
+2007-07-27T13:47:00.000Z	rafaelscj	jrad_	I thing that i can edit it without mouse
+2007-07-27T13:48:00.000Z	jrad_	rafaelscj	OK, so look for a section in this file which defines your mouse settings. Look for "mouse" in this file, do you have it?
+2007-07-27T13:49:00.000Z	rafaelscj	jrad_	protocol is ImPS/2
+2007-07-27T13:50:00.000Z	jrad_	rafaelscj	Ok, thats fine then. Just a moment ...
+2007-07-27T13:51:00.000Z	jrad_	rafaelscj	do you have such elements in the section, which contains "mouse"?
+2007-07-27T13:52:00.000Z	rafaelscj	jrad_	no, I haven't
+2007-07-27T13:52:00.000Z	rafaelscj	jrad_	the section's name is imputdevice
+2007-07-27T13:53:00.000Z	jrad_	rafaelscj	maybe then you should insert this section into your xorg.conf file. I sent you my xorg.conf, did you receive it?
+2007-07-27T13:53:00.000Z	rafaelscj	jrad_	no, i didn't
+2007-07-27T13:53:00.000Z	jrad_	rafaelscj	yes, that is correct. but there are several of these sections!
+2007-07-27T13:54:00.000Z	rafaelscj	jrad_	correct
+2007-07-27T13:54:00.000Z	rafaelscj	jrad_	may i rename it?
+2007-07-27T13:54:00.000Z	jrad_	rafaelscj	hm, I thought that file transfer works with IRC?
+2007-07-27T13:54:00.000Z	rafaelscj	jrad_	yes
+2007-07-27T13:55:00.000Z	jrad_	rafaelscj	I will send you this file again ...
+2007-07-27T13:55:00.000Z	jrad_	rafaelscj	did you get my xorg.conf?
+2007-07-27T13:55:00.000Z	rafaelscj	jrad_	no
+2007-07-27T13:56:00.000Z	jrad_	rafaelscj	sh*t ;)
+2007-07-27T13:57:00.000Z	rafaelscj	jrad_	can you use my FTP server to upload it?
+2007-07-27T13:58:00.000Z	jrad_	rafaelscj	I think I can do that.
+2007-07-27T13:58:00.000Z	jrad_	rafaelscj	I now see a progress bar - my file is currently sent to you!
+2007-07-27T13:58:00.000Z	rafaelscj	jrad_	please wait moment...
+2007-07-27T13:59:00.000Z	jrad_	rafaelscj	no, it does not work ("time out")
+2007-07-27T14:01:00.000Z	jrad_	rafaelscj	but when using ftp, I need to know your PW. But I do not want to know your PW. Or set it back then, afterwards.
+2007-07-27T14:01:00.000Z	rafaelscj	jrad_	Now you can access my ftp server on rafaelscj.no-ip.org
+2007-07-27T14:01:00.000Z	jrad_	rafaelscj	OK
+2007-07-27T14:02:00.000Z	jrad_	rafaelscj	"An error occurred while loading http://rafaelscj.no-ip.org:"
+2007-07-27T14:03:00.000Z	jrad_	rafaelscj	oh, sorry ..
+2007-07-27T14:03:00.000Z	rafaelscj	jrad_	the user is "upload"
+2007-07-27T14:04:00.000Z	jrad_	rafaelscj	"
+2007-07-27T14:05:00.000Z	rafaelscj	jrad_	try again
+2007-07-27T14:05:00.000Z	jrad_	rafaelscj	OK
+2007-07-27T14:07:00.000Z	rafaelscj	jrad_	I openned my firewall, did you connect?
+2007-07-27T14:07:00.000Z	jrad_	rafaelscj	now the prompt, after ftp <your domain> does nothing ...
+2007-07-27T14:08:00.000Z	jrad_	rafaelscj	still blank prompt ...
+2007-07-27T14:09:00.000Z	rafaelscj	jrad_	argh
+2007-07-27T14:09:00.000Z	jrad_	rafaelscj	I too have a web site, but I do not have the user credentials here in this ubuntu installation for uploading my file ...
+2007-07-27T14:09:00.000Z	rafaelscj	jrad_	I know the problem, please wait
+2007-07-27T14:13:00.000Z	rafaelscj	jrad_	Now it will work
+2007-07-27T14:13:00.000Z	jrad_	rafaelscj	I have a prompt asking me for a PW!
+2007-07-27T14:13:00.000Z	rafaelscj	jrad_	password is blank
+2007-07-27T14:13:00.000Z	jrad_	rafaelscj	"Login failed"
+2007-07-27T14:14:00.000Z	rafaelscj	jrad_	user is "upload" password is ""
+2007-07-27T14:14:00.000Z	jrad_	rafaelscj	OK ;)
+2007-07-27T14:14:00.000Z	rafaelscj	jrad_	very good
+2007-07-27T14:14:00.000Z	jrad_	rafaelscj	Done ;)
+2007-07-27T14:15:00.000Z	rafaelscj	jrad_	now i will read...
+2007-07-27T14:15:00.000Z	jrad_	rafaelscj	but this file is not a novel ;)
+2007-07-27T14:17:00.000Z	jrad_	rafaelscj	look for "mouse"
+2007-07-27T14:18:00.000Z	rafaelscj	jrad_	Driver "mouse"?
+2007-07-27T14:18:00.000Z	jrad_	rafaelscj	yes
+2007-07-27T14:18:00.000Z	rafaelscj	jrad_	I think that they're equal
+2007-07-27T14:20:00.000Z	jrad_	rafaelscj	did you search for your mouse model at http://ubuntuforums.org ?
+2007-07-27T14:20:00.000Z	rafaelscj	jrad_	It's a old mouse
+2007-07-27T14:21:00.000Z	rafaelscj	jrad_	So...
+2007-07-27T14:21:00.000Z	jrad_	rafaelscj	just a moment.
+2007-07-27T14:22:00.000Z	jrad_	rafaelscj	maybe you should have a look at http://www.x.org/wiki/FAQ
+2007-07-27T14:22:00.000Z	rafaelscj	jrad_	should I change the protocol to PS/2 or the Device to /dev/mouse?
+2007-07-27T14:23:00.000Z	jrad_	rafaelscj	I know some details about Xorg, but not all ...
+2007-07-27T14:24:00.000Z	jrad_	rafaelscj	so I suggest you have a look at http://www.x.org/wiki/FAQ
+2007-07-27T14:24:00.000Z	rafaelscj	jrad_	okay
+2007-07-27T14:24:00.000Z	jrad_	rafaelscj	I tried to help you ;)
+2007-07-27T14:25:00.000Z	rafaelscj	jrad_	very thanks
+2007-07-27T14:25:00.000Z	jrad_	rafaelscj	your welcome ;)
+2007-07-27T14:26:00.000Z	rafaelscj	jrad_	maybe, after I install, It should work
+2007-07-27T14:31:00.000Z	jrad_	rafaelscj	maybe you should post here the name of your mouse model, and others maybe will help you. But I need to leave this cat room now, sorry ...
+2007-07-27T14:31:00.000Z	jrad_	rafaelscj	but do not forget to delete user "upload" ;)
+2007-07-27T14:32:00.000Z	rafaelscj	jrad_	hehehe
+2007-07-27T14:32:00.000Z	jrad_	rafaelscj	yes ;)
+2007-07-27T14:32:00.000Z	jrad_	rafaelscj	NOT me will try to upload other things, but maybe the other people here :D
+2007-07-27T14:33:00.000Z	rafaelscj	jrad_	:)
+2007-07-27T14:33:00.000Z	jrad_	rafaelscj	But I am leaving now. Good luck with your mouse!
+2007-07-27T14:33:00.000Z	rafaelscj	jrad_	I know if someone connects
+2007-07-27T14:33:00.000Z	jrad_	rafaelscj	yes, thats good!

@@ -1,0 +1,92 @@
+2006-03-08T10:12:00.000Z	cppnewbie		hello again
+2006-03-08T10:12:00.000Z	cppnewbie		can someone tell me how i can exit to the command console alone? tried installing the nvidia/nforce drivers and it tells me i need to exit X
+2006-03-08T10:13:00.000Z	LjL	cppnewbie	try ctrl+alt+backspace, it will restart X
+2006-03-08T10:28:00.000Z	LjL	cppnewbie	then try "sudo /etc/init.d/gdm stop" (or "kdm" if you're not using gdm).  later, "sudo /etc/init.d/gdm start" will restart X
+2006-03-08T10:54:00.000Z	LjL	cppnewbie	if it's not a choice in the Gnome settings, then try "sudo dpkg-reconfigure xserver-xorg", answering with the defaults to every question except the ones about resolution
+2006-03-08T10:57:00.000Z	LjL	cppnewbie	which one?
+2006-03-08T10:57:00.000Z	LjL	cppnewbie	you need to restart X for the new settings to take effect
+2006-03-08T10:57:00.000Z	LjL	cppnewbie	you can do that by pressing ctrl+alt+backspace (careful: doesn't ask!)
+2006-03-08T10:59:00.000Z	LjL	cppnewbie	then do try either that, or tritium_'s suggestion (though i think that if you do that inside X, gdm won't really restart...?)
+2006-03-08T11:20:00.000Z	LjL	cppnewbie	from the repositories.
+2006-03-08T11:34:00.000Z	LjL	cppnewbie	by the way, did you say 1280x1024?
+2006-03-08T11:34:00.000Z	LjL	cppnewbie	do you know pixels aren't square with that resolution?
+2006-03-08T11:35:00.000Z	LjL	cppnewbie	well, just keep in mind that pictures and stuff will be distorted.
+2006-03-08T11:36:00.000Z	LjL	cppnewbie	ok, but you could still consider using 1280x960, or 1400x1050, or, hmm what was that, 1350x1024?
+2006-03-08T11:37:00.000Z	LjL	cppnewbie	i dunno, i just followed the howto for nvidia cards, and it worked fine and easy for me
+2006-03-08T11:41:00.000Z	LjL	cppnewbie	"apt-cache policy packagename"
+2006-03-08T11:42:00.000Z	LjL	cppnewbie	?
+2006-03-08T11:42:00.000Z	LjL	cppnewbie	it's the apt-cache parameter
+2006-03-08T11:49:00.000Z	LjL	cppnewbie	what command did you use to mount it?
+2006-03-08T12:01:00.000Z	LjL	cppnewbie	not besides what's on the ntfs howto page, really...
+2006-03-08T12:04:00.000Z	LjL	cppnewbie	that's supposed to be http:// , with a colon
+2006-03-08T12:05:00.000Z	LjL	cppnewbie	means your friend already added it to /etc/fstab, which is the file that lists all mountable partitions
+2006-03-08T12:06:00.000Z	LjL	cppnewbie	whether he added it correctly is another matter
+2006-03-08T12:06:00.000Z	LjL	cppnewbie	paste your /etc/fstab on the pastebin
+2006-03-08T12:09:00.000Z	LjL	cppnewbie	hm, that looks correct, except that your HD will be only accessible by root
+2006-03-08T12:09:00.000Z	LjL	cppnewbie	what does "sudo mount /media/sda1" tell you?
+2006-03-08T12:11:00.000Z	LjL	cppnewbie	uh, did you use sudo?
+2006-03-08T12:12:00.000Z	LjL	cppnewbie	i don't understand that.
+2006-03-08T12:15:00.000Z	LjL	cppnewbie	the command to *mount* it would be "sudo mount /media/sda1", or you could even try "sudo mount -t ntfs /dev/sda1 /media/sda1" -- the command to *look* into it depends -- you could use "sudo nautilus /media/sda1"
+2006-03-08T12:20:00.000Z	LjL	cppnewbie	that it doesn't exist? not that you do not have permissions for it?
+2006-03-08T12:24:00.000Z	LjL	cppnewbie	try this. unmount first, "sudo umount /media/sda1"
+2006-03-08T12:24:00.000Z	LjL	cppnewbie	then "sudo mount -t ntfs /dev/sda1 /media/sda1 -o ro,user,auto,fmask=0177,dmask=0077,uid=1000"
+2006-03-08T12:26:00.000Z	LjL	cppnewbie	=) well edit your /etc/fstab so that, on the /dev/sda1 line, it has "ro,user,auto,fmask=0177,dmask=0077,uid=1000" just between the "/media/sda1" and the "0 0"
+2006-03-08T12:26:00.000Z	LjL	cppnewbie	that should make it work by default
+2006-03-08T12:55:00.000Z	LjL	cppnewbie	that you don't have root priviledges ;)
+2006-03-10T09:10:00.000Z	LjL	cppnewbie	install qemu
+2006-03-10T09:10:00.000Z	LjL	cppnewbie	just kidding :)
+2006-03-10T09:11:00.000Z	LjL	cppnewbie	i would love to know 'cause that would mean i'd have a 64 bit processor. but i don't :-)
+2006-03-10T09:12:00.000Z	LjL	cppnewbie	no kde in the 64 bit version? that seems strange
+2006-03-10T09:13:00.000Z	LjL	cppnewbie	you should always hit kde by installing "kubuntu-desktop". but really, i don't know anything about the 64 bit version, it just hits me as strange that no kde is there
+2006-03-10T09:20:00.000Z	LjL	cppnewbie	the Kubuntu Breezy release page says they do have an Intel 64-bit build
+2006-03-10T09:23:00.000Z	LjL	cppnewbie	i do see kde amd64 packages in the repositories...
+2006-03-10T09:24:00.000Z	LjL	cppnewbie	i don't know really. but see here for example http://archive.ubuntu.com/ubuntu/pool/main/k/kdepim/
+2006-03-10T09:25:00.000Z	LjL	cppnewbie	close synaptic, and use sudo
+2006-03-10T09:27:00.000Z	LjL	cppnewbie	ps aux
+2006-03-10T09:27:00.000Z	LjL	cppnewbie	nothing sorry. well have you tried closing synaptic? you're looking for anything with "apt" in it, or synaptic
+2006-03-10T09:28:00.000Z	LjL	cppnewbie	try even     ps aux | grep -i "apt\|syn"
+2006-03-10T09:28:00.000Z	LjL	cppnewbie	save keystrokes and do    ps aux | grep -i apt    instead ;)
+2006-03-10T09:29:00.000Z	LjL	cppnewbie	sooooo... you've used sudo, right? :)
+2006-03-10T09:30:00.000Z	LjL	cppnewbie	well, i can assure you that you *must* use sudo anyway with apt-get update
+2006-03-10T09:30:00.000Z	LjL	cppnewbie	so don't even try it without sudo, it will enver work
+2006-03-10T09:30:00.000Z	LjL	cppnewbie	but, perhaps your sources.list is wrong if it complains something's invalid
+2006-03-10T09:30:00.000Z	LjL	cppnewbie	please your error (with sudo) and/or your sources.list please? (on the pastebin)
+2006-03-10T09:31:00.000Z	LjL	cppnewbie	please do paste your /etc/apt/sources.list on the pastebin. i feel something's wrong there
+2006-03-10T09:35:00.000Z	LjL	cppnewbie	ok, "sudo nano /etc/apt/sources.list". if that shows an empty file, you're in trouble ;) (no, not really)
+2006-03-10T09:36:00.000Z	LjL	cppnewbie	it's not too easy (actually, it is, but it's hard when you have to paste multiple screens...)
+2006-03-10T09:36:00.000Z	LjL	cppnewbie	anyway "sudo gedit /etc/apt/sources.list" doesn't work?
+2006-03-10T09:37:00.000Z	LjL	cppnewbie	sure you haven't mistyped something? it seems very strange
+2006-03-10T09:38:00.000Z	LjL	cppnewbie	paste.ubuntu-nl.com
+2006-03-10T09:39:00.000Z	LjL	cppnewbie	or .org, or something
+2006-03-10T09:42:00.000Z	cppnewbie	LjL	http://paste.ubuntu-nl.org/9753
+2006-03-10T09:45:00.000Z	LjL	cppnewbie	hmm... your sources.list isn't "perfect" i think, but it should basically work for all i can see... can anybody else have a look at http://paste.ubuntu-nl.org/9753 and spot any mistake? (i can see breezy-updates is commented out, and it shouldn't, and universe comes before main, which it probably shouldn't)
+2006-03-10T09:46:00.000Z	LjL	cppnewbie	also, perhaps try changing "gr" into some other country code? maybe the gr mirror is broken at the moment
+2006-03-10T15:00:00.000Z	LjL	cppnewbie	what command did you use exactly?
+2006-03-10T15:01:00.000Z	LjL	cppnewbie	do you have permissions on that directory? try   ls -l /media to check
+2006-03-10T15:02:00.000Z	LjL	cppnewbie	does the sdc1 entry say that?
+2006-03-10T15:03:00.000Z	LjL	cppnewbie	where? in the fstab? or your user name with ls?
+2006-03-10T15:03:00.000Z	LjL	cppnewbie	can you read from it using nautilus or whatever it is that you're using?
+2006-03-10T15:04:00.000Z	LjL	cppnewbie	uh, is your username "user" or did you simply change that for pasting?
+2006-03-10T15:05:00.000Z	LjL	cppnewbie	ok, well... are you trying to copy directly into /media/sdc1 or into a subdirectory of it?
+2006-03-10T15:06:00.000Z	LjL	cppnewbie	they might. try "ls /media/sdc1 | grep nameofthesubdirectory"
+2006-03-10T15:06:00.000Z	LjL	cppnewbie	no, try "ls -l /media/sdc1 | grep nameofthesubdirectory"
+2006-03-10T15:07:00.000Z	cppnewbie	LjL	doesnt output a thing
+2006-03-10T15:08:00.000Z	LjL	cppnewbie	is that a subdirectory of a subdirectory then? for example, if it's /media/sdc1/blah/foo, you should type "ls -l /media/sdc1/blah | grep foo"
+2006-03-10T15:11:00.000Z	LjL	cppnewbie	look, just try copying a file *directly* into /media/sdc1, not in a subdir, and see if that works
+2006-03-10T15:12:00.000Z	cppnewbie	LjL	doesnt work either
+2006-03-10T15:15:00.000Z	LjL	cppnewbie	can you copy to it using the shell? (try    cp somefile /media/sdc1/ )
+2006-03-10T15:16:00.000Z	cppnewbie	LjL	im not trying to copy a file but another directory
+2006-03-10T15:17:00.000Z	LjL	cppnewbie	just try with a file first
+2006-03-10T15:19:00.000Z	LjL	cppnewbie	no, not really
+2006-03-10T15:19:00.000Z	LjL	cppnewbie	Gnome and KDE are DE's. X isn't
+2006-03-10T15:20:00.000Z	LjL	cppnewbie	X does the basic part of it all. it draws windows, and it drives your gfx card
+2006-03-10T15:35:00.000Z	LjL	cppnewbie	then it ought to be mounted read/write by default, most of the time
+2006-03-10T15:34:00.000Z	LjL	cppnewbie	not an NTFS partition
+2006-03-10T15:35:00.000Z	LjL	cppnewbie	though only root might have write access
+2006-03-10T15:36:00.000Z	LjL	cppnewbie	hmm i don't think chmod will work with that, i think you should pass "-o rw" or something while mounting
+2006-03-10T15:36:00.000Z	LjL	cppnewbie	i've understood it's not ntfs, but that howto does show some mount parameters that might be of help
+2006-03-10T15:49:00.000Z	cppnewbie	LjL	in that mswindows partition stuff it only says stuff about fat16|32 , ntfs and apple partitions. no fat alone
+2006-03-10T15:51:00.000Z	LjL	cppnewbie	vfat
+2006-03-10T15:55:00.000Z	LjL	cppnewbie	no
+2009-09-20T01:27:00.000Z	LjL	cppnewbie	ctrl+alt+Fx where x is often 7
+2009-09-20T01:27:00.000Z	cppnewbie	LjL	correct phew thanks for saving me

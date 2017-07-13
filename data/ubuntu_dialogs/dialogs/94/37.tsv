@@ -1,0 +1,94 @@
+2009-05-05T14:44:00.000Z	Drikan		so can some one inform me where to change my video driver?
+2009-05-05T14:46:00.000Z	Drikan		sigh
+2009-05-05T14:47:00.000Z	Drikan		hi
+2009-05-05T14:48:00.000Z	Drikan		its not nvidia is a silicon motion chip
+2009-05-05T14:49:00.000Z	Gnea	Drikan	sudo dpkg-reconfigure -phigh xserver-xorg
+2009-05-05T14:49:00.000Z	Drikan	Gnea	just a min ill try that
+2009-05-05T14:52:00.000Z	Drikan	Gnea	ok after that i sapose i have to restart x11?
+2009-05-05T14:53:00.000Z	Gnea	Drikan	yes
+2009-05-05T15:04:00.000Z	Gnea	Drikan	hrm... so it partially fixed it?
+2009-05-05T15:07:00.000Z	Gnea	Drikan	can you lspci | grep VGA?
+2009-05-05T15:09:00.000Z	Drikan	Gnea	00:02.0 VGA compatible controller: Silicon Motion, Inc. SM720 Lynx3DM (rev b1)
+2009-05-05T15:10:00.000Z	Gnea	Drikan	what driver are you using?
+2009-05-05T15:11:00.000Z	Gnea	Drikan	could you please pastebin /var/log/Xorg.0.log?
+2009-05-05T15:19:00.000Z	Drikan	Gnea	http://pastebin.com/f503b386d
+2009-05-05T15:20:00.000Z	Gnea	Drikan	there seems to be some lengthy discussion on it here: http://ubuntuforums.org/showthread.php?t=138110  not sure if it'll help or not
+2009-05-05T15:24:00.000Z	Gnea	Drikan	that's just ... i don't know... what make/model is the laptop?
+2009-05-05T15:27:00.000Z	Gnea	Drikan	did you install the standard ubuntu or something else like xubuntu/kubuntu?
+2009-05-05T15:52:00.000Z	Drikan	Gnea	brb restaring
+2009-05-05T15:58:00.000Z	Gnea	Drikan	you should get a different ubuntu derivative - your system is too slow for standard ubuntu
+2009-05-05T15:59:00.000Z	Drikan	Gnea	well every thing works just the pesky video issue
+2009-05-05T15:59:00.000Z	Gnea	Drikan	have you used older ubuntu versions on it?
+2009-05-05T15:59:00.000Z	Drikan	Gnea	hell its runing better then XP did
+2009-05-05T16:16:00.000Z	Drikan	Gnea	OK well im chatting with you on Ubuntu now and the only thing wrong is this video issue. editing the xorg.conf file didnt seem to do any thing and even in the file is states that its pretty mutch useless.  1 why is it useless and 2 how do i set the pramiters manualy or reconfigure X11 to use the file again?
+2009-05-05T16:18:00.000Z	Gnea	Drikan	you know, that whole bit has become a bit of a mystery that i haven't bothered to figure out yet... usually, i just make minor edits to xorg.conf where needed and restart it anyway
+2009-05-05T16:28:00.000Z	Drikan	Gnea	How do i figure out my exact vershion of XWin?
+2009-05-05T16:29:00.000Z	Gnea	Drikan	it's usually at the top of /var/log/Xorg.0.log
+2009-05-06T08:04:00.000Z	Drikan	Gnea	hey so that bloody laptop you were so kind in helping me with was getting me mad. so i decided that i will just install it on my Desk top
+2009-05-08T09:59:00.000Z	Drikan	Gnea	are you refuring to my DVD issue?
+2009-05-08T09:59:00.000Z	Gnea	Drikan	yeah
+2009-05-08T09:59:00.000Z	Drikan	Gnea	well the issue isnt just with DVD's is any Disk i place in the drive none mount and the system locks up shortly after
+2009-05-08T10:00:00.000Z	Gnea	Drikan	ouch. tried a new cable and/or drive?
+2009-05-08T10:01:00.000Z	Drikan	Gnea	yea i just tryed a new cable a few hrs ago. still the drive works just fine in vista but dose the lock up in linux. I want forum diving and others that have the drive are working fine. but there using the a driver for a slightly newer drive
+2009-05-08T10:03:00.000Z	Gnea	Drikan	trying to remember... is that a laptop or desktop?
+2009-05-08T10:03:00.000Z	Drikan	Gnea	Desktop
+2009-05-08T10:03:00.000Z	Gnea	Drikan	i wonder if it'd make a difference if you changed the settings for it in bios
+2009-05-08T10:04:00.000Z	Drikan	Gnea	how do you meen?
+2009-05-08T10:05:00.000Z	Gnea	Drikan	well, most desktops just 'auto' detect the drives - if you set it as UDMA, specifically, perhaps the problem would go away
+2009-05-08T10:06:00.000Z	Drikan	Gnea	all right ill give that a go
+2009-05-08T10:37:00.000Z	Drikan	Gnea	well there is no option to set it to UDMA thow i wonder is this could be an issue.  i have the drive linux is on connected to an PATA to SATA adapter and the DVDRAM drive is connected to the PATA port on the MB. think that could be an issue?
+2009-05-08T10:38:00.000Z	Gnea	Drikan	might be... and i didn't get a chance to tell you - for cd/dvdrom drives, it would be a PIO mode, not UDMA (for disks)
+2009-05-08T10:38:00.000Z	Gnea	Drikan	sorry about that
+2009-05-08T10:39:00.000Z	Gnea	Drikan	i've never used an adapter like that, so i imagine its effects to be quite wild at times - i'd try it without
+2009-05-08T10:39:00.000Z	Drikan	Gnea	well in any case that is no option to set that and the rom supports pio 1-4
+2009-05-08T10:40:00.000Z	Gnea	Drikan	right. depending on the drive and the speed it matches up with the system, it will probably be 3 or 4
+2009-05-08T10:41:00.000Z	Gnea	Drikan	couldn't hurt
+2009-05-08T10:41:00.000Z	Drikan	Gnea	how do you think that would effect the startup?
+2009-05-08T10:41:00.000Z	Gnea	Drikan	not at all
+2009-05-08T10:41:00.000Z	Drikan	Gnea	ill be back in a few
+2009-05-08T10:58:00.000Z	Drikan	Gnea	should it auto mount?
+2009-05-08T13:27:00.000Z	Drikan	Gnea	well i placed the HDD on the pata cable and its still locking up
+2009-05-09T00:03:00.000Z	Drikan	Gnea	hey man you round got some more info on that issue
+2009-05-09T10:20:00.000Z	Drikan	Gnea	hey man well switching to the pata cable did not fix the issue
+2009-05-09T10:21:00.000Z	Gnea	Drikan	do you have another drive to test it with?
+2009-05-09T10:22:00.000Z	Drikan	Gnea	no i dont but i did post this on the forums http://ubuntuforums.org/showthread.php?t=1153253
+2009-05-09T10:23:00.000Z	Drikan	Gnea	now in the comment standards: Likely used CD-ROM ATAPI-1. is that what its using to controle my dvd-ram drive?
+2009-05-09T10:26:00.000Z	Gnea	Drikan	i'm really not too sure on that... the only dvdram i've ever used was connected externally, and i know that there are issues with using a dvdram drive, specifically
+2009-05-09T10:35:00.000Z	Gnea	Drikan	silly question - have you tried booting with the pci=routeirq option?
+2009-05-09T10:35:00.000Z	Gnea	Drikan	or tried turning off apic?
+2009-05-09T10:36:00.000Z	Gnea	Drikan	okay, i'll respond to your post, it'll be easier to explain that way
+2009-05-09T10:36:00.000Z	Drikan	Gnea	ok thank you verry mutch and ill try it
+2009-05-09T10:50:00.000Z	Gnea	Drikan	refresh :)
+2009-05-09T10:58:00.000Z	Drikan	Gnea	well it hasnt locked up yet
+2009-05-09T10:59:00.000Z	Gnea	Drikan	hrm
+2009-05-09T11:07:00.000Z	Drikan	Gnea	that a NO joy. system still locked up
+2009-05-09T11:22:00.000Z	Drikan	Gnea	your in hi demand tonight. but the pci=routeirq did not fix the issue got any other ideas?
+2009-05-09T13:20:00.000Z	Drikan	Gnea	welcome back fyi pci=routeirq didnt do the trick
+2009-05-09T13:24:00.000Z	Gnea	Drikan	other than futzing around with another drive, i suppose you could fiddle with the M/S/CS settings
+2009-05-09T13:24:00.000Z	Drikan	Gnea	explain
+2009-05-09T13:24:00.000Z	Gnea	Drikan	master/slave/cable select - you said it's a PATA, right?
+2009-05-09T13:25:00.000Z	Drikan	Gnea	yea tryed that
+2009-05-09T13:25:00.000Z	Gnea	Drikan	do you have another computer you could test the drive in?
+2009-05-09T13:26:00.000Z	Drikan	Gnea	no but as ive stated before it works just fine in vista
+2009-05-09T13:27:00.000Z	Gnea	Drikan	what's the make/model of the drive?
+2009-05-09T13:27:00.000Z	Drikan	Gnea	ive done a little digging around the internet for people using the same drive
+2009-05-09T13:27:00.000Z	Gnea	Drikan	and?
+2009-05-09T13:27:00.000Z	Drikan	Gnea	its posed onthe fourm
+2009-05-09T13:27:00.000Z	Drikan	Gnea	and they seem to be wroking fine
+2009-05-09T13:28:00.000Z	Drikan	Gnea	http://ubuntuforums.org/showthread.php?p=7243790#post7243790
+2009-05-09T13:32:00.000Z	Gnea	Drikan	updated the firmware on the dvdram drive?
+2009-05-09T13:33:00.000Z	Drikan	Gnea	no i haven't and not quite sure where to get the firmwear
+2009-05-09T13:33:00.000Z	Gnea	Drikan	if that doesn't work, check to see if the motherboard has any firmware updates
+2009-05-09T13:33:00.000Z	Gnea	Drikan	who made the computer?
+2009-05-09T13:33:00.000Z	Drikan	Gnea	gateway and i allredy have the latest firmwear update for the MB
+2009-05-09T13:34:00.000Z	Gnea	Drikan	they should have it on their site then, if they sold you the dvdram drive
+2009-05-09T13:36:00.000Z	Drikan	Gnea	no noupdates for the drive
+2009-05-09T13:42:00.000Z	Drikan	Gnea	how do i check witch drivers ubuntu is using for my drive?
+2009-05-09T13:45:00.000Z	Gnea	Drikan	looks like you're not alone. i'd call gateway and make them replace it.
+2009-05-09T13:46:00.000Z	Drikan	Gnea	well it works fine in vista
+2009-05-09T13:46:00.000Z	Drikan	Gnea	so i dont thing its an issue with the drive its self becaus it works in vista but ide like to see what ubuntu is using for its drivers where do i check that?
+2009-05-09T13:50:00.000Z	Gnea	Drikan	it'll be in dmesg
+2009-05-09T13:50:00.000Z	Drikan	Gnea	where is that located /etc ?
+2009-05-09T13:53:00.000Z	Gnea	Drikan	the command dmesg
+2009-05-09T13:59:00.000Z	Drikan	Gnea	ok ive pasted the dmesg pretaining to the cd rom i think in the forum http://ubuntuforums.org/showthread.php?p=7244238#post7244238
+2009-05-09T13:59:00.000Z	Drikan	Gnea	so how do i force it to use the drivers for the gsa-h42n?  ive seen peole say that works

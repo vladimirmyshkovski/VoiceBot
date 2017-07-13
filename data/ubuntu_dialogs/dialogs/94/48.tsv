@@ -1,0 +1,94 @@
+2008-11-22T03:53:00.000Z	luigi		hi, i cannot enter in my webserver apache: it told me "You don't have permission to access / on this server."
+2008-11-22T03:54:00.000Z	luigi		hi, i cannot enter in my webserver apache: it told me "You don't have permission to access / on this server."
+2008-11-22T03:55:00.000Z	DeVnOrE	luigi	does the www account have read perissios on the folder?
+2008-11-22T03:56:00.000Z	luigi	DeVnOrE	 how could see if www account have or not this permission?
+2008-11-22T03:57:00.000Z	DeVnOrE	luigi	or whatever dir you got the webbserver pointed at
+2008-11-22T03:58:00.000Z	luigi	DeVnOrE	http://pastebin.ubuntu.com/75430/ this is the result
+2008-11-22T03:59:00.000Z	DeVnOrE	luigi	is it the public thats gets the error?
+2008-11-22T04:00:00.000Z	luigi	DeVnOrE	maybe.. i don't undenstand..
+2008-11-22T04:01:00.000Z	DeVnOrE	luigi	sorry i can't check against my server cus it's down atm.
+2008-11-22T04:01:00.000Z	luigi	DeVnOrE	maybe.. i don't understand where is the problem... in the dir Public or in /var/www
+2008-11-22T04:02:00.000Z	DeVnOrE	luigi	you'll have to check the errorlog
+2008-11-22T04:02:00.000Z	luigi	DeVnOrE	where i could find the log??
+2008-11-22T04:03:00.000Z	DeVnOrE	luigi	/var/log
+2008-11-22T04:04:00.000Z	luigi	DeVnOrE	found!! this is the log!  http://pastebin.ubuntu.com/75431/
+2008-11-22T04:04:00.000Z	luigi	DeVnOrE	i found also error.log.1
+2008-11-22T04:05:00.000Z	luigi	DeVnOrE	this is the error.log.1:  http://pastebin.ubuntu.com/75433/
+2008-11-22T04:06:00.000Z	DeVnOrE	luigi	do you have the options FollowSymLinks in your apache config under the default site?
+2008-11-22T04:06:00.000Z	luigi	DeVnOrE	i think yes!! re-ceck
+2008-11-22T04:07:00.000Z	luigi	DeVnOrE	where is the .conf???
+2008-11-22T04:08:00.000Z	DeVnOrE	luigi	and what permissions do you have on the dir /home/luigi/wwwebserver
+2008-11-22T04:09:00.000Z	DeVnOrE	luigi	/etc/apache/sites-available
+2008-11-22T04:10:00.000Z	luigi	DeVnOrE	permission on /home/luigi/wwwebserver  http://pastebin.ubuntu.com/75435/
+2008-11-22T04:12:00.000Z	luigi	DeVnOrE	and this is my conf:  http://pastebin.ubuntu.com/75436/
+2008-11-22T04:12:00.000Z	DeVnOrE	luigi	i think you need to set permissions so that www account can read the dir
+2008-11-22T04:12:00.000Z	luigi	DeVnOrE	how could i set this permission?
+2008-11-22T04:14:00.000Z	luigi	DeVnOrE	i've done chmod -R a+r /home/luigi/wwwserver, but this did'nt work yet!
+2008-11-22T04:16:00.000Z	luigi	DeVnOrE	i'm using "http:localhost"
+2008-11-22T04:16:00.000Z	DeVnOrE	luigi	is there a index.html in /home/lubic/igi/wwwsservevr
+2008-11-22T04:17:00.000Z	luigi	DeVnOrE	i didn't see any index.html...
+2008-11-22T04:17:00.000Z	luigi	DeVnOrE	index.html is on /var/www
+2008-11-22T04:18:00.000Z	luigi	DeVnOrE	this is my IP: 217.133.74.142 if you want to try to open it....
+2008-11-22T04:20:00.000Z	luigi	DeVnOrE	didn't wonk anyway on LAN..
+2008-11-22T04:21:00.000Z	DeVnOrE	luigi	i think i
+2008-11-22T04:21:00.000Z	DeVnOrE	luigi	i think i'v located the prob
+2008-11-22T04:21:00.000Z	luigi	DeVnOrE	let's hope!!!!
+2008-11-22T04:22:00.000Z	luigi	DeVnOrE	yes!
+2008-11-22T04:23:00.000Z	DeVnOrE	luigi	http://pastebin.ubuntu.com/75445/
+2008-11-22T04:23:00.000Z	luigi	DeVnOrE	could i delete my conf and paste your pastebin?
+2008-11-22T04:24:00.000Z	DeVnOrE	luigi	it's only the <Document that i have changed
+2008-11-22T04:25:00.000Z	DeVnOrE	luigi	then restart the server sudo /etc/init.d/apache restart
+2008-11-22T04:26:00.000Z	luigi	DeVnOrE	just copy the line 11 or all the file?
+2008-11-22T04:26:00.000Z	DeVnOrE	luigi	sorry should be  sudo /etc/init.d/apache2 restart
+2008-11-22T04:26:00.000Z	DeVnOrE	luigi	only line 11
+2008-11-22T04:26:00.000Z	luigi	DeVnOrE	done..
+2008-11-22T04:28:00.000Z	DeVnOrE	luigi	luigi do "touch /home/luigi/wwwserver/index.html
+2008-11-22T04:30:00.000Z	luigi	DeVnOrE	maybe the restarting didn't work: http://pastebin.ubuntu.com/75451/
+2008-11-22T04:31:00.000Z	DeVnOrE	luigi	yes it worked that's only a warning
+2008-11-22T04:32:00.000Z	luigi	DeVnOrE	touch did'nt work...
+2008-11-22T04:33:00.000Z	luigi	DeVnOrE	impossible to touch /home/luigi/wwwebserver/index.html: any file o dir.
+2008-11-22T04:33:00.000Z	DeVnOrE	luigi	wwwserver is misspelled
+2008-11-22T04:35:00.000Z	luigi	DeVnOrE	ok... done!
+2008-11-22T04:36:00.000Z	luigi	DeVnOrE	shit! FORBIDDEN again!
+2008-11-22T04:37:00.000Z	luigi	DeVnOrE	 FORBIDDEN again!
+2008-11-22T04:39:00.000Z	luigi	DeVnOrE	ok. but how?
+2008-11-22T04:39:00.000Z	DeVnOrE	luigi	i'll post a conf for you in about 3min
+2008-11-22T04:40:00.000Z	luigi	DeVnOrE	thanks a lot! i'm waiting for your post!
+2008-11-22T04:45:00.000Z	DeVnOrE	luigi	my server is fubar... just a couple of mins more
+2008-11-22T04:46:00.000Z	luigi	DeVnOrE	ok, don't you worry!
+2008-11-22T04:54:00.000Z	DeVnOrE	luigi	http://pastebin.ubuntu.com/75460/
+2008-11-22T04:54:00.000Z	luigi	DeVnOrE	ok, i'll see the pastebin!
+2008-11-22T04:55:00.000Z	DeVnOrE	luigi	check that the paths are right
+2008-11-22T04:56:00.000Z	DeVnOrE	luigi	and do "chown -R luigi:www /home/luigi/wwwserver"
+2008-11-22T04:56:00.000Z	luigi	DeVnOrE	can i just copy and paste your conf?
+2008-11-22T04:56:00.000Z	luigi	DeVnOrE	or i had to check each line?
+2008-11-22T04:57:00.000Z	DeVnOrE	luigi	nah
+2008-11-22T04:59:00.000Z	luigi	DeVnOrE	chown: group not valid: 'luigi:www'
+2008-11-22T05:01:00.000Z	luigi	DeVnOrE	chown: group not valid: 'luigi:www'
+2008-11-22T05:03:00.000Z	DeVnOrE	luigi	luigi:www-data
+2008-11-22T05:03:00.000Z	luigi	DeVnOrE	maybe with sudo??
+2008-11-22T05:07:00.000Z	luigi	DeVnOrE	maybe!!! see this: http://pastebin.ubuntu.com/75463/
+2008-11-22T05:08:00.000Z	DeVnOrE	luigi	something is wrong with the config
+2008-11-22T05:09:00.000Z	luigi	DeVnOrE	ok... just << on ehte first line.. changed!!!
+2008-11-22T05:10:00.000Z	DeVnOrE	luigi	check if it
+2008-11-22T05:11:00.000Z	luigi	DeVnOrE	ok... but the problem isn't solved: FOBIDDEN you don't have permission....
+2008-11-22T05:13:00.000Z	luigi	DeVnOrE	you could see: http://217.133.74.142
+2008-11-22T05:13:00.000Z	luigi	DeVnOrE	could i restart the sistem?? maybe....
+2008-11-22T05:29:00.000Z	luigi	DeVnOrE	nothing! webserver don't want to work!
+2008-11-22T05:30:00.000Z	DeVnOrE	luigi	what does the errorlog say?
+2008-11-22T05:31:00.000Z	DeVnOrE	luigi	just pm me the 3 last lines
+2008-11-22T05:32:00.000Z	luigi	DeVnOrE	[Sat Nov 22 01:30:11 2008] [error] [client 127.0.0.1] (13)Permission denied: access to / denied
+2008-11-22T05:32:00.000Z	luigi	DeVnOrE	[Sat Nov 22 01:30:10 2008] [error] [client 127.0.0.1] (13)Permission denied: access to /favicon.ico denied
+2008-11-22T05:34:00.000Z	luigi	DeVnOrE	drwxr-xr-x  3 luigi www-data  4096 2008-11-22 00:29 wwwebserver
+2008-11-22T05:36:00.000Z	luigi	DeVnOrE	i forgot to tell you that i'm on 64bit... it was amportant???
+2008-11-22T05:36:00.000Z	luigi	DeVnOrE	maybe all the problem are on 64 bit???
+2008-11-22T05:36:00.000Z	DeVnOrE	luigi	nah
+2008-11-22T05:37:00.000Z	luigi	DeVnOrE	try to delete apache and purge, and reinstall?
+2008-11-22T05:37:00.000Z	luigi	DeVnOrE	maybe apache get crazy?
+2008-11-22T05:37:00.000Z	DeVnOrE	luigi	yes and stick to the /var/www ;)
+2008-11-22T05:39:00.000Z	luigi	DeVnOrE	have i to delete the .conf after purge apache?
+2008-11-22T05:40:00.000Z	DeVnOrE	luigi	do that
+2008-11-22T05:41:00.000Z	luigi	DeVnOrE	apt-get purge apache is correct?
+2008-11-22T06:07:00.000Z	luigi	DeVnOrE	ok.. it work!
+2008-11-22T06:08:00.000Z	luigi	DeVnOrE	ops.. it works! my english it's so shameful!!!! worse tha my knowledge on linux!
+2008-11-22T06:42:00.000Z	luigi	DeVnOrE	are you here??

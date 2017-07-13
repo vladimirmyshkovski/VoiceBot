@@ -1,0 +1,92 @@
+2009-05-26T08:29:00.000Z	BeatlesFan		hi all
+2009-05-26T08:30:00.000Z	BeatlesFan		how accurate is the Ubuntu compatible hardware list for video cards?
+2009-05-26T08:32:00.000Z	BeatlesFan		I have onboard video right now but thinking about getting an Nvidia geforce 6200 256MB card
+2009-05-26T08:33:00.000Z	BeatlesFan		I can get it $40 w/ free shipping
+2009-05-26T08:33:00.000Z	BeatlesFan		the list says it's compatible
+2009-05-26T08:33:00.000Z	coz_	BeatlesFan	 that wouldnt be a bad choice actually ... but the only issue will be if nvidia supports that card next year
+2009-05-26T08:33:00.000Z	BeatlesFan	coz_	good point, what if they don't?
+2009-05-26T08:34:00.000Z	coz_	BeatlesFan	 its likely  it wont be
+2009-05-26T08:34:00.000Z	BeatlesFan	coz_	so what will happen, it will suddenly stop working?
+2009-05-26T08:34:00.000Z	coz_	BeatlesFan	no more kernel modules for uptodate kernels
+2009-05-26T08:35:00.000Z	coz_	BeatlesFan	 so it just wont install
+2009-05-26T08:35:00.000Z	coz_	BeatlesFan	I have a 6600LE here right now and I am a bit concerned about ubuntu 10.10
+2009-05-26T08:36:00.000Z	BeatlesFan	coz_	so you're saying that as Ubuntu evolves support for older devices ends?
+2009-05-26T08:36:00.000Z	coz_	BeatlesFan	 not by ubuntu but by nvidia themselves
+2009-05-26T08:36:00.000Z	coz_	BeatlesFan	 no kernel modules will be available
+2009-05-26T08:36:00.000Z	BeatlesFan	coz_	no kernel modules for the newest version of Ubuntu?
+2009-05-26T08:37:00.000Z	coz_	BeatlesFan	 so if you can find for example a 7xxx series card ... you will be better off
+2009-05-26T08:37:00.000Z	coz_	BeatlesFan	 nvidia will not have dirvers compatible for up to date kernels such as those in ubuntu 10.10
+2009-05-26T08:38:00.000Z	coz_	BeatlesFan	the 6xxx series of cards is next in line for discontinued support from nvidia
+2009-05-26T08:38:00.000Z	BeatlesFan	coz_	won't the recent kernels be able to handle previous drivers?
+2009-05-26T08:38:00.000Z	coz_	BeatlesFan	 well no nvidia has to create the driver to be compatible with the current kernels
+2009-05-26T08:39:00.000Z	BeatlesFan	coz_	ahh.. I thought nvidia creates windows drivers and the open-source community creates the linux/ubuntu drivers?
+2009-05-26T08:40:00.000Z	coz_	BeatlesFan	 oh no  not yet  although the neuveau project...not sure how that is spelled... is backwards engineering the nvidia drivers
+2009-05-26T08:40:00.000Z	coz_	BeatlesFan	 but they are far from ready
+2009-05-26T08:40:00.000Z	coz_	BeatlesFan	 2d is fine but nothing even close for 3d acceleration
+2009-05-26T08:40:00.000Z	BeatlesFan	coz_	so in the meantime, we're at the mercy of the vendors?
+2009-05-26T08:40:00.000Z	coz_	BeatlesFan	 yep
+2009-05-26T08:41:00.000Z	BeatlesFan	coz_	so what would you recommend for a video card that will last for a few years?
+2009-05-26T08:41:00.000Z	coz_	BeatlesFan	 and it's my guess  that it wont be for another 3 years before neuveau is ready
+2009-05-26T08:41:00.000Z	coz_	BeatlesFan	 is this an agp slot?
+2009-05-26T08:42:00.000Z	coz_	BeatlesFan	ok the pci slot is going to be useless for things like compiz    but the agp slot will allow up to the 76xx series of nvidia cards  after that they go pcie
+2009-05-26T08:42:00.000Z	coz_	BeatlesFan	  then of course there is ati  but I am completely a doof with ati so dont ask me  about them :)  but they do have opensource drivers
+2009-05-26T08:43:00.000Z	coz_	BeatlesFan	 if you are planning to use compiz dont even think about installing a video card via PCI
+2009-05-26T08:43:00.000Z	BeatlesFan	coz_	thanks
+2009-05-26T08:43:00.000Z	BeatlesFan	coz_	so it's AGP
+2009-05-26T08:43:00.000Z	coz_	BeatlesFan	 yep AGP  for sure
+2009-05-26T08:43:00.000Z	coz_	BeatlesFan	and if possible a 7600  agp nvidia card
+2009-05-26T08:45:00.000Z	BeatlesFan	coz_	we're talking over $100
+2009-05-26T08:46:00.000Z	coz_	BeatlesFan	 some of them are yes  just keep looking on ebay  if you can aford one with 512 megs of memory get it if not  get the 256
+2009-05-26T08:46:00.000Z	coz_	BeatlesFan	 as I said I have a 6600 LE here
+2009-05-26T08:46:00.000Z	coz_	BeatlesFan	 that's fine also
+2009-05-26T08:47:00.000Z	coz_	BeatlesFan	 and will probably have support for another 3d or 4 years
+2009-05-26T08:47:00.000Z	BeatlesFan	coz_	cool.. thanks
+2009-05-26T08:51:00.000Z	BeatlesFan	coz_	what does it mean when it says 3d requires nvidia-glx, use restricted-manager?
+2009-05-26T08:52:00.000Z	coz_	BeatlesFan	 you want to install the nvidia driver via   system/administratioin/hardware driver
+2009-05-26T08:52:00.000Z	BeatlesFan	coz_	ok, thanks
+2009-05-26T09:02:00.000Z	BeatlesFan	coz_	i can get the geforce 7300GT 512MB AGP for $90 plus shipping..
+2009-05-26T09:02:00.000Z	coz_	BeatlesFan	 thats not reall bad a price  but   not the best  but certainly ok
+2009-05-26T09:07:00.000Z	BeatlesFan	coz_	would you get the 7300 or 7600 ?
+2009-05-26T09:07:00.000Z	coz_	BeatlesFan	 if not too expensive the  7600
+2009-05-26T09:14:00.000Z	BeatlesFan	coz_	order done... total $107 w/ shipping
+2009-05-26T09:14:00.000Z	coz_	BeatlesFan	 not bad  does it have  a DOA?
+2009-05-26T09:14:00.000Z	BeatlesFan	coz_	2 - 3 business days from tigerdirect
+2009-05-26T09:14:00.000Z	coz_	BeatlesFan	what I mean with that is does it guarantee not dead on arrival and a return option?
+2009-05-26T09:15:00.000Z	coz_	BeatlesFan	  oh cook tiger direct  that s fine
+2009-05-26T09:15:00.000Z	BeatlesFan	coz_	right.. they have good rep...
+2009-05-26T09:16:00.000Z	coz_	BeatlesFan	 cool   so when that arrives  if you already have an nvidia driver install uninstall the driver then reinstall via   system/administration/hardware drivers
+2009-05-26T09:17:00.000Z	BeatlesFan	coz_	and if I don't have one already installed.. just install the card, plug in the monitor, turn on the box ?
+2009-05-26T09:18:00.000Z	coz_	BeatlesFan	 yes but then go to system/administration/hardware drivers and install the driver form there
+2009-05-26T09:18:00.000Z	BeatlesFan	coz_	easy enough
+2009-05-26T09:18:00.000Z	BeatlesFan	coz_	thanks
+2009-05-26T09:18:00.000Z	coz_	BeatlesFan	 or just wait until the system boots and then come here or #compiz if you are going to run compiz
+2009-05-26T09:18:00.000Z	coz_	BeatlesFan	  no problem  good luck on that :)
+2009-05-26T09:18:00.000Z	BeatlesFan	coz_	thanks
+2009-05-26T09:18:00.000Z	coz_	BeatlesFan	 :)
+2009-05-26T09:19:00.000Z	BeatlesFan	coz_	I totally left Windows XP Pro for Ubuntu yesterday
+2009-05-26T09:19:00.000Z	BeatlesFan	coz_	totally switched out
+2009-05-26T09:19:00.000Z	coz_	BeatlesFan	 well then you are lucky  I still use xp for several applictaioins but if you dont need windows the better :)
+2009-05-26T09:20:00.000Z	coz_	BeatlesFan	 you will find...as you become more accustomed to linux ...the commands.. and the possible things that you can do with it   you wont miss window much
+2009-05-26T09:20:00.000Z	BeatlesFan	coz_	I already have some exposure to Unix SUnOs but it's been about 10 years
+2009-05-26T09:21:00.000Z	coz_	BeatlesFan	 ah ok then you are ahead of the game :)
+2009-05-26T09:21:00.000Z	BeatlesFan	coz_	I have some experience navigating the file system, running basic commands... even using gedit, and grep, stuff like that
+2009-05-26T09:22:00.000Z	coz_	BeatlesFan	 very cool:)   then this will become easier faster for you :)
+2009-05-26T09:22:00.000Z	BeatlesFan	coz_	I think at one point I was using "make" and stuff like that
+2009-05-26T09:23:00.000Z	coz_	BeatlesFan	  ok  I am going to break here,,,,   be back maybe later although it is 12.30am here   and let me know when you get that card  I am generall y here   #compiz  or #cairo-dock
+2009-05-26T09:23:00.000Z	BeatlesFan	coz_	thanks !
+2009-05-29T06:40:00.000Z	coz_	BeatlesFan	 ok cool
+2009-05-29T06:40:00.000Z	coz_	BeatlesFan	what happened to the 7600?? :)
+2009-05-29T06:41:00.000Z	coz_	BeatlesFan	oh  darn
+2009-05-29T06:41:00.000Z	BeatlesFan	coz_	yeah, I have to replace my MB
+2009-05-29T06:41:00.000Z	coz_	BeatlesFan	 well as I said before that series  of card should be supported for at least another year and a half
+2009-05-29T06:41:00.000Z	BeatlesFan	coz_	I had to return the 7600 back to tigerdirect
+2009-05-29T06:41:00.000Z	coz_	BeatlesFan	oh man it wasnt agp?
+2009-05-29T06:42:00.000Z	BeatlesFan	coz_	becuase my mb spec says there's an AGP but when you open the case and actually look at the board - no AGP slot!!
+2009-05-29T06:42:00.000Z	coz_	BeatlesFan	 oh no what slot is it?
+2009-05-29T06:42:00.000Z	BeatlesFan	coz_	it's empty
+2009-05-29T06:42:00.000Z	BeatlesFan	coz_	I have 3 PCI and thats it
+2009-05-29T06:42:00.000Z	coz_	BeatlesFan	 oh man  well with the 512 megs it may be just fine
+2009-05-29T06:43:00.000Z	coz_	BeatlesFan	 you could order another motherboard  with agp   they are cheap one the will house your cpu
+2009-05-29T06:43:00.000Z	BeatlesFan	coz_	right I know
+2009-05-29T06:44:00.000Z	coz_	BeatlesFan	 when you install it let me know I want to know how it performs for you :)
+2009-05-29T06:44:00.000Z	BeatlesFan	coz_	ok...

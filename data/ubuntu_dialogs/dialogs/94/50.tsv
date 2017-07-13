@@ -1,0 +1,94 @@
+2008-08-22T00:28:00.000Z	balz		how do i check who owns a directory with the command line?
+2008-08-22T00:28:00.000Z	unop	balz	ls -ld directory
+2008-08-22T00:29:00.000Z	unop	balz	or more accurately.   stat -c '%G' /path/to/directory
+2008-08-22T00:30:00.000Z	balz	unop	 thanks
+2008-08-22T00:32:00.000Z	unop	balz	what is the path of this directory?
+2008-08-22T00:32:00.000Z	unop	balz	which group owns this directory?
+2008-08-22T00:32:00.000Z	unop	balz	group?
+2008-08-22T00:33:00.000Z	balz	unop	 i'm guessing mythtv?  I'm getting this for all subdirs:  drwxrws--- (number) mythtv mythtv (number 2008-08-20 20:28
+2008-08-22T00:33:00.000Z	unop	balz	add your user to the mythtv group then
+2008-08-22T00:34:00.000Z	balz	unop	 how do I do that via command line?
+2008-08-22T00:34:00.000Z	balz	unop	 i'm sshed in
+2008-08-22T00:34:00.000Z	unop	balz	sudo adduser $USER mythtv
+2008-08-22T00:35:00.000Z	balz	unop	it says that my user is already a member of "mythtv"
+2008-08-22T00:36:00.000Z	unop	balz	what does   groups  return?
+2008-08-22T00:38:00.000Z	balz	unop	 groups returns:  louis adm dialout cdrom floppy audio dip video plugdev fuse mythtv admin lpadmin
+2008-08-22T00:38:00.000Z	unop	balz	what exactly happens when you try and write to the directory then?
+2008-08-22T00:39:00.000Z	balz	unop	 well i'm trying to get mt-daapd to scan the directory recursively and it keeps failing so i ran mt-daapd -f and it gave me opendir:  Permission denied for each subdirectory
+2008-08-22T00:40:00.000Z	unop	balz	does the group mythtv have read/write permissions on each of the subdirs?
+2008-08-22T00:40:00.000Z	balz	unop	 how do i check? forgive my n00bness
+2008-08-22T00:42:00.000Z	unop	balz	ls -ld ,...
+2008-08-22T00:43:00.000Z	balz	unop	 i tried on one of the subdirectories and got this:  drwxrws--- 8 mythtv mythtv 48 2008-08-20 20:28 /var/lib/mythtv/music/Zebrahead
+2008-08-22T00:43:00.000Z	unop	balz	just to make sure -- log out and log back in
+2008-08-22T00:45:00.000Z	balz	unop	 ok logged back in
+2008-08-22T00:46:00.000Z	balz	unop	 i'm sshed in, so i just need to close that session and start a new one, right?  that counts as log out/in?
+2008-08-22T00:47:00.000Z	unop	balz	i suppose .. try creating a file in one of those dirs.
+2008-08-22T00:48:00.000Z	unop	balz	that gives everyone in the world write access - which is unnecessary
+2008-08-22T00:49:00.000Z	balz	unop	 is there a way to do that just for user "louis" ?
+2008-08-22T00:49:00.000Z	balz	unop	 actually i just tried making a directory and it worked...
+2008-08-22T00:50:00.000Z	unop	balz	i don't see why your command fails
+2008-08-22T00:50:00.000Z	balz	unop	 yeah it's weird
+2008-08-22T00:50:00.000Z	unop	balz	is that user a member of the mythtv group ?
+2008-08-22T00:50:00.000Z	balz	unop	 i believe so
+2008-08-22T00:50:00.000Z	balz	unop	 how do i check?
+2008-08-22T00:50:00.000Z	unop	balz	groups username  i think
+2008-08-22T00:51:00.000Z	unop	balz	log on as that user and try creating a file in one of those dirs
+2008-08-22T00:51:00.000Z	balz	unop	 i did. it works
+2008-08-22T00:52:00.000Z	unop	balz	hmm, very strange.  did you recently add this user to the mythtv group .. or was it setup that way?
+2008-08-22T00:53:00.000Z	unop	balz	actually .. what is this command, and how are you invoking it?
+2008-08-22T00:54:00.000Z	balz	unop	 the mt-daapd -f command?  I got it from a forum because i was having problems with getting a music share up.  it seems as though ti gives real time output and error messages
+2008-08-22T00:55:00.000Z	unop	balz	so how exactly are you calling this command and what kind of error messages do you get?  use the pastebin and show us an excerpt .. maybe the problem is beyond permissions?
+2008-08-22T00:56:00.000Z	balz	unop	 before I do.  there's a runas parameter in the config file whose value is mt-daapd ... i don't have such a user, coudl that be the problem?
+2008-08-22T00:56:00.000Z	unop	balz	it sure could .. but i can't speak for how mythtv is designed
+2008-08-22T00:57:00.000Z	unop	balz	you could change that to reflect an actual user on the system
+2008-08-22T00:57:00.000Z	balz	unop	 let me try that, then i actually have to run.  thanks so much for the help though
+2008-08-22T00:57:00.000Z	balz	unop	 yeah that's what i'm going to try real quick
+2008-08-24T00:57:00.000Z	unop	balz	you should tell us how it fails
+2008-08-24T00:57:00.000Z	balz	unop	 oh right ... lol
+2008-08-24T00:58:00.000Z	balz	unop	 louis@server:~$ wget -q http://keyserver.ubuntu.com11371/pks/lookup?op=get&search=0x590BCD51DfC2AFC1 | sudo apt-key add -
+2008-08-24T00:59:00.000Z	unop	balz	does that look like a valid URL to you?
+2008-08-24T00:59:00.000Z	balz	unop	 i copied it from a website... what am i missing (i know it's obvious...)
+2008-08-24T01:00:00.000Z	unop	balz	no ..  http://keyserver.ubuntu.com11371  .. does not appear to be a valid domain
+2008-08-24T01:00:00.000Z	unop	balz	what is the key that apt is complaining about .. it might be possible to get it from anothe rkey server
+2008-08-24T01:01:00.000Z	balz	unop	 it's the badgerports key
+2008-08-24T01:01:00.000Z	balz	unop	 when i click on the lin, i get to the gpg block though.
+2008-08-24T01:01:00.000Z	unop	balz	can you pastebin the output of  apt-get update
+2008-08-24T01:03:00.000Z	balz	unop	 my pastebin post is tripping their spam filters (wtf?)
+2008-08-24T01:03:00.000Z	unop	balz	which pastebin?
+2008-08-24T01:05:00.000Z	balz	unop	 got it!  okay
+2008-08-24T01:05:00.000Z	balz	unop	 http://paste.ubuntu.com/39990/
+2008-08-24T01:08:00.000Z	unop	balz	try this.   key=590BCD51DFC2AFC1; gpg –recv-keys "$key"; gpg –export –armor "$key" | sudo apt-key add -
+2008-08-24T01:12:00.000Z	balz	unop	 i'm getting usage;  gpg [options] [filename] and gpg: no valid OpenPGP data found
+2008-08-24T01:14:00.000Z	unop	balz	maybe this then.   key=590BCD51DFC2AFC1; gpg –keyserver keyserver.ubuntu.com –recv-keys "$key";  gpg –export –armor "$key" | sudo apt-key add -
+2008-08-24T01:14:00.000Z	balz	unop	 same output
+2008-08-24T01:14:00.000Z	unop	balz	pastebin the output of this.  gpg –keyserver keyserver.ubuntu.com –recv-keys 590BCD51DFC2AFC1
+2008-08-24T01:16:00.000Z	balz	unop	 no output
+2008-08-24T01:20:00.000Z	balz	unop	 did you get that last bit?  i didn't get an output from that command
+2008-08-24T01:20:00.000Z	unop	balz	yea, funny it ain't working.  what's the command you used initially?
+2008-08-24T01:21:00.000Z	unop	balz	ok, what's the url tho?
+2008-08-24T01:22:00.000Z	balz	unop	sorry:  http://keyserver.ubuntu.com:11371/pks/lookup?op=get&search=0x590BCD51DFC2AFC1
+2008-08-24T01:25:00.000Z	balz	unop	 I just tried t his too:  sudo wget -q "http://keyserver.ubuntu.com:11371/pks/lookup?op=get&search=0x590BCD51DFC2AFC1" -O- | apt-key add -
+2008-08-24T01:27:00.000Z	unop	balz	ok, gimme a sec.
+2008-08-24T01:30:00.000Z	unop	balz	gpg --keyserver keyserver.ubuntu.com --recv-keys 590BCD51DFC2AFC1;  gpg --export -armor 590BCD51DFC2AFC1 | sudo apt-key add -
+2008-08-24T01:31:00.000Z	balz	unop	 scratch that
+2008-08-24T01:32:00.000Z	balz	unop	 i copied the "balz, " part of your message... i'm jsuch a dipstick sometimes.  looks like it worked. thanks!
+2008-08-24T01:32:00.000Z	balz	unop	 do you know what went wrong, just out of curiosity/
+2008-08-24T01:32:00.000Z	unop	balz	try apt-get update again .. see if you get the warning at the end
+2008-08-24T01:32:00.000Z	balz	unop	 no warning
+2008-08-24T01:32:00.000Z	unop	balz	all is good then.
+2008-09-09T20:54:00.000Z	unop	balz	as long as you can ping the other host.  shh user@hostname
+2008-09-09T20:55:00.000Z	balz	unop	 don't i need to define the IP address?  i'm on a separate network
+2008-09-09T20:55:00.000Z	unop	balz	depends .. if the hostname resolves to the correct IP address, you can use the hostname
+2008-09-09T20:56:00.000Z	unop	balz	is your router setup to forward ssh traffic to your machine?
+2008-09-09T20:56:00.000Z	balz	unop	yes i opened port 22 for the specific machine's hostname
+2008-09-09T20:56:00.000Z	unop	balz	then you should just be able to ssh to the router's IP address
+2008-09-09T20:57:00.000Z	unop	balz	right, the router is setup to forward traffic with a destination port of 22 ..
+2008-09-09T20:58:00.000Z	balz	unop	 riiight... i thought you might have to specify external IP *and* hostname
+2008-09-09T20:58:00.000Z	balz	unop	 what if i there are two different computers that i might want to ssh into?
+2008-09-09T20:58:00.000Z	unop	balz	you'd have to setup the router to forward at two different ports
+2008-09-09T20:59:00.000Z	unop	balz	then you connect to the router at the port you want
+2008-09-09T21:00:00.000Z	unop	balz	as long as the first machine knows of 'hostname'
+2008-11-03T09:23:00.000Z	unop	balz	hema, don't suggest that (and it's wrong)
+2008-11-03T09:23:00.000Z	balz	unop	 oh is it chmod 777 /path ?
+2008-11-03T09:24:00.000Z	unop	balz	yes, but there's a better way of getting write access to the directory without relaxing the permissions so much
+2008-11-03T09:24:00.000Z	balz	unop	 gotcha. yeah i havent messed with permissions in a while lol

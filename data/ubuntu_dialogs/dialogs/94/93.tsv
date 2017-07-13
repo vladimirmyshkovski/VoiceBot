@@ -1,0 +1,94 @@
+2006-08-29T16:28:00.000Z	oscuro		guys, I have a big problem, I don't know why, but lately this machine isn't connecting to the internet.
+2006-08-29T16:29:00.000Z	oscuro		I thought first it was the isp, but then I can see my neighbour, who I share connection with.
+2006-08-29T16:29:00.000Z	oscuro		and he has connection.
+2006-08-29T16:29:00.000Z	oscuro		I look at the net configuration, and everything seems to be ok.
+2006-08-29T16:31:00.000Z	nozorro	oscuro	how exactly do you share the connection? dsl rouer?
+2006-08-29T16:31:00.000Z	oscuro	nozorro	yes :(
+2006-08-29T16:31:00.000Z	oscuro		I don't know what's goin on.
+2006-08-29T16:31:00.000Z	oscuro		I'm sure it's something with the linux, since for that downtime.
+2006-08-29T16:31:00.000Z	nozorro	oscuro	now can you ping the router from your machine?
+2006-08-29T16:31:00.000Z	oscuro		the neighbour uses the internet.
+2006-08-29T16:32:00.000Z	oscuro		nozorro....I don't know how to do that.
+2006-08-29T16:32:00.000Z	oscuro		I'm learning.
+2006-08-29T16:32:00.000Z	oscuro		it has nothing to do with the the bandwidht full.
+2006-08-29T16:33:00.000Z	nozorro	oscuro	open System | Administration | Network Tools please
+2006-08-29T16:33:00.000Z	oscuro		because I umpluuge
+2006-08-29T16:33:00.000Z	oscuro		ok
+2006-08-29T16:33:00.000Z	nozorro	oscuro	now go to he 'ping tab'
+2006-08-29T16:34:00.000Z	oscuro		wait I min.
+2006-08-29T16:34:00.000Z	oscuro		xeng... nothing weird as I remember
+2006-08-29T16:35:00.000Z	oscuro	nozorro	I don't have "network tools"
+2006-08-29T16:35:00.000Z	oscuro		weird..
+2006-08-29T16:35:00.000Z	oscuro		system/admn/net
+2006-08-29T16:35:00.000Z	oscuro		"connections", "general", "dns"....
+2006-08-29T16:36:00.000Z	oscuro		"ethernet connection"
+2006-08-29T16:36:00.000Z	nozorro	oscuro	Wait wait !  it may have been moved to somwhere else in he menue ... you can  also open it from the terminal, entering 'gnome-nettools'
+2006-08-29T16:37:00.000Z	oscuro		aight :)
+2006-08-29T16:37:00.000Z	nozorro	oscuro	does it start now?
+2006-08-29T16:37:00.000Z	oscuro		would you wait me a min?.... err I'm updating the apt-get :(
+2006-08-29T16:37:00.000Z	oscuro		1 min to be exactly :|
+2006-08-29T16:40:00.000Z	oscuro		gnome-nettools command not found nozorro!
+2006-08-29T16:41:00.000Z	oscuro		uh
+2006-08-29T16:41:00.000Z	oscuro		nozorro? :(
+2006-08-29T16:42:00.000Z	nozorro	oscuro	be a bit patient please :-)  so install nettols please; anyway it should be part of the normal ubuntu install. otherwise, you could use the ping command from the terminal
+2006-08-29T16:42:00.000Z	oscuro		ok sir.
+2006-08-29T16:42:00.000Z	oscuro		I'll see how to install that brb, and thanks a lot nozorro =)
+2006-08-29T16:43:00.000Z	nozorro	oscuro	if you don't install it, enter 'ping your-router-address' in the terminal and tell me what happens
+2006-08-29T16:44:00.000Z	oscuro	nozorro	I'm so loser I don't what's my router address....
+2006-08-29T16:45:00.000Z	nozorro	oscuro	if you don't know that, then you can't connect to the Internet. Not even under Windows. I'm serious.
+2006-08-29T16:45:00.000Z	oscuro		the only thing I did in the past in order to connect to internet, was to enable the dhcp in the net configuration :(
+2006-08-29T16:48:00.000Z	nozorro	oscuro	so do you have dhcp enabled now for the corresponding network device? Pls look under System | Administration | Networking
+2006-08-29T16:48:00.000Z	oscuro		yes sir.
+2006-08-29T16:48:00.000Z	nozorro	oscuro	so please open terminal seor :-)
+2006-08-29T16:49:00.000Z	oscuro		ok lol
+2006-08-29T16:49:00.000Z	oscuro		done
+2006-08-29T16:49:00.000Z	nozorro	oscuro	pls. enter: 'ping localhost'
+2006-08-29T16:50:00.000Z	nozorro		pls enter 'ping
+2006-08-29T16:50:00.000Z	oscuro		this appears "64 bytes from localhost.localdomain (127.0.0.1): icmp_seq=25 ttl=64 time=0.118 ms
+2006-08-29T16:50:00.000Z	oscuro		"
+2006-08-29T16:50:00.000Z	oscuro		and keeps going like a thousand times :(
+2006-08-29T16:50:00.000Z	nozorro	oscuro	ok
+2006-08-29T16:51:00.000Z	nozorro	oscuro	which device is sending out to the internet, the first one, i.e. eth0?
+2006-08-29T16:51:00.000Z	oscuro		etho yes.
+2006-08-29T16:51:00.000Z	oscuro		tha's the one.
+2006-08-29T16:52:00.000Z	oscuro		156 packets transmitted, 156 received, 0% packet loss, time 155741ms
+2006-08-29T16:52:00.000Z	oscuro		rtt min/avg/max/mdev = 0.093/0.124/0.225/0.020 ms
+2006-08-29T16:53:00.000Z	oscuro		it's receiving packages then.
+2006-08-29T16:53:00.000Z	nozorro	oscuro	now enter 'sudo gedit /etc/network/interfaces' in the terminal and tell me what it says about eth0
+2006-08-29T16:53:00.000Z	oscuro		yes sir.
+2006-08-29T16:55:00.000Z	oscuro		done
+2006-08-29T16:55:00.000Z	oscuro		mmm it's long.
+2006-08-29T16:55:00.000Z	oscuro		basicly
+2006-08-29T16:55:00.000Z	oscuro		# The loopback network interface
+2006-08-29T16:55:00.000Z	oscuro		auto lo
+2006-08-29T16:55:00.000Z	oscuro		iface lo inet loopback
+2006-08-29T16:55:00.000Z	oscuro		and this...
+2006-08-29T16:55:00.000Z	oscuro		# They will be activated automatically by the hotplug subsystem.
+2006-08-29T16:55:00.000Z	oscuro		mapping hotplug
+2006-08-29T16:55:00.000Z	oscuro		 script grep
+2006-08-29T16:55:00.000Z	oscuro		 map eth0
+2006-08-29T16:55:00.000Z	oscuro		and this other.
+2006-08-29T16:56:00.000Z	nozorro	oscuro	stop! i only want to know about eth0!!!
+2006-08-29T16:56:00.000Z	oscuro		# The primary network interface
+2006-08-29T16:56:00.000Z	oscuro		iface eth0 inet dhcp
+2006-08-29T16:56:00.000Z	oscuro		auto eth0
+2006-08-29T16:56:00.000Z	oscuro		geez! what's that?
+2006-08-29T16:57:00.000Z	oscuro		nozorro?
+2006-08-29T05:01:00.000Z	nozorro	oscuro	ok assuming your cables are ok and your machine is *not* connected to the router via usb, maybe it's really best to forget about dhcp and set it all up manually then. but you'd need to know the addresses then. -- sorry, i don't know much about the dncp innards of ubuntu, and it has failed on me several times ...
+2006-08-29T05:02:00.000Z	oscuro		it's ok nozorro.
+2006-08-29T05:02:00.000Z	oscuro		you helped me really much, I appreciate your attention.
+2006-08-29T05:02:00.000Z	oscuro		actually I have internet now, I jus hope this thing keeps like thatn =)
+2006-08-29T05:02:00.000Z	oscuro		thank you nozorro.
+2006-08-29T05:03:00.000Z	nozorro	oscuro	pues ya lo has resuelto? :-) -- pls. always check the config. of your dsl router, dhcp especially
+2006-08-29T05:04:00.000Z	oscuro		whatever you say officer =D
+2006-08-29T05:04:00.000Z	oscuro		I'll keep reading linux stuff.
+2006-08-29T05:04:00.000Z	oscuro		I'm so noob.
+2006-08-29T05:05:00.000Z	nozorro	oscuro	happened to me as well, some years ago. and networking will always be somewhat difficult
+2006-08-29T05:05:00.000Z	oscuro		I'm kinda confused since I left windows forever.
+2006-08-29T05:05:00.000Z	oscuro		lol
+2006-08-29T05:05:00.000Z	oscuro		but I'm just going :/
+2006-08-29T05:06:00.000Z	oscuro		there's no a single bit of windows in this box yeah :)
+2006-08-29T05:06:00.000Z	nozorro	oscuro	you aren't serious, are you?
+2006-08-29T05:06:00.000Z	oscuro	nozorro	lol.
+2006-08-29T05:06:00.000Z	oscuro		it was a bad decision?
+2006-08-29T05:07:00.000Z	nozorro	oscuro	you'll see :-|

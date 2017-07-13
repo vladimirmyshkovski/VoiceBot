@@ -1,0 +1,93 @@
+2006-05-28T11:47:00.000Z	r0xoR		should i leave hdparm in my startup services?
+2006-05-28T11:48:00.000Z	mwe	r0xoR	it won't hurt
+2006-05-28T11:48:00.000Z	r0xoR	mwe	well i'm wondering if it might be though... i've got an out-of-tree kernel module that i compiled for my sound card
+2006-05-28T11:49:00.000Z	mwe	r0xoR	and you think hdparm is confusing your sound? I doubt it
+2006-05-28T11:49:00.000Z	mwe	r0xoR	you want DMA unless you're very very patient man
+2006-05-28T11:50:00.000Z	r0xoR	mwe	i know, like i said... DMA can influence sound... i.e. lack of DMA usually causes sound to stutter
+2006-05-28T11:51:00.000Z	mwe	r0xoR	I studders because hdd access take up so many resources when DMA is off
+2006-05-28T11:51:00.000Z	r0xoR	mwe	right... so?
+2006-05-28T11:51:00.000Z	mwe	r0xoR	I don't belive messing with DMA will mute your sound card
+2006-05-28T11:53:00.000Z	mwe	r0xoR	it will only make IO slow if it's off. not make it not function
+2006-05-28T11:53:00.000Z	r0xoR	mwe	define "it" please?
+2006-05-28T11:54:00.000Z	mwe	r0xoR	DMA
+2006-05-28T11:54:00.000Z	r0xoR	mwe	right so what does that have to do with hdparm?
+2006-05-28T11:54:00.000Z	r0xoR	mwe	i know all that already
+2006-05-28T11:54:00.000Z	mwe	r0xoR	go ahead and disable it if you don't believe me. you can turn it back on when you see what it does
+2006-05-28T11:54:00.000Z	mwe	r0xoR	BTW I think DMA is on even if you disable the hdparm boot script
+2006-05-28T11:55:00.000Z	r0xoR	mwe	gah, you always say "it" as if you have a proper noun you're obviously referring to
+2006-05-28T11:55:00.000Z	r0xoR	mwe	dude, all i really wanted to know was what hdparm is and if it will affect my sound if i turn it off
+2006-05-28T11:55:00.000Z	mwe	r0xoR	it will, possibly, like I said
+2006-05-28T11:55:00.000Z	mwe	r0xoR	dude
+2006-05-28T11:57:00.000Z	mwe	r0xoR	it means DMA in what I told you as that was the topic of our conversation
+2006-05-28T11:57:00.000Z	r0xoR	mwe	heheh, dma was your topic... hdparm was mine
+2006-05-28T11:58:00.000Z	mwe	r0xoR	hdparm is for DMA settings
+2006-05-28T11:58:00.000Z	r0xoR	mwe	there we go... the definition you should have *started* with :)
+2006-05-28T11:58:00.000Z	mwe	r0xoR	I supposed you knew. I didn't mean to be arrogant
+2006-05-28T12:02:00.000Z	r0xoR	mwe	i'd been noticing xmms stuttering when my HD was going through heavy loading, e.g. when synaptic was installing
+2006-05-28T12:03:00.000Z	mwe	r0xoR	yes. does sudo hdparm /dev/hda or whatever your drive is confirm DMA is off?
+2006-05-28T12:03:00.000Z	r0xoR	mwe	yeah that's what i just ran, that's how i found out that it's off
+2006-05-28T12:03:00.000Z	r0xoR	mwe	hdparm is in my startup runlevel
+2006-05-28T12:03:00.000Z	mwe	r0xoR	hmm
+2006-05-28T12:04:00.000Z	r0xoR	mwe	i'm pretty sure i compiled in the right DMA driver for my kernel but i could have gotten the wrong one
+2006-05-28T12:04:00.000Z	mwe	r0xoR	does sudo hdparm -d1 /dev/hda turn it on?
+2006-05-28T12:05:00.000Z	mwe	r0xoR	ok. then you should probably adjust /etc/hdparm.conf
+2006-06-05T16:33:00.000Z	mwe	r0xoR	install it
+2006-06-05T16:33:00.000Z	r0xoR	mwe	and how should i do that
+2006-06-05T16:34:00.000Z	mwe	r0xoR	personally I just downloaded the install from macromedia.com and ran it
+2006-06-05T16:34:00.000Z	mwe	r0xoR	but I think there is a package as well
+2006-06-05T16:35:00.000Z	mwe	r0xoR	chmod +x dowloaded_file && ./downloaded_file
+2006-06-05T16:36:00.000Z	mwe	r0xoR	not succesfully it seems
+2006-06-05T16:36:00.000Z	r0xoR	mwe	ok well then how *should* i do it?
+2006-06-05T16:36:00.000Z	r0xoR	mwe	seriously, i follwed the instructtions on the wiki
+2006-06-05T16:37:00.000Z	mwe	r0xoR	did you sudo apt-get update?
+2006-06-05T16:37:00.000Z	mwe	r0xoR	paste.ubuntu-nl.org your /etc/apt/sources.lis
+2006-06-05T16:37:00.000Z	r0xoR	mwe	that one :)
+2006-06-05T16:37:00.000Z	mwe	r0xoR	paste.ubuntu-nl.org your /etc/apt/sources.lis
+2006-06-05T16:37:00.000Z	mwe	r0xoR	paste.ubuntu-nl.org your /etc/apt/sources.list
+2006-06-05T16:37:00.000Z	r0xoR	mwe	i copied and pasted it from there
+2006-06-05T16:37:00.000Z	r0xoR	mwe	omg... you don't get it do you
+2006-06-05T16:38:00.000Z	mwe	r0xoR	i do now
+2006-06-05T16:38:00.000Z	r0xoR	mwe	ok good :)
+2006-06-05T16:38:00.000Z	mwe	r0xoR	that one hasn't got multiverse in it
+2006-06-05T16:38:00.000Z	r0xoR	mwe	uhhh, did you even read it?
+2006-06-05T16:39:00.000Z	mwe	r0xoR	well I take that back. sorry it used to refer to the default
+2006-06-05T16:40:00.000Z	mwe	r0xoR	can you nano /etc/apt/sources.list and confirm multeverse is in there?
+2006-06-05T16:40:00.000Z	mwe	r0xoR	multiverse *
+2006-06-05T16:40:00.000Z	r0xoR	mwe	that's exactly what i just did
+2006-06-05T16:40:00.000Z	r0xoR	mwe	i'm looking at it right now, in vim
+2006-06-05T16:41:00.000Z	mwe	r0xoR	close synaptic and sudo apt-get update && sudo apt-cache search -n flash
+2006-06-05T16:41:00.000Z	mwe	r0xoR	if that is not working I'm lost
+2006-06-05T16:41:00.000Z	r0xoR	mwe	yeah well so am I... cuz it's not working
+2006-06-05T16:43:00.000Z	mwe	r0xoR	apt-cache search flash doesn't even list it?
+2006-06-05T16:44:00.000Z	mwe	r0xoR	is you computer not a pc?
+2006-06-05T16:44:00.000Z	r0xoR	mwe	no my computer is an Athlon 64
+2006-06-05T16:44:00.000Z	mwe	r0xoR	I don't think there's a plugin in the repos for that
+2006-06-05T16:45:00.000Z	r0xoR	mwe	my grilfriends iBook is a 750FX 400MHz
+2006-06-05T16:45:00.000Z	r0xoR	mwe	oh i'm not using the 64 bit distro
+2006-06-05T16:47:00.000Z	mwe	r0xoR	so apt-cache search -n flash doesn't list it. you did sudo apt-get update after making sure multiverse is enabled. that's a freaking mystery
+2006-06-05T16:47:00.000Z	r0xoR	mwe	lemme do the cache one
+2006-06-05T16:48:00.000Z	mwe	r0xoR	yeah
+2006-06-05T16:48:00.000Z	mwe	r0xoR	that's the free
+2006-06-05T16:48:00.000Z	mwe	r0xoR	it's not picking up multverse
+2006-06-05T16:49:00.000Z	r0xoR	mwe	actually it says it is, because synaptic claims to be seeing multiverse packages
+2006-06-05T16:50:00.000Z	mwe	r0xoR	It's really really really weird
+2006-06-05T16:52:00.000Z	mwe	r0xoR	and that file is /etc/apt/sources.list, all lower case in the file name?
+2006-06-05T16:52:00.000Z	r0xoR	mwe	omg man, yes
+2006-06-05T16:53:00.000Z	mwe	r0xoR	I'm asking because it is so weird
+2006-06-05T16:53:00.000Z	r0xoR	mwe	look man, i've been programming for 12 years and using my own linux boxen for 6, so you can ask some more important questions :)
+2006-06-05T16:53:00.000Z	mwe	r0xoR	trying hard to figure what's going on
+2006-06-05T16:53:00.000Z	mwe	r0xoR	ok I didn't mean to insult you
+2006-06-05T16:53:00.000Z	r0xoR	mwe	no worries
+2006-06-05T16:56:00.000Z	mwe	r0xoR	I'm confused. maybe it's temporarely broken. can you find acidrip for example? that one is in multiverse as well
+2006-06-05T05:00:00.000Z	mwe	r0xoR	so you see other packages in multiverse?
+2006-06-05T05:00:00.000Z	r0xoR	mwe	what do you mean by that?
+2006-06-05T05:01:00.000Z	mwe	r0xoR	I mean can you find any other packages in the multiverse section like acidrip for example
+2006-06-05T05:02:00.000Z	mwe	r0xoR	heh? you're not on a pc?
+2006-06-05T05:02:00.000Z	mwe	r0xoR	that explains it
+2006-06-05T05:02:00.000Z	mwe	r0xoR	there is no flash for linux ppc
+2006-06-05T05:03:00.000Z	mwe	r0xoR	^^
+2006-06-05T05:03:00.000Z	mwe	r0xoR	well at least my head ache is gone, but yours is staying
+2006-06-05T05:03:00.000Z	r0xoR	mwe	i never had a headache
+2006-06-05T05:04:00.000Z	mwe	r0xoR	I'm talking about not finding flash
+2006-06-05T05:04:00.000Z	r0xoR	mwe	yeah and i never had a headache about it
+2006-06-05T05:05:00.000Z	mwe	r0xoR	but I did. I totally didn't understand what was going on

@@ -1,0 +1,93 @@
+2006-01-16T07:09:00.000Z	C-O-L-T		how to have quick time plugin for firefox ?
+2006-01-16T07:10:00.000Z	_jason	C-O-L-T	use mplayerplug-in
+2006-01-16T07:10:00.000Z	_jason	C-O-L-T	the packageg name is 'mozilla-mplayer' but you'll need to install mplayer first.  Ubotu sent you some info on how to do that.
+2006-01-21T12:50:00.000Z	_jason	C-O-L-T	what are you installing?
+2006-01-21T12:51:00.000Z	C-O-L-T	_jason	Office suite
+2006-01-21T12:51:00.000Z	_jason	C-O-L-T	open office?
+2006-01-21T12:52:00.000Z	C-O-L-T	_jason	I have forgotten it's name
+2006-01-21T12:52:00.000Z	C-O-L-T	_jason	no no it is not free it's name begins with T and it looks like microsoft office
+2006-01-21T12:53:00.000Z	_jason	C-O-L-T	if you trust the source and don't mind running random things from random people on your box.... try 'sh file.sh' or 'chmod +x filename.sh && ./filename.sh'
+2006-01-21T12:53:00.000Z	C-O-L-T	_jason	as I see it works with sh file.sh I will give the program name in a few moments
+2006-01-21T12:54:00.000Z	_jason	C-O-L-T	that's ok
+2006-01-21T12:54:00.000Z	C-O-L-T	_jason	it asks me to login as administrator in terminal how to do that?
+2006-01-21T13:03:00.000Z	C-O-L-T	_jason	is Thinkfree Office 3.0
+2006-01-24T14:50:00.000Z	_jason	C-O-L-T	I think the gimp site has a tutorial for that
+2006-01-24T14:50:00.000Z	C-O-L-T	_jason	i will look at it
+2006-01-24T14:51:00.000Z	C-O-L-T	_jason	I got it at their website
+2006-01-24T14:52:00.000Z	_jason	C-O-L-T	k
+2006-01-26T15:17:00.000Z	_jason	C-O-L-T	you can use the -d option to download using apt-get.  Or packages.ubuntu.com
+2006-01-26T15:19:00.000Z	C-O-L-T	_jason	I would like to install somewhere ubuntu but that person has a really slow connection, so it would take to him days for downloading all the updates, can I just simply download them?
+2006-01-26T15:19:00.000Z	_jason	C-O-L-T	you can as long as you make sure you get all the dependencies as well
+2006-01-26T15:20:00.000Z	_jason	C-O-L-T	someone may know of a better way, that's the only way I know
+2006-01-26T15:38:00.000Z	_jason	C-O-L-T	https://wiki.ubuntu.com/AptMoveHowto seems to be what you want
+2006-01-26T15:40:00.000Z	C-O-L-T	_jason	I deleted the packages that were in var folder so I can not write them. I deleted them for freeing up space. So I will enable the repositories in synaptic and after that I will wait till installs everything
+2006-01-26T16:14:00.000Z	_jason	C-O-L-T	you around?
+2006-01-26T16:14:00.000Z	C-O-L-T	_jason	yes
+2006-01-26T16:14:00.000Z	_jason	C-O-L-T	http://cargol.net/~ramon/ubuntu-dvd-en
+2006-01-26T16:15:00.000Z	C-O-L-T	_jason	:( I don't have a dvd writer
+2006-01-26T16:16:00.000Z	C-O-L-T	_jason	just cd writer
+2006-01-26T16:16:00.000Z	_jason	C-O-L-T	if you weed out enough packages you can probably still do it.  You just want multiverse
+2006-01-26T16:17:00.000Z	C-O-L-T	_jason	i will leave my collegues computer working all night cause it is easier :) for me
+2006-01-26T16:19:00.000Z	C-O-L-T	_jason	but i need your help in another thing
+2006-01-26T16:20:00.000Z	C-O-L-T	_jason	are you around?
+2006-01-26T16:20:00.000Z	_jason	C-O-L-T	yeah
+2006-01-26T16:21:00.000Z	C-O-L-T	_jason	I need a program which can make me slideshows of my pictures with music in vcd or svcs or avi format, but especially vcd, and svcd
+2006-01-26T16:21:00.000Z	C-O-L-T	_jason	please tell me that there is one
+2006-01-26T16:21:00.000Z	_jason	C-O-L-T	there is one
+2006-01-26T16:21:00.000Z	C-O-L-T	_jason	cause I am looking for it for weeks
+2006-01-26T16:21:00.000Z	C-O-L-T	_jason	which one
+2006-01-26T16:21:00.000Z	_jason	C-O-L-T	I actually don't know myself, I have never done it
+2006-01-26T16:22:00.000Z	C-O-L-T	_jason	than why are you saying that there is one
+2006-01-26T16:22:00.000Z	_jason	C-O-L-T	you asked me to :)
+2006-01-26T16:23:00.000Z	C-O-L-T	_jason	:)) don't joke with me, I would like to make a beautifull things for my classmates , but I don't have the software
+2006-01-26T16:25:00.000Z	C-O-L-T	_jason	Ask somebody please who you know about this kind of software, I am looking for it for 3 weeks and I am getting really nervous
+2006-01-26T16:26:00.000Z	_jason	C-O-L-T	qdvdauthor seems to do it... maybe it can do vcd's?  worth a try... may also want to look at http://tovid.berlios.de/en/tovid.html
+2006-01-26T16:27:00.000Z	_jason	C-O-L-T	seems like a lot of your problems could be solved with a dvd burner
+2006-01-26T16:28:00.000Z	C-O-L-T	_jason	yes I know, but I don't have the funds for it. Anyway where can I download this program, it seems that can make vcd/svcd
+2006-01-26T16:29:00.000Z	_jason	C-O-L-T	apparently mencoder can do it as well, the tovid thing is on that page I gave you 'get tovid'
+2006-01-26T16:30:00.000Z	C-O-L-T	_jason	I will try both of them
+2006-01-26T16:31:00.000Z	C-O-L-T	_jason	can I get mencoder in synaptic?
+2006-01-26T16:31:00.000Z	_jason	C-O-L-T	yeah, comes with mplayer.  You'll have to see if it can actually do it though
+2006-01-26T16:31:00.000Z	C-O-L-T	_jason	I could not get it
+2006-01-26T16:32:00.000Z	C-O-L-T	_jason	I don't have mplayer
+2006-01-26T16:32:00.000Z	C-O-L-T	_jason	I need to install it?
+2006-01-26T16:38:00.000Z	C-O-L-T	_jason	help me in installing tovid cause I can not
+2006-01-26T16:38:00.000Z	C-O-L-T	_jason	I am following the directions but I still can not
+2006-01-26T16:39:00.000Z	_jason	C-O-L-T	make sure you have multiverse
+2006-01-26T16:39:00.000Z	C-O-L-T	_jason	I have multiuniverse enabled
+2006-01-26T16:40:00.000Z	_jason	C-O-L-T	what error are you getting
+2006-01-26T16:40:00.000Z	C-O-L-T	_jason	I will paste to pastebin
+2006-01-26T16:41:00.000Z	C-O-L-T	_jason	http://paste.ubuntu-nl.org/7460
+2006-01-26T16:42:00.000Z	_jason	C-O-L-T	I have no idea about tovidI think you need to install all that stuff it says you are missing
+2006-01-26T16:42:00.000Z	C-O-L-T	_jason	should i try the other program
+2006-01-26T16:43:00.000Z	_jason	C-O-L-T	it's a dependency anyway so sure
+2006-01-26T16:43:00.000Z	C-O-L-T	_jason	I can not get mplayer in synaptic
+2006-01-26T16:44:00.000Z	_jason	C-O-L-T	pastebin sources.list
+2006-01-26T16:45:00.000Z	C-O-L-T	_jason	where I find that?
+2006-01-26T16:45:00.000Z	_jason	C-O-L-T	/etc/apt/sources.list
+2006-01-26T16:47:00.000Z	C-O-L-T	_jason	http://paste.ubuntu-nl.org/7461
+2006-01-26T16:49:00.000Z	C-O-L-T	_jason	??
+2006-01-26T16:51:00.000Z	C-O-L-T	_jason	still here?
+2006-01-26T16:53:00.000Z	_jason	C-O-L-T	i am now, what's up
+2006-01-26T16:53:00.000Z	C-O-L-T	_jason	http://paste.ubuntu-nl.org/7461
+2006-01-26T16:54:00.000Z	_jason	C-O-L-T	add " multiverse" to the end of lines 19,20,35, and 36
+2006-01-26T16:54:00.000Z	C-O-L-T	_jason	at the sources list?
+2006-01-26T16:55:00.000Z	_jason	C-O-L-T	yes, sudo gedit /etc/apt/sources.list
+2006-01-27T17:02:00.000Z	C-O-L-T	_jason	still can not get mplayer
+2006-01-27T17:02:00.000Z	_jason	C-O-L-T	sudo apt-get update
+2006-01-27T17:04:00.000Z	C-O-L-T	_jason	now what?
+2006-01-27T17:04:00.000Z	_jason	C-O-L-T	now follow that wiki page
+2006-01-27T15:19:00.000Z	C-O-L-T	_jason	guess
+2006-01-27T15:19:00.000Z	C-O-L-T	_jason	hello
+2006-01-27T15:19:00.000Z	_jason	C-O-L-T	hello
+2006-01-27T15:20:00.000Z	C-O-L-T	_jason	I installed to one of my friend's pc ubuntu cause he was amased about my pc, and he was lost in Linux, he is using windows for  12 years as I, and after 2 hours he decided to swith back to windows :))))
+2006-01-27T15:20:00.000Z	_jason	C-O-L-T	#ubuntu-offtopic please
+2006-01-27T15:21:00.000Z	C-O-L-T	_jason	I could not manage to swith to linux. I am so happy and proud of me that I managed after 12 years of windows dominion
+2006-03-07T09:00:00.000Z	C-O-L-T	_jason	can I open m4v video file in linux?
+2006-03-07T09:00:00.000Z	_jason	C-O-L-T	maybe? what is it
+2006-03-07T09:00:00.000Z	C-O-L-T	_jason	ipod video format
+2006-03-07T09:03:00.000Z	_jason	C-O-L-T	yes, I am playing one right now with mplayer
+2006-03-07T09:04:00.000Z	C-O-L-T	_jason	ok
+2006-03-07T09:04:00.000Z	C-O-L-T	_jason	tahnks
+2006-03-07T09:04:00.000Z	_jason	C-O-L-T	note however this is my own compiled mplayer
+2006-03-28T12:39:00.000Z	C-O-L-T	_jason	thansk

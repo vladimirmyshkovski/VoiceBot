@@ -1,0 +1,94 @@
+2009-10-05T18:41:00.000Z	CHESLYN		hi guys !!
+2009-10-05T18:42:00.000Z	CHESLYN		can anyone help , i try 2 open gksudo they ask me 4 a passwd how can i crack it or reset it
+2009-10-05T18:42:00.000Z	erUSUL	CHESLYN	is your own password
+2009-10-05T18:46:00.000Z	CHESLYN	erUSUL	i did'nt set a passwd becoze its not my user passwd
+2009-10-05T18:48:00.000Z	erUSUL	CHESLYN	sudo and gksudo ask for the current users password. just type the password you use to login in your computer
+2009-10-05T18:56:00.000Z	CHESLYN	erUSUL	it shows me i'm not allowed 2 run this program i must contact the administrator so can i change something
+2009-10-05T18:57:00.000Z	erUSUL	CHESLYN	 maybe your user is not admin ? did you set up the ubuntu install or someone else did it for you ?
+2009-10-05T18:58:00.000Z	CHESLYN	erUSUL	someone else
+2009-10-05T18:59:00.000Z	erUSUL	CHESLYN	maybe he/she did not give you the ability to use sudo or gksudo... you have to ask him/her
+2009-10-05T19:00:00.000Z	erUSUL	CHESLYN	if that is not possible there is a simple way to give your user the power of sudo provided you can reboot your computer
+2009-10-05T19:01:00.000Z	CHESLYN	erUSUL	maybe but cant i change something to have access or reset it
+2009-10-05T19:03:00.000Z	erUSUL	CHESLYN	as i said there is a way. reboot into recovery mode (an option in the bootloader menu) drop to a root shell. execute this command « adduser <yourusernamehere> admin » . finally reboot « shutdown -r now »
+2009-10-05T19:05:00.000Z	CHESLYN	erUSUL	like format the all computer
+2009-10-05T19:05:00.000Z	erUSUL	CHESLYN	no need to reformat all computer follow the steps i just have given to you
+2009-10-05T19:06:00.000Z	CHESLYN	erUSUL	thanks let me try it
+2009-10-05T19:28:00.000Z	CHESLYN	erUSUL	i did what you said but no lak must i command every thing until << stutdown -r now >>
+2009-10-05T19:29:00.000Z	erUSUL	CHESLYN	the only commands you have to run are those two « adduser <yourusernamehere> admin » and « stutdown -r now »
+2009-10-05T19:29:00.000Z	erUSUL	CHESLYN	do not type the «» i use them to make clear what are the commands and what is not
+2009-10-05T19:30:00.000Z	erUSUL	CHESLYN	you have to type your actual username (the one you use for login instead of <yourusernamehere>
+2009-10-05T19:32:00.000Z	CHESLYN	erUSUL	like adduser/username/admin/finally reboot/shutdown -r now/
+2009-10-05T19:32:00.000Z	erUSUL	CHESLYN	no they are two commands on « adduser <yourusernamehere> admin » then hit enter then the other one
+2009-10-05T19:34:00.000Z	CHESLYN	erUSUL	thanks bra
+2009-10-05T19:53:00.000Z	CHESLYN	erUSUL	sorry but you confuse me now what symbol must i use 4 the << you said i must not use them.what symbols please ?
+2009-10-05T19:53:00.000Z	erUSUL	CHESLYN	d o not use anything just put what is inside them
+2009-10-05T19:54:00.000Z	erUSUL	CHESLYN	adduser <yourusername> admin
+2009-10-05T19:55:00.000Z	CHESLYN	erUSUL	thanks oh
+2009-10-05T19:55:00.000Z	erUSUL	CHESLYN	no problem
+2009-10-05T20:06:00.000Z	erUSUL	CHESLYN	what did you writte ?
+2009-10-05T20:07:00.000Z	CHESLYN	erUSUL	i just typed adduser
+2009-10-05T20:07:00.000Z	erUSUL	CHESLYN	suppose chelsyn is your username the command is --> adduser cheslyn admin
+2009-10-05T20:08:00.000Z	CHESLYN	erUSUL	k
+2009-10-06T10:52:00.000Z	CHESLYN	erUSUL	i have a problem that you will sort out
+2009-10-21T18:23:00.000Z	erUSUL	CHESLYN	you can use gparted if you want GUI app
+2009-10-21T18:27:00.000Z	CHESLYN	erUSUL	if i apt-get gparted they ask me i'm i ''root'' whats wrong
+2009-10-21T18:28:00.000Z	erUSUL	CHESLYN	use « sudo aptitude install gparted »
+2009-10-21T18:31:00.000Z	CHESLYN	erUSUL	after yhat how do i format the USB?
+2009-10-21T18:31:00.000Z	erUSUL	CHESLYN	run system>admin>parition/disk editor
+2009-10-21T18:33:00.000Z	erUSUL	CHESLYN	should be pretty intutive ... you choose the disk in the top right corner drop down menu. then right click on the bar
+2009-10-21T18:41:00.000Z	CHESLYN	erUSUL	i don't understand
+2009-10-21T18:44:00.000Z	CHESLYN	erUSUL	that command you give me system>admin>parition/disk editor does not work in terminal
+2009-10-21T18:45:00.000Z	erUSUL	CHESLYN	you do not have a graphical interface ?
+2009-10-21T18:45:00.000Z	CHESLYN	erUSUL	what do tou mean?
+2009-10-21T18:46:00.000Z	erUSUL	CHESLYN	i'm asking if you are running an Xserver if you have gui
+2009-10-21T18:48:00.000Z	CHESLYN	erUSUL	i'm running Xserver
+2009-10-21T18:49:00.000Z	CHESLYN	erUSUL	so there is no other way to format it
+2009-10-21T18:49:00.000Z	erUSUL	CHESLYN	ohh sorry i know what you meant System>Admin>parition/disk editor is the menu where you can find gparted not a command
+2009-10-21T18:53:00.000Z	CHESLYN	erUSUL	ok i'll try lol i can believe i'm struggling to format i USB thanks
+2009-10-21T18:54:00.000Z	erUSUL	CHESLYN	i agree that it should be easier that it currently is.
+2009-10-21T18:57:00.000Z	CHESLYN	erUSUL	ok can you just explain me from start like perhaps we never had this confusion please thanks alot
+2009-10-21T18:59:00.000Z	erUSUL	CHESLYN	you have gparted installed ? are you using ubuntu ? then Go to the menu System>Admin>parition editor to launch gparted (it will ask your password)
+2009-10-21T18:59:00.000Z	erUSUL	CHESLYN	once in gparted it should be pretty easy to do what you want
+2009-10-21T19:08:00.000Z	CHESLYN	erUSUL	I dont see admin in menu system>
+2009-10-21T19:08:00.000Z	erUSUL	CHESLYN	are you using default ubuntu or are you using kubuntu / xubuntu ??
+2009-10-21T19:09:00.000Z	erUSUL	CHESLYN	is maybe Administration ?
+2009-10-21T19:09:00.000Z	CHESLYN	erUSUL	ok now how?
+2009-10-21T19:09:00.000Z	CHESLYN	erUSUL	please..
+2009-10-21T19:10:00.000Z	erUSUL	CHESLYN	select the disk you want to format in the drop down menu
+2009-10-21T19:10:00.000Z	CHESLYN	erUSUL	it the bar
+2009-10-21T19:11:00.000Z	erUSUL	CHESLYN	you should read something like [ /dev/sd(a,b,c) Size ]
+2009-10-21T19:12:00.000Z	erUSUL	CHESLYN	on the drop down menu; click on it to choose the disk you want to format
+2009-10-21T19:13:00.000Z	CHESLYN	erUSUL	ok
+2009-10-21T19:13:00.000Z	CHESLYN	erUSUL	and now what?
+2009-10-21T19:14:00.000Z	erUSUL	CHESLYN	right click on the graphic representing the parition you want to format
+2009-10-21T19:14:00.000Z	erUSUL	CHESLYN	choose format as and choose the filesystem you want to use
+2009-10-21T19:15:00.000Z	CHESLYN	erUSUL	there is no format
+2009-10-21T19:15:00.000Z	erUSUL	CHESLYN	if it is a usb pendrive you probably want fat32
+2009-10-21T19:16:00.000Z	erUSUL	CHESLYN	can you take a screenshot of waht you see and upload it?
+2009-10-21T19:16:00.000Z	CHESLYN	erUSUL	there is a virus on now i what to format it please
+2009-10-21T19:19:00.000Z	CHESLYN	erUSUL	there is a virus on now i what to format it please?
+2009-10-21T19:20:00.000Z	erUSUL	CHESLYN	can you take a screenshot of waht you see and upload it? <<< i need to see what is going on
+2009-10-21T19:22:00.000Z	erUSUL	CHESLYN	the menu option is "Format to" on the right click menu
+2009-10-21T19:23:00.000Z	erUSUL	CHESLYN	if it is grayed out you have to umount it first by choosing umount in the same menu
+2009-10-21T19:27:00.000Z	CHESLYN	erUSUL	 after that
+2009-10-21T19:28:00.000Z	erUSUL	CHESLYN	after what? umounting ?
+2009-10-21T19:28:00.000Z	erUSUL	CHESLYN	See this screenshot is my own computer with a pendrive http://imagebin.org/68651
+2009-10-21T19:28:00.000Z	CHESLYN	erUSUL	 yes unmounting
+2009-10-21T19:29:00.000Z	erUSUL	CHESLYN	choose format to
+2009-10-21T19:32:00.000Z	CHESLYN	erUSUL	i just do see format is there maybe something wrong?
+2009-10-21T19:32:00.000Z	erUSUL	CHESLYN	does that really makes such a difference? seen my screenshot
+2009-10-21T19:32:00.000Z	CHESLYN	erUSUL	i unmounted it nothing
+2009-10-21T19:44:00.000Z	CHESLYN	erUSUL	after taking the screenshot
+2009-10-21T19:44:00.000Z	erUSUL	CHESLYN	?
+2009-10-21T19:45:00.000Z	CHESLYN	erUSUL	you said i must take a screenshot
+2009-10-21T19:47:00.000Z	erUSUL	CHESLYN	you are still not able to right click on the disk and choose format ?
+2009-10-21T19:47:00.000Z	CHESLYN	erUSUL	yes
+2009-10-21T19:48:00.000Z	erUSUL	CHESLYN	then yes do a screenshot and upload it
+2009-10-21T19:51:00.000Z	CHESLYN	erUSUL	yes how do i upload it
+2009-10-21T19:51:00.000Z	erUSUL	CHESLYN	go to here http://tinyurl.com/imagebin
+2009-10-21T19:55:00.000Z	CHESLYN	erUSUL	it dont want to work it only shows open,unmount volume,properties and applications when i right click on it on the desktop because it show the usb also
+2009-10-21T19:56:00.000Z	erUSUL	CHESLYN	you've seen my screenshot ? http://imagebin.org/68651
+2009-10-21T19:57:00.000Z	erUSUL	CHESLYN	where are you right clicking ? all what i'm saying is to do it *inside* gparted
+2009-10-21T19:57:00.000Z	CHESLYN	erUSUL	nop
+2009-10-21T19:58:00.000Z	erUSUL	CHESLYN	no what?
+2009-10-21T19:59:00.000Z	CHESLYN	erUSUL	i did'nt see you screenshot

@@ -1,0 +1,93 @@
+2012-07-19T21:21:00.000Z	Asar		ahh
+2012-07-19T21:21:00.000Z	Asar		ok
+2012-07-19T21:21:00.000Z	Asar		yes
+2012-07-19T21:22:00.000Z	Asar		though can't reach the gui in the browser
+2012-07-19T21:22:00.000Z	Asar		not in the browser
+2012-07-19T21:22:00.000Z	Asar		can you give instructions to check in the terminal?
+2012-07-19T21:24:00.000Z	vesh7807	Asar	what issue are you experiencing
+2012-07-19T21:24:00.000Z	Asar		yeah, it's pinging
+2012-07-19T21:24:00.000Z	Asar		umm, after an update, am not able to reach the internet using the browsers
+2012-07-19T21:25:00.000Z	Asar		how to stop a ping?
+2012-07-19T21:25:00.000Z	vesh7807	Asar	ok do nslookup 192.168.1.254
+2012-07-19T21:26:00.000Z	Asar	vesh7807	"connection timed out. No Servers found"
+2012-07-19T21:26:00.000Z	Asar		think it's a dns thing
+2012-07-19T21:26:00.000Z	vesh7807	Asar	ok now paste this on your browser
+2012-07-19T21:26:00.000Z	Asar		was playing with opensim yesterday
+2012-07-19T21:26:00.000Z	vesh7807	Asar	74.125.233.23
+2012-07-19T21:26:00.000Z	Asar		paste what vesh?
+2012-07-19T21:26:00.000Z	Asar		oh
+2012-07-19T21:28:00.000Z	Asar		Chromium's connection attempt to 74.125.233.23 was rejected
+2012-07-19T21:28:00.000Z	vesh7807	Asar	try another browser
+2012-07-19T21:28:00.000Z	Asar		there is a thing blocking the browser
+2012-07-19T21:28:00.000Z	Asar		tried firefox
+2012-07-19T21:28:00.000Z	vesh7807	Asar	ping the address
+2012-07-19T21:29:00.000Z	vesh7807	Asar	do you have any other computers connected to that network - are you able to browse on another
+2012-07-19T21:29:00.000Z	Asar	vesh7807	unable to connect
+2012-07-19T21:30:00.000Z	Asar		yes vesh, can use a different machine to get things
+2012-07-19T21:30:00.000Z	Asar		wish there was a thing to reset the connection settings
+2012-07-19T21:31:00.000Z	Asar		IPv6 was enabled posteri the update
+2012-07-19T21:31:00.000Z	vesh7807	Asar	seems like the tcp/ip stack or dns but im new to ubuntu
+2012-07-19T21:31:00.000Z	Asar		where it was set to ignore priori
+2012-07-19T21:31:00.000Z	Asar		it's potentially tcp/ip... was messing with opensim & trying to do port forwarding
+2012-07-19T21:32:00.000Z	Asar		HEY, GOT IT WORKING!
+2012-07-19T21:32:00.000Z	Asar		DAMN THING
+2012-07-19T21:32:00.000Z	Asar		PERSONAL FAULT
+2012-07-19T21:33:00.000Z	vesh7807	Asar	please tell
+2012-07-19T21:33:00.000Z	Asar		it was the firewall settings... had it set to restrictive by default
+2012-07-19T21:33:00.000Z	Asar		the firestarter firewall
+2012-07-19T21:33:00.000Z	vesh7807	Asar	maybe you can help me with something
+2012-07-19T21:33:00.000Z	Asar		ok
+2012-07-19T21:33:00.000Z	Asar		shoot
+2012-07-19T21:34:00.000Z	vesh7807	Asar	im unable to set a static ip address, network options is greyed out
+2012-07-19T21:34:00.000Z	Asar		umm, ok, can do static
+2012-07-19T21:35:00.000Z	Asar		are you on 12.04?
+2012-07-19T21:35:00.000Z	vesh7807	Asar	yeah
+2012-07-19T21:35:00.000Z	Asar		ok, there's an icon on the top right, your "connection settings"
+2012-07-19T21:35:00.000Z	Asar		select "Options"
+2012-07-19T21:35:00.000Z	Asar		configure your static...
+2012-07-19T21:36:00.000Z	Asar		you need help amigo?
+2012-07-19T21:36:00.000Z	vesh7807	Asar	will it make a difference if im using gnome 3.5xxx
+2012-07-19T21:36:00.000Z	Asar		yeah, gnome 3.5 is good
+2012-07-19T21:36:00.000Z	Asar		just go to "Network Settings > Options"
+2012-07-19T21:37:00.000Z	vesh7807	Asar	options button is greyed out
+2012-07-19T21:37:00.000Z	Asar	vesh7807	under "Wired"?
+2012-07-19T21:37:00.000Z	vesh7807	Asar	wired and wireless yes
+2012-07-19T21:38:00.000Z	Asar		ah right... then click on your network specific
+2012-07-19T21:38:00.000Z	Asar		if it's called "Wired", then use that
+2012-07-19T21:39:00.000Z	vesh7807	Asar	i cant configure the interface without getting into options - thats the problem
+2012-07-19T21:39:00.000Z	Asar		hmm
+2012-07-19T21:39:00.000Z	Asar		& you have not used 1 priori
+2012-07-19T21:39:00.000Z	vesh7807	Asar	options button is greyed out on the interfaces - wired and wireless
+2012-07-19T21:39:00.000Z	Asar		sec, go into "System Settings"
+2012-07-19T21:39:00.000Z	vesh7807	Asar	ok
+2012-07-19T21:40:00.000Z	Asar	vesh7807	use System Settings > Network, see if it's the same
+2012-07-19T21:40:00.000Z	Asar		you should have "Options" available
+2012-07-19T21:41:00.000Z	vesh7807	Asar	options is available but greyed out
+2012-07-19T21:41:00.000Z	Asar		if not, go to the "Network Proxy" & tell what you have
+2012-07-19T21:41:00.000Z	Asar	vesh7807	wait, you can get into the "Options" tab?
+2012-07-19T21:42:00.000Z	vesh7807	Asar	network proxy none, no i cant get into the options tab as its greyed out
+2012-07-19T21:42:00.000Z	Asar	vesh7807	in the terminal do "ifconfig" & set your mac address
+2012-07-19T21:42:00.000Z	Asar		sheesh vesh7807, that's kinda tough... not certain what to suggest off hand
+2012-07-19T21:43:00.000Z	Asar		sec, did you google your problem?
+2012-07-19T21:43:00.000Z	vesh7807	Asar	for about a week now and i never want to move/use windows again
+2012-07-19T21:44:00.000Z	Asar	vesh7807	did you install the "Network Manager Applet"?
+2012-07-19T21:45:00.000Z	vesh7807	Asar	how can i be sure that its done
+2012-07-19T21:45:00.000Z	Asar	vesh7807	am going to get that info for you, sec
+2012-07-19T21:46:00.000Z	Asar		vesh, sec
+2012-07-19T21:47:00.000Z	vesh7807	Asar	cause if i search for network connections the applet is there but i cant see the interface i use, if i try to set a static address it errors connection add failed - connection not visible or not available
+2012-07-19T21:47:00.000Z	Asar	vesh7807	guess is you don't have the nm-applet installed
+2012-07-19T21:47:00.000Z	Asar		try Synaptic vesh7807
+2012-07-19T21:49:00.000Z	Asar	vesh7807	go to Synaptic & type in "network manager applet" & you'll see a package with an Ubuntu logo next to it
+2012-07-19T21:49:00.000Z	Asar	vesh7807	curious if the box is green
+2012-07-19T21:51:00.000Z	vesh7807	Asar	its installed - trying to reinstall it
+2012-07-19T21:51:00.000Z	vesh7807	Asar	which box you talking about
+2012-07-19T21:52:00.000Z	vesh7807	Asar	reinstalled same thing
+2012-07-19T21:54:00.000Z	vesh7807	Asar	is this perhaps not a bug for gnome 3.5xxxx
+2012-07-19T21:54:00.000Z	Asar	vesh7807	reinstall, see if your "Options" button is available
+2012-07-19T21:54:00.000Z	Asar	vesh7807	yeah, there was mention of a bug on the web
+2012-07-19T21:55:00.000Z	Asar		it was in the bugs.launchpad.org website
+2012-07-19T21:55:00.000Z	Asar		https://bugs.launchpad.net/ubuntu/+source/paprefs/+bug/829051
+2012-07-19T21:55:00.000Z	vesh7807		what ppas are you using for the version of gnome u have
+2012-07-19T21:56:00.000Z	Asar		oooh, just the default ones vesh7807
+2012-07-19T21:59:00.000Z	vesh7807	Asar	thanks for your assistance, the bug is relating to something else. i'll keep researching and see what i can come up with
+2012-07-19T22:00:00.000Z	Asar	vesh7807	anytime :)

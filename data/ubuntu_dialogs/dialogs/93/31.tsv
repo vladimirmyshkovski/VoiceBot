@@ -1,0 +1,93 @@
+2009-07-07T00:47:00.000Z	indus		i got the new ff 3.5 in jaunty
+2009-07-07T00:47:00.000Z	indus		from the repos
+2009-07-07T00:48:00.000Z	indus		upgrade folks
+2009-07-07T00:48:00.000Z	sebsebseb	indus	ok  that's nice
+2009-07-07T00:48:00.000Z	sebsebseb	indus	yes it's not the final,  it's well the bot link explains
+2009-07-07T00:49:00.000Z	indus	sebsebseb	bot is old now. just got the updates an hour ago
+2009-07-07T00:49:00.000Z	sebsebseb	indus	good, but is it faster than Opera?
+2009-07-07T00:49:00.000Z	indus	sebsebseb	not yet but probably with 3.6 or 4
+2009-07-07T00:54:00.000Z	sebsebseb	indus	Fedora 11  came with  Firefox  Beta 4,  and  must have  got the final way before  Ubuntu  as well :D
+2009-07-07T00:54:00.000Z	sebsebseb	indus	Firefox 3.5  Beta 4 that was
+2009-07-07T00:54:00.000Z	indus	sebsebseb	ya maybe,
+2009-07-07T00:54:00.000Z	indus	sebsebseb	same in ubuntu ff b4
+2009-07-07T00:55:00.000Z	indus	sebsebseb	i was happy to see when i open browser after update it said ;you have been upgraded to 3.5
+2009-07-07T00:56:00.000Z	sebsebseb	indus	,because most of the add ons won't work on  Firefox 3.5 yet
+2009-07-07T00:56:00.000Z	indus	sebsebseb	hmm yes agreed
+2009-07-07T00:56:00.000Z	indus	sebsebseb	but the community is already working fast on it
+2009-07-07T00:57:00.000Z	indus	sebsebseb	it still has the old ff logo from dapper though
+2009-07-07T00:57:00.000Z	sebsebseb	indus	yeah that's for development version
+2009-07-07T00:58:00.000Z	indus	sebsebseb	i guess they will update logo too soon cos in about ff it says 3.5
+2009-07-07T00:58:00.000Z	sebsebseb	indus	I don't think the logo will get updated that soon
+2009-07-07T00:58:00.000Z	sebsebseb	indus	if  at all
+2009-08-17T17:45:00.000Z	sebsebseb	indus	What? Why?
+2009-08-17T17:46:00.000Z	indus	sebsebseb	to show how easy it is to ruin systems
+2009-08-17T17:46:00.000Z	sebsebseb	indus	Bad code that does what?
+2009-08-17T17:46:00.000Z	indus	sebsebseb	sorry cant give details
+2009-08-17T17:49:00.000Z	indus	sebsebseb	just watch out for my ppa :D
+2009-08-17T17:50:00.000Z	sebsebseb	indus	well   I assume  your ppa  has warnings on the page for it
+2009-08-17T17:52:00.000Z	sebsebseb	indus	well that sounds ok,  but ideally in my opinion  they  should provide  updates from the repo for major stuff  instead of these ppa's,   instead of just providing security updates
+2009-08-17T17:54:00.000Z	sebsebseb	indus	the problems with it such as?
+2009-08-17T17:56:00.000Z	sebsebseb	indus	well I already knew that useulley ppa's are ok,  but  it's better to get stuff from  the repo  normalley
+2009-08-17T17:57:00.000Z	sebsebseb	indus	Who did you help?
+2009-08-17T17:57:00.000Z	indus	sebsebseb	myself :)
+2009-08-17T18:04:00.000Z	indus	sebsebseb	you helping al2? then ill go for a smoke :)
+2009-08-17T18:05:00.000Z	sebsebseb	indus	well  I probably can't help with this as such
+2009-08-17T18:05:00.000Z	sebsebseb	indus	considering sound is not my area,  since  I guess  I  don't have a lap top, and so haven't had  any proper problems with sound :)
+2009-08-17T18:05:00.000Z	indus	sebsebseb	i too dont have any areas.but np
+2009-08-17T18:08:00.000Z	sebsebseb	indus	Can you help him?
+2009-08-17T18:09:00.000Z	indus	sebsebseb	yes trying
+2009-08-17T18:10:00.000Z	sebsebseb	indus	I guess need to know what sound card  he has or whatever,  does lspci  say that as well hmm
+2009-08-17T18:22:00.000Z	sebsebseb	indus	he did, but nothing about sound card in his pastebin
+2009-08-17T18:22:00.000Z	indus	sebsebseb	give me link aL2
+2009-08-17T18:23:00.000Z	sebsebseb	indus	 Al2   oh  I was thinking  Nivida = graphics  cards,  didn't  know they did sound as well
+2009-08-17T18:24:00.000Z	indus	sebsebseb	of course they do, pretty good ones
+2009-08-17T18:24:00.000Z	indus	sebsebseb	they dont actually make the sound decoder i believe
+2009-08-17T18:26:00.000Z	sebsebseb	indus	the sound decoder you mean uhmm?   I don't know that much about hardware
+2009-08-17T18:52:00.000Z	indus	sebsebseb	can u help him? I HAVE to go now
+2009-08-17T18:53:00.000Z	indus	sebsebseb	use this link https://help.ubuntu.com/community/Sound al2 maybe you can read this too, i gtg
+2009-08-19T18:09:00.000Z	sebsebseb	indus	yeah   rather fast boot up time,   but  in 9.04 it's a little hmm,  but  default in Karmic with the later kernel :)
+2009-08-19T18:10:00.000Z	sebsebseb	indus	and people must clean install for full support, since the Ext3 to Ext4 conversion isn't good enough
+2009-08-19T18:17:00.000Z	sebsebseb	indus	what???
+2009-08-19T18:17:00.000Z	indus	sebsebseb	what do u mean what
+2009-08-19T18:18:00.000Z	sebsebseb	indus	well  Karmic isn't out yet, but surely when it is,   people can  upgrade  from 9.04 and do the Ext3 to Ext4 conversion?   of course as I already said  better to clean install, so they get the real proper thing
+2009-08-19T18:18:00.000Z	indus	sebsebseb	no they cant
+2009-08-19T18:18:00.000Z	sebsebseb	indus	well Ext3 can be converted to Ext4  for 9.04
+2009-08-19T18:18:00.000Z	indus	sebsebseb	its only offered for people will already ext4
+2009-08-19T18:19:00.000Z	indus	sebsebseb	aah i know that but iam talking about the upgrade
+2009-08-19T18:20:00.000Z	indus	sebsebseb	ok correction,
+2009-08-19T18:20:00.000Z	indus	sebsebseb	C-S-B performance is only on newer filesystems
+2009-08-19T18:21:00.000Z	sebsebseb	indus	 C-S-B   Syka  and anyone else, shall we take it to #ubuntu+1 ?
+2009-08-19T18:22:00.000Z	sebsebseb	indus	I am not done quite yet, join #ubuntu+1 :)
+2009-08-19T18:23:00.000Z	indus	sebsebseb	aah no iam tired :) some other day
+2009-11-03T18:45:00.000Z	indus	sebsebseb	f@Y$(*U$R#UIre[ you :)
+2009-11-03T18:46:00.000Z	sebsebseb	indus	What?
+2010-02-01T17:50:00.000Z	indus	sebsebseb	whats a 'commercial' dvd
+2010-02-01T17:51:00.000Z	indus	sebsebseb	vlc also plays region specific dvds
+2010-02-01T17:51:00.000Z	indus	sebsebseb	what? i play them just fine
+2010-02-01T17:51:00.000Z	indus	sebsebseb	i think i dont understand the point you are making
+2010-02-01T17:52:00.000Z	sebsebseb	indus	libdvdcss2
+2010-02-01T17:52:00.000Z	indus	sebsebseb	yea that one
+2010-02-01T17:52:00.000Z	sebsebseb	indus	need that installed or something like it, before they will play
+2010-02-01T17:52:00.000Z	indus	sebsebseb	does vlc need that ? hmm
+2010-02-01T17:52:00.000Z	indus	sebsebseb	thats true the encrypted crap
+2010-02-01T17:53:00.000Z	indus	sebsebseb	ok lets see step by step, jack5463 did you install vlc
+2010-02-02T14:40:00.000Z	sebsebseb	indus	yes
+2010-02-02T14:41:00.000Z	sebsebseb	indus	silly auto complete
+2010-02-02T14:41:00.000Z	indus	sebsebseb	?
+2010-02-02T14:41:00.000Z	indus	sebsebseb	aah you speak with another person, anyways hello :)
+2010-02-02T14:41:00.000Z	sebsebseb	indus	yeah exactly
+2010-02-02T14:50:00.000Z	sebsebseb	indus	some channels you need to be registered on the network, before they let you message there
+2010-06-24T14:09:00.000Z	indus	sebsebseb	thanks
+2010-06-24T14:10:00.000Z	sebsebseb	indus	dual boot is silly for that, a virtual machine on the other hand could be good,  since that way can run Gnome and KDE at the same time
+2010-06-24T14:12:00.000Z	indus	sebsebseb	what you said is another option , but read what i said before you comment, the menu clutter is a fact
+2010-06-24T14:13:00.000Z	indus	sebsebseb	a vm takes resources btw
+2010-06-24T14:13:00.000Z	sebsebseb	indus	having quite a lot in a menu, isn't really a big deal, for most of us :)
+2010-06-24T14:13:00.000Z	indus	sebsebseb	thats the plague called kde isnt it why people stick to gnome
+2010-06-24T14:13:00.000Z	sebsebseb	indus	no
+2010-06-24T14:14:00.000Z	sebsebseb	indus	some like KDE, some like Gnome, some like other stuff like LXDE and XFCE
+2010-06-24T14:14:00.000Z	sebsebseb	indus	and people that use Ubuntu, use their edited Gnome, because thats what Ubuntu comes with
+2010-06-24T14:14:00.000Z	sebsebseb	indus	that will be the main reason for most users
+2010-06-24T14:16:00.000Z	indus	sebsebseb	like what
+2010-06-24T14:17:00.000Z	sebsebseb	indus	see above, and if you don't understand, find out what upstream Gnome is, and how most other distros for the desktop do Gnome :D
+2010-06-24T14:18:00.000Z	sebsebseb	indus	they have a lot in 10.04, but this is off topic,  however if you want to know the details pm
+2010-06-24T14:18:00.000Z	indus	sebsebseb	sure

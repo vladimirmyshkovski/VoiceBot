@@ -1,0 +1,94 @@
+2008-02-18T21:18:00.000Z	usr13	Webdevotion	sudo /sbin/dhclient
+2008-02-18T21:18:00.000Z	usr13	Webdevotion	sudo /sbin/dhclient  eth0
+2008-02-18T21:20:00.000Z	Webdevotion	usr13	tnx, but that did not resolve my problem
+2008-02-18T21:20:00.000Z	Webdevotion	usr13	do you have another insight in this problem?
+2008-02-18T21:28:00.000Z	Webdevotion	usr13	host command works
+2008-02-18T22:00:00.000Z	usr13	Webdevotion	What error do you get?
+2008-02-18T21:21:00.000Z	usr13	Webdevotion	Look at one of the other machines and see what nameserver(s) are working.  (You probably can use the router's as most routers have caching nameserver enabled.
+2008-02-18T21:21:00.000Z	Webdevotion	usr13	been there, done that :)
+2008-02-18T21:21:00.000Z	usr13	Webdevotion	route
+2008-02-18T21:22:00.000Z	Webdevotion	usr13	ok
+2008-02-18T21:22:00.000Z	Webdevotion	usr13	when i do "rout" it says my default gw is my router, is that ok?
+2008-02-18T21:22:00.000Z	Webdevotion	usr13	or do you want me to follow https://www.opendns.com/start/ubuntu.php
+2008-02-18T21:23:00.000Z	usr13	Webdevotion	Yes, then you only need to determine the proper nameservers to use.
+2008-02-18T21:24:00.000Z	usr13	Webdevotion	Did you add the correct dns server addresses?
+2008-02-18T21:24:00.000Z	Webdevotion	usr13	yes, in resolv.conf following https://www.opendns.com/start/ubuntu.php
+2008-02-18T21:25:00.000Z	usr13	Webdevotion	Can you ping the router? e.g. ping 192.168.1.1
+2008-02-18T21:27:00.000Z	Webdevotion	usr13	http://paste.ubuntu-nl.org/56501/
+2008-02-18T21:28:00.000Z	usr13	Webdevotion	host av.com
+2008-02-18T21:29:00.000Z	usr13	Webdevotion	Then you are connected.  What is your problem?
+2008-02-18T21:33:00.000Z	Webdevotion	usr13	 I can not use apt-get install
+2008-02-18T21:34:00.000Z	Webdevotion	usr13	I also can not ping
+2008-02-18T21:34:00.000Z	Webdevotion	usr13	only on ip adresses
+2008-02-18T21:34:00.000Z	Webdevotion	usr13	not on domain names
+2008-02-18T21:35:00.000Z	usr13	Webdevotion	ping 216.109.112.135
+2008-02-18T21:35:00.000Z	usr13	Webdevotion	ping av.com
+2008-02-18T21:36:00.000Z	Webdevotion	usr13	http://paste.ubuntu-nl.org/56505/
+2008-02-18T21:36:00.000Z	Webdevotion	usr13	ping av.com > unknown host av.com
+2008-02-18T21:37:00.000Z	usr13	Webdevotion	Your problem is that you are not resolving domanin names.  You have either entered wrong nameserver addresses or have not entered them properly. Do you know what nameserver addresses you are supposed to be using for your particular ISP?
+2008-02-18T21:38:00.000Z	Webdevotion	usr13	can't I just use my router as dns?
+2008-02-18T21:38:00.000Z	usr13	Webdevotion	If you know what nameserver IP address you are supposed to be using, then add them to: /etc/resolv.conf
+2008-02-18T21:38:00.000Z	Webdevotion	usr13	I added my router on several occasions as NS
+2008-02-18T21:38:00.000Z	usr13	Webdevotion	nameserver ###.##.###.#
+2008-02-18T21:38:00.000Z	Webdevotion	usr13	yes, in /etc/resolv.conf
+2008-02-18T21:38:00.000Z	Webdevotion	usr13	should I reboot anything?
+2008-02-18T21:39:00.000Z	usr13	Webdevotion	If you added the router's IP into resolv.conf and it is not resolving domain names, that means that the router's caching nameserver is turned off. So add another one.
+2008-02-18T21:39:00.000Z	Webdevotion	usr13	I added the www.opendns.com as the nameserver on our router
+2008-02-18T21:40:00.000Z	Webdevotion	usr13	also had contact with the router's help desk, they say everything should work just fine ( draytek machine )
+2008-02-18T21:41:00.000Z	usr13	Webdevotion	Nameservers are IP addresses not domain names.  You have to use the proper IP address.
+2008-02-18T21:41:00.000Z	usr13	Webdevotion	Find out from your ISP what nameserver addresses you need to be using.
+2008-02-18T21:41:00.000Z	Webdevotion	usr13	I know > gave www.opendns.com as an example
+2008-02-18T21:41:00.000Z	usr13	Webdevotion	What are your suggested nameserver addresses?
+2008-02-18T21:42:00.000Z	Webdevotion	usr13	from my ISP?
+2008-02-18T21:42:00.000Z	Webdevotion	usr13	I have no idea
+2008-02-18T21:42:00.000Z	usr13	Webdevotion	yes
+2008-02-18T21:42:00.000Z	Webdevotion	usr13	no answers on google neither
+2008-02-18T21:42:00.000Z	usr13	Webdevotion	Look at one of the other PCs on the LAN and see what it is using.
+2008-02-18T21:42:00.000Z	Webdevotion	usr13	do you know how to find out on windows?
+2008-02-18T21:42:00.000Z	Webdevotion	usr13	or osx?
+2008-02-18T21:42:00.000Z	usr13	Webdevotion	You would have to call your ISP or sysadmin and ask.
+2008-02-18T21:43:00.000Z	usr13	Webdevotion	In windows, yes, go to the network interfiace and click on Properties.
+2008-02-18T21:44:00.000Z	usr13	Webdevotion	Or better:  bring up a terminal window and type:  ifconfig /all
+2008-02-18T21:44:00.000Z	Webdevotion	usr13	"obtain dns automatic" on windows
+2008-02-18T21:44:00.000Z	usr13	Webdevotion	Or better:  bring up a terminal window and type:  ipconfig /all
+2008-02-18T21:45:00.000Z	Webdevotion	usr13	ok, got 'm from  my win box
+2008-02-18T21:45:00.000Z	Webdevotion	usr13	will try them
+2008-02-18T21:45:00.000Z	usr13	Webdevotion	Very good,  that should work for you.
+2008-02-18T21:45:00.000Z	Webdevotion	usr13	after I edit my resolv.conf, should I restart anything?
+2008-02-18T21:47:00.000Z	Webdevotion	usr13	tried ping www.google.com, still same problem ...
+2008-02-18T21:47:00.000Z	Webdevotion	usr13	dns same as working ubuntu box and same as win box
+2008-02-18T21:48:00.000Z	usr13	Webdevotion	Show us your /etc/resolv.conf file
+2008-02-18T21:48:00.000Z	usr13	Webdevotion	Can you ping the nameserver IP addresses?
+2008-02-18T21:49:00.000Z	usr13	Webdevotion	What is the IP of  your router?
+2008-02-18T21:49:00.000Z	Webdevotion	usr13	http://paste.ubuntu-nl.org/56507/
+2008-02-18T21:49:00.000Z	Webdevotion	usr13	router is 192.168.0.1
+2008-02-18T21:50:00.000Z	Webdevotion	usr13	currently using dns from my ISP
+2008-02-18T21:52:00.000Z	usr13	Webdevotion	You basically only need three things to happen.  1) Have the IP set within the proper range that router is using.  2) Set the router's IP as default gateway, (sudo /sbin/route add default gw 192.168.1.1). 3) Add proper nameserver IP addresses to resolv.conf, (nameserver 208.67.222.222)
+2008-02-18T21:53:00.000Z	Webdevotion	usr13	I know this is a stupid, silly situation, but I've been working on this for hours in the last couple of days
+2008-02-18T21:53:00.000Z	usr13	Webdevotion	But if the router is set up properly and broadcasts proper IP info and nameservers and all that, you should be able to set to dhcp and it will do all that for you.
+2008-02-18T21:54:00.000Z	Webdevotion	usr13	I'm using a static ip for this box, because it is a servre
+2008-02-18T21:54:00.000Z	Webdevotion	usr13	but my other machines work well with dhcp
+2008-02-18T21:54:00.000Z	usr13	Webdevotion	If you can ping outside IP addresses and not domain names, then you have narrowed the problem down to an inability to resolve domain names.
+2008-02-18T21:55:00.000Z	Webdevotion	usr13	yes, but how do I resolve domain names > by setting the correct ones in resolv.conf, right?
+2008-02-18T21:55:00.000Z	usr13	Webdevotion	Paste your /etc/resolv.conf file so we can see it.
+2008-02-18T21:55:00.000Z	usr13	Webdevotion	yes
+2008-02-18T21:56:00.000Z	usr13	Webdevotion	Looks good.
+2008-02-18T21:56:00.000Z	usr13	Webdevotion	What do you get when you issue command:  host av.com
+2008-02-18T21:57:00.000Z	usr13	Webdevotion	Paste it for us to see.
+2008-02-18T21:58:00.000Z	Webdevotion	usr13	http://paste.ubuntu-nl.org/56509/
+2008-02-18T21:59:00.000Z	usr13	Webdevotion	You are resolving domain names.  You are connected to the internet and resolving domain names.
+2008-02-18T21:59:00.000Z	Webdevotion	usr13	yes
+2008-02-18T21:59:00.000Z	usr13	Webdevotion	Shouldn't be a problem.
+2008-02-18T21:59:00.000Z	Webdevotion	usr13	I understand that
+2008-02-18T21:59:00.000Z	usr13	Webdevotion	Then what is the problem?
+2008-02-18T21:59:00.000Z	Webdevotion	usr13	I can't use apt-get install because of this problem
+2008-02-18T22:00:00.000Z	usr13	Webdevotion	what exactly are you trying to install?
+2008-02-18T22:00:00.000Z	Webdevotion	usr13	eg capistrano gem for rails deployment
+2008-02-18T22:01:00.000Z	Webdevotion	usr13	http://paste.ubuntu-nl.org/56511/
+2008-02-18T22:02:00.000Z	Webdevotion	usr13	cd roms
+2008-02-18T22:03:00.000Z	usr13	Webdevotion	The problem is not with the internet connection.  I think the package name is wrong.
+2008-02-18T22:03:00.000Z	Webdevotion	usr13	http://www.capify.org/install
+2008-02-18T22:04:00.000Z	Webdevotion	usr13	there is the exact code I use
+2008-02-18T22:07:00.000Z	usr13	Webdevotion	Dont know about gem
+2008-02-18T22:07:00.000Z	usr13	Webdevotion	Have never used gem
+2008-02-18T22:13:00.000Z	usr13	Webdevotion	 Join the Capistrano mailing list: http://www.capify.org/community

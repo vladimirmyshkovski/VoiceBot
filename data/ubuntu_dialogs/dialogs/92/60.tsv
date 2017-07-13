@@ -1,0 +1,92 @@
+2008-04-06T04:03:00.000Z	deniz__		yo can sum1 plz help me share a dial-up connection (i did the hosting on a windows xp comp) but how do i do the client on an ubuntu 7.04 laptop?
+2008-04-06T04:04:00.000Z	GIn	deniz__	how is the laptop connected to the xp machine?
+2008-04-06T04:05:00.000Z	deniz__	GIn	thru a wired router (I think i have the router set up properly but I am not 100% sure)
+2008-04-06T04:06:00.000Z	GIn	deniz__	if your inetrnet connection is on the xp machine, I think you need a switch. Does the router have dhcp build into it?
+2008-04-06T04:06:00.000Z	deniz__	GIn	i have no idea all i can tell u is its a d-link DI-604
+2008-04-06T04:07:00.000Z	deniz__	GIn	i have dial-up internet
+2008-04-06T04:07:00.000Z	deniz__	GIn	i got the hosting right and on microsofts help website it says to do things on a client comp and on the wizard it says to do stuff like floppy or xp cd to it but its not windows the client its ubuntu so im stuck
+2008-04-06T04:08:00.000Z	GIn	deniz__	I think you need a switch and not a router with modem buidlin it
+2008-04-06T04:09:00.000Z	GIn	deniz__	you are connected to the internet through a dialup on the xp machine right?
+2008-04-06T04:09:00.000Z	deniz__	GIn	ya
+2008-04-06T04:09:00.000Z	GIn	deniz__	and you have internet sharing setup on the xp machine?
+2008-04-06T04:09:00.000Z	GIn	deniz__	then you need a switch
+2008-04-06T04:09:00.000Z	deniz__	GIn	i have ubuntu also so if i could share using ubuntu and a router tell me plz and firestarter doesnt work
+2008-04-06T04:09:00.000Z	GIn	deniz__	I don't know if it is also possible with that dlink router. hang on
+2008-04-06T04:09:00.000Z	deniz__	GIn	k
+2008-04-06T04:10:00.000Z	GIn	deniz__	connect your laptop to the modem first
+2008-04-06T04:11:00.000Z	GIn	deniz__	do you know how to use the terminal?
+2008-04-06T04:11:00.000Z	GIn	deniz__	I mean the router
+2008-04-06T04:11:00.000Z	deniz__	GIn	wait, connect my laptop to the modem??? how is that possible?? I have a winmodem with dell's driver for it even tho its not a dell comp
+2008-04-06T04:11:00.000Z	GIn	deniz__	I mean the router
+2008-04-06T04:12:00.000Z	deniz__	GIn	the laptop and desktop r connected to the router, ask me questions to c if its connected properly
+2008-04-06T04:12:00.000Z	GIn	deniz__	do you know how to use the terminal?
+2008-04-06T04:13:00.000Z	deniz__	GIn	well im not a genius but i can use things like repositoriy downloading and using imagemagick
+2008-04-06T04:13:00.000Z	GIn	deniz__	open the terminal and type ifconfig in. you should see something like eth1 or eth0 . like that
+2008-04-06T04:17:00.000Z	deniz__	GIn	http://pastebin.com/d37fb88c9
+2008-04-06T04:18:00.000Z	GIn	deniz__	nice, now run this: sudo dhclient eth0
+2008-04-06T04:22:00.000Z	deniz__	GIn	http://pastebin.com/d241afa65
+2008-04-06T04:22:00.000Z	deniz__	GIn	im on desktop btw
+2008-04-06T04:23:00.000Z	GIn	deniz__	I think you need a switch instead of a router
+2008-04-06T04:23:00.000Z	deniz__	GIn	:'( how much r those?
+2008-04-06T04:23:00.000Z	GIn	deniz__	those are cheap. probably 10 usd or less
+2008-04-06T04:23:00.000Z	deniz__	GIn	r u sure tho cuz i dont need a switch to do it with windows apparently
+2008-04-06T04:24:00.000Z	GIn	deniz__	you got a windows machine that works with this router?
+2008-04-06T04:24:00.000Z	deniz__	GIn	ive never set up a router successfully in my life :(
+2008-04-06T04:25:00.000Z	GIn	deniz__	let me explain how the dlink router works. The router has a DSL/Cable modem build into it and the router uses that as it's main connection to the internet and share that to the computer connected to the 4 ethernet ports.
+2008-04-06T04:26:00.000Z	deniz__	GIn	well on the part were its spose to get internet i connected it to my ethernet port on my mobo hoping to transmit dial-up to it
+2008-04-06T04:27:00.000Z	deniz__	GIn	wat about doing it wireleslly? i have a airlink 101 wireless card in desktop and D-Link DWl-G122 usb adapter
+2008-04-06T04:27:00.000Z	GIn	deniz__	no, a router does not works like that, not the d-link one
+2008-04-06T04:27:00.000Z	GIn	deniz__	if the desktop one can acts as an access point, yes, you can share using that setup.
+2008-04-06T04:27:00.000Z	deniz__	GIn	wat setup? the wireless one i suggested?
+2008-04-06T04:27:00.000Z	GIn	deniz__	but it's much complicated with a switch.
+2008-04-06T04:28:00.000Z	GIn	deniz__	yep, the wireless one
+2008-04-06T04:28:00.000Z	deniz__	GIn	i can do it with only wat i have???
+2008-04-06T04:28:00.000Z	GIn	deniz__	note that not all wireless cards can act as a accesspoint
+2008-04-06T04:28:00.000Z	deniz__	GIn	but ill need ndiswrapper for it i herd and thats gona complicate my life a lot
+2008-04-06T04:28:00.000Z	deniz__	GIn	my desktop is 7.10 and laptop 7.04 i hope thats not a problem
+2008-04-06T04:28:00.000Z	GIn	deniz__	if you can make your win xp pc as an accesspoint, it will be easy
+2008-04-06T04:29:00.000Z	GIn	deniz__	what card you got in your ubuntu laptop?
+2008-04-06T04:29:00.000Z	deniz__	GIn	i dont no how but i think my airlink 101 works perfectly out of the box in gutsy
+2008-04-06T04:29:00.000Z	deniz__	GIn	laptop has usb dwl-g122 usb adapter i think revision b
+2008-04-06T04:29:00.000Z	GIn	deniz__	you got gutsy on your laptop right?
+2008-04-06T04:30:00.000Z	deniz__	GIn	no feisty on laptop, gutsy on desktop (i dual-boot with xp pro on laptop)
+2008-04-06T04:30:00.000Z	deniz__	GIn	on dekstop*
+2008-04-06T04:30:00.000Z	deniz__	GIn	ill refrase
+2008-04-06T04:30:00.000Z	deniz__	GIn	no feisty on laptop, gutsy on desktop (i dual-boot with xp pro on desktop)***
+2008-04-06T04:31:00.000Z	GIn	deniz__	why not upgrade to gutsy?
+2008-04-06T04:32:00.000Z	deniz__	GIn	bcuz my laptop is not connected to internet and i have no way of making it connect, not even to dial-up
+2008-04-06T04:33:00.000Z	GIn	deniz__	download the cd from Ubuntu's website using your xp box?
+2008-04-06T04:33:00.000Z	deniz__	GIn	i cant download a cd on dial-up speed
+2008-04-06T04:33:00.000Z	deniz__	GIn	i get cds thru shipit
+2008-04-06T04:34:00.000Z	GIn	deniz__	but anyway, the easy way to setup a network sharing a dialup connection on the cp machine is suing a switch
+2008-04-06T04:35:00.000Z	deniz__	GIn	can i plz try to make the hosting work ill test if it works by using a xp machine with the usb d-link to check
+2008-04-06T04:35:00.000Z	deniz__	GIn	then ill worry bout ndiswrapper etc another time
+2008-04-06T04:36:00.000Z	GIn	deniz__	o.k try to put the wireless card in windows xp as an accesspoint then
+2008-04-06T04:38:00.000Z	deniz__	GIn	r u talking bout my desktop comp now?
+2008-04-06T04:38:00.000Z	GIn	deniz__	yes
+2008-04-06T04:41:00.000Z	deniz__	GIn	so u want me to go into windows? but i dont no how to set up an access point and i rely think that my wireless card works well cuz it detects networks
+2008-04-06T04:43:00.000Z	GIn	deniz__	works well does not mean it can be configured as an accesspoint. Often cheap cards can't do that.
+2008-04-06T04:48:00.000Z	deniz__	GIn	my card is well supported in ubuntu from wat i remember, xept my d-link thing
+2008-04-06T04:49:00.000Z	GIn	deniz__	you can always try ndiswrapper if it doesn't work out of the box. I am using ndiswrapper myself. works perfect :)
+2008-04-06T04:50:00.000Z	GIn	deniz__	it's not hard to setup ndiswrapper
+2008-04-06T04:50:00.000Z	deniz__	GIn	ya but ndiswrapper is the least of my concers and that doesnt worry me atm, its just how do i transmit my dial-up "to the air" using my card in ubuntu desktop comp
+2008-04-06T04:50:00.000Z	deniz__	GIn	https://help.ubuntu.com/community/HardwareSupportComponentsWirelessNetworkCardsAirlink101
+2008-04-06T04:52:00.000Z	deniz__	GIn	http://pastebin.com/d303e62cc
+2008-04-06T04:52:00.000Z	GIn	deniz__	#
+2008-04-06T04:53:00.000Z	deniz__	GIn	so that means wat? i need ndiswrapper to transmit to air?
+2008-04-06T04:54:00.000Z	GIn	deniz__	I don't know. I have not tried to set it as an accesspoint.
+2008-04-06T04:54:00.000Z	deniz__	GIn	how would i no wether i need it or not?
+2008-04-06T04:54:00.000Z	GIn	deniz__	I can connect to the internet with gutsy using that chipset out of the box. but not sure about accesspoint. never done it before
+2008-04-06T04:55:00.000Z	deniz__	GIn	wats the first step i need to do to transmit to air?
+2008-04-06T04:55:00.000Z	GIn	deniz__	with transmit to air, do you mean configure it to share the inetrnet connection?
+2008-04-06T04:56:00.000Z	GIn	deniz__	or just connect to a wireless accesspoint?
+2008-04-06T04:56:00.000Z	deniz__	GIn	ya
+2008-04-06T04:56:00.000Z	deniz__	GIn	no not connect, to share
+2008-04-06T04:56:00.000Z	GIn	deniz__	do you have dialup working on that machine with Ubuntu?
+2008-04-06T04:56:00.000Z	deniz__	GIn	ya, i am on ubuntu
+2008-04-06T04:57:00.000Z	GIn	deniz__	mhh :( I have never shared a internet connection on Ubuntu before... :\  try google
+2008-04-06T04:57:00.000Z	deniz__	GIn	:'(...im the worst googler in the whole world
+2008-04-06T04:57:00.000Z	GIn	deniz__	but with the chipset rt25/61 you should be able to.
+2008-04-06T05:14:00.000Z	GIn	deniz__	yes I am
+2008-04-06T05:16:00.000Z	GIn	deniz__	google? try to help on the Ubuntu forum?
+2008-04-06T05:17:00.000Z	GIn	deniz__	I have never tried to setup an accesspoint with Ubuntu before.

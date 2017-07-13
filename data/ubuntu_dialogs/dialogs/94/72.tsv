@@ -1,0 +1,94 @@
+2007-07-16T16:28:00.000Z	matkix_		Anyone, ideas on how to tell what wifi card I have?
+2007-07-16T16:29:00.000Z	matkix_		its inside
+2007-07-16T16:29:00.000Z	matkix_		kk
+2007-07-16T16:29:00.000Z	matkix_		I guess ill just do that
+2007-07-16T16:29:00.000Z	matkix_		brb
+2007-07-16T16:25:00.000Z	matkix_		Question, Say my network manager won't work. How can I connect to a wireless network?
+2007-07-16T16:26:00.000Z	BashBang	matkix_	have you read the man page on iwconfig?
+2007-07-16T16:29:00.000Z	matkix_	BashBang	I've looked at it. not sure I understand. I see my network listed... but im not sure it connected... It isn't getting dhcp. Ideas?
+2007-07-16T16:32:00.000Z	matkix_	BashBang	I've looked at it. not sure I understand. I see my network listed... but im not sure it connected... It isn't getting dhcp. Ideas?
+2007-07-16T16:33:00.000Z	BashBang	matkix_	can you see you comp in your routers dhcp table? is ssid broadcast enabled on the router?
+2007-07-16T16:35:00.000Z	matkix_	BashBang	Its just showing on this end... not connecting as i see it.
+2007-07-16T16:36:00.000Z	matkix_	BashBang	Wait! I lie, it is connected, I guess I just need traffic now! How might I get things to run over the wireless?
+2007-07-16T16:38:00.000Z	BashBang	matkix_	great
+2007-07-16T16:39:00.000Z	matkix_	BashBang	 So how do I get it to take an ip?
+2007-07-16T16:39:00.000Z	BashBang	matkix_	how do you know that it is connected?
+2007-07-16T16:40:00.000Z	BashBang	matkix_	but no entry in dhcp tabels?
+2007-07-16T16:41:00.000Z	BashBang	matkix_	iwconfig is your friend.
+2007-07-16T16:41:00.000Z	matkix_	BashBang	Yeah got that, read the man and still am attempting to set it up so I get a ip via dhcp.
+2007-07-16T16:44:00.000Z	BashBang	matkix_	I hate to beat this to death but, if you run nm "network-manager" from the console does it give you an applet in the system tray?
+2007-07-16T16:45:00.000Z	matkix_	BashBang	Command not found... Is this something I need t oinstall
+2007-07-16T16:46:00.000Z	BashBang	matkix_	sry it should be   nm-applet
+2007-07-16T16:46:00.000Z	BashBang	matkix_	on the console it's just nm; or should be nm-applet
+2007-07-16T16:47:00.000Z	matkix_	BashBang	Its open, and shows no wireless, but wireless is there I can see it with iwconfig and ifconfig and see on the router its connected.
+2007-07-16T16:47:00.000Z	matkix_	BashBang	 Just not requesting an ip.
+2007-07-16T16:47:00.000Z	BashBang	matkix_	k, go to manual configuration in the nm applet
+2007-07-16T16:48:00.000Z	matkix_	BashBang	and?
+2007-07-16T16:49:00.000Z	BashBang	matkix_	does it show a dialog with wireless?
+2007-07-16T16:51:00.000Z	matkix_	BashBang	No luck...
+2007-07-16T16:51:00.000Z	BashBang	matkix_	what did you do?
+2007-07-16T16:52:00.000Z	matkix_	BashBang	Disconnected from wired and attempted to go to wifi
+2007-07-16T16:52:00.000Z	BashBang	matkix_	go to manual config on the nm applet
+2007-07-16T16:52:00.000Z	matkix_	BashBang	Now in iw its now showing on a network
+2007-07-16T16:53:00.000Z	matkix_	BashBang	I did
+2007-07-16T16:53:00.000Z	BashBang	matkix_	: k no click wireless and the properties
+2007-07-16T16:53:00.000Z	matkix_	BashBang	Did
+2007-07-16T16:54:00.000Z	BashBang	matkix_	: make sure roaming mode is unchecked and enter you networks name under essid
+2007-07-16T16:55:00.000Z	matkix_	BashBang	I pmed you with what iwconfig is showing
+2007-07-16T16:56:00.000Z	matkix_	BashBang	Its getting a ipv6 .... not v4 why?
+2007-07-16T16:57:00.000Z	BashBang	matkix_	: what brand of router do you have?
+2007-07-16T05:01:00.000Z	matkix_	BashBang	I really need help with this. I've been trying for hours! It is now not connecting to my network, so i've moved a step back...
+2007-07-16T05:01:00.000Z	BashBang	matkix_	: what brand of router do you have?
+2007-07-16T05:01:00.000Z	matkix_	BashBang	Its running a distro of linux
+2007-07-16T05:02:00.000Z	BashBang	matkix_	: it's home made router?
+2007-07-16T05:03:00.000Z	matkix_	BashBang	 ITS not the router! I just need to be able to configure the freekin card.
+2007-07-16T05:03:00.000Z	BashBang	matkix_	: k, so we'll go through step by step
+2007-07-16T05:04:00.000Z	matkix_	BashBang	I need to tell it what network to connect, get an ip and share traffic.
+2007-07-16T05:05:00.000Z	BashBang	matkix_	: go in to your routers admin interface, and you should have a tab for wireless, yes?
+2007-07-16T05:05:00.000Z	matkix_	BashBang	Do you not understand its not the router?
+2007-07-16T05:06:00.000Z	BashBang	matkix_	: yes, but we need info from there to put into network manager to get you connected
+2007-07-16T05:07:00.000Z	BashBang	matkix_	: I'm saying is network manager needs to be told what to look for
+2007-07-16T05:08:00.000Z	BashBang	matkix_	ssid, wpa keys, network name? all of that?
+2007-07-16T05:09:00.000Z	matkix_	BashBang	You do understand that im under this setup http://ubuntuforums.org/showthread.php?t=308152 yes?
+2007-07-16T05:09:00.000Z	BashBang	matkix_	nope
+2007-07-16T05:10:00.000Z	matkix_	BashBang	Its a special driver setup.
+2007-07-16T05:11:00.000Z	BashBang	matkix_	: looking now
+2007-07-16T05:11:00.000Z	matkix_	BashBang	kk
+2007-07-16T05:12:00.000Z	matkix_	BashBang	 The only change from this setup was the driver i used. It was a more updated one
+2007-07-16T05:14:00.000Z	matkix_	BashBang	So I'm using this driver http://www.ralinktech.com/ralink/Home/Support/Linux.html first on this list.
+2007-07-16T05:16:00.000Z	matkix_	BashBang	So do you have any idea how I can get the wifi card to work with the manger again. The device is named "rausb0:" rather than wifi or anything... could this be it?
+2007-07-16T05:16:00.000Z	BashBang	matkix_	: this is usb wireless?
+2007-07-16T05:20:00.000Z	matkix_	BashBang	Ideas?
+2007-07-16T05:21:00.000Z	BashBang	matkix_	: your positive your device is bound to ethx?
+2007-07-16T05:22:00.000Z	matkix_	BashBang	 Like how so? Can you tell me what you mean by bound?
+2007-07-16T05:22:00.000Z	BashBang	matkix_	: cat /proc/net/dev and make sure that it's there
+2007-07-16T05:23:00.000Z	matkix_	BashBang	There...
+2007-07-16T05:23:00.000Z	BashBang	matkix_	k
+2007-07-16T05:23:00.000Z	matkix_	BashBang	ideas...
+2007-07-16T05:24:00.000Z	matkix_	BashBang	ahhhh its 5am here... There when my night sleep.
+2007-07-16T05:24:00.000Z	BashBang	matkix_	yeah almost 7:30am here
+2007-07-16T05:24:00.000Z	matkix_	BashBang	So what can I do to get this to connect?
+2007-07-16T05:26:00.000Z	BashBang	matkix_	: not 100% sure, but google for iwconfig, and learn it
+2007-07-16T05:26:00.000Z	matkix_	BashBang	I just want to connect to a wireless network... I did it it just didn't connect.
+2007-07-16T05:28:00.000Z	BashBang	matkix_	: you have wpa_suplicant running yes?
+2007-07-16T05:28:00.000Z	matkix_	BashBang	I donno....
+2007-07-16T05:29:00.000Z	matkix_	BashBang	How do I tell?
+2007-07-16T05:32:00.000Z	BashBang	matkix_	: ps -A | grep -in wpa
+2007-07-16T05:33:00.000Z	BashBang	matkix_	wpa_supplicant is used for your encryc
+2007-07-16T05:33:00.000Z	BashBang	matkix_	: * encryption
+2007-07-16T05:33:00.000Z	BashBang	matkix_	: hang on, reading the docs for your driver
+2007-07-16T05:37:00.000Z	BashBang	matkix_	:wpa_supplicant -c your_config_file -i rausb0 -D ralink, if you read the README's that came with the driver then it should all be clear
+2007-07-16T05:38:00.000Z	matkix_	BashBang	 Where is all that to be placed?
+2007-07-16T05:39:00.000Z	BashBang	matkix_	: like I said when you download the driver from the web site, it has the module and there is wpa_supplicant
+2007-07-16T05:40:00.000Z	BashBang	matkix_	: you need to compile a custom wpa_supplicant according the README that comes with the driver
+2007-07-16T05:40:00.000Z	matkix_	BashBang	Can't say I understand this stuff. Can you point me into what i need to do?
+2007-07-16T05:40:00.000Z	BashBang	matkix_	I have to go to work soon, not enough time
+2007-07-16T05:41:00.000Z	BashBang	matkix_	: read the documentation that came with the drivers, and go on the ralinks forums
+2007-07-16T05:43:00.000Z	BashBang	matkix_	: it says in the docs that you may be able to use the stock wpa_supplicant but you will still have to edit the config file
+2007-07-16T05:46:00.000Z	BashBang	matkix_	: in the newest drivers (if I had the right ones) there should be a folder for modules, and a folder for wpa_supplicant
+2007-07-16T05:46:00.000Z	matkix_	BashBang	yeah there is that folder
+2007-07-16T05:47:00.000Z	BashBang	matkix_	: I think that is your problem right there, no wpa_supplicant
+2007-07-16T05:47:00.000Z	BashBang	matkix_	: only took about an hour and a half to figure that out :)
+2007-07-16T05:47:00.000Z	matkix_	BashBang	Okay.... I'm not sure I understand how to do it even after reading things..
+2007-07-16T05:48:00.000Z	BashBang	matkix_	: when in doubt google it :)   I have to get ready for work, good luck.
+2007-07-16T09:27:00.000Z	matkix_	BashBang	 Is it alright if we go pm on this one? I'm gettin a lil tired and it would be really nice to be in pm.

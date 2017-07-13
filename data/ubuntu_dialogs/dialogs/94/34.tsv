@@ -1,0 +1,94 @@
+2009-10-27T11:21:00.000Z	zortec		Does anyone have the P6NGM2 (MS-7518) motherboard with the nVidia GeForce 7050/610i chipset.  I am trying to find a manual on the video card to see what resolutions it can support.  Any ideas?
+2009-10-27T11:21:00.000Z	zortec		Much appreciated if you can point me to where there is a manual.
+2009-10-27T11:23:00.000Z	zortec		Are there manuals available from nvidia's website on graphic cards? I haven't found any
+2009-10-27T11:23:00.000Z	zortec		I checked MSI and they didn't have any info on that particular video chipset
+2009-10-27T11:23:00.000Z	indus	zortec	what kind of manuals?
+2009-10-27T11:23:00.000Z	indus	zortec	check the manufacturer site
+2009-10-27T11:24:00.000Z	zortec	indus	I am trying to find a manual on the NVIDIA MCP 73U chipset
+2009-10-27T11:24:00.000Z	indus	zortec	hmm nvidia have it as a pdf on the site i believe so
+2009-10-27T11:24:00.000Z	zortec	indus	Yeah I'm having trouble finding where they have pdf files on the site
+2009-10-27T11:24:00.000Z	indus	zortec	if you can locate the chipset on the site that is
+2009-10-27T11:25:00.000Z	indus	zortec	its on the left block somewhere
+2009-10-27T11:25:00.000Z	zortec	indus	I haven't had any luck in tracking down that particular chipset
+2009-10-27T11:28:00.000Z	indus	zortec	where is this chipset used?
+2009-10-27T11:28:00.000Z	zortec	indus	Not sure I understand the question
+2009-10-27T11:28:00.000Z	indus	zortec	is this on a motherboard?
+2009-10-27T11:29:00.000Z	zortec	indus	I have d/l the motherboard manual, but it does not have much about the chipset so that is why I have been at nvidia's site
+2009-10-27T11:31:00.000Z	zortec	indus	This is all the information I have
+2009-10-27T11:31:00.000Z	zortec	indus	http://pastebin.com/d35f8275
+2009-10-27T11:33:00.000Z	indus	zortec	hmm so what problem do u have wit h it
+2009-10-27T11:33:00.000Z	indus	zortec	i think google is showing lots of stuff on it
+2009-10-27T11:33:00.000Z	indus	zortec	none of those good?
+2009-10-27T11:33:00.000Z	zortec	indus	the problem I have is what I find out the supported resolutions of that chipset since I am looking at upgrading the monitor
+2009-10-27T11:34:00.000Z	zortec	indus	so I need to find out what monitors I can buy with that chipset
+2009-10-27T11:36:00.000Z	zortec	indus	I can't find the technical specs on that chipset
+2009-10-27T11:36:00.000Z	indus	zortec	hmm do you think some monitors wont work with it?
+2009-10-27T11:36:00.000Z	zortec	indus	it's possible if I get one with a super high res
+2009-10-27T11:36:00.000Z	zortec	indus	so would rather not take my chances
+2009-10-27T11:37:00.000Z	indus	zortec	unlikely
+2009-10-27T11:37:00.000Z	indus	zortec	its old chipset right?
+2009-10-27T11:37:00.000Z	zortec	indus	hmm. but still, nvidia should provide info on the chipset, no?
+2009-10-27T11:37:00.000Z	indus	zortec	yeah
+2009-10-27T11:39:00.000Z	zortec	indus	sure I can do trial and error, but I know it supports vga and dvi... what I want to know is the max res supported by nvidia geforce 7050/nforce 610i chipset
+2009-10-27T11:39:00.000Z	indus	zortec	wait
+2009-10-27T11:40:00.000Z	indus	zortec	geforce 7050 basically
+2009-10-27T11:40:00.000Z	zortec	indus	yeah, basically
+2009-10-27T11:41:00.000Z	zortec	indus	is there a pdf available on the 7050?
+2009-10-27T11:43:00.000Z	indus	zortec	interestingly ther isnt any for the 7050
+2009-10-27T11:43:00.000Z	indus	zortec	need to report to nvidia this
+2009-10-27T11:43:00.000Z	zortec	indus	what do you mean there isn't any? that is odd...
+2009-10-27T11:44:00.000Z	indus	zortec	got it
+2009-10-27T11:44:00.000Z	indus	zortec	http://www.nvidia.com/object/IO_35712.html
+2009-10-27T11:44:00.000Z	indus	zortec	i suggest you go to MSI website, and check it
+2009-10-27T11:44:00.000Z	indus	zortec	iam sure it will be there
+2009-10-27T11:45:00.000Z	zortec	indus	but where do you find resolution in that?
+2009-10-27T11:47:00.000Z	indus	zortec	got it wait
+2009-10-27T11:48:00.000Z	indus	zortec	cant find res but what monitor are you talking abbout?
+2009-10-27T11:48:00.000Z	indus	zortec	best is manufacturer page but it should support upto 1900 and above easy
+2009-10-27T11:48:00.000Z	zortec	indus	yeah that is what I was trying to find
+2009-10-27T11:49:00.000Z	indus	zortec	K9NGM3 board?
+2009-10-27T11:50:00.000Z	indus	zortec	it has single link DVI support so be careful
+2009-10-27T11:50:00.000Z	zortec	indus	MS-7518
+2009-10-27T11:51:00.000Z	indus	zortec	Blazing-fast RAMDAC supports display with high, ergonomic refresh rates up to and including 1920x1440@75Hz.
+2009-10-27T11:51:00.000Z	indus	zortec	http://www.nvidia.com/object/mobo_gpu_features_benefits.html#gf7nf5
+2009-10-27T11:51:00.000Z	zortec	indus	P6NGM2-L
+2009-10-27T11:52:00.000Z	indus	zortec	so dont expect 1080p res
+2009-10-27T11:52:00.000Z	indus	zortec	its integrated so what u expect
+2009-10-27T11:52:00.000Z	indus	zortec	but check with MSI for specifics
+2009-10-27T11:52:00.000Z	zortec	indus	where did you find that? I see the 7050
+2009-10-27T11:52:00.000Z	zortec	indus	but not the 610i on there
+2009-10-27T11:53:00.000Z	indus	zortec	610 is the southbridge for media storage and communications , nothing to do with display
+2009-10-27T11:54:00.000Z	zortec	indus	where do you see the res?
+2009-10-27T11:54:00.000Z	indus	zortec	its mentioned keep reading
+2009-10-27T11:55:00.000Z	indus	zortec	http://www.nvidia.com/object/mobo_gpu_features_benefits.html#gf7nf5
+2009-10-27T11:56:00.000Z	zortec	indus	ok I see it now
+2009-12-08T18:58:00.000Z	indus	zortec	i prefer gnome xchat its simple and unclettered
+2009-12-08T18:59:00.000Z	zortec	indus	is there a way to switch channels without having to use the mouse?
+2009-12-08T19:00:00.000Z	indus	zortec	hmm ctn N? BUT
+2009-12-08T19:09:00.000Z	indus	zortec	ubuntu-bug -p <packagename_
+2009-12-08T19:10:00.000Z	indus	zortec	ubuntu-bug -p <packagename>
+2009-12-08T19:10:00.000Z	indus	zortec	ok then its different ,  a casper bug
+2009-12-08T19:10:00.000Z	indus	zortec	you need to follow some steps
+2009-12-08T19:10:00.000Z	indus	zortec	wait i help you
+2009-12-08T19:14:00.000Z	indus	zortec	https://wiki.ubuntu.com/DebuggingCasper
+2009-12-08T19:15:00.000Z	indus	zortec	u needa pen drive for it
+2009-12-08T19:15:00.000Z	zortec	indus	what are you talking about?
+2009-12-08T19:15:00.000Z	zortec	indus	and why is a pen drive required to report a bug?
+2009-12-08T19:15:00.000Z	indus	zortec	you wanted to file a bug about the installer?
+2009-12-08T19:15:00.000Z	indus	zortec	it boots?
+2009-12-08T19:15:00.000Z	indus	zortec	aah sorry never mind
+2009-12-08T19:16:00.000Z	zortec	indus	yeah ubuntu 9.10 is installed, just would like to report a bug that I encountered which was during the installer the screen went black
+2009-12-08T19:16:00.000Z	zortec	indus	the screensaver should be suppressed
+2009-12-08T19:16:00.000Z	indus	zortec	ok sorry
+2009-12-08T19:16:00.000Z	indus	zortec	anyways u need the dmesg and casper logs
+2009-12-08T19:16:00.000Z	zortec	indus	you have lost me now
+2009-12-08T19:17:00.000Z	indus	zortec	any installation related issues are recorded in casper.log
+2009-12-08T19:17:00.000Z	zortec	indus	but there was no error... just I want to report that the screensaver should not come on when the installer is running
+2009-12-08T19:17:00.000Z	indus	zortec	youll figure it out
+2009-12-08T19:17:00.000Z	zortec	indus	does that make sense man?
+2009-12-08T19:18:00.000Z	indus	zortec	yeah itsa wishlist then, anyways file  a bug and it will be classified as such
+2009-12-08T19:18:00.000Z	indus	zortec	oops sorry too much coffee
+2009-12-08T19:18:00.000Z	zortec	indus	so how do you file a wishlit? now that you got me way confused
+2009-12-08T19:18:00.000Z	indus	zortec	ok is a bug
+2009-12-08T19:18:00.000Z	zortec	indus	wishlist or bug...  or whatever it is lol
+2009-12-08T19:18:00.000Z	indus	zortec	yea bug cos screensaver comes on

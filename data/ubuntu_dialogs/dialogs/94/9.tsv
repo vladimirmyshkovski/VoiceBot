@@ -1,0 +1,94 @@
+2011-12-14T23:32:00.000Z	Wiz_KeeD		anyone know why i cannot open a .odt file with libreoffice in ubuntu 10.4 even though i am part of the group that the file is created from and i have rw permissions on it?
+2011-12-14T23:32:00.000Z	Wiz_KeeD		i mean it's readonly
+2011-12-14T23:32:00.000Z	Wiz_KeeD		i cannot edit it
+2011-12-14T23:33:00.000Z	Wiz_KeeD		i can edit it apparently with some other editor what the hell
+2011-12-14T23:33:00.000Z	ActionParsnip	Wiz_KeeD	if you make yourself the owner (to test) is it ok?
+2012-02-21T05:03:00.000Z	ActionParsnip	Wiz_KeeD	install xfce4  see if its better there...
+2012-02-21T05:04:00.000Z	ActionParsnip	Wiz_KeeD	you have a lost of apps on the bar on the left hand side of the screen, yes?
+2012-02-21T05:04:00.000Z	Wiz_KeeD	ActionParsnip	yes i do you are right
+2012-02-21T05:05:00.000Z	ActionParsnip	Wiz_KeeD	then you are running unity, try xfce, see ifit is more stable and/or more to your liking
+2012-02-21T05:05:00.000Z	ActionParsnip	Wiz_KeeD	install the package:  xfce4    log off, then log in to the xfce session
+2012-02-21T05:05:00.000Z	ActionParsnip	Wiz_KeeD	its not really a change, you will still have unity and so on still instaled
+2012-02-21T05:09:00.000Z	ActionParsnip	Wiz_KeeD	sudo apt-get install xfce4     then log off and log on to the xfce session
+2012-02-21T05:10:00.000Z	ActionParsnip	Wiz_KeeD	log off and log back into the Unity session...
+2012-02-29T00:53:00.000Z	ActionParsnip	Wiz_KeeD	you are adding router functionality to your OS, its not something simple
+2012-03-29T02:13:00.000Z	ActionParsnip	Wiz_KeeD	there is no best, I suggest you connect to the SSHfS using nautilus and you can download stuff that way
+2012-03-29T02:14:00.000Z	ActionParsnip	Wiz_KeeD	what can be easier than nautilus?
+2012-03-29T02:32:00.000Z	ActionParsnip	Wiz_KeeD	yes its the default file manager
+2012-03-29T02:33:00.000Z	ActionParsnip	Wiz_KeeD	if you add it as a bookmark, it will make access easier later
+2012-03-29T02:34:00.000Z	ActionParsnip	Wiz_KeeD	yes in the global menu, you can make the bookamrk there
+2012-10-29T15:38:00.000Z	ActionParsnip	Wiz_KeeD	sounds fine to me (checked man page)
+2012-10-29T15:44:00.000Z	ActionParsnip	Wiz_KeeD	is the file owned by your user?
+2012-10-29T15:45:00.000Z	Wiz_KeeD	ActionParsnip	what do you mean?
+2012-10-29T15:46:00.000Z	ActionParsnip	Wiz_KeeD	if you install unp, can you extract it?
+2012-10-29T15:47:00.000Z	ActionParsnip	Wiz_KeeD	its a one command for all archives extracter, like the GUI, you don't have to click different to extract different archives. Unp gives this abstraction in CLI
+2012-10-29T15:48:00.000Z	ActionParsnip	Wiz_KeeD	worth a go, plus its stupidly useful (I think it should be default installed)
+2012-10-29T15:48:00.000Z	ActionParsnip	Wiz_KeeD	check that you are the owner of the file
+2012-10-29T15:49:00.000Z	ActionParsnip	Wiz_KeeD	making a tar of the zip won't change the data
+2012-10-29T15:50:00.000Z	ActionParsnip	Wiz_KeeD	you could make a tar of the initial folder, then gzip it
+2012-10-29T15:54:00.000Z	Wiz_KeeD	ActionParsnip	it's because of Dropbox
+2012-10-29T15:56:00.000Z	ActionParsnip	Wiz_KeeD	weird
+2012-10-29T16:01:00.000Z	ActionParsnip	Wiz_KeeD	try using a differnet compression
+2012-10-29T16:01:00.000Z	ActionParsnip	Wiz_KeeD	tar.gz
+2012-10-29T16:02:00.000Z	ActionParsnip	Wiz_KeeD	tar czf filename.tar.gz folder
+2012-10-29T16:08:00.000Z	ActionParsnip	Wiz_KeeD	does tar.gz work ok?
+2012-10-29T16:09:00.000Z	ActionParsnip	Wiz_KeeD	unp filename.tar.gz     or:   tar zxvf filename.tar.gz
+2012-10-29T16:09:00.000Z	ActionParsnip	Wiz_KeeD	if you had unp installed, you wouldn't have to ask, its the same command for ALL archives
+2012-10-29T16:10:00.000Z	ActionParsnip	Wiz_KeeD	try unp :)
+2012-10-29T16:11:00.000Z	ActionParsnip	Wiz_KeeD	well....yeah
+2012-10-29T16:12:00.000Z	ActionParsnip	Wiz_KeeD	could try downloading it with curl instead of wget
+2012-10-29T16:14:00.000Z	ActionParsnip	Wiz_KeeD	weird, if you upload the folder as is, then download that, is it ok?
+2012-10-29T16:15:00.000Z	ActionParsnip	Wiz_KeeD	or try just tarring the folder and transfer that
+2012-10-29T16:15:00.000Z	ActionParsnip	Wiz_KeeD	no, I suggested tar.gz  not ust tar. There is a difference
+2012-10-29T16:16:00.000Z	ActionParsnip	Wiz_KeeD	instead of asking simple questions like that, try searching a bit. The Internet has a world of data
+2012-10-29T16:17:00.000Z	ActionParsnip	Wiz_KeeD	it is
+2012-10-29T16:17:00.000Z	ActionParsnip	Wiz_KeeD	md5sum filename     not simple enough
+2012-10-29T16:17:00.000Z	ActionParsnip	Wiz_KeeD	its in the link ubottu gave, all you have to do is read
+2012-10-29T16:18:00.000Z	ActionParsnip	Wiz_KeeD	no, it shows how to MD5 sum a file, the actual file is irrelevant
+2012-10-29T16:18:00.000Z	ActionParsnip	Wiz_KeeD	think about it.....Just because a guide isn't EXACTLY for your issue doesn't mean it is of zero value
+2012-10-29T16:19:00.000Z	ActionParsnip	Wiz_KeeD	try just tarring the folder, see how that goes
+2012-11-24T23:13:00.000Z	ActionParsnip	Wiz_KeeD	what is the output of:  uname -a
+2012-11-24T23:15:00.000Z	ActionParsnip	Wiz_KeeD	wget https://dl.dropbox.com/u/8850924/google-chrome-stable_current_i386.deb; sudo dpkg -i ./google-chrome-stable_current_i386.deb; rm ./google-chrome-stable_current_i386.deb; sudo apt-get update; sudo apt-get upgrade
+2012-11-24T23:16:00.000Z	ActionParsnip	Wiz_KeeD	its just easier, chrome isn't in the repos
+2012-11-24T23:18:00.000Z	ActionParsnip	Wiz_KeeD	it is
+2012-11-24T23:18:00.000Z	ActionParsnip	Wiz_KeeD	the google website
+2012-11-24T23:19:00.000Z	ActionParsnip	Wiz_KeeD	it installs in terminal instead, otherwise zero
+2012-11-24T23:24:00.000Z	ActionParsnip	Wiz_KeeD	just because its default installed doesn't make it "closer" whatever that means.
+2012-11-25T01:43:00.000Z	ActionParsnip	Wiz_KeeD	http://www.webupd8.org/2012/01/install-oracle-java-jdk-7-in-ubuntu-via.html
+2012-11-25T01:43:00.000Z	Wiz_KeeD	ActionParsnip	isn't java 8 out?
+2012-11-25T01:44:00.000Z	ActionParsnip	Wiz_KeeD	yes, its on that ppa too....
+2012-11-25T01:44:00.000Z	ActionParsnip	Wiz_KeeD	yes........
+2012-11-25T01:46:00.000Z	ActionParsnip	Wiz_KeeD	use TAB and ENTER to accept the license
+2012-11-25T01:46:00.000Z	ActionParsnip	Wiz_KeeD	not freakish at all
+2012-11-25T01:47:00.000Z	ActionParsnip	Wiz_KeeD	lots of things have a text interface
+2012-11-25T01:49:00.000Z	ActionParsnip	Wiz_KeeD	its an installer using the tar.gz from the java site, the deb is just a jandy way to install it. Nothing more
+2012-11-25T01:49:00.000Z	ActionParsnip	Wiz_KeeD	you can do it manually using the archive, the deb just does it for you
+2012-11-25T01:50:00.000Z	ActionParsnip	Wiz_KeeD	the java will also update as the PPA is updated
+2012-11-25T01:57:00.000Z	ActionParsnip	Wiz_KeeD	no wrries. The PPA makes life a lot easier
+2012-11-25T01:58:00.000Z	ActionParsnip	Wiz_KeeD	there are lots of ways to do many things in any OS
+2012-11-25T02:05:00.000Z	ActionParsnip	Wiz_KeeD	downloads a file, then extracts it
+2012-11-25T02:05:00.000Z	ActionParsnip	Wiz_KeeD	its in a hidden folder
+2012-11-25T02:10:00.000Z	Wiz_KeeD	ActionParsnip	when first ran the second command i got the small dropbox icon on the top left and it started syncing, now it doesn't start anymore and locate 'dropbox' just shows a few images and that it, and i cannot find the archive or it's contents, how can i remove everything else and have a fresh install of dropbox from the software center?
+2012-11-25T02:11:00.000Z	ActionParsnip	Wiz_KeeD	just delete the downloaded folder and run:  sudo apt-get install nautilus-dropbox
+2012-11-25T02:25:00.000Z	ActionParsnip	Wiz_KeeD	its only 2 commands....
+2012-11-25T02:29:00.000Z	ActionParsnip	Wiz_KeeD	did you even read Ubottu's link?
+2012-11-25T02:30:00.000Z	ActionParsnip	Wiz_KeeD	so why are you using apt-get .....
+2012-11-25T02:30:00.000Z	ActionParsnip	Wiz_KeeD	so I know you didn't read it.....or not properly
+2012-11-25T02:34:00.000Z	ActionParsnip	Wiz_KeeD	gimme a sec
+2012-11-25T02:34:00.000Z	Wiz_KeeD	ActionParsnip	i can give you more info about the laptop type, build and whatnot, been searching the web a bit but ati card ubuntu eyes hurt isn't exactly a very clear description of a problem
+2012-11-25T02:36:00.000Z	ActionParsnip	Wiz_KeeD	https://dl.dropbox.com/u/8850924/Screenshot.png
+2012-11-25T02:37:00.000Z	Wiz_KeeD	ActionParsnip	i've finished that it's done :)
+2012-11-25T02:37:00.000Z	ActionParsnip	Wiz_KeeD	again, why are you using apt-get when you SAY you read the page. Where does it say apt-get?
+2012-11-25T02:37:00.000Z	ActionParsnip	Wiz_KeeD	yes, install taskel, then use that to install the package is what the page says :)
+2012-11-25T02:38:00.000Z	ActionParsnip	Wiz_KeeD	so you didn't read it
+2012-11-25T02:44:00.000Z	ActionParsnip	Wiz_KeeD	not by default
+2012-11-25T02:45:00.000Z	ActionParsnip	Wiz_KeeD	what is the output of:  lsb_release -sc
+2012-11-25T02:46:00.000Z	ActionParsnip	Wiz_KeeD	and the output of:   apt-cache policy vim vim-common
+2012-11-25T02:48:00.000Z	ActionParsnip	Wiz_KeeD	sudo apt-get --purge remove vim-common; sudo apt-get install vim
+2012-11-25T02:48:00.000Z	ActionParsnip	Wiz_KeeD	run:  sudo apt-get clean     first
+2012-11-25T02:49:00.000Z	ActionParsnip	Wiz_KeeD	you have vim-common installed from somewhere other then the ubuntu repos, it is causing the issues
+2012-11-25T02:49:00.000Z	ActionParsnip	Wiz_KeeD	now when you install the package the deps can be met
+2012-11-25T02:49:00.000Z	ActionParsnip	Wiz_KeeD	the clean command removes the cache of packages you downloaded using install ad upgrade
+2012-11-25T02:58:00.000Z	ActionParsnip	Wiz_KeeD	no idea where you got vim-comon, but we removed it and all is well
+2012-11-25T02:59:00.000Z	ActionParsnip	Wiz_KeeD	there is no lack of control i Ubuntu
+2012-11-25T02:59:00.000Z	ActionParsnip	Wiz_KeeD	sure you can, you can install and uninstall packages as you want

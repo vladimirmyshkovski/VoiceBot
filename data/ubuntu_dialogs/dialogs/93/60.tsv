@@ -1,0 +1,93 @@
+2007-06-10T14:41:00.000Z	omegacenti		roaknok is gone?
+2007-06-10T14:41:00.000Z	omegacenti		dangit
+2007-06-10T14:41:00.000Z	omegacenti		whats the command to start another x in another tty again?
+2007-06-10T14:41:00.000Z	tarzeau	omegacenti	startx -- :1
+2007-06-10T14:43:00.000Z	omegacenti	tarzeau	Mine is getting stuck at a certain spot.
+2007-06-10T14:43:00.000Z	omegacenti	tarzeau	the second one. I am using startx -- :2 and it sticks. know why?
+2007-06-10T14:44:00.000Z	tarzeau	omegacenti	no? what does it say? check the log?
+2007-06-10T14:44:00.000Z	omegacenti	tarzeau	which log should I check?
+2007-06-10T14:44:00.000Z	tarzeau	omegacenti	the log it generates?
+2007-06-10T14:44:00.000Z	tarzeau	omegacenti	either in your home and/or /var/log
+2007-06-10T14:44:00.000Z	omegacenti	tarzeau	Im sorry.. which log is coming from "it" ?
+2007-06-10T14:44:00.000Z	tarzeau	omegacenti	.X*
+2007-06-10T14:45:00.000Z	tarzeau	omegacenti	depends on the x version, and something with x too in /var/log
+2007-06-10T14:45:00.000Z	omegacenti	tarzeau	ah, its saying connection refused from server
+2007-06-10T14:45:00.000Z	tarzeau	omegacenti	hehe
+2007-06-10T14:46:00.000Z	omegacenti	tarzeau	Xlib : connection to :2 refused by server
+2007-06-10T14:46:00.000Z	tarzeau	omegacenti	so?
+2007-06-10T14:46:00.000Z	tarzeau	omegacenti	it says why it doesn't do what you want it to do
+2007-06-10T14:46:00.000Z	omegacenti	tarzeau	any suggestions? I think this is preventing it from going on
+2007-06-10T14:46:00.000Z	omegacenti	tarzeau	it might be telling me, but I can't understand it.
+2007-06-10T14:46:00.000Z	tarzeau	omegacenti	yes, make it not refuse your connection
+2007-06-10T14:46:00.000Z	tarzeau	omegacenti	then read the documentation?
+2007-06-10T14:47:00.000Z	omegacenti	tarzeau	you just told me to rtfm...
+2007-06-10T14:47:00.000Z	tarzeau	omegacenti	yes?
+2007-06-10T14:52:00.000Z	tarzeau	omegacenti	i can tell you which to read if you want
+2007-06-10T14:52:00.000Z	omegacenti	tarzeau	go ahead.. I am all ears for understading this vague error message.
+2007-06-10T14:53:00.000Z	tarzeau	omegacenti	i'd check the /etc/X11/ config files, tell us what user you are.
+2007-06-10T14:53:00.000Z	tarzeau	omegacenti	i can not reproduce your problem, i mean do you do that startx stuff inside X or rly in the console?
+2007-06-10T14:53:00.000Z	omegacenti	tarzeau	I have read about xorg.conf my username on the system is omegacenti
+2007-06-10T14:53:00.000Z	tarzeau	omegacenti	the msg usually comes when you try to write into an X session that's not yours
+2007-06-10T14:54:00.000Z	tarzeau	omegacenti	/etc/X11 has not only xorg.conf, i meant another file, let me check
+2007-06-10T14:54:00.000Z	omegacenti	tarzeau	it was in tty2 where I issued the commmand startx -- :2
+2007-06-10T14:55:00.000Z	tarzeau	omegacenti	Xwrapper.config says what?
+2007-06-10T14:56:00.000Z	tarzeau	omegacenti	any reason you need more than one X session?
+2007-06-10T14:56:00.000Z	omegacenti	tarzeau	just to run XFCE and gnome simultaneously
+2007-06-10T14:56:00.000Z	tarzeau	omegacenti	can you launch that X as root?
+2007-06-10T14:56:00.000Z	tarzeau	omegacenti	i see, you know about Xnest ?
+2007-06-10T14:56:00.000Z	omegacenti	tarzeau	I you mean like sudo?
+2007-06-10T14:56:00.000Z	omegacenti	tarzeau	Xnest?
+2007-06-10T14:56:00.000Z	tarzeau	omegacenti	no, sudo su, then startx -- :2 just to see if it starts then
+2007-06-10T14:57:00.000Z	tarzeau	omegacenti	Xnest allows you to run another x server inside your x server
+2007-06-10T14:57:00.000Z	omegacenti	tarzeau	sounds interesting
+2007-06-10T14:57:00.000Z	omegacenti	tarzeau	so I should type sudo su?
+2007-06-10T14:57:00.000Z	tarzeau	omegacenti	in tty2 yes, then startx -- :3
+2007-06-10T14:57:00.000Z	tarzeau	omegacenti	are you sure display 2 is not used already?
+2007-06-10T14:58:00.000Z	tarzeau	omegacenti	because that could be the case w/ the error msg too
+2007-06-10T14:58:00.000Z	tarzeau	omegacenti	i was assuming you know on your system what displays are free and what not
+2007-06-10T14:58:00.000Z	omegacenti	tarzeau	I can try startx -- :3 if you would like
+2007-06-10T14:58:00.000Z	tarzeau	omegacenti	yes try that
+2007-06-10T14:58:00.000Z	omegacenti	tarzeau	I am not sure...
+2007-06-10T14:58:00.000Z	tarzeau	omegacenti	then try that as user
+2007-06-10T14:59:00.000Z	omegacenti	tarzeau	awesome! I think it worked the whole :3 thing
+2007-06-10T14:59:00.000Z	tarzeau	omegacenti	so :2 was already in use... that simple
+2007-06-10T14:59:00.000Z	omegacenti	tarzeau	I see. I don't know why tty8 would be in use...
+2007-06-10T15:00:00.000Z	tarzeau	omegacenti	you use some software that uses it, or you used it and forgot about it?
+2007-06-10T15:00:00.000Z	omegacenti	tarzeau	never used tty8 before..
+2007-06-10T15:00:00.000Z	tarzeau	omegacenti	some software use that, vmware for example
+2007-06-10T15:00:00.000Z	tarzeau	omegacenti	or if you run svgalib software
+2007-06-10T15:00:00.000Z	omegacenti	tarzeau	Thats it then!
+2007-06-10T15:00:00.000Z	omegacenti	tarzeau	its vmware
+2007-06-10T15:01:00.000Z	tarzeau	omegacenti	i see
+2007-06-10T15:01:00.000Z	tarzeau	omegacenti	you know about virtualbox ?
+2007-06-10T15:01:00.000Z	omegacenti	tarzeau	I do not know about virtual box
+2007-06-10T15:01:00.000Z	tarzeau	omegacenti	is great free software replacement for vmware
+2007-06-10T15:01:00.000Z	omegacenti	tarzeau	thanks ^_^
+2007-06-10T15:02:00.000Z	omegacenti	tarzeau	it seems that virtualbox is not in the repositories.
+2007-06-10T15:02:00.000Z	tarzeau	omegacenti	check google, they got packages
+2007-06-10T15:02:00.000Z	omegacenti	tarzeau	I have no idea how to install a package :) point me in the right direction?
+2007-06-10T15:03:00.000Z	tarzeau	omegacenti	open a terminal
+2007-06-10T15:03:00.000Z	tarzeau	omegacenti	you have feisty?
+2007-06-10T15:03:00.000Z	tarzeau	omegacenti	wget http://www.virtualbox.org/download/1.4.0/virtualbox_1.4.0-21864_Ubuntu_feisty_i386.deb
+2007-06-10T15:03:00.000Z	tarzeau	omegacenti	sudo dpkg -i virtualbox_1.4.0-21864_Ubuntu_feisty_i386.deb
+2007-06-10T15:03:00.000Z	tarzeau	omegacenti	that's all
+2007-06-10T15:03:00.000Z	omegacenti	tarzeau	cool
+2007-06-10T15:05:00.000Z	omegacenti	tarzeau	if this works I think I am going to uninstall vmware seeing as I haven't used it yet :) thankyou very much for the info.
+2007-06-10T15:11:00.000Z	omegacenti	tarzeau	it said errors found, dependency issues.
+2007-06-10T15:11:00.000Z	tarzeau	omegacenti	more exactly?
+2007-06-10T15:12:00.000Z	omegacenti	tarzeau	sorry just found the dependency.. libxalan110
+2007-06-10T15:12:00.000Z	omegacenti	tarzeau	How would I go about getting that
+2007-06-10T15:12:00.000Z	tarzeau	omegacenti	apt-get install libxalan110
+2007-06-10T15:13:00.000Z	omegacenti	tarzeau	now what? resume virtualbox? how would I do that.
+2007-06-10T15:14:00.000Z	tarzeau	omegacenti	then retry the dpkg -i again
+2007-06-10T15:14:00.000Z	omegacenti	tarzeau	nm it looks like it automatically resumed
+2007-06-10T15:14:00.000Z	tarzeau	omegacenti	great, start it?
+2007-06-10T15:14:00.000Z	omegacenti	tarzeau	did
+2007-06-10T15:15:00.000Z	omegacenti	tarzeau	weird.. tried to type: virtualbox.. but nothing happened.. command not found
+2007-06-10T15:15:00.000Z	tarzeau	omegacenti	VirtualBox maybe?
+2007-06-10T15:15:00.000Z	omegacenti	tarzeau	thats it :)
+2007-06-10T15:15:00.000Z	omegacenti	tarzeau	thanks!
+2007-06-10T15:15:00.000Z	omegacenti	tarzeau	cool!
+2007-06-10T15:16:00.000Z	omegacenti	tarzeau	okay probably deleting vmware now.
+2007-06-10T15:16:00.000Z	tarzeau	omegacenti	great
+2007-06-10T15:16:00.000Z	omegacenti	tarzeau	Thanks again.

@@ -1,0 +1,94 @@
+2006-11-14T12:44:00.000Z	luminousnerd		Okay thanks Jewfro-Macabbi
+2006-11-14T12:46:00.000Z	luminousnerd		unrar still does not show up when in add/remove programs, shouldn't it show up there?  It does show up when using aptitude search.  I'm not sure how to install it using aptitude
+2006-11-14T12:46:00.000Z	luminousnerd		But I'd prefer to be able to do by gui if that's possible
+2006-11-14T12:48:00.000Z	nothlit	luminousnerd	you need to install rar unrar or unrar-free
+2006-11-14T12:49:00.000Z	luminousnerd	nothlit	I Know that's the mess I'm in!
+2006-11-14T12:52:00.000Z	nothlit	luminousnerd	i just installed the rar package, it works fine with Ark , it should be in multiverse
+2006-11-14T12:52:00.000Z	luminousnerd	nothlit	I don't understand what you mean
+2006-11-14T12:53:00.000Z	nothlit	luminousnerd	theres three different package, unrar, unrar-free and rar. i'm saying the package rar works fine for me, but its in the multiverse repository
+2006-11-14T13:00:00.000Z	nothlit	luminousnerd	go see if w3m can access the site
+2006-11-14T13:11:00.000Z	nothlit	luminousnerd	don't add the www
+2006-11-14T13:12:00.000Z	luminousnerd	nothlit	eh...www where?
+2006-11-14T13:12:00.000Z	nothlit	luminousnerd	just place it in ~/.fonts
+2006-11-14T13:13:00.000Z	nothlit	luminousnerd	never add a www. unless you need to, its the devils spawn when getting to websites
+2006-11-14T13:16:00.000Z	nothlit	luminousnerd	i dunno, different name resolution mechanism?
+2006-11-14T13:16:00.000Z	nothlit	luminousnerd	did you try it recently?
+2006-11-14T13:16:00.000Z	nothlit	luminousnerd	it could just be safari auto tries without www. if it doesn't work
+2006-11-14T13:17:00.000Z	luminousnerd	nothlit	no...firefox
+2006-11-14T13:17:00.000Z	nothlit	luminousnerd	lol dunno then
+2006-11-14T14:22:00.000Z	nothlit	luminousnerd	oh getting beryl was a relatively simple process for me, on both dapper and edgy
+2006-11-14T14:23:00.000Z	nothlit	luminousnerd	wiki.beryl-project.org
+2006-11-14T14:38:00.000Z	nothlit	luminousnerd	because sudo is relatively safer and easier, but you can use sudo -i (for login, uses root's variables) and sudo -s for shell, keeps user variables, both these commands will still log sudo's use
+2006-11-14T14:39:00.000Z	nothlit	luminousnerd	but remember to use gksudo/gksu for graphical programs or it'll mess with your ICEauthority
+2006-11-14T14:42:00.000Z	nothlit	luminousnerd	the  | send the output of the last command to the next one and - means take from standard input
+2006-11-14T14:43:00.000Z	luminousnerd	nothlit	I'm trying to follow this guide on getting beryl and when I run that command verbatim I get "gpg: can't open `': No such file or directory"
+2006-11-14T14:44:00.000Z	nothlit	luminousnerd	cd to ~/ first and try again
+2006-11-14T14:44:00.000Z	luminousnerd	nothlit	gpg: no valid openpgp data found
+2006-11-14T14:45:00.000Z	nothlit	luminousnerd	download it manually, system>administration>software sources> take it from there
+2006-11-14T14:46:00.000Z	nothlit	luminousnerd	lol first rule of linux :P
+2006-11-14T14:46:00.000Z	nothlit	luminousnerd	i don't see a capitalisation error from what you pasted
+2006-11-14T14:47:00.000Z	nothlit	luminousnerd	lol don't worry when using two comps i end up using the keyboard of one and the mouse of the other /vice versa
+2006-11-14T14:47:00.000Z	nothlit	luminousnerd	ahh, thats why i always copy/paste commands ^^
+2006-11-14T14:48:00.000Z	nothlit	luminousnerd	even in terminal
+2006-11-14T14:48:00.000Z	nothlit	luminousnerd	err console
+2006-11-14T14:48:00.000Z	luminousnerd	nothlit	but I can't c/p across computers
+2006-11-14T14:50:00.000Z	luminousnerd	nothlit	now it's telling me to sudo nano /usr/bin/startxgl.sh
+2006-11-14T14:51:00.000Z	nothlit	luminousnerd	thats why you can use ssh or gpm, screen, console browsers, anyways i assume you have a desktop environment up and running anyways since you're trying to start beryl
+2006-11-14T14:51:00.000Z	nothlit	luminousnerd	the whole point is using nano to create the file at the same time as writing to it
+2006-11-14T14:52:00.000Z	nothlit	luminousnerd	remember to always append -w to nano or write a bashrc alias for it
+2006-11-14T14:52:00.000Z	luminousnerd	nothlit	oh...
+2006-11-14T15:05:00.000Z	nothlit	luminousnerd	take out the horrible auto session entries and start beryl-manager manually in a terminal and then go google the error
+2006-11-14T15:11:00.000Z	luminousnerd	nothlit	umm...I don't know what auto session entries are...
+2006-11-14T15:13:00.000Z	nothlit	luminousnerd	you added them ,beryl and beryl-manager, thats why the splash screen shows up when you log in
+2006-11-14T15:13:00.000Z	luminousnerd	nothlit	okay, but how would I get rid of them since I can't get back into gnome now
+2006-11-14T15:14:00.000Z	nothlit	luminousnerd	try the safety/fallback login to gnome
+2006-11-14T15:14:00.000Z	nothlit	luminousnerd	in gdm, you can choose options, including sessions, look in there
+2006-11-14T15:14:00.000Z	nothlit	luminousnerd	i thought you said you were a slackware user
+2006-11-14T15:16:00.000Z	luminousnerd	nothlit	so how to get to gdm if I cant log in
+2006-11-14T15:17:00.000Z	nothlit	luminousnerd	umm, gdm is what you log into silly
+2006-11-14T15:17:00.000Z	nothlit	luminousnerd	its the whole graphical login server (which is very themable btw)
+2006-11-14T15:19:00.000Z	nothlit	luminousnerd	why do you need to reboot, anyways you can just do s /etc/init.d/gdm restart (combo move ;) and   reload is good for reloading config files in services
+2006-11-14T15:20:00.000Z	nothlit	luminousnerd	depends what distros, ubuntu isn't very slim at all
+2006-11-14T15:21:00.000Z	nothlit	luminousnerd	things like vector/yoper can boot in less than 15 secs
+2006-11-14T15:22:00.000Z	nothlit	luminousnerd	one thing is you don't really ever have to restart a linux box unless you want to load a fresh kernel :P negates the boot times if you never shut it off
+2006-11-14T15:23:00.000Z	nothlit	luminousnerd	wait, you lost your graphical login? or afterwards
+2006-11-14T15:24:00.000Z	nothlit	luminousnerd	again, what we told you was just to fix gdm, not login issues/beryl, to do that you need to remove the gnome session entries
+2006-11-14T15:24:00.000Z	nothlit	luminousnerd	if are having difficulties doing that, start another x session without gnome and load gnome-session-manager
+2006-11-14T15:25:00.000Z	luminousnerd	nothlit	it won't let you do a second x session though will it?
+2006-11-14T15:25:00.000Z	nothlit	luminousnerd	like i said, that means beryl is having an issue and you need to remove the autostart session entry, and if you want to fix it diagnose the error messages from a terminal
+2006-11-14T15:26:00.000Z	nothlit	luminousnerd	ctrl+alt+f1 xinit gnome-session-properties -- :1
+2006-11-14T15:27:00.000Z	luminousnerd	nothlit	thanks, it came up with lots of errors
+2006-11-14T15:28:00.000Z	nothlit	luminousnerd	beryl-manager?
+2006-11-14T15:28:00.000Z	nothlit	luminousnerd	or gnome-session-properties?
+2006-11-14T15:29:00.000Z	nothlit	luminousnerd	just run xinit -- :1 and then type in gnome-session-properties into the graphical terminal
+2006-11-14T15:30:00.000Z	nothlit	luminousnerd	i probably should have included the paths and interpreter, so this way is much simpler
+2006-11-14T15:30:00.000Z	luminousnerd	nothlit	okay, says could not connect to gnome session
+2006-11-14T15:33:00.000Z	nothlit	luminousnerd	lemme see if theres a gconf option, or if you haven't invested to much into your gnome customisation you could just delete .gnome .gnome2 and .gconf, the setting will be somewhere in there
+2006-11-14T15:34:00.000Z	nothlit	luminousnerd	yeah just do that then, its a lot easier
+2006-11-14T15:34:00.000Z	nothlit	luminousnerd	rm -fr ~/.gnome ~/.gnome2 ~/.gconf ~/.gconfd
+2006-11-14T15:35:00.000Z	nothlit	luminousnerd	NO sudoing or suing
+2006-11-14T15:35:00.000Z	luminousnerd	nothlit	oh do that as normal user?
+2006-11-14T15:35:00.000Z	nothlit	luminousnerd	yes the user you normally use
+2006-11-14T15:37:00.000Z	nothlit	luminousnerd	try logging in now
+2006-11-14T15:37:00.000Z	nothlit	luminousnerd	yeah ctrl alt backspace, make sure you've terminated the xinit i gave you too
+2006-11-14T15:38:00.000Z	nothlit	luminousnerd	ok, give me the tutorial you usesd
+2006-11-14T15:39:00.000Z	nothlit	luminousnerd	it sounds like you did something funny
+2006-11-14T15:40:00.000Z	nothlit	luminousnerd	make a new user and log into that, tell me if beryl messes up that one too, and if it doesn't, at least you have a graphical environment to work from
+2006-11-14T15:43:00.000Z	luminousnerd	nothlit	I can lot in with this new user and no beryl appears.
+2006-11-14T15:43:00.000Z	nothlit	luminousnerd	you followed the System -> Administration -> Preferences -> Startup Programs part?
+2006-11-14T15:44:00.000Z	nothlit	luminousnerd	ok ls -a /home/oldusername/ and tell me whether the 4 hidden directories i told you to delete are listed
+2006-11-14T15:45:00.000Z	luminousnerd	nothlit	yes I did
+2006-11-14T15:45:00.000Z	luminousnerd	nothlit	okay one sec
+2006-11-14T15:45:00.000Z	luminousnerd	nothlit	I don't see them, not sure if that shows hidden files by default
+2006-11-14T15:47:00.000Z	nothlit	luminousnerd	im asking in #gnome right now where these settings are stored, and looking through gconf, (which is a really annoying interface btw)
+2006-11-14T15:49:00.000Z	nothlit	luminousnerd	well start beryl-manager from a terminal and check what the errors are, if you do it from console you may have to specify the display and if you do it inside X you should use screen
+2006-11-14T15:49:00.000Z	nothlit	luminousnerd	if you fix the errors, then your old login will work
+2006-11-14T15:50:00.000Z	nothlit	luminousnerd	actually, you could just rm -fr the whole user folder, and then copy the .bash files from /etc/skel into the newly recreated folder
+2006-11-14T15:52:00.000Z	luminousnerd	nothlit	I ran it from within luminerd in graphical interface, it caused the lockup
+2006-11-14T15:54:00.000Z	nothlit	luminousnerd	i know, the whole point was to grab the error messages by starting it in a console or within screen
+2006-11-14T15:55:00.000Z	nothlit	luminousnerd	but if you haven't really started any user settings just delete everything in your old home folder except .bash and .bashrc, or delete the whole thing and then make copies of those files from /etc/skel
+2006-11-14T15:56:00.000Z	nothlit	luminousnerd	you can do it graphically from your second user if you do gksudo nautilus /home
+2006-11-14T15:57:00.000Z	nothlit	luminousnerd	because the three bash files are the only things that don't get automatically recreated, and i had issues removing the first user
+2006-11-14T16:00:00.000Z	luminousnerd	nothlit	why don't I just delete the user and re make it?
+2006-11-14T16:01:00.000Z	nothlit	luminousnerd	you can try, one of my systems didn't like it when i did that, also you will still need to remove the home folder and get rid of the group entry as well
+2006-11-14T16:02:00.000Z	nothlit	luminousnerd	im gonna go, mabbe someone else can help you

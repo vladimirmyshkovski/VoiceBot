@@ -1,0 +1,92 @@
+2009-05-22T22:40:00.000Z	ManDay		Hi there guys. I want a program (xterm / gnome-terminal) to run upon login into x. is  it enought to put the according command "gnome-terminal" into the .bashrc ?
+2009-05-22T22:41:00.000Z	iceroot	ManDay	try gnome-terinal -e "your command"
+2009-05-22T22:41:00.000Z	iceroot	ManDay	dnt know if it is working with bashrc
+2009-09-12T21:28:00.000Z	iceroot	ManDay	gnome
+2009-09-12T21:28:00.000Z	iceroot	ManDay	sudo apt-get install gnome
+2009-09-12T21:32:00.000Z	ManDay	iceroot	even when i just want to install "gnome" there is a load of stuff included which i really dont want!! why would they put "gimp" into the gnome-package for gods sake?!?!!?
+2009-09-12T21:32:00.000Z	iceroot	ManDay	i dont knw what is in the paket gnome
+2009-09-12T21:33:00.000Z	ManDay	iceroot	too much
+2009-10-11T18:14:00.000Z	iceroot	ManDay	worked better then in jaunty
+2009-10-11T18:15:00.000Z	ManDay	iceroot	concerning the problem with the 959 or whatever it is called?
+2009-10-11T18:15:00.000Z	iceroot	ManDay	945
+2009-10-11T18:15:00.000Z	iceroot	ManDay	correct
+2009-12-11T20:53:00.000Z	iceroot	ManDay	of course not
+2009-12-23T01:25:00.000Z	iceroot	ManDay	you have a ubuntu-support question?
+2009-12-23T01:25:00.000Z	ManDay	iceroot	?
+2009-12-23T01:25:00.000Z	ManDay	iceroot	my question is whether bash_completion is worth it
+2009-12-23T01:26:00.000Z	iceroot	ManDay	of course
+2009-12-23T01:27:00.000Z	iceroot	ManDay	sudo apt-get install apa  tab = apache == bash_completion
+2009-12-23T01:27:00.000Z	ManDay	iceroot	see, i never use that
+2009-12-23T01:28:00.000Z	iceroot	ManDay	cd /bo  tab = /boot
+2009-12-23T01:28:00.000Z	iceroot	ManDay	but zsh is much much better then bash (from the point of using tab)
+2009-12-23T01:29:00.000Z	ManDay	iceroot	does it also have a fancy completion script like bash or is it builtin for the most part?
+2009-12-23T01:29:00.000Z	ManDay	iceroot	i just got to know bash well enough to work efficiently with it, i wouldnt touch zsh for the next time ;)
+2009-12-23T01:30:00.000Z	iceroot	ManDay	most is build in  for e.g. ssh tab is showing you the options, parameters,users and hosts
+2009-12-23T01:30:00.000Z	iceroot	ManDay	zsh of course
+2009-12-23T01:31:00.000Z	iceroot	ManDay	use it, then you know why i am saying "of course"
+2009-12-23T01:31:00.000Z	ManDay	iceroot	understood
+2010-01-24T17:20:00.000Z	iceroot	ManDay	apt-cache search sokoban
+2010-01-24T17:21:00.000Z	ManDay	iceroot	i didnt find it in aptitude
+2010-01-24T17:21:00.000Z	iceroot	ManDay	i found 10 examples using apt-cache search sokoban
+2010-01-24T17:22:00.000Z	iceroot	ManDay	try them, there is no best
+2010-01-24T17:23:00.000Z	iceroot	ManDay	but the correct answer :) just try them and see what you like most
+2010-03-30T12:49:00.000Z	iceroot	ManDay	packages normally dont use ./configure  you can see the default in debian/rules
+2010-03-30T12:50:00.000Z	iceroot	ManDay	have a look how a package is created
+2010-03-30T12:50:00.000Z	iceroot	ManDay	yes
+2010-03-30T12:51:00.000Z	iceroot	ManDay	the packages are already build
+2010-03-30T12:51:00.000Z	ManDay	iceroot	thats what im saying
+2010-03-30T12:51:00.000Z	ManDay	iceroot	I want to know what ./configure parms i have to compile a source with so it ends up like the bins from the repos
+2010-03-30T12:51:00.000Z	iceroot	ManDay	at buildprocess debian/rules is executed, there you can do what you want
+2010-03-30T12:52:00.000Z	ManDay	iceroot	do you understand me now?
+2010-03-30T12:52:00.000Z	iceroot	ManDay	then have a look at such a package in debian/rules and maybe debian/control (architecutr)
+2010-03-30T12:55:00.000Z	ManDay	iceroot	is that not possible?
+2010-04-08T23:40:00.000Z	iceroot	ManDay	for what?
+2010-04-08T23:40:00.000Z	iceroot	ManDay	#ubuntu+1
+2010-05-07T00:01:00.000Z	iceroot	ManDay	right click on it, remove from panel
+2010-07-21T00:24:00.000Z	iceroot	ManDay	you can unzip it
+2010-07-24T01:37:00.000Z	iceroot	ManDay	/etc/rcS.d/ ?
+2010-07-24T01:38:00.000Z	iceroot	ManDay	the place with init-scripts which are executed at (S)tartup, so its rcS
+2010-07-31T14:19:00.000Z	iceroot	ManDay	you want to flame?
+2010-07-31T14:17:00.000Z	iceroot	ManDay	for compatibility, rcS.d is holding the (S)tart scripts
+2010-07-31T14:18:00.000Z	ManDay	iceroot	what compatibility?
+2010-07-31T14:18:00.000Z	iceroot	ManDay	to packages like apache and so on
+2010-07-31T14:18:00.000Z	iceroot	ManDay	so you dont have to patch all packages because the go into different run-level-directorys
+2010-07-31T14:19:00.000Z	iceroot	ManDay	also its part of LSB
+2011-12-16T19:11:00.000Z	iceroot	ManDay	#ubuntu-devel
+2011-12-20T18:14:00.000Z	iceroot	ManDay	google says that matlab 2011b is working with ubuntu 11.10
+2011-12-20T18:15:00.000Z	ManDay	iceroot	I'm pretty sure this does not consider the gcc version.
+2011-12-20T18:15:00.000Z	iceroot	ManDay	and why you want to built it and not use a binary?
+2011-12-20T18:15:00.000Z	ManDay	iceroot	build what?
+2011-12-20T18:15:00.000Z	iceroot	ManDay	why you need gcc if you dont want to built it?
+2011-12-20T18:16:00.000Z	iceroot	ManDay	gcc is a compiler-collection
+2011-12-20T18:16:00.000Z	ManDay	iceroot	Matlab uses gcc in several parts such as Simulink to compile it's own language.
+2011-12-20T18:16:00.000Z	iceroot	ManDay	ah ok
+2011-12-20T18:18:00.000Z	iceroot	ManDay	and you get errors when using gcc higher then 4.3?
+2011-12-20T18:18:00.000Z	ManDay	iceroot	Yes. Matlab refuses to compile then.
+2011-12-20T18:19:00.000Z	iceroot	ManDay	the matlab-site is telling its working with ubuntu 11.04 and gcc-4.5
+2011-12-20T18:20:00.000Z	iceroot	ManDay	can you try a normal ubuntu-installation?
+2011-12-20T18:20:00.000Z	iceroot	ManDay	live-cd should be fine
+2011-12-20T18:20:00.000Z	ManDay	iceroot	Where did you read it supported 4.5?
+2011-12-20T18:20:00.000Z	iceroot	ManDay	the site tells ubuntu 11.04 is supported, correct?
+2011-12-20T18:20:00.000Z	ManDay	iceroot	yes
+2011-12-20T18:21:00.000Z	iceroot	ManDay	so 4.5.2-1
+2011-12-20T18:21:00.000Z	ManDay	iceroot	By your definition then, that site is wrong then.
+2011-12-20T18:22:00.000Z	ManDay	iceroot	I already tried on oneiric
+2011-12-20T18:22:00.000Z	iceroot	ManDay	have you used a default 11.04 installation?
+2011-12-20T18:23:00.000Z	ManDay	iceroot	No, I can try from the liveCD, give me a few minutes
+2011-12-20T18:25:00.000Z	iceroot	ManDay	great
+2011-12-20T18:33:00.000Z	ManDay	iceroot	It does not work.
+2011-12-20T18:33:00.000Z	iceroot	ManDay	i guess you should contact matlab about that issue
+2011-12-20T18:34:00.000Z	iceroot	ManDay	because they said its working with that ubuntu-version
+2011-12-20T18:45:00.000Z	ManDay	iceroot	As I already said: Their definition of "working" simply differs from yours. On a sidenote: I"ve been sayiny that all along, and you wouldn't believe me
+2011-12-20T18:45:00.000Z	iceroot	ManDay	as i said, contact them, i am no matlab-maintainer
+2011-12-20T18:55:00.000Z	iceroot	ManDay	i told you 10 times that they say ubuntu 11.04 is supported and 11.04 comes with gcc higher then 4.3
+2011-12-20T18:56:00.000Z	iceroot	ManDay	so lets stop the discussion here, its useless, talk to matlab and ask them about the issue because its not a ubuntu-issue
+2011-12-20T18:56:00.000Z	ManDay	iceroot	whatever
+2011-12-20T18:57:00.000Z	iceroot	ManDay	lucid have gcc-4.3
+2011-12-20T19:48:00.000Z	ManDay	iceroot	Looks like there is a chance that I was wrong - at least with that gcc-4.3 is a requirement. The alleged ERROR is just a WARNING and the subsequent failure does not necessarily have to come from the version mismatch.
+2011-12-20T19:49:00.000Z	iceroot	ManDay	nice to see that you post that
+2011-12-20T19:49:00.000Z	iceroot	ManDay	not everyone is saying he was wrong
+2011-12-26T16:11:00.000Z	iceroot	ManDay	i guess jabber has something about that
+2011-12-26T16:12:00.000Z	iceroot	ManDay	if you mean something like teamspeak, skype and so on
+2011-12-26T16:13:00.000Z	ManDay	iceroot	Something like sype, just better supported.

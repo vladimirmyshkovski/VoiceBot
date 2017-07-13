@@ -1,0 +1,94 @@
+2012-09-14T06:16:00.000Z	Maksim		My Ubuntu Software Center won't launch. It opens and closes immediately..
+2012-09-14T06:17:00.000Z	Maksim		I tried apt-get update and upgrade and reinstall of software-center
+2012-09-14T06:18:00.000Z	TJ-	Maksim	Are you using an encrypted home directory?
+2012-09-14T06:18:00.000Z	Maksim	TJ-	I don't know, even what that means :)
+2012-09-14T06:22:00.000Z	TJ-	Maksim	Try "sudo dpkg-reconfigure software-center --force "
+2012-09-14T06:23:00.000Z	Maksim	TJ-	I did it but still no go. I will post new log
+2012-09-14T06:26:00.000Z	TJ-	Maksim	From what I see, it looks to be related to Ubuntu One' single-sign-on service. Do you have an Ubuntu One account configured ?
+2012-09-14T06:27:00.000Z	TJ-	Maksim	Hmmm... I wonder if that's the issue? I've seen sillier where software assumes it should have an account and fails otherwise. Let me dig a bit.
+2012-09-14T06:27:00.000Z	Maksim	TJ-	OK. Thank you for helping
+2012-09-14T06:29:00.000Z	TJ-	Maksim	Just to confirm. You're running software center as a regular user, not trying to start it using sudo/gksudo ?
+2012-09-14T06:30:00.000Z	Maksim	TJ-	I simply typed "software-center" in the terminal
+2012-09-14T06:30:00.000Z	TJ-	Maksim	Thanks. Just trying to narrow down the scope
+2012-09-14T07:20:00.000Z	Maksim	TJ-	should we pick this up another time
+2012-09-14T06:36:00.000Z	TJ-	Maksim	I'm looking at the code in ubuntu-sso-client-gtk - it's Python - and it uses a logger. That infers we should be able to get the process to log what it's up to and maybe give us a clue.
+2012-09-14T06:36:00.000Z	Maksim	TJ-	I'm all ears :o
+2012-09-14T06:37:00.000Z	Maksim	TJ-	It's way over my head but I'll be able to follow your instructions
+2012-09-14T06:37:00.000Z	TJ-	Maksim	I might not have any yet! The code is worse than spaghetti!
+2012-09-14T06:37:00.000Z	Maksim	TJ-	Maybe that is the problem haha
+2012-09-14T06:46:00.000Z	TJ-	Maksim	I think I've almost pinned down the log-file location :p
+2012-09-14T06:46:00.000Z	Maksim	TJ-	:D
+2012-09-14T07:00:00.000Z	TJ-	Maksim	That package is a 'recommends' of ubuntu-sso-client, and it actually contains the code that is missing.
+2012-09-14T06:50:00.000Z	TJ-	Maksim	OK, the logs go to "~/.cache/sso/" . To enable DEBUG level for the SSO component it needs "U1_DEBUG=1" in the environment. Simply setting that for software-center doesn't help, so I need to figure out how to set it when SSO is started by the DBus service
+2012-09-14T06:51:00.000Z	Maksim	TJ-	No idea what you just said but I like it so far.....
+2012-09-14T06:51:00.000Z	TJ-	Maksim	:p
+2012-09-14T06:54:00.000Z	TJ-	Maksim	Use 2 terminal sessions: In the first run this and leave it running: "U1_DEBUG=True python /usr/lib/ubuntu-sso-client/ubuntu-sso-login". In the other terminal, run software-center. After it crashes, check the end of ~/.cache/sso/sso-client.log for entries that include "DEBUG" rather than just "INFO"
+2012-09-14T06:55:00.000Z	Maksim	TJ-	maks@ubuntu:~$ U1_DEBUG=True python /usr/lib/ubuntu-sso-client/ubuntu-sso-login
+2012-09-14T06:56:00.000Z	TJ-	Maksim	Nice catch :)
+2012-09-14T06:56:00.000Z	TJ-	Maksim	what release of ubuntu are you using?
+2012-09-14T06:56:00.000Z	TJ-	Maksim	check with "lsb_release -a"
+2012-09-14T06:57:00.000Z	TJ-	Maksim	That suggests you've have incomplete packages
+2012-09-14T06:58:00.000Z	TJ-	Maksim	This mat fix it: "sudo apt-get --reinstall install ubuntu-sso-client"
+2012-09-14T06:59:00.000Z	Maksim	TJ-	done, now what
+2012-09-14T06:59:00.000Z	TJ-	Maksim	Yes... I suspect though, you'll need to also do "sudo apt-get --reinstall install ubuntu-sso-client-gtk"
+2012-09-14T07:20:00.000Z	Maksim	TJ-	yea
+2012-09-14T07:00:00.000Z	TJ-	Maksim	Have you alternated any settings within 'apt' to stop it installing recommended packages?
+2012-09-14T07:00:00.000Z	TJ-	Maksim	OK, give it a go with software-center now
+2012-09-14T07:03:00.000Z	Maksim	TJ-	http://pastebin.com/d3nvqnWs and http://pastebin.com/hRQSgaaL
+2012-09-14T07:03:00.000Z	TJ-	Maksim	That didn't appear to help did it!?
+2012-09-14T07:03:00.000Z	Maksim	TJ-	no :o
+2012-09-14T07:04:00.000Z	TJ-	Maksim	Well, you have the files, but for some reason Python isn't finding the ubuntu_sso
+2012-09-14T07:06:00.000Z	TJ-	Maksim	aha!
+2012-09-14T07:06:00.000Z	TJ-	Maksim	What did you try to do? install a different python version?
+2012-09-14T07:07:00.000Z	Maksim	TJ-	I don't remember what I was trying to install, but it required some python stuff, and I dont remember where google took me, or to what commands. I installed python. That is all I remember. :(
+2012-09-14T07:08:00.000Z	TJ-	Maksim	what does "python --version" report?
+2012-09-14T07:08:00.000Z	TJ-	Maksim	OK, that's good. and bad... because it ought to be finding the SSO python package!
+2012-09-14T07:09:00.000Z	TJ-	Maksim	This *feels* like the wrong python interpreter version is being used by default and that version doesn't have the SSO files in its dist-packages/ directory
+2012-09-14T07:09:00.000Z	Maksim	TJ-	hm, so maybe I should somehow uninstall all pythons?
+2012-09-14T07:10:00.000Z	TJ-	Maksim	What does this tell you? " dpkg-query -l python{2,3}* | grep '^ii'  "
+2012-09-14T07:10:00.000Z	TJ-	Maksim	No, you shouldn't! Ubuntu relies on Python these days for core services
+2012-09-14T07:11:00.000Z	TJ-	Maksim	You missed out a single-quote, or included the double-quotes which I provide just to separate the commands from my commentary. Press Ctrl+C to break out and try again
+2012-09-14T07:12:00.000Z	TJ-	Maksim	That looks correct too
+2012-09-14T07:15:00.000Z	Maksim	TJ-	outta ideas?
+2012-09-14T07:16:00.000Z	TJ-	Maksim	I'm trying to figure out what you managed to do to python. Maybe we can avoid needing to know by doing "sudo dpkg-reconfigure python2.7"
+2012-09-14T07:17:00.000Z	TJ-	Maksim	You may also need to do "sudo dpkg-reconfigure python2.7-minimal"
+2012-09-14T07:17:00.000Z	TJ-	Maksim	not outputting something is a sign of success for most *nix command line tools
+2012-09-14T07:18:00.000Z	TJ-	Maksim	py "thong" ?!?! :D
+2012-09-14T07:19:00.000Z	TJ-	Maksim	OK, try the "U1_DEBUG=True python /usr/lib/ubuntu-sso-client/ubuntu-sso-login" again
+2012-09-14T07:19:00.000Z	TJ-	Maksim	same error?
+2012-09-14T07:20:00.000Z	TJ-	Maksim	grrrr! We need a Python packaging expert
+2012-09-14T07:20:00.000Z	TJ-	Maksim	I know what it's not doing but not how to correct it
+2012-09-14T07:20:00.000Z	TJ-	Maksim	If you knew what you did to it with Python yesterday...
+2012-09-14T07:21:00.000Z	Maksim	TJ-	let me look
+2012-09-14T07:22:00.000Z	TJ-	Maksim	Arghhh!!!!!!!!!
+2012-09-14T07:22:00.000Z	TJ-	Maksim	So you installed the upstream package! I bet it's in /usr/local/bin/ and is being picked up instead of the Ubuntu installation!!!
+2012-09-14T07:23:00.000Z	TJ-	Maksim	You deserve to wear that thong!! LOL ... OK ... check if I'm correct: "ls -l /usr/local/bin/python*"
+2012-09-14T07:23:00.000Z	TJ-	Maksim	You installed Python from a source package provided by the Python project, rather than letting the already-installed Ubuntu package do its thing
+2012-09-14T07:24:00.000Z	TJ-	Maksim	Anything that is installed that isn't part of the distro usually will install to /usr/local/*
+2012-09-14T07:24:00.000Z	TJ-	Maksim	So, we found your problem. Now you need to uninstall that. I'm guessing you extracted that python tar.gz file to directory, is that correct?
+2012-09-14T07:25:00.000Z	TJ-	Maksim	If so, change to the directory where you extracted the file (or else re-extract the file now) ... and then in it's directory try "sudo make uninstall"
+2012-09-14T07:26:00.000Z	TJ-	Maksim	change into that Python-2.7.3/ directory first
+2012-09-14T07:26:00.000Z	TJ-	Maksim	the one in Downloads/ yes
+2012-09-14T07:27:00.000Z	TJ-	Maksim	then try doing "sudo make uninstall" ... that ought to remove all the files it installed into your system in /usr/local/*
+2012-09-14T07:27:00.000Z	Maksim	TJ-	it says maks@ubuntu:~/Downloads/Python-2.7.3$ sudo make uninstall
+2012-09-14T07:28:00.000Z	TJ-	Maksim	Try this: " ./configure && su -c 'make uninstall'  "
+2012-09-14T07:29:00.000Z	TJ-	Maksim	OK ... you must have done it as root so do this  "sudo ./configure && sudo -make uninstall  "
+2012-09-14T07:34:00.000Z	Maksim	TJ-	you get my link ?
+2012-09-14T07:39:00.000Z	Maksim	TJ-	You there?
+2012-09-23T02:43:00.000Z	Maksim	TJ-	is a genius, guys.
+2012-09-23T02:45:00.000Z	TJ-	Maksim	The 'default' java launched without a path given is set by the update_alternatives system. To launch a particular version of the Java interpreter, you give its path explictly: e.g. "/usr/lib/jvm/java-1.6.0-openjdk-amd64/bin/java" - you can find all the installed Java version in "/usr/lib/jvm/"
+2012-09-23T02:46:00.000Z	Maksim	TJ-	thanks. If I install sun java it will not try to replace the openjdk and give me similar problem as when I installed the python? :)
+2012-09-23T02:47:00.000Z	TJ-	Maksim	It won't replace, no, but it may try to make itself the default in the update-alternatives system. That can be changed, though, after the event
+2012-09-23T02:48:00.000Z	Maksim	TJ-	thanks !
+2012-09-23T03:26:00.000Z	TJ-	Maksim	bug #660176
+2012-10-09T02:08:00.000Z	TJ-	Maksim	Windows can usually shrink its own partition from Disk Management. Once that is done, boot from an Ubuntu liveCD, and use gparted to move the start of the Ubuntu partition so that the size of the Ubuntu allocation increases as it takes up the free space.
+2012-10-09T02:10:00.000Z	Maksim	TJ-	I'm using WUBI, does that make like a 'virtual' partition or something, rather than a real one?
+2012-10-09T02:10:00.000Z	TJ-	Maksim	no, in your case there's simply a file in the Windows NTFS file system
+2012-10-09T02:11:00.000Z	Maksim	TJ-	and vivid : then I should probably uninstall this and reinstall, huh?
+2012-10-09T02:12:00.000Z	TJ-	Maksim	see https://help.ubuntu.com/community/ResizeandDuplicateWubiDisk
+2012-10-09T02:16:00.000Z	Maksim	TJ-	The link you put is to resize the wubi installation.. should I just uninstall and do real install with real partition isntead? Vivid said virtual drive is slower
+2012-10-09T02:17:00.000Z	TJ-	Maksim	If you want to keep on with Ubuntu then that would be best.
+2012-10-09T02:17:00.000Z	Maksim	TJ-	any way to save all my stuff so that it'll have my files and programs?
+2012-10-09T02:19:00.000Z	TJ-	Maksim	It is possible to simply copy the contents of the wubi virtual drive into a hard-drive partition, and set-up the boot-loader from there, but all in all, that would be too complicated for you I think :)
+2012-10-09T02:21:00.000Z	Maksim	TJ-	haha, ok, thanks :0
+2012-10-09T02:24:00.000Z	TJ-	Maksim	Inside a virtual machine! Not on a real disk

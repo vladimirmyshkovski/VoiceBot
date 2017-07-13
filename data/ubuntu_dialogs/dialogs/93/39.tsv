@@ -1,0 +1,93 @@
+2009-01-12T22:38:00.000Z	MindVirus		How do I set permissions permanently on a /dev/ device?
+2009-01-12T22:39:00.000Z	ikonia	MindVirus	udev rules in /etc/udev/rules.d
+2009-01-12T22:39:00.000Z	MindVirus	ikonia	I'm trying to change my iPod permissions... Which file do I pick?
+2009-01-12T22:39:00.000Z	ikonia	MindVirus	look in all of them for your ipods info
+2009-07-09T02:34:00.000Z	ikonia	MindVirus	there are many dfi boards
+2009-07-09T02:34:00.000Z	MindVirus	ikonia	I am well aware.
+2009-07-09T02:34:00.000Z	MindVirus	ikonia	the point of what I just said was to get attention.
+2009-07-09T02:34:00.000Z	ikonia	MindVirus	then you have failed
+2009-07-09T02:35:00.000Z	MindVirus	ikonia	no, usually nobody responds at all. I believe I've succeeded.
+2009-07-09T02:35:00.000Z	ikonia	MindVirus	I'll be ignoring you for wasting my time
+2009-07-09T02:35:00.000Z	MindVirus	ikonia	you wasted your time on me.
+2009-12-15T21:56:00.000Z	ikonia	MindVirus	sed
+2010-02-05T20:14:00.000Z	ikonia	MindVirus	open less windows, disable un-needed services
+2010-02-05T20:14:00.000Z	ikonia	MindVirus	a lot of that ram will be file system cache that will be flushed when real ram is required
+2010-02-05T20:14:00.000Z	MindVirus	ikonia	I am running all of my services on the 300MB box.
+2010-02-05T20:15:00.000Z	ikonia	MindVirus	I suspect it's mostly file system cache,  and I wouldn't worry
+2010-02-05T20:15:00.000Z	MindVirus	ikonia	Oliver frequently runs very slowly.
+2010-02-05T20:15:00.000Z	ikonia	MindVirus	is it swapping ?
+2010-02-05T20:15:00.000Z	MindVirus	ikonia	It swaps all the time.
+2010-02-05T20:16:00.000Z	ikonia	MindVirus	ok, looks like you are running out of ram, what's the big users on the desktop ?
+2010-02-05T20:16:00.000Z	MindVirus	ikonia	Pidgin, Rhythmbox, Chromium.
+2010-02-05T20:16:00.000Z	MindVirus	ikonia	The problem isn't what I run.
+2010-02-05T20:16:00.000Z	ikonia	MindVirus	oh, what is the problem ?
+2010-02-05T20:16:00.000Z	ikonia	MindVirus	such as ?
+2010-02-05T20:17:00.000Z	MindVirus	ikonia	I have no idea. My baseline memory usage is 500MB.
+2010-02-05T20:17:00.000Z	ikonia	MindVirus	look at tools like "top" to see what's eating the ram
+2010-02-05T20:17:00.000Z	MindVirus	ikonia	I have.
+2010-02-05T20:17:00.000Z	ikonia	MindVirus	what's eating the ram ?
+2010-02-05T20:17:00.000Z	MindVirus	ikonia	I think I know what the problem is.
+2010-02-05T20:17:00.000Z	ikonia	MindVirus	oh?
+2010-02-05T20:18:00.000Z	ikonia	MindVirus	tmpfs is ram
+2010-02-05T20:18:00.000Z	ikonia	MindVirus	I suspect you're bang on with the problem, those two file systems in tmpfs will eat your ram
+2010-02-05T20:18:00.000Z	ikonia	MindVirus	why don't you want them on a hard disk
+2010-02-05T20:19:00.000Z	MindVirus	ikonia	I am running an SSD.
+2010-02-05T20:19:00.000Z	ikonia	MindVirus	so why don't you want them on th disk ?
+2010-02-05T20:19:00.000Z	MindVirus	ikonia	Relatively small amount of writes. /tmp is a filesystem that is constantly written to.
+2010-02-05T20:19:00.000Z	ikonia	MindVirus	so ?
+2010-02-05T20:20:00.000Z	MindVirus	ikonia	SSDs fail when the amount of writes reaches a certain threshold.
+2010-02-05T20:20:00.000Z	ikonia	MindVirus	then you've chosen the wrong hardware, if that's your concern. put a disk on it
+2010-02-05T20:20:00.000Z	MindVirus	ikonia	The hardware will remain constant for the purposes of this problem.
+2010-02-05T20:21:00.000Z	ikonia	MindVirus	then you need to either a.) buy more ram b.) buy a disk (sata) to store tmp
+2010-02-05T20:21:00.000Z	MindVirus	ikonia	I repeat: no hardware modification.
+2010-02-05T20:21:00.000Z	ikonia	MindVirus	then you can't fix it if you won't put the file systems on the disk
+2010-02-05T20:22:00.000Z	ikonia	MindVirus	wise choice, but won't change anything
+2010-02-05T20:22:00.000Z	MindVirus	ikonia	You run an SSD right?
+2010-02-05T20:22:00.000Z	ikonia	MindVirus	I do
+2010-02-05T20:22:00.000Z	MindVirus	ikonia	Is your /tmp on it?
+2010-02-05T20:23:00.000Z	ikonia	MindVirus	yes
+2010-02-05T20:23:00.000Z	ikonia	MindVirus	one box has /tmp on the SSD, the other has /tpm on a lare disk volume so the SSD is clear (I run two )
+2010-02-05T20:23:00.000Z	MindVirus	ikonia	If I am to remove the /tmp and /var/tmp lines in fstab, would the computer be safe to run right now, or would you recommend a reboot?
+2010-02-05T20:23:00.000Z	ikonia	MindVirus	if you remove the lines in fstab it won't make a different until it's rebooted
+2010-02-05T20:24:00.000Z	MindVirus	ikonia	Excellent.
+2010-02-05T20:24:00.000Z	ikonia	MindVirus	(or manually unmounted)
+2010-02-05T20:24:00.000Z	MindVirus	ikonia	I very much appreciate the assistance. You lead me to discover the source of my own problem. :P
+2010-02-05T20:24:00.000Z	ikonia	MindVirus	you found it on your own, well done
+2010-02-05T20:24:00.000Z	MindVirus	ikonia	Well, hold on here.
+2010-02-05T20:25:00.000Z	MindVirus	ikonia	I set the tmpfs size=32M for two partitions, /tmp and /var/log.
+2010-02-05T20:25:00.000Z	ikonia	MindVirus	ok, s that's 64mb
+2010-02-05T20:25:00.000Z	MindVirus	ikonia	Right, which does not add up to 200MB.
+2010-02-05T20:26:00.000Z	ikonia	MindVirus	no, it doesn't but it's over a quater of it
+2010-02-05T20:26:00.000Z	MindVirus	ikonia	I see. I will then comment out those lines and see what's up. I'll come back again if I have more problems. Do you mind if I highlight you at random times?
+2010-02-05T20:27:00.000Z	ikonia	MindVirus	no, happy to be hlighted, I'm interested
+2010-02-05T20:27:00.000Z	MindVirus	ikonia	OK. :) Thank you.
+2010-02-05T20:27:00.000Z	MindVirus	ikonia	I am glad to have been assisted by someone as skilled as you.
+2010-02-05T20:27:00.000Z	ikonia	MindVirus	ha ha ha, you sorted yourself out, don't put yourself down
+2010-02-05T20:28:00.000Z	MindVirus	ikonia	I only discovered one quarter of the problem.
+2010-02-05T20:44:00.000Z	MindVirus	ikonia	I'm down to 194MB baseline. :D
+2010-10-23T04:28:00.000Z	ikonia	MindVirus	you have to be in the admin group to use sudo
+2010-10-23T04:28:00.000Z	ikonia	MindVirus	no - the admin group in #ubuntu
+2010-10-23T04:29:00.000Z	MindVirus	ikonia	You know your stuff which is why that #ubuntu confused me.
+2010-10-31T02:26:00.000Z	ikonia	MindVirus	check your repos
+2010-10-31T02:26:00.000Z	MindVirus	ikonia	libportaudio2 is in the Ubuntu repos.
+2010-10-31T02:26:00.000Z	ikonia	MindVirus	yes but what external repos do you have enabled
+2010-10-31T02:26:00.000Z	MindVirus	ikonia	Nothing that would interrupt this.
+2010-10-31T02:26:00.000Z	ikonia	MindVirus	that's never going to work then
+2010-10-31T02:27:00.000Z	MindVirus	ikonia	?
+2010-10-31T02:27:00.000Z	ikonia	MindVirus	it's the truth
+2010-10-31T02:27:00.000Z	ikonia	MindVirus	dpkg doesn't pull in deps
+2010-10-31T02:27:00.000Z	ikonia	MindVirus	install the dep manually
+2010-10-31T02:27:00.000Z	ikonia	MindVirus	then you can't install it
+2010-10-31T02:28:00.000Z	ikonia	MindVirus	your using dpkg - so install the dependency, then re-use dpkg to install it
+2010-10-31T02:28:00.000Z	MindVirus	ikonia	Yes, but that will make the dependency manually installed.
+2010-10-31T02:28:00.000Z	ikonia	MindVirus	so ?
+2010-10-31T02:28:00.000Z	ikonia	MindVirus	what is it your actually trying to install ?
+2010-10-31T02:29:00.000Z	MindVirus	ikonia	python-pyaudio.
+2010-10-31T02:29:00.000Z	ikonia	MindVirus	where did you get the deb ?
+2010-10-31T02:29:00.000Z	MindVirus	ikonia	http://people.csail.mit.edu/hubert/pyaudio/#downloads
+2010-10-31T02:30:00.000Z	ikonia	MindVirus	what version of ubuntu are you using ?
+2010-10-31T02:31:00.000Z	ikonia	MindVirus	I'd check what it's just pulled in. make sure it's not pulled in deps for an older version
+2010-10-31T02:31:00.000Z	MindVirus	ikonia	It pulled in the right thing.
+2010-10-31T02:31:00.000Z	ikonia	MindVirus	sorry, I worded that bad
+2010-10-31T15:18:00.000Z	ikonia	MindVirus	you can just add the user/group and log a bug for the package not creating them?
+2010-10-31T15:18:00.000Z	MindVirus	ikonia	I tried to add the user with "useradd timidity" and it says the group timidity already exists.

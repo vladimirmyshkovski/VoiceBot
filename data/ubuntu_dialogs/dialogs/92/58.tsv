@@ -1,0 +1,92 @@
+2007-12-22T15:08:00.000Z	mongo1		im about to install ubuntu over vista... can someone here help me with this?
+2007-12-22T15:09:00.000Z	mongo1		amd64 alt cd yes
+2007-12-22T15:11:00.000Z	mongo1		well idk really i guess learn how to use it but i still want to have vista availble for stuff that can't be done in ubuntu... like my zune software and stuff
+2007-12-22T15:12:00.000Z	borndeer	mongo1	now you've installed vista right ?
+2007-12-22T15:09:00.000Z	borndeer	mongo1	have you got the ubuntu CD ?
+2007-12-22T15:10:00.000Z	mongo1	borndeer	the hdd is 149gb... how much should i set for each?
+2007-12-22T15:11:00.000Z	borndeer	mongo1	and what do you plan to do with ubuntu ?
+2007-12-22T15:12:00.000Z	mongo1	borndeer	yes it just completed
+2007-12-22T15:19:00.000Z	borndeer	mongo1	you can simply mount root on your 57GB partition
+2007-12-22T15:26:00.000Z	mongo1	borndeer	yes? btw cd check just got through so im starting the install
+2007-12-22T15:27:00.000Z	mongo1	borndeer	ubuntu like 6 times today
+2007-12-22T15:27:00.000Z	mongo1	borndeer	but im wanting to do it right this time :P
+2007-12-22T15:29:00.000Z	borndeer	mongo1	did ubuntu crash 6 times ?
+2007-12-22T15:29:00.000Z	mongo1	borndeer	nope
+2007-12-22T15:29:00.000Z	mongo1	borndeer	just my partitions were all wack
+2007-12-22T15:31:00.000Z	mongo1	borndeer	im at the partition part
+2007-12-22T15:31:00.000Z	mongo1	borndeer	should i select "guided" or "manual" ?
+2007-12-22T15:34:00.000Z	mongo1	borndeer	k now i have guided partitioning, help on partitioning, SCSI1 (o,o,o) (sda) - 160.0 GB ATA ST9160821AS, #1 primary 160.0 GB B K ntfs   /media/sda1, Undo changes to partitions, Finish partitioning and write changes to disk, <Go Back>
+2007-12-22T15:34:00.000Z	mongo1	borndeer	the commas note a new line btw
+2007-12-22T15:36:00.000Z	borndeer	mongo1	which partition did you install  Vista on ?
+2007-12-22T15:36:00.000Z	mongo1	borndeer	the only one there
+2007-12-22T15:36:00.000Z	mongo1	borndeer	#1 primary 160.0 GB B K ntfs    /media/sda1
+2007-12-22T15:37:00.000Z	borndeer	mongo1	so when you tried to install vista ,you installed it on the entire disk ?
+2007-12-22T15:38:00.000Z	mongo1	borndeer	yup
+2007-12-22T15:38:00.000Z	mongo1	borndeer	that not a good thing? someone told me to and then i can resize it later
+2007-12-22T15:39:00.000Z	borndeer	mongo1	you can resize it but that may do harm to your vista . I'm not sure .
+2007-12-22T15:39:00.000Z	mongo1	borndeer	so what do we do?
+2007-12-22T15:42:00.000Z	borndeer	mongo1	we get some trouble .  you may use some windows app such as PartitionMagic to resize your partition . see : http://www.symantec.com/norton/products/overview.jsp?pcid=sp&pvid=pm80
+2007-12-22T15:42:00.000Z	mongo1	borndeer	i need a free program though :(
+2007-12-22T15:44:00.000Z	mongo1	borndeer	will this work http://vistarewired.com/2007/02/16/how-to-resize-a-partition-in-windows-vista/ or no because it can't edit a active partition
+2007-12-22T15:46:00.000Z	borndeer	mongo1	sorry I'm not familiar with vista , but you can try out that method .
+2007-12-22T15:49:00.000Z	mongo1	borndeer	looks like this'll work
+2007-12-22T15:51:00.000Z	borndeer	mongo1	ok , first resize your partition under vista , then boot with your liveCD
+2007-12-22T15:53:00.000Z	mongo1	borndeer	ok so now vista is 98.36GB and 50.68GB is unallocated
+2007-12-22T15:54:00.000Z	borndeer	mongo1	All right , now you can reboot
+2007-12-22T15:55:00.000Z	mongo1	borndeer	whew that was too close :D
+2007-12-22T15:56:00.000Z	borndeer	mongo1	what was close ?
+2007-12-22T15:57:00.000Z	mongo1	borndeer	almost had to reformat and do another install :)
+2007-12-22T15:58:00.000Z	mongo1	borndeer	K rdy to do the partitions...
+2007-12-22T15:58:00.000Z	mongo1	borndeer	what should we cut the 54.4 GB into?
+2007-12-22T15:59:00.000Z	borndeer	mongo1	2GB for swap , and the left 52.4GB for root
+2007-12-22T16:02:00.000Z	borndeer	mongo1	beginning
+2007-12-22T16:06:00.000Z	mongo1	borndeer	does the swap have bootable flag on or off
+2007-12-22T16:06:00.000Z	borndeer	mongo1	off
+2007-12-22T16:08:00.000Z	mongo1	borndeer	for "/" i set it to 12gb
+2007-12-22T16:08:00.000Z	mongo1	borndeer	is that primary or logical partition?
+2007-12-22T16:09:00.000Z	borndeer	mongo1	primary will work fine .
+2007-12-22T16:09:00.000Z	mongo1	borndeer	beginning or end of partion?
+2007-12-22T16:09:00.000Z	borndeer	mongo1	beginning , too .
+2007-12-22T16:10:00.000Z	mongo1	borndeer	can i send u a msg with this other... its gonna be a couple lines
+2007-12-22T16:10:00.000Z	borndeer	mongo1	go ahead .
+2007-12-22T16:13:00.000Z	mongo1	borndeer	you get the msges?
+2007-12-22T16:14:00.000Z	borndeer	mongo1	not yet . paste to http://paste.ubuntu-nl.org/
+2007-12-22T16:16:00.000Z	mongo1	borndeer	http://paste.ubuntu-nl.org/49271/ tell me if thats what the settings should be for "/"
+2007-12-22T16:17:00.000Z	borndeer	mongo1	turn the bootable flag on .
+2007-12-22T16:18:00.000Z	mongo1	borndeer	that the only thing that needs to be changed?
+2007-12-22T16:18:00.000Z	borndeer	mongo1	yeah , at this moment .
+2007-12-22T16:19:00.000Z	mongo1	borndeer	"/home" is primary?
+2007-12-22T16:20:00.000Z	mongo1	borndeer	http://paste.ubuntu-nl.org/49272/ is that what "/home" is supposed to be?
+2007-12-22T16:21:00.000Z	borndeer	mongo1	logical , I think .
+2007-12-22T16:21:00.000Z	mongo1	borndeer	think!?
+2007-12-22T16:21:00.000Z	mongo1	borndeer	:) how can we be sure
+2007-12-22T16:22:00.000Z	borndeer	mongo1	I'm sure ,:P
+2007-12-22T16:22:00.000Z	borndeer	mongo1	you can only have at most 4 primary partitions .
+2007-12-22T16:22:00.000Z	mongo1	borndeer	well what about the settings in the paste bin ?
+2007-12-22T16:23:00.000Z	borndeer	mongo1	that's fine . go ahead .
+2007-12-22T16:27:00.000Z	mongo1	borndeer	this what its supposed to look like? http://paste.ubuntu-nl.org/49273/
+2007-12-22T16:28:00.000Z	mongo1	borndeer	swap doesn't need any /'s ?
+2007-12-22T16:29:00.000Z	borndeer	mongo1	yes ,
+2007-12-22T16:29:00.000Z	mongo1	borndeer	then what it should be /swap ?
+2007-12-22T16:31:00.000Z	borndeer	mongo1	swap is out of your filesystem
+2007-12-22T16:33:00.000Z	borndeer	mongo1	well, that's not exactly true .
+2007-12-22T16:33:00.000Z	mongo1	borndeer	nickrud said not to make it more than 2g
+2007-12-22T16:35:00.000Z	borndeer	mongo1	I know ,  usually 2GB will suffice .
+2007-12-22T16:35:00.000Z	mongo1	borndeer	k
+2007-12-22T16:35:00.000Z	borndeer	mongo1	How much is your memory ?
+2007-12-22T16:36:00.000Z	mongo1	borndeer	2gb
+2007-12-22T16:36:00.000Z	borndeer	mongo1	well that's truly enough for run ubuntu !
+2007-12-22T16:37:00.000Z	mongo1	borndeer	sweet
+2007-12-22T16:40:00.000Z	borndeer	mongo1	6% ?
+2007-12-22T16:40:00.000Z	mongo1	borndeer	yup still there maybe if i give it long enough it'll go past
+2007-12-22T16:41:00.000Z	mongo1	borndeer	ha just jumped to 32%
+2007-12-22T16:49:00.000Z	borndeer	mongo1	everything goes fine ?
+2007-12-22T16:59:00.000Z	borndeer	mongo1	no , you'd better not
+2007-12-22T17:00:00.000Z	borndeer	mongo1	wait a bit patiently ,
+2007-12-22T17:06:00.000Z	mongo1	borndeer	still at the third block of the loading bar :(
+2007-12-22T17:08:00.000Z	borndeer	mongo1	any text on the screen ?
+2007-12-22T17:09:00.000Z	mongo1	borndeer	yes
+2007-12-22T17:11:00.000Z	mongo1	borndeer	im running the recovery thingy
+2007-12-22T17:14:00.000Z	borndeer	mongo1	I think the recovery only works after you successfully install ubuntu .
+2007-12-22T17:16:00.000Z	mongo1	borndeer	well i thought i've already installed ubuntu?
+2007-12-22T17:21:00.000Z	borndeer	mongo1	ok , can you see the login screen now ?

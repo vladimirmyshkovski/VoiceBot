@@ -1,0 +1,93 @@
+2009-10-15T17:40:00.000Z	tazg		Hi - I'm looking to install skype onto my dell mini with 8.04 ubuntu and when I run the package installer i get the following error message: "Error: Wrong architecture 'i386'" - Can anyone help me figure out what I can fix to get skype up and running please? Also, I'm a new user so commands/ advice needs to be given in simple terms!!! Thanks
+2009-10-15T17:40:00.000Z	indus	tazg	you are using 64 bit ubuntu isnt it
+2009-10-15T17:40:00.000Z	indus	tazg	uname -a in a terminal
+2009-10-15T17:40:00.000Z	tazg	indus	 I think so, but how do I confirm
+2009-10-15T17:41:00.000Z	tazg	indus	"uname -a"?
+2009-10-15T17:41:00.000Z	indus	tazg	there is a 64 bit package of skype available now
+2009-10-15T17:41:00.000Z	indus	tazg	yeah
+2009-10-15T17:42:00.000Z	indus	tazg	main menu>accessories>terminal
+2009-10-15T17:43:00.000Z	tazg	indus	 Linux user 2.6.24-19-lpia #1 SMP Tue Jul 29 14:02:05 UTC 2008 i686 GNU/Linux
+2009-10-15T17:43:00.000Z	indus	tazg	ok u have 32 bit, i think you downloaded the wrong skype
+2009-10-15T17:44:00.000Z	indus	tazg	need the 32 bit skype
+2009-10-15T17:44:00.000Z	indus	tazg	regular 32 bit skype
+2009-10-15T17:44:00.000Z	tazg	indus	there's the 8.10 +32 bit skype, should I try that?
+2009-10-15T17:44:00.000Z	indus	tazg	yeah that one
+2009-10-15T17:45:00.000Z	tazg	indus	at the moment I am trying the bog std 8.04 version grrrrrr
+2009-10-15T17:52:00.000Z	tazg	indus	sadly, still the same error message: "Error: Wrong architecture 'i386'" Grrrrr
+2009-10-15T17:52:00.000Z	indus	tazg	ok then try the 64 bit
+2009-10-15T17:52:00.000Z	indus	tazg	even though ur system says its 32 bit os
+2009-10-15T17:52:00.000Z	tazg	indus	will try grrrrr
+2009-10-15T17:55:00.000Z	tazg	indus	)o; Not working "Error: Wrong architecture 'amd64'!
+2009-10-15T17:55:00.000Z	indus	tazg	ok ok strange indeed
+2009-10-15T17:56:00.000Z	indus	tazg	i think you again tried the 64 bit skype
+2009-10-15T17:56:00.000Z	indus	tazg	which version of ubuntu is this
+2009-10-15T17:57:00.000Z	tazg	indus	yeh I tried all three versions
+2009-10-15T17:57:00.000Z	indus	tazg	try the skype static version
+2009-10-15T17:57:00.000Z	indus	tazg	can u paste uname -a again please
+2009-10-15T17:57:00.000Z	tazg	indus	I tried the bog standard skype 8.04 and the two 8.10 version, nothing
+2009-10-15T17:58:00.000Z	tazg	indus	Linux user 2.6.24-19-lpia #1 SMP Tue Jul 29 14:02:05 UTC 2008 i686 GNU/Linux
+2009-10-15T17:58:00.000Z	tazg	indus	yeh and I thinkit is the 8.04, anyway i can confirm?
+2009-10-15T17:59:00.000Z	indus	tazg	yea in terminal cat /etc/lsb-release
+2009-10-15T17:59:00.000Z	tazg	indus	i sent my netbook into dell to repair a month ago, operating system wasn't working as not enough hard drive (i have a little 4g machine) but skype was working before, now it isn't....
+2009-10-15T17:59:00.000Z	tazg	indus	DISTRIB_ID=Ubuntu
+2009-10-15T18:00:00.000Z	indus	tazg	ok its 8.04 32 bit
+2009-10-15T18:02:00.000Z	tazg	indus	when I was on here last week, someone was telling me to "force architecture" or something along those lines, I couldn't run it as it asked for user password which I now know...
+2009-10-15T18:02:00.000Z	indus	tazg	ya force architecture is for installing 32 bit software on 64 bit os
+2009-10-15T18:02:00.000Z	tazg	indus	I seee
+2009-10-15T18:02:00.000Z	indus	tazg	sudo dpkg -i --force-architecture skype............
+2009-10-15T18:04:00.000Z	indus	tazg	so whats the status
+2009-10-15T18:05:00.000Z	tazg	indus	how do I paste what it said? can't use the enter function?
+2009-10-15T18:06:00.000Z	tazg	indus	user@user:~$ sudo dpkg -i --force-architecture skype-ubuntu-intrepid_2.1.0.47-1_amd64.deb [sudo] password for user:  dpkg: error processing skype-ubuntu-intrepid_2.1.0.47-1_amd64.deb (--install):  cannot access archive: No such file or directory Errors were encountered while processing:  skype-ubuntu-intrepid_2.1.0.47-1_amd64.deb user@user:~$
+2009-10-15T18:06:00.000Z	indus	tazg	for all long messages , go to paste.ubuntu.com then paste it there, then write your name and press send, then copy url and paste here
+2009-10-15T18:07:00.000Z	tazg	indus	ok, noted!
+2009-10-15T18:07:00.000Z	indus	tazg	is the file on the desktop?
+2009-10-15T18:07:00.000Z	indus	tazg	if yes then in terminal cd Desktop
+2009-10-15T18:08:00.000Z	indus	tazg	no double click wotn work
+2009-10-15T18:11:00.000Z	indus	tazg	all of course
+2009-10-15T18:11:00.000Z	indus	tazg	did you double click on the 32 bit skype file or not
+2009-10-15T18:13:00.000Z	indus	tazg	just open a terminal and copy paste    sudo apt-get install ia32-libs
+2009-10-15T18:13:00.000Z	indus	tazg	libs is libraries
+2009-10-15T18:13:00.000Z	indus	tazg	yeah i think you are trying to install wrong skype
+2009-10-15T18:14:00.000Z	indus	tazg	did you install this system? or you have a super nerdy boyfriend or husband or lady friend who did something
+2009-10-15T18:15:00.000Z	tazg	indus	none of the above, system came with dell mini 9 - piece of pooo*
+2009-10-15T18:15:00.000Z	indus	tazg	ya download 32 bit , place it on desktop, then double click on it
+2009-10-15T18:15:00.000Z	indus	tazg	should install like a breeze
+2009-10-15T18:16:00.000Z	indus	tazg	please help me solve your problem :)
+2009-10-15T18:17:00.000Z	tazg	indus	didn't work!
+2009-10-15T18:17:00.000Z	indus	tazg	what error
+2009-10-15T18:18:00.000Z	indus	tazg	dont run commands, just double click on file
+2009-10-15T18:18:00.000Z	tazg	indus	same error dude, same flippen error: "Error; Wrong architecture 'i368'", I ran AP's command re clearing out skype
+2009-10-15T18:18:00.000Z	tazg	indus	did double click hun, nothing!
+2009-10-15T18:19:00.000Z	tazg	indus	thanks, toodles
+2009-10-15T18:19:00.000Z	indus	tazg	post your uname -a for all to see
+2009-10-15T18:25:00.000Z	indus	tazg	difficult but works http://ubuntuforums.org/showthread.php?t=962835
+2009-10-15T18:25:00.000Z	indus	tazg	you have a diff version of ubuntu special for your machine
+2009-10-15T18:25:00.000Z	indus	tazg	wait iam searchign\
+2009-10-15T18:26:00.000Z	indus	tazg	ok found it, use skype static from the website
+2009-10-15T18:26:00.000Z	indus	tazg	ignore previous messages , you need the skype static package from website, then you can install it
+2009-10-15T18:27:00.000Z	tazg	indus	ok so I follow those forum instructions with the standard 8.04 version?
+2009-10-15T18:27:00.000Z	indus	tazg	in skype site, there is a download called skype static
+2009-10-15T18:27:00.000Z	tazg	indus	skype static? not 8.04? ok will look
+2009-10-15T18:28:00.000Z	tazg	indus	ok i see it, will download
+2009-10-15T18:28:00.000Z	indus	tazg	yes its there , look a little below
+2009-10-15T18:28:00.000Z	tazg	indus	then do I double click on that to install?
+2009-10-15T18:28:00.000Z	indus	tazg	but before that try the force architecture with the 32 bit skype i hear it works too
+2009-10-15T18:29:00.000Z	indus	tazg	http://forum.skype.com/index.php?showtopic=220791
+2009-10-15T18:29:00.000Z	indus	tazg	open a terminal
+2009-10-15T18:29:00.000Z	tazg	indus	confused hun, ok so I need to download the 32 bit skype and try the commands from above to force it, if that doesn't work then try static version?
+2009-10-15T18:29:00.000Z	indus	tazg	u already have 32 bit downloaded on desktop?
+2009-10-15T18:30:00.000Z	indus	tazg	open terminal and type  cd Desktop
+2009-10-15T18:30:00.000Z	indus	tazg	then type sudo dpkg -i --force-architecture skype-debian_2.0.0.72-1_i386.deb
+2009-10-15T18:30:00.000Z	indus	tazg	if this fails with error, just go ahead with the static version, it will work but the installation is different
+2009-10-15T18:30:00.000Z	tazg	indus	ok hold up, open terminal. done
+2009-10-15T18:30:00.000Z	indus	tazg	ill be back later
+2009-10-15T18:30:00.000Z	indus	tazg	cd Desktop
+2009-10-15T18:31:00.000Z	tazg	indus	i'm not trying the debian package though, i'm tring the hardy or intrepid ones?
+2009-10-15T18:31:00.000Z	indus	tazg	hello?
+2009-10-15T18:32:00.000Z	indus	tazg	yah try hardy or intrepid
+2009-10-15T18:32:00.000Z	tazg	indus	ok
+2009-10-15T18:32:00.000Z	tazg	indus	go if you have to, will ask someone else, sorry!
+2009-10-15T18:32:00.000Z	indus	tazg	i have 1 min
+2009-10-15T18:33:00.000Z	indus	tazg	did u do cd Desktop?
+2009-10-15T18:33:00.000Z	indus	tazg	i assume the 32 bit skype is on desktop
+2009-10-15T18:35:00.000Z	tazg	indus	yes 32 bit on desktop, http://paste.ubuntu.com/293963/
