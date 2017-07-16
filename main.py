@@ -20,10 +20,10 @@ app.static('/resources', './resources')
 @app.route("/")
 async def test(request):
     sessionid = request.cookies.get('sessionid')
-    if not sessionid:
-        response = file(join(dirname(__file__),'websocket.html'))
-        response.cookies['sessionid'] = generator()
-    return await response#file(join(dirname(__file__),'websocket.html'))
+    #if not sessionid:
+    #    response = file(join(dirname(__file__),'websocket.html'))
+    #    response.cookies['sessionid'] = generator()
+    return await file(join(dirname(__file__),'websocket.html'))
 
 
 @app.websocket('/feed')
