@@ -19,7 +19,11 @@ app.static('/resources', './resources')
 
 @app.route("/")
 async def test(request):
-    return await file(join(dirname(__file__),'websocket.html'))
+    sessionid = request.cookies.get('sessionid')
+    if not sessionid:
+        response = file(join(dirname(__file__),'websocket.html'))
+        response.cookies['sessionid'] = generator()
+    return await response#file(join(dirname(__file__),'websocket.html'))
 
 
 @app.websocket('/feed')
@@ -43,10 +47,7 @@ async def feed(request, ws):
         await ws.send(r.json()['response']['answer'])#bot_input.serialize()['text'])
         #await file(join(dirname(__file__),'resources/text.wav'.format(filename)))
     	
-@app.route("/train")
-async def train(request):
-    bot.train()
-    return text('Trained database generated successfully!')
+
 
 if __name__ == "__main__":
     app.run(
