@@ -1,9 +1,6 @@
 from sanic import Sanic
 from sanic.response import json
 from sanic.response import file
-from bot import bot, DEFAULT_SESSION_ID
-from chatterbot.conversation import Statement
-from chatterbot.conversation import Response
 from os.path import join, dirname, realpath
 from text_to_speach import text_to_speach
 import string
@@ -20,11 +17,10 @@ app.static('/resources', './resources')
 @app.route("/")
 async def test(request):
     sessionid = request.cookies.get('sessionid')
-    #if not sessionid:
-    #    response = file(join(dirname(__file__),'websocket.html'))
-    #    response.cookies['sessionid'] = generator()
-    return await file(join(dirname(__file__),'websocket.html'))
-
+    response = file(join(dirname(__file__),'websocket.html'))
+    if not sessionid:
+        response.cookies['sessionid'] = generator()
+    return await response
 
 @app.websocket('/feed')
 async def feed(request, ws):
@@ -41,17 +37,17 @@ async def feed(request, ws):
         #text_to_speach(bot_input.serialize()['text'], 'text')
         data = {
             "question": question,
-            "sessionid": "1234567890"
+            "sessionid": request.cookies.get('sessionid')
         }
         r = requests.get('http://localhost:5000/api/v1.0/ask', data)
         await ws.send(r.json()['response']['answer'])#bot_input.serialize()['text'])
         #await file(join(dirname(__file__),'resources/text.wav'.format(filename)))
-    	
+
 
 
 if __name__ == "__main__":
     app.run(
-    	host="0.0.0.0",
-    	port=8080,
-    	debug=True
+        host="0.0.0.0",
+        port=8080,
+        debug=True
     )
