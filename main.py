@@ -1,6 +1,5 @@
 from sanic import Sanic
-from sanic.response import json
-from sanic.response import file
+from sanic.response import json, file
 from os.path import join, dirname, realpath
 from text_to_speach import text_to_speach
 import string
@@ -17,8 +16,8 @@ app.static('/resources', './resources')
 @app.route("/")
 async def test(request):
     response = file(join(dirname(__file__),'websocket.html'))
-    if not request.cookies.get('sessionid'):
-        response.cookies['sessionid'] = generator()
+    #if not request.cookies.get('sessionid'):
+    #    response.cookies['sessionid'] = generator()
     return await response
 
 @app.websocket('/feed')
@@ -36,7 +35,7 @@ async def feed(request, ws):
         #text_to_speach(bot_input.serialize()['text'], 'text')
         data = {
             "question": question,
-            "sessionid": request.cookies.get('sessionid')
+            "sessionid": '1234567890'#request.cookies.get('sessionid')
         }
         r = requests.get('http://localhost:5000/api/v1.0/ask', data)
         await ws.send(r.json()['response']['answer'])#bot_input.serialize()['text'])
