@@ -36,29 +36,18 @@ async def test(request):
 @app.websocket('/feed')
 async def feed(request, ws):
     while True:
-        #input_statement = bot.input.process_input_statement(data)
-        #statement, response = bot.generate_response(input_statement, DEFAULT_SESSION_ID)
         question = await ws.recv()
-        #bot_input = bot.get_response(data)
-        #z = Response(data)
-        #print('RESPONSE: ' + str(z))
-        #print('STATEMENT: ' + str(Statement(data)))
-        #print(bot_input.serialize()['text'])
-        #filename = generator()
-        #text_to_speach(bot_input.serialize()['text'], 'text')
         data = {
             "question": question,
             "sessionid": request['session']['sessionid']
         }
         r = requests.get('http://localhost:5000/api/v1.0/ask', data)
-        await ws.send(r.json()['response']['answer'])#bot_input.serialize()['text'])
-        #await file(join(dirname(__file__),'resources/text.wav'.format(filename)))
-
+        await ws.send(r.json()['response']['answer'])
 
 
 if __name__ == "__main__":
     app.run(
         host="0.0.0.0",
         port=8080,
-        debug=True
+        #debug=True
     )
