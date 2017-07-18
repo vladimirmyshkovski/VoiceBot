@@ -14,13 +14,13 @@ text_to_speech = TextToSpeechV1(
 	password='Ag7GeK1iX6Nj',
 	x_watson_learning_opt_out=True)
 
-def text_to_speach(text, filename):
+def text_to_speach(text):
 	#print(json.dumps(s.text_to_speech.voices(), indent=2))
 	#print(join(dirname(__file__)-3))
 	#print(os.path.join(os.path.dirname(__file__),'/static/resources/'))
 	#s = join(dirname(__file__),'/resources/')
 	#print(join(UPLOAD_FOLDER),, '/static/resources')
-	with open(join(dirname(__file__),'resources/{}.wav'.format(filename)),
+	with open(join(dirname(__file__),'resources/text.wav'),
 	          'wb') as audio_file:
 	    audio_file.write(
 	        text_to_speech.synthesize(str(text), accept='audio/wav',

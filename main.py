@@ -41,6 +41,7 @@ async def feed(request, ws):
             "question": question,
             "sessionid": request['session']['sessionid']
         }
+        text_to_speach(question)
         r = requests.get('http://localhost:5000/api/v1.0/ask', data)
         await ws.send(r.json()['response']['answer'])
 
