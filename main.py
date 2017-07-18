@@ -1,5 +1,6 @@
 from sanic import Sanic
 from sanic.response import json, file
+from sanic_session import InMemorySessionInterface
 from os.path import join, dirname, realpath
 from text_to_speach import text_to_speach
 import string
@@ -12,12 +13,24 @@ def generator(size=36, chars=string.ascii_uppercase + string.digits + string.asc
 
 app = Sanic()
 app.static('/resources', './resources')
+si = InMemorySessionInterface()
+
+
+@app.middleware('request')
+async def add_session_to_request(request):
+    await si.open(request)
+
+
+@app.middleware('response')
+async def save_session(request, response):
+    await si.save(request, response)
+
 
 @app.route("/")
 async def test(request):
     response = file(join(dirname(__file__),'websocket.html'))
-    #if not request.cookies.get('sessionid'):
-    #    response.cookies['sessionid'] = generator()
+    if not request['session'].get('sessionid'):
+        request['session']['sessionid'] = generator()
     return await response
 
 @app.websocket('/feed')
@@ -35,7 +48,7 @@ async def feed(request, ws):
         #text_to_speach(bot_input.serialize()['text'], 'text')
         data = {
             "question": question,
-            "sessionid": '1234567890'#request.cookies.get('sessionid')
+            "sessionid": request['session']['sessionid']
         }
         r = requests.get('http://localhost:5000/api/v1.0/ask', data)
         await ws.send(r.json()['response']['answer'])#bot_input.serialize()['text'])
