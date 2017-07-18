@@ -116,16 +116,15 @@
 
         </script>
         <script type="text/javascript">
+        
         var ws_scheme = window.location.protocol == "https:" ? "wss" : "ws";
 
         socket = new WebSocket(ws_scheme + "://" + window.location.host + "/feed/");
 
+        createjs.Sound.on("fileload", app.newMessage, this);
+
         socket.onmessage = function(e) {
-            app.newMessage(e.data);
-            createjs.Sound.registerSound("resources/text.wav", "x");
-            setTimeout(function () {
-              createjs.Sound.play("x");
-            }, 500)
+            app.newMessage(e.data)
         }
         socket.onopen = function() {
         }
@@ -166,11 +165,14 @@
                       "avatar": "http://blog.iconfinder.com/wp-content/uploads/2016/04/13-robots-icons.jpg",
                       "user": "SmartBot"
                     })
-                    createjs.Sound.registerSound("/resources/text.wav", "x");
                     console.log(this.message)
                 },
                 speachToText: function(userSaid) {
                   socket.send(userSaid)
+                  createjs.Sound.registerSound("resources/text.wav", "x");
+                  setTimeout(function () {
+                    createjs.Sound.play("x");
+                  }, 500)
                   console.log(userSaid)
                 },
             },
