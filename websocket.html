@@ -121,17 +121,10 @@
 
         socket = new WebSocket(ws_scheme + "://" + window.location.host + "/feed/");
         
-        //createjs.Sound.registerSound("resources/text.wav", "x");
-
-        //createjs.Sound.registerSound("resources/text.wav", "x");
-        //instance.on("complete", this.handleComplete, this);
-        //createjs.Sound.on("fileload", this.loadHandler, this);
-
         socket.onmessage = function(e) {
             data = JSON.parse(e.data)
             app.newMessage(data.text)
-            loadHandler()
-            createjs.Sound.on("fileload", playHandler);
+            initialHandler()
         }
         socket.onopen = function() {
         }
@@ -141,17 +134,20 @@
 
         if (socket.readyState == WebSocket.OPEN) socket.onopen();
 
-        function loadHandler(event) {
-          createjs.Sound.registerSound("resources/" + data.filename + ".wav", "x");
-          //createjs.Sound.on("fileload", this.loadHandler, this);
-          //var instance = createjs.Sound.play("x");  
-          //instance.on("complete", this.handleComplete, this);
-          //instance.volume = 0.5;
+        function initialHandler(event) {
+          Voice = "resources/" + data.filename + ".wav";
+          playHandler();
         }
-        
-        function playHandler(){
-          createjs.Sound.play("x");
-
+        function registerHandler() {
+          createjs.Sound.registerSound(Voice);
+          createjs.Sound.on("fileload", playHandler);
+        }
+        function playHandler() {
+          if(createjs.Sound.loadComplete(Voice)) {
+            createjs.Sound.play(Voice);
+          } else {
+            registerHandler()
+          }
         }
 
         Vue.component('msg', {

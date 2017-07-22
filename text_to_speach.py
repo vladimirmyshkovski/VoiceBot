@@ -1,6 +1,7 @@
 # coding=utf-8
 import ujson as json
 from os.path import join, dirname, realpath
+import os
 from watson_developer_cloud import TextToSpeechV1
 #from ..settings import text_to_speech as t
 #from ..settings import UPLOAD_FOLDER
@@ -20,11 +21,14 @@ def text_to_speach(text, filename):
 	#print(os.path.join(os.path.dirname(__file__),'/static/resources/'))
 	#s = join(dirname(__file__),'/resources/')
 	#print(join(UPLOAD_FOLDER),, '/static/resources')
-	with open(join(dirname(__file__),'resources/{}.wav'.format(filename)),
-	          'wb') as audio_file:
-	    audio_file.write(
-	        text_to_speech.synthesize(str(text), accept='audio/wav',
-	                                  voice="en-US_AllisonVoice"))
+	file_path = join(dirname(__file__),'resources/{}.wav'.format(filename))
+	if not os.path.exists(file_path):
+		with open(file_path, 'wb') as audio_file:
+			audio_file.write(
+				text_to_speech.synthesize(str(text), 
+					accept='audio/wav',
+					voice="en-US_AllisonVoice")
+				)
 	#print(
 	#    json.dumps(text_to_speech.pronunciation(
 	#        'Watson', pronunciation_format='spr'), indent=2))

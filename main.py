@@ -10,7 +10,7 @@ import ujson as j
 import re
 
 
-def generator(size=6, chars=string.ascii_uppercase + string.digits + string.ascii_lowercase):
+def generator(size=36, chars=string.ascii_uppercase + string.digits + string.ascii_lowercase):
     return ''.join(random.choice(chars) for _ in range(size))
 
 def clear_sting(string):
@@ -34,7 +34,6 @@ async def save_session(request, response):
 
 @app.route("/")
 async def test(request):
-    print(request)
     response = file(join(dirname(__file__),'websocket.html'))
     if not request['session'].get('sessionid'):
         request['session']['sessionid'] = generator()
@@ -44,15 +43,16 @@ async def test(request):
 async def feed(request, ws):
     while True:
         question = await ws.recv()
-        filename = '{}-{}'.format(clear_sting(question), generator()) 
         data = {
             "question": question,
             "sessionid": request['session']['sessionid']
         }
-        text_to_speach(question, filename)
         r = requests.get('http://localhost:5000/api/v1.0/ask', data)
+        answer = r.json()['response']['answer']
+        filename = clear_sting(answer)
+        text_to_speach(answer, filename)
         await ws.send(j.dumps({
-            "text": r.json()['response']['answer'], 
+            "text": answer, 
             "filename": filename
             }))
 
