@@ -15,7 +15,7 @@ def generator(size=36, chars=string.ascii_uppercase + string.digits + string.asc
 
 def clear_sting(string):
     reg = re.compile('[^a-zA-Z ]')
-    return (reg.sub('', string).strip()).replace(' ', '-')
+    return ((reg.sub('', string).strip()).lower()).replace(' ', '-')
 
 app = Sanic()
 app.static('/resources', './resources')
@@ -47,8 +47,11 @@ async def feed(request, ws):
             "question": question,
             "sessionid": request['session']['sessionid']
         }
-        r = requests.get('http://localhost:5000/api/v1.0/ask', data)
-        answer = r.json()['response']['answer']
+        r = requests.get('http://localhost/api/v1.0/ask', data)
+        if r.status_code is not 200:
+            answer = "Something went wrong"
+        else:
+            answer = r.json()['response']['answer']
         filename = clear_sting(answer)
         text_to_speach(answer, filename)
         await ws.send(j.dumps({
@@ -60,5 +63,5 @@ if __name__ == "__main__":
     app.run(
         host="0.0.0.0",
         port=8080,
-        debug=False
+        debug=True
     )
