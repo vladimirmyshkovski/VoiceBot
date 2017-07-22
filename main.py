@@ -47,7 +47,7 @@ async def feed(request, ws):
             "question": question,
             "sessionid": request['session']['sessionid']
         }
-        r = requests.get('http://localhost/api/v1.0/ask', data)
+        r = requests.get('http://localhost:5000/api/v1.0/ask', data)
         if r.status_code is not 200:
             answer = "Something went wrong"
         else:
