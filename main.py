@@ -6,10 +6,16 @@ from text_to_speach import text_to_speach
 import string
 import random
 import requests
+import ujson as j
+import re
 
-def generator(size=36, chars=string.ascii_uppercase + string.digits + string.ascii_lowercase):
+
+def generator(size=6, chars=string.ascii_uppercase + string.digits + string.ascii_lowercase):
     return ''.join(random.choice(chars) for _ in range(size))
 
+def clear_sting(string):
+    reg = re.compile('[^a-zA-Z ]')
+    return (reg.sub('', string).strip()).replace(' ', '-')
 
 app = Sanic()
 app.static('/resources', './resources')
@@ -28,6 +34,7 @@ async def save_session(request, response):
 
 @app.route("/")
 async def test(request):
+    print(request)
     response = file(join(dirname(__file__),'websocket.html'))
     if not request['session'].get('sessionid'):
         request['session']['sessionid'] = generator()
@@ -37,17 +44,21 @@ async def test(request):
 async def feed(request, ws):
     while True:
         question = await ws.recv()
+        filename = '{}-{}'.format(clear_sting(question), generator()) 
         data = {
             "question": question,
             "sessionid": request['session']['sessionid']
         }
+        text_to_speach(question, filename)
         r = requests.get('http://localhost:5000/api/v1.0/ask', data)
-        await ws.send(r.json()['response']['answer'])
-        
+        await ws.send(j.dumps({
+            "text": r.json()['response']['answer'], 
+            "filename": filename
+            }))
 
 if __name__ == "__main__":
     app.run(
         host="0.0.0.0",
         port=8080,
-        debug=True
+        debug=False
     )

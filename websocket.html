@@ -104,13 +104,13 @@
         });
 
         // Tell KITT to use annyang
-        SpeechKITT.annyang();
+        //SpeechKITT.annyang();
 
         // Define a stylesheet for KITT to use
-        SpeechKITT.setStylesheet('//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/0.3.0/themes/flat.css');
+        //SpeechKITT.setStylesheet('//cdnjs.cloudflare.com/ajax/libs/SpeechKITT/0.3.0/themes/flat.css');
 
         // Render KITT's interface
-        SpeechKITT.vroom();
+        //SpeechKITT.vroom();
       }
 
 
@@ -127,18 +127,11 @@
         //instance.on("complete", this.handleComplete, this);
         //createjs.Sound.on("fileload", this.loadHandler, this);
 
-        //function loadHandler(event) {
-        //  createjs.Sound.registerSound("resources/text.wav", "x");
-        //  //createjs.Sound.on("fileload", this.loadHandler, this);
-        //  //var instance = createjs.Sound.play("x");  
-        //  createjs.Sound.play("x");
-        //  //instance.on("complete", this.handleComplete, this);
-        //  //instance.volume = 0.5;
-        //}
-
         socket.onmessage = function(e) {
-            app.newMessage(e.data)
-            //loadHandler()
+            data = JSON.parse(e.data)
+            app.newMessage(data.text)
+            loadHandler()
+            createjs.Sound.on("fileload", playHandler);
         }
         socket.onopen = function() {
         }
@@ -148,6 +141,18 @@
 
         if (socket.readyState == WebSocket.OPEN) socket.onopen();
 
+        function loadHandler(event) {
+          createjs.Sound.registerSound("resources/" + data.filename + ".wav", "x");
+          //createjs.Sound.on("fileload", this.loadHandler, this);
+          //var instance = createjs.Sound.play("x");  
+          //instance.on("complete", this.handleComplete, this);
+          //instance.volume = 0.5;
+        }
+        
+        function playHandler(){
+          createjs.Sound.play("x");
+
+        }
 
         Vue.component('msg', {
             props: ['item'],
