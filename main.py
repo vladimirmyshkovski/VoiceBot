@@ -47,15 +47,15 @@ async def feed(request, ws):
             "question": question,
             "sessionid": request['session']['sessionid']
         }
-        r = requests.get('http://localhost:5000/api/v1.0/ask', data)
+        r = requests.get('http://45.33.53.142:5000/api/v1.0/ask', data)
         if r.status_code is not 200:
             answer = "Something went wrong"
         else:
             answer = r.json()['response']['answer']
-        filename = clear_sting(answer)
+        filename = clear_sting(answer)[0:143]
         text_to_speach(answer, filename)
         await ws.send(j.dumps({
-            "text": answer, 
+            "text": answer,
             "filename": filename
             }))
 
