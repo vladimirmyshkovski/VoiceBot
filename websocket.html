@@ -165,14 +165,17 @@
             },
             methods: {
                 send: function() {
-                    socket.send(this.message)
-                    this.messages.push({
-                      "text": this.message,
-                      "avatar": "https://t4.ftcdn.net/jpg/01/05/72/55/240_F_105725565_vVl8Hc6kIRQsgquqdQYrz7fWFrfQAGCw.jpg",
-                      "user": "I'm"
-                    })
-                    console.log(this.message)
-                    this.message = ''
+                    mes = this.message.replace(/ /g,"");
+                    if (mes.length > 0) {
+                      socket.send(this.message)
+                      this.messages.push({
+                        "text": this.message,
+                        "avatar": "https://t4.ftcdn.net/jpg/01/05/72/55/240_F_105725565_vVl8Hc6kIRQsgquqdQYrz7fWFrfQAGCw.jpg",
+                        "user": "I'm"
+                      })
+                      console.log(this.message)
+                      this.message = ''
+                    }
                 },
                 newMessage: function(message) {
                     this.messages.push({
