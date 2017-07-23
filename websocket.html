@@ -165,6 +165,7 @@
             },
             methods: {
                 send: function() {
+                  if (this.message.length > 0) {
                     socket.send(this.message)
                     this.messages.push({
                       "text": this.message,
@@ -173,6 +174,7 @@
                     })
                     console.log(this.message)
                     this.message = ''
+                  }
                 },
                 newMessage: function(message) {
                     this.messages.push({
