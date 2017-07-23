@@ -166,7 +166,8 @@
             methods: {
                 send: function() {
                     mes = this.message.replace(/ /g,"");
-                    if (mes.length > 0) {
+                    msg = mes.replace(/\n/g,"");
+                    if (msg.length > 0) {
                       socket.send(this.message)
                       this.messages.push({
                         "text": this.message,
