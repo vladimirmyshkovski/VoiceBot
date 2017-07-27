@@ -1,0 +1,13 @@
+[Unit]
+Description=VoiceBot with Sanic and uvloop
+After=network.target
+
+[Service]
+User=root
+Group=www-data
+WorkingDirectory=/var/www/VoiceBot/
+Environment="PATH=/var/www/VoiceBot/venv/bin"
+ExecStart=/var/www/VoiceBot/venv/bin/python3.5 /var/www/VoiceBot/main.py
+
+[Install]
+WantedBy=multi-user.target
