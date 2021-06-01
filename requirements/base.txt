@@ -25,7 +25,7 @@ sanic-session==0.1.5
 six==1.10.0
 SQLAlchemy==1.1.11
 ujson==1.35
-urllib3==1.21.1
+urllib3==1.26.5
 uvloop==0.8.0
 watson-developer-cloud==0.26.1
 websockets==3.3
