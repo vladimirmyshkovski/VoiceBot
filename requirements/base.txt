@@ -20,7 +20,7 @@ python-twitter==3.3
 requests==2.18.1
 requests-oauthlib==0.8.0
 ruamel.yaml==0.15.0
-sanic==0.5.4
+sanic==20.12.6
 sanic-session==0.1.5
 six==1.10.0
 SQLAlchemy==1.1.11
